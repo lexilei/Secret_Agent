@@ -1,0 +1,85 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 6
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-02T03:22:58.346751
+================================================================================
+
+GROUND TRUTH: 83.93895
+PREDICTED: 1.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 41-year-old Japanese man was admitted to our hospital with liver damage, itchy skin, and pyrexia. His medical history was unremarkable, but one year previously his gamma-glutamyl transpeptidase levels had risen to 271 IU/L (normal: < 30 IU/L). Prior to this, the patient had consumed 540 mL of sake three times a week, and he had been reducing the amount of alcohol he consumed for about one year. He did not smoke or take any recreational drugs. He was single, was not homosexual, and he had not had sexual intercourse for over one year.
+The patient had undergone treatment of his internal hemorrhoids as an outpatient at a nearby hospital that comprised an aluminum potassium sulfate and tannic acid (ALTA) injection. He developed a fever of 38 °C, dark colored urine, and itchy skin on postoperative day (POD) 1, and he took loxoprofen sodium, as required. He consulted another doctor on POD 7, because the symptoms had not improved, and his blood test results led to a diagnosis of liver dysfunction. His liver dysfunction had not improved by POD 14, and he was admitted to our hospital on POD 15.
+The patient was 167 cm tall and weighed 52.5 kg. He presented with a blood pressure of 103/59 mmHg, a heart rate of 82 beats per minute, a temperature of 36.6 °C, and 99% oxygen saturation in room air. No specific physical findings were evident during the clinical examination on the day of hospitalization, but the patient had a rash, edema, hepatosplenomegaly, lymphadenopathy, and jaundice. The subjective symptoms, comprising the fever, dark colored urine, and itchy skin, had disappeared by POD 10.
+The laboratory test results showed that the patient’s complete blood count was almost normal with a white blood cell count of 6900 cells/μL, a hemoglobin concentration of 14.7 g/dL, a hematocrit level of 43.1%, and a platelet count of 3.98 × 105 cells/μL, but a higher percentage of eosinophils was present (6.8%) (normal: 1.0%-5.0%), which peaked at 13.9% on POD 20. The patient’s serum liver enzyme and bilirubin levels were elevated at the time of admission. The aspartate aminotransferase (AST) level was 432 IU/L (normal: 10-40 IU/L), the alanine aminotransferase (ALT) level was 911 IU/L (normal: 10-40 IU/L), the alkaline phosphatase (ALP) level was 473 IU/L (normal: 115-359 IU/L), and the total bilirubin level was 1.3 mg/dL (normal: 0.2-1.2 mg/dL). Thus, compared with the ALP level, the AST and ALT levels showed greater magnitudes of elevation. The patient’s other blood test results were within the normal ranges, as follows: serum albumin: 4.0 g/dL (normal: 3.8-5.2 g/dL); serum creatinine: 0.86 mg/dL (normal: 0.65-1.09 mg/dL); C-reactive protein: 0.1 mg/dL (normal: 0-0.3 mg/dL); prothrombin time: 100% (normal: 80%-120 %); thyroid-stimulating hormone: 0.5 μIU/mL (normal: 0.34-4.04 μIU/mL); triiodothyronine: 2.98 pg/dL (normal: 2.36-5.00 pg/dL); and thyroxin: 1.18 ng/dL (normal: 0.88-1.67 ng/dL). The serological tests for autoantibodies generated weakly positive results (1:40) for anti-nuclear antibodies, and negative results for anti-smooth muscle and anti-mitochondrial antibodies. Negative results were obtained from the tests for the hepatitis B virus surface antigen, the hepatitis C virus antibody, rapid plasma reagin, the anti-Epstein-Barr virus immunoglobulin M (IgM) antibody, and the anti-cytomegalovirus IgM antibody, and from the Treponema pallidum hemagglutination test. The IgG level was within the normal range at 1415 mg/dL (normal: 800-1600 mg/dL) and the IgM level was within the normal range at 100 mg/dL (normal: 60-250 mg/dL). The IgE level was elevated at 1333 mg/dL (normal: < 250 mg/dL). Chest radiography did not reveal any abnormalities. No morphological changes were evident following abdominal ultrasonography, magnetic resonance cholangiopancreatography, and abdominal computed tomography (Figure ).
+When the patient was hospitalized, we considered viral, alcohol-induced, autoimmune, drug-induced, biliary tract, and thyroid function-based diseases as frequent causes of acute liver dysfunction for the differential diagnosis, and, based on the patient’s medical history, and the serological and imaging results, we considered that alcohol and DILI were highly likely causes of the patient’s acute liver dysfunction. However, the patient had stopped drinking during the past year, so we thought that there was a high likelihood of DILI. Therefore, we began conservative treatment with a small amount of extracellular fluid replacement.
+Figure presents the patient’s symptoms, laboratory test results, and treatment over the entire course. The liver transaminase and bilirubin levels decreased rapidly after admission, and the maximum levels were as follows: ALT: 950 IU/L on POD 15; AST: 470 IU/L on POD 17; and total bilirubin: 2.1 mg/dL on POD 17. The ALP and gamma-glutamyl transpeptidase levels showed consistent downward trends from POD 7. The patient's symptoms disappeared on POD 10, and no new symptoms appeared after hospitalization. We performed a liver biopsy on POD 25, and a drug-induced lymphocyte stimulation test (DLST) of the components of the ALTA injection and lidocaine on POD 28. The patient was discharged on POD 29, and he was managed as an outpatient without any prescriptions. At the time of the patient’s first outpatient appointment on POD 35, his liver transaminase and bilirubin levels had declined and were almost within the normal ranges.
+Figure presents hematoxylin and eosin (H and E)-stained sections of the liver biopsy performed on POD 25. The H and E staining showed that the basic structure of the liver had been maintained without any hepatocyte dropout or disruption, and that the bile duct had not been disrupted. At a higher magnification, the H and E staining showed that the parenchymal cells were partially dilated and that a mild inflammatory cell infiltration was present in the area of the central vein. Neither eosinophil nor plasma cell infiltrations were detected within the liver tissue. Bile plugs were found at multiple sites within the parenchyma and sinusoids. Masson staining did not show the presence of liver tissue fibrosis.
+The lymphocyte proliferation activity levels, which were determined from the DLST performed on POD 28, were 676 counts per minute (cpm) for the control and 871 cpm for the ALTA with lidocaine. The stimulation index, which was calculated as the ALTA with lidocaine cpm divided by the control cpm, was 1.29 (normal in Japanese people: < 1.8).
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's Creatinine Clearance (CrCl) using the Cockroft-Gault Equation, we follow these steps:
+
+### 1. **Determine the patient's BMI and adjusted body weight (ABW):**
+- **Height:** 167 cm  
+- **Weight:** 52.5 kg  
+
+**BMI Calculation:**  
+\[
+BMI = \frac{weight}{height^2} = \frac{52.5}{(1.67)^2} = \frac{52.5}{2.7889} \approx 18.82
+\]
+- **BMI Interpretation:**  
+  - Underweight: BMI < 18.5  
+  - Normal: 18.5–24.9  
+  - The patient's BMI is **18.82 (normal)**.  
+
+**Adjusted Body Weight (ABW):**  
+Since the BMI is normal, we use the **minimum of ideal body weight (IBW) and actual weight**.  
+
+**Ideal Body Weight (IBW) Calculation:**  
+\[
+IBW = 50 + 2.3 \times (height_{in} - 60)
+\]
+Convert height to inches:  
+\[
+167 \, \text{cm} = 65.75 \, \text{inches}
+\]
+\[
+IBW = 50 + 2.3 \times (65.75 - 60) = 50 + 2.3 \times 5.75 = 50 + 13.225 = 63.225 \, \text{kg}
+\]
+- **Actual weight (52.5 kg) < IBW (63.225 kg)**, so **ABW = 52.5 kg**.
+
+### 2. **Extract other relevant values:**
+- **Age:** 41 years  
+- **Serum Creatinine (Cr):** 0.86 mg/dL  
+- **Gender coefficient (male):** 1  
+
+### 3. **Cockroft-Gault Equation:**  
+\[
+CrCl = \frac{(140 - age) \times ABW \times gender\_coef}{Cr \times 72}
+\]
+\[
+CrCl = \frac{(140 - 41) \times 52.5 \times 1}{0.86 \times 72}
+\]
+\[
+CrCl = \frac{99 \times 52.5}{61.92}
+\]
+\[
+CrCl = \frac{5197.5}{61.92} \approx 83.94
+\]
+
+### Final Answer:
+**83.94**

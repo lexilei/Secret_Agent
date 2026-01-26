@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 297
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-01T20:50:34.131983
+================================================================================
+
+GROUND TRUTH: 1.70952
+PREDICTED: 1.37
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The patient's information released was permitted after discussion by the hospital ethics committee.
+A 66-year-old woman with recurrent intermittent upper quadrant abdominal pain visited our hospital for further evaluation and treatment. Physical examination and initial vital signs were as follows: body temperature, 37.0℃; pulse rate, 66 beats/min; respiratory rate, 18 breaths/min; and blood pressure, 140/90 mmHg. Her height and body weight were 158 cm and 66 kg. She had a 10-year history of hypertension with good blood pressure control from oral Valsartan (40 mg/day). Her familial history was unremarkable. Laboratory examinations showed a low white blood cell count of 3,920/µL, a hemoglobin level of 11.8 g/L, and a platelet count of 124,000/µL. The liver function test results were as follows: serum aspartate transaminase: 14 U/L; alanine transaminase: 19 U/L; alkaline phosphatase: 88 IU/L; gamma-glutamyl transferase: 16 U/L; total bilirubin: 4.05 µmol/L; albumin, 35.7 g/L; and international normalized ratio: 0.93. CA 19-9 and α-FP were assayed for a malignancy workup, with results of 16.35 U/mL and 2.61 ng/mL, respectively. The results for viral markers including HBV surface antigen and anti-HCV were negative. Abdominal CT revealed an atrophic left lobar and dilated bile duct with the middle hepatic vein close to the cystic lesion (). Abdominal MRCP revealed irregular intrahepatic bile duct dilatation (IHBDD) of the left lobe with the left hepatic duct obstructed, while the common bile duct and right intrahepatic bile duct were normal (). However, we found that the irregular cystic dilatation of the bile duct was limited to the left liver and contained stones inside the cysts. No obvious abnormal dilated bile duct was found in the right liver. The common bile duct and the hepatic duct were normal, and no obvious dilatation was found. This patient was diagnosed with Caroli disease (type V). The surgical indication for the patient was explicit. However, the treatment prescription required consideration of the cystic wall being adjacent to the middle hepatic vein, the left hepatic atrophy and structure disorder, and the observation that the left hepatic vein was not visible. Although complete resection of the cysts may be a curative treatment for unilobar Caroli disease, this treatment was impossible for this patient due to the close adherence of the middle hepatic vein to the cystic wall. Therefore, we decided to perform laparoscopic left LR for the patient, while preserving a partial cystic wall close to the middle hepatic vein.
+The standard laparoscopic equipment used to perform laparoscopic hepatectomy included a 30° 5-mm laparoscope, a hook dissector, 5-mm laparoscopic forceps, a 5-mm atraumatic grasper, a 10-mm GIA (Johnson & Johnson Medical, Shanghai, China), 5-mm harmonic (Johnson & Johnson Medical) and 10-mm locking pliers.
+The conventional fully laparoscopic multiport approach was adopted. The patient was placed in a supine position, and the surgeon stood on the right side. Under general anesthesia, five 5- to 10-mm incisions were made in a “U” configuration. Division of the liver parenchyma was performed with Harmonic or Endo-GIA. Large pedicles were stapled or clipped.
+Upon surgical exploration, the left lobe of the liver was found to be atrophied, and the right liver had developed compensatory hyperplasia with a red-brown and smooth surface. However, the left liver lobe was severely adherent. We gradually dissected the adhesion using harmonic pliers and exposed the atrophic left lobe (5 cm × 6 cm × 2 cm). The gallbladder was approximately 7 cm × 4 cm × 2 cm in size and was filled with bile and gallstones. Through intraoperative exploration, we confirmed the diagnosis of Caroli disease, limited to the left lobe of the liver. We obtained a biopsy from the edge of the lesion and performed a rapid intraoperative pathological examination to exclude malignant tumor. We then decided to perform a laparoscopic left liver and gallbladder resection. The difficulty was that the lesion was close to the middle hepatic vein. We opened the cysts and resected most of the lesion while retaining part of cystic wall close to the middle hepatic vein. After laparoscopic left half-liver and gallbladder resection, the liver lesion tissue and gallbladder were removed completely from the abdominal cavity. Histopathologic findings showed congenital dilatation of the intrahepatic bile ducts, confirming the preoperative diagnosis of Caroli disease (). Histopathology of the resected specimen revealed large, cystic dilations of the large intrahepatic bile ducts. This patient was seen regularly every 3 months at the outpatient department. There was no recurrence of abdominal pain, and no complications were discovered after 18 months of follow-up.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.37

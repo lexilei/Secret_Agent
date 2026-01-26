@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 107
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T20:50:30.174776
+================================================================================
+
+GROUND TRUTH: 8.94
+PREDICTED: 9.5
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 68-yr-old female patient with body weight of 45 kg, having type-2 diabetes mellitus, hypertension, post-lumbar spine fixation (L2-L4) was posted for right-sided total hip replacement. She underwent coronary artery bypass grafting 4 years ago for ischaemic heart disease. Blood investigation showed haemoglobin 9.2 gm/dl, normal blood count, renal function and serum electrolytes. Serum calcium was 8.3 mg/dl and serum albumin was 3.2 g/dl. Glycosylated haemoglobin was 6.0, revealing adequate blood glucose control. Electrocardiogram showed evidence of old inferior wall myocardial infarction. Echocardiography showed normal left ventricular function with mild hypertrophy. She was on tablet aspirin 75 mg once daily (OD) orally for antithrombotic prophylaxis.
+In view of her cardiac history, adequate perioperative analgesia was needed along with general anaesthesia. Thus, right sided continuous erector spinae block along was planned in combination with general anaesthesia.
+Preoperative antibiotic prophylaxis was administered with injection cefuroxime 1.5 g intravenous (IV). Under ultrasound guidance, a continuous erector spinae block was performed at L3 level. After explaining the procedure, consent was taken from the patient. She was placed in left lateral position for right sided block since we found it ergonomically easy to hold the ultrasound probe (high frequency linear probe) with left hand and place it transversely. An 18-guage tuohy needle was approached in-plane lateral to medial. When the needle initially touched the transverse process of L3 vertebrae, the needle was gently withdrawn and hydrodissection of the plane was achieved, lifting the erector spinae muscle. A 20-guage catheter was introduced through the needle and total length inserted was 3 cm more than the tip of needle. The catheter was secured properly for perioperative use. The patient was hydrated with 10 ml/kg of ringer lactate before induction of anaesthesia. Anaesthesia was induced with injection fentanyl 75 mcg iv and injection propofol 100 mg iv and laryngeal mask airway (LMA) size 3 was inserted. Anaesthesia was maintained with FiO20.5 (nitrous oxide and oxygen mixture) and sevoflurane. A bolus dose of 20 ml of 0.25% bupivacaine was given through the catheter placed in erector spinae plane. The procedure was uneventful with no haemodynamic disturbances and minimal blood loss. After surgery, inhalational anaesthetics were stopped, and LMA was removed. Patient had an uneventful recovery. Post-operatively, the patient was comfortable with infusion of 0.25% bupivacaine at 6 ml/h as continuous erector spinae block. She did not require any rescue analgesics. She was discharged on the fifth post-operative day after removing the catheter.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+9.5

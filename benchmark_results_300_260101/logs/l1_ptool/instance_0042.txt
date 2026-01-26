@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 42
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-01T21:26:50.816412
+================================================================================
+
+GROUND TRUTH: 5.0
+PREDICTED: 5.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 68-year-old woman was admitted to the hospital with dizziness, disequilibrium, and dysarthria, which she had had for about 2 weeks. She had a history of hypertension, but no history of diabetes or heart disease, no familial history of cardiovascular disease, and no use of preventive medication for stroke.
+On admission, her neurological examination was normal except for the presence of dysarthria, right central facial and glossary palsy, and bilateral positive Babinski signs.
+Laboratory tests, including blood routine test, serum electrolytes, renal and hepatic function, blood sugar, coagulation profile, syphilis and HIV tests, and blood fat, were all normal. There were no abnormalities on her ECG, TEE, or 24-hour Holter monitoring.
+DWI showed multiple high signal intensities in the territories of both anterior and posterior circulations. MR angiography showed no stenosis of large vessels. Her chest CT scan showed lung cancer and multiple metastases in the lungs.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+5.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 5.0}
+

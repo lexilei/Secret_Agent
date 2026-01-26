@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 71
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T21:26:51.487830
+================================================================================
+
+GROUND TRUTH: 126.0
+PREDICTED: None
+CORRECT: False
+ERROR: Could not extract float from: **
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 56-year-old man presents to the family medicine office since he has been having difficulty keeping his blood pressure under control for the past month. He has a significant medical history of hypertension, coronary artery disease, and diabetes mellitus. He has a prescription for losartan, atenolol, and metformin. The blood pressure is 178/100 mm Hg, the heart rate is 92/min, and the respiratory rate is 16/min. The physical examination is positive for a grade II holosystolic murmur at the left sternal border. He also has diminished sensation in his toes.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+(no response)

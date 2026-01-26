@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 242
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-01T20:50:32.954791
+================================================================================
+
+GROUND TRUTH: 2.0
+PREDICTED: 3.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 63-year-old woman was referred to the pre-operative clinic this morning for medical clearance prior to an elective laparoscopic cholecystectomy scheduled next week for biliary colic that has recurred despite dietary modification; the procedure is anticipated to last less than two hours and does not involve major intrathoracic, intraperitoneal vascular, or supra-inguinal work. She reports progressive right upper quadrant discomfort after meals but no fevers, jaundice, or weight loss. Her past medical history is notable for long-standing type 2 diabetes mellitus that was first diagnosed 18 years ago; she administers 26 units of glargine each evening in addition to oral metformin and checks capillary glucose twice daily, with most recent home readings between 110 – 150 mg/dL. She also carries a diagnosis of chronic, stable systolic left ventricular dysfunction discovered five years ago during an evaluation for lower-extremity edema; the most recent transthoracic echocardiogram performed three months ago demonstrated an ejection fraction of 35 % with mild global hypokinesis, and she remains on guideline-directed therapy with carvedilol 12.5 mg twice daily, lisinopril 10 mg daily, and furosemide 20 mg as needed. She has not required intravenous diuretics or hospitalization for volume overload within the past year but admits to needing two pillows at night for comfort and being able to climb only a single flight of stairs before becoming short of breath. She specifically denies a history of exertional chest pressure, prior myocardial infarction, percutaneous coronary intervention, coronary bypass surgery, or positive stress testing; she has never been prescribed nitrates or antiplatelet agents other than low-dose aspirin, which she takes for primary prevention under previous advice. There is no prior cerebrovascular accident or transient neurologic deficit. Additional comorbid conditions include well-controlled hypertension, mixed dyslipidemia, class I obesity (body mass index 32 kg/m²), and chronic gastritis. She does not smoke and drinks wine only on rare social occasions; she has no illicit drug use. Family history is significant for a father with heart failure in his 70s and a mother with type 2 diabetes. Current medications also comprise hydrochlorothiazide 25 mg each morning, atorvastatin 40 mg nightly, omeprazole 20 mg daily, and cholecalciferol. She has no known drug allergies. On examination, blood pressure is 134/76 mmHg, pulse 72 beats per minute and regular, respiratory rate 16 per minute, oxygen saturation 97 % on room air, and temperature 36.8 °C. She is alert, in no distress, and speaking full sentences. Jugular venous pressure is at the angle of the mandible with the patient at 45 degrees. There is a laterally displaced apical impulse and a soft S3; no murmurs or pericardial rub are present. Bibasilar crackles are absent, lungs are clear, and there is trace bilateral ankle pitting. Abdomen is soft with mild tenderness in the right upper quadrant without rebound or guarding; Murphy sign is negative today. No focal neurological deficits are elicited. Pre-operative laboratory studies drawn this morning reveal hemoglobin 12.9 g/dL, white blood cell count 8.1 × 10⁹/L, platelet count 248 × 10⁹/L, sodium 139 mmol/L, potassium 4.3 mmol/L, chloride 102 mmol/L, bicarbonate 25 mmol/L, blood urea nitrogen 18 mg/dL, and serum creatinine 1.2 mg/dL, unchanged from prior baselines; estimated glomerular filtration rate calculates to 54 mL/min/1.73 m². Fasting glucose is 128 mg/dL and HbA1c measured two weeks ago at her endocrinology visit was 7.4 %. Chest radiograph shows a mildly enlarged cardiac silhouette without pulmonary congestion, and an electrocardiogram demonstrates normal sinus rhythm with QRS duration 96 ms and no ischemic changes. Functional capacity is estimated at four to five metabolic equivalents based on her ability to do light household work and walk three to four blocks on level ground. After review of the clinical status, cardiac medications are to be continued through the perioperative period, morning insulin dose will be reduced to 50 % and administered with dextrose infusion as per protocol, and anesthesiology has been informed of her ventricular function. No additional cardiac imaging or stress testing is deemed necessary at this stage; the patient is instructed on pre-operative fasting and to present to the surgical center two hours before the scheduled start time.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3

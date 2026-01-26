@@ -1,0 +1,160 @@
+{
+  "version": "3.0",
+  "default_model": "deepseek-v3-0324",
+  "description": "LLM configuration for ptool framework. Models can be enabled/disabled via flags.",
+
+  "models": {
+    "deepseek-v3-0324": {
+      "provider": "together",
+      "model_id": "deepseek-ai/DeepSeek-V3",
+      "api_key_env": "TOGETHER_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "coding", "math", "general", "long-context"],
+      "description": "DeepSeek V3-0324 - Latest V3 with improved reasoning and coding, 671B MoE (37B active)",
+      "cost": {
+        "input": 0.00125,
+        "output": 0.00125,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 131000,
+      "max_output": 8192,
+      "enabled": true,
+      "tags": ["testing", "development", "production"],
+      "quality_score": 0.90,
+      "elo_score": null
+    },
+
+    "deepseek-r1": {
+      "provider": "together",
+      "model_id": "deepseek-ai/DeepSeek-R1",
+      "api_key_env": "TOGETHER_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "math", "coding", "chain-of-thought"],
+      "description": "DeepSeek R1-0528 - Advanced reasoning with explicit chain-of-thought",
+      "cost": {
+        "input": 0.003,
+        "output": 0.007,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 64000,
+      "max_output": 8192,
+      "enabled": true,
+      "tags": ["testing", "production"]
+    },
+
+    "deepseek-v3.1": {
+      "provider": "together",
+      "model_id": "deepseek-ai/DeepSeek-V3.1",
+      "api_key_env": "TOGETHER_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "coding", "math", "general", "chain-of-thought", "agent"],
+      "description": "DeepSeek V3.1 - Hybrid thinking/non-thinking model, 671B MoE (37B active)",
+      "cost": {
+        "input": 0.00125,
+        "output": 0.00125,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 131000,
+      "max_output": 8192,
+      "enabled": true,
+      "tags": ["testing", "production"]
+    },
+
+    "claude-opus-4.5": {
+      "provider": "anthropic",
+      "model_id": "claude-opus-4-5-20251101",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "coding", "analysis", "long-context", "vision", "extended-thinking"],
+      "description": "Claude Opus 4.5 - Most intelligent Claude model with maximum capability",
+      "cost": {
+        "input": 0.015,
+        "output": 0.075,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 200000,
+      "max_output": 8192,
+      "enabled": false,
+      "tags": ["production"]
+    },
+
+    "claude-sonnet-4.5": {
+      "provider": "anthropic",
+      "model_id": "claude-sonnet-4-5-20250929",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "coding", "analysis", "long-context", "vision", "extended-thinking", "agent"],
+      "description": "Claude Sonnet 4.5 - Best for complex agents and coding, highest intelligence",
+      "cost": {
+        "input": 0.003,
+        "output": 0.015,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 200000,
+      "max_output": 8192,
+      "enabled": false,
+      "tags": ["production"]
+    },
+
+    "claude-haiku-4.5": {
+      "provider": "anthropic",
+      "model_id": "claude-haiku-4-5-20241022",
+      "api_key_env": "ANTHROPIC_API_KEY",
+      "endpoint": null,
+      "capabilities": ["general", "fast", "coding", "vision"],
+      "description": "Claude Haiku 4.5 - Fastest Claude with near-frontier performance",
+      "cost": {
+        "input": 0.001,
+        "output": 0.005,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 200000,
+      "max_output": 8192,
+      "enabled": false,
+      "tags": ["testing", "production"]
+    }
+  },
+
+  "provider_defaults": {
+    "together": {
+      "base_url": "https://api.together.xyz/v1"
+    },
+    "anthropic": {
+      "base_url": "https://api.anthropic.com"
+    },
+    "openai": {
+      "base_url": "https://api.openai.com/v1"
+    },
+    "groq": {
+      "base_url": "https://api.groq.com/openai/v1"
+    },
+    "google": {
+      "base_url": "https://generativelanguage.googleapis.com"
+    }
+  },
+
+  "capability_descriptions": {
+    "reasoning": "Good at multi-step logical reasoning",
+    "coding": "Good at code generation and understanding",
+    "math": "Good at mathematical reasoning",
+    "general": "Good at general knowledge tasks",
+    "fast": "Optimized for low latency",
+    "long-context": "Supports very long input contexts",
+    "vision": "Can process images",
+    "chain-of-thought": "Explicit reasoning traces",
+    "extended-thinking": "Support for extended thinking/reflection",
+    "agent": "Optimized for agentic workflows"
+  },
+
+  "tag_descriptions": {
+    "testing": "Enabled for testing/development use",
+    "development": "Enabled for local development",
+    "production": "Approved for production use"
+  }
+}

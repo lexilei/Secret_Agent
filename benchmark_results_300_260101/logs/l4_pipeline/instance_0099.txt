@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 99
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-04T03:14:12.028244
+================================================================================
+
+GROUND TRUTH: 18.51852
+PREDICTED: 18.519
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 57-year-old woman (180 cm, 60 kg) was presented to the emergency department with upper abdominal pain and left-sided chest discomfort for a couple of days. In addition, she reported of nausea. Upon physical examination, percussion sounds over the left lower thorax were a bit dull and cervical lymph nodes were palpable with a size of up to 1 cm. The abdomen was generally tender without signs of peritonitis; bowel sounds were normal. The ECG showed no abnormalities. Routine laboratory tests revealed mild leucocytosis and a slightly elevated C-reactive protein level. Troponin, myoglobine, and creatine kinase levels were within normal limits. An upper gastrointestinal endoscopy was performed. Whereas the oesophagus, the lower stomach, and the duodenum were
+without abnormalities, a small hole in the fundus was visible after inversion of the scope ().
+The “hole in the stomach” was intubated with a catheter and contrast dye was administered. Fluoroscopy revealed a diaphragmatic hernia with a large herniation of the gastric fundus (). Immediate laparotomy showed a 3 cm orifice of the
+diaphragm (). The orifice was widened and a partial necrosis of the incarcerated fundus was resected (). The diaphragmatic orifice was covered with polydioxanone. The patient recovered fully and 
+was discharged 12 days after laparotomy.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+18.519
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Body Mass Index (BMI)', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'weight_kg': 60, 'height_cm': 180}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'weight_kg': 60, 'height_cm': 180}}, {'stage': 'compute', 'success': True, 'result': 18.519, 'formula': 'BMI = weight / height^2'}], 'method': 'l4_pipeline'}
+

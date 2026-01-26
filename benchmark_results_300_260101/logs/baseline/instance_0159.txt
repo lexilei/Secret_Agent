@@ -1,0 +1,51 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 159
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T20:50:31.182207
+================================================================================
+
+GROUND TRUTH: 23.2302
+PREDICTED: 175.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 60-year-old homosexual man was admitted with complaints of generalized edema and pallor. There was no history of any drug addiction – oral or intravenous. General physical examination revealed temperature of 99°F, pulse rate of 80/min, respiratory rate of 14/min, and BP of 130/80 mmHg. Patient had pallor and generalized edema. Chest examination revealed decreased breath sounds in the right infrascapular area. Abdominal wall edema was seen and patient had ascites too. CVS and CNS examination was normal.
+Laboratory tests revealed a white cell count of 11,000/mm3 (69% neutrophils, 20% lymphocytes, 11% monocytes), a hemoglobin concentration of 8.7 g/dL, a platelet count of 164,000/mm3, serum urea and creatinine concentration of 67 and 2.8 mg/dL, respectively, serum albumin concentration of 1.8 g/dL, and total protein of 4.3g/dL. Liver enzymes were normal. Pulmonary function tests were within normal limits. Urine examination showed the presence of albumin and casts, RBCs 12–15, polymorphs 8–10 per high power field, and no sugar. And 24-h urinary protein was 5 g. ultrasound of abdomen revealed enlarged kidneys with loss of corticomedullary differentiation. Chest X-ray revealed right-sided pleural effusion. ECG was within normal limits. The patient was then evaluated for HIV, hepatitis B surface antigen (HBsAg), and hepatitis C virus (HCV) infection. An enzyme-linked immunosorbent assay (ELISA) and a Western blot assay for HIV-1 antibodies was positive. CD4 counts were 192/μL and HIV viral load was found to be >4000/mL. Tests for HBV, HCV, CMV, and HTLV-1 were negative. Serum urea and creatinine rose to 74 and 3.3 g/dL after admission.
+Renal biopsy was done. Light microscopic examination of the renal biopsy revealed nine glomeruli with five glomeruli showing global collapse of the capillary tuft, obliteration of the capillary lumens, increase in the mesangial matrix, expansion of the urinary space, and focal glomerulosclerosis. There was proliferation of visceral epithelial cells and showed cytoplasmic vacuolization, associated with microcystic dilatation of tubules, focal tubular atrophy, and the presence of large dense periodic acid-Schiff (PAS)-positive tubular casts. Interstitium showed severe inflammatory infiltration, comprising of both acute and chronic inflammatory cells, and interstitial fibrosis resulting in destruction of tubules at places. Vessels showed features of vasculitis [Figures and ]. PAS staining showed areas of focal glomerulosclerosis and casts within the tubules []. Immunofluorescence showed only weak nonspecific glomerular IgM deposits. The diagnosis of FSGS collapsing variant was arrived at.
+In the hospital, patient was managed for generalized anasarca and anemia while being investigated. He was put on highly active antiretroviral therapy (HAART), ACE inhibitors, and corticosteroids. At 1 month follow-up, he had some improvement in kidney function tests with creatinine dropping to 2.1 mg/dL and 24-h urine protein dropping to 3.6 g/day. Volume overload state had regressed and patient had only edema feet. He failed to collect his course of HAART at third month from ART center located in our institution.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's GFR using the MDRD equation, we use the following formula for non-Black individuals (since the patient's race is not specified as Black in the note):
+
+**MDRD Equation (Non-Black):**  
+\[ \text{GFR} = 175 \times (\text{Serum Creatinine})^{-1.154} \times (\text{Age})^{-0.203} \]
+
+**Given values at admission:**  
+- Serum Creatinine = **2.8 mg/dL**  
+- Age = **60 years**  
+
+Plugging in the values:  
+\[ \text{GFR} = 175 \times (2.8)^{-1.154} \times (60)^{-0.203} \]  
+
+Calculating step-by-step:  
+1. \( (2.8)^{-1.154} \approx 0.324 \)  
+2. \( (60)^{-0.203} \approx 0.742 \)  
+3. Multiply: \( 175 \times 0.324 \times 0.742 \approx 41.2 \)  
+
+Since the patient is **not specified as Black**, we do **not** multiply by the Black race adjustment factor (1.212).  
+
+**Final GFR (rounded to nearest whole number):**  
+
+**41**

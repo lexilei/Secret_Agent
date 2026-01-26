@@ -1,0 +1,40 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 80
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T21:37:20.705633
+================================================================================
+
+GROUND TRUTH: 83.0
+PREDICTED: 83.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 76-year-old man presented with typical chest pain and ST-elevation inferior MI. He was a smoker with diabetes and chronic kidney disease Class 3a with a glomerular filtration rate (GFR) 48 mL/min/m2. The hospital had no coronary intervention facilities, so he received thrombolytic therapy. Two weeks later, he presented to our emergency department with typical chest pain and exertional dyspnoea (New York Heart Association Class III). He was on dual antiplatelet therapy, Bisoprolol, Atorvastatin, and Isosorbide dinitrates. There was no echocardiogram report with the patient.
+Auscultation confirmed a harsh pansystolic murmur V/VI on his left parasternal area and across the precordium. He had bilateral, fine basal crepitations. His heart rate was 88 b.p.m. and blood pressure was 115/67 mmHg.
+Transthoracic echocardiogram (TTE) and transoesophageal echocardiogram (TOE) demonstrated an akinetic inferior wall and inferior septum with an ejection fraction (EF) of 45%. A large, true aneurysm in the mid-cavity inferior wall was identified by its wide neck and contracting muscle layer ( and ). The inferior septum was ruptured and dissected with a large, left-to-right shunt ( and ). A TOE X-plane transgastric short-axis view in diastole showed an inferior wall aneurysm with a wide neck of 2 cm (). The aneurysm cavity connected to the RV through the ruptured part of the inferior septum, creating an LV-to-RV-to-aneurysm communication ( and ). We noted mild tricuspid regurgitation with an estimated systolic pulmonary artery pressure of 75 mmHg. RV function was mildly reduced (tricuspid annular plane systolic excursion of 1.6 cm). Cardiac magnetic resonance imaging showed non-viable inferior segments, and a 4.2 cm × 4.3 cm × 5.8 cm cavitary lesion. The LV showed a mid-inferior and inferoseptal wide-neck true aneurysm () with a focal area of ventricular septal rupture in the inferior aspect of the aneurysm with a turbulent high-velocity flow across it (). The patient’s coronary angiography displayed tight proximal and middle right coronary artery lesions, as well as a severe ostial left main, a severe mid-left anterior descending artery lesion, and severe ramus intermedius disease.
+The patient was considered high surgical risk because of his age, general condition, renal impairment, and difficult anatomy of the post-infarct VSD and aneurysm. Transcatheter closure of the post-infarct VSD and inferior wall aneurysm was performed. Because of the two different pathologies, we closed the VSD first using an antegrade approach from the venous side. Next, we closed the neck of the aneurysm using a retrograde approach from the arterial side. A Terumo guidewire (260 cm) was introduced from the right common femoral vein. The wire passed from the RV to the inferior wall aneurysm to the LV and finally to the aorta. We then exchanged the Terumo guidewire with an Amplatzer stiff guidewire (260 cm).
+We used an 8 French Amplatzer delivery sheath to deploy an 18-mm ASO (AGA Medical Corporation, USA) to close the VSD completely (, and ). We selected the size based on TOE measurements. The RV-to-aneurysm communication measured 14 mm, so we oversized the ASO device by 4 mm to fit inside the defect. The aneurysm was engaged in retrograde from the LV using a 6 French PG catheter introduced from the right common femoral artery and over the Terumo guidewire (260 cm), which was then replaced by a Confida stiff guidewire (Medtronic) of the same length. We cannulated the inferior aneurysm mouth with a Torque-Vue 10 F/45 delivery sheath. The ASO (26 mm) device was deployed with a large disc in the aneurysm (, and ). We selected the size based on the TOE measurement. The aneurysm mouth measured 20 mm, so we increased the ASO length by 6 mm to fit inside the aneurysm. We assured enough distance between the aneurysm mouth and the mitral valve so that the deployed disc would not affect the mitral valve. Both devices were established with the aneurysm device resting on the post-infarct VSD device ( and ).
+Left ventricular (LV) injection and TOE showed complete occlusion of the post-infarct VSD and aneurysm. Both devices established contact and showed the angulated relation of their two different planes (, and ). The akinetic inferior wal procedure and fluoroscopy times were 60 min and 25 min, respectively, and the total contrast amount was 40 mL. The patient recovered uneventfully within 6 days in the intensive care unit. As EF was 45%, we selected to do full revascularization. The patient underwent complete revascularization for his right coronary artery, left main artery, proximal left anterior descending artery, and ramus intermedius (). The patient was discharged after 14 days. At his 3-month follow-up, he remained well with reasonable exercise tolerance, NYHA Class I. A repeat transthoracic echocardiogram demonstrated no flow across the devices, no residual shunt, and a left ventricular ejection fraction of 45%, akinetic inferior wall, and inferior septum (, and ). The systolic pulmonary artery pressure improved to 35 mmHg (). His renal function remained stable at follow-up with GFR 46 mL/min/m2.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Mean Arterial Pressure (MAP)', 'extracted_values': {'systolic': 115.0, 'diastolic': 67.0}, 'result': 83.0, 'method': 'python', 'formula': 'MAP = (2*DBP + SBP) / 3'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Mean Arterial Pressure (MAP)', 'extracted_values': {'systolic': 115.0, 'diastolic': 67.0}, 'result': 83.0, 'method': 'python', 'formula': 'MAP = (2*DBP + SBP) / 3'}}
+

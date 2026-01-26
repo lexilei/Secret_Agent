@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 152
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-04T03:14:12.569277
+================================================================================
+
+GROUND TRUTH: 11.0264
+PREDICTED: 11.716
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old diabetic woman on chronic hemodialysis for 7 months was admitted to our hospital because of general weakness and constipation for 1 week. She was bed-ridden for 1 month because of a fracture of L3-L4 spine due to a pedestrian traffic accident. Her vital signs were within normal ranges, and she had no fever. Physical examination revealed soft but distended abdomen and hypoactive bowel sounds. Plain abdominal radiographs showed large bowel distension with stool impaction (). Laboratory data showed hemoglobin of 8.6 g/dL, hematocrit 25.8%, random glucose 258 mg/dL, blood urea nitrogen 24.8 mg/dL, serum creatinine 4.1 mg/dL, sodium 129 mEq/L, potassium 4.5 mEq/L, calcium 8.0 mg/dL, phosphorus 1.7 mg/dL, and C-reactive protein 48.1 mg/L. The serum magnesium level was 3.0 mg/dL, and was 2.2 mg/dL 1 week ago (normal range, 1.8-2.6 mg/dL). She had taken magnesium-containing laxative (magnesium hydroxide 1500 mg per day) for a month, which was prescribed by another clinic. Therefore, magnesium hydroxide was discontinued and other laxatives were given.
+On the 3rd hospital day, the patient became lethargic and showed somnolence. Physical examination showed generally hypoactive deep tendon reflex, abdominal distension with no bowel sounds, and severe tenderness on the lower abdomen. Her vital signs were; blood pressure: 90/60 mm Hg, pulse rate: 90 beats/minute, and body temperature: 37.0℃. Electrocardiogram revealed normal sinus rhythm. The serum magnesium level was rapidly increased to 6.0 mg/dL. Plain abdominal radiographs showed more distended large bowel loops compared with those on admission. Computed tomography (CT) showed diffuse and marked dilatation of large bowel loops with fecal impaction, compatible with megacolon. The clinical course and the serum magnesium level are shown in . Calcium gluconate was infused for a temporary antagonizing effect of hypermagnesemia. Nasogastric tube and rectal tube were inserted for gastrointestinal decompression. Hemodialysis was performed daily for hypermagnesemia correction. After three consecutive hemodialyses, the serum magnesium decreased to 3.3 mg/dL and vital signs became normal. The patient started to have bowel movements, and abdominal distension subsided slightly with defecation. On the 11th hospital day, she complained of severe abdominal pain again. Diffuse abdominal tenderness and rebound tenderness were noticed. She was hypotensive (blood pressure 90/50 mm Hg) with a rapid pulse of 100/minute and febrile (37.5℃). The serum magnesium level was 3.1 mg/dL. Follow-up abdominal CT showed large air fluid levels in the upper pelvic cavity, representing gastrointestinal perforation (). Emergent Hartmann's operation was performed. Operative finding was necrosis of the transverse colon and rectum, and histologic findings were gangrenous colitis with microperforation and serosal abscess of the colon and rectum. After the operation, her abdominal pain was resolved and vital signs became normal.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+11.716
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CKD-EPI Equations for Glomerular Filtration Rate', 'confidence': 0.9}, {'stage': 'extract', 'extracted': {'age': 62, 'sex': 'female', 'creatinine_mg_dl': 4.1}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 62, 'sex': 'female', 'creatinine_mg_dl': 4.1}}, {'stage': 'compute', 'success': True, 'result': 11.716, 'formula': '142 * min(Cr/κ,1)^α * max(Cr/κ,1)^-1.200 * 0.9938^age * sex_coef'}], 'method': 'l4_pipeline'}
+

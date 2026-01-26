@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 55
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-01T21:37:20.130917
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 1.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 57-year-old man who had alcoholic liver disease and chronic hepatitis C-related Child-Pugh class C liver cirrhosis was brought to our emergency department by ambulance, exhibiting fever, short of breath and a localized wound pain over left ankle. The patient presented with dyspnea, lower extremity edema and some wounds over bilateral ankles area for 1 day before admission, but had no other symptoms, including a headache, sore throat, cough, and chest, abdominal, and back pain. He had alcohol and chronic hepatitis C- related liver cirrhosis, and took diuretics in the past 5 years. He drank approximately 60 g of alcohol per day for more than 20 years, but recently had been taking a bit more than usual.
+His laboratory data 2 weeks before admission were 6.5 mg/ dl of total bilirubin, 2.1 g/dl of albumin, and 1.73 of international normalized ratio. In addition, he had moderate ascites, which was medically controlled. These findings were indicative of Child- Pugh class C liver cirrhosis. On arrival, he appeared to be in disturbance and distress that was classified as 13 (E3V4M6) on the Glasgow Coma Scale. His vital signs were 132/106 mmHg of blood pressure, 125 beats/minute of pulse rate, 24 breaths/minute of respiratory rate, and 38.4 °C of body temperature. Auscultation of the lung and heart revealed coarse breath sounds and rapid irregular heartbeats. His abdomen was soft and swollen. Two wounds with redness and swelling (measures 0.5 × 0.5 cm, left ankle; measures 1 × 1 cm, right ankle) were found on his lower extremities ( and ). Chest X-ray indicated a lower lobe infiltration and a mild blunting of C-P angle in the right side (). ECG showed atrial fibrillation.
+Laboratory findings also included 8,990/ml of white blood cell count with 94% neutrophils and 3% lymphocytes, 11.1 g/dl of hemoglobin level, 104,000/ml of platelet count, 23 mg/dl of blood urea nitrogen, 1.42 mg/dl of creatinine, 121 mmol/L of sodium, and 4.6 mmol/L of potassium. Ascitic fluid analysis demonstrated 152 cells/mm3 of ascitic white blood cell count and 30 cells/mm3 of polymorphonuclear cell count 10 hours later after his arrival of emergency department. Arterial blood gas analysis demonstrated a severe metabolic acidosis (pH: 7.38, pCO2: 20.4 mmHg, pO2: 91.8 mmHg; base deficit: 11.2 mmol/L), which was indicative of septic shock.
+Oxacillin treatment under the impression of cellulitis was administered 2 hours after his arrival; two sets of blood cultures were obtained. Rapid fluid resuscitation was performed and immediately developed by tracheal intubation and mechanical ventilation in the intensive care unit. Although there was no significant change of ankle wounds, antibiotic regimen with a combination of ceftriaxone and clindamycin was adjusted due to persistent hypotension unresponsive to fluid resuscitation and high dose vasopressor use and clinical suspicion of Vibrio vulnificus related necrotizing fasciitis.
+One episode of upper gastrointestinal bleeding with manifestations of fresh blood in the nasogastric tube occurred on Day 2. Blood transfusion with 2 units of packed red blood cells was given. Despite intensive support efforts, the patient died on Day 3 after the sudden change. And after that, his blood and ascites cultures were positive for A. hydrophila.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 1.0}
+

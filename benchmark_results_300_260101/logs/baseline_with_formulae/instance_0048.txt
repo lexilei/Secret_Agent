@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 48
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-02T03:23:00.527469
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 75-year-old man with persistent AF, a CHA2DS2 VASc score of 4 and a HAS-BLED score of 4 with recurrent gastrointestinal bleedings was referred to a tertiary clinic for a LAAC. His medical history consisted of a chronic obstructive pulmonary disease (COPD), coronary artery disease, and a two-thirds gastric resection performed in the 1980s. The intervention was successfully performed with an ABBOTT® Amulet 18 mm device being implanted (). After the implantation, he received acetylsalicylic acid (ASA) and Clopidogrel for 6 months. Approximately 5 months post-intervention, the patient expressed acute dyspnoea and called the emergency medical services (EMS).
+On arrival of the EMS, the patient was conscious, severely distressed and hypotensive with a blood pressure of 80/50 mmHg and a heart rate of 90/min. Peripheral oxygen saturation of 85% measured percutaneously was noted. After the administration of bronchodilator medication for a presumed COPD exacerbation, the patient’s clinical condition deteriorated with a resultant cardiac arrest with pulseless electrical activity. The patient received cardiopulmonary resuscitation including chest compressions, endotracheal intubation, and the administration of 3 mg Adrenaline. Return of spontaneous circulation occurred approximately 10 min later at which point he was transferred to a local hospital. During the transport, the cardiocirculatory parameters were relatively stable with a systolic pressure around 100 mmHg. The capnometry after return of spontaneous circulation measured a pCO2 of 60 mmHg. Upon arrival at the hospital, the physical examination showed jugular vein distension but no peripheral oedema.
+Echocardiography performed in the emergency department revealed a pericardial tamponade requiring pericardiocentesis via the subxiphoidal route, 800 mL of blood were initially evacuated. The differential diagnosis included primary respiratory failure or a sudden cardiac death with secondary pericardial effusion induced by cardiac compressions under double antiplatelet therapy, a ruptured aortic aneurysm, a myocardial rupture, or a primary laceration of a cardiac structure by the LAA occluder. A ruptured aneurysm of the ascending aorta was excluded by ultrasound. Electrocardiogram examination did not demonstrate any ST-segment elevation or low voltage. Blood gas analysis documented a stable respiratory situation with a pO2 of 230 mmHg and a pCO2 of 55 mmHg, the pH was 7, 3 and Lactate elevated with 10 mmol/L (<2 mmol/L). The haemoglobin was measured at 9 g/dL (12–16 g/dL). The chest X-ray demonstrated the proper placement of the endotracheal and pericardial tube and ruled out a pneumothorax or pulmonary oedema.
+In the hours following pericardiocentesis, approximately 2 L of blood were evacuated. Conventional methods of coagulopathy management including application of tranexamic acid, fresh frozen plasma, and fibrinogen did not stop the bleeding. To stabilize the patient a total of eight packs of red blood cells were transfused.
+In preparation of cardiac surgery, a coronary angiogram was performed (). It revealed active leakage of contrast agent in the proximal circumflex artery and the patient was transferred to the cardiac surgery department immediately. Intra-operatively a perforation of the tissue at the basis of the LAA close to the left main coronary artery was discovered. Under protection of cold blood cardioplegia on cardiopulmonary bypass the occluder was excised through the opened left atrium. The LAA was closed by endocardial sutures and two pledget sutures were used to seal the epicardial lesion at the LAA basis which stopped the bleeding. Fortunately, after prolonged treatment in the intensive care unit and weaning ward the patient was discharged and alive 4 months after the event without neurological deficit and on ASA monotherapy. Transthoracic echocardiogram in the weaning ward ruled out a persistent pericardial effusion.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4

@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 44
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-02T03:23:00.335374
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 5.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 68-year-old man with the left hemiparesis from 2 h previously visited the emergency room. His medical history included hypertension and bilateral emphysema due to heavy smoking. Vital sign assessment revealed tachycardia; examination of the heart revealed atrial fibrillation (AF). Neurological examination revealed left hemiparesis and mild disturbance of consciousness. The National Institutes of Health Stroke Scale (NIHSS) score was 12. A magnetic resonance imaging (MRI) (diffusion-weighted image) showed right corona radiate infarction []. MR angiography (MRA) revealed right middle cerebral artery (MCA) occlusion []. Chest X-ray showed no remarkable findings on admission. Initial investigations performed included a white blood cell (13.9 × 109/L; normal 4–11 × 109/L), hemoglobin (14.6 g/dL; normal 13.1–17.3 g/dL), and platelet (147 × 109/L; normal 130–400 × 109/L) count. Prothrombin time (16 s; normal 11.5–14.5 s), activated partial thromboplastin time (40.1 s; normal 27.5–41 s), D-dimer (<0.5 mg/mL; normal <0.5 mg/mL), arterial blood gas (room air; pH 7.35), PaO2 (89.0 mmHg), and PaCO2 (45.1 mmHg) were also analyzed. The patient was negative for antineutrophilic cytoplasmic antibody. Intravenous tPA was administered according to the accelerated regimen (0.6 mg/kg) 3.5 h after onset. Four hours later, consciousness gradually improved, the right MCA recanalized [], and volume of infarction was not changed. The patient experienced hemoptysis and mild shortness of breath 18 h later, with no chest pain or fever. Oxygen saturation dropped from 97 to 90%. Chest computed tomography (CT) revealed multifocal diffuse ground-glass attenuation and patchy consolidation in both lungs [ and b]. Immediate chest X-ray revealed bilateral upper lobe intra-alveolar infiltrate []. The hemoptysis gradually improved after treatment with dopamine, corticosteroids, and bronchodilators, followed by fluid replacement, mechanical ventilation (MV), and administration of rFVIIa (75 mg/kg) with corticosteroids. The improvement was noted on day 3 and resolved completely by day 4. Hemoglobin dropped from 14.9 g/dl on admission to 11.7 g/dl on day 5, with no evidence of bleeding in other sites. Two weeks later, he was put off of the artificial respirator. After 1 month, the chest X-ray was normal []. He was transferred to a rehabilitation hospital after 6 weeks of hospitalization with modified Rankin scale (mRS) score of 3.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+5

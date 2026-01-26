@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 244
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-02T03:23:11.387270
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 54-year-old Caucasian man presented to his infectious disease physician in October 2014 with fatigue, nausea, and anorexia for the last 5 days that had been preceded by several episodes of bloody diarrhea of 10 days' duration. He denied abdominal pain, diminished urine output, or macroscopic hematuria. His past medical history was significant for HIV infection for 10 years with the most recent CD4 count of 180; current treatment consisted of Atazanavir, Emtricitabine, Tenofovir, and Ritonavir. He also had a history of chronic hepatitis C infection. He had a previous history of injection drug use that had been complicated by 2 episodes of infective endocarditis requiring a mechanical mitral valve replacement in 1997. Since that time, he had been treated with warfarin anticoagulation, INR 2.5–3.5. He admitted taking additional doses of warfarin when he had migraine headaches as he thought this would improve blood flow. On physical examination, he was afebrile with a supine blood pressure (BP) of 109/65 mmHg but with postural drop to 95/55 mmHg. His JVP was flat with no evidence of lower extremity edema. He did not have a skin rash or detectable heart murmur. The remainder of his examination was otherwise unremarkable.
+His laboratory data on admission are outlined in . His urinalysis was significant for 5–30 RBC/HPF and hyaline casts; no heme granular or red blood cell casts were seen. His urine albumin : creatinine ratio was 217 g/mol Cr. His creatinine which was 1.4 mg/dL in July 2014 had increased to 19.9 mg/dL. Abdominal ultrasonography showed normal-sized kidneys with slightly increased right renal parenchymal echogenicity.
+After fluid resuscitation failed to improve his acute kidney injury (AKI), he underwent hemodialysis for metabolic acidosis. Other investigations included (1) anemia work-up for a declining hemoglobin [11.1 g/dL to 6.6 g/dL after fluid resuscitation without evidence of bleeding or falling platelet count (137 × 109/L)] included blood film review which showed polychromasia without schistocytes, LDH 153 (N: 100–205 units), haptoglobin < 0.08 (N: 0.3–2.0 units), total bilirubin of 43 (N: 3–17 units), direct bilirubin of 6 (N: 2–9 units), iron percent saturation 86 (N: 20–50), and ferritin 314 (N: 24–336), making TTP and HUS unlikely with the stable platelet count and absence of schistocytes on blood smear. Further investigations showed (1) a positive random urine for hemosiderin and (2) renal biopsy that showed severe acute tubular necrosis (ATN) caused by extensive renal hemosiderosis with extensive iron depositions in the tubules; the glomeruli were spared from deposition and damage (Figures and ). There was focal interstitial chronic inflammation, mild interstitial fibrosis, mild tubular atrophy, and mild-to-moderate arterial atherosclerosis. Immunofluorescent staining: IgG: Negative, IgA: negative, IgM: equivocal, complement (C3): equivocal, C1q: negative, albumin: negative, and Kappa/Lambda: negative. Special stains for iron show strong diffuse positivity in the tubules (). Electron microscopy showed segmental effacement of foot process with no evidence of electron dense deposits ().
+(3) Clostridium difficile toxin B was detected by PCR, (4) normal genetic testing for HFE (human hemochromatosis protein gene) mutation excluding hemochromatosis, negative flow cytometry for PNH (paroxysmal nocturnal hemoglobinuria), a normal glucose-6-phosphate dehydrogenase screen (excluding hemolysis secondary to G6PD deficiency anemia), and (5) transesophageal echocardiogram which showed that the prosthetic mitral valve is functioning well without evidence of paravalvular leak or mitral valve regurgitation
+The patient stabilized in hospital with treatment of his AKI and Clostridium difficile infection. He remained on 3-times-per-week hemodialysis for ten weeks when his AKI recovered and his central venous catheter was removed.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4

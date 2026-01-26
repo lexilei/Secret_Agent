@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 219
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-04T03:14:13.416352
+================================================================================
+
+GROUND TRUTH: 8.0
+PREDICTED: None
+CORRECT: False
+ERROR: Could not identify calculator
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old woman with liver cirrhosis induced by the hepatitis C virus was admitted to Eul-ji University Hospital with a 20 day history of melena. Upon admission, her vital signs were as follows: blood pressure of 110/70 mmHg, heart rate of 70/min, respiratory rate of 18/min and body temperature of 36.8℃. Head and neck examinations were unremarkable except for anemic conjunctiva. Her abdomen was distended with shifting dullness and the spleen was palpable. Initial laboratory data were as follows: WBC 1,400/mm3, Hb 5.1 g/dL, platelet 63,000/mm3, BUN 19 mg/dL, creatinine 0.48 mg/dL, albumin 3.0 g/dL, AST 26 IU/L, ALT 20 IU/L, ALP 47 IU/L, total bilirubin 0.73 mg/dL, INR 1.45, CRP 0.08 mg/dL, AFP 2.4 ng/dL. The hepatitis B marker was negative and the anti HCV antibody was positive. A hepatitis C viral load was undetectable. The patient was treated with intravenous (IV) pantoprazole, IV terlipressin and IV ciprofloxacin and was transfused with fresh frozen plasma and packed red blood cells. Emergency esophagogastroduodenoscopy revealed the presence of grade 2 esophageal varices without stigmata of recent bleeding. No bleeding focus was found at colonoscopy up to the terminal ileum. Abdominal computed tomography (CT) showed liver cirrhosis with massive ascites, splenomegaly and esophagogastric varices with portosystemic collaterals. In addition, CT angiography revealed the presence of jejunal varices but no active bleeding was found (). Because she continued experiencing recurrent melena, a capsule endoscopy was performed on day five of hospitalization. It demonstrated fresh blood adjacent to varices in the jejunum (). On day six of hospitalization, a decision was made to perform the embolization of varices via the portal vein. The guidewire was manipulated into the superior mesenteric vein and the catheter tip was then positioned into tortuous, wide jejunal varices drained to the inferior vena cava. Five steel coils were placed into this vein. After that, injection of contrast under pressure did not demonstrate any retrograde flow, indicating that it was occluded ().
+She received up to 21 units of packed red blood cells before the coiling embolization of the jejunal varices. Since that point in time, she has had a stable hemoglobin level and no recurrence of the melena has been recognized. She has been treated with a non-selective beta-blocker. A CT scan of the abdomen obtained 5 month after the embolization showed contrast-enhancing steel coils deposits within the varices. No further GI bleeding occurred during the 5 month follow-up.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+(no response)
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': None, 'confidence': 0.0}], 'method': 'l4_pipeline'}
+

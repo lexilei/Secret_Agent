@@ -1,0 +1,44 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 209
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-02T03:23:10.087960
+================================================================================
+
+GROUND TRUTH: 12.0
+PREDICTED: 11.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 41-year-old man was initially evaluated in the emergency department for a 2-month history of shortness of breath, abdominal distension, scrotal swelling, and left inguinal pain. Past history included long-term use of intravenous drugs, extensive and current alcohol use with evidence of cirrhosis based on laboratory findings, and imaging and seropositivity for hepatitis C antibody without measurable viremia. He also had a history of sustaining an upper abdominal stab wound requiring exploratory laparotomy in the early 1990s. He denied fevers, rigors, night sweats, weight loss, or skin rashes.
+Initial evaluation revealed an ill appearing man with tachycardia (heart rate 120 beats/min) with mild hypotension (blood pressure 85–105/50–60 mmHg), and tachypnea (respiratory rate 20–25/min) requiring 2 L/min supplemental oxygen by nasal cannula to maintain a blood oxygen saturation >95 %. He had distant heart sounds with tachycardia and regular rhythm without murmurs or gallops. He had jugular venous distension with a positive Kussmaul’s sign and pulsus paradoxus. There was significant abdominal distention present with a fluid wave. He had stigmata of chronic liver disease with spider angiomata noted and collateral venous distension in the abdominal wall. Furthermore, he had scrotal swelling and bilateral lower extremity edema. He was admitted to the hospital’s Medicine Service.
+On admission, a chest radiograph revealed enlargement of the cardiac silhouette (Fig. ). A bedside echocardiogram illustrated a large pericardial effusion with evidence of hemodynamic compromise, including right atrial and right ventricular diastolic collapse, a >30 % respiratory variability in the tricuspid and mitral valve flow rates, and a swinging cardiac motion consistent with the presence of cardiac tamponade demanding urgent intervention.
+Admission laboratory values revealed a normal white blood cell count, a mild macrocytic anemia (mean corpuscular volume 95 fL) with a hemoglobin of 12.1 g/dL, a hematocrit of 36 %, and thrombocytopenia with a platelet count of 84,000/μL. Tests of liver function revealed serum concentrations of albumin of 2.2 g/dL (N > 3.5 g/dL), total bilirubin of 3.1 mg/dL, with direct bilirubin of 1.9 mg/dL, an aspartate aminotransferase of 83 U/mL, an alanine aminotransferase of 37 U/mL, an alkaline phosphatase of 106 U/mL (upper limits of normal 150 U/mL), and a γ-glutamyl transpeptidase of 48 U/mL (upper limits of normal <98 U/L). Studies of coagulation revealed an elevated prothrombin time (PT) of 21 s and an international normalized ratio (INR) of 1.87. Abdominal paracentesis revealed a serum albumin-to-ascites gradient (SAAG) >1.1 g/dL, and a total protein concentration of <2.5 g/dL, consistent with portal hypertension: The total white blood cell count was 220/mm3, with 22 % neutrophils. These results were compatible with the diagnosis of an uninfected ascites due to portal hypertension as a probable consequence of his cirrhosis. The initial chest radiograph revealed cardiomegaly, bilateral pulmonary edema, and minimal pleural effusions (Fig. ). Ultrasound scan of the right upper quadrant revealed a nodular liver consistent with cirrhosis with evidence of portal hypertension such as mild splenomegaly and large volume ascites with no space-occupying lesion was identified. Admission pericardiocentesis had an opening pressure of 20 mmHg and, after removal of 1.5 L of serous pericardial fluid and placement of a drain, a closing pressure of 9 mmHg. Pericardial fluid analysis revealed protein concentrations and other characteristics identical to those found in the ascitic fluid: All pericardial cultures were negative, and no organisms were seen. Otherwise, the echocardiogram was relatively normal, as was cardiac function. Over the succeeding 24 h, 3 L of fluid drained from the pericardial sac, as did an additional 3 L during the subsequent 24-h period. It was suspected that ascitic fluid was exiting through the pericardial drain.
+During investigation, a mildly elevated erythrocyte sedimentation rate (ESR) of 28 mm/h and serum concentrations of C-reactive protein of 1.1 mg/dL, creatine phosphokinase of 101 U/L, aldolase of 6.1 U/L, and lactate dehydrogenase of 398 U/L were all noted. Serum lipids and triglycerides were unremarkable. Investigation for the etiology of chronic liver disease revealed a serum ferritin of 113 ng/mL, negative anti-mitochondrial antibody, anti-smooth muscle antibody, antinuclear antibody, and anti-liver kidney microsomal antibodies, and negative virologic evidence for hepatitis A or B. Hepatitis C Ab was positive, but serum hepatitis C virus was undetectable. Serum α-1 anti-trypsin and ceruloplasmin, serum copper, and TSH concentrations were normal. Serological investigations for a possible rheumatological disease were unremarkable as well as infectious evaluation for HIV, Lyme disease, and Mycobacterium tuberculosis. A PET/CT scan revealed no FDG-avid focus in any area.
+Since decreased pericardial fluid volume was noted on the fourth and fifth hospital days, the pericardial drain was removed. Two days later, he became progressively dyspneic with repeat chest X-ray showing bilateral pleural effusions, cardiomegaly, and diffuses pulmonary edema.
+A radionuclide SPECT scan was then performed following injection of 5.11 mCi 99mTechnetium-labeled, macroaggregated albumin (MAA) into the peritoneal cavity. There was essentially no delay between the infusion of 99mTc-MAA and imaging. Although dynamic imaging was performed, the uptake in the pericardial sac was only faint at 15 min, but clearly visible at 1 h. The most impressive images were obtained at 4–24 h (Fig. ), where there was circumferential pericardial radiotracer distribution.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the Child-Pugh Score, we need to evaluate the following components based on the patient's initial admission status:
+
+1. **Bilirubin**: 3.1 mg/dL → 2 points (2-3 mg/dL)
+2. **Albumin**: 2.2 g/dL → 3 points (<2.8 g/dL)
+3. **INR**: 1.87 → 2 points (1.7-2.2)
+4. **Ascites**: Large volume ascites (consistent with portal hypertension) → 3 points
+5. **Encephalopathy**: Not mentioned → 1 point (assuming none)
+
+Adding these points:  
+2 (Bilirubin) + 3 (Albumin) + 2 (INR) + 3 (Ascites) + 1 (Encephalopathy) = **11**  
+
+Answer: 11

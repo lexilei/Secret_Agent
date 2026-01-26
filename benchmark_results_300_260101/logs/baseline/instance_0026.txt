@@ -1,0 +1,64 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 26
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T20:50:28.748491
+================================================================================
+
+GROUND TRUTH: 70.21721
+PREDICTED: 73.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 35-year-old Japanese man with a history of renal disease presented to a dermatology clinic with sudden onset of a purpuric rash on his lower extremities () and was diagnosed with anaphylactoid purpura. Although he was asymptomatic, proteinuria, and haematuria were detected during a screening test when he was 20 years old, and he was diagnosed with IgAN based on renal biopsy. Histopathological examination of renal biopsy specimens revealed mild mesangial proliferation (). Immunohistochemical examination revealed mesangial IgA (), IgG and C3 () depositions, and he was treated with corticosteroids. Thereafter, he moved to our city and continued to be treated here. Corticosteroids treatment was continued for 7 years and was subsequently tapered.
+Physical examination following the appearance of purpura revealed purpuric rash without any pitting oedema on his legs. Blood pressure was 147/78 mmHg. Urinalysis showed (+++) urinary protein, no urinary glucose, 6–10 red blood cells/high power field, urinary protein was 1.4 g/g creatinine (Cr). A peripheral blood smear showed a white blood cell (WBC) count of 12,100 cells/mm3, red blood cell of 5.16 million cells/mm3, and platelets 192,000 cells/mm3. Serum haemoglobin was 16.6 g/dL and haematocrit 45.4%. Blood chemistry showed total serum protein 7.2 g/dL, serum albumin 4.2 g/dL, serum sodium 141 mEq/L, potassium 4.3 mEq/L, chloride 105 mEq/L, serum Cr 1.35 mg/dL, serum aspartate aminotransferase 21 IU/L, serum alanine aminotransferase 28 IU/L, blood glucose 96 mg/dL, glycosylated haemoglobin 4.8%, and serum C-reactive protein (CRP) 1.57 mg/dL. Immunological examination showed an antistreptolysin O (ASO) titer 24 IU/mL, IgG 1095 mg/dL, IgA 315 mg/dL, IgM 133 mg/dL, C3 164 mg/dL, C4 35 mg/dL, and CH50 67.0 U/mL. 
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's estimated Glomerular Filtration Rate (GFR) using the **2021 CKD-EPI Creatinine equation**, we use the following formula for **non-Black males** (since the patient is Japanese):
+
+\[
+\text{GFR} = 142 \times \min\left(\frac{\text{SCr}}{\kappa}, 1\right)^a \times \max\left(\frac{\text{SCr}}{\kappa}, 1\right)^{-1.200} \times 0.9938^{\text{Age}}
+\]
+
+Where:
+- **SCr** = serum creatinine (mg/dL) = **1.35 mg/dL** (given in the note)
+- **κ** = 0.9 (for males)
+- **a** = -0.302 (for males)
+- **Age** = 35 years
+
+### Step-by-Step Calculation:
+1. Compute \(\frac{\text{SCr}}{\kappa} = \frac{1.35}{0.9} = 1.5\)  
+   Since \(1.5 > 1\), we use:
+   - \(\min\left(\frac{\text{SCr}}{\kappa}, 1\right) = 1\)
+   - \(\max\left(\frac{\text{SCr}}{\kappa}, 1\right) = 1.5\)
+
+2. Plug into the equation:
+   \[
+   \text{GFR} = 142 \times (1)^{-0.302} \times (1.5)^{-1.200} \times 0.9938^{35}
+   \]
+   - \(1^{-0.302} = 1\)
+   - \(1.5^{-1.200} \approx 0.647\) (using a calculator)
+   - \(0.9938^{35} \approx 0.800\) (using a calculator)
+
+3. Multiply the values:
+   \[
+   \text{GFR} = 142 \times 1 \times 0.647 \times 0.800 \approx 73.5
+   \]
+
+### Final Answer:
+**73** (rounded to the nearest whole number)  
+
+[Returning ONLY the numeric value as per instructions]  
+
+73

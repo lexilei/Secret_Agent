@@ -1,0 +1,47 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 168
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-02T03:23:08.915467
+================================================================================
+
+GROUND TRUTH: 80.4253
+PREDICTED: 186.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+We present a 15-year-old boy who was admitted to our hospital with significant weight loss, malaise, and cold intolerance. Written informed consent for presentation was obtained from the patient and his parents.
+The patient weighed 102 kg until four years ago, at which time, with the help of a dietitian, he started to lose weight. However, after losing 2 kg, he discontinued the dietary regime. Two years later, when he weighed 100 kg, he decided to lose weight again because he felt uncomfortable with the way he looked and felt very overweight. Within a year, he lost 20 kg by eating less and playing basketball every day for approximately two hours a day. At that time, he had to quit basketball due to a busy school schedule which led to a fear of gaining weight, causing him to restrict his diet even more. By restricting his daily intake to 500 kcal, he had lost 17.5 kg within the last two months before presenting to our clinic. The patient denied having body image problems but agreed that he had an intense fear of gaining weight. Past medical history was unremarkable except for an appendectomy performed when he was 7 years old. The family history revealed that two of his aunts have Hashimoto thyroiditis.
+At admission, the patient’s body weight was 60.7 kg (50-75th percentile). Height was 186 cm (>97th percentile) and body mass index was 17.55 kg/m2 (<3rd percentile). His body temperature was 36.1 °C and respiratory rate was 22/min. His supine blood pressure was 100/60 mmHg and heart rate was 40 bpm. His standing blood pressure was 95/60 mmHg and heart rate was 66 bpm. Cardiac examination was normal except for the bradycardia, and other systems were also normal on his physical examination. Meeting the diagnostic criteria of the fourth edition of Diagnostic and Statistical Manual of Mental Disorders (DSM IV), he was diagnosed with AN-restrictive type and hospitalized due to bradycardia. His laboratory investigations which included complete blood count, liver and kidney function tests, glucose and electrolyte levels, sedimentation rate, cortisol, cholesterol levels, and urinary analysis were all within normal ranges. Thyroid function tests revealed very low TSH levels (0.025 uIU/mL, normal range: 0.27-4.20 uIU/mL), low free T3 (fT3) levels (2.87 pmol/L, normal range 3.10-6.70 pmol/L), and normal free T4 (fT4) levels (21.9 pmol/L, normal range: 12.00-22.00 pmol/L). Thyroid peroxidase antibodies and thyroglobulin antibodies were high, while TSH receptor antibodies were negative. With these findings, he was additionally diagnosed with Hashimoto thyroiditis. Thyroid ultrasonography confirmed the diagnosis.
+In the inpatient unit, the patient was followed by an interdisciplinary team consisting of a child and adolescent psychiatrist, an adolescent medicine specialist, a pediatric endocrinologist, and a dietitian with special training and experience in adolescent EDs. During his three-week stay, he gained 4 kg. Despite the weight gain and the improvement in his nutritional status, bradycardia continued (40-50 bpm). Echocardiography findings were normal, and Holter monitoring only revealed sinus bradycardia. Thyroid functions were monitored closely without any medical treatment, along with his vitals. Before discharge, while TSH levels were still low (0.018 uIU/mL), fT3 levels were thought to be relatively high (3.76 pmol/L) considering his metabolic status. The patient was discharged with a weight of 64.7 kg. At his follow-up visit 2 months later, the boy had gained weight and weighed 75.1 kg. Due to the gradual increase noted in his TSH levels (from 8.91 to 28.84 uIU/mL), levothyroxine treatment was started. At that time, fT3 and fT4 levels were measured as 7.74 and 4.42 pmol/L, respectively. Two months later, it was learned that he had been using levothyroxine in doses three times higher than the recommended dose. Although monitored closely, due to the drug compliance problems and weight changes with severe body image issues, it was hard to maintain the thyroid levels within a stable course. Stabilization occurred after ten months of therapy when he started using a proper medication schedule and succeeded in preserving his target weight. The course of the thyroid function tests is given in . Bradycardia also improved with the recovery in thyroid hormone levels.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's Ideal Body Weight (IBW), we'll use the provided formula:
+
+**IBW = 50/45.5 + 2.3*(height_in - 60)**
+
+First, extract the patient's height from the note:  
+- Height = 186 cm  
+
+Convert height from cm to inches:  
+- 186 cm ÷ 2.54 ≈ 73.23 inches  
+
+Now plug into the formula:  
+- IBW = 50 (for males) + 2.3 × (73.23 - 60)  
+- IBW = 50 + 2.3 × 13.23  
+- IBW = 50 + 30.429  
+- IBW ≈ 80.429  
+
+Rounding to two decimal places:  
+**80.43**

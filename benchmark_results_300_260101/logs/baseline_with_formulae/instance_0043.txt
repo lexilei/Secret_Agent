@@ -1,0 +1,28 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 43
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-02T03:23:00.307427
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 6.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 86-year-old woman with a history of atrial fibrillation, aortic stenosis, and hypertension presented to the emergency department due to altered mental status. She was lethargic, confused, and was not answering questions appropriately for the past four days. On arrival, she was afebrile, and her vitals included a pulse of 139 beats per minute, blood pressure of 110/79 mmHg, and a respiratory rate of 16 breaths per minute with saturation of 96% on room air. Physical exam was significant for a slow to respond female, orientated to self, who was able to follow commands with no focal neurological deficit. Her skin was warm and well-perfused with normal capillary refill, with no rashes or petechiae. The cardiovascular exam was significant for tachycardia, an irregular heart rhythm, and a systolic murmur heard best at the right upper sternal border. She had lower extremity pitting edema bilaterally. Her lab results were notable for elevated white blood cell count (WBC) 25.2 x 103 μL (3.9-11.3 x 103 μL), hemoglobin 11.0 g/dL (11.3-15.1 g/dL), platelets 58.0 x 103 μL (165-366 x 103 μL), troponin 0.164 ng/mL (<0.010 ng/mL), lactic acid 2.5 mmol/L (0.5-2.0 mmol/L), and a basic chemistry panel was within normal limits. The urinalysis was remarkable for the presence of WBCs, leukocyte esterase, and bacteria with a urine culture pending. Additionally, two sets of blood cultures were obtained. Her electrocardiogram was significant for atrial fibrillation with a rapid ventricular rate (RVR). She was started on ceftriaxone for probable UTI and was admitted to the hospital for further management. Further diagnostics included lower extremity Doppler ultrasound, which revealed deep venous thrombosis (DVT). A bedside echocardiogram indicated right ventricular strain, and the N-terminal proB-type natriuretic peptide level was elevated at 8,215 pg/mL (<449 pg/mL). Due to concern for possible pulmonary embolism in the setting of known DVT, the patient was started on a continuous heparin infusion. A transthoracic echocardiogram revealed severe aortic valve calcification with new aortic insufficiency. Blood and urine cultures returned positive for Aerococcus urinae. A transesophageal echocardiogram further confirmed moderate to severe aortic regurgitation with findings suggestive of infective endocarditis (IE).
+Antibiotics were expanded to include gentamicin with ceftriaxone for IE, and surgical evaluation was consulted. Given she was a high-risk surgical candidate, surgery intervention was not offered at this time unless evidence of further clinical decompensation. Additional surgical recommendations included re-evaluation after completion of antibiotic course. She was therefore discharged on intravenous antibiotics to complete a total of six weeks of treatment with ceftriaxone and two weeks of gentamicin.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+6

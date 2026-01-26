@@ -1,0 +1,42 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 16
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-04T03:14:11.148770
+================================================================================
+
+GROUND TRUTH: 52.66849
+PREDICTED: 52.668
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 78-year-old man with a history of hypertension and benign prostatic hyperplasia, and no history of any infectious diseases, underwent endovascular stenting (S. M. A. R. T. Control C10060SL, Cordis, Santa Clara, CA, USA) at another hospital for chronic occlusion of the left iliac artery, which had been causing intermittent claudication. No prophylactic antibiotics were administered to the patient during the EVT procedure. The patient was discharged the next day without any complications. However, he developed fever and back pain 20 days later. Contrast-enhanced computed tomography (CT) was suggestive of an infected aneurysm at the site of the left iliac artery stent, and the patient was referred to our hospital.
+The patient was 160 cm tall, weighed 62.8 kg, and had a blood pressure of 156/80 mmHg, a pulse of 66 beats/min, and a body temperature of 38°C. Blood tests revealed the following: white blood cells, 13130/µl; red blood cells, 3.33 million/µl; hemoglobin, 9.9 g/dl; platelet count, 190,000/µl; blood urea nitrogen, 26.7 mg/dl; creatinine, 0.93 mg/dl; albumin, 2.4 g/dl; and C-reactive protein, 24.76 mg/dl. CT findings revealed thickening of the arterial wall and an aneurysm of the left common iliac artery at the site of the stent (). On the basis of these findings, he was diagnosed with an infected aneurysm due to bare stent infection and underwent surgical treatment.
+The terminal abdominal aorta and bilateral common iliac arteries were removed because the infection had extended to the aortic bifurcation (). The surrounding infected tissue was debrided, and the terminal aorta was replaced with a rifampicin-soaked bifurcated prosthesis. A pedicled omental flap based on the left gastroepiploic artery was then guided in a retrocolic fashion into the retroperitoneal cavity, to wrap the graft around its entire length.
+The rifampicin-soaked prosthesis was prepared as follows. First, 300-mg rifampicin capsules (Sandoz Corporation, Tokyo, Japan) were dissolved in a mixture of 6-ml high-pressure sterilized polyoxyethylene sorbitan monooleate (Tween 80, Wako Seiyaku, Tokyo, Japan) and 54-ml distilled water. This solution was then sterilized in a Millex-HV Syringe Filter Unit (0.45 µm polyvinylidene difluoride, Merck Millipore, Carrigtwohill, County Cork, Ireland). Finally, an 18×10-mm prosthesis (Hemashield Platinum, Maquet, San Jose, CA, USA) was soaked in this rifampicin solution for 15 min.
+Histopathology of the surgically excised artery specimen revealed many inflammatory cells infiltrating the intima, media, and adventitia. Abscesses and masses of Gram-positive cocci were found in all arterial layers, suggestive of an infected aneurysm ().
+Staphylococcus aureus was detected by a bacterial culture of the surgical specimen. Based on the results of his antibiotic susceptibility test, the patient was administered tazobactam/piperacillin 13.5 g/day intravenously for 4 weeks, followed by amoxicillin 750 mg/day orally. However, oral medication was discontinued after 2 weeks due to a side effect, i.e., diarrhea.
+Two postoperative complications were also treated. For adhesive bowel obstruction, partial small bowel resection was performed. For aspiration pneumonia, meropenem hydrate 1.5 g/day was administered for 1 week.
+The patient was discharged and fully recovered from his illness. The patient still visits our hospital every 3–6 months for blood tests, Doppler ultrasonography, and CT. Postoperative CT images at the 2-year follow-up revealed no signs of reinfection (). At the 3-year follow-up, the graft remained patent, and no complications were observed.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+52.668
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'confidence': 0.95}, {'stage': 'extract', 'extracted': {'age': 78, 'sex': 'male', 'weight_kg': 62.8, 'creatinine_mg_dl': 0.93, 'height_cm': 160}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 78, 'sex': 'male', 'weight_kg': 62.8, 'creatinine_mg_dl': 0.93, 'height_cm': 160}}, {'stage': 'compute', 'success': True, 'result': 52.668, 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}], 'method': 'l4_pipeline'}
+

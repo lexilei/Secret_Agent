@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 216
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T20:50:32.318681
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 7.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 67-year-old male with a past medical history of untreated hepatitis C and hypertension was admitted after experiencing nausea, lightheadedness and a syncopal episode resulting in trauma to his head. En route to the hospital, the patient had one episode of hematemesis, followed by two additional episodes in the emergency department. Vital signs were as follows: heart rate 100 beats per minute, respiratory rate 16 breaths per minute, blood pressure 131/71 mmHg and temperature 94.3°F. The patient was oriented to person, place and time. His abdomen was soft, non-distended and non-tender to palpation. Pertinent laboratory tests included hemoglobin 9.5 g/dl, hematocrit 29.5%, platelets 197 K/µL, blood urea nitrogen (BUN) 22 mg/dl, creatinine 0.8 U/L, aspartate aminotransferase (AST) 112 U/L, alanine aminotransferase (ALT) 76 U/L, total bilirubin 0.5 mg/dl, alkaline phosphatase 18 U/L, albumin 3.2 g/dl, lactic acid 3.1 mmol/L, prothrombin time 11.8 seconds and international normalized ratio (INR) 1.0. Octreotide infusion, ceftriaxone and a proton-pump inhibitor were promptly started, along with transfusion of three units of blood due to persistent bleeding.
+Urgent endoscopy was performed, where a significant amount of red blood was seen in the gastric fundus with an area of active bleeding near the gastroesophageal junction. No esophageal varices were seen. Attempts to control the hemorrhage endoscopically were unsuccessful due to large amount of active bleeding obscuring visibility. CT scan of the abdomen showed a 6-cm mass in the right lobe of a cirrhotic liver (suspected to be hepatocellular carcinoma [HCC]) and one large gastric varix with a gastrorenal shunt (Figure ). Importantly, there was no evidence of portal vein or splenic vein thrombosis.
+Initially, left-sided TIPS was attempted, but multiple attempts to pass from left portal vein to left hepatic vein were unsuccessful due to challenging anatomy. The patient required multiple blood products. Eventually, the patient underwent BRTO. His left renal vein was accessed via the right internal jugular vein, the balloon was inflated and a sclerosing agent was injected into the bleeding varix. This was followed by coiling of the same varix, resulting in occlusion of the portosystemic shunt (Figure ). The patient had no further episodes of bleeding and was discharged a few days later. He was ultimately diagnosed with HCC (Figure ).
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+7

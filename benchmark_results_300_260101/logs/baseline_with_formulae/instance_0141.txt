@@ -1,0 +1,45 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 141
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-02T03:23:07.971597
+================================================================================
+
+GROUND TRUTH: 22.5803
+PREDICTED: 2.25
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old female patient was examined in the emergency department with abdominal pain that had been persistent for ~10 days and having been aggravated for the last 3–4 days. Her past history was notable for diabetes mellitus (DM) for ~25 years. Additionally, she had undergone a coronary by-pass operation 10 years ago and a left infrapatellar amputation 4 years ago. Chronic renal failure had been diagnosed 2 years ago and she had been receiving hemodialysis treatment three times a week for the last 1 year. She had no history of abdominal trauma. Laboratory tests resulted with; White Blood Cell: 15 100/mm3, Hemoglobin: 8.5 g/dL, C-reactive protein: 40 mg/dL, Urea: 37.9 mg/dL, Creatinine: 2.25 mg/dL, Albumin: 2.4 g/dL, Sodium: 134 mmol/L, Potassium: 3.1 mmol/L, Calcium: 7.9 mg/dL, Glucose: 329 mg/dL and other biochemical parameters were normal. The abdomen was diffusely tender, and she also had guarding and rebound tenderness during the physical examination. Blood temperature was 38.7°C. An abdominal ultrasonography (US) showed diffuse intraabdominal free fluid collection. On an abdominal computed tomography (CT) there were free fluid collections in all abdominal quadrants; there also existed intraabdominal minimal free air images. There were air-fluid images in the splenic parenchyma (abscess?, perforation?) (Fig. a). The radiology department reported that it may be a gastrointestinal perforation. Based on the current findings, the patient was urgently operated according for a preliminary diagnosis of acute abdomen. Intraabdominal seropurulent fluid of ~2000 ml was aspirated perioperatively. There were diffuse fibrin matrixes in the entire peritoneum. No intestinal perforation was noted during exploration. There was a perforated abscess pouch with a size of ~8 × 6 cm2, which expanded posteriorly from splenic hilus and partly contained necrotic foci (Fig. b). Splenectomy and drainage were performed and the abdominal cavity was irrigated with abundant isotonic saline. Patient was postoperatively monitored in intubated state at intensive care unit. No proliferation occurred in her blood culture. Escherichia coli was isolated from the abscess culture, however, and Meropenem 500 mg I. V. (three times a day) and Metronidazole 500 mg I. V. (three times a day) treatment was commenced as recommended by the infectious diseases department. Her dialysis program was maintained according to blood parameters. The patient died on postoperative Day 25 due to septic shock and multiple organ failure. Histopathologic examination revealed suppurative inflammation and abscess formation of the splenic tissue (Fig. ). Informed consent was obtained from her son who participated in this case.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's GFR using the MDRD equation, we need the following values from the patient note:  
+- **Serum Creatinine (Scr):** 2.25 mg/dL  
+- **Age:** 55 years  
+- **Gender:** Female (gender coefficient = 0.742)  
+- **Race:** Not specified (assumed non-Black, as no mention of Black race in the note)  
+
+The **MDRD GFR equation** is:  
+\[ \text{GFR} = 175 \times \text{Scr}^{-1.154} \times \text{age}^{-0.203} \times \text{gender coefficient} \]  
+
+Plugging in the values:  
+\[ \text{GFR} = 175 \times (2.25)^{-1.154} \times (55)^{-0.203} \times 0.742 \]  
+
+Calculating step-by-step:  
+1. \( 2.25^{-1.154} ≈ 0.402 \)  
+2. \( 55^{-0.203} ≈ 0.742 \)  
+3. Multiply all terms: \( 175 \times 0.402 \times 0.742 \times 0.742 ≈ 21.5 \)  
+
+Final answer:  
+**21.5**

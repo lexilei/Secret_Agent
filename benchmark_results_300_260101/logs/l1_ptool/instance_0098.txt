@@ -1,0 +1,43 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 98
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:26:52.016721
+================================================================================
+
+GROUND TRUTH: 13.1828
+PREDICTED: 13.18
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+We describe a 20-year-old male from the Mbuyuni area of northern Tanzania who presented to Kilimanjaro Christian Medical Center (KCMC) in January 2020 with weight loss, splenomegaly, severe cachexia, and watery diarrhea. However, the leading symptom on presentation was watery diarrhea for 3 weeks.
+The patient was accompanied by his father who reported that his son suffered from cachexia starting age 17. Prior to age 17, his medical history was unremarkable. His parents and 7 siblings are all healthy.
+At the time of initial symptom onset, the patent lived in the Simanjiro district for cattle herding, while the rest of his family members lived in the suburban area of Arusha. He reported several insect bites during his period of working as a cattle herder. His symptoms gradually worsened with increasing weight loss and splenomegaly and as well as skin rashes and maculae in his face. After a year, he sought treatment from traditional healers. After another year of no improvement from consultation of the traditional healer, he presented to an outside hospital in the Arusha region (unknown diagnostic and treatment approach). Eventually, he was admitted at KCMC for further diagnostics.
+On admission to KCMC, the patient’s primary complaints were abdominal pain and swelling. The laboratory tests on admission revealed white blood count of 1.51 × 109/L (neutrophils 37.3%, lymphocytes 58.4%, monocytes 3.7%, eosinophils 0.4%, and basophils 0.2%), red blood cell count 2.21 × 1012/L, hemoglobin 4.9 g/dL, thrombocytes 56 × 109/L, creatinine 41 μmol/L, aspartate aminotransferase (AST) 12.9 U/L, alanine aminotransferase (ALT) 7.6 U/L, sodium 124.6 mmol/L, potassium 2.9 mmol/L, and chloride 106 mmol/L. HIV test result is negative. The sputum polymerase chain reaction (PCR) for tuberculosis (GenXpert, Cepheid, Sunnyvale, California, United States of America) was negative; a chest X-ray investigation was normal; and ultrasound of the abdomen revealed hepatosplenomegaly.
+On physical exam, he appeared pale and was wasted with a body weight of 39 kg and a height of 172 cm. On abdominal exam, his spleen was enlarged 18 cm below costal margin; the liver was enlarged 3 cm below costal margin; there were traditional healer marks throughout the abdomen; there were no palpable lymph nodes; and the lungs and heart were normal. His skin exam demonstrated hypopigmented maculae scattered on his face with accentuation in the perioral region () and skin-colored maculae on his trunk and arms. The latter occurred a few months before presentation in the hospital. Alopecia areata was also noted.
+His travel history includes a 3-month stay in Mombasa (Kenya), approximately 1 year prior to presentation, where he worked as a merchant. Travels to other areas in Kenya or other countries, especially to endemic VL areas, has been denied by the patient as well as travels within Tanzania.
+Due to pancytopenia, the patient was referred to the Hematology section of the Cancer Care Centre at KCMC, where we performed bone marrow aspirate and biopsy, revealing Leishmania amastigotes in macrophages (Figs and ). The rapid test for Leishmania antibody detection (IT LEISH) from the peripheral blood and the bone marrow aspirate remained negative.
+After discussion with senior experts in tropical diseases, we decided to reperform bone marrow aspiration for PCR in a reference laboratory, which found the aspirate positive for Leishmania species DNA.
+Due to the unavailability of liposomal Amphotericin, we initiated treatment with Amphotericin B (1 mg/kg IV). Unfortunately, the patient passed away on the fourth day of treatment due to sudden onset of respiratory insufficiency. Beside evidence of massive organ manifestations of VL (Figs –), the autopsy revealed pneumonia ().
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+13.18
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 13.18}
+

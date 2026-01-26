@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 225
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-04T03:14:13.497529
+================================================================================
+
+GROUND TRUTH: 2.0
+PREDICTED: 2.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old female with hypertension and hyperlipidemia presented to the emergency department this morning complaining of a dull ache behind the right knee that began yesterday afternoon while she was attempting to ambulate from her bedroom to the bathroom. Nine days ago she was discharged from an outside hospital after an elective right hemicolectomy for complicated diverticulitis; during that admission she remained largely supine for the first four postoperative days, and since returning home she reports spending most hours in bed because of fatigue and abdominal discomfort, rising only for meals and toileting. She denies any history of malignancy, clotting disorder, or prior vein thrombosis, and she has not required a cast, brace, or splint on either lower extremity. Today she noted that her right ankle and lower calf appeared somewhat puffier than usual and that the skin over that region left an indentation when she pressed with her thumb, yet she did not observe comparable changes in the opposite limb. She specifically denies redness, warmth, or diffuse swelling from groin to foot, and she has not experienced sudden shortness of breath, chest pain, or palpitations. She denies recent trauma, fever, chills, weight loss, night sweats, or urinary complaints. Current medications include enteric-coated aspirin 81 mg daily, amlodipine 5 mg daily, and postoperative oxycodone 5 mg taken sparingly for incisional pain; she is not on hormone replacement, oral contraceptives, or anticoagulation. Vital signs on arrival: temperature 98.6 °F, heart rate 86 bpm, blood pressure 138/78 mm Hg, respiratory rate 16 breaths/min, SpO2 98% on room air. She appears tired but in no acute distress, speaking full sentences without dyspnea. Cardiopulmonary examination is unremarkable with regular S1/S2, no murmurs, clear bilateral breath sounds, and no jugular venous distention. Abdominal surgical incision is clean, dry, and intact with mild perincisional tenderness expected for postoperative day 9, and no abdominal distention or guarding. Musculoskeletal and vascular examination of the legs reveals normal skin temperature bilaterally and symmetric palpable posterior tibial and dorsalis pedis pulses. The right lower calf and ankle demonstrate 1+ pitting edema that is not present on the left side; tape-measure circumference at 10 cm below the tibial tuberosity shows a difference of 1.2 cm. There is no cord-like induration, varicosities, or engorged superficial channels over either calf or thigh. Gentle palpation over the right femoral triangle, popliteal fossa, posterior calf, and along the course of the peroneal veins elicits no focal tenderness. Range of motion at the right knee and ankle is full and pain free except for the vague ache she describes deep in the posterior knee while standing. Sensation is intact and motor strength is 5/5 in all major muscle groups; there is no weakness, foot drop, or spasticity. Neurologic examination is otherwise nonfocal. Laboratory studies drawn in triage demonstrate hemoglobin 12.4 g/dL, platelet count 235 × 10^3/µL, creatinine 0.9 mg/dL, INR 1.0; comprehensive metabolic panel is within normal limits. Given her recent major abdominal surgery less than two weeks prior, the prolonged time confined to bed greater than three consecutive days, and the new unilateral dependent edema, venous thromboembolic disease is high on the working differential. Cellulitis is considered less likely in the absence of erythema or warmth, and musculoskeletal strain does not fully account for the discrete pitting edema. No alternative explanation appears as compelling, and there is insufficient evidence to suggest a competing diagnosis of equal probability. Duplex ultrasonography of the right lower extremity has been ordered to further evaluate for deep venous occlusion, and anticoagulation decisions will be deferred pending imaging results and discussion with surgery regarding postoperative bleeding risk.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {'age': 62, 'sex': 'female', 'has_hypertension': True}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 62, 'sex': 'female', 'has_hypertension': True}}, {'stage': 'compute', 'success': True, 'result': 2.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

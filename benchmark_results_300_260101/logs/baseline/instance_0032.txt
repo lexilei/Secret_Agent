@@ -1,0 +1,28 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 32
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T20:50:28.870279
+================================================================================
+
+GROUND TRUTH: 6.49484
+PREDICTED: 7.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 65-year-old woman was referred for colonoscopy because of abdominal pain and hematochezia. She had a history of end-stage renal disease, hypertension, and diabetes mellitus. She underwent hemodialysis three times per week. The patient's hemodynamic parameters were stable. On physical examination, she was found to have right abdominal pain and tenderness. Laboratory tests revealed a white blood cell (WBC) count of 13,900/mm2, a hemoglobin level of 9.4 g/dL, and a platelet count of 228,000/mm2. Serum biochemistry showed creatinine level, 6.6 mg/dL; albumin level, 3.0 g/dL; alanine aminotransferase level, 36 IU/L; aspartate aminotransferase level, 38 IU/L; bilirubin level, 1.2 mg/dL; and alkaline phosphatase level, 198 IU/L with normal electrolytes. Serum was negative for antinuclear antibody and HIV antibody. Anemia was associated with chronic renal failure. On stool examination, negative results were obtained for stool WBC, stool culture, and Clostridium difficile toxin A/B. The electrocardiogram showed normal results. An esophagogastroduodenoscopy revealed no evidence of bleeding. Colonoscopy was performed after standard bowel preparation and under sedation with 3 mg of midazolam. The colonoscopic findings showed diffuse bowel wall edema. Upon examination of the distal transverse colon, we found several deep linear red mucosal breaks resembling scratches ().
+In the ascending colon, dark purple edematous mucosa and necrotic epithelial lesions were found (). Cecal intubation was not performed because of severe ischemic changes with necrosis. The remaining colorectal mucosa was grossly normal. Computed tomography (CT) scan showed moderate-to-severe diffuse bowel wall thickening and focally decreased mucosal enhancement in the right colon. The patient was diagnosed with ischemic colitis based on colonoscopic and CT findings, and clinical manifestations. The patient thus received supportive care. Intravenous fluids were administered to treat dehydration, and total parenteral nutrition with prophylactic antibiotics was provided. The patient was placed on bowel rest until the symptoms resolved. After 3 weeks, follow-up colonoscopy and CT were performed. On follow-up colonoscopy, the previous severe ischemic colonoscopic findings had disappeared, and ischemic mucosal change showed further resolution (). No further mucosal tearing was observed during the follow-up colonoscopy. On CT scans, improvement in ischemic colitis was noted. The patient no longer complained of abdominal pain or hematochezia.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+7

@@ -1,0 +1,40 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 143
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T21:37:22.010487
+================================================================================
+
+GROUND TRUTH: 8.77541
+PREDICTED: 8.916
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 70-year-old man was admitted to the hospital because he had been suffering from edema of the lower extremities for 1 month. He had a 5-year history of renal dysfunction, bile duct stenosis, and an inflammatory pancreatic mass. Additionally, 5 years prior to the presentation, he had a baseline serum creatinine level of 200 μmol/L. At that time, the patient had undergone choledochal stent implantation. Three years ago, the stent had been removed, and he had begun to take oral prednisone 30 mg/day. The bile duct stenosis and pancreatic mass had been successfully eliminated, so the prednisone treatment had been discontinued 3 months prior to presentation. In the past month, he had experienced rapid progression of renal function. His medical history also included hypertension and diabetes. With the exception of bilateral lower limb edema, the findings from the physical examination conducted at the time of presentation were unremarkable.
+Laboratory tests showed that his white blood cell count was 5.06 × 109/L; hemoglobin, 87 g/L; platelet count, 126 × 109/L; CRP, 30.23 mg/L; erythrocyte sedimentation rate, 80 mm/H; serum nitrogen, 32.79 mmol/L; serum creatinine, 555.8 μmol/L; and serum albumin, 32.7 g/L. He had normal liver function with normal amylase and lipase levels. Urine analysis showed that the protein level was 2+; red blood cell count, 80/μL; urine gravity, 1.010; urinary albumin/creatinine ratio, 330; 24-h urine protein, 0.98–1.22 g; and urine neutrophil gelatinase-associated lipocalin (NGAL), 236 ng/mL.
+Immunological tests showed that the concentrations of serum C3 (complement 3) and serum C4 (complement 4) were lower than normal at 0.355 and <0.066 g/L respectively. Further, the patient had polyclonal hypergammaglobulinemia, as the total serum immunoglobulin G (IgG) level had increased to 31.7 g/L. However, the serum IgA and IgM concentrations were normal. The patient was negative for anti-self-antibodies, including antinuclear antibody, anti-double-stranded antibody, anti-Sjogren’s syndrome A antibody, anti-Sjogren’s syndrome B antibody, anti-proteinase 3, and anti-myeloperoxidase anti-neutrophil cytoplasmic antibody. Analysis of the IgG subtypes showed that the serum IgG1 level and the serum IgG4 level were obviously elevated at 23.7 g/L (4.90–11.40) and 10.90 g/L (0.08–1.40), respectively. The mCRP autoantibodies level was also elevated at 64.25%.
+Kidney ultrasound examination showed that both kidneys were of normal size (10.6 × 5.2 cm and 10.6 × 5.6 cm), with uniform echo frequency and clear corticomedullary boundaries; moreover, there were no mass lesions. Chest computed tomography showed that there were multiple nodules in the both lungs. The abdominal radiography findings were unremarkable.
+The renal biopsy specimen exhibited severe tubulointerstitial changes, but the glomerulus shows no specific finding (). In particular, storiform fibrosis () and inflammatory cells infiltration including plasma cells () were marked in the interstitium. Immunofluorescence staining revealed that IgM, IgA, and C3 were present at low levels in the granular mesangial area. Electron microscopy demonstrated that there were no electron-dense deposits in the glomeruli. Immunohistochemical staining showed that most plasma cells in the interstitium were positive for CD138, and there were seven IgG4-positive plasma cells and thirteen IgG-positive plasma cells in the same area of serial sections). So, the percentage of IgG4-positive plasma cells among the total IgG-positive plasma cells was 53%.
+We prescribed 25 mg/day oral prednisone and 0.6 g of cyclophosphamide (CTX) every month by intravenous infusion. The patient had been followed up for 6 months at the time of writing this paper. In the most recent follow-up examination, the serum creatinine level had decreased to 194 μmol/L, the serum C3 and serum C4 levels had increased to 0.668 and 0.209 g/L, respectively, and were close to normal, the serum IgG1 level was normal at 10.2 g/L, and the IgG4 level had considerably decreased to 3.72 g/L. Therefore, the dose of prednisone was decreased to 12.5 mg/day, and the cumulative dose of CTX was 3.6 g until to the time of writing this paper. Changes in renal function, as indicated by the serum creatinine level, during the follow-up are depicted in .
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 70.0, 'creatinine': 6.28733031674208, 'sex': 'male'}, 'result': 8.916, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 70.0, 'creatinine': 6.28733031674208, 'sex': 'male'}, 'result': 8.916, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}}
+

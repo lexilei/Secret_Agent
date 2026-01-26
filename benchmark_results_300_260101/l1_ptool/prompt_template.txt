@@ -1,0 +1,169 @@
+================================================================================
+EXPERIMENT: l1_ptool (L1 - @ptool Decorator)
+================================================================================
+
+DESCRIPTION:
+Uses the @ptool decorator to create a typed LLM function call.
+The function signature and docstring guide the LLM's response.
+
+================================================================================
+PTOOL SPECIFICATION
+================================================================================
+
+Name: _calculate_medical_value
+Model: deepseek-v3-0324
+Output Mode: freeform
+Return Type: <class 'float'>
+
+Signature: _calculate_medical_value(patient_note: str, question: str) -> float
+
+Docstring:
+
+Calculate a medical value from a patient note.
+
+Given a patient note and a calculation question:
+1. Carefully read the patient note to extract all relevant clinical values
+2. Identify what medical calculation/score is needed
+3. Apply the appropriate formula from the reference below
+4. Show your calculation step by step
+
+FORMULAS (use these exact formulas):
+- Adjusted Body Weight: ABW = IBW + 0.4*(weight - IBW)
+- Albumin Corrected Anion Gap: Corrected AG = AG + 2.5*(4 - albumin)
+- Anion Gap: AG = Na - (Cl + HCO3)
+- Apache Ii: Acute Physiology + Age + Chronic Health points
+- Bmi: BMI = weight / height^2
+- Body Surface Area: BSA = sqrt((weight * height) / 3600)
+- Calcium Correction: Corrected Ca = Ca + 0.8*(4 - albumin)
+- Caprini: Sum of weighted risk factors
+- Cci: Sum of weighted comorbidity points + age points
+- Centor: Exudate + Lymphadenopathy + Fever + No cough + Age modifier
+- Child Pugh: Sum of points for bilirubin, albumin, INR, ascites, encephalopathy
+- Ckd Epi Gfr: GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef
+- Conception Date: Conception ≈ LMP + 2 weeks
+- Creatinine Clearance: CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)
+- Curb65: Confusion + Urea + RR + BP + Age≥65 (0-5 points)
+- Delta Gap: Delta Gap = AG - 12
+- Delta Ratio: Delta Ratio = Delta Gap / (24 - HCO3)
+- Estimated Due Date: EDD = 40 weeks from LMP; remaining = 40 - current GA
+- Fena: FENa = (UNa × SCr) / (SNa × UCr) × 100
+- Feverpain: Fever + Purulence + Attend rapidly + Inflamed tonsils + No cough/coryza (0-5)
+- Fib4: FIB-4 = (Age × AST) / (Platelets × √ALT)
+- Framingham Risk: Framingham 10-year CHD risk calculation
+- Free Water Deficit: FWD = TBW% × weight × (Na/140 - 1)
+- Gbs: Sum of clinical and lab criteria (0-23)
+- Gcs: GCS = Eye + Verbal + Motor
+- Gestational Age: GA in weeks and days
+- Has Bled: H-A-S-B-L-E-D criteria (0-9 points)
+- Heart Score: History + ECG + Age + Risk factors + Troponin (0-10)
+- Homa Ir: HOMA-IR = (Glucose × Insulin) / 405
+- Ideal Body Weight: IBW = 50/45.5 + 2.3*(height_in - 60)
+- Ldl: LDL = Total - HDL - TG/5
+- Maintenance Fluids: 4-2-1 rule
+- Map: MAP = (2*DBP + SBP) / 3
+- Mdrd Gfr: GFR = 175 × Scr^-1.154 × age^-0.203 × gender_coef
+- Meld Na: MELD-Na = MELD + 1.32×(137-Na) - 0.033×MELD×(137-Na)
+- Mme: Sum of (opioid dose × conversion factor)
+- Perc: 8 criteria; PERC negative if all 0
+- Psi: Demographics + Comorbidities + Physical Exam + Labs
+- Qtc Bazett: QTc = QT / sqrt(RR)
+- Qtc Framingham: QTc = QT + 154*(1 - RR)
+- Qtc Fridericia: QTc = QT / RR^(1/3)
+- Qtc Hodges: QTc = QT + 1.75*(HR - 60)
+- Qtc Rautaharju: QTc = QT + 154 × (1 - RR)
+- Rcri: Sum of 6 risk factors (0-6 points)
+- Serum Osmolality: Osm = 2*Na + BUN/2.8 + Glucose/18
+- Sirs: Temperature + HR + RR/PaCO2 + WBC (≥2 = SIRS positive)
+- Sodium Correction: Corrected Na = Na + 0.024*(glucose - 100)
+- Sofa: Sum of 6 organ system scores (0-24)
+- Steroid Conversion: Prednisone equivalent = dose × conversion factor
+- Target Weight: weight = BMI * height^2
+- Wells Dvt: Sum of clinical criteria points
+- Wells Pe: Sum of criteria (>4 = PE likely, ≤4 = PE unlikely)
+
+Important: Be precise with extracted values. Double-check your arithmetic.
+
+ANSWER: <the numeric result as a number>
+
+
+================================================================================
+FORMATTED PROMPT (with placeholders)
+================================================================================
+
+You are executing the function `_calculate_medical_value`.
+
+Function signature: _calculate_medical_value(patient_note: str, question: str) -> float
+
+Description:
+Calculate a medical value from a patient note.
+
+Given a patient note and a calculation question:
+1. Carefully read the patient note to extract all relevant clinical values
+2. Identify what medical calculation/score is needed
+3. Apply the appropriate formula from the reference below
+4. Show your calculation step by step
+
+FORMULAS (use these exact formulas):
+- Adjusted Body Weight: ABW = IBW + 0.4*(weight - IBW)
+- Albumin Corrected Anion Gap: Corrected AG = AG + 2.5*(4 - albumin)
+- Anion Gap: AG = Na - (Cl + HCO3)
+- Apache Ii: Acute Physiology + Age + Chronic Health points
+- Bmi: BMI = weight / height^2
+- Body Surface Area: BSA = sqrt((weight * height) / 3600)
+- Calcium Correction: Corrected Ca = Ca + 0.8*(4 - albumin)
+- Caprini: Sum of weighted risk factors
+- Cci: Sum of weighted comorbidity points + age points
+- Centor: Exudate + Lymphadenopathy + Fever + No cough + Age modifier
+- Child Pugh: Sum of points for bilirubin, albumin, INR, ascites, encephalopathy
+- Ckd Epi Gfr: GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef
+- Conception Date: Conception ≈ LMP + 2 weeks
+- Creatinine Clearance: CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)
+- Curb65: Confusion + Urea + RR + BP + Age≥65 (0-5 points)
+- Delta Gap: Delta Gap = AG - 12
+- Delta Ratio: Delta Ratio = Delta Gap / (24 - HCO3)
+- Estimated Due Date: EDD = 40 weeks from LMP; remaining = 40 - current GA
+- Fena: FENa = (UNa × SCr) / (SNa × UCr) × 100
+- Feverpain: Fever + Purulence + Attend rapidly + Inflamed tonsils + No cough/coryza (0-5)
+- Fib4: FIB-4 = (Age × AST) / (Platelets × √ALT)
+- Framingham Risk: Framingham 10-year CHD risk calculation
+- Free Water Deficit: FWD = TBW% × weight × (Na/140 - 1)
+- Gbs: Sum of clinical and lab criteria (0-23)
+- Gcs: GCS = Eye + Verbal + Motor
+- Gestational Age: GA in weeks and days
+- Has Bled: H-A-S-B-L-E-D criteria (0-9 points)
+- Heart Score: History + ECG + Age + Risk factors + Troponin (0-10)
+- Homa Ir: HOMA-IR = (Glucose × Insulin) / 405
+- Ideal Body Weight: IBW = 50/45.5 + 2.3*(height_in - 60)
+- Ldl: LDL = Total - HDL - TG/5
+- Maintenance Fluids: 4-2-1 rule
+- Map: MAP = (2*DBP + SBP) / 3
+- Mdrd Gfr: GFR = 175 × Scr^-1.154 × age^-0.203 × gender_coef
+- Meld Na: MELD-Na = MELD + 1.32×(137-Na) - 0.033×MELD×(137-Na)
+- Mme: Sum of (opioid dose × conversion factor)
+- Perc: 8 criteria; PERC negative if all 0
+- Psi: Demographics + Comorbidities + Physical Exam + Labs
+- Qtc Bazett: QTc = QT / sqrt(RR)
+- Qtc Framingham: QTc = QT + 154*(1 - RR)
+- Qtc Fridericia: QTc = QT / RR^(1/3)
+- Qtc Hodges: QTc = QT + 1.75*(HR - 60)
+- Qtc Rautaharju: QTc = QT + 154 × (1 - RR)
+- Rcri: Sum of 6 risk factors (0-6 points)
+- Serum Osmolality: Osm = 2*Na + BUN/2.8 + Glucose/18
+- Sirs: Temperature + HR + RR/PaCO2 + WBC (≥2 = SIRS positive)
+- Sodium Correction: Corrected Na = Na + 0.024*(glucose - 100)
+- Sofa: Sum of 6 organ system scores (0-24)
+- Steroid Conversion: Prednisone equivalent = dose × conversion factor
+- Target Weight: weight = BMI * height^2
+- Wells Dvt: Sum of clinical criteria points
+- Wells Pe: Sum of criteria (>4 = PE likely, ≤4 = PE unlikely)
+
+Important: Be precise with extracted values. Double-check your arithmetic.
+
+ANSWER: <the numeric result as a number>
+
+Current inputs:
+  patient_note = '<PATIENT_NOTE>'
+  question = '<QUESTION>'
+
+Provide your reasoning, then give the final answer.
+Format your final answer on the last line as: ANSWER: <your answer>

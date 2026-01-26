@@ -1,0 +1,53 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 207
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-02T03:23:10.035297
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 6.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A forty-one-year-old man was admitted to our hospital with twelve hours of melena and non-bloody emesis. His medical history was significant for alcohol use disorder, prior acute pancreatitis complicated by splenic vein thrombosis, type II diabetes mellitus, and obstructive sleep apnea. A computerized tomography (CT) of the abdomen seventeen months earlier demonstrated splenic vein occlusion vs. marked narrowing with extensive collateral circulation in the upper abdomen. Prior to admission, he had been taking 1600 mg of ibuprofen daily and drinking six beers daily. On exam the patient was tachycardic (132 bpm), blood pressure was 120/70. He was pale, ill appearing and had mild epigastric tenderness on palpation. On admission the hemoglobin and hematocrit were 8.4 g/dL and 25% respectively. The remaining laboratory results were significant for elevated lactate at 3.7 U/L, INR 1.3, PT 15.7 seconds, PTT 29 seconds, alkaline phosphatase 46 U/L, albumin 3.2 g/dL, total bilirubin 1.5 mg/dL, AST 34 U/L, ALT 30 U/L and platelets 178,000/mm3. He was resuscitated with IV fluids, started on IV proton pump inhibitor, IV octreotide, transfused 1 unit of packed red blood cells (pRBCs), and was admitted to the Medical Intensive Care Unit.
+An upper endoscopy was performed on the evening of his admission which demonstrated mildly friable gastric mucosa. His IV pantoprazole and octreotide were stopped at that time. The patient was prepped for a colonoscopy scheduled the following day. Overnight he developed bright red blood per rectum. Despite two additional units of pRBCs, his hemoglobin and hematocrit remained low at 7.1 g/dL and 21.1% respectively. On hospital day (HD) 2, the patient underwent colonoscopy which demonstrated clotted blood throughout the colon and blood streaming down from the terminal ileum, but no bleeding source was identified.
+The patient subsequently underwent a CT angiogram of the abdomen and pelvis which demonstrated pericecal-periappendiceal inflammatory changes with mild thickening of the cecal wall, but the angiogram was unable to localize the source of bleeding. The liver edge appeared slightly irregular, with evidence of cirrhosis but noobvious signs of portal hypertension, such as ascites. The patient continued to have multiple voluminous episodes of bright red blood per rectum including numerous clots. He remained tachycardic with rates as high as 132 bpm and systolic blood pressure in the 100s. Labs were significant for a hemoglobin of 5.8 g/dL and hematocrit of 16.7%. Due to hemodynamic instability and ongoing bleeding, the patient was transferred to an outside facility for massive transfusion protocol.
+Upon arrival at the outside facility massive transfusion protocol was initiated and interventional radiology performed a mesenteric angiogram with the goal of source embolization, however no source of bleeding was identified. Several hours later the patient underwent a CT angiogram of the abdomen and pelvis, which also was unrevealing. Repeat colonoscopy was normal without blood or source of bleeding identified. Due to the ongoing need for transfusion, an exploratory laparotomy was performed with intraoperative push enteroscopy. Enterotomy was performed in the small bowel and no obvious source of bleeding was found. Right hemicolectomy was performed.
+Following surgery, the patient continued to pass bright red blood per rectum and required multiple additional pRBC transfusions. On HD 3 interventional radiology performed a transcatheter angiogram and venogram which demonstrated a portal systemic varix with prominent inflow into the mid-left renal vein (). The varix outflow was embolized with multiple 0.35 interlock coils (). After embolization, there was ongoing bleeding, but significantly decreased.
+On HD 4 the patient underwent a TIPS procedure to decrease the risk of future hemorrhage. Once the TIPS procedure was placed there was a reduction in portal vein pressure from 22 mmHg to12 mmHg (reference normal; 5–10 mmHg) and a decrease in portosystemic gradient pressure from 10 mmHg to 6 mmHg (portal hypertension present if ≥ 6 mmHg, clinically significant if ≥10 mmHg) []. A superior mesenteric venogram was performed which failed to demonstrate the varix. However, after selecting a medial branch of the superior mesenteric vein, a direction microcatheter and fathom microwire were used to select the branch feeding the varix. Venography was then performed which demonstrated a medial branch of the superior mesenteric vein feeding the large duodenal left renal vein varix with active extravasation into the duodenum. The varix was then thrombosed with Gelfoam slurry and a microcil was deployed into the duodenal varix inflow. A repeat angiogram was performed of the superior mesenteric vein confirming thrombosis of the treated vessel (). Following the embolization, there was no blood flow through the varix.
+Following the second embolization, the patient stabilized. On HD5 the patient returned to the operating room for ileocolonic anastomosis, fascial closure and placement of a wound vac. In total, during his hospitalization, he received over 80 units of blood products. He was discharged to home on HD 20.
+Attribute: Ascites
+Possible Options: absent, moderate, slight
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the Child-Pugh Score, we need the following parameters: bilirubin, albumin, INR, ascites, and encephalopathy. From the patient note, we can extract the following values at admission:
+
+1. **Bilirubin**: 1.5 mg/dL  
+   - 1-2 mg/dL = 1 point  
+
+2. **Albumin**: 3.2 g/dL  
+   - 2.8-3.5 g/dL = 2 points  
+
+3. **INR**: 1.3  
+   - 1.3 is between 1.1-1.5 = 1 point  
+
+4. **Ascites**: The note mentions "no obvious signs of portal hypertension, such as ascites," so ascites is **absent** = 1 point  
+
+5. **Encephalopathy**: Not mentioned in the note, so we assume **absent** = 1 point  
+
+Now, sum the points:  
+1 (bilirubin) + 2 (albumin) + 1 (INR) + 1 (ascites) + 1 (encephalopathy) = **6**  
+
+Answer: 6

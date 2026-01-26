@@ -1,0 +1,61 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 20
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T20:50:28.646512
+================================================================================
+
+GROUND TRUTH: 63.27379
+PREDICTED: 63.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 28-year-old woman presented to the emergency department with sudden-onset abdominal pain. She also had experienced multiple episodes of non-bloody vomitus during the previous 24 hours. One year earlier, she was diagnosed with uncontrolled T2DM but refused to start insulin treatment. Two months before presentation, her hemoglobin A1C concentration was 12%, and she was started on treatment with a combination of dapagliflozin and metformin.
+At the time of presentation to the emergency department, the patient was afebrile with a mild increase in blood pressure to 138/86 mmHg. She was also tachypneic and tachycardiac, with a respiratory rate of 25 breaths/minute, a regular pulse with a heart rate of 116 beats/minute, and normal oxygen saturation. Her weight was 99 kg and her height was 179 cm with a body mass index (BMI) of 31 kg/m2. Physical examination revealed an obese dehydrated woman in mild distress and with mild diffuse abdominal tenderness, but no other remarkable findings. Her blood glucose concentration on Accu-check was 252 mg/dl. Laboratory testing showed an initial blood glucose concentration of 268 mg/dl, an anion gap of 18 mmol/l, and a pH of venous blood gases of 7.18. In addition, her bicarbonate concentration was 9 mmol/dl, her blood urea nitrogen was 50 mg/dl with creatinine 1.7 mg/dl, her acetone was elevated, and her hemoglobin A1C was 14.3%. Urinalysis showed moderate ketones with + 3 glucose. Her beta-human chorionic gonadotropin concentration and septic workup were negative, her cardiac enzymes were normal, and electrocardiography showed no signs of ischemia.
+Following confirmation of DKA, the patient was admitted to the intensive care unit (ICU) and administered two liters of normal saline. Accu-check one hour later showed a blood glucose level of 55 mg/dl, a finding confirmed by a serum blood glucose concentration of 68 mg/dl, a significant reduction from the initial concentration of 268 mg/dl. The patient was administered 50 ml of a 50% dextrose solution; once her blood glucose stabilized, she was started on continuous insulin infusion along with the dextrose-containing intravenous solution. She was not treated with the dapagliflozin- metformin combination while in hospital. Her acidosis and anion gap were corrected over the following three days; because her hemoglobin A1C level remained elevated, she was discharged on the insulin regimen.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's creatinine clearance using the Cockroft-Gault Equation, we follow these steps:
+
+### **1. Determine Adjusted Body Weight (ABW):**
+- The patient is **obese (BMI = 31 kg/m²)**, so we use **adjusted body weight**.
+- **Ideal Body Weight (IBW)** for women:  
+  \( IBW = 45.5 + 2.3 \times (height\ in\ inches - 60) \)  
+  Height = 179 cm = 70.47 inches  
+  \( IBW = 45.5 + 2.3 \times (70.47 - 60) = 45.5 + 24.08 = 69.58 \approx 69.6 \, kg \)
+- **Adjusted Body Weight (ABW):**  
+  \( ABW = IBW + 0.4 \times (Actual\ Weight - IBW) \)  
+  \( ABW = 69.6 + 0.4 \times (99 - 69.6) = 69.6 + 11.76 = 81.36 \, kg \)
+
+### **2. Extract Relevant Lab Values:**
+- **Serum Creatinine (SCr) = 1.7 mg/dL** (from patient note)
+- **Age = 28 years** (from patient note)
+- **Gender = Female** (from patient note)
+
+### **3. Apply Cockroft-Gault Equation for Females:**
+\[
+CrCl = \frac{(140 - Age) \times ABW \times 0.85}{72 \times SCr}
+\]
+\[
+CrCl = \frac{(140 - 28) \times 81.36 \times 0.85}{72 \times 1.7}
+\]
+\[
+CrCl = \frac{112 \times 81.36 \times 0.85}{122.4}
+\]
+\[
+CrCl = \frac{7744.32}{122.4} \approx 63.27 \, mL/min
+\]
+
+### **Final Answer:**
+63

@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 265
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T21:26:55.215352
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 4.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 49-year-old woman without significant cardiovascular risk factors was transferred to our hospital with a 1-hour history of sudden-onset chest pain. She had taken no medication and experienced no physical or emotional stress preceding the chest pain. On arrival, physical examination revealed stable vital signs with no abnormal findings. Electrocardiography revealed no clear findings of ischemic ST-T changes or prior Q-wave myocardial infarction, but laboratory testing showed elevated cardiac enzymes such as troponin T (0.855 ng/mL) as well as creatine phosphokinase (565 U/L) and its MB isozyme (66 U/L). Bedside transthoracic echocardiography revealed impaired contractility in the focal apical segment of the left ventricle, but there was no clear finding of basal hypercontractility or an apical ballooning sign suggestive of stress-induced cardiomyopathy. Overall, the estimated ejection fraction of the left ventricle was broadly preserved (60%). The patient was diagnosed with non-ST-elevation acute myocardial infarction. Because her condition was stable without chest pain on arrival, we initially administered conservative medical therapy including aspirin, prasugrel, nicorandil, perindopril, pitavastatin, and bisoprolol.
+Three days later, we electively performed coronary angiography via the right radial artery using a 6 Fr sheath to determine the etiology of the myocardial injury. Coronary angiography showed no significant atherosclerotic stenosis in the right coronary artery and LCX, but a dissection was found from the midportion of the LMT to the proximal site of the LAD, suggestive of type 1 SCAD (, Video) []. Because the coronary blood flow of the LAD was impaired from thrombolysis in myocardial infarction (TIMI) flow grade III to I after contrast injection () and the patient had chest pain with ST elevation, we decided to perform urgent PCI. The first wire (SION Blue; Asahi Intecc Co., Ltd., Nagoya, Japan) was initially introduced into the distal LAD, but IVUS imaging revealed that the guide wire had passed through the true lumen of the left coronary artery ostium, false lumen at the ostium of the LCX, and true lumen of the distal LAD (true-false-true) (). In addition, the true lumen of the proximal LAD was compressed by the false lumen (), and no significant atherosclerosis was observed within the vessel on IVUS. We then inserted the second guide wire (SION Blue; Asahi Intecc Co., Ltd.) into the LCX (), and IVUS imaging confirmed that it had been placed in the true lumen from the LMT to LCX (). Next, we inserted the third guide wire (SION Blue; Asahi Intecc Co., Ltd.) from the true lumen of the LCX to the compressed true lumen of the LAD using a double-lumen catheter (Crusade Type R; Kaneka Corporation, Tokyo, Japan) by referring to the IVUS findings of the dissected segment (Video). We initially inserted the third guide wire into the true lumen of the obtuse marginal branch using a double-lumen catheter that was placed in the true lumen of the LCX (). We then pulled the wire back and controlled it toward the true lumen of the LAD, which was located under the first guide wire from the right anterior oblique and caudal view (Figures and ). The IVUS-guided rewiring technique was successful, and the subsequent IVUS imaging confirmed that the third guide wire had passed entirely through the true lumen from the LMT to LAD (, Video). After the successful rewiring from the true lumen of the LMT to distal LAD, we removed the first wire () and deployed a drug-eluting stent (Resolute Onyx, 3.5 × 30 mm; Medtronic plc, Fridley, MN, USA) from the LMT to LAD (Figures , , and ). Because the blood flow of the LCX was preserved after stenting, we did not perform rewiring of the side branch and final kissing balloon inflation. Final coronary angiography showed acceptable results and TIMI grade III flow in both the LAD and LCX ().
+The postprocedural course was uneventful, and no major adverse cardiovascular events were observed. The peak levels of creatine phosphokinase and its MB isozyme were 1155 and 142 U/L, respectively. Follow-up coronary computed tomography (CT) angiography was performed 12 months after the procedure and showed acceptable results with no clear findings of in-stent restenosis or incomplete stent apposition (Figures and ). The patients' clinical course was uneventful during an 18-month follow-up.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 4.0}
+

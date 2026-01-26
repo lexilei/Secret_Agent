@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 193
+CALCULATOR: QTc Bazett Calculator
+TIMESTAMP: 2026-01-01T20:50:31.833714
+================================================================================
+
+GROUND TRUTH: 223.00136
+PREDICTED: 416.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A patient has a heart rate of 71 bpm and a QT interval of 205 msec.
+
+Question: Using the Bazett Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+416

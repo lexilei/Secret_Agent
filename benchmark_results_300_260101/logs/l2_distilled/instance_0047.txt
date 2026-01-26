@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 47
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-01T21:37:19.919390
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 1.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+DH 21-year-old primigravida presented for her booking visit at 11+2/40. Her history was notable for a background history of congenital biliary atresia (BA). She had undergone an early Kasai portoenterostomy with Roux-en-Y anastomosis in the early neonatal period. Her subsequent postoperative course was complicated by two episodes of cholangitis. By the age of two she had developed portal hypertension resulting in secondary thrombocytopenia due to hypersplenism. She had developed esophageal varices requiring annual sclerotherapy until the age of sixteen when she underwent variceal banding. Her vaccinations were up-to-date.
+General findings on presentation at 11 weeks revealed icterus with scattered spider naevi. On abdominal inspection there was an upper abdominal scar from her prior surgery and on palpation the spleen was enlarged extending to below the level of the umbilicus; there was no evidence of ascites.
+An ultrasound confirmed her estimated date of delivery. She was referred to the medical clinic at the hospital to provide a multidisciplinary team input to her care.
+At sixteen weeks she developed an episode of cholangitis and she was treated with intravenous antibiotics for seven days. A liver ultrasound was performed. This revealed absence of intrahepatic dilatation with multiple periportal and peripancreatic varices and 14 cm splenomegaly. During the pregnancy her platelets remained low (29–55 × 109 L) and hemoglobin ranged from 8.8 to 10.5 g/dL. Her transaminases were marginally elevated (AST/ALT, 46/67) and coagulation parameters were normal. Significant concern remained about her thrombocytopenia and degree of hypersplenism.
+A multidisciplinary meeting was convened with hepatology, hepatobiliary surgery, and interventional radiology. Concerns for this patient included her significant splenomegaly and thrombocytopenia, risk of recurrent cholangitis, potential for massive variceal hemorrhage, and potential for preterm delivery, either spontaneous or iatrogenic. Abdominal delivery would also be compromised by large venous anastomoses in the anterior abdominal wall. A plan for management of gastrointestinal hemorrhage was outlined. Further imaging of her portal vessels was recommended as this would inform the interventional radiologists as to which was the optimum surgical intervention should bleeding develop from intraabdominal varices. The option of a splenectomy in pregnancy was excluded as this was deemed likely to cause portal vein thrombosis and would compromise any future candidacy for liver transplantation. At twenty weeks she underwent MR venography of the portal vessels. Her spleen measured 23 cm, there was evidence of extensive splenic and esophageal varices, and no lienorenal shunt was identified.
+She had bimonthly antenatal visits with her obstetrical and hepatology teams. Her anatomy scan was within normal limits with a well-grown fetus on the 31st centile. Due to the complexity of the case and the potential for preterm delivery she received two doses of betamethasone at twenty-six weeks of gestation to aid lung maturation.
+At 26+3 she presented to the maternity hospital with vaginal bleeding, suprapubic pressure, and uterine contractions for 24 hours with increasing intensity and duration. The fundal height was consistent with 26 weeks of pregnancy and cardiotocography was reassuring. Sterile speculum examination confirmed that the cervix was 5 cm dilated and fully effaced and the amniotic membranes were bulging through the cervix. A bedside ultrasound scan confirmed a breech presentation. Her platelet count was 33 × 109/L. Following consultation with perioperative medicine, the hepatobiliary team, and neonatology the decision was made to perform an emergency caesarean section. It had been planned to perform her surgery in a general hospital; however, due to the acute nature of her presentation the caesarean section was undertaken in the obstetric facility, with hepatobiliary surgery and interventional radiology on standby in the general hospital. Pooled platelets were administered immediately prior to surgery. Magnesium sulphate was administered to provide fetal neuroprotection. The caesarean section was performed via a vertical subumbilical incision, with a lower segment transverse incision on the uterus. The vertical incision was utilized both to provide greater access to the abdominal cavity should bleeding occur, either from the uterus or the varices, and to avoid large venous collaterals running vertically in the abdominal wall. A live male baby was delivered by breech extraction and transferred to the pediatric team following delayed cord clamping of 45 seconds. Apgar's scores were 61, 65, and 710; the cord blood gases were pH 7.27 (arterial) 7.29 (venous). The infant weighed 890 grams. The remainder of the surgery was uneventful. Perioperatively she received a further pooled platelet transfusion with good hemostasis and no transfusion of packed red cells was required. Her baby was transferred to intensive care and initially required CPAP. He had an uncomplicated neonatal course. Histology of the placenta was unremarkable. The patient had an uneventful postpartum course. She was advised against further pregnancies in view of her significant risks and underwent insertion of a levonorgestrel coil at three months postpartum for contraceptive purposes and she is currently awaiting liver transplantation. Despite the premature gestational age, the infant had an essentially uneventful postnatal course. He was discharged home at ten weeks of age and as a one-year-old boy he has met all his expected developmental milestones.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 1.0}
+

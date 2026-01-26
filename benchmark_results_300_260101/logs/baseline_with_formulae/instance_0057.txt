@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 57
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-02T03:23:02.138907
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 5.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 73-year-old female presented with a chief complaint for evaluation of an incidental finding of peripancreatic lymph node.
+She underwent computed tomography (CT) of the abdomen and pelvis as part of her routine surveillance for extranodal marginal zone B-cell lymphoma of mucosa-associated lymphoid tissue (MALT-lymphoma) of the lung and was found to have peripancreatic lymph node. She denied any abdominal pain, change in bowel habit, weight loss, nausea, or vomiting.
+Her medical history was significant for MALT-lymphoma, invasive lobular breast carcinoma, hypertension, atrial fibrillation, mitral valve prolapse, mitral valve stenosis, and actinic keratosis. Her surgical history included a mastectomy with sentinel lymph node dissection, laparoscopic cholecystectomy, tonsillectomy, left knee replacement, and bilateral carpal tunnel repair.
+Her family history was significant for colon cancer in maternal grandmother at the age of 65 years, prostate cancer in brother at the age of 63 years, and melanoma in mother. She had no history of alcohol or tobacco abuse. She has 2 children and attained menopause at the age of 52 years. Her medications included aspirin, furosemide, carvedilol, rosuvastatin, amiodarone, digoxin, anastrozole, and Eliquis.
+Her physical examination was unremarkable, and her abdomen was soft nontender, nondistended with no palpable mass.
+Laboratory exam including fractionated metanephrines, chromogranin, and gastrin were negative.
+CT of the abdomen and pelvis showed 2 cm × 1.1 cm lymph node adjacent to the pancreatic head (Figure ).
+EUS showed a 19 mm × 11.5 mm hypoechoic lesion near the pancreatic head (Figure ). Two FNA passes using a 25-gauge needle were performed via transduodenal approach (Figure ).
+Direct FNA smears showed tumor with neuroendocrine features. Initial immunoperoxidase stains performed on cell block sections were positive for synaptophysin and chromogranin, which seemed to confirm the morphologic impression of PNET. The pathologist was subsequently informed about the peripancreatic location and lack of a definite pancreatic lesion.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+5

@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 288
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-01T21:26:55.731707
+================================================================================
+
+GROUND TRUTH: 3.88593
+PREDICTED: 3.89
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 81-year-old man was admitted due to massive upper gastrointestinal hemorrhage for 2 h. He had epigastric pain and early satiety for 3 weeks. His past medical history was unremarkable except for heavy alcohol drinking, 1–2 bottles a day for over 30 years. He denied a history of exposure to thorotrast or vinyl chloride. Physical examination revealed mildly pale, icteric sclerae, hepatomegaly with a liver span of 14 cm, parotid gland enlargement and palmar erythema. Other examinations were unremarkable. Laboratory investigations on admission showed white blood cell (WBC) count 6,210/dL, hemoglobin (Hb) 5.8 g/dL, platelet count 283 × 103/µL, aspartate transaminase (AST) 116 U/L, alanine aminotransferase (ALT) 73 U/L, alkaline phosphatase (ALP) 192 U/L, albumin 2.7 g%, total bilirubin (TB) 5.74 mg%, direct bilirubin (DB) 5.3 mg%, prothrombin time (PT) 16.2 s (control 12.4), and international normalized ratio (INR) 1.23; serum alpha-fetoprotein (AFP) was within normal range.
+Esophagogastroduodenoscopy was performed and revealed a 3-cm large ulcer with elevated border and necrotic tissue in the antrum of stomach; no varix was seen. The tissue biopsy was performed to exclude malignant ulcer. Liver ultrasonography revealed a cirrhotic liver and diffused multiple echogenic nodules size 7–9 mm in both lobes with a large echogenic mass 3.3 cm in size with a halo. A further CT scan demonstrated multiple large infiltrative masses with few arterial enhancements, no venous washout, size 1–4 cm in both lobes, osteolytic foci at the thoracic spine level T10 and T11, and small subpleural nodule at the right lower lung. Liver biopsy was performed for definite diagnosis. The specimen consisted of a few pieces of gray tan irregular soft tissue and disclosed the angiosarcoma; immunohistochemical study showed positive staining for CD34 and factor VIII. The specimen of gastric ulcer biopsy also revealed metastasis of angiosarcoma.
+He was treated with a paclitaxel dose of 175 mg/m2. Unfortunately, 5 days after receiving chemotherapy, he developed febrile neutropenia with septic shock. His relatives refused further treatment and invasive procedures, and he died in the following days.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3.89
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 3.89}
+

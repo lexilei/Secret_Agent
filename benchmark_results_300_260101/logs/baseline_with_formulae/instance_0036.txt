@@ -1,0 +1,60 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 36
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-02T03:22:59.850692
+================================================================================
+
+GROUND TRUTH: 50.95345
+PREDICTED: 45.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 70-year-old male suffered progressive generalized edema after consuming stale crabs, with only mild abdominal discomfort and no fever or other symptoms. Before this, he was healthy and did not have a history of digestive diseases, diabetes, or chronic obstructive pulmonary disease. The man was a native of Chongqing, the subtropical area in southwest China. He used to be a soldier; he fought in the Vietnam War and joined the police force after returning to his hometown.
+In the hospital, his initial vitals were BP 108/78 mmHg, HR 111, respiratory rate 22, and oxygen saturation 98%. Initial laboratories included white blood cells 13.32 × 109/L (neutrophils% 77.5%; lymphocytes% 13.31%; eosinophils% 0.5%), normal hemoglobin and platelets, albumin (ALB) 14.5 g/L, globulin (GLB) 19.9 g/L, alanine aminotransferase (ALT) 78.7 IU/L, aspartate aminotransferase (AST) 90.9 IU/L, creatinine (Cr) 134 μmol/L, 24-hour urine protein 9.61 g, and negative antinuclear antibody spectrum (ANAs) and anti-neutrophil cytoplasmic antibodies (ANCA). Chest X-ray showed mild emphysema but no sign of infection. The patient was diagnosed with nephrotic syndrome but was unable to undergo pathological biopsy due to a renal cyst. He was administered full-dose glucocorticoid therapy alone, with no other immunosuppression. Three weeks later, while still under this treatment, the patient suffered lower limb cellulitis. His procalcitonin (PCT) was 0.3 ng/ml, and he was administrated mupirocin ointment and IV cefuroxime. After those treatments, his status improved and he continued to take oral glucocorticoids after discharge from the hospital.
+However, over the next ten days, the patient seemed to get worse and had to return to the hospital due to persistent fever, cough, and intermittent abdominal pain. Initial vitals on admission were temperature 37.8 °C, BP 90/60 mmHg, HR 125, respiratory rate 26, and oxygen saturation 95%. Laboratory tests showed white blood cells 12.36 × 109/L (neutrophils %: 83.5%; eosinophils %: 0.7%). Sputum smear and culture were negative. Imaging examinations included CT scans of the chest, which reported interstitial pneumonia (Fig. ), and the abdomen, which reported no specific findings. The patient was diagnosed with normal gastrointestinal discomfort and pulmonary bacterial infection. A proton pump inhibitor, cefoperazone sodium, and sulbactam sodium were administered. However, the patient then started display hemoptysis, passed occult blood-positive stool, and gradually fell into a state of hyperpyrexia and drowsiness. Soon, Klebsiella pneumoniae (which was sensitized to the previous antibiotic), and unexpectedly, a large number of S. stercoralis larvae (Fig. ) were found in repeated sputum specimens. Meanwhile, the parasite was also found in a repeated brown stool specimen. Blood samples showed eosinophils% reached 18.1% and PCT was 1.01 ng/ml. Because ivermectin is not available in our region, albendazole (400 mg/day) was administered for 3 consecutive days but there was no progress. Subsequently, a mechanical ventilator was administered due to continued severe hypoxia and respiratory failure. The patient was unable to maintain his blood pressure and eventually died after co-infection with S stercoralis hyperinfection and the K pneumoniae found 1 week later. The course of this case has been summarized in Figure . The authorized relative of patient has provided informed consent for publication of the case.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's GFR using the **2021 CKD-EPI Creatinine equation**, we need the following values from the patient's initial admission:  
+
+- **Age**: 70 years  
+- **Sex**: Male (gender coefficient = 1)  
+- **Serum Creatinine (Scr)**: 134 μmol/L (convert to mg/dL: **134 / 88.4 ≈ 1.52 mg/dL**)  
+
+### CKD-EPI Formula (2021):  
+For males:  
+\[
+GFR = 142 \times \left(\frac{Scr}{0.9}\right)^{-0.302} \times 0.9938^{age} \times 1.012 \quad \text{(if Scr ≤ 0.9)}  
+\]
+\[
+GFR = 142 \times \left(\frac{Scr}{0.9}\right)^{-1.200} \times 0.9938^{age} \times 1.012 \quad \text{(if Scr > 0.9)}  
+\]
+
+Since **Scr = 1.52 > 0.9**, we use the second equation:  
+
+\[
+GFR = 142 \times \left(\frac{1.52}{0.9}\right)^{-1.200} \times 0.9938^{70} \times 1.012  
+\]
+
+### Calculation:  
+1. \(\frac{1.52}{0.9} = 1.6889\)  
+2. \(1.6889^{-1.200} ≈ 0.525\)  
+3. \(0.9938^{70} ≈ 0.600\)  
+4. Multiply:  
+   \[
+   142 \times 0.525 \times 0.600 \times 1.012 ≈ 45.3  
+\]
+
+**Final Answer:**  
+45

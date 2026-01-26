@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 73
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T20:50:29.532718
+================================================================================
+
+GROUND TRUTH: 90.0
+PREDICTED: 90.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 21-year-old man presented to our emergency room with a complaint of right lower abdominal pain for 2 days. On physical examination, the vital signs were as follows: temperature, 37.3°C; heart rate, 94/min; respiratory rate, 20/min; blood pressure, 120/75 mm Hg. The abdominal examination was significant for tenderness and pain in the right lower quadrant upon palpation. There was no rebound tenderness or muscle rigidity. The remainder of the physical examination was normal. Laboratory testing revealed the following: white blood cell count, 9.54 × 109/L; neutrophilic granulocytes, 81.1%; hemoglobin, 136 g/L; platelet count, 232 × 109/L. Kidney function and other biochemical measures were normal. Computed tomography (CT, Figure A and B) showed pneumatosis in the appendix and fluid in the pelvic cavity. Based on the above findings, a diagnosis of acute appendicitis was made and a laparoscopic appendectomy was undertaken; however, the appendix was normal in appearance and an appendectomy was not performed. Intraoperatively, the terminal ileum was noted to be approximately 15 cm in diameter, hyperemic, and edematous (Figure ); there was no apparent inflammation of the appendix. Thus, terminal ileitis was diagnosed. Three days postoperatively, the patient had rose-colored petechiae and palpable purpura on the lower extremities, and HSP was diagnosed. Subsequently, methylprednisolone (2 mg/kg/d iv) was administered for 5 days. Seven days postoperatively, the abdominal pain and purpura resolved. There were no recurrences in the subsequent 8 months, and long-term follow-up in the clinic was recommended.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+90

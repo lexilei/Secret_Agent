@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 230
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T21:37:25.627232
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 3.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 49-year-old woman came to the urgent care area of the medical ward late this morning because of new-onset pain and fullness in her right upper calf that started while she was grocery shopping yesterday afternoon. She describes the discomfort as a deep, pressure-like ache that intensifies when she flexes the knee or when the examiner presses along the line from the medial calf toward the popliteal fossa; she can localize it with one finger and says it is clearly worse when weight-bearing. She denies redness, warmth, itching, fever, chills, or recent skin trauma. She had been back at work as a high-school principal for the last three weeks after undergoing an open sigmoid resection with primary anastomosis for complicated diverticulitis exactly six weeks ago; the postoperative course was uneventful, she was walking the hallways on postoperative day one, and she never required prolonged bed rest at home. Her medical history is notable for a documented iliofemoral venous thrombosis on the opposite side five years earlier that was confirmed by duplex ultrasound and treated with a six-month course of warfarin until complete recanalization was demonstrated. She has no history of malignancy, chronic neurologic deficits, lower-limb casting, pelvic fractures, or recent air travel, and she has remained physically active, walking two miles most evenings with her spouse. Medications include a daily multivitamin, rosuvastatin 10 mg, and ibuprofen as needed for postoperative abdominal wall soreness; she is not taking estrogen-containing therapy, glucocorticoids, or anticoagulants. She quit smoking 10 years ago after a 12-pack-year history and drinks wine on weekends; there is no family history of inherited clotting disorders, premature myocardial infarction, or malignancy. Review of systems is otherwise negative for chest pain, shortness of breath, palpitations, hemoptysis, abdominal pain, or unexplained weight loss. On arrival her vital signs were temperature 37.0 °C, blood pressure 124/76 mm Hg, heart rate 90 beats per minute, respiratory rate 14 breaths per minute, and oxygen saturation 99 % breathing room air. She appeared well and was able to stand on the examination stool without assistance. Cardiac auscultation revealed a regular rhythm without murmurs, gallops, or rubs; lungs were clear to bases without crackles. The abdominal incision was healed with no tenderness or mass. Examination of the lower limbs showed the right calf to be slightly fuller to the eye but without taut skin or discoloration; when measured 10 cm below the tibial tuberosity the circumference was 38.5 cm versus 37.2 cm on the left, a discrepancy she said she had not noticed before. Gentle compression over the course of the posterior tibial and popliteal veins elicited focal tenderness, whereas squeezing the gastrocnemius muscle belly away from those structures was much less uncomfortable. The overlying skin was warm but dry, and no indentation was produced after five seconds of firm thumb pressure over the tibia. A network of bluish, non-tortuous superficial channels was visibly prominent along the medial aspect of the calf and became more obvious when the leg was placed in a dependent position for several seconds. There were no spider angiomas, no stasis dermatitis, and no varicosities elsewhere. Dorsalis pedis and posterior tibial pulses were 2+ bilaterally and symmetric; capillary refill was brisk, and sensorimotor testing of both lower extremities was normal. There was no inguinal lymphadenopathy, hip tenderness, or back pain. Point-of-care laboratory testing obtained prior to any treatment showed hemoglobin 13.4 g/dL, platelet count 212 × 10⁹/L, serum creatinine 0.9 mg/dL, and INR 1.0. Electrocardiogram displayed normal sinus rhythm without acute changes. No obvious musculoskeletal or infectious etiology was identified on history or examination, and the examiner judged that other causes of unilateral calf pain—such as cellulitis, muscular strain, Baker cyst rupture, or arterial insufficiency—were less consistent with the physical findings than an occlusion in the deep venous system. She was counseled about signs of pulmonary embolism and remained in the department awaiting formal duplex ultrasonography to confirm the suspected diagnosis.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 3.0}
+

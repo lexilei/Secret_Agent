@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 114
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-02T03:23:06.644174
+================================================================================
+
+GROUND TRUTH: 10.018
+PREDICTED: 2.82
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 10-year-old Sudanese boy presented with frequent episodes of vomiting associated with epigastric pain and weight loss for 6 months. He had no respiratory, neurological, rheumatological, ophthalmologic, or dermatological symptoms. Physical examination showed a pale child with weight and height both below the 3rd percentile for age. Laboratory investigations were remarkable for anemia (hemoglobin 9.8 g/dL), ESR 114 mm/h, serum calcium 2.26 mmol/L, and low albumin level 28 g/L. Endoscopy revealed an erosive, friable, and nodular gastric mucosa over the entire stomach. Histopathology of biopsies revealed chronic noncaseating granulomatous inflammation []. Special stains and cultures for acid-fast and fungal microorganisms showed negative results. Colonoscopy was normal including terminal ileum. CT scan of the chest and abdomen demonstrated multiple, small, centrolobularly distributed nodules within the acini of both lungs and enlarged mesenteric lymph nodes. Ophthalmological examination showed evidence of uveitis. ACE level was elevated at 135 U/L. Similar to Case 1, extensive investigations for infectious, immunologic, and inflammatory conditions associated with GIT granulomatous inflammation were negative.
+The combination of tissue findings of granulomatous disease from upper GIT, elevated ACE, systemic involvement, and negative workup for infectious disease suggested systemic sarcoidosis with significant GI involvement. The patient received corticosteroids at 1 mg/kg/day and omeprazole, resulting in resolution of GI symptoms and normalization of activity markers and ACE level. Tapering of corticosteroids over 3 months led to relapse of the disease. Again, remission was induced by a course of steroids supplemented by mesalamine (Pentasa 50 mg/kg/day) and azathioprine (up to 2.5 mg/kg/day) to maintain remission. Throughout the 4-year follow up, the course of the disease was punctuated by several relapses on tapering of corticosteroids and later development of vitamin B12 deficiency anemia: hemoglobin 10.6 gm/dL, macrocytosis (MCV 102, normal 80–91 fL), hyperchromasia (MCH 34.5, normal 20–31 pg), low serum vitamin B12 119.2 pmol/L (normal 162–638 pmol/L). Red blood cell folate level was normal at 16.2 nmol/L (normal, 10.4–42.2 nmol/L). Antigastric parietal cell antibodies were negative. The patient received weekly injections of vitamin B12 ( 1 mg weekly) for 6 weeks that raised the level to 231.8 pmol/L with correction of anemia and normalization of his peripheral blood picture.
+Considering the steroid dependency of the disease and the short stature of the patient, he was commenced on infliximab 5 mg/kg administered intravenously at 0, 2 and 6 weeks and then every 8 weeks. The patient reported a significant subjective general improvement as well as resolution of his GI symptoms. ESR and ACE concentration returned to normal. A repeat of endoscopy after the 6th dose of infliximab infusion demonstrated loss of gastric folds pattern and loss of normal vascular pattern; otherwise there were no more erosions or friability. Biopsies from the gastric mucosa showed a marked reduction of inflammation, atrophic gastric glands, and absence of granulomas. At 5 years posttreatment with infliximab, the patient remains in remission off corticosteroids.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.82

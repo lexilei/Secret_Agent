@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 22
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T21:37:19.384000
+================================================================================
+
+GROUND TRUTH: 47.039
+PREDICTED: 46.491
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The patient, a 22-year-old woman of Chinese Han ethnicity, was admitted for severe edema of the facial region and two lower limbs over 3 mo.
+The patient developed edema of the facial region and two lower limbs 3 mo ago without obvious cause. Her symptoms were mild in the morning and severe in the afternoon. At the same time, she experienced migratory pain of the small joints, which improved after movement, as well as decreased urinary volume, weakness, and poor appetite.
+The patient had a free previous medical history.
+The patient’s temperature was 36.6 °C, heart rate was 78 bpm, respiratory rate was 20 breaths per minute, blood pressure was 122/80 mmHg, and oxygen saturation in room air was 98%. The patient was conscious and she complied with the physician's physical examination. Her heart, lungs, and abdomen examinations showed no significant abnormalities, no percussion pain in her kidney area, and severe pitting edema in both lower extremities.
+Routine urine examination revealed the following: Proteinuria +++, hematuria ++; phase of urinary red blood cells: Deformed erythrocytosis 70%, urine protein quantitation 4.2 g/24 h; urea nitrogen 15.7 mmol/L, and serum creatinine 141.4 μmol/L. Routine blood test results were as follows: Hemoglobin 92 g/L, white blood cells 4.8 × 109/L, blood platelets 218 × 109/L, antinuclear antibody 1:3200, cytoplasmic granules 1:1000, ds-DNA antibody > 1:3200, C3 0.56 g/L, and C4 0.22 g/L.
+Pathological results showed 35 glomeruli in the punctured renal tissue, including one with global sclerosis, two with ischemic sclerosis, and the remaining glomeruli with diffuse proliferation of mesangial cells and endothelial cells, accompanied by segmental dual-track formation of a thickened basement membrane, segmental Meyer's loop, leukocyte infiltration, and segmental microthrombus formation. Fuchsinophilic protein deposition can be found at the mesangial region and subepithelial region, including fibrin crescent formation of one cell. The kidney tubular epithelium exhibited granular and vacuolar degeneration, as well as multifocal atrophy. The renal interstitium showed multishaped lymphocyte and monocyte infiltration, together with mild thickening of the arteriole wall. Paraffin immunofluorescence revealed: Immunoglobulin (Ig) G (++), IgA (++), IgM (++), C3 (+), fall risk assessment (+), C1q (++), and granular deposition along the mesangial region and capillary wall. Combined with clinical findings, this condition was considered diffuse proliferative lupus nephritis, with IV-G (A), AI = 11, and CI = 5. AI was scored as follows: Cellular proliferation (2 points), leukocyte infiltration (1 point), nuclear fragmentation/fibrinoid necrosis (2 points), cell crescent (0 points), Meyer's loop/thrombus (2 points), and interstitial monocyte infiltration (2 points). CI was scored as follows: Sclerosis (2 points), fibrin crescent (0 points), tubular atrophy (2 points), and interstitial fibrosis (2 points) (Figure ).
+After consideration of the renal puncture results, oral administration of prednisone was begun at 50 mg/d, and meanwhile, cyclophosphamide was applied through intravenous injection at a dosage of 1.0 g monthly, which lasted for a consecutive 6 mo and was stopped after an accumulative use of 6 g. The serum creatinine fluctuated within an approximate range of 120-160 μmol/L, and blood albumin fluctuated from approximately 29-35 g/L. Then, the patient began to take AZA 50 mg/d as maintenance treatment but experienced extensive alopecia and shedding of pubic hair on the 13th day after oral administration. Pharyngalgia appeared on the 14th day, and fever with a body temperature up to 42 ℃ occurred on the 15th day. The patient came to the hospital for the second time. Physical examination revealed the following: Body temperature, 39.4 ℃; pulse, 92 times/min; breath rate, 22 times/min; blood pressure, 182/100 mmHg. The patient exhibited clear consciousness and emotional distress; she presented scattered chromatosis on her skin, and a rash was found on the inner surface of the bilateral thighs. Pharyngeal congestion was noted, and the breath sounds of the two lungs were clear. The heart rate was 92 times/min. The abdomen was flat, soft, and free from tenderness or rebound tenderness, and there was no liver or spleen involvement. Routine blood work showed the following: Hemoglobin 72 g/L, white blood cell count 1.25 × 109/L, blood platelet count 13 × 109/L, lymphocyte ratio 95.7%, neutrophil ratio 1.6%, and neutrophil count 0.01 × 109/L (Figure ). The results of the bone marrow biopsy were as follows: Myelodysplasia low in the myelogram and focal hyperplasia in bone marrow tissue with active hyperplasia in some areas (Figure ). Routine urinalysis results were as follows: Protein (+), occult blood 2+, and Epstein-Barr virus (EBV) positivity (3.58 × 104). TPMT genotyping testing (four single nucleotide polymorphisms, single base extension method) revealed the following: TPMT 3C gene polymorphism (719A>G) (this site is the most common gene mutation site in Asians) test result: A/A; TPMT 3B gene polymorphism (460G>A) test result: G/G; TPMT 2 gene polymorphism (238G>C) test result: G/G; no abnormity was found in any of the above results.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 22.0, 'creatinine': 1.599547511312217, 'sex': 'female'}, 'result': 46.491, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 22.0, 'creatinine': 1.599547511312217, 'sex': 'female'}, 'result': 46.491, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}}
+

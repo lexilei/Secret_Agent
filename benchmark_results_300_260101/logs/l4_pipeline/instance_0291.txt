@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 291
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-04T03:14:14.215553
+================================================================================
+
+GROUND TRUTH: 1.73285
+PREDICTED: 1.73
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 51-year-old female with a history of primary myelofibrosis and dilated cardiomyopathy presented at the emergency room with acute abdominal pain. She was afebrile and hemodynamically stable. No signs of hepatic encephalopathy were present. Laboratory study at first evaluation revealed leucocytes of 25,570/µL, hemoglobin of 13.9 g/dL , platelets of 324,000/µL, sCr of 2.45 mg/dL, AST of 126 U/L, ALT of 131 U/L, ALP of 413 U/L, GGT of 220 U/L, TB of 11.5 mg/dL (DB of 9.67 mg/dL), albumin of 2.7 mg/dL, INR of 1.95 and configuring CP C score of 11 points and MELD and MELD-Na score of 31 and 33 points, respectively. Abdominal Doppler-US showed thrombus in all the three supra-hepatic veins and ascites, confirmed by CT scan. Spontaneous bacterial peritonitis was excluded. The patient was diagnosed with an ALI related to BCS secondary to primary myelofibrosis and she was started on Aco therapy with NFH along with an antiplatelet agent and cytoreductive therapy with hydroxyurea. At day 7, the patient developed ALF with grade 3 West-Haven encephalopathy. CP C score at that time was 13 points. Transjugular intra-hepatic portosystemic shunting (TIPS) was contraindicated due to cardiac failure, the presence of relevant encephalopathy and high MELD score (MELD 34/MELD-Na 35, under NFH). LT was considered as a high-risk surgery and contraindicated after multidisciplinary discussion. The patient died due to liver failure 2 days after beginning palliative care.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.73
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'confidence': 0.3}, {'stage': 'extract', 'extracted': {'age': 51, 'sex': 'female', 'creatinine_mg_dl': 2.45}, 'missing': ['weight_kg']}, {'stage': 'validate', 'is_valid': False, 'missing': ['weight_kg'], 'cleaned': {'age': 51, 'sex': 'female', 'creatinine_mg_dl': 2.45}}, {'stage': 'repair_1', 'extracted': {'age': 51, 'sex': 'female', 'creatinine_mg_dl': 2.45}, 'is_valid': False, 'missing': ['weight_kg']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

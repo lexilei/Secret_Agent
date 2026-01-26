@@ -1,0 +1,73 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 202
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T20:50:32.008944
+================================================================================
+
+GROUND TRUTH: 7.0
+PREDICTED: 7.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 70-year-old Mongolian man was referred to our hospital suffering from high-grade fever and chills. He had a past medical history of esophageal varices rupture 20 years before. Since then, he had visited our hospital for alcoholic liver cirrhosis and diabetes mellitus. He received a treatment for ascites caused by liver cirrhosis. Urinary diuresis was not effective because of low Na level and dehydration. As liver function was relatively suppressed, he underwent Denver shunt implantation 9 months before presentation. After the operation of Denver shunt implantation, ascites rapidly disappeared. Diabetes mellitus was controlled well (HbA1c 6.3%) by a oral hypoglycemic agent (glimepiride 3 mg/day).
+This time, he developed high-grade fever with chills and without gastrointestinal symptoms. His body temperature was 38.5°C, but he was hemodynamically stable with normal mental status. Initial laboratory results were as follows: white blood cell count 7,700/μl, hemoglobin 12.9 g/dl, platelets 5.6 × 104/μl PT-INR 1.43, CRP 5.0 mg/dl, aspartate aminotransferase (AST) 349 IU/l, alanine aminotransferase (ALT) 353 IU/l, alkaline phosphatase (ALP) 522 IU/l, gamma-glutamyl transferase (GGT) 104 IU/l, total bilirubin (T-bil) 4.3 mg/dl and albumin 4.1 g/dl. Abdominal ultrasonography (US) showed multiple small low-echoic lesions in the right lobe of the liver (fig. ). These findings were further confirmed by abdominal enhanced computed tomography (CT) that showed peripheral enhancement with central hypodense multiple small lesions in the right lobe of the liver with no ascites (fig. ). After admission to our hospital, he underwent echocardiography, chest CT, esophagogastroduodenoscopy and colonoscopy, however, no other sources of infection could be detected. Blood culture was negative and anti-amebic antibody was also negative. He was treated for pyogenic liver abscesses with sulbactam/cefoperazone for 2 weeks and subsequently changed to levofloxacin for 2 months. The liver abscesses disappeared after the antibiotic treatment and liver function normalized to original levels (AST 44 IU/l, ALT 37 IU/l, ALP 336 IU/l, GGT 85 IU/l and T-bil 0.9 mg/dl). However, 3 months later, he suffered from high-grade fever with chills and no other symptoms. Laboratory results were as follows: white blood cell count 7,400/μl, platelets 4.6 × 104/μl, CRP 9.2 mg/dl, AST 933 IU/l, ALT 1,202 IU/l, ALP 870 IU/l, GGT 93 IU/l and T-bil 4.0 mg/dl. Abdominal enhanced CT showed multiple small lesions in both lobes of the liver (fig. 2). Blood culture was negative. Sulbactam/cefoperazone had no effects. Meropenem was administered for 2 weeks, followed by levofloxacin for 2 months, and liver function rapidly normalized to original levels (AST 43 IU/l, ALT 30 IU/l, ALP 435 IU/l, GGT 87 IU/l and T-bil 1.8 mg/dl). After the levofloxacin treatment, the disappearance of liver abscess was confirmed (fig. ). We started selective intestinal decontamination by administering kanamycin (2 g/day) to prevent the occurrence of abdominal infection. Since then, he has had no recurrence of liver abscess for over a year.
+Attribute: Encephalopathy
+Possible Options: No Encephalopathy, Grade 1-2, Grade 3-4
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the Child-Pugh Score, we need the following parameters from the patient's initial presentation:
+
+1. **Total Bilirubin (T-bil):** 4.3 mg/dl  
+2. **Albumin:** 4.1 g/dl  
+3. **PT-INR:** 1.43  
+4. **Ascites:** Absent (after Denver shunt implantation)  
+5. **Encephalopathy:** No Encephalopathy  
+
+Now, assign points for each parameter based on the Child-Pugh classification:
+
+- **Total Bilirubin (mg/dl):**  
+  - <2: 1 point  
+  - 2-3: 2 points  
+  - >3: 3 points  
+  - **4.3 mg/dl → 3 points**  
+
+- **Albumin (g/dl):**  
+  - >3.5: 1 point  
+  - 2.8-3.5: 2 points  
+  - <2.8: 3 points  
+  - **4.1 g/dl → 1 point**  
+
+- **PT-INR:**  
+  - <1.7: 1 point  
+  - 1.7-2.3: 2 points  
+  - >2.3: 3 points  
+  - **1.43 → 1 point**  
+
+- **Ascites:**  
+  - Absent: 1 point  
+  - Mild/Moderate: 2 points  
+  - Severe: 3 points  
+  - **Absent → 1 point**  
+
+- **Encephalopathy:**  
+  - None: 1 point  
+  - Grade 1-2: 2 points  
+  - Grade 3-4: 3 points  
+  - **No Encephalopathy → 1 point**  
+
+**Total Score:**  
+3 (Bilirubin) + 1 (Albumin) + 1 (PT-INR) + 1 (Ascites) + 1 (Encephalopathy) = **7**  
+
+7

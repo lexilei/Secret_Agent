@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 254
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-04T03:14:13.807241
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 89-year-old male presented with a 5-day history of worsening dyspnoea and cough. Past history included hypertension, ischaemic heart disease, permanent pacemaker implantation for complete heart block, chronic kidney disease stage 3 and atrial fibrillation. He was taking long-term Rivaroxaban therapy for stroke and systemic embolism prophylaxis. No compliance issues were reported. No antiplatelet or additional antithrombotic medication was being taken prior to hospital admission. Despite advanced age, the gentleman was fully independent with activities of daily living. Hospital admission was required due to hypoxia. Maximal oxygen requirements during the course of admission were 4 l/min. Reverse transcriptase viral polymerase chain reaction testing subsequently confirmed COVID-19 infection.
+Admission blood testing demonstrated lymphopenia (0.82 × 109/l) and a markedly elevated C-reactive protein of 345 mg/l. Coagulation studies were prolonged (activated partial thromboplastin time 31.7 s, prothrombin time 14.4 s) due to concurrent anticoagulation with Rivaroxaban. Fibrinogen level was markedly elevated at 9 g/l. Creatinine (106 μmol/l) and estimated glomerular filtration rate (52 ml/min) were at the patient’s baseline level. Remaining biochemistry results returned within normal limits. Chest radiography confirmed new bi-basal and peripheral left mid zone pulmonary infiltrates suggestive of COVID-19 pneumonitis (). Oral doxycycline was commenced to cover for possible secondary superadded bacterial infection, in line with local institutional protocols during the early period of the COVID-19 pandemic.
+On Day 4 of his hospital stay, and despite an improvement in COVID-19 symptoms with reducing oxygen requirements, the patient developed a rapid and dense left-sided hemiplegia with dysarthria, alongside clinical signs of left gaze palsy and left homonymous hemianopia. National Institutes of Health Stroke Scale was 21, signifying symptoms suggestive of acute severe stroke. Within 1 h of onset of neurological symptoms (Day 4 of hospital admission), computed tomography imaging of the brain was performed. This showed a region of low attenuation in the right basal ganglia and high density in the right M1 segment of the middle cerebral artery consistent with an acute infarct due to large-vessel occlusion (). Computed tomography angiography was requested to evaluate a potential target for mechanical thrombectomy. This demonstrated extensive thrombus occluding the right cervical internal carotid artery and a T occlusion affecting the right anterior and middle cerebral arteries ().
+The patient was not a candidate for thrombolytic therapy due to concurrent anticoagulation with Rivaroxaban. Mechanical thrombectomy was discussed with interventional radiology colleagues, but it was decided that this would offer little clinical benefit given the patient’s age and comorbid status. Unfortunately, despite maximal ward-based medical treatment, the patient deteriorated and passed away 5 days later.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.7}, {'stage': 'extract', 'extracted': {'age': 89, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 89, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 2.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

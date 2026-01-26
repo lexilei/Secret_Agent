@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 163
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T21:26:53.315020
+================================================================================
+
+GROUND TRUTH: 66.8426
+PREDICTED: 66.84
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 73-year-old male patient had lower back and both buttock pain that was occurred after fall from standing position 2 weeks before, the symptoms progressed and became intolerable in spite of analgesia. In the past medical history, no special diseases such as diabetes, hypertension and cerebrovascular diseases were present and he was a non-smoker and a non-drinker. He had 171 cm of height, 70 kg of body weight, 23.9 kg/m2 of body mass index. Laboratory test showed the result of white blood cell (WBC) count of 4,440/mm3, erythrocyte sedimentation rate (ESR) 33 mm/hr, C-reactive protein (CRP) 0.04 mg/dL, uric acid 2.1 mg/dL, RA factor 12.29 U/mL, and HLA-B27 positive. BMD was measured utilizing peripheral-quantitative computed tomography (P-QCT; Somatom sensation 16, Simens, Erlangen, Germany). In result, severe osteoporosis was considered with BMD and T-score of lumbar vertebrae (L1-4) were 11.2 mg/cm3 and -6.17 (). At the time of visiting, simple spine radiography showed syndesmophytes of the spine, suggesting a bamboo spine coexist with ankylosis, but spine fracture was not clearly depicted in lumbar spine (). Three dimensional (3-D) CT and magnetic resonance imaging (MRI) of the lumbar spine reveled ankylosed of ligaments, intervertebral discs, endplate, and of apophyseal structures and 2 column compression fracture on L3 through the vertebral body ().
+Kyphoplasty polymethylmetacrylate (PMMA) vertebral augmentation procedure was performed because of progressive vertebral collapsing during the follow-up. Patients were placed in the prone position under bi-plane fluoroscopic guidance and local anesthesia with bilateral transpedicular approach using simultaneous anteroposterior and lateral fluoroscopy. The balloon tamp was situated under collapsed end plate and slowly inflated until it abutted the cortical margins. PMMA was then injected into void of the vertebral body, 3 mL of PMMA was used (). Post-operative thoracolumbosacral orthosis (TLSO) applying, patients encourage to resume all his normal daily activities without any restrictions. The visual analogue scale (VAS) was 10 for the first time. The last VAS was 3 after post-operative 9 months, there were no complication. Last follow-up after post-operative 12 months, the patient is active and satisfied with the treatment including osteoporosis medication. This report was informed to a patient.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+66.84
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 66.84}
+

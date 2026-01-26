@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 66
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T21:26:51.381743
+================================================================================
+
+GROUND TRUTH: 78.66667
+PREDICTED: 78.66666666666667
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 67-year-old woman has fallen from the second story level of her home while hanging laundry. She was brought to the emergency department immediately and presented with severe abdominal pain. The patient is anxious, and her hands and feet feel very cold to the touch. There is no evidence of bone fractures, superficial skin wounds, or a foreign body penetration. Her blood pressure is 102/67 mm Hg, respirations are 19/min, pulse is 87/min, and temperature is 36.7°C (98.0°F). Her abdominal exam reveals rigidity and severe tenderness. A Foley catheter and nasogastric tube are inserted. The central venous pressure (CVP) is 5 cm H2O. The medical history is significant for hypertension.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+78.66666666666667
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 78.66666666666667}
+

@@ -1,0 +1,58 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 23
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T20:50:28.700228
+================================================================================
+
+GROUND TRUTH: 48.44101
+PREDICTED: 92.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 51-year-old woman from South America with a past medical history of anemia, hypertension, kidney stones, and COVID-19, 4 months prior (a positive antigen test without symptoms) was evaluated in the emergency department after being found to have calcium of 15.7 mg/dL in clinic. The patient endorsed fatigue, night sweats, lightheadedness, nausea, right flank pain with radiation to the right lower quadrant, urinary frequency, diffuse bone pain, constipation for the past 1 month, and weight loss of about 15 lb over the past 6 months. The patient denied any chest pain, shortness of breath, abdominal pain, or dysuria. Physical exam was benign except for severe tenderness to palpation over the buttocks and hips.
+Laboratories on admission were significant for calcium 15.9 mg/dL (reference range: 8.6-10.2 mg/dL), creatinine 1.33 mg/dL (reference range: 0.5-1.20 mg/dL), 1-25 dihydroxyvitamin D 116.0 pg/mL (reference range: 19.9-79.3), and 25 hydroxyvitamin D 21.0 ng/mL (reference range: >30 ng/mL). Parathyroid hormone was low (15.3 pg/mL, reference range: 15.0-65.0), and alkaline phosphatase was within normal limits. Of note, ACE was found to be elevated to 139 U/L (reference range: 14-82 U/L).
+The patient was hydrated and treated with calcitonin, decreasing her calcium to 11.3 mg/dL and her creatinine to 0.98 mg/dL. On further interviewing of this patient (admission Day 4), it was discovered that she had silicone injections in her buttocks approximately 23 years ago by a local doctor. Her calcium continued to be >11 mg/dL despite in vitro fertilization (IVF) and calcitonin. Computed tomography scan of the abdomen and pelvis showed no evidence of malignancy; however, it was significant for extensive bilateral granulomatous calcifications of the patient’s buttocks. The patient was started on steroid treatment with prednisone 60 mg daily. Ultimately, she was discharged after 5 days (once her calcium decreased to 10.6 mg/dL) and was given a 2-week course of prednisone; on return to clinic 3 weeks later (1 week after completion of her steroid taper), her calcium remained at 10.9 mg/dL. Four months later, this patient’s calcium was found to be only mildly elevated to 10.6 mg/dL ().
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's GFR using the 2021 CKD-EPI Creatinine equation, we use the following information from the patient's initial admission:
+
+- **Age**: 51 years  
+- **Sex**: Female  
+- **Race**: South American (assumed non-Black, as race is not specified otherwise)  
+- **Creatinine**: 1.33 mg/dL  
+
+The 2021 CKD-EPI equation for non-Black females is:  
+\[
+GFR = 142 \times \left(\frac{\text{Scr}}{0.7}\right)^{-0.302} \times 0.9938^{\text{Age}}
+\]
+
+Plugging in the values:  
+\[
+GFR = 142 \times \left(\frac{1.33}{0.7}\right)^{-0.302} \times 0.9938^{51}
+\]
+
+Calculating step-by-step:  
+1. \(\frac{1.33}{0.7} = 1.9\)  
+2. \(1.9^{-0.302} \approx 0.870\)  
+3. \(0.9938^{51} \approx 0.748\)  
+4. \(142 \times 0.870 \times 0.748 \approx 92.4\)  
+
+Rounding to the nearest whole number:  
+\[
+92
+\]
+
+Answer:  
+92

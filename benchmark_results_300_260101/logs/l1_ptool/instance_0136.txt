@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 136
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:26:52.768989
+================================================================================
+
+GROUND TRUTH: 4.5
+PREDICTED: 1.5
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 58-year-old gentleman with a history of hypertension, hyperlipidemia, obesity, rheumatoid arthritis (RA), tobacco abuse, and opiate abuse on methadone presented to the emergency department (ED) with a worsening nonproductive cough and shortness of breath of four days duration. His symptoms were associated with generalized myalgia, fatigue, diaphoresis, and non-bloody diarrhea. He denied sick contacts but was employed as a maintenance manager with a focus on air conditioner repair.
+To note, he was originally diagnosed with osteoarthritis in the context of bilateral knee pain, associated swelling, and morning stiffness, however, was subsequently diagnosed with RA that was managed with chronic daily prednisone (30 mg) for three years before transitioning to adalimumab, a tumor necrosis factor-alpha (TNF-a) inhibitor. He received his first infusion one week prior to the hospital presentation.
+In the ED the patient was afebrile, normotensive (132/82 mmHg), but markedly tachycardic (157 beats per minute), tachypneic (30 breaths per minute), and hypoxic to 72% on room air. There was a minimal improvement with nasal cannula and nonrebreather, and the patient was initiated on heated high flow nasal cannula (55 L; 100% FiO2) with improved saturation to 95%. Physical examination revealed an obese gentleman with cushingoid features (buffalo hump, abdominal striae) and bilateral lower limb pitting edema. Cardiac examination was unremarkable and pulmonary auscultation revealed bilateral decreased breath sounds in the lower lobes. Joints evaluation revealed mild bilateral knee swelling and effusions without additional joint deformities. Laboratory diagnostics demonstrated mild leukocytosis with a slight neutrophilic predominance, but no evidence of anemia or thrombocytopenia. The metabolic panel was notable for an elevated blood urea nitrogen, creatinine (baseline < 1), and transaminitis with elevated inflammatory markers (Table ). Urinalysis was unremarkable with the exception of microscopic hematuria. Nasopharyngeal swab for COVID-19 RNA polymerase chain reaction (PCR) and urinary legionella antigen were positive. Diagnostic imaging included a chest radiograph that demonstrated extensive consolidation throughout the left lung field with air bronchograms involving the upper lobe, lower lobe, lingula, and right upper lobe (Figure ). Chest CT was negative for pulmonary embolism but revealed complete opacification of the left lung fields with diffuse pneumonia and associated air bronchograms, trace pleural effusion, and multiple ground glass alveolar infiltrates involving the right upper, middle, and lower lobes (Figure ).
+The patient was admitted to the intensive care unit (ICU) for acute hypoxic respiratory failure in the setting of COVID-19 and Legionella pneumonia and initiated on dexamethasone (10 mg, daily; 10 days), remdesivir (daily; 5 days), azithromycin (500 mg, daily; 14 days), and ceftriaxone (1 g, daily, 7 days). It took 18 days to wean him to room air and prior to discharge, repeat COVID testing was negative. He was discharged on prednisone 30 mg daily for his RA and sulfamethoxazole-trimethoprim (Bactrim double strength, DS 800-160 mg) thrice weekly for pneumocystis carinii pneumonia (PCP) prophylaxis.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.5
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 1.5}
+

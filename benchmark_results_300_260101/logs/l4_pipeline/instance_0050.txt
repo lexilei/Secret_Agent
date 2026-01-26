@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 50
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-04T03:14:11.563222
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old right-handed male presented to the emergency department after a syncopal episode. He was teaching a karate class when a coworker saw him fall to the ground. He spontaneously regained consciousness after a few seconds but was confused for ∼15–20 min. He had no recollection of the event, and was hemodynamically stable and neurologically intact. He denied illicit drug use. Vitals, physical examination and laboratory studies were within normal limits. ECG showed normal sinus rhythm with normal PR and QT intervals and no ST-T wave changes. He was on no AV blocking agents. Head CT showed no intracranial bleed or mass lesion.
+He had a history of five similar episodes in the past. During the last episode, he had been noted to have sinus arrest on telemetry and underwent single atrial lead pacemaker placement. The pacemaker was programmed to AAI mode. AV conduction was tested and was normal. Coronary angiogram showed no evidence of coronary artery disease. EEG had been minimally abnormal with left temporal theta slowing, suggestive of an area of neurophysiologic dysfunction, but no epileptiform activity was noted. He had no history of febrile seizures, central nervous system infection or cranial trauma.
+The patient was admitted for further work up. Continuous EEG monitoring was ordered to evaluate for seizure activity. At ∼7 min and 36 s, the patient started to have recurrent automatisms and became unresponsive, with the EEG showing complex partial seizure activity emanating from the left anterior temporal region with continued post-ictal right temporal delta slowing. The seizure lasted ∼1 min. The simultaneous ECG lead demonstrated heart rate slowing toward the end of the seizure episode, with the rhythm changing from sinus to atrially paced at 60 beats min−1 with 1:1 conduction, to atrially paced with 2:1 AV block, followed by complete heart block for 4 s, followed by resumption of the baseline atrially paced rhythm with 1:1 conduction (Fig. ).
+Cardiac electrophysiology recommended treating the seizure episodes before considering upgrade of the pacemaker to a dual-chamber device. The patient was started and subsequently discharged on levetiracetam. More than 15 months later, he has had no seizures or syncopal events.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'age': 55, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 55, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

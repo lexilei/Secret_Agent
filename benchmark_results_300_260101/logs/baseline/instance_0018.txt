@@ -1,0 +1,66 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 18
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T20:50:28.602701
+================================================================================
+
+GROUND TRUTH: 6.07477
+PREDICTED: 6.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 60-year-old male with end-stage kidney disease due to ADPKD was admitted to our hospital for an evaluation of diplopia and left hemiplegia in March 2012. He had started maintenance hemodialysis in 2005. He had hypertension, which was relatively under good control with antihypertensive agents. He had no other arteriosclerotic risks such as diabetes, dyslipidemia, or smoking. He had no past medical history of coronary artery disease, myocardial infarction, or peripheral artery disease. The patient’s father and three brothers were also under hemodialysis due to ADPKD. None of the family members had a vascular system complication such as cerebral aneurysm, or past medical history of stroke. A brain CT scan image showed dilatation of left vertebral artery, basilar artery, bilateral post cerebral artery, and middle cerebral artery (Fig. a, b). At the time, he was diagnosed as vertebrobasilar dolichoectasia and started antihypertensive agents. In 2010, he was once admitted to our hospital for dysarthria, dysphagia and right hemiplegia. Brain magnetic resonance imaging (MRI) revealed acute infarction in the left midbrain, and he was started treatment with anticoagulant and additional antihypertensive agents. Although he recovered from dysarthria and dysphagia, right mild hemiplegia remained. However, he did not have any new stroke events until the admission in 2012.
+On admission in 2012, his height was 163.1 cm, weight was 58.5 kg, consciousness level was 13 on the Glasgow Coma Scale, blood pressure was 146/92 mmHg, and body temperature was 36.7 °C. His conjunctiva was anemic, abdomen showed hepatomegaly and bilateral kidney swelling, and lower extremities had bilateral pitting edema. Neurological examination revealed prompt light reflection, isocoric pupil, limitation of the adduction of the right eye when gazing to the left, dysarthria, and bilateral incomplete paralysis.
+Laboratory data were as follows: serum Cr 10.7 mg/dL, BUN 48 mg/dL, estimated glomerular filtration rate (eGFR) 4.4 mL/min/1.73 m2, hemoglobin (Hb) 10.7 g/dL, white blood cell count (WBC) 5700/μL, C-reactive protein (CRP) 0.4 mg/dL, aspartate aminotransferase (AST) 6 IU/L, alanine aminotransferase (ALT) 6 IU/L and alkaline phosphatase (ALP) 164 IU/L. Brain MRI showed acute ischemia of bilateral pons and right temporal lobe. Brain magnetic resonance angiography (MRA) did not show significant change in vertebrobasilar dolichoectasia compared with MRA in 2010. We started urokinase 60,000 unit/day and argatroban hydrate 60 mg/day. He was once recovered, and continued rehabilitation and maintenance hemodialysis. After 3 months of admission, he suddenly showed impaired consciousness of 6 on the Glasgow Coma Scale, convulsion, and Cheyne-Stokes respiration. CT scan image did not show any cerebral hemorrhage. Exacerbation of cerebral infarction was suspected, and we started argatroban hydrate 60 mg/day, aleviatin, and non-invasive positive pressure (NPPV). Fourteen days after convulsion, he died of sudden fall in blood pressure (Fig. ).
+An autopsy was performed, and the brain was pathologically examined. Macroscopically, massive hemorrhage in subarachnoid were seen due to rupture of basilar tip aneurysm (Fig. a, b). Autopsy diagnosis of his death was subarachnoid hemorrhage. Intravascular lumen of the basilar tip aneurysm was nearly obstructed by thrombi (Fig. c). Old cerebral infarctions were seen in the left temporal lobe and other areas. Basilar, left vertebral, bilateral carotid, bilateral middle, and bilateral post cerebral artery showed irregular dilatation of the vessel wall. A microscopic examination of the dilatation area had rupture of the internal elastic lamina and thinning of the media (Fig. d). A wide range of vertebrobasilar dolichoectasia was also confirmed pathologically. In other organs, systemic arteries also showed marked atherosclerosis, and bilateral iliac artery had an aneurysm-like dilatation.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's Creatinine Clearance (CrCl) using the Cockcroft-Gault equation, we follow these steps:
+
+### **1. Extract the relevant values:**
+- **Age:** 60 years  
+- **Sex:** Male  
+- **Serum Creatinine (SCr):** 10.7 mg/dL  
+- **Actual Weight:** 58.5 kg  
+- **Height:** 163.1 cm  
+
+### **2. Determine Adjusted Body Weight:**
+- **BMI Calculation:**  
+  \[
+  BMI = \frac{Weight (kg)}{Height (m)^2} = \frac{58.5}{(1.631)^2} = 22.0 \, (\text{Normal})
+  \]
+- Since BMI is normal, we use the **minimum of ideal body weight (IBW) and actual weight**.
+  - **IBW (Male) = 50 + 2.3 × (Height in inches - 60)**  
+    \[
+    163.1 \, \text{cm} = 64.2 \, \text{inches}  
+    \]
+    \[
+    IBW = 50 + 2.3 × (64.2 - 60) = 50 + 9.66 = 59.66 \, \text{kg}
+    \]
+  - **Actual Weight (58.5 kg) < IBW (59.66 kg)**, so **Adjusted Weight = 58.5 kg**.
+
+### **3. Apply the Cockcroft-Gault Equation (Male):**
+\[
+CrCl = \frac{(140 - Age) × Adjusted Weight}{72 × SCr}  
+\]
+\[
+CrCl = \frac{(140 - 60) × 58.5}{72 × 10.7}  
+\]
+\[
+CrCl = \frac{80 × 58.5}{770.4} = \frac{4680}{770.4} = 6.07  
+\]
+
+### **Final Answer:**
+6

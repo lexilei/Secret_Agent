@@ -1,0 +1,28 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 123
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-02T03:23:07.089828
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 3.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A white British, 78-year-old previously healthy female, non-smoker and with no known pulmonary disease, was admitted with collapse and shortness of breath with arterial oxygen saturations of haemoglobin of 80% on room air. The background included a history of persistent dry cough for 3 months without any other complaint or systemic symptoms. Her past medical history comprised of type 2 diabetes, increased uric acid and ongoing pain in the right knee. Her medication history consisted of gliclazide, allopurinol and diclofenac. The patient denied any recent travel or contact with animals (even pets). Physical examination revealed central cyanosis, tachypnoea, bilateral reduction in breath sounds and right-sided bronchial breathing. Cardiac examination was normal. There were no adenopathy noted. Arterial blood gases analysis on 5 litres of O2 per min showed mixed acidaemia. Serum biochemistry revealed raised urea (15.1 mmol/L) and creatinine (114 umol/L) levels consistent with acute kidney injury, positive D-dimmer's levels and increased CRP (48.2 mg/L). Chest radiography showed a loss of volume in the right lung (Figure ) and an electrocardiogram demonstrated normal sinus rhythm with a heart rate of 94 bpm, left axis deviation and an old inferior myocardial infarction. At this time the patient was started on treatment for both a possible community acquired pneumonia (benzyl penicillin and clarythromycin) and for pulmonary thromboembolism (therapeutic doses of Dalteparin). The patient was stable for 48 hours but then her oxygen requirements increased progressively. Contrast-enhanced chest CT scan and CT pulmonary arteriography with venous phase imaging failed to demonstrate any evidence of pulmonary artery thrombus. However thrombus, with associated fibrosis and volume loss, was seen to affect one of the right lower lobe pulmonary veins (Figure ). An echocardiogram was performed which showed a normal sized left ventricle with good function, normal aortic and mitral valves. The right heart although poorly visualized, appeared to be mildly enlarged with moderate function. The patient was started on methylprednisolone 1 g once a day and transferred to the intensive care unit (ICU).
+The patient continued to deteriorate over the next 24 hours following admission to the ICU. She developed biochemical and electrocardiographic evidence of an acute anterior-lateral myocardial infarction and aspirin, clopidogrel and simvastatin were added to her anticoagulation therapy. Unfortunately the patient's oxygen requirements continued to increase and she was ventilated, initially supported by biphasic positive airway pressure (BIPAP) and then subsequently by invasive mechanical ventilation. Over the next eight days, despite maximal therapy she continued to deteriorate and died from multiple organ failure.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3

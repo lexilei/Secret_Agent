@@ -1,0 +1,63 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 34
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-02T03:22:59.726980
+================================================================================
+
+GROUND TRUTH: 22.44331
+PREDICTED: 142.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 58-year-old man presents to the emergency department with rapid onset of severe pain and swelling in his right great toe overnight. He reports experiencing a similar episode several years ago but cannot recall the diagnosis or the medication he was given for treatment. His medical history is significant for hyperlipidemia, poorly controlled diabetes, and stage 3 chronic kidney disease. Laboratory studies are ordered as seen below.
+
+Serum:
+Na+: 139 mEq/L
+Cl-: 101 mEq/L
+K+: 5.9 mEq/L
+HCO3-: 22 mEq/L
+BUN: 20 mg/dL
+Glucose: 259 mg/dL
+Creatinine: 3.1 mg/dL
+
+The interphalangeal joint of the right great toe is aspirated, with the synovial fluid aspirate shown under polarized light microscopy in Figure A.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's GFR using the **2021 CKD-EPI Creatinine equation**, we use the following formula:  
+
+**CKD-EPI GFR Formula:**  
+\[ GFR = 142 \times \left(\frac{Scr}{A}\right)^B \times 0.9938^{age} \times \text{gender\_coef} \]  
+
+### **Given Data:**  
+- **Age:** 58 years  
+- **Sex:** Male (gender coefficient = 1.0 if male, 1.012 if female)  
+- **Serum Creatinine (Scr):** 3.1 mg/dL  
+- **Race:** Not specified (assumed non-Black, coefficient = 1.0)  
+
+### **Steps:**  
+1. **Determine A and B:**  
+   - For males, **A = 0.9**, **B = -0.302** (if Scr ≤ 0.9)  
+   - Since Scr (3.1) > 0.9, **B = -1.200**  
+
+2. **Plug into the formula:**  
+   \[ GFR = 142 \times \left(\frac{3.1}{0.9}\right)^{-1.200} \times 0.9938^{58} \times 1.0 \]  
+
+3. **Calculate:**  
+   - \(\left(\frac{3.1}{0.9}\right)^{-1.200} = (3.444)^{-1.200} ≈ 0.197\)  
+   - \(0.9938^{58} ≈ 0.712\)  
+   - \(GFR = 142 \times 0.197 \times 0.712 ≈ 19.9\)  
+
+### **Final Answer:**  
+**19.9**

@@ -1,0 +1,30 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 95
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T20:50:29.952154
+================================================================================
+
+GROUND TRUTH: 24.30462
+PREDICTED: 24.3
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The patient was a 17-year-old boy with hypopituitarism, autism, and a history of septooptic dysplasia with whom communication was difficult. He was receiving treatment with dexamethasone 100 μg and Levothyroxine sodium 1 mg per day. One month before admission, he experienced a fall, which resulted in difficulty in walking. At the first visit to the physician, because he could not describe any symptoms, only knee radiography was performed and there were no abnormalities. The pain in his right leg progressively worsened and he presented to our outpatient clinic after one month.
+On physical examination, the patient was slightly obese with a height of 161 cm and weight of 63 kg noted. His right leg was externally rotated, and he hesitated to stand up. The passive range of motion of the right hip was limited, especially in adduction and internal rotation (right/left; flexion 90°/120°, extension 10°/10°, abduction 45°/45°, adduction 0°/30°, external rotation 60°/45°, and internal rotation 10°/30°). Serum insulin-like growth factor-1 and insulin-like growth factor-binding protein 3 levels were low, but free triiodothyronine, free thyroxine, and adrenocorticotropic hormone levels were almost normal. The radiographs of the hip joints showed a right atypical slippage of the epiphysis (). Both neck shaft angles were large (right/left; 160°/155°) and lateral tilts of the physis were normal on intact side (right/left; 35° lateral/13° medial). Three-dimensional computed tomography (3D CT) images showed lateral epiphyseal displacement on the right femoral head (Figures and ), indicating valgus SCFE.
+The patient underwent in situ pinning of the hip on both sides. On the right side, the procedure was performed through a limited 5 cm longitudinal incision, positioned medially on the thigh (frog position), posterior to the femoral neurovascular bundle. A single φ5.5 mm partially threaded cannulated screw (Meira, Japan) was placed across the physis. In situ pinning on the left side was performed as a prophylactic pinning because of endocrine abnormalities (). Postoperatively, we had difficulty in limiting weight bearing due to communication difficulties.
+One month after surgery, he could walk better than before the operation. At the 1-year follow-up, he could walk without difficulty and there were no signs of pain. The passive range of motion of the right hip joint was slightly improved in flexion, adduction, and internal rotation (100°, 20°, and 20°, resp.). Radiographs showed no signs of avascular necrosis or chondrolysis of the epiphysis; the physis showed no signs of early partial closure.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+24.3

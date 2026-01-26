@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 87
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-04T03:14:11.907978
+================================================================================
+
+GROUND TRUTH: 22.11203
+PREDICTED: 22.112
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 33-year-old woman was referred to a university hospital for the evaluation of secondary amenorrhea for 4 months. The patient had spontaneous thelarche at age 11 years and menarche at age 13 years. She denied experiencing vasomotor symptoms. A human chorionic gonadotropin (hCG) urine test was negative. The results of the physical examination were as follows: height 165.0 cm, weight 60.2 kg, systolic blood pressure 132 mmHg, and diastolic blood pressure 77 mmHg. Breast development and pubic hair growth were both stage 5 according to the Tanner staging system. Basal hormonal tests revealed highly elevated serum FSH and luteinizing hormone (LH) levels (52.7 IU/L and 33.2 IU/L, respectively), a low estradiol (E2) level (17.8 pg/mL), and high AMH level (5.04 ng/mL). Serum levels of prolactin, thyroid-stimulating hormone, and free T4 were all normal. A transvaginal ultrasound revealed a normal-sized uterus with polycystic ovarian morphology (> 20 antral follicles measuring 2–9 mm) observed in the right ovary ().
+The patient was unmarried and wanted to preserve her fertility; therefore, she was advised to visit an infertility hospital for oocyte cryopreservation. The repeated basal hormonal tests were unchanged, and serum levels of androgens including total testosterone, free testosterone, 17α-hydroxyprogesterone, and dehydroepiandrosterone sulfate were all normal. Induction of superovulation was attempted with a starting dose of 150 IU recombinant FSH (Follitrope®; LG, Iksan, Korea) daily for oocyte cryopreservation. The dose of recombinant FSH was increased to 225 IU after one week because follicular development was not observed on ultrasound. However, follicular development was not observed despite the increase in FSH dose, and cycle cancellation was determined at that time. Further evaluation included karyotype, FMR1 premutation, and 21-hydroxylase antibody tests. The karyotype analysis revealed 47,XXX[1]/46,XX[29]; however, it was read as a normal variant by the specialist in laboratory medicine. The FMR1 premutation test revealed no abnormal CGG trinucleotide repeat expansion. The patient tested negative for 21-hydroxylase antibodies. In addition, anti-thyroglobulin antibodies and anti-thyroid peroxidase antibodies were negative. She was prescribed oral contraceptives (Yaz®) for hypoestrogenism associated with POI.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+22.112
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Body Mass Index (BMI)', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'weight_kg': 60.2, 'height_cm': 165.0}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'weight_kg': 60.2, 'height_cm': 165.0}}, {'stage': 'compute', 'success': True, 'result': 22.112, 'formula': 'BMI = weight / height^2'}], 'method': 'l4_pipeline'}
+

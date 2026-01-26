@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 56
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-01T21:26:51.135726
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old male presented to Samsung Medical Center with a 40-year history of paroxysmal palpitations. Although diagnosed with atrial septal defect (ASD) 30 years previously, the patient elected not to undergo surgical repair. Approximately 1 year prior, he began to visit the pediatric ward of Samsung Medical Center more frequently with symptoms of palpitations and dyspnea lasting 2 to 3 days and occurring in 2- to 3-month intervals. An electrocardiogram showed paroxysmal atrial fibrillation, and secundum-type ASD (22.3 mm) with a left-to-right shunt was diagnosed by echocardiogram. Device closure (Amplatzer septal occlude 28 mm; AGA Medical, Golden Valley, MN, USA) was then performed; however, 1 week after the procedure, the patient continued to experience dyspnea and chest pain after 10 to 20 minutes of walking. Sustained atrial fibrillation was seen on the electrocardiogram and 24-hour Holter monitor. Cardioversion was performed following hospitalization with the opinion that the persistent atrial fibrillation was due to device closure. The patient was discharged from the hospital after cardioversion to sinus rhythm at 100 J; however, the symptoms recurred. Since it was difficult to perform radiofrequency catheter ablation (RFCA) due to the recent device closure, the patient was referred to the thoracic surgery department for totally thoracoscopic ablation. Surgery was performed under routine procedures. Intubation was performed using a double lumen endotracheal tube. For the surgery, a 10-mm trocar was inserted in the fourth intercostal space (ICS) of the right anterior axillary line, a 5-mm trocar in the third ICS along the anterior axillary line, and a 10-mm trocar in the sixth ICS on the mid-axillary line. Right pulmonary vein ablation, right ganglionated plexi ablation, and ablation of the right half of the space between the right lower pulmonary vein and the left lower pulmonary vein were performed. Between the procedures, we conducted a high-frequency stimulation test for finding ganglionated plexi. Sutures were placed after chest tube insertion. On the left side, ports were placed in the same positions, and ablations were performed in the same order as on the right side after dividing Marshall’s ligament (). A left atrial auricle resection was then performed using an Echelon Flex 60 articulating endoscopic linear cutter (Ethicon Endo-Surgery Inc., Cincinnati, OH, USA). Upon confirmation of the conversion to sinus rhythm, the patient was transferred to the intensive care unit. He was then transferred to the general ward on postoperative day 1 and discharged from the hospital on postoperative day 6. During this 6-day postoperative period, the sinus rhythm was maintained continuously. Six months later, the sinus rhythm was seen on the 24-hour Holter monitor; the patient showed none of the earlier symptoms, and therefore, amiodarone and warfarin were stopped. The patient is currently being followed as an outpatient, and his sinus rhythm has been well maintained as seen on the last electrocardiogram at the 8 month follow-up.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 2.0}
+

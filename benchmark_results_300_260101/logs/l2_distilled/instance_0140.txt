@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 140
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:37:21.945737
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 80-year-old male with past medical history of hypertension, dyslipidemia, and diabetes mellitus non-compliant to the prescribed medications, presented to the emergency department with 1-hour complaint of right-sided chest pain that was described as aching, non-radiating, without any aggravating or relieving factors, 10/10 in intensity, and was accompanied by nausea and two episodes of maroon-colored emesis. The patient denied any ingestion of toxic substances and any prior similar episodes. On presentation, the patient was afebrile, and blood pressure of 109/45, heart rate 75, respiratory rate of 18, and room air oximetry of 98%. Physical examination, including fundoscopy was unrevealing. Labs workup revealed serum sodium of 125 mEq/L [135-145 mEq/L], potassium 5.1 mEq/L [3.5-5.0 mEq/L], chloride 91 mEq/L [98-107 mEq/L], bicarbonate 24 mEq/L [21-24 mEq/L], urea 145,7 mg/dL [14.9 – 51.4 mg/dL], creatinine 2.95 mg/dL [0.6-1.30 mg/dL], blood glucose 492 mg/dL [70-110], WBC 13.5 [4.5-11.0 × 103/mm3], Hb 12.3 g/dL [13.5-17.5 g/dL], platelets 242,000/mm3 [140k-440k/mm3], BNP 154 pg/mL [125-450 pg/mL], and troponin 0.062 ng/mL [0.01-0.30 ng/mL]. Electrocardiogram showed normal sinus rhythm at the rate of 94 beats per minute without ST or T-wave abnormalities. Morphine was administered along with nitroglycerine for the chest pain without any improvement in symptoms. Therefore, given the persistent chest pain and concern for non-ST-segment elevation myocardial infarction, the patient was started on a heparin drip and antiplatelet therapy in the emergency department. Cardiology was consulted who performed a cardiac catheterization which did not show any critical stenosis with an estimated ejection fraction of 55%. They recommended medical therapy including anti-hypertensives, statin, and blood glucose control. The computed tomography of the abdomen and pelvis without contrast was unremarkable. Gastroenterology was then consulted due to abdominal symptoms of nausea, vomiting, and hematemesis. Patient underwent an esophagogastroduodenoscopy (EGD), which showed circumferential, black-appearing, necrotic esophageal mucosa without active bleeding extending from the mid to distal esophagus (). There was also mild chronic gastritis without any evidence of active bleeding. The patient was treated with a proton pump inhibitor and sucralfate. Patient had an uneventful hospital course lasting 5 days and was discharged with close follow up.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': "Wells' Criteria for Pulmonary Embolism", 'extracted_values': {}, 'result': 0, 'method': 'python', 'formula': 'Sum of criteria (>4 = PE likely, ≤4 = PE unlikely)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': "Wells' Criteria for Pulmonary Embolism", 'extracted_values': {}, 'result': 0, 'method': 'python', 'formula': 'Sum of criteria (>4 = PE likely, ≤4 = PE unlikely)'}}
+

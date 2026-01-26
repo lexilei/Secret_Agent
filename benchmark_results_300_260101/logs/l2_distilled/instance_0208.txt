@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 208
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T21:37:23.242616
+================================================================================
+
+GROUND TRUTH: 10.0
+PREDICTED: 9.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 46-year-old female (height: 168.3 cm; weight: 53.6 kg; blood type B+) with liver-biopsy-proven autoimmune hepatitis (defined in accordance with the International Autoimmune Hepatitis Group criteria) and hepatitis B carrier status underwent elective ABOi LDLT. Her MELD (model for end-stage liver disease) score was 18 points, and she was being continuously treated with prednisolone and antiviral medication (Viread; Gilead, Foster City, CA, USA). Her laboratory findings were as follows: hemoglobin, 7.8 g/dl; white blood cell count, 4.12 × 109/L; creatinine, 0.93 mg/dl; albumin, 3.0 g/dl; aspartate and alanine aminotransferase, 64 U/L and 30 U/L, respectively; total bilirubin, 2.97 mg/dl, and lactic acid 2.0 mmol/L. Her coagulation values included an international normalized ratio (INR) of 2.2, activated partial prothrombin time of 57.7 second, and platelet count of 17.0 × 109/L. Abdominal computed tomography revealed advanced liver cirrhosis, partial thrombus in the main portal vein, moderate ascites, and marked splenomegaly and splenorenal shunt. Preoperative desensitization and immunosuppression were performed according to the ABOi LDLT protocol,[ and consisted of a single dose of intravenous rituximab (375 mg/m2 body surface area) administered 2 weeks before surgery (which reduced CD marker levels from 6.1%–0.1%) and multiple plasmapheresis (total 51 units of fresh frozen plasma [FPP]), to achieve an isohemagglutinin titer of ≤1:8 (Table ).
+The piggyback method was employed during LT, using the right hepatic lobe of a 51-year-old male living donor (blood type A+, donor-recipient weight ratio: 1.91%, steatosis 9.83%) and reconstructing the middle hepatic vein such that the segmental hepatic veins (from liver segments V and VIII) of the recipient were anastomosed with the middle hepatic vein of the donor. The hepatic vessels, including the hepatic vein, portal vein, and hepatic artery, were serially anastomosed followed by biliary ductal reconstruction. The patency of hepatic blood flow was evaluated using spectral Doppler ultrasonography. The patient underwent simultaneous splenectomy, without bleeding complications due to severe thrombocytopenia or collateral shunt. Intraoperative management was performed with balanced anesthesia and hemodynamic homeostasis, with appropriate circulatory adjustment. In addition, a vasopressor was administered under multiple hemodynamic monitoring, including transesophageal echocardiography (TEE; Vivid S5 cardiovascular ultrasound; GE Healthcare, Milwaukee, WI, USA) and laboratory measurements. Transfused blood products consisted of 10 units of washed packed red blood cells (PRBCs; blood type O+), 5 units of FFP (blood type AB+) and 1 unit of single donor platelets (SDPs; blood type AB+). An acceptable hemodynamic status was achieved during surgery, including the absence of postreperfusion syndrome[ or evidence of cardiac or pulmonary thromboembolism, as determined by TEE. The endotracheal tube was removed in the operating room without respiratory complications. The patient was then transferred to the intensive care unit (ICU) for continued monitoring.
+In ICU, her platelet counts largely increased from 15.0 to 263.0 (× 109/L) and her coagulation parameters acutely aggravated to hypercoagulable state as assessed by thromboelastography (maximal amplitude of 122 mm). Our patient suffered acute circulatory collapse (systolic blood pressure [SBP], 53 mm Hg; diastolic blood pressure [DBP], 21 mm Hg), and exhibited a gasping breathing pattern indicative of respiratory distress and a decline in mental status from alert to stupor. The ICU attending physicians immediately performed resuscitation management consisting of aggressive fluid therapy, blood product transfusion (3 units of PRBCs [blood type O+]), high-dose vasopressor infusion and endotracheal intubation with mechanical ventilation. Although her vital signs and mental status recovered thereafter, the patient required emergency exploratory abdominal surgery to repair the vessel injury incurred during surgery. During surgery, bleeding from the site of collateral vascular injury near the pancreas was detected and repaired. However, hypotension (SBP, 65 mm Hg; DBP, 50 mm Hg), bradycardia (<40 beats/minutes) and arrhythmia developed, accompanied by a large increase in central venous pressure (up to 30 mm Hg). Rescue TEE, urgently performed to evaluate cardiac structure and function, incidentally identified multiple, huge thromboembolic clots in both atrial chambers and a left-shifted deviation of the atrial wall (Fig. ). The large flapping thromboembolic clots on both cardiac valves severely impaired blood flow from the atrium to the ventricle (Fig. ) and caused severe mitral (Fig. ) and tricuspid regurgitation. Other large thromboembolic clots obstructed left ventricular outflow (Fig. ) and compressed the right and left pulmonary arteries (Fig. ), resulting in severe cardiac collapse. The patient therefore underwent emergency thromboembolectomy, including cardiopulmonary bypass and hypothermia therapy (body temperature, 34°C). Nonetheless, severe cardiac and respiratory distress continued, necessitating intraoperative venoarterial extracorporeal membrane oxygenation (VAECMO; maintained in the ICU). During emergency surgery, 25 units of PRBC and 5 units of FFP were transfused. In the ICU, despite fluid infusion, blood product transfusion (10 units of PRBCs) and high-dose vasopressor administration, our patient, while still on VAECMO, suffered severe hypotension and continued massive bleeding due to a deficiency and dilution of coagulation factors. The patient died 1 day after emergency surgery.
+Attribute: Encephalopathy
+Possible Options: No Encephalopathy, Grade 1-2, Grade 3-4
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+9.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 9.0}
+

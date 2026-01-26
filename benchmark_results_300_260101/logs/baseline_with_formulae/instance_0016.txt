@@ -1,0 +1,86 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 16
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-02T03:22:58.605311
+================================================================================
+
+GROUND TRUTH: 52.66849
+PREDICTED: 1.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 78-year-old man with a history of hypertension and benign prostatic hyperplasia, and no history of any infectious diseases, underwent endovascular stenting (S. M. A. R. T. Control C10060SL, Cordis, Santa Clara, CA, USA) at another hospital for chronic occlusion of the left iliac artery, which had been causing intermittent claudication. No prophylactic antibiotics were administered to the patient during the EVT procedure. The patient was discharged the next day without any complications. However, he developed fever and back pain 20 days later. Contrast-enhanced computed tomography (CT) was suggestive of an infected aneurysm at the site of the left iliac artery stent, and the patient was referred to our hospital.
+The patient was 160 cm tall, weighed 62.8 kg, and had a blood pressure of 156/80 mmHg, a pulse of 66 beats/min, and a body temperature of 38°C. Blood tests revealed the following: white blood cells, 13130/µl; red blood cells, 3.33 million/µl; hemoglobin, 9.9 g/dl; platelet count, 190,000/µl; blood urea nitrogen, 26.7 mg/dl; creatinine, 0.93 mg/dl; albumin, 2.4 g/dl; and C-reactive protein, 24.76 mg/dl. CT findings revealed thickening of the arterial wall and an aneurysm of the left common iliac artery at the site of the stent (). On the basis of these findings, he was diagnosed with an infected aneurysm due to bare stent infection and underwent surgical treatment.
+The terminal abdominal aorta and bilateral common iliac arteries were removed because the infection had extended to the aortic bifurcation (). The surrounding infected tissue was debrided, and the terminal aorta was replaced with a rifampicin-soaked bifurcated prosthesis. A pedicled omental flap based on the left gastroepiploic artery was then guided in a retrocolic fashion into the retroperitoneal cavity, to wrap the graft around its entire length.
+The rifampicin-soaked prosthesis was prepared as follows. First, 300-mg rifampicin capsules (Sandoz Corporation, Tokyo, Japan) were dissolved in a mixture of 6-ml high-pressure sterilized polyoxyethylene sorbitan monooleate (Tween 80, Wako Seiyaku, Tokyo, Japan) and 54-ml distilled water. This solution was then sterilized in a Millex-HV Syringe Filter Unit (0.45 µm polyvinylidene difluoride, Merck Millipore, Carrigtwohill, County Cork, Ireland). Finally, an 18×10-mm prosthesis (Hemashield Platinum, Maquet, San Jose, CA, USA) was soaked in this rifampicin solution for 15 min.
+Histopathology of the surgically excised artery specimen revealed many inflammatory cells infiltrating the intima, media, and adventitia. Abscesses and masses of Gram-positive cocci were found in all arterial layers, suggestive of an infected aneurysm ().
+Staphylococcus aureus was detected by a bacterial culture of the surgical specimen. Based on the results of his antibiotic susceptibility test, the patient was administered tazobactam/piperacillin 13.5 g/day intravenously for 4 weeks, followed by amoxicillin 750 mg/day orally. However, oral medication was discontinued after 2 weeks due to a side effect, i.e., diarrhea.
+Two postoperative complications were also treated. For adhesive bowel obstruction, partial small bowel resection was performed. For aspiration pneumonia, meropenem hydrate 1.5 g/day was administered for 1 week.
+The patient was discharged and fully recovered from his illness. The patient still visits our hospital every 3–6 months for blood tests, Doppler ultrasonography, and CT. Postoperative CT images at the 2-year follow-up revealed no signs of reinfection (). At the 3-year follow-up, the graft remained patent, and no complications were observed.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's Creatinine Clearance (CrCl) using the Cockroft-Gault Equation, we follow these steps:
+
+### 1. **Determine the patient's BMI and adjusted body weight (ABW):**
+- **Height:** 160 cm  
+- **Weight:** 62.8 kg  
+- **BMI Calculation:**  
+  \[
+  BMI = \frac{weight}{height^2} = \frac{62.8}{(1.60)^2} = 24.53
+  \]
+  - Since BMI is **normal (18.5–24.9)**, we use the **minimum of ideal body weight (IBW) and actual weight**.
+
+- **Ideal Body Weight (IBW) Calculation:**  
+  \[
+  IBW = 50 + 2.3 \times (height\_in - 60)
+  \]
+  - Convert height to inches:  
+    \[
+    160 \, \text{cm} = 62.99 \, \text{in}
+    \]
+  - Calculate IBW:  
+    \[
+    IBW = 50 + 2.3 \times (62.99 - 60) = 50 + 2.3 \times 2.99 = 56.88 \, \text{kg}
+    \]
+  - **Adjusted Body Weight (ABW):**  
+    \[
+    ABW = \min(IBW, actual\_weight) = \min(56.88, 62.8) = 56.88 \, \text{kg}
+    \]
+
+### 2. **Extract other relevant values:**
+- **Age:** 78 years  
+- **Serum Creatinine (Cr):** 0.93 mg/dL  
+- **Gender:** Male (gender coefficient = 1)  
+
+### 3. **Apply the Cockroft-Gault Equation:**
+\[
+CrCl = \frac{(140 - age) \times ABW \times gender\_coef}{Cr \times 72}
+\]
+\[
+CrCl = \frac{(140 - 78) \times 56.88 \times 1}{0.93 \times 72}
+\]
+\[
+CrCl = \frac{62 \times 56.88}{66.96}
+\]
+\[
+CrCl = \frac{3526.56}{66.96} = 52.67
+\]
+
+### Final Answer:
+\[
+\boxed{53}
+\]
+
+(Note: The final answer is rounded to the nearest whole number as per standard practice for CrCl.)

@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 109
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T21:26:52.213100
+================================================================================
+
+GROUND TRUTH: 8.34
+PREDICTED: 8.34
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 66-year-old Taiwanese man was admitted to our medical oncology ward with the chief complaint of progressive exertional dyspnea for twenty days in December 2017. He had been diagnosed with bony metastasis from prostate cancer for 8 years and failed various kinds of treatment including luteinizing hormone-releasing hormone agonist (leuprorelin), androgen receptor antagonist (bicalutamide), denosumab and docetaxel. He was brought to our hospital after starting on dexamethasone and abiraterone acetate without improvement of serum prostate specific antigen level for two months in a medical center nearby.
+There was no obvious bone pain, chills or fever. He denied other major systemic disease except essential hypertension under regular medical control. His chest X-ray film disclosed right side costophrenic angle blunting and a little fluid accumulation in the minor fissure without extensive pulmonary edema. Blood chemistry showed that levels of alanine aminotransferase, gamma glutamyltransferase, blood urea nitrogen and creatinine were within normal ranges. Abnormal results included alkaline phosphatase of 123 iu/L (normal 32 to 91), albumin of 3.2 g/dL (normal 3.5 to 4.8) and calcium of 7.7 mg/dL (normal 8.6 to 10). Serum prostate specific antigen level was 905 ng/mL (normal 0 to 4). Prolonged activated partial thromboplastin time (41.2 sec, control 31.5) and prothrombin time (international normalized ratio 1.23) were noted. Although plasma fibrinogen level was still normal (335 mg/dL, normal 200 to 400), the concentration of D-dimer was extremely high (over 20,000 ng/mL, normal less than 500). Blood routine test revealed hemoglobin of 6.4 g/dL, mean corpuscular volume of 89.4 fl, platelet count of 1,1000/μL, and white cell count of 7,200/μL with extraordinary abnormal differential counts: segments 19%, lymphocytes 35%, monocytes 1%, eosinophils 3%, bands 19%, metamyelocytes 11%, myelocytes 6%, promyelocytes 4%, blasts 1%, and atypical lymphocytes 1%. There were 48 nucleated red cells per 100 white cells. A diagnosis of leukoerythroblastosis was thus established based on morphological evidence ().
+Bone marrow aspiration from right side posterior superior iliac crest gave a smear of full-blown metastatic carcinoma with many clustered, dispersed or microacinar groups of epithelioid malignant cells. Bone marrow biopsy from the same area showed a picture of metastatic adenocarcinoma composed of highly pleomorphic tumor cells with hyperchromatic nuclei, prominent nucleoli, and vacuolated cytoplasm, infiltrating diffusely in the marrow with a sheeted pattern. The carcinoma cells were positive for prostate specific membrane antigen, negative for cytokeratin 7 and cytokeratin 20 on immunohistochemical stains using Bond Polymer Refine Detection Kit (Leica Biosystem, Milton Keynes, UK) performed on automated Leica Bond MAX stainer (Leica Biosystem, Melbourne, Australia) with three primary antibodies (Leica Biosystem) ().
+There were only a few small metastatic lesions over skull, manubrium, and ribs in bone scan performed two months earlier but diffuse bone marrow involvement and destruction could be seen in magnetic resonance imaging of spine done one month prior to the present hospitalization (). The patient decided to receive palliative treatment upon knowing his incurable disease status and died of multiple organ failure resulting from fulminant disseminated intravascular coagulation two weeks later.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+8.34
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 8.34}
+

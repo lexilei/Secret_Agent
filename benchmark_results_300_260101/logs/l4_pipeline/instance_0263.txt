@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 263
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-04T03:14:13.895888
+================================================================================
+
+GROUND TRUTH: 5.0
+PREDICTED: 1.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 37-year-old African American female patient morbidly obese with no other significant medical history, presented to the ED complaining of chest pain. She described her chest pain as pressure like and tightness in the middle of chest, 7 out of 10 in severity, lasting for five to six minutes then gradually improving and lingering on for some more minutes before completely wearing off. Pain radiated to her back and was not related to activity. The patient denied shortness of breath, nausea, and vomiting. She denied history of heart disease, previous similar chest pain or substance abuse, and she stated that she is quite healthy otherwise.
+Physical exam revealed stable vital signs -- blood pressure: 123/78 mmHg, heart rate: 73 beats/min, respiratory rate: 18 breaths/min, temperature: 36.5 degrees Celsius, SpO2: 97% on room air. Cardiovascular examination revealed a pulse with regular rate and rhythm, normal S1 and S2, with no murmurs or added sounds. Respiratory examination was normal with normal vesicular breath sounds heard bilaterally. The rest of physical examination was unremarkable. Urine toxicology and pregnancy test were negative, other laboratory tests were within normal limits.
+The EKG showed normal sinus rhythm with no ischemic changes, serial high sensitivity troponin was elevated at 440>606>872 ng/mL (normal range 0-0.4 ng/mL). Due to concern of aortic dissection and PE, computed tomography angiography (CTA) and CT PE were performed and both were negative. Transthoracic echocardiogram (TTE) showed normal left ventricular ejection fraction and no regional wall motion abnormalities. Due to her significant chest pain and up trending of troponin, the patient had a LHC. LHC showed 70% stenosis of the first obtuse with type A dissection (Figure ).
+Intravascular ultrasound (IVUS) showed type A spontaneous coronary dissection with no significant compromise in lumen as shown in Figure . The patient was monitored in the cardiac telemetry unit for one day, she was medically stable, and her chest pain resolved. The patient was discharged on aspirin, metoprolol, and atorvastatin.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.3}, {'stage': 'extract', 'extracted': {'age': 37, 'sex': 'female'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 37, 'sex': 'female'}}, {'stage': 'compute', 'success': True, 'result': 1.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

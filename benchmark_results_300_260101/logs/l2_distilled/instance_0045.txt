@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 45
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-01T21:37:19.869677
+================================================================================
+
+GROUND TRUTH: 5.0
+PREDICTED: 5.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The patient that admitted into our department was a 75-year-old male, diagnosed with osteoporosis by DXA examination, his serum CTX, P1NP and OC were 0.78 μg/L, 200.70 μg/L, and 24.47 μg/L, respectively. He had a history of 15-year hypertension and 10-year chronic AF. Ten months earlier, he suffered from abrupt dizziness accompanied with nausea and vomiting, right limb dysfunction when he went to the toilet at night. CT scans showed ‘the left basal ganglia infarction foci’. After that, warfarin sodium tablet was orally taken 3 mg/day. The patient's INR was 2.70 when he was admitted into our department. Alendronate sodium tablets were prescribed to the patient at 70 mg once a week. It turned out that the patient serum INR increased from 2.70 to 4.69 at the first 24 hours, the oral taken of alendronate sodium tablets was stopped immediately. Then the patient's serum INR fell to 4.34 at 48 hours; he also had spontaneous ecchymoses and petechiae in the skin during the fluctuation of INR. However, the ecchymoses and petechiae gradually vanished at the following days and INR decreased to 3.32 at the fifth day. The patients denied taken other medication except for warfarin sodium and alendronate sodium tablets, he also denied significant diet change.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+5.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 5.0}
+

@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 299
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-01T21:26:55.997584
+================================================================================
+
+GROUND TRUTH: 4.08073
+PREDICTED: 4.08
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 49-year-old Hispanic African American female was presented to the emergency department with diffuse pains involving the abdomen, chest, and limbs of one-day duration that resemble the symptoms of her previous pain crises. She was known to have HbSS SCD with chronic anemia and complicated by end-stage renal disease (ESRD) requiring hemodialysis. She is a post-cholecystectomy patient. She did not use tobacco, alcohol, or recreational drugs. Her home medications included metoprolol, mirtazapine, omeprazole, cinacalcet, aspirin, calcitriol, calcium acetate phosphate binder, epoetin alpha injections, folic acid, and multivitamins.
+The patient’s review of systems was otherwise negative. On presentation, she had a blood pressure of 143/113 mmHg, a temperature of 36.1 °C, a heart rate of 101 beats per minute, and a SpO2 of 98% on room air. She was in mild distress and her abdomen was soft and diffusely tender. Besides the arteriovenous fistula in her left arm with a palpable thrill, her examination was otherwise unremarkable.
+Her lab findings showed a white blood cell (WBC) count of 11.3 k/µL, a hemoglobin (Hb) level of 9.6 g/dL (close to baseline), and a platelet count of 166 k/µL. Her reticulocyte count was 0.21 M/µL at 7.3%. Na+ 137 mm/L, K+ 3.9 mmol/L, 30 mmol/L, Cl− 94 mmol/L, BUN 12 mg/dL, creatinine 2.67 mg/dL, Ca2+ 8.9 mmol/L, Mg2+ 2.1 mg/dL, lactic acid 1.9 mmol/L, albumin 4g/dL with a total protein of 6.9 g/dL, direct/total bilirubin 0.7/2.7 mg/dL, alkaline phosphatase 670 IU/L (variable chronic elevation), alanine transaminase (ALT) 17 IU/L, and aspartate transaminase (AST) 57 IU/L. She was admitted and treated with opiates for pain control. Intravenous (IV) fluids were held given her ESRD awaiting hemodialysis.
+On her third day in the hospital, the patient was noted to be lethargic. Her blood glucose was too low to measure on a glucometer. She was given IV dextrose with an incomplete improvement of her mentation. Her blood glucose dropped again overnight with a measured blood glucose of 42 g/dL. She was treated with dextrose and transferred to the medical intensive care unit (ICU) in an obtunded state. She required 2 l/min O2 via nasal cannula to maintain a SpO2>90%. Her examination at that point was remarkable for worsening conjunctival icterus, palpable hepatomegaly, and diffuse abdominal tenderness. Her lab results showed dramatic new derangements with a lactic acid of 12.5 mmol/L, direct/total bilirubin of 15.6/22.5 mg/dL, alkaline phosphatase 496 IU/L, ALT 571 IU/L, and AST 1440 IU/L. Her prothrombin time was 60.9 seconds corresponding with an INR of 5.48. Activated prothrombin time was slightly prolonged at 43 seconds. An ammonia level was measured at 37 umol/L. A random cortisol level was appropriately elevated at 59 µg/dl. A continuous dextrose infusion was initiated. Viral hepatitis serologies were negative. Liver ultrasound with doppler was done showing trace fluid in the gallbladder fossa with increased echogenicity of the hepatic parenchyma with normal hepatic and portal vascular circulation flow (Figures -). The craniocaudal length of the liver was 17 cm.
+The patient was hemodynamically stable throughout her course. Empirical broad-spectrum antibiotic coverage was initiated with cultures eventually negative. She had a blood exchange transfusion on her first day in the ICU. Her course over the next days was marked by a progressive, yet significant improvement of her mental status as she became easier to arouse, then was able to answer basic questions and obey command with waxing and waning levels of cognition over 72 hours. Her mentation normalized and she was transferred back to the regular ward. Her labs continued to improve.
+Of note, her course was notable for acute thrombocytopenia with a nadir platelet count of 33 k/µL. Given the acuity of the platelet drop, with a concomitant right cephalic vein superficial thrombophlebitis, she was treated for heparin-induced thrombocytopenia with Argatroban for four days which was eventually stopped after the screen for antibodies to the platelet factor 4/heparin complex was negative.
+She was discharged feeling well after 12 days in the hospital with plans for outpatient follow-up with hematology and her primary care provider.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4.08
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 4.08}
+

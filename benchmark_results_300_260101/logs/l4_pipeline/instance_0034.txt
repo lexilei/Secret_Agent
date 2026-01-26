@@ -1,0 +1,46 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 34
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-04T03:14:11.383965
+================================================================================
+
+GROUND TRUTH: 22.44331
+PREDICTED: 22.443
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 58-year-old man presents to the emergency department with rapid onset of severe pain and swelling in his right great toe overnight. He reports experiencing a similar episode several years ago but cannot recall the diagnosis or the medication he was given for treatment. His medical history is significant for hyperlipidemia, poorly controlled diabetes, and stage 3 chronic kidney disease. Laboratory studies are ordered as seen below.
+
+Serum:
+Na+: 139 mEq/L
+Cl-: 101 mEq/L
+K+: 5.9 mEq/L
+HCO3-: 22 mEq/L
+BUN: 20 mg/dL
+Glucose: 259 mg/dL
+Creatinine: 3.1 mg/dL
+
+The interphalangeal joint of the right great toe is aspirated, with the synovial fluid aspirate shown under polarized light microscopy in Figure A.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+22.443
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CKD-EPI Equations for Glomerular Filtration Rate', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'age': 58, 'sex': 'male', 'creatinine_mg_dl': 3.1}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 58, 'sex': 'male', 'creatinine_mg_dl': 3.1}}, {'stage': 'compute', 'success': True, 'result': 22.443, 'formula': '142 * min(Cr/κ,1)^α * max(Cr/κ,1)^-1.200 * 0.9938^age * sex_coef'}], 'method': 'l4_pipeline'}
+

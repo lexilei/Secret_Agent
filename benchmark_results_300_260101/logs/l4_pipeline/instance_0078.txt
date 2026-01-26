@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 78
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-04T03:14:11.823549
+================================================================================
+
+GROUND TRUTH: 82.66667
+PREDICTED: 83.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 48-year-old morbidly obese African-American male with a medical history of congestive heart failure, hypertension, obstructive sleep apnea on 2 l of home oxygen and non-complaint with continuous positive airway pressure at night presented to the emergency department (ED) with worsening shortness of breath and lower extremity oedema over one week. Vital signs in the ED were temperature, 98.7 degrees Fahrenheit; blood pressure, 116/66 mmHg; heart rate, 130 beats per minute; respiratory rate, 30; oxygen saturation, 85% on 2 l nasal cannula; weight, 162 kg and body mass index, 47. Physical examination revealed a morbidly obese male in acute respiratory distress with an irregularly irregular pulse and one plus lower extremity pitting oedema. Laboratory values in the ED include white blood cell count, 9 800/μl; haemoglobin, 14.2 g/dl; platelet count, 230 000/μl; sodium, 140 mEq/l; potassium, 4.5 mEq/l; chloride, 104 mEq/l; bicarbonate, 29 mEq/l; blood urea nitrogen (BUN), 38 mg/dl; creatinine, 1.4 mg/dl; glucose, 105 mg/dl; aspartate aminotransferase (AST), 51 U/l; alanine aminotransferase (ALT), 40 U/l; alkaline phosphatase, 68 U/l; total bilirubin, 1.5 mg/dl; albumin, 3.4 g/dl; total protein, 7.1 g/dl; international normalised ratio (INR), 1.2; myoglobin, 97 μg/l; troponin, 0.07 ng/ml and B-type natriuretic peptide, 934 pg/ml. Urine toxicology screen was positive for cocaine. Arterial blood gas showed a pH 7.33, paCO2 68.5 and paO2 88.6 on FiO2 of 40%. Electrocardiogram confirmed atrial fibrillation with a rapid ventricular response. Echocardiogram revealed a myopathic severely enlarged left ventricular chamber with moderate concentric left ventricular hypertrophy and severe global hypokinesis with an ejection fraction of 8 to 10%. The patient's work of breathing and oxygenation improved with Bipap. He was started on diltiazem and diuresis was initiated. The patient was admitted to the step-down unit with a new diagnosis of atrial fibrillation.
+On hospital day number eight, the overnight nurse found the patient unresponsive. A code blue was called. His initial rhythm was ventricular fibrillation and he was shocked with 200 J twice before regaining pulses. When stabilised, he was transferred to the intensive care unit (ICU) where he regained consciousness and full neurologic function within one hour of the event. The following day, an automatic implantable cardioverter defibrillator (AICD) was placed. Intraoperatively, the patient had runs of ventricular tachycardia with hypotension to 80 mmHg systolic. Postoperatively, the patient was found to have a right fixed mid-dilated pupil, flaccid paralysis of the left arm and leg with hyperreflexia throughout the left side. Computed tomography (CT) of the head revealed a right midbrain and thalamic stroke thought to be secondary to transient arrhythmia-induced hypoperfusion, intraoperatively.
+On postoperative day number three, after AICD placement and stroke, the patient acutely developed a rigid distended board-like abdomen with dullness to percussion. Vitals at that time were temperature, 98.4 degrees Fahrenheit; blood pressure, 112/67 mmHg; heart rate range, 55 beats per minute, and respiratory rate 26 on ventilator settings of assist control volume control with a rate of 26; tidal volume, 500 ml; FiO2, 40% and positive end-expiratory pressure of 5. His peak inspiratory pressure on the ventilator had risen from 26 to 72 mmHg; his plateau had risen from 15 to 48 mmHg with oxygen desaturation from 93 to 85%. The patient had received 1.5 l in and urinated 4.5 l over the 24 hours, leading up to this event. His laboratory values from that morning were unchanged from previous (white blood count, 10 400/μl; haemoglobin, 12.6 g/dl; platelets, 200 000/μl; sodium, 139 mEq/l; potassium, 4.7 mEq/l; chloride, 100 mEq/l; bicarbonate, 34 mEq/l; BUN, 36 mg/dl; creatinine, 1.41 mg/dl; glucose, 78 mg/dl; calcium, 8.3 mg/dl; magnesium, 2.0 mEq/l; phosphorus, 3.0 mg/dl; AST, 77 U/l; ALT, 94 U/l; alkaline phosphatase, 186 U/l; total bilirubin, 1.3 mg/dl). This constellation of findings prompted the team to measure an abdominal compartment pressure which was elevated to 53 cm H2O (40 mmHg) with an abdominal perfusion pressure (APP) of 42 mmHg. A CT scan of the abdomen and pelvis was performed which showed no dilated loops of bowel, no ileus, no evidence of free air, abscess or obstruction and minimal free fluid []. Pertinent labs from the event revealed a lactate of 1.0 mg/dl; lipase, 159 U/l; amylase, 76 U/l; creatinine, 1.53 mg/dl. Surgery was consulted and the FiO2 was increased to 100%, which improved his oxygen saturation to 96% despite his elevated peak inspiratory pressures.
+Surgical recommendations were for an emergent bedside surgical abdominal decompression. The patient was administered 10 mg of intravenous cisatracurium besylate by anaesthesia in preparation for surgical management. Shortly following paralytic administration, his peak inspiratory pressure corrected from 72 to 23 mmHg, his plateau pressure from 48 to 16 mmHg and his oxygenation status tolerated a decrease in FiO2 down to 40% with his oxygen saturation returning to baseline. Measurement of his abdominal compartment pressure revealed a drop from 53 (40 mmHg) to 23 cm H2O (17 mmHg) and then normalised to 15 cm H20 (11 mmHg) over a three-hour period. During this entire event, the patient averaged 100 to 200 cc/hr of urine output and laboratory values from the following day showed a drop in creatinine from 1.53 to 1.29 mg/dl. Given this correction, surgical management was postponed and the patient was monitored. The patient remained hospitalised for an additional 73 days. He was ultimately transferred to a skilled nursing facility without return of symptoms.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+83.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Body Mass Index (BMI)', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {'weight_kg': 162}, 'missing': ['height_cm']}, {'stage': 'validate', 'is_valid': False, 'missing': ['height_cm'], 'cleaned': {'weight_kg': 162}}, {'stage': 'repair_1', 'extracted': {'weight_kg': 162}, 'is_valid': False, 'missing': ['height_cm']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

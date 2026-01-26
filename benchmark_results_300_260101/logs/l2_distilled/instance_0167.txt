@@ -1,0 +1,46 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 167
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T21:37:22.471587
+================================================================================
+
+GROUND TRUTH: 47.85442
+PREDICTED: 47.854
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 38-year-old woman is brought to the emergency department because of 3 1-hour episodes of severe, sharp, penetrating abdominal pain in the right upper quadrant. During these episodes, she had nausea and vomiting. She has no diarrhea, dysuria, or hematuria and is asymptomatic between episodes. She has hypertension and hyperlipidemia. Seven years ago, she underwent resection of the terminal ileum because of severe Crohn's disease. She is 155 cm (5 ft 2 in) tall and weighs 79 kg (175 lb). Her BMI is 32 kg/m2. Her temperature is 36.9°C (98.5°F), pulse is 80/min, and blood pressure is 130/95 mm Hg. There is mild scleral icterus. Cardiopulmonary examination shows no abnormalities. The abdomen is soft, and there is tenderness to palpation of the right upper quadrant without guarding or rebound. Bowel sounds are normal. The stool is brown, and a test for occult blood is negative. Laboratory studies show:
+Laboratory test
+Blood  
+Hemoglobin 12.5 g/dL
+Leukocyte count 9,500 mm3
+Platelet count 170,000 mm3
+Serum  
+Total bilirubin 4.1 mg/dL
+Alkaline phosphatase 348 U/L
+AST 187 U/L
+ALT 260 U/L
+Abdominal ultrasonography shows a normal liver, a common bile duct caliber of 10 mm (normal < 6 mm), and gallbladder with multiple gallstones and no wall thickening or pericholecystic fluid.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Ideal Body Weight', 'extracted_values': {'sex': 'female', 'height_cm': 155.0, 'height_in': 61.023622047244096}, 'result': 47.854, 'method': 'python', 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Ideal Body Weight', 'extracted_values': {'sex': 'female', 'height_cm': 155.0, 'height_in': 61.023622047244096}, 'result': 47.854, 'method': 'python', 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}}
+

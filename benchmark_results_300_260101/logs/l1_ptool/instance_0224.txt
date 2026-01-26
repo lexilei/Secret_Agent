@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 224
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T21:26:54.402396
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 4.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 47-year-old man presented to the emergency department this morning complaining of progressive swelling and aching discomfort of his left lower extremity that began abruptly two days ago while he was at work and has worsened despite intermittent rest and elevation. He reports the entire limb, from groin to ankle, feeling “tight” with a heavy sensation by the end of the day, and he has noticed that his trousers now fit snugly on that side while remaining loose on the right. He denies preceding trauma, overuse injury, recent sprain, insect bite, or skin infection, and he has not experienced fevers, chills, or constitutional symptoms. Measurement in triage showed a 4.2 cm increase in maximal calf circumference on the left compared with the contralateral leg, confirming objective asymmetry. Physical examination reveals diffuse enlargement of the left leg with visible dilation of superficial, non-varicose collateral veins tracking over the medial thigh and calf; these channels become particularly prominent when the limb is placed in a dependent position. Moderate pitting edema is elicited along the anterior tibial surface and extends from the dorsum of the foot up to the proximal thigh, yet the right leg remains entirely without edema. Skin temperature is mildly elevated on the affected side, but overlying color is preserved without erythema or cellulitic changes. Distal pulses are palpable bilaterally, and capillary refill is normal. He does not localize tenderness to a single cord-like structure on deep palpation, but rather endorses a generalized dull ache most notable along the posterior calf when standing. He ambulates independently without limping, and neurologic testing shows intact motor strength and sensation; there is no history of stroke, spinal cord pathology, or immobilization in a cast. The patient works as an accountant, spends most days seated but rises routinely, and denies any prolonged travel or recent confinement to bed; he was at work all week with no sick days and has not been hospitalized. He has never experienced a clotting event before, has no known thrombophilia, and is not on anticoagulation. Surgical history is limited to an uncomplicated appendectomy performed many years ago, and he has undergone no operative procedures or invasive interventions within the last three months. He takes an antihypertensive and a statin for well-controlled chronic conditions, does not smoke, and drinks alcohol only socially. Family background is notable for coronary artery disease in first-degree relatives but no venous thromboembolic disease. Review of systems is otherwise negative; he denies chest pain, shortness of breath, pleuritic discomfort, hemoptysis, persistent cough, or flank pain. Current vital signs are stable: temperature 36.9 °C, blood pressure 132/78 mm Hg, heart rate 86 beats/min, respiratory rate 16 breaths/min, and oxygen saturation 98 % on ambient air. Cardiac and pulmonary examinations are unremarkable. Abdomen is soft with no masses or hepatosplenomegaly. A focused musculoskeletal exam shows full range of motion at the hip, knee, and ankle, with no joint effusion or tenderness. Dermatologic survey reveals no rashes, ulcers, or stasis changes. There is no palpable inguinal adenopathy. Given the uniform swelling of the entire extremity, the measured calf asymmetry greater than 3 cm, the presence of engorged collateral superficial veins, and pitting edema isolated to the symptomatic limb, thrombotic obstruction of the deep venous system is high on the differential, while alternative explanations such as musculoskeletal strain, lymphatic insufficiency, heart failure, or infection appear less plausible in this otherwise healthy, afebrile, ambulatory individual.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 4.0}
+

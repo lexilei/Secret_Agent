@@ -1,0 +1,30 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 29
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-02T03:22:59.206841
+================================================================================
+
+GROUND TRUTH: 4.90379
+PREDICTED: 5.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 53-year-old Hispanic male with poorly controlled diabetes, hemodialysis for two years, and coronary artery bypass grafting 10 months previously, developed redness pain and swelling of the medial aspect of both legs two days prior to admission. This occurred in a symmetrical fashion and extended from the upper one-third of the calf to the mid-thigh. The patient had difficulty walking secondary to pain. He had undergone saphenous vein harvesting from these areas for his coronary artery bypass graft (CABG). The patient denied trauma to the lower extremities, fevers, chills, and rigors. His medications include paricalcitol, sevelamer, calcium acetate, aspirin, amiodarone, amlodepine, simvastatin, and humilin 70/30.
+Physical examination showed extensive erythema involving the inner aspect of the thighs down to the medial upper one-third of the calf on both sides (Figures -). Skin lesions were warm and very tender to touch, but there was no induration. Initial laboratory examination revealed white count 9,500 with 70% neutrophils, erythrocyte sedimentation rate of 87 mm/hr, C-reactive protein 11.6 mg/dl, blood urea nitrogen (BUN) 57 mg/dl, creatinine 11.3 mg/dl, calcium 9.8 mg/dl, albumin 3 gm/dl, prothrombin time (PT) 11.3 sec, international normalized ratio (INR) 1.1, and activated partial thromboplastin time (aPTT) 30.3 sec.
+He was treated with intravenous vancomycin and ceftriaxone. By day three, moderate induration had developed, there were no signs of improvement, and the intensity of pain worsened. CT scan of both lower extremities was not consistent with necrotizing fasciitis and repeat labs showed a white count 15,700, with 75% neutrophils, and C-reactive protein 48 mg/dl, calcium 9.76 mg/dl, phosphorus 12.5 mg/dl (first time obtained). He required a patient-controlled analgesia (PCA) pump to control his pain with little improvement. His antibiotics were changed to linezolid, tobramycin, and levofloxacin. On the fourth day, there was an increased induration of the thighs with rock hard consistency of the tissue. Skin biopsy was performed showing deposition of calcium in the small blood vessels of the skin, areas of fat necrosis with foamy histiocytes, and neutrophils consistent with calciphylaxis (Figures -). Parathyroid hormone level (PTH) was 628 pg/ml.
+He received daily dialysis with intravenous sodium thiosulfate given post dialysis for three days. His calcium-containing phosphate binders and paricalcitol were stopped; dosage was increased for sevelamer and lanthanum carbonate, another phosphate binder, was added to lower phosphorus levels. The patient’s pain, redness, swelling and induration improved over the next three days and his calcium was 8.5 gm/dl and phosphorus 7.3 mg/dl at the time of discharge.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+5

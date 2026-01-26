@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 262
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T21:37:26.243905
+================================================================================
+
+GROUND TRUTH: 5.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 47-year-old man presented to the emergency department (ED) in April 2021 for altered mental status. His medical history consisted of type 2 diabetes mellitus and hypertension, and there was no history of malignancy. Per Emergency Medical Services, the patient lives at home with a roommate who witnessed a seizure-like episode. He arrived at the ED with glucose in the 700s. Home medications included insulin glargine 25 units twice daily, gabapentin 800 mg three times daily, aspirin 81 mg daily, atorvastatin 40 mg daily, and metoprolol succinate 200 mg daily. He was treated for hyperosmolar hyperglycemic state in the ED and was admitted for further management. The patient was found to be COVID positive on SARS-CoV-2 RNA testing. He left against medical advice two days later.
+Approximately two weeks later, the patient presented with pleuritic chest pain associated with shortness of breath. Vital signs at the time of admission: temperature 37.9° Celsius, heart rate 92 beats/minute, blood pressure 117/79 mmHg, respiratory rate 18 breaths/minute, and oxygen saturation 94% on room air. Cardiac examination revealed normal S1 and S2 and no murmurs, rubs, or gallops. Lung auscultation was clear to auscultation bilaterally, without wheezes, rhonchi, or rales. Bilateral 2+ pitting edema was present to the level of his knees. Initial troponin was 0.481 ng/ml (reference <0.012 ng/ml) but subsequently downtrended to <0.02 ng/ml, and pro B-type natriuretic peptide (pro-BNP) was 2800 pg/ml (reference 0-300 pg/ml). Electrocardiography (ECG) showed normal sinus rhythm with low voltages in the limb leads; there were no diffuse ST-segment elevations (Figure ). Transthoracic echocardiogram (TTE) showed a left ventricular ejection fraction of 30% with severe global hypokinesis, increased wall thickness of the right ventricle, and a small circumferential pericardial effusion without evidence of tamponade physiology. Unfortunately, the patient again left against medical advice.
+Three months later, the patient presented to the hospital with shortness of breath and was found to be volume overloaded due to medication noncompliance. TTE showed a large pericardial effusion with diastolic compression of the right atrium, consistent with cardiac tamponade physiology. He underwent pericardiocentesis with the removal of 800 ml serosanguinous fluid that was negative for malignant cytology. Acid-fast bacilli culture and smear of the pericardial fluid were negative. Approximately one month later, the patient saw his cardiologist for follow-up. The patient was referred to the ED for bilateral lower extremity cellulitis. On this most recent ED visit, approximately four months after the initial presentation, the patient agreed to stay in the hospital and undergo a comprehensive diagnostic evaluation.
+In addition to evaluation of his cellulitis, bedside ultrasonography showed that a moderate to large pericardial effusion had recurred, though without evidence of right ventricular diastolic collapse or right atrial systolic collapse. CT chest also confirmed an incidental large pericardial effusion (Figure ). Blood cultures were negative. Testing of human immunodeficiency virus (HIV) and antinuclear antibody (ANA) serology was negative. His ECG on this admission was unchanged from prior ECGs. Hemoglobin A1c was 8%, and low-density lipoprotein (LDL) was 58 mg/dl. Carcinoembryonic antigen (CEA), alpha fetoprotein (AFP), cancer antigens (CA 19-9), and prostate-specific antigen (PSA) were negative. Repeat TTE showed large pericardial effusion (2.3 cm) and evidence of tamponade physiology (exaggerated respiratory variation in mitral inflow velocity (E) on Doppler echocardiography).
+Of note, a previous left heart catheterization with coronary angiography did not show significant obstructive coronary artery disease. A prior echocardiogram seven months prior revealed an ejection fraction of 65%, without pericardial effusion. The patient underwent placement of a pericardial window, and a chest tube was inserted. Repeat blood cultures were negative. The chest tube drained approximately 165 ml. The patient’s clinical presentation improved, and he was discharged home.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'HEART Score for Major Cardiac Events', 'extracted_values': {'age': 1, 'risk_factors': 1}, 'result': 2, 'method': 'python', 'formula': 'History + ECG + Age + Risk factors + Troponin (0-10)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'HEART Score for Major Cardiac Events', 'extracted_values': {'age': 1, 'risk_factors': 1}, 'result': 2, 'method': 'python', 'formula': 'History + ECG + Age + Risk factors + Troponin (0-10)'}}
+

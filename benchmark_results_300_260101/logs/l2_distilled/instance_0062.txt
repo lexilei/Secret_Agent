@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 62
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T21:37:20.307163
+================================================================================
+
+GROUND TRUTH: 56.66667
+PREDICTED: 56.667
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 40-year-old unrestrained passenger is brought into the emergency room after a motor vehicle collision. The patient is awake and alert, though he complains of chest and back pain. Soon after he is brought in, the patient loses consciousness. His vitals are: Temperature 96 deg F (35.6 deg C), pulse 120/min, blood pressure 80/45 mmHg, and respirations 22/min. His physical exam is significant for bruising on his chest along with crepitus present with sternal palpation. His chest radiograph is shown in Figure A.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Mean Arterial Pressure (MAP)', 'extracted_values': {'systolic': 80.0, 'diastolic': 45.0}, 'result': 56.667, 'method': 'python', 'formula': 'MAP = (2*DBP + SBP) / 3'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Mean Arterial Pressure (MAP)', 'extracted_values': {'systolic': 80.0, 'diastolic': 45.0}, 'result': 56.667, 'method': 'python', 'formula': 'MAP = (2*DBP + SBP) / 3'}}
+

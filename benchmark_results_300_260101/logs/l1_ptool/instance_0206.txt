@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 206
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T21:26:54.079981
+================================================================================
+
+GROUND TRUTH: 11.0
+PREDICTED: 10.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 28-year-old female from Nepal who recently immigrated to the United States presented to the ED with complaints of abdominal distention, fatigue, and six weeks of progressive bilateral lower extremity weakness. She was recently discharged from an outside hospital with a new diagnosis of decompensated liver cirrhosis with ascites. She reported drinking homemade alcoholic beverages daily while in Nepal but was unable to quantify the amount, given inconsistent history due to language and cultural barrier. She was taking thiamine 100 mg oral daily, which was not continued on admission. On evaluation, she was extremely malnourished with a BMI of 14.6 due to lack of appetite and a diet consisting mostly of rice and beef broth soup. Physical exam demonstrated scleral icterus, abdominal distention with tenderness in the right upper quadrant, shifting dullness,hepatosplenomegaly, and jaundice. Laboratory studies were notable for platelet count of 96,000/uL, albumin 2.8 g/dL, aspartate aminotransferase (AST) 52 U/L, alanine aminotransferase (ALT) 30 U/L, total bilirubin 34.5 mg/dL, international normalized ratio (INR) 1.8. Her initial model for end-stage liver disease (MELD) score was 26, and she was evaluated for liver transplantation. Other causes of cirrhosis, including viral, hemochromatosis, autoimmune, Wilson’s disease, primary biliary cirrhosis, and primary sclerosing cholangitis, were excluded, and it was determined that she had alcohol-induced cirrhosis. Due to her extreme malnutrition and weakness, she was listed inactive on the transplant list.
+The patient had bilateral lower extremity weakness and paresthesias preventing her from standing unassisted. She also demonstrated areflexia, tenderness to palpation, and pain with movement of lower extremities. Initial workup for weakness included vitamin B12, folate, and vitamin B6 levels. Vitamin B12 and folate returned within normal limits, but she was found to be deficient in vitamin B6 at 11.7 nmol/L and was started on replacement therapy. After 10 days of supplemental vitamin B6 and physical therapy, she had not improved, and neurology was consulted. An electromyogram was performed and consistent with severe sensorimotor axonal polyneuropathy with active denervation. Cerebrospinal fluid (CSF) analysis was also recommended and showed a slightly elevated protein at 47 mg/dL but not elevated enough to be consistent with Guillain-Barré syndrome (GBS). Additional labs were drawn, and she was found to have a low thiamine level at 55 nmol/L (normal: 70-80 nmol/L). She was started on replacement therapy with slow improvement. By six months of aggressive thiamine replacement, she could walk 200 feet with a walker and stand without assistance.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+10.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 10.0}
+

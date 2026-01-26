@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 137
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:26:52.792875
+================================================================================
+
+GROUND TRUTH: 1.5
+PREDICTED: 0.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 69-year-old man presented to the emergency room with two weeks of exertional dyspnea, unable to ambulate greater than 50 feet. Cardiopulmonary examination showed blood pressure of 131/82 mmHg, heart rate of 77 beats/min, a laterally displaced point of maximal impulse, bilateral dependent lung crackles, and bilateral lower extremity pitting edema. Medical history included uncontrolled hypertension, uncontrolled hyperlipidemia, peripheral artery disease, 50 pack-year smoking history, and alcohol use disorder. No history of recreational drug use was reported. Patient had no prior surgical history. The differential diagnosis for the etiology of clinical heart failure in this patient included ischemic cardiomyopathy, alcoholic cardiomyopathy, hypertensive heart disease, and heart failure with preserved ejection fraction.
+On admission, a 12-lead electrocardiogram showed sinus rhythm with QS waves in leads V2-V4. Laboratory studies showed troponin I of 0.04 ng/ml and brain natriuretic peptide of 2498 pg/ml. Transthoracic echocardiography (TTE) showed left ventricular ejection fraction of 30%-35% with moderate to severe global hypokinesis. Given patient’s high likelihood of coronary artery disease, he underwent coronary angiography for workup of his cardiomyopathy, which revealed a diffusely diseased left anterior descending coronary artery (LAD) with worst stenosis up to 70%-80% (Figure -).
+Patient was deemed not a candidate for coronary bypass graft surgery (CABG) by cardiothoracic surgery; thus, PCI with intravascular ultrasound (IVUS) guidance was performed. The LAD lesion was crossed using a Choice PT wire (Boston Scientific, Marlborough, Massachusetts, USA) and predilated using multiple compliant balloons with good expansion. A 3.0 x 28 mm drug-eluting stent (DES) was implanted in the distal LAD, 3.5 x 38 mm DES in the mid-LAD, and 3.5 x 28 mm DES in the proximal LAD with a very good final angiographic result (Figure ). The IVUS was used prior to stent implantation for lesion characterization and vessel sizing and post-stenting to confirm adequate stent expansion and apposition without any edge dissection. However, there was an occlusion of a septal perforating artery due to being jailed by the LAD stent struts (Figure ). We opted not to intervene on this septal branch to avoid disruption of LAD stent struts. Moreover, the patient did not have any clinical signs or symptoms from losing this septal branch. He did well and was subsequently discharged on appropriate medical therapy.
+Six-month post-PCI, TTE showed improved left ventricular ejection fraction to 55%, but thinning of the midanteroseptum and midinferoseptum was noted (Figure -). No ventricular septal perforation was detected after evaluating the defect on multiple views with color Doppler.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 0.0}
+

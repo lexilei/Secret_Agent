@@ -1,0 +1,16 @@
+{
+  "experiment": "baseline_with_formulae",
+  "level": "L0+",
+  "total_instances": 300,
+  "correct_exact": 85,
+  "correct_tolerance": 155,
+  "errors": 0,
+  "accuracy_exact": 0.2833333333333333,
+  "accuracy_tolerance": 0.5166666666666667,
+  "error_rate": 0.0,
+  "total_cost_usd": 0.634385,
+  "avg_cost_usd": 0.0021146166666666665,
+  "total_tokens": 507508,
+  "avg_latency_ms": 1737.67875512441,
+  "total_time_seconds": 536.0510296821594
+}

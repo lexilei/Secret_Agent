@@ -1,0 +1,44 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 139
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:37:21.928793
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 59-year-old woman attended her General Practitioner (GP) with a 3-week history of lethargy, myalgia, pyrexia and night sweats. She had no significant past medical history and was not on any regular medications. Her most recent travel had been to Spain a few months previously, and she lived at home with her husband and dog, who were in good health. Her GP performed some blood tests, shown in , which prompted urgent referral for admission to hospital due to the notably raised white cell count and CRP.
+In the Emergency Department the patient was pyrexic with a temperature of 39.4 °C. Otherwise, her observations were normal. She had no audible murmurs and the rest of her examination was unremarkable.
+Chest X-ray was normal and ECG showed sinus rhythm with a rate of 76 beats per minute and first-degree AV block. One set of blood cultures and urine cultures were sent and she was started on IV piperacillin/tazobactam for pyrexia of unknown origin. She was tested for influenza by PCR of a nasopharyngeal swab, which was negative.
+Transthoracic echocardiography (TTE), carried out on day 2 of admission, demonstrated a mass on the aortic valve, which was further characterized by trans-oesophageal echocardiography (TOE), identifying a 1.8×0.9 cm mass with thickening of the aortic root, suspicious for root abscess.
+On day 2 of admission, when the TTE raised the suspicion of endocarditis, she had seven further sets of blood cultures sent over a period of 72 h and was changed to IV amoxicillin 2 g 4 hourly, and gentamicin 3 mg kg−1 OD, as empirical treatment for native valve infective endocarditis.
+She was transferred to cardiac surgery on day 4 of admission and underwent aortic valve replacement surgery (). Procedure note from Cardiothoracics as follows: ‘Via oblique aortotomy, tri-leaflet valve was seen with a huge vegetation and perforation at the annulus. There was a small abscess cavity in the annulus at the non-coronary cusp. The native valve was excised, and the cavity was debrided easily, with rifampicin washout. A size 21 Inspiris Reslia bioprosthetic valve was implanted in annular position with 15× Ethibond 2/0 interrupted technique (5 Teflon pledgeted at the Non coronary cusp area). Aorta closed in single layer, using Haemoseal pledgeted sutures. De-aired. Cross-clamp off. Right Ventricular pacing wire inserted and checked. Weaned off Cardio-Pulmonary Bypass. Good valve function with no paravalvular leak and adequate de-airing confirmed on Trans-oesophageal ECHO. Mediastinal and pericardial drains inserted. Protamine given, haemostasis checked/effected.’
+The valve was sent by the cardiac surgeons to the microbiology laboratory for culture, and sent away for 16s PCR testing. It was not sent to histopathology.
+On day 5 of admission, the aerobic bottle of the first set of blood cultures taken flagged positive after being incubated in Bact T/Alert 3-D (bioMérieux, France) for 3.5 days. Gram-negative rods were observed on Gram stain (). Given this information, the patient’s antibiotics were changed to ceftriaxone, vancomycin and gentamicin, whilst waiting for culture and identification of this organism. Subculture on Columbia blood agar yielded fine smooth, creamy white and non-haemolytic colonies. Species identification was performed using Vitek MS [matrix-assisted laser desorption/ionization time-of-flight mass spectrometry (MALDI-TOF MS)], which confirmed the organism as C. carnimorsus. As there were no recommended European Committee on Antimicrobial Susceptibility Testing (EUCAST) antibiotic breakpoints, E-test strips were set up and minimum inhibitory concentrations (MICs) were measured against EUCAST PK-PD (non-species-related) breakpoints. This organism was susceptible to gentamicin, ceftriaxone, penicillin, ciprofloxacin and meropenem. The remaining sets of blood cultures were all negative after 5 days of incubation.
+Given the identification of this organism, the patient’s antibiotic therapy was changed to Meropenem, Vancomycin and Gentamicin pending susceptibility testing. The heart valve was cultured and was negative after 7 days of incubation in enrichment broth. The valve was also sent to the Public Health England reference laboratory for 16S rDNA real-time PCR identification. Report: this identified species, with data indicating a 99 % sequence homology to C. cynodegmi, C. canimorsus and C. stomatis, providing robust evidence to confirm the responsible pathogen. The patient’s treatment was, therefore, targeted towards C. canimorusus, based on the antibiotic susceptibility test results () obtained through E-test, which were interpreted using EUCAST non-species-specific PK-PD breakpoints. Her antibiotic therapy was changed to IV benzylpenicillin, to complete 4 weeks of treatment.
+The patient improved clinically and was discharged home after completion of treatment and a repeat ECHO prior to discharge showed normal left ventricular function and prosthetic aortic valve, with a repeat ECHO and follow-up planned in 1 year.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': "Wells' Criteria for Pulmonary Embolism", 'extracted_values': {}, 'result': 0, 'method': 'python', 'formula': 'Sum of criteria (>4 = PE likely, ≤4 = PE unlikely)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': "Wells' Criteria for Pulmonary Embolism", 'extracted_values': {}, 'result': 0, 'method': 'python', 'formula': 'Sum of criteria (>4 = PE likely, ≤4 = PE unlikely)'}}
+

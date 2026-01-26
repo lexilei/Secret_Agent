@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 118
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T20:50:30.392903
+================================================================================
+
+GROUND TRUTH: 9.938
+PREDICTED: 8.96
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old man was diagnosed with “lumbar muscle strain” at a local hospital after complains of low back pain for 3 months. However, no significant improvement was seen after symptomatic treatment (specific treatment unknown). Two months later, the patient developed back pain with bilateral pain in the rib area. On April 21, 2018, enhanced chest computed tomography (CT) showed a small amount of chronic inflammatory and fibroproliferative lesions in the lower lobe of both lungs; a small amount of effusion on both sides of the thoracic cavity, osteoporosis of the vertebrae, ribs, and sternum with multiple bone resorption and destruction, consider plasmacytoma possible. Blood biochemical tests suggest elevated globulin (88.2 g/L).
+When the patient visited our hospital, there were no obvious positive findings on physical examination, except for pale lips, conjunctiva, and nail bed. Laboratory findings were as follows: white blood cell count, 3400 cells/μL; hemoglobin, 86 g/L; platelets,118,000 cells/μL; total protein, 113 g/L; albumin, 28 g/L; creatinine, 58 μmol/L; calcium, 2.24 mmol/L; β2-microglobin, 2.84 mg/L. Immunoglobulin G (IgG) was 66.79 g/L, but IgA and IgM were below normal levels, blood lambda light chain was 19.8 g/L, and the ratio of kappa/lambda was 0.01. Immunofixation electrophoresis showed an increase in monoclonal IgG and lambda in the blood. Bone marrow smear suggested elevated plasma cells (plasma cells 23%). Fluorescence in situ hybridization (FISH) results of CD138 monoclonal antibody sorting cells showed 8% positive for immunoglobulin heavy chain (IGH) rearrangement and 10% positive for 13q deletion. The diagnosis was multiple myeloma [subtype IgG/lambda Durie-Salmon stage IIIA, International Staging System (ISS) stage II]. This patient was a known carrier of HBV for more than 20 years. His elder brother had also been diagnosed with multiple myeloma (subtype IgG/kappa) in 2008 at the age of 56 years. Before initiation of treatment for multiple myeloma, the patient was seropositive for HBsAg (39 IU/mL), anti-HBe, and anti-HBc. Alanine aminotransferase (ALT) was 64 U/L (normal range <45 U/L) and aspartate aminotransferase (AST) was 69 U/L (normal range <50 U/L). Serum HBV-DNA was 161 IU/mL.
+The patient received a 3-week cycle of PCD (Bortezomib 2.3 mg and Cyclophosphamide 0.4 g on day 1,4,8,11+ Dexamethasone 20 mg on day 1–2, 4–5, 8–9, 11–12). Entecavir was administered as a prophylaxis against HBV reactivation, and HBV-DNA was monitored since the start of PCD therapy. The patient tolerated the chemotherapy regimen well, and there were no obvious adverse effects. After 1 cycle of therapy, the serum HBV-DNA was undetectable. HBsAg turned negative after 2 months and was also negative during the 2 years of follow-up. However, anti-HBe and anti-HBc were still positive. After 4 courses of PCD therapy, the patient's immunofixation electrophoresis turned negative, and the free light chain returned to normal, indicating a stringent complete response (sCR). Subsequently, his peripheral blood hematopoietic stem cells (HSCs) were collected and he was consistently treated with high-dose chemotherapy followed by autologous HSC transplantation as consolidation treatment, 10 months after the initial diagnosis of multiple myeloma. The patient continues to remain in sCR at 26 months of follow-up. During subsequent treatment and follow-up, HBsAg continued to be negative and HBV-DNA continued to fall below the detection limit.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+8.96

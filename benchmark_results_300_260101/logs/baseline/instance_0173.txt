@@ -1,0 +1,34 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 173
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T20:50:31.480573
+================================================================================
+
+GROUND TRUTH: 56.90952
+PREDICTED: 56.25
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 28-year-old woman was admitted to the hospital with progressive ocular symptoms as well as newly developed hemianesthesia and mental signs. Half a month before hospitalization, she complained of double eyelid droop and diplopia; the ocular weakness and fatigue was stable throughout the day and had nothing to do with physical activity. The local hospital suspected myasthenia gravis, a computed tomography scan of her brain revealed nothing, and her serum was collected to detect the acetylcholine antibody. While waiting for a hospital bed, she developed numbness in her right upper and lower extremities. At the same time, she presented with prolonged sleep duration and mental symptoms. She was then transferred to our institution. On admission, she was noted to have difficulty walking by herself due to truncal ataxia. There was no cold, fever, or diarrhea before her symptom onset.
+She had been suffering from chronic anemia, and her family reported that she had dietary deficiencies due to poor appetite although she denied it herself. She was on no other medications, not pregnant, and did not use alcohol or illicit drugs.
+On physical examination, the patient presented obviously unbalanced nutrition; she was 1.65 m in height yet only weighed 40 kg. She was conscious and oriented and scored 23 in the MMSE, mainly due to impaired memory and calculation performance. Eye signs were obvious; she had drooping eyelids (both 5 mm). The ophthalmoplegia was remarkable; she demonstrated bilateral abducens nerve palsies and adduction deficit of both eyes. Limitation and nystagmus on vertical gaze were also noted. There was slight dysmetria on both finger–nose and heel–shin testing. Limb dysdiadochokinesia was also observed. Bilateral pyramidal signs were positive. Sensory examination indicated hyperesthesia on the right side. Findings on muscle tone and strength tests were normal.
+She had an abnormal Hb level of 92 g/L, accompanied by low levels of serum folate and ferritin; vitamin B12 level was normal. Laboratory tests also revealed elevated levels of CA199 and CA242; both were gastrointestinal tumor markers although an abdominal enhanced CT scan reported no findings. The CSF revealed an increased white blood cell count of 28/mL (dominantly lymphocytes); other routine analyses of the cerebrospinal fluid (CSF) were normal, including protein level and IgG index (0.49). Also, no oligoclonal bands were found. Additional laboratory workup—including rheumatology analysis—was negative.
+Magnetic resonance imaging of the brain () showed symmetric T2 hyperintensities predominantly located within periaqueductal gray matter and periventricular regions of the fourth ventricles. A diffusion-weighted sequence also showed a hyperintense signal along the floor of the fourth ventricle. The presence of a lateral ventricle lesion was also noted. All brain lesions did not show contrast enhancement. Nerve conduction studies and visual evoked potentials were normal.
+In view of the possible diagnosis of WE, thiamine was started intramuscularly (300 mg 12-h). However, poor clinical recovery was observed. Her mental status worsened and exhibited hallucination, and the ocular palsy also progressed.
+Then came the crucial result that her serum and cerebral fluid tested positive for NMOSD-IgG (1:32 and 1:3.2, respectively). Thereafter, the spinal cord was evaluated, and MRI of the spine revealed a suspicious enhanced T2-weighted signal at the lower thoracic cord region ().
+We corrected the diagnosis, and the patient started with treatment of high-dose intravenous steroids, but still little improvement was detected. The patient then experienced bilateral visual loss, but MRI results of the optic nerve reported no findings. After that, intravenous immunoglobulin treatment was given, followed by intravenous cyclophosphamide therapy. On discharge, she showed moderate improvement in eye movement and ataxia although her vision remained unchanged.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+56.25

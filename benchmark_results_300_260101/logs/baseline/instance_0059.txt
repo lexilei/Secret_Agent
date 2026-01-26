@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 59
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-01T20:50:29.302840
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 4.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An obese 42-year-old African American male with diabetes mellitus, hypertension, heart failure with reduced ejection fraction, coronary arterial disease, and atrial fibrillation presented with new onset right-sided chest pain and a palpable right chest mass. Ultrasound showed an anterior right chest, well-demarcated 7.5 × 6.5 × 4.8 cm, intramuscular mass, 0.6 cm deep to the skin. CT demonstrated a 9x9x9cm necrotic mass arising from the pectoralis major. CT-guided core biopsy was positive for high-grade spindle cell neoplasm (positive for smooth muscle actin, desmin, S100, and CD31; negative for CD34, PAX8, and beta-catenin) and verified by two independent pathologists.
+Unfortunately, the patient was lost to follow up after referral to Oncology and Thoracic Surgery. He presented to oncology clinic with progressive symptoms including a rapidly enlarging chest mass, increasing pain, and new onset chest wall numbness. A repeat CT showed that the mass increased in size to 21.4 × 17.8 × 13.7 cm without evidence of metastatic disease over course of two months. MRI was consistent with 23 cm mass within the right pectoralis major without vascular or bony invasion. The patient chose to undergo neoadjuvant chemotherapy given his multiple comorbidities. He was hesitant to pursue resection and elected to attempt to shrink the tumor before resection.
+Patient underwent neoadjuvant chemotherapy with gemcitabine and docetaxel for 2 cycles followed by radiation therapy (50Gy over 2 months to tumor bed + 3 cm margins). Restaging CT showed a stable tumor at 23 cm without any evidence of local or distant metastases.
+The patient returned to Thoracic surgery clinic to discuss options for resection and reconstruction. He then underwent wide local surgical resection for definitive therapy. Tumor was removed en bloc with resection to the intercostal fascia including pectoralis major and minor (Fig. ). There did not appear to be any violation of the intercostal investing fascia and no entry into the thoracic cavity was made. Negative pressure dressing was used until post-operative day 7 when Plastic Surgery performed advancement flap coverage and skin grafting to the > 1,000cm2 defect (Fig. a, b).
+Final pathology demonstrated 38x20x18 cm tumor with 70% gross necrosis and R0 resection. Microscopic examination confirmed high-grade sarcoma with smooth muscle differentiation (Fig. ). Final pathologic staging based on AJCC 7th edition was Stage III G3 pT2bNxMx.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4

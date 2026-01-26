@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 71
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-04T03:14:11.758888
+================================================================================
+
+GROUND TRUTH: 126.0
+PREDICTED: 126.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 56-year-old man presents to the family medicine office since he has been having difficulty keeping his blood pressure under control for the past month. He has a significant medical history of hypertension, coronary artery disease, and diabetes mellitus. He has a prescription for losartan, atenolol, and metformin. The blood pressure is 178/100 mm Hg, the heart rate is 92/min, and the respiratory rate is 16/min. The physical examination is positive for a grade II holosystolic murmur at the left sternal border. He also has diminished sensation in his toes.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+126.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Body Mass Index (BMI)', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {}, 'missing': ['weight_kg', 'height_cm']}, {'stage': 'validate', 'is_valid': False, 'missing': ['weight_kg', 'height_cm'], 'cleaned': {}}, {'stage': 'repair_1', 'extracted': {}, 'is_valid': False, 'missing': ['weight_kg', 'height_cm']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

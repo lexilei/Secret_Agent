@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 179
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T21:26:53.609159
+================================================================================
+
+GROUND TRUTH: 56.90952
+PREDICTED: 57.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 50-year-old woman patient without medical history and any cardiovascular risk factors was hospitalized for exertional dyspnea and palpitations from three months and signifiant weight loss. She related worsening of symptoms in the last week before admission.
+On admission, she was in the poor condition, cachectic, weighing 45 kg for a height of 1, 65 m and a BMI 17 kg/ m2, blood pressure was 100/60 mm Hg, heart rate was regular 120/min, respiratory rate was 29 breaths/ min and she was afebrile. Oxygen saturation was 98%. Physical examination revealed bilateral lung crepitations. A full blood cell count showed a mild normocytic anemia (hemoglobin = 11.5 g/dl). A chest radiograph showed left atrial enlargement and data of left cardiac failure. The electrocardiogram showed sinusal tachycardia.
+Transthoracic echocardiography performed in emergency showed a giant left atrial mobile mass (72× 53 mm) attached to the interatrial septum and confined to the left atrium in systole (Figure ). In diastole (Figure ) the tumor was seen prolapsing across the mitral valve into the left ventricle and partially obstructing it and causing severe functional mitral stenosis with a mean gradient of 21,3 mmHg. A mild mitral regurgitation was also found. Severe pulmonary hypertension was confirmed by Doppler PAPs =137 mmHg. The patient was scheduled for cardiac surgery. During the operation, the tumor was excised through a sternotomy from a transseptal approach with a small portion of the atrial wall and the histopathological analysis found atrial myxoma. The clinical course was uncomplicated and the patient was discharged after three weeks with good outcome.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+57.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 57.0}
+

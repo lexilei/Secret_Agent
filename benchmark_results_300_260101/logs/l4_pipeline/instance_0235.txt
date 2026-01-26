@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 235
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-04T03:14:13.609877
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 38-year-old postpartum woman arrived to the ambulatory triage area late this afternoon because her left lower leg had become noticeably heavier and mildly painful over the preceding 24 hours. Six weeks ago she delivered her second child via uncomplicated scheduled cesarean section that required spinal anesthesia and an overnight stay; she was discharged on postoperative day 2 and has since resumed routine household activities without assistive devices. Yesterday morning, while standing at the kitchen counter for an extended period preparing bottles, she felt a dull pressure deep in the posterior aspect of the calf that worsened when she bore weight and eased modestly with elevation. By evening she observed that her sock left an imprint on that side but not on the right. She denies antecedent trauma, ankle sprain, insect bite, recent intense exercise, or local skin infection. She also denies fevers, chills, night sweats, unintentional weight loss, or constitutional complaints. There is no history of malignant disease, hematologic disorder, or prior venous clot, nor has she ever required anticoagulation. She reports no neurologic illness, limb weakness, or application of a plaster cast, and she has remained fully mobile caring for her newborn. She uses no estrogen-containing contraception and takes only prenatal vitamins and 600 mg ibuprofen as needed for incisional soreness. Both parents are alive and free of venous thromboembolic events; no siblings have clotting disorders. She has never smoked, drinks wine rarely, and denies illicit drug use. On presentation she appeared comfortable holding the infant carrier, spoke in complete sentences, and ambulated without assistance. Vital signs before any medications were temperature 37.0 °C, blood pressure 118/72 mm Hg, heart rate 88 beats per minute, respiratory rate 16 breaths per minute, and oxygen saturation 99 % on ambient air. Cardiovascular examination revealed a regular rhythm with no murmurs; lungs were clear to auscultation. Abdominal inspection showed a well-healed Pfannenstiel scar that was nontender with no palpable masses or organomegaly. Inspection of the lower extremities demonstrated subtle fullness confined to the left calf; there was no erythema, hyperpigmentation, varicosity, or brawny skin change. A flexible tape placed 10 cm below the tibial tuberosity measured 38.0 cm on the left and 36.4 cm on the right, a disparity of 1.6 cm. Circumference at mid-thigh and around the ankle was symmetric. Gentle thumb pressure over the anterior tibia and dorsum of the left foot produced a 1+ indentation that resolved within 15 seconds, whereas identical pressure on the right left no depression. Palpation along the course of the popliteal vein and posteromedial calf elicited focal discomfort described by the patient as “a deep bruise,” compared with no tenderness over the contralateral limb; squeezing the gastrocnemius muscle belly away from the neurovascular bundle produced only minimal diffuse soreness. There was no palpable subcutaneous cord and no crepitus. Passive dorsiflexion of the ankle did not reproduce pain at the Achilles insertion. Skin temperature was marginally warmer over the symptomatic calf compared with the right when assessed with the dorsum of the examiner’s hand. Distal pulses—dorsalis pedis and posterior tibial—were 2+ bilaterally, and capillary refill of all toes was under two seconds. Motor strength in ankle dorsiflexion, plantarflexion, and great-toe extension was 5/5, and sensation to light touch and vibration was intact. Straight-leg raise and seated slump test were negative for radicular symptoms, making a spinal etiology improbable. There was no ipsilateral knee effusion, meniscal tenderness, or ligamentous laxity, and range of motion at the hip, knee, and ankle was full. No inguinal lymphadenopathy was appreciated. Basic laboratory studies obtained prior to any antithrombotic therapy showed hemoglobin 12.9 g/dL, platelet count 248 × 10⁹/L, white blood cells 7.1 × 10⁹/L, serum creatinine 0.8 mg/dL, and an INR of 1.0 with activated partial thromboplastin time 29 seconds. These values reveal no anemia, thrombocytopenia, or renal impairment that might confound subsequent management. Given the recent abdominal-pelvic surgical intervention within the past two months, the presence of unilateral pitting edema confined to the calf, focal tenderness along the deep venous pathway, and the absence of a compelling musculoskeletal, dermatologic, or neurologic explanation, an acute thrombotic obstruction of the deep venous system remains the leading consideration at this stage of evaluation.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'confidence': 0.0}, {'stage': 'extract', 'extracted': {'age': 38, 'sex': 'female', 'creatinine_mg_dl': 0.8}, 'missing': ['weight_kg']}, {'stage': 'validate', 'is_valid': False, 'missing': ['weight_kg'], 'cleaned': {'age': 38, 'sex': 'female', 'creatinine_mg_dl': 0.8}}, {'stage': 'repair_1', 'extracted': {'age': 38, 'sex': 'female', 'creatinine_mg_dl': 0.8}, 'is_valid': False, 'missing': ['weight_kg']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

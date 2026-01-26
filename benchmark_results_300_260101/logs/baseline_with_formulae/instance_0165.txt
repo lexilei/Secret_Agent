@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 165
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-02T03:23:08.836031
+================================================================================
+
+GROUND TRUTH: 60.50401
+PREDICTED: 54.1
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 52-year-old male, weighing 54 kg, height 164 cm, with a 22-year-old history of ankylosing spondylitis was admitted in the Urology Department, for percutaneous nephrolithotomy.
+During preanesthetic assessment his history revealed that the he required three pillows to support his head due to the disease process and involvement of the cervical spines []. A physical examination suggested that there was severe cervical spondylitis involving thoracolumbar vertebral column, without lower limb neurological involvement. No cardiovascular system abnormality was detected.
+The airway examination showed adequate mouth opening with artificial dentures, Mallampati grade III restricted neck mobility. A preoperative assessment for difficult intubation was made.
+Radiographs of the vertebral column revealed ankylosis of the cervical, thoracic, and lumbar spinous processes showing posterior joint involvement, resorption of the anterior surfaces of the vertebral bodies and calcification and ossification of the posterior ligaments and surrounding soft tissues.
+Following the traditional anesthetic approach to ankylosing patients, we decided to opt for securing the airway using awake endotracheal intubation; however, the patient did not give his consent for this. A difficult intubation cart, which had a selection of oropharyngeal, nasopharyngeal airway, gum elastic bougie, fiberoptic bronchoscope, cricothyroidotomy, and other aids, was kept ready.
+On the day of the surgery, the patient was premedicated with oral ranitidine 150 mg and diazepam 5 mg, two hours before surgery, with a sip of water, and injection glycopyrrolate 0.2 mg intramuscularly one hour before surgery. Preparation for fiberoptic intubation was done. Nasal patency was checked and the nasal cavity prepared with oxymetazoline nasal drops. In the operation room the patient was made to lie supine with the head adequately supported on three pillows and routine monitors, such as, the electrocardiogram, non-invasive blood pressure, and pulse oximeter and capnograph were placed. The IV line, with a 18 Gauge canula, was started. Anesthesia was induced with IV injection propofol 2 mg/kg, slowly, in titrated doses, with fentanyl 2 μg/kg. The anesthetist had to use a higher footstep than normal to get the desired level. We opted for fiberoptic bronchoscopy, but as the heart rate increased to 144/min and the blood pressure increased to 180/118 mmHg, we administered a further bolus dose of 50 mg of propofol to increase the depth of anesthesia. The patient's heart rate, and blood pressure stabilized, but the patient started desaturating with apneic spells, so we decided to abandon the procedure. The patient was allowed to wake up. Regional anesthesia was taken as the next option. Even after three attempts by expert hands no cerebrospinal fluid (CSF) was obtained through the spinal needle.
+Taylor's approach was attempted. Clear CSF was obtained through the spinal needle and 3 ml of 0.5% bupivacaine and 25μg/kg fentanyl was injected intrathecally. Due to the spinal deformity, we were not able to achieve the appropriate position for intrathecal block. Therefore, we carried out some maneuvres; we placed a pillow beneath the left shoulder to make the spine of the scapula perpendicular to the table, and the operating table (OT) was tilted 20° to the right, to straighten the spine and to make it parallel to the floor.
+The block was adequate with sensory block up to T4 and adequate motor blockade upto T6. The vital signs remained stable. Fluid calculations and management of blood pressure were very important in this patient with severe lung disease. Prone position had to be given carefully, with bolsters confirming to the contours of the patient, to avoid fractures.
+There were no intraoperative problems throughout the procedure, which was completed within three hours. Hemostasis was adequate. Supplementary oxygen was administered continuously during the surgical procedure. There were no postoperative sequelae to the spinal technique.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+54.1

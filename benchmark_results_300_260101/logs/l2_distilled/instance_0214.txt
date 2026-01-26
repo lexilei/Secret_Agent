@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 214
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T21:37:23.365972
+================================================================================
+
+GROUND TRUTH: 8.0
+PREDICTED: 8.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 42-year-old male patient presented with complaints of distension of abdomen, decreased urine output and edema of feet. He had a history of melena, paracentesis and upper GI endoscopy with banding of grade 3 varices. He had also history of type 2 diabetes mellitus. He was not alcoholic and his autoimmune antibody profile was negative. Twenty-four-hour urinary copper and serum ceruloplasmin were normal. Kayser Fleischer’s ring was not found on slit lamp examination. His lab findings on presentation included a total billirubin of 1.6 mg/dL (direct 1.0 mg/dL, indirect 0.6 mg/dL), alanine aminotransferase of 55 U/L, aspartate aminotransferase of 35 U/L, alkaline phosphatase of 120 U/L, international normalized ratio (INR) of 1.49, serum albumin of 2.8 g/dL, and a serum creatinine of 1.62 mg/dL. Once diagnosed having decompensated cryptogenic cirrhosis of liver, he was placed on liver transplant waiting list. He was on diuretic on presentation. He was initially managed with plasma expander and omission of diuretics. Creatinine rose above 2 mg/dL. His urinalysis showed no evidence of microscopic proteinuria or microalbuminuria. All other possible causes of renal failure were ruled out. He was thus diagnosed with HRS type 1. The patient did not respond to combination therapy with albumin and terlipressin and his serum creatinine increased to 5 mg/dL. He was placed on hemodialysis. The patient was kept on hemodialysis for 10 weeks when he received a liver from a cadaver donor. Donor was a 50-year-old brain-dead woman who died of MVA. At that time, considering patient’s renal dysfunction, CLKT was carried out. The patient was maintained on continuous renal replacement therapy during perioperative period. The inferior epigastric artery was preserved to avoid wound-related complications. Postoperatively, the patient did not require any kinds of renal support. After two years of follow-up, the patient was maintained well on tacrolimus, mycophenolate mofetil and steroid.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+8.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 8.0}
+

@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 243
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-04T03:14:13.696166
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 0.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 56-year-old man was transferred to nephrology department due to recurrent episodes of fever (38°C～39.2°C), cough, sputum, and thoracalgia for the past three months. The patient had been admitted previously to a local hospital where computer tomography (CT) revealed pleural effusion in both lungs. Laboratory tests showed serum creatinine (sCr) 221.9 μmol/L; proteinuria (3+); and 24 hour proteinuria 5.3g. The patient was diagnosed with chronic renal insufficiency, and pulmonary infection. He was treated with antibiotics for pulmonary infection, but infection-related symptoms gradually worsened and serum creatinine levels reached 434μmol/L within one week. Subsequently, the patient was transferred to our unit for further treatment.
+On admission, physical examination showed T 38°C; R, 18 bpm; HR, 99 bpm; and BP 124/60 mmHg. Laboratory tests found hemoglobin (Hb) 81 g/L; WBC 18.27x109/L, ESR 49.0 mm/H, and sCr 611.0 μmol/L; Urea 22.90 mmol/L; antinuclear antibody (ANA) (−); extractable nucler antigen (ENA) (−); C-reactive protein (CRP) 231mg/L; IgG 10.1g/L; IgA 1650.0 mg/L; IgM 345.0 mg/L; IgE 227.95 IU/mL; RBC 30~40/HPF in the 
+; and 24 hour proteinuria 2.9 g/L. Ultrasound examination of the urologic system showed enlarged kidneys. Additional laboratory tests found P-ANCA (1:10) (+); ANCA-MPO (+); anti-GBM antibody (−). The patient was diagnosed with ANCA-associated vasculitis, AAV associated glomerulonephritis and put on CVVH and antibiotic therapy. After one week, the patient’s infection-related symptoms gradually improved, and the patient was put on intravenous methylprednisolone therapy (80 mg/d).
+Four days later, however, the patient developed melana mixed with bloody stool. Laboratory tests revealed Hb 87g/L, Cr 586.9 umol/L, PLT 355×109/L, Fib 2.48 g/L, PT 17.8s, Antithrombin III 92.2%. The gastroscopy and colonoscopy were normal. And capsule endoscopy revealed no obvious abnormalities, including bleeding of mucous membrane. Conventional therapy of GI bleeding (PPI and somatostatin) was ineffective. Finally selective mesenteric arterial angiography was performed, which indicated a hemorrhagic spot in a branch of the inferior mesenteric artery (). Selective transarterial embolization was performed with steel coils (Cook, Bloomington, USA.) (). After the procedure, GI bleeding was completely alleviated. However, two weeks later, the patient presented with hematochezia again and selective transarterial angiography was performed repeatedly, which revealed another hemorrhagic spot in a branch of IMA, and subsequently arterial embolization with coils was performed again (, ).
+After TAE, the symptoms improved and three days later, the repeated fecal-occult-blood tests were negative, but the vasculitis was not completely controlled for the other symptoms were still existed. The patient was treated with a course of intravenous methylprednisolone pulse therapy (500 mg/d) followed by a course of intravenous cyclophosphamide (CTX) pulse therapy (600mg). Moreover, the patient underwent repeated plasma exchange (8 sections), blood products transfusion, cryoprecipitate therapy, and intravenous gamma globulin infusion (20 g/d for 5 days).
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.7}, {'stage': 'extract', 'extracted': {'age': 56, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 56, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

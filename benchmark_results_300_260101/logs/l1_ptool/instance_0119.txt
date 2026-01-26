@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 119
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T21:26:52.409044
+================================================================================
+
+GROUND TRUTH: 9.46
+PREDICTED: 9.46
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 9-year-old girl presented with a history of gradually worsening abdominal distension, decreased urine output, and abdominal pain for 2 weeks. Two weeks prior to admission, she complained of nausea, vomiting, and abdominal pain without diarrhea several hours after eating bread. She had no signs of infection such as fever, rash, or sore throat. On admission, she was afebrile and had normal vital signs. Her weight was 32.2 kg (50th to 75th percentile), and height was 140 cm (75th to 90th percentile). She had a history of allergic rhinitis. A physical examination revealed periorbital swelling, pitting edema on both legs, and abdominal distension with mild diffuse tenderness and shifting dullness. Laboratory tests on admission showed hemoglobin level, 15.4 g/dL; hematocrit, 43%; peripheral leukocyte, 13.390/µL with an eosinophil count of 840/µL (6.3%); serum total protein, 2.3 g/dL; albumin, 1.3 g/dL; calcium, 7.3 mg/dL; erythrocyte sedimentation rate, 2 mm/hr; and C-reactive protein, 0.56 mg/dL. A urinalysis was normal without proteinuria. The multiple allergen simultaneous test showed positive responses to mites (class 2) and Acarus siro (class 3), with elevation of the total immunoglobulin (Ig) E value (>200 IU/mL). Anti-CMV IgM was negative. Chest and abdominal radiographs displayed pleural effusion on both sides. Abdominal ultrasonography revealed pleural effusion and massive ascites. Computed tomography (CT) of the abdomen confirmed marked thickening of the small intestinal wall. A pleural fluid analysis revealed lymphocytes, 25%; polymorphonuclear neutrophils, 7%; eosinophils, 0%; protein, 152 mg/dL; glucose, 116 mg/dL; and adenosine deaminase, 2 IU/L. An abdominal paracentesis was not performed. Alpha 1 anti-trypsin excretion in the stool was elevated to 1,204 mg/dL (normal, ≤54 mg/dL). A gastroscopic examination revealed large swollen gastric folds, erythema, erosion, and exudation in the body and fundus, although the antrum was normal (). A Campylobacter-like organism test was negative. Histological findings of the gastric mucosa showed moderate infiltration of eosinophils (20 to 38 per high power field) and neutrophils in the lamina propria, mucosal edema, and dilatation of the capillaries and lymphatics (). A cell with intranuclear and intracytoplasmic inclusions, characteristic of CMV infection, was not seen. Immunohistochemistry for CMV revealed negative finding. Microscopic findings of the duodenal mucosa revealed mild infiltration of lymphocytes and histiocytes with few eosinophils. The patient's symptoms of abdominal distension, pitting edema, and decreased urine output began to improve from the day 7 of hospitalization with conservative treatments such as fluid restriction, diuretics, albumin infusion, and avoidance of milk and bread. Peripheral eosinophils rose to 25.4% (1,520/uL) on the day 11 after admission. Total protein and albumin levels rose to 4.3 g/dL and 3 g/dL, respectively, and her weight reduced from 32.3 to 27.3 kg on the day of discharge, 17 days after admission.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+9.46
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 9.46}
+

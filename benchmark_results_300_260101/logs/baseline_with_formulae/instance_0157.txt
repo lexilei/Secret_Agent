@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 157
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-02T03:23:08.619328
+================================================================================
+
+GROUND TRUTH: 5.31087
+PREDICTED: 7.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 63-year-old female who was visitor from Veracruz, Mexico, presented to the emergency room with complaints of progressively worsening abdominal pain and distention for three days. She also had fever and altered mentation. Her past medical history was significant for hypertension, diabetes mellitus, hyperlipidemia, and end-stage renal disease. She had been on PD for four years and denied any recent changes in technique. She had two episodes of peritonitis in the past while in Mexico but was unaware of the details of those episodes. Her surgical history was significant for appendectomy, cholecystectomy, and tubal ligation and she denied any recent abdominal procedure. She denied smoking, alcohol intake, or use of recreational drugs.
+On examination, her blood pressure was 172/85 mm of Hg, pulse 88/min, oral temperature 39.5°C (103.1°F), respiratory rate 14/min, and oxygen saturation on room air 94%. She was lethargic and confused. She had abdominal distention and diffuse tenderness without any rebound or guarding. Her PD catheter exit site was clean and dry. Laboratory studies showed white blood cell count of 14.5 × 103/μL with 87.1% granulocytes, hemoglobin of 6.3 g/dL, and hematocrit of 18.4%. Serum chemistries showed sodium of 130 mmol/L, potassium of 2.7 mmol/L, chloride of 90 mmol/L, bicarbonate of 27 mmol/L, blood urine nitrogen of 30 mg/dL, and creatinine of 7.7 mg/dL. Her liver function tests were within normal limits. Computed tomography of abdomen and pelvis without intravenous or oral contrast showed peritoneal thickening consistent with peritonitis, and there was no evidence of perforation or obstruction (). PD fluid analysis showed white cell count of 2173 per mm3 with 96% neutrophils and red blood cells of <3000 per mm3.
+Blood and PD fluid cultures were sent, and she was empirically treated for bacterial peritonitis with intraperitoneal cefazolin and ceftazidime. PD fluid gram stain revealed budding yeast; blood and PD fluid cultures did not reveal bacterial growth. Given the high suspicion of fungal peritonitis, immediate removal of the PD catheter was discussed with the patient. She chose not to have the catheter removed, leave to Mexico, and get treated by her own nephrologist. Hence oral fluconazole was started for presumed Candida peritonitis. However, six days later, the fungal culture [Mycosel Agar and Brain Heart Infusion Agar] of the PD fluid grew H. Capsulatum.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+7

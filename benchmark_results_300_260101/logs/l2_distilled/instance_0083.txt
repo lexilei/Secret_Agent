@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 83
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:37:20.782041
+================================================================================
+
+GROUND TRUTH: 28.02768
+PREDICTED: 28.028
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+When waking in the early morning (3:30 am), a 33-year-old male presented with persistent right limb weakness and verbal confusion. There was no record of special past history or family history. He smoked 2–5 cigarettes per day and had been drinking for 10 years. His height was 170 cm and weight 81 kg, while his blood pressure was 155/110 mmHg. The subject was alert and conscious and his speech was dysarthric with right central facial weakness. Found with extensor plantar response on right lower extremity was mild weakness of the right upper limb extensors and right lower limb flexors. Abnormal long signal of the left pontine was showed in brain MRI by FLAIR sequences (Fig. A). Conducting Computed Tomography Angiography (CTA) of neck and intracranial arteries revealed limited narrow on the right anterior cerebral artery A2 segment and the left anterior cerebral artery segment A3 and limited moderate stenosis on the initial segment of the right vertebral artery (Fig. B). Echocardiography on dynamic ECG, color Doppler ultrasound of the neck and echocardiography were found to be normal. Measurements of hemoglobin 170 g/L, hematocrit 46.1%, ALT 48 U/L, GOT 278 U/L, blood glucose 7.6 mmol/L, homocysteine 17.2 umol/L, triglyceride 10.5 mmol/L, LDL 3.38 mmol/L. Results of the examination of anti-neutrophil cytoplasmic antibodies, anticardiolipin antibodies, antinuclear antibodies, ENA spectrum and antithrombin III were all normal (Table ). Two emboli were detected during 9th cardiac cycle when the patient breathed quietly by c-TCD test. During the 8th cardiac cycle (rain curtain) after Valsalva action, a large number of embolus signals were revealed (Fig. C). After Valsalva action, embolism rain disappeared (Table ). TEE examination is not tolerated by patients. Sleep stage test reviewed normal sleep latency after whole night PSG examination. The lowest and average oxygen saturation was 72% and 93%, respectively. Snoring time accounted for 38.0% of sleep time. In summary, the diagnosis for the patient was “obstructive sleep apnea syndrome” (Table ).
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Body Mass Index (BMI)', 'extracted_values': {'weight_kg': 81.0, 'height_cm': 170.0}, 'result': 28.028, 'method': 'python', 'formula': 'BMI = weight / height^2'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Body Mass Index (BMI)', 'extracted_values': {'weight_kg': 81.0, 'height_cm': 170.0}, 'result': 28.028, 'method': 'python', 'formula': 'BMI = weight / height^2'}}
+

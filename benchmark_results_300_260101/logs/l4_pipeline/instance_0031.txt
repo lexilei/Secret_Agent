@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 31
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-04T03:14:11.343662
+================================================================================
+
+GROUND TRUTH: 28.13233
+PREDICTED: 28.132
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 28-year-old male patient presented with the complaints of generalized weakness and exertional dyspnea of 1 month duration. He did not give a history of frothing of urine, pedal edema, hematuria or breathlessness in the past. Clinically he appeared pale and dehydrated, blood pressure was 120/80 mmHg and systemic examination was unremarkable. Investigations revealed that he had normocytic normochromic anemia (hemoglobin: 7.5 g/dl), thrombocytopenia (80,000/cumm) with normal leukocyte count (7400/cumm), moderate renal failure (serum creatinine: 3 mg/dl), normal liver function tests (serum albumin: 4.92 g/dl and serum globulin: 2.4 g/dl), and normal serum electrolytes, serum calcium: 10 mg/dl, serum phosphorous: 4.7 mg/dl and elevated serum uric acid (9.5 mg/dl). Urine examination showed proteinuria 1+ on dipstick, 24 h urine protein was 8504 mg. With a high index of suspicion for a tubular proteinuria, along with a hypo proliferative marrow (reticulocyte productive index: 0.7%), the possibility of plasma cell dyscrasia was considered. Serum protein electrophoresis and urine Bence Jones protein were negative. Serum immunofixation using capillary method showed immunoglobulin G, kappa monoclonal immunoglobulin. Urine electrophoresis showed M band and serum free light chain (SFLC) assay showed a significantly elevated kappa level (4383 mg/l; normal range: 3.3-19.4) with a suppressed lambda level (4.5 mg/l; normal range: 5.7-26.3), kappa/lamba ratio was 974 (normal range in renal failure: 0.37-3.1). Skeletal survey did not show any evidence of lytic lesions. BM biopsy done showed 79% of plasma cells with plasmablastic morphology [], which were CD138 positive with kappa restriction. These atypical cells showed Ki 67% of 20-25% with very few cells positive for terminal deoxynucleotidyl transferase and CD79a was negative, which suggested plasmablastic myeloma phenotype. Fluorescence in-situ hybridization on BM was negative for del13q14.3, t (11;14), t (4;14), t (14;16). Renal function deteriorated rapidly; he underwent a renal biopsy, which showed pale eosinophilic, Schiff poor fractured casts in the renal tubules [], which were kappa restricted.
+He was started on chemotherapy, with each 21 days cycle consisting of parenteral bortezomib (1.3 mg/m2/dose on days 1, 4, 8 and 11) and oral dexamethasone (40 mg/day on days 1-4, 9-12). After the first cycle of bortezomib and dexamethasone, his renal functions started to improve. He was started on lenalidomide 25 mg/day at cycle 2 (when renal function started to improve) along with bortezomib and dexamethasone. With this intensive chemotherapy, his renal functions improved further (serum creatinine 1.77 mg/dl at 6 weeks).
+Patient was reevaluated after four cycles of chemotherapy with BM examination and free light chain assay. BM showed less than 1% of plasma cells and serum free kappa light chain was 67.69 mg/l. Serum creatinine improved to 1.4 mg/dl at 6 months and he was planned for autologous peripheral blood stem cell transplantation (APBSCT). However, due to technical delay, he was given additional two cycles of CyBorD chemotherapy (weekly cyclophosphamide, bortezomib and dexamethasone). Patient then underwent APBSCT with Melphalan conditioning 140 mg/m2. Post-transplant patient achieved neutrophil and platelet engraftment on day +9 and did not encounter any infections. Day +100 evaluation showed serum creatinine to be 1.3 mg/dl and he was in stringent complete remission (negative serum and urine immunofixation and normal SFLC ratio).
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+28.132
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CKD-EPI Equations for Glomerular Filtration Rate', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'age': 28, 'sex': 'male', 'creatinine_mg_dl': 3.0}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 28, 'sex': 'male', 'creatinine_mg_dl': 3.0}}, {'stage': 'compute', 'success': True, 'result': 28.132, 'formula': '142 * min(Cr/κ,1)^α * max(Cr/κ,1)^-1.200 * 0.9938^age * sex_coef'}], 'method': 'l4_pipeline'}
+

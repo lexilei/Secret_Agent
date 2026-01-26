@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 12
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T21:37:19.194381
+================================================================================
+
+GROUND TRUTH: 64.81061
+PREDICTED: 64.811
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 53-year-old man was referred to our hospital for evaluation and management of hypertension and hypokalemia. He was diagnosed with hypertension at the age of 40 years, and his blood pressure was poorly controlled with a calcium channel blocker (nifedipine at 40 mg/d). He also had a past medical history of vasospastic angina and was a nonsmoker and social drinker. In addition, he had no family history of cardiovascular diseases. On admission, the patient was 168 cm tall and weighed 59 kg. He was afebrile, with a blood pressure of 161/96 mm Hg and a regular pulse of 61 beats per minute. There was no evidence of lung rales, cardiac murmurs, or an abdominal bruit. His neurological examination was unremarkable. Laboratory tests revealed that his serum creatinine level was 1.1 mg/dL, urea nitrogen level was 19 mg/dL, and serum sodium level was 140 mEq/L. He also exhibited hypokalemia with a serum potassium concentration of 2.9 mEq/L; however, he had no subjective symptoms, including muscle weakness. Plasma renin activity (PRA), plasma aldosterone concentration (PAC), and aldosterone-to-renin ratio (ARR) were <0.1 ng/mL/h, 292 pg/mL, and >2920, respectively. Other adrenal hormone levels were within normal limits. A chest radiograph and transthoracic echocardiogram showed no significant findings. An electrocardiogram suggested nonspecific ST-T wave changes with premature atrial contractions.
+Primary hyperaldosteronism was suspected, and therefore, a captopril challenge test and a saline infusion test were performed. All these investigations revealed positive test results (Table ), which confirmed a diagnosis of PA. A low-dose dexamethasone suppression test to exclude the diagnosis of subclinical Cushing's syndrome was negative. An abdominal computed tomography (CT) scan was performed, which showed a left adrenal mass (13 mm) (Figure ). In adrenocorticotropic hormone (ACTH)-stimulated AVS, although aldosterone hypersecretion was observed in the left adrenal gland, the lateralization of the disease was not determined due to incomplete cannulation of the right adrenal vein (Table ). The criteria of successful cannulation were based on the current Expert Consensus Statement.
+131I-adosterol scintigraphy under dexamethasone suppression showed an equivalently increased uptake in both adrenal glands (Figure ). Because we could not exclude the bilateral PA, including aldosterone-producing adenoma (APA) with microadenoma in the right adrenal gland, we performed the medical therapy with mineralocorticoid receptor antagonists (MRA). Although we administrated multiple antihypertensive agents including an MRA (eplerenone at 100 mg/d), an angiotensin II receptor blocker (azilsartan at 40 mg/d), a dual action beta blocker/alpha-1 blocker (carvedilol at 20 mg/d), a calcium channel blocker with an increased dose (nifedipine at 80 mg/d), an alpha-1 blocker (doxazosin at 2 mg/d), and an alpha-2 agonist (guanabenz at 4 mg/d), a home reading of the patient's blood pressure was above 140/90 mm Hg. Moreover, he needed a large quantity of potassium chloride to compensate for his hypokalemia.
+Despite intensive medical therapy, he underwent percutaneous coronary intervention due to stable angina. Following this, we performed AVS again, but the right adrenal vein was not successfully cannulated (Table ). We discussed further the indication for surgery and decided to remove the left adrenal gland. After laparoscopic left adrenalectomy, his blood pressure and serum potassium remained normal after the withdrawal of eplerenone, doxazosin, guanabenz, and potassium chloride and a dose reduction of azilsartan (at 20 mg/d), carvedilol (at 10 mg/d), and nifedipine (at 10 mg/d). The PRA and PAC were 0.8 ng/mL/h and 57.1 pg/mL, 3 months after the adrenalectomy, respectively. Macroscopic findings of the resected specimen showed a yellowish colored nodule (13 mm in diameter) in the adrenal gland. We confirmed a diagnosis of an adrenocortical adenoma based on a histopathologic examination (Figure ); we also confirmed that the tumor cells were rich in the cytoplasm and were eosinophilic without malignant cells.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 53.0, 'actual_weight': 59.0, 'weight_used': 59.0, 'weight_type': 'min(IBW, actual)', 'bmi': 20.9, 'ibw': 64.13, 'creatinine': 1.1, 'sex': 'male', 'gender_coef': 1.0}, 'result': 64.811, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 53.0, 'actual_weight': 59.0, 'weight_used': 59.0, 'weight_type': 'min(IBW, actual)', 'bmi': 20.9, 'ibw': 64.13, 'creatinine': 1.1, 'sex': 'male', 'gender_coef': 1.0}, 'result': 64.811, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}}
+

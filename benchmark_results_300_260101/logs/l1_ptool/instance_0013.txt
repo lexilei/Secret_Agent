@@ -1,0 +1,42 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 13
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T21:26:50.235131
+================================================================================
+
+GROUND TRUTH: 86.89835
+PREDICTED: 86.78
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 48-year-old woman comes to the physician for the evaluation of 24-hour blood pressure monitoring results. Over the last 3 months, she has had intermittent nausea, decreased appetite, and increasing weakness and fatigue during the day. She has been treated twice for kidney stones within the past year. Her current medications include lisinopril, amlodipine, and furosemide. She is 178 cm (5 ft 10 in) tall and weighs 97 kg (214 lb); BMI is 31 kg/m2. Her blood pressure is 152/98 mm Hg. Physical examination shows no abnormalities. Serum studies show:
+Na+ 141 mEq/L
+Cl− 101 mEq/L
+K+ 4.5 mEq/L
+HCO3− 24 mEq/L
+Calcium 12.9 mg/dL
+Creatinine 1.0 mg/dL
+Twenty-four-hour blood pressure monitoring indicates elevated nocturnal blood pressure.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+86.78
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 86.78}
+

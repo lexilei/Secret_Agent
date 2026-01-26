@@ -1,0 +1,48 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 17
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-02T03:22:58.635240
+================================================================================
+
+GROUND TRUTH: 73.14863
+PREDICTED: 73.1
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old man comes to the physician for a follow-up examination. For the past 6 months, he has had fatigue, headaches, and several episodes of dizziness. Three months ago, he was diagnosed with hypertension and started on medications. Since the diagnosis was made, his medications have been adjusted several times because of persistently high blood pressure readings. He also has hypercholesterolemia and peripheral arterial disease. He smoked one pack of cigarettes daily for 34 years but quit two months ago. His current medications include aspirin, atorvastatin, losartan, felodipine, and hydrochlorothiazide. He is 188 cm (6 ft 2 in) tall and weighs 109 kg (240 lb); BMI is 31 kg/m2. His pulse is 82/min and blood pressure is 158/98 mm Hg. Physical examination shows bilateral carotid bruits and normal heart sounds. Serum potassium concentration is 3.2 mEq/L, plasma renin activity is 4.5 ng/mL/h (N = 0.3–4.2 ng/mL/h), and serum creatinine concentration is 1.5 mg/dL.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's Creatinine Clearance (CrCl) using the Cockroft-Gault Equation, we'll follow these steps:
+
+### 1. **Determine Adjusted Body Weight (ABW)**  
+The patient's BMI is **31 kg/m²** (obese), so we use the **Adjusted Body Weight (ABW)** formula:  
+- **Ideal Body Weight (IBW)** = 50 + 2.3 × (height in inches - 60)  
+  - Height = 188 cm ≈ 74 inches  
+  - IBW = 50 + 2.3 × (74 - 60) = **82.2 kg**  
+- **Adjusted Body Weight (ABW)** = IBW + 0.4 × (actual weight - IBW)  
+  - ABW = 82.2 + 0.4 × (109 - 82.2) = **92.92 kg**  
+
+### 2. **Apply Cockroft-Gault Equation**  
+CrCl = [(140 - age) × ABW × gender_coef] / (Scr × 72)  
+- Age = **55**  
+- ABW = **92.92 kg**  
+- Gender coefficient (male) = **1**  
+- Scr = **1.5 mg/dL**  
+
+CrCl = [(140 - 55) × 92.92 × 1] / (1.5 × 72)  
+CrCl = (85 × 92.92) / 108 ≈ **73.1 mL/min**  
+
+### **Final Answer:**  
+73.1

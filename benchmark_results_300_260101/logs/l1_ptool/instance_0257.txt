@@ -1,0 +1,43 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 257
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-01T21:26:55.061167
+================================================================================
+
+GROUND TRUTH: 2.0
+PREDICTED: 2.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 22-year-old Caucasian male with Type 1 diabetes mellitus (T1DM), presented with acute kidney injury (AKI), serum creatinine (SCr) 387 μmol/L and nephrotic syndrome (timed urinary protein excretion 14 g/day, serum albumin 23 g/L (35–50 g/L), underwent a diagnostic kidney biopsy. Clinical assessment 1 year prior indicated minimal proteinuria (albumin-to-creatinine ratio 1.5 mg/mmol) and normal kidney function (eGFR [] >90 mL/min/1.73 m2) at that time. Antineutrophil cytoplasmic, extractable nuclear antigen (ENA) and anti-GBM antibodies were undetected. Urine studies showed protein-to-creatinine ratio 1.133 g/mmol, dysmorphic erythrocytes (>1000 × 106/L) and lipiduria.
+T1DM was diagnosed at age 2 and insulin therapy delivered via insulin pump. Glycosylated haemoglobin (HbA1c) at presentation was 7.2%. The patient weighed 100 kg and had smoked 10 cigarettes per day for the past 7 years. There was no history of retinopathy or hypertension, illicit or non-steroidal anti-inflammatory drug use or alcohol dependence. He had been commenced on frusemide and irbesartan/hydrochlorothiazide 3 weeks earlier to treat oedema.
+The kidney biopsy demonstrated a focal segmental necrotizing GN with cellular and fibrocellular crescents involving 29 of 40 glomeruli; another 6 glomeruli were sclerosed. Glomeruli had moderate nodular mesangial expansion and hypercellularity with several showing Kimmelstiel–Wilson nodules. Numerous tubular red blood cell casts were present. There was moderate interstitial fibrosis and tubular atrophy with a patchy interstitial mixed chronic inflammatory cell infiltrate (see A and B and A and B). Immunofluorescence showed strong linear GBM staining for IgG. Weaker anti-albumin staining localized in a linear fashion to the GBM, Bowman's capsule (BC) and tubular basement membrane (TBM) staining (A and B). Under oil immersion (×1000 magnification), a dual pattern of linear and granular glomerular peripheral capillary wall staining was seen. This was confirmed by confocal microscopy (A–C). Electron microscopy showed Stage 1 MN with small subepithelial electron-dense ‘immune-type’ deposits with early GBM spike formation (A and B). The overall diagnosis was that of anti-GBM GN and Stage 1 MN superimposed on Class III DN with Kimmelstiel–Wilson lesions.
+The simultaneous diagnosis of seronegative anti-GBM GN, MN and DN was consistent with clinical presentation of proteinuria, haematuria and AKI, although unexpected, as anti-GBM antibody serology was negative (Orgentec, Mainz, Germany). A more sensitive biosensor assay was unavailable. The patient's human leucocyte antigens (HLA) were: A1, 24; B8, 39; DR4, 16. Screening for serum anti-secretory phospholipase A2 receptor (PLA2R) antibodies was not detected using an indirect immunofluorescence test (Euroimmun AG, Lubeck, Germany) []. In addition, PLA2R was not detected by immunofluorescence in the paraffin-embedded kidney biopsy using anti-rabbit PLA2R antibody (Atlas Antibodies).
+Treatment included corticosteroids (3× intravenous methylprednisolone 1 g/day then 75 mg/day oral prednisolone), oral cyclophosphamide (2 mg/kg/day) after fertility protection measures and 10 alternate-daily plasmapheresis treatments (3 L volume exchanges, replacement albumin 4%). He was discharged with mildly improved stable kidney function, with SCr 253 μmol/L.
+One week later, he developed small-volume haemoptysis that settled with oral antibiotics, cessation of smoking and cyclophosphamide reduction (1.5 mg/kg/day). Significant oedema persisted despite maximal oral diuretic therapy. Five weeks later, he developed neutropaenia necessitating withdrawal of cyclophosphamide. Prednisolone 60 mg/day was continued in light of further deterioration in kidney function, with SCr 383 μmol/L and worsening proteinuria at 19 g/day.
+Another nine alternate-daily plasmapheresis treatments were initiated once neutropaenia resolved, attempting to salvage kidney function. The renal function remained severely impaired and proteinuria worsened to 21 g/day. His clinical course was complicated by H. Zoster reactivation (T7 dermatome) that resolved with valaciclovir treatment. Anti-GBM serology remained undetectable throughout.
+Progressive renal disease and inability to monitor disease activity serologically led to a repeat kidney biopsy, which showed segmental sclerotic lesions and fibrous crescents in 13 of 22 glomeruli and another 3 glomeruli sclerosed. No segmental necrotizing lesions or cellular crescents were seen. Immunofluorescence showed a strong dual pattern of staining for IgG as described in the first biopsy (not illustrated). The overall diagnosis of the subsequent biopsy was inactive anti-GBM GN and MN superimposed on DN. Persistent strong linear GBM staining for IgG despite lack of active lesions in this biopsy.
+The patient commenced maintenance haemodialysis 14 weeks after initial presentation when refractory fluid overload ensued, coupled with no renal recovery. Immunosuppression was discontinued. Currently, 5 months after presentation, he is training for home haemodialysis and suitability for combined kidney–pancreas transplant is being assessed.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 2.0}
+

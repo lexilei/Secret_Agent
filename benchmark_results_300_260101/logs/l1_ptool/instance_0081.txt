@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 81
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:26:51.679553
+================================================================================
+
+GROUND TRUTH: 27.68878
+PREDICTED: 27.69
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 63-year-old male, 159 cm in height and 70 kg in weight, was scheduled to undergo resection of cervical epidural mass. The patient had a medical history of well-controlled hypertension and old healed pulmonary tuberculosis. The patient had facial and neck purpuras and ecchymoses, whose cause could not be identified at a private dermatologic clinic. Blood test results concerning platelet count, prothrombin time and activated partial thrombosplastin time were normal.
+General anesthesia was induced with propofol 100 mg and remifentanil 0.5 µg/kg/min. Rocuronium 50 mg was administrated to facilitate tracheal intubation. Anesthesia was maintained with 6 vol% desflurane with 50% O2 in air, remifentanil, and rocuromium. After a change from a supine to a prone position, bleeding from the lacerated facial purpuras was recognized while identifying head position on a Mayfield headrest. Swollen purpuras and eyeballs hyperemia were evident. The operation was canceled in order to evaluate the facial lesions and the patient was transported to the postanesthetic care unit when fully conscious.
+Skin biopsy from the facial lesions () and serum free light chain assay were performed during the stay at the general ward, and resulted in the diagnosis of systemic amyloidosis of monoclonal gammopathy with lambda type. Multiple myeloma, which usually accompanies systemic amyloidosis, was excluded after bone marrow biopsy and immunoprotein measurement of serum and urine.
+The patient had complained of dyspnea since post-anesthesia day 16. Bilateral pleural effusion and interstitial pulmonary edema were identified by high resolution chest computed tomography. Pulmonary function test revealed moderate degree of chronic obstructive pulmonary disease. Cervical magnetic resonance imaging taken 48 days after the anesthesia showed spontaneous resolution of the epidural mass. Post-anesthetic echocardiograph showed thickened myocardium, which was not confirmatory of cardiac amyloidosis. According to abdominal ultrasound, there was no hepatomegaly or splenomegaly. Symptoms and signs suggesting the involvement of other organs, such as renal, neurologic, and hematologic abnormalities, were not observed. Treatment with chemotherapy and auto-peripheral blood stem cell transplantation was planned.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+27.69
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 27.69}
+

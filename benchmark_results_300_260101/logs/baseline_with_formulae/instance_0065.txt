@@ -1,0 +1,33 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 65
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-02T03:23:03.497234
+================================================================================
+
+GROUND TRUTH: 75.33333
+PREDICTED: 75.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 79-year-old African American female presented to the emergency room for shortness of breath with exertion and grade 2+ bilateral lower limb edema. The patient denied dizziness, palpitation, fever, chills, productive cough, abdominal pain, nausea, vomiting, hematemesis, melena, and hematochezia.
+On examination, the patient's blood pressure was 94/66 mmHg, the temperature was 97.6 °F, the heart rate was irregular with a rate of 78 beats per minute, respiratory rate was 20 breaths per minute, and she was saturating 100% on room air. Sinus pauses were noted, up to 10 seconds in length, on the telemetry monitor. ECG and telemetry monitoring demonstrated SSS with sinus bradycardia, pauses up to three seconds, and atrial fibrillation (AF) with a rate of 130 beats per minute (bpm; Figure ). Her other medical history included paroxysmal atrial tachycardia, lower extremity venous insufficiency, diastolic heart failure (ejection fraction of 70-75%), chronic obstructive pulmonary disease, and gastroesophageal reflux disease, and no other medical history reported. The patient's home medications included fluticasone propionate/salmeterol inhaler, albuterol sulfate inhaler, torsemide, metolazone, potassium chloride, vitamin D3, pantoprazole, sotalol, and no other heart rate modulating medication reported. Laboratory workup revealed a potassium of 4.5 (3.5-5.1 mM/L), magnesium of 2.3 (1.7-2.7 mg/dL), thyroid-stimulating hormone of 1.54 (0.34-5.60 µIU/mL), and troponin of 0.1 (0.0-0.5 ng/mL). The patient underwent urgent pacemaker placement to prevent further sinus pauses.
+The patient was also complaining of dysphagia and difficulty swallowing, for which an esophagogastroduodenoscopy (EGD) was performed. The procedure identified both esophageal and duodenal ulcers. The biopsy was performed during the EGD and sent for histopathological review. The esophagus contained small columnar pieces of mucosa and collections of eosinophilic, amorphous material demonstrated on congo red staining. The congo red stain contained one fragment with blood vessels that exhibited mural deposition of amyloid. In the duodenal biopsy, the lamina propria also had amyloid on congo red staining. Videofluoroscopic swallowing examination revealed no tracheal aspiration and no motility disorder. Eventually, the patient required percutaneous endoscopic gastrostomy tube placement for feeding secondary to dysphagia. TTE findings were consistent with restrictive cardiomyopathy, raising the possibility of cardiomyopathy secondary to amyloidosis and SSS as the initial presenting feature in our patient.
+The patient had also developed a bifascicular block, which was potentially consistent with an infiltrative amyloid disease. The patient had a Kappa free light chain drawn, and this was markedly elevated at 146 mg/dL (reference range 0.3-1.9 mg/dL), Lambda 1.97 (0.5-2.6 mg/dL), with a Kappa/Lambda ratio of 74.1. We performed electrophoresis to investigate further and found an elevated gamma globulin of 1.75 g/dL (reference range 0.70-1.50 mg/dL).
+Two months later the patient presented with persistent, progressive shortness of breath on minimal exertion and persistent lower limb edema. Laboratory work-up was significant for brain natriuretic peptide (BNP) of 838 (2-100 pg/mL), BUN of 37, creatinine of 1.85, white blood cell count of 10.3 (4.5-11.0 × 103/µL), hemoglobin of 10.7 (12.0-15.7 g/dl), and platelet count of 178 (140-440 × 103/µL). ECG was obtained and demonstrated an atrial paced rhythm, bifascicular block, left anterior fascicular block, right bundle branch block, and a pronounced low voltage pattern throughout all leads (Figure ). She had three negative troponins, and her pacemaker was found to be functioning appropriately. The patient did not have any compelling cardiac symptoms aside from the dyspnea on exertion.
+TTE demonstrated an ejection fraction of 60%, a small pericardial effusion, an increased left ventricular wall thickness (left ventricular posterior wall diastolic thickness 1.4 cm (0.6-1.0/0.6-0.9 cm), right ventricular systolic pressure (RVSP) 56 mmHg, and mild to moderate biatrial enlargement (Figure ).
+A renal biopsy and bone marrow biopsy were performed to confirm the diagnosis of amyloidosis. The results of these biopsies were consistent with our hypothesis that the patient had AL amyloid. She was intermittently treated with Dexamethasone and Bortezomib but ultimately evaluated by palliative care for comfort measures due to the prognosis of her condition.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+75

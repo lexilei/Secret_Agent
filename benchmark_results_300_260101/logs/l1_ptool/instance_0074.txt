@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 74
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T21:26:51.545772
+================================================================================
+
+GROUND TRUTH: 86.66667
+PREDICTED: None
+CORRECT: False
+ERROR: Could not extract float from: **
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 44-year-old man comes to the physician for a routine health maintenance examination. He had not seen his primary care physician for 7 years. He has no complaints other than feeling easily fatigued. He has no significant medical history. He reports drinking half a pint of liquor a day. His temperature is 98.7°F (37.1°C), pulse is 65/min, respiratory rate is 15/min, and blood pressure is 120/70 mm Hg. Physical examination shows reddish color to both of his palms. His abdomen has no focal tenderness but is difficult to assess due to distention.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+(no response)

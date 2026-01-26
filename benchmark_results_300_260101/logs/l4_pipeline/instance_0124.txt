@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 124
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-04T03:14:12.266298
+================================================================================
+
+GROUND TRUTH: 4.5
+PREDICTED: 4.5
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A woman in her 40s was diagnosed with ADPKD after a renal ultrasound was performed due to hypertension and deranged kidney function on a routine blood test. At that point, she had a slightly enlarged liver with normal liver function tests and massive renal cysts. She reached ESRD requiring RRT in 2005 and received a deceased donor kidney transplant 2 years later. She developed progressive graft dysfunction due to chronic allograft nephropathy that required starting PD in August 2014. In November 2014, she was admitted to our hospital with a 3-week history of lower limb edema with painful skin ulcers, symptomatic hypotension and tachycardia (118 bpm), anorexia, nausea, and incoercible vomiting. Physical examination revealed a blood pressure of 70/45 mm Hg and ulcers with necrotic areas and cellulitis in the external distal third of both legs. Laboratory findings revealed severe malnutrition (serum albumin 1.5 g/dL) and elevated inflammatory markers (C-reactive protein: 288 mg/L; procalcitonin: 1.9 μg/L). A Doppler ultrasound showed bilateral femoral vein thrombosis, and so pulmonary thromboembolism was ruled out and due to the extensive thrombosis, a complete hypercoagulability state check was done, but no abnormalities were detected and tumor markers were normal. An abdominal CT was then performed showing large liver and renal polycystic disease, both organs with giant cysts (>15 cm). A giant hepatic cyst producing an extrinsic compression of the intrahepatic inferior cava vein (ICV) and massive venous thrombosis from ICV to bilateral iliofemoral deep veins involving the kidney graft vein was observed. The CT also demonstrated displacement and extrinsic compression of the stomach, pylorus, and duodenum due to another enlarged liver cyst, shown in Figures and .
+After the CT findings, we considered the clinical presentation was consistent with an ICV syndrome due to ICV compression and thrombosis. Furthermore, vomiting and oral intake intolerance with severe malnutrition were caused by a complete pyloric and duodenal collapse by the enlarged liver cyst.
+Anticoagulation therapy was started, but vomiting with oral intolerance persisted and the patient remained dependent on parenteral nutrition. Thus, percutaneous drainage and alcohol sclerosis of the compressive liver cyst was decided, with successful return of the stomach to its normal location, shown in Figure . Nausea and vomiting resolved in a few days, and adequate oral intake was resumed. Severe hypotension and tachycardia gradually improved, and a repeated CT revealed complete stomach expansion, as shown in Figure . PD therapy was modified but not disrupted, and 1 year later, the patient remained asymptomatic. As she did not have any coagulation abnormalities nor any evidence of neoplasia, the massive thrombosis of the ICV was deemed secondary to the extrinsic compression of intrahepatic ICV by enlarged liver cysts.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4.5
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.3}, {'stage': 'extract', 'extracted': {'sex': 'female'}, 'missing': ['age']}, {'stage': 'validate', 'is_valid': False, 'missing': ['age'], 'cleaned': {'sex': 'female'}}, {'stage': 'repair_1', 'extracted': {'sex': 'female'}, 'is_valid': False, 'missing': ['age']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

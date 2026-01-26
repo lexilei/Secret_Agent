@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 164
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T21:26:53.333361
+================================================================================
+
+GROUND TRUTH: 57.78748
+PREDICTED: 57.8
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 30-year-old male who was 161 cm tall and weighed 91 kg (morbid obesity, body mass index 35.0 kg/m2) underwent WLL as treatment for PAP (). The patient had been suffering dyspnea on exertion for three years. His vital signs were blood pressure (BP) 130–150/70–80 mmHg, heart rate (HR) 80–100 beats/min, respiratory rate (RR) 18–22 rates/min, and body temperature 36.2℃. The patient's oxygen saturation by pulse oximeter (SpO2) while receiving air was 75–89%, which was partially corrected to 91–98% while receiving 2 L/min of oxygen via nasal prong (VNP). Arterial blood gas analysis (ABGA) under oxygen administration revealed the following: pH 7.39, arterial CO2 partial pressure (PaCO2) 44.6 mmHg, arterial O2 partial pressure(PaO2) 65.3 mmHg, and bicarbonate (HCO3–) 26.1 mEq/L.
+During induction, both mask ventilation and intubation were difficult (laryngeal view: Cormack-Lehane grade IV). Intubation trials with a 37-Fr. left-sided double lumen tube (DLT) (Mallinckrodt™, Covidien, Dublin, Ireland) and laryngoscopy, followed by a videostylet (Optiscope®, Pacific Medical, Seoul, Korea) failed. Hence, a flexible fiberoptic bronchoscope (FOB) was used to intubate a single lumen tube (SLT) (ID 8.0), and then the SLT was changed to a DLT using a tube exchanger.
+Left one-lung ventilation (OLV) was maintained with an SpO2 of 86–90% at an inspired oxygen fraction (FIO2) of 1.0 during right-lung lavage. We performed external percussion physiotherapy with an automatic mechanical percussion device (The Vest™ Model 205 [Airway Clearance System], frequency 10 Hz, duration 3 minutes, Hill-Rom, Charleston, SC, USA) rather than manual chest percussion. After right-lung lavage, we resumed two-lung ventilation (TLV) with intermittent suction for 20 minutes (FIO2 1.0). For left-lung lavage, right OLV was started with an FIO2 of 1.0, but it was impossible to maintain SpO2 > 80% (). Therefore, we decided to postpone left-lung lavage until conditions in the right lung improved (). A chest X-ray taken after intensive care unit (ICU) transfer showed no specific findings, including pneumothorax. One day after the lavage, while in the ICU, the patient was weaned from mechanical ventilation, extubated, and transferred to the general ward.
+Three days later, the patient was returned to the operating room for left-lung lavage. The patient's SpO2 was 91–96% with O2 3 L/min VNP. We intubated the trachea with a SLT via Glide-Scope (Verathon Medical, British Columbia, Canada) and then changed the SLT to a DLT with a tube exchanger because the previous intubation was difficult. We confirmed breath sounds from both lungs, and right and left lung ventilation during separation through auscultation. The proper tube location was confirmed using an FOB.
+TLV was performed in volume-controlled mode: FIO2 1.0, tidal volume of 400 ml, RR of 15 rates/min, peak inspiratory pressure (PIP) of 31 cmH2O, and positive end-expiratory pressure (PEEP) of 5 cmH2O. PaO2 was 57 mmHg (SpO2 86%) on ABGA examination. Fifty minutes after induction, we started right OLV in pressure-controlled mode: FIO2 1.0, inspiratory pressure of 25 cmH2O above PEEP 5 cmH2O, tidal volume of 200 ml, and RR of 20 /min. Within a few minutes of starting right OLV, the patient's SpO2 plunged below 80%, so we rapidly resumed TLV and re-confirmed the proper position of the DLT using an FOB. We did not observe any bronchial secretion or obstruction. Right OLV was tried again, but the patient's SpO2 rapidly decreased to < 80% within a few minutes. After resuming TLV, 2.5 mg of salbutamol was nebulized to relieve any bronchial constriction, and 100 mg of hydrocortisone was injected intravenously to improve symptoms. During manual ventilation, we detected very poor lung compliance. In auscultation, the patient's breath sounds from the right lung were very distant and nearly inaudible. Therefore, we suspected he had a right-side pneumothorax, which was confirmed on chest X-ray (). A chest tube was inserted by a thoracic surgeon, and a follow-up chest X-ray showed that the pneumothorax had decreased (). Two hours after induction, lung compliance and arterial oxygenation improved: FIO2 1.0, tidal volume of 450 ml, RR of 18/min, PIP of 24 cmH2O, and PEEP of 5 cmH2O. PaO2 improved to 93 mmHg on the following ABGA examination ().
+We re-tried right OLV and were finally able to maintain SpO2 > 90%: FIO2 1.0, inspiratory pressure of 23 cmH2O above PEEP 5 cmH2O, tidal volume of 320 ml, and RR of 20 /min, without any severe air leakage or tidal-volume loss. The left-lung lavage was started along with right OLV with the chest tube inserted state. During the remaining lavage period, we maintained SpO2 > 85% without further deterioration.
+After lavage, the patient was transferred to the ICU and received mechanical ventilation. On postoperative day (POD) 1, the patient developed a high fever (38.8℃) and was diagnosed as having pneumonia with parapneumonic effusion in the right lower lobe, so antibiotics were administered. The chest tube was removed on POD 3, and extubation was performed on POD 4. The patient was transferred to the general ward on POD 7 and discharged on POD 19. Follow-up chest computed tomography was performed 40 days after the left-lung lavage; it showed interval decreases in the extent of PAP in both lungs, resolved parenchymal consolidation in the right lung, and decreased right pleural effusion ().
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+57.8
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 57.8}
+

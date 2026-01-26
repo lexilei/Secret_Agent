@@ -1,0 +1,34 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 77
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-02T03:23:03.876747
+================================================================================
+
+GROUND TRUTH: 64.33333
+PREDICTED: 64.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 65-year-old African American woman was rushed to the hospital by ambulance following an episode of syncope at a community supermarket. She regained consciousness within a few minutes. There was no tongue biting, urinary incontinence, or postictal confusion. She reported some premonitory symptoms of warmth and sweating and gave a history of light-headedness, weakness, and fatigue over the last 2 weeks. She denied palpitations, chest pain, shortness of breath, fever, dizziness, or visual changes. She denied headache or weakness.
+Over the last couple of months, she had multiple episodes of fall but no loss of consciousness. The falls were increasing in frequency over the last 2 weeks. She lived alone and had a history of hypertension for almost thirteen years for which she was noncompliant with her medications. She did not smoke, drink alcohol, or use any illicit drugs. Her mother had hypertension and died at the age of 80 years from heart disease.
+On examination, her temperature was 37°C, the respiratory rate was 24 breaths per minute, and blood pressure while supine was 89/52 mm Hg, with a heart rate of 52 beats per minute. Her blood glucose level was 120 mg per deciliter. Oxygen saturation was 100 percent on 2 liters of oxygen via nasal cannula.
+Physical evaluation showed no signs of head trauma. Her respiratory, cardiovascular, and abdominal examinations were unremarkable. Neurological examination showed decreased sensation to light touch in a stocking and glove distribution. Upper limb reflexes were brisk and lower limb reflexes were absent. Vibratory sensation and position sense were decreased in both upper and lower limbs. An extensor plantar response was noted bilaterally and Romberg's test was positive. There was hyperpigmentation of both palms with dark discoloration of the nails (). Axillary and pubic hair was normal in distribution and density. She was admitted to the hospital for further investigation and workup.
+Contrast computed tomography (CT) of the head showed no obvious lesion. An electrocardiogram revealed sinus bradycardia at a rate of 50 beats per minute with no ST or T wave changes. A 24-hour holter monitoring was performed which revealed sinus bradycardia without other arrhythmias.
+Her laboratory studies were as shown in .
+Serum alcohol levels were undetectable and urine toxicology was negative. Esophagogastro-dudodenoscopy was performed and the gastric biopsy was suggestive of chronic atrophy of the body and fundus. The endoscopic findings were further reinforced by high serum levels of antibodies to intrinsic factor and gastric parietal cells confirming malabsorption of vitamin B12 due to lack of intrinsic factor. Thus, the diagnosis of pernicious anemia was established.
+The patient was started on intramuscular injection of vitamin B12 (1,000 μg) daily for one week, then weekly for one month. She was later lost to followup, and posttreatment evaluation of the skin hyperpigmentation and neurological evaluation could not be done.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+64

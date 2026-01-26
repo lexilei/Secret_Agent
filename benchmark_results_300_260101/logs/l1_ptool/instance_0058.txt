@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 58
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-01T21:26:51.202099
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 6.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The patient was a 76-year-old man with a history of mild dysphasia. He had a prior history of cerebral infarctions (x3) at the age of 66, 74 and 75 years, with a first instance of swallowing difficulties after the third stroke. At that time, dysphasia rehabilitation was initiated within 3 days of the stroke, and he recovered the ability to eat a regular meal within 2 weeks. In January 2018, 1-year after his last stroke, he underwent surgery for spinal stenosis, followed by a 10-day period of bedrest. His physical activity level subsequently declined due to back pain, and he lost 10 kg within the 10 months after surgery. Swallowing difficulties re-emerged in September 2018, with the patient only able to tolerate soft meals. His dysphasia worsened, with an increase in sputum and development of a chronic cough.
+His medical history included cerebral infarctions (x3), diabetes mellitus, spinal stenosis, and hypertension. His height was 168.8 cm, with a body weight of 56.5 kg. He had a right hemiplegia, with the following functional measures: grip strength, 25 kg; gait speed, 0.7 m/s, assessed using the 5-m walk test; and skeletal mass index, 6.6 kg/m2. His score of 5 points on the Mini Nutritional Assessment Short Form was indicative of malnourishment. Absence of another cerebral infarct was confirmed by magnetic resonance imaging. Video-endoscopic swallowing assessment showed saliva pooling in the pharynx, widening of the pharyngeal space, vallecular and pyriform sinus residue, and aspiration (A). Video-fluorography revealed a decrease in the forward movement of the larynx, a widened pharyngeal space, weakened pharyngeal constriction, vallecular and pyriform sinus residue, and aspiration (A–C). Functional swallowing scores were as follows: Hyodo score, 9; Fujishima grade, 6; FILS, 8; and dysphasia severity scale, 4. A probable diagnosis of sarcopenic dysphagia was made, based on the criteria defined by Mori et al. [] Clinical management included swallowing training, a high-protein diet, and nutritional guidance. The patient declined additional rehabilitation, due to his previous experience post-stroke. Therefore, we presented laryngeal suspension as a possible alternative treatment, which was performed in December 2018.
+Laryngeal suspension was performed via a minimally invasive thyromadibulopexy, using two skin incisions: one (2-cm) incision at the level of the mandible and the other (3-cm) between the hyoid bone and the superior border of the thyroid cartilage (A). Identified the white line, divided aside the anterior cervical muscles, and exposed the thyroid cartilage. Also the mandible was exposed. Two holes in the mandibular and six holes in the thyroid cartilage was made by using drill. The thyroid cartilage was fixed to the mandible using No. 2 nylon. No. 2 nylon thread was passed through the Gore-tex sheet cut to the size of thyroid cartilage. And it was passed through the thyroid cartilage, subcutaneous tunnel on the hyoid bone, mandible, subcutaneous tunnel on the hyoid bone, and tied to the other side of the nylon. As the two holes of the middle of the thyroid cartilage, two No. 2 nylons was crossed to fix the thyroid cartilage and mandible. The larynx was suspended about one vertebral body by totally using five No. 2 nylons (B), confirmed by X-ray fluoroscopy. A 1-cm incision was performed for tracheotomy, and cuffed tracheal cannula was inserted for airway management.
+Maintaining some neck flexion for a period of 1-week was conducted. Nutritional support was initiated via gastrostomy tube feeding. The cuffed tracheal cannula was changed to an uncuffed cannula on postoperative day (POD) 1. The wound was stable and there was no pain. Swallowing was initiated using jelly and cold tea, with the patient in a flat lateral position. The tracheal cannula was removed on POD 4. Video-fluorography revealed contrast agent residue in the vallecular but with a decrease in residue in the pyriform sinus compared to pre-operative measures, with no evidence of aspiration on POD 6 (A–C). Anterosuperior movement of the larynx was improved, reaching one vertebral level higher than before surgery. The swallowing reflex was maintained, with sufficient opening of the esophageal orifice, avoiding the need for mandibular protrusion to swallow. Swallowing using modified food was initiated in a sitting position on POD 6 and the gastrostomy tube was removed on POD 7. Video-endoscopic examination confirmed his ability to eat a rice cracker and noodles without aspiration and no evidence of pharyngeal residue on POD 11 (B). The patient was able to eat soft meals on POD 14, and a regular meal on POD 18, and was discharged on POD 21. The patient gained 2 kg in the 2 months after surgery, with improvement in functional scores: Hyodo score, 5; Fujishima grade, 8; FILS, 8; and dysphasia severity scale, 6. There was no exacerbation of the condition over a 10-month period after surgery, and the patient has a normal diet and is able to travel. Neck movement restriction was not severe.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+6.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 6.0}
+

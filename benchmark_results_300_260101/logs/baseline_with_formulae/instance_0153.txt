@@ -1,0 +1,62 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 153
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-02T03:23:08.509425
+================================================================================
+
+GROUND TRUTH: 11.99791
+PREDICTED: 20.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+Two hours after admission to the hospital for dialysis, a 63-year-old woman has severe pain in her lower back. The pain is 8 out of 10 in intensity and radiates down the legs. She underwent a laparoscopic cholecystectomy 4 years ago. She has hypertension, chronic kidney disease, type 2 diabetes mellitus, and major depressive disorder. She lives with her daughter and reports frequent fights with her at home. Her current medications include sertraline, insulin, enalapril, sodium bicarbonate, and sevelamer. She appears uncomfortable. Her temperature is 37.3°C (99.1°F), pulse is 102/min, respirations are 15/min, and blood pressure is 132/94 mm Hg. There is severe tenderness on palpation over the L2 vertebra; range of motion is limited. Neurologic examination shows no focal findings. Laboratory studies show:
+Hemoglobin 10.1 g/dL
+Leukocyte count 8,700/mm3
+Platelet count 130,000/mm3
+Serum
+Na+ 136 mEq/L
+Cl- 101 mEq/L
+K+ 5.1 mEq/L
+Calcium 8.2 mg/dL
+Urea nitrogen 33 mg/dL
+Glucose 190 mg/dL
+Creatinine 3.8 mg/dL
+An x-ray of the spine shows a wedge compression fracture of the L2 vertebra.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's GFR using the MDRD equation, we need the following values from the patient note:  
+- **Serum Creatinine (Scr):** 3.8 mg/dL  
+- **Age:** 63 years  
+- **Gender:** Female (gender coefficient = 0.742)  
+- **Race:** Not specified (assume non-Black unless stated otherwise; if Black, multiply by 1.212).  
+
+The **MDRD GFR equation** is:  
+\[ \text{GFR} = 175 \times \text{Scr}^{-1.154} \times \text{age}^{-0.203} \times \text{gender coefficient} \]  
+
+Plugging in the values:  
+\[ \text{GFR} = 175 \times (3.8)^{-1.154} \times (63)^{-0.203} \times 0.742 \]  
+
+Calculating step-by-step:  
+1. \( 3.8^{-1.154} ≈ 0.220 \)  
+2. \( 63^{-0.203} ≈ 0.715 \)  
+3. Multiply all terms: \( 175 \times 0.220 \times 0.715 \times 0.742 ≈ 20.4 \)  
+
+If the patient is **Black**, multiply by 1.212:  
+\[ 20.4 \times 1.212 ≈ 24.7 \]  
+
+Since race is **not specified**, we assume non-Black.  
+
+**Final answer:**  
+20

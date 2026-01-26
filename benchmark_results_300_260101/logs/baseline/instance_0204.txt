@@ -1,0 +1,28 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 204
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T20:50:32.044102
+================================================================================
+
+GROUND TRUTH: 10.0
+PREDICTED: 8.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old man with a past medical history of alcohol dependence, persistent atrial fibrillation, and severe biventricular systolic heart failure presented to the emergency department with complaints of weakness, cough, exertional dyspnea, and malaise. He denied any chest pain, palpitations, lightheadedness, fever, chills, sweats, nausea, vomiting, or diarrhea. He was found to have atrial fibrillation with a ventricular response rate of 173. On physical examination, he was alert but anxious with an irregular heart rate. The rest of the physical examination was unremarkable. He developed subsequent diltiazem-induced hypotension and resultant global ischemic organ injury requiring cardioversion, intubation, and vasopressor support. Laboratory studies at the time of presentation were significant for sodium of 130 mmol/L, potassium of 4.6 mmol/L, creatinine of 2.4 mg/dL, albumin of 2.4 g/dL, AST of 10,050 U/L, ALT of 3.056 U/L, alkaline phosphatase of 119 U/L, and total bilirubin of 3.6 mg/dL. His complete blood count was significant for hemoglobin of 11.0 g/dL, MCV of 97.1 fl, platelet count of 148 × 109/L, and WBC of 18.3/μl. He was also noted to be coagulopathic with an INR of 2.2. A CT scan of the thorax was performed to rule out pulmonary embolism, and this showed an incidental liver lesion measuring 2 × 2 cm with residual contrast in the noncontrast series and was read as a hemangioma (Fig. ). He presented to the emergency department 9 months later with syncopal episodes. CT angiography showed no signs of pulmonary embolism, but an enlarging liver lesion with intralesional calcifications measuring 4.3 × 3.9 cm with borderline enlarged lymph nodes in the porta hepatis (Fig. ). He was referred to our hepatobiliary neoplasia clinic for further management. An ultrasound-guided percutaneous biopsy of the lesion was obtained (Fig. ).
+The liver biopsy showed a neoplasm with epithelioid and spindle cell features, prominent nucleoli, occasional intranuclear pseudoinclusions, and frequent mitotic activity. Immunostains showed the tumor cells to be positive for S100, Melan-A, and SOX10, but negative for keratins (AE1/AE3, Oscar), desmin, CD34, and arginase, consistent with a diagnosis of metastatic melanoma. Esophagogastroduodenoscopy and colonoscopy were performed to exclude other primitive malignant cancers. Complete skin and eye examination in addition to further imaging studies did not identify the primary site. His lesion was treated with stereotactic body radiation therapy (SBRT), which he tolerated well.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+8

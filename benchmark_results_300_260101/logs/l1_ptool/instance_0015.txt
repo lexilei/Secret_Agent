@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 15
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T21:26:50.270074
+================================================================================
+
+GROUND TRUTH: 31.84454
+PREDICTED: 31.85
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+This is a case of an 83-year-old man who presented to the emergency department with a right-sided headache for 2 days. The headache was described as a pain level of 8/10, throbbing, and radiating to the back of the neck. No weakness, numbness, visual deficits, nausea, vomiting, dizziness, or lightheadedness was reported. He denied any difficulty in chewing or swallowing and denied any falls or trauma to the head. He has a history of hypertension, type 2 diabetes mellitus, osteoarthritis, and glaucoma.
+His physical examination was significant for a nonfocal neurological examination, chronic poor visual acuity, and weak right palmar grasp secondary to his arthritis.
+In the emergency department, his vital signs were as follows: height, 172.7 cm; weight, 72.6 kg; blood pressure, 188/109 mmHg; heart rate, 60 bpm; temperature, 36.8°C; respiratory rate, 18 bpm. The following laboratory data were remarkable: white blood cells, 8.8 109 cells/L; red blood cells, 3.04 M/µL; hematocrit, 30.3%; hemoglobin, 10.9 gm/dl; platelets 1,097 ×109/L; mean corpuscular volume, 99.8 fL; basic metabolic panel was notable for creatinine of 1.7 mg/dL and a normal glucose of 5.73 mmol/L. Coagulation studies were as follows: prothrombin time, 15.7 s; partial thromboplastin time, 33.7 s; international normalized ratio, 1.2.
+His medications were famotidine 20 mg daily, amlodipine 10 mg daily, ultrashort-acting insulin 2–6 U subcutaneous four times a day, nicardipine, and lisinopril 20 mg daily. Initially, the management was focused on conservative blood pressure control and antiplatelet therapy with aspirin. A subsequent head computerized tomography (CT) revealed a right intraventricular hemorrhage (), which was managed with platelet transfusions, desmopressin acetate (DDAVP), and a nicardipine drip. The patient was admitted to the medical intensive care unit for frequent neurological examination and continuous blood pressure monitoring and control. The patient had an 11-day hospital stay and an extensive negative workup. Cardiac echocardiogram, vascular duplex of the lower extremities, and carotid duplex were negative. Follow-up imaging showed stable intraventricular hemorrhage (IVH) (), and the patient was ultimately discharged to Kessler Rehabilitation Center with zero neurological deficits.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+31.85
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 31.85}
+

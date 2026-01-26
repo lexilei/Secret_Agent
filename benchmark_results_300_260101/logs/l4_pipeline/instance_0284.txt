@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 284
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-04T03:14:14.146331
+================================================================================
+
+GROUND TRUTH: 6.21522
+PREDICTED: 6.22
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The patient is a 56-year-old woman who underwent a surgical treatment of a lateral ventricle meningioma at the age of 29. A month later, she underwent CP shunt placement for cyst formation after resection. The postoperative course was uneventful and she was well without shunt-related problems for 26 years. She developed a brain abscess related to the shunt catheter at the age of 55. A surgical removal of the catheter was attempted, but was not technically possible, and only the segment from the clavicle to the breast was removed with ligation of the two remaining ends. The two disconnected catheter segments remained in situ and were not retrieved. A year later, she was taken to a local hospital with continuous right-breast pain. The diagnosis of acute mastitis was made and she was referred to our institution for further examination. On presentation, her right breast was swollen with erythema (Fig. ). There was no abdominal pain and change in bowel habits. Funduscopic evaluation was normal with no signs of increased intracranial pressure. Her temperature was 36.7°C, and laboratory tests revealed a decreased platelet count of 103 000/μl, elevated AST of 97 U/l, ALT of 72 U/l and C-reactive protein level of 1.4 mg/dl. The breast abscess was drained under local anesthesia. Cultures taken from the abscess showed enteric organisms including Enterococcus avium, Klebsiella oxytoca and Bacillus. Abdominal CT showed that the shunt catheter was in the splenic flexure of the transverse colon with no other abnormalities (Fig. ). Colonoscopy was performed to survey the colon and the shunt catheter was found inside the lumen at the splenic flexure (Fig. ). Acute mastitis caused by enteric organisms which had migrated through the shunt catheter after penetration into the transverse colon was the presumptive diagnosis, and the catheter removed under general anesthesia. The breast to the abdomen segment of the catheter was exteriorized through the right-anterior chest wall without laparotomy. The postoperative course was uneventful. She was transferred to local hospital 15 days later.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+6.22
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'confidence': 0.3}, {'stage': 'extract', 'extracted': {'age': 56, 'sex': 'female', 'creatinine_mg_dl': 1.4}, 'missing': ['weight_kg']}, {'stage': 'validate', 'is_valid': False, 'missing': ['weight_kg'], 'cleaned': {'age': 56, 'sex': 'female', 'creatinine_mg_dl': 1.4}}, {'stage': 'repair_1', 'extracted': {'age': 56, 'sex': 'female', 'creatinine_mg_dl': 1.4}, 'is_valid': False, 'missing': ['weight_kg']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 253
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-02T03:23:11.613262
+================================================================================
+
+GROUND TRUTH: 2.0
+PREDICTED: 2.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 66-year-old female is evaluated in the pre-operative medicine clinic at 08:30 this morning for clearance prior to an elective right total knee arthroplasty scheduled in three weeks for debilitating tricompartmental osteoarthritis refractory to physical therapy and oral analgesics. Her past medical history is notable for chronic systolic heart failure that was first diagnosed seven years ago following an episode of acute pulmonary edema; her most recent transthoracic echocardiogram, obtained three months earlier, demonstrated a left ventricular ejection fraction of 35 % with globally reduced wall motion but no significant valvular pathology. She reports that over the past month she can comfortably climb one flight of stairs but becomes mildly short of breath when hurrying on level ground; she sleeps with two pillows and occasionally experiences ankle swelling by evening that responds to an extra dose of her loop diuretic. She denies any recent hospital admissions for volume overload, denies waking up gasping for air, and has not required intravenous diuresis in over a year. Five years ago she suffered a transient episode of left-sided arm weakness and slurred speech that resolved within 24 hours; neuroimaging at that time revealed a small right frontal lacunar infarct, and she has since remained neurologically intact on daily antiplatelet and statin therapy. She has long-standing hypertension, well controlled on her current regimen, and stage 2 chronic kidney disease attributed to hypertensive nephrosclerosis, with a baseline serum creatinine of 1.4 mg/dL documented on repeat measurements for the past six months. She denies diabetes mellitus, has never taken insulin, and follows a carbohydrate-restricted diet. She has no history of coronary stents, myocardial infarction, or angina-type chest pain, and has never undergone a cardiac catheterization. Her only prior surgical procedure was an uncomplicated laparoscopic cholecystectomy at age 50. Current medications include carvedilol 12.5 mg twice daily, lisinopril 20 mg nightly, furosemide 20 mg in the morning with instructions to double the dose for sudden weight gain, aspirin 81 mg daily, atorvastatin 40 mg nightly, and cholecalciferol 1000 IU daily. She does not smoke, consumes alcohol rarely, and denies illicit drug use. On arrival her vital signs are: temperature 36.7 °C, blood pressure 128/72 mmHg in the right arm seated, heart rate 68 beats per minute and regular, respiratory rate 16 breaths per minute, and oxygen saturation 97 % on room air. Physical examination reveals an alert, well-nourished woman in no apparent distress. The jugular venous pulsation is estimated at 6 cm above the sternal angle with the head of the bed at 45 degrees. Cardiac auscultation discloses a soft S3 gallop but no murmurs. Pulmonary fields are clear to percussion with faint bibasilar crackles that clear on deep inspiration. The abdomen is soft and non-tender. There is 1+ pitting edema over both shins without erythema. Peripheral pulses are intact and symmetric. Neurologically she is oriented, cranial nerves II through XII are intact, motor strength is 5/5 in all extremities, sensation is normal, and gait is stable. Laboratory studies obtained this morning show sodium 138 mmol/L, potassium 4.2 mmol/L, bicarbonate 25 mmol/L, blood urea nitrogen 24 mg/dL, creatinine 1.4 mg/dL, fasting glucose 102 mg/dL, hemoglobin 12.8 g/dL, platelet count 240 ×10^3/µL, and an INR of 1.0; brain natriuretic peptide is modestly elevated at 250 pg/mL, consistent with her known ventricular dysfunction. Twelve-lead ECG displays normal sinus rhythm with nonspecific intraventricular conduction delay and no acute ischemic changes. A pre-operative chest radiograph reveals mild cardiomegaly without pulmonary congestion or effusion. The orthopedic team plans a cemented prosthesis under regional anesthesia with anticipated blood loss under 300 mL and a postoperative stay of three days. After discussion, she agrees to continue her beta-blocker and ACE inhibitor up to and including the day of surgery, hold her diuretic the morning of the procedure to avoid intravascular volume depletion, and remain nil per os after midnight. No further cardiac testing is deemed necessary beyond her recent echocardiogram given stable functional capacity and absence of suggestive ischemic symptoms. The patient voices understanding of the plan and will return one week prior to surgery for repeat basic metabolic profile and medication reconciliation.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2

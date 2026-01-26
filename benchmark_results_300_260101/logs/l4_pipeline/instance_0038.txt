@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 38
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-04T03:14:11.440619
+================================================================================
+
+GROUND TRUTH: 43.78544
+PREDICTED: 43.785
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 45-year-old male with a history of hypertension and chronic kidney disease (CKD) diagnosed concomitantly 2 years ago presented with acute onset rash [] and diffuse joint pains for 2 weeks. He denied any blood transfusions, intravenous drug abuse or high-risk sexual behavior. His medications included amlodipine and telmisartan. His blood pressure was 132/96 mm Hg, pulse rate 76/min and he had a diffuse erythematous maculopapular rash on the extensor surface of his lower extremities. His ankle joints were swollen, and movements were painful. He had 2+ bilateral pitting edema. His fundus examination was normal.
+Initial laboratory investigations revealed hemoglobin of 9.4 g/dL with a normal platelet and white cell count. His S. Cr. was 1.9 mg/dL and electrolytes were normal. His liver enzymes were normal and serum albumin was 2.9 g/dL. His initial urinalysis showed 3 + protein, 6–10 red blood cell/hpf and 4–6 white blood cell/hpf. His ESR was mm in 1st hour 38 and C-reactive protein was normal. An ultrasound revealed normal sized kidneys and chest X-ray was normal. His 24 h urine showed protein excretion of 3.1 g. His anti-nuclear antibody (ANA), HBsAg and HIV antibody tests were negative. Complements C3 and C4 were both low at 0.63 and 0.03 g/L, respectively. His anti-HCV antibody was positive with an HCV RNA viral load of 4133209 IU/ml and HCV genotype 3a. Complement cryoglobulin and cryocrit was undetectable.
+An ultrasound-guided kidney biopsy was performed which showed enlarged glomeruli, with a global increase in mesangial matrix and cellularity, along with lobular accentuation. There was thickening of glomerular basement membranes and double contouring []. Few hyaline thrombi were seen within the capillary lumen. Interstitium showed mild edema with foci of chronic mononuclear inflammatory infiltrate. Immunofluorescence showed strong granular staining for C3, IgG and IgM along the capillary wall and in mesangial areas. Electron microscopy (EM) could not be done. A diagnosis of immune-complex mediated MPGN pattern was made.
+The patient was started on DAA drugs-sofosbuvir 400 mg and daclatasvir 60 mg once daily for 12 weeks. Telmisartan was increased to 40 mg twice a day. A repeat HCV RNA test done after 6 weeks was undetectable. His S. Cr. gradually decreased to 1–1.2 mg/dL range with spot urine protein: creatinine ratio being 0.3–0.5 mg and continued to be stable at 12-month follow-up. Repeat quantitative HCV RNA testing done at 6 months and 1 year follow-up continues to be in the undetectable level.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+43.785
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CKD-EPI Equations for Glomerular Filtration Rate', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'age': 45, 'sex': 'male', 'creatinine_mg_dl': 1.9}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 45, 'sex': 'male', 'creatinine_mg_dl': 1.9}}, {'stage': 'compute', 'success': True, 'result': 43.785, 'formula': '142 * min(Cr/κ,1)^α * max(Cr/κ,1)^-1.200 * 0.9938^age * sex_coef'}], 'method': 'l4_pipeline'}
+

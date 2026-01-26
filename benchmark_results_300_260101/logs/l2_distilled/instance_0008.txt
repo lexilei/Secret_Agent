@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 8
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T21:37:19.105950
+================================================================================
+
+GROUND TRUTH: 35.33309
+PREDICTED: 35.333
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 71-year-old man, non-smoker (height: 155 cm; weight: 59 kg), was scheduled to receive video-assisted thoracoscopic extended thymectomy with the diagnosis of MG. Two months previously, he developed symptoms of right ptosis and progressive swallowing difficulty. Based on a positive response to edrophonium and increased titers of autoantibodies to acetylcholine receptor (19.3 nmol/L; normal < 0.2 nmol/L), he was diagnosed as having MG with severity belonging to Osserman's classification IIb (ie, generalized moderate weakness and/or bulbar dysfunction). Thoracic computed tomography demonstrated glandular hyperplasia of the thymus (Fig. A). The patient was started on prednisolone 20 mg daily and pyridostigmine 60 mg three times daily. His past history included hypertension without evidence of previous myasthenic crisis or thromboembolic events (eg, history of lower limb swelling). The results of electrocardiography, pulmonary function test [eg, vital capacity: 93%], echocardiography (eg, left ventricular ejection fraction: 85.1%), chest radiography (Fig. B), and laboratory studies (eg, coagulation test) were unremarkable. On the other hand, impaired renal function [i.e., serum creatinine: 1.42 mg/dL; eGFR: 49.1 mL/min/1.73 m2] was observed after admission.
+Preoperative physical examination of the patient showed clear consciousness without respiratory distress. Vital signs included a blood pressure of 187/103 mm Hg, heart rate of 82 beats/min, and respiratory rate of 14 breaths/minute. Under real-time neuromuscular monitoring with a train-of-four (TOF) monitor (TOF-watch SX, N. V. Organon, Oss, Netherlands), anesthesia was induced with propofol (130 mg) and rocuronium (0.85 mg/kg). Following successful tracheal intubation with a double-lumen tracheal tube (Broncho-Cath; Mallinckrodt, Athlone, Ireland), general anesthesia was maintained with sevoflurane, rocuronium (total dosage: 40 mg), and a continuous infusion of remifentanil. An 18-gauge peripheral intravenous line and an arterial line were introduced. The surgical time was 4 hours 15 minutes with an estimated blood loss of 100 mL. Upon completion of surgery, sugammadex 4 mg/kg was administered to reverse neuromuscular blockade, with a maximum TOF ratio of 0.93 following reversal. Additionally, intravenous morphine 8 mg was given for postoperative analgesia. After successful extubation in the operating room and resumption of spontaneous breathing, he was transferred to the post-anesthesia care unit (PACU) for further care.
+During the immediate postoperative period, the patient was hemodynamically stable without respiratory distress. Because of surgical pain with a numeric rating scale of 5 (scale of 0–10), intravenous morphine was titrated to a total dosage of 7 mg. Forty-five minutes later, respiratory distress with drowsiness was noted. Physical examination found pinpoint pupils with a TOF ratio of 0.9. Blood gas analysis demonstrated severe hypercapnia (arterial carbon dioxide pressure: 117.7 mm Hg) and acidosis (pH: 6.996, lactate levels: 3.3 mmol/L). On suspicion of morphine overdose, intravenous naloxone was administered twice (0.08 mg each time). After 20 minutes, the patient regained consciousness and normal respiratory pattern. Subsequent blood gas analysis demonstrated hyperlactatemia (lactate levels: 6.0 mmol/L) (Fig. ) despite improvement in arterial carbon dioxide pressure and arterial oxygen pressure after naloxone administration. Taking into account the overall clinical improvement, he was transferred to ward with spontaneous breathing and stable hemodynamics after observation for 100 minutes following initial reversal of opioid overdose.
+However, one hour after being transferred to ward (ie, three hours after naloxone administration), he was found to exhibit consciousness loss, respiratory distress, and pinpoint pupils. Intravenous naloxone 0.4 mg was given, followed by endotracheal intubation and transfer to the intensive care unit for mechanical ventilatory support. Brain computed tomography showed no intracranial lesion. He regained consciousness two hours after naloxone administration in the intensive care unit without symptoms of opioid withdrawal (eg, pulmonary edema). As weaning from mechanical ventilation was difficult on POD 3, a diagnosis of POMC was made. Steroid therapy (prednisolone 40 mg twice daily) and pyridostigmine (60 mg 3 times a day) was initiated. The patient was extubated smoothly on POD 6 and was discharged from hospital on POD 12. The course of hyperlactatemia was shown in Figure . In addition, his eGFR increased from 49.1 mL/min/1.73 m2 at baseline to 88.9 ml/min/1.73m2 on POD 5. Pathological analysis of the specimen from thymectomy confirmed the diagnosis of type B2 thymoma according to the World Health Organization (WHO) classification.
+The patient was readmitted on POD 24 because of left thigh swelling. Ultrasonographic examination showed evidence of DVT involving the left femoral and popliteal veins. Anticoagulant therapy with low-molecular-weight heparin (ie, subcutaneous Clexane 60 mg every 12 hours) was implemented immediately aflter hospitalization, and he was discharged without sequelae on POD 31. During hospitalization, his eGFR was 86.5 mL/min/1.73m2. There was no recurrence of myasthenic crisis or DVT up to 3 months of follow-ups.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 71.0, 'actual_weight': 59.0, 'weight_used': 52.35433070866142, 'weight_type': 'min(IBW, actual)', 'bmi': 24.56, 'ibw': 52.35, 'creatinine': 1.42, 'sex': 'male', 'gender_coef': 1.0}, 'result': 35.333, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 71.0, 'actual_weight': 59.0, 'weight_used': 52.35433070866142, 'weight_type': 'min(IBW, actual)', 'bmi': 24.56, 'ibw': 52.35, 'creatinine': 1.42, 'sex': 'male', 'gender_coef': 1.0}, 'result': 35.333, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}}
+

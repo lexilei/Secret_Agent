@@ -1,0 +1,42 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 40
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T21:26:50.780899
+================================================================================
+
+GROUND TRUTH: 40.43277
+PREDICTED: 40.37
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 64-year-old Brazilian man was admitted to the emergency department of our institution in April 2019 claiming fatigue, malaise, intermittent fever, and weight loss. In the first physical exam he presented hypotension and mental confusion. Three months before he began with progressive prostration, unintentional weight loss of 15 kg, intermittent fever, and night sweats. He was evaluated at an external hematology clinic 2 weeks before to come at our service and was diagnosed with multiple myeloma based on laboratory tests and bone marrow biopsy.
+At initial physical examination, he had a temperature of 36.3 °C, a pulse of 81 beats per minute, a respiratory rate of 16 incursions per minute, a peripheral oxygen saturation of 94% in ambient air, a blood pressure of 86/51 mmHg, and a slower peripheral perfusion (4 seconds). He had significant skin-mucous pallor, jaundice 2+/4+, lowered level of consciousness (Glasgow 14), mental confusion, and flapping in the upper extremities. The rest of the physical examination showed no other significant changes.
+Initial laboratory evaluation revealed: hemoglobin (Hb) 9.7 g/L, hematocrit (Ht) 28.2%, mean corpuscular volume (MCV) 82.7 fl, white blood count (WBC) 3.02 × 109/L, neutrophils: 2.3 × 109/L, lymphocytes: 0.5 × 109/L, platelets: 39 × 109/L, Na++ 127 mEq/L, K+ 4.3 mEq/L, total Ca++ 9.3 mg/L, P 3.1 mg/L, creatinine 1.84 mg/dL, BUN 122 mg/dL, lactate dehydrogenase (LDH) 648 U/L, and C-protein reactive (CPR) 58.1 mg/L. Hepatic profile showed alanine aminotransferase (ALT) 258 U/L, aspartate aminotransferase (AST) 213 U/L, alkaline phosphatase 386 U/L, gamma GT 473 U/L, total bilirubin: 2.95 mg dL (direct bilirubin [DB]: 2.29 /indirect bilirubin [IB]: 0.66), albumin 2.4 g/dL, prothrombin time/international normalized ratio (PT/INR): 1.27, and activated partial thromboplastin time (aPTT) ratio = 1.23. Laboratory evolution throughout hospitalization is summarized in Table .
+In the emergency department, peripheral blood and urine cultures were collected and intravenous saline fluid and ceftriaxone was administered for treatment of supposed infectious etiologies. After initial measurements, blood pressure was normalized and the patient was stabilized. In his previous medical history, he had systemic arterial hypertension, congestive heart failure, and chronic renal failure caused by recurrent nephrolithiasis. He used carvedilol 25 mg twice daily, spironolactone 25 mg once daily, ivabradine 5 mg twice daily, AAS 100 mg daily, and rosuvastatin 10 mg daily.
+The patient had external laboratory tests showing 0.8 g/dL of monoclonal protein, IgA kappa paraprotein at serum immunofixation, serum IgA of 1038 mg/dL (70–400 mg/dL), and β2 microglobulin of 20.61 mg/L (0.8–2.2 mg/L). Bone marrow biopsy was hypercellular with monoclonal plasma cell proliferation CD56 (+), kappa light chain restriction, representing 30% of the total nucleated cells. A diagnosis of multiple myeloma (MM) Durie Salmon IIIA, ISS III was established in this moment.
+Chest, abdomen, and pelvic computerized tomography (CT) revealed multiple lymphadenopathies up to 5.0 cm and splenomegaly. Positron emission CT with 18-fluoro deoxyglucose (18-FDG-PETCT) showed multiple lymphadenopathies in the neck, chest, abdomen, and pelvis with SUVmax 12.0, liver FDG uptake 15.8 (SUVmax), and 16.4 cm splenomegaly with 15.8 spleen FDG uptake (Fig. ). Echocardiography was negative for endocarditis.
+There was negativity for viral hepatitis B and C serology as well as for HIV, HTLV1, chickenpox, toxoplasmosis, herpes, cytomegalovirus, adenovirus, Epstein-Barr virus, parvovirus B19, enterovirus, paraecovirus, and Mycobacterium tuberculosis. Blood cultures were negative. As the patient persisted with fever, ceftriaxone introduced at admission was replaced by Piperacillin/Tazobactam and Teicoplanin. However, the patient evolved quickly with multiorgan dysfunction characterized by liver and renal failure, LDH increase, and coagulopathy characterized by prolonged prothrombin time (PT) and activated partial thromboplastin time (aPTT), fibrinogen, and factor V reduction keeping factor VIII level between the normal range values (Table ).
+As the clinician suspected of concurrent HLH further tests showed serum ferritin level of 47.502 ng/mL (30–400 ng/mL) and slight elevation of triglycerides. A new bone marrow aspiration confirmed the presence of 21.6% of aberrant plasma cells with significant macrophage activity with several haemophagocytosis pictures (Fig. ). Immunophenotyping demonstrated 4.9% of anomalous and monoclonal plasma cells expressing CD45dim, CD19partial, CD38bright, CD138bright, CD56dim, CD117dim, and kappa light chain restriction in cytoplasm. Thereafter, the patient was immediately transferred to the intensive care unit and pulse therapy with methylprednisolone 1 g/d for 3 days was administered to control HLH. Afterwards the patient received cyclophosphamide at dose of 500 mg once weekly and dexamethasone 20 mg once daily D1–D4 as anti-multiple myeloma treatment. We were not able to investigate lymphadenopathy because the patient became soon hemodynamically unstable, requiring mechanical ventilation support and renal replacement therapy with hemodialysis. Unfortunately, the patient died 15 days after hospitalization.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+40.37
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 40.37}
+

@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 97
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:26:51.996473
+================================================================================
+
+GROUND TRUTH: 22.06035
+PREDICTED: 22.06
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 25-year-old man presented with pain in both knees for four consecutive years and, since 3 months, bilateral groin pain and pain in the gluteal region, radiating to both knees.
+The patient has been diagnosed with HHR as a child and has been on potassium phosphate and calcitriol tablets ever since. A typical bowing and anteromedial rotation of the tibia was corrected with tibial shaft osteotomies and Ilizarov fixators of both tibias about 10 years ago []. After these procedures, very slow healing of the bone with multiple revisions due to delayed union was observed.
+The patient has had pain in both knees for four years, more in the right than in the left knee. Initially, at 6 years of follow-up, approximately 4 years ago, MRI of both knees and pelvic X-ray did not reveal any pathological changes other than a strong coxa vara malformation of both hips (). Pain was described by the patient as start-up pain that disappeared or bettered after walking with full weight bearing for a while. Since about 3 months, the pain began to concentrate on both hips radiating in both knees; the same start-up character of the pain was described. Upon questioning, the patient admitted that he has not been taking his medication regularly the last 6 months.
+Clinical examination revealed a patient with athletic build, weighting 53 kg and measuring 155 cm. Hip range of motion was (right side/left side) flexion/extension 120/0/0 and 130/0/0, endo-/exorotation 20/0/5 and 20/0/30, and ab-/adduction 10/0/30 and 15/0/30. Trendelenburg's sign was positive on both sides. The patient complained of pain by abduction and exorotation. The Harris and Oxford hip scores were 86 and 43, respectively. Haematological and biochemical parameters were within normal range except for a low phosphate of 1.7 mg/dL (norm: 2.3–4.7) and low potassium of 3.1 mmol/L (norm: 3.5–5.1). Radiographs of hips and pelvis () revealed fractures in both femoral necks. An MRI of the pelvis showed an atrophic nonunion of both fractures ().
+Treatment options were discussed with the patient and a conservative treatment was decided on. The patient was advised to participate in sports that did not involve shock loading of the hip joint, for example, swimming, cycling, and aquajogging. The patient was informed that a prosthetic replacement of the hip could become necessary by further increase of symptoms or necrosis of the femoral head.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+22.06
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 22.06}
+

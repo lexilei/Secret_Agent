@@ -1,0 +1,50 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 105
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-02T03:23:06.407406
+================================================================================
+
+GROUND TRUTH: 18.59
+PREDICTED: 18.59
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 56-year old man presented to the Department of Internal Medicine with a deteriorated mental status. Laboratory tests performed in the emergency department demonstrated severe hypercalcemia at 17.95 mg/dl (reference range: 8.7–10.4), together with albumin levels of 3.2 g/dl, elevated levels of phosphor 5.9 mg/dl (reference range: 2.5–5), acute kidney injury with a creatinine level of 1.45 mg/dl (baseline creatinine level 0.9 mg/dl), urea, 73 mg/dl, uric acid, 12.8 mg/dl, estimated glomerular filtration rate 52 ml/minute, hemoglobin 11 mg/dl, and C-reactive protein 0.8 mg/dl. He was treated with an intravenous saline infusion, subcutaneous calcitonin, and intravenous glucocorticoids, followed by intravenous bisphosphonates. Due to his persistent hypercalcemia he was subsequently given 120 mg denosumab (Prolia). During hospitalization, there was significant improvement in his mental status concurrently with the normalization of his calcium level, which was 9.44 mg/dl at discharge.
+His past history was remarkable for his 2016 diagnosis of Rai stage IV chronic lymphocytic leukemia. The fluorescence in situ hybridization reaction revealed the deletion of the short arm of chromosome 17 (del (17p)) in 20% of B-cell lymphocytes. In addition, in a bone marrow biopsy, the patient was found to have unmutated IGHV gene status and ZAP 70 expression in leukemia cells.
+In 09/2017 he was admitted to the Department of Internal Medicine because of autoimmune hemolytic anemia. Treatment with a high dose glucocorticoid was started, followed by a slow tapering down of the dose. In 12/2017 he was again admitted to the Department of Internal Medicine with left hemiparesis, dysarthria, and left facial nerve palsy. Complete right carotid occlusion was found in the CT angiography.
+After discharge, he was treated with 2 courses of a Rituximab + Bendamustine protocol with a significant decrease in lymphocytes counts. In September 2018 treatment with the second line agent Ibrutinib was started. One month later, he developed paroxysmal atrial fibrillation with spontaneous conversion to sinus rhythm. Six days before the present admission, the patient was hospitalized because of paroxysmal atrial fibrillation with no evidence of myocardial ischemia. Ibrutinib was stopped because it was presumed to be the cause of the arrhythmia. During his present hospitalization additional laboratory tests revealed an elevated LDH level of 2250 U/l (reference range: 230–480), an alkaline phosphatase level of 220 U/l (reference range: 30–120), and low levels of PTH: 4.8 pg/ml (reference range: 18.4–81), 25 hydroxyvitamin D level of 52 mmol/l (reference range: 75–220) with normal 1.25 dihydroxyvitamin D level of 61.3 nmol/l (reference range: 50–190), WBC 108.000 (reference range: 4.5–11.5 K/μl), Lymphocytes 57%, PLT count of 88.000 (reference range: 150–450 K/μl).
+In the setting of his elevated LDH level, further decrease in his PLT level to 45.000 and severe hypercalcemia, it was decided to perform a positron emission tomography/computed tomography to assess the possibility of Richter transformation. The scan revealed a 1.3 cm nodule with an intensive uptake of tracer in the upper left lobe of the lung and in vertebra D 7, suspicious of metastasis (Fig. ).
+He underwent a bronchoscopy with a transbronchial biopsy of the lesion. Non-small cell carcinoma displaying positive CK 7 and negative to TTF-1, napsin-A, and p 40 immunostaining was diagnosed. An epidermal growth factor genotype was negative for mutations. Immunohistochemical analysis was negative for ALK and ROS1 protein rearrangement as well as PDL1 expression. He underwent 1 course of chemotherapy in September 2019 that included carboplatin, paclitaxel, and pembroluzumab. Results of the molecular analysis of the tumor were negative for epidermal growth factor receptor (EGFR) genotype mutations, ALK and ROS 1 rearrangement, and PDL-1 protein expression. He then began treatment with venetoclax for his refractory CLL.
+Ten days after starting therapy with venetoclax, he was admitted to the internal medicine department with large left upper lobe pneumonia. A chest CT revealed a large infiltrate with an air bronchogram. A subsequent urine antigen test was positive for legionella pneumonia. He completed treatment with respiratory quinolone for 21 days and was returned to oncological and hematological supervision.
+The patient received a second course of chemotherapy, but 4 days later he was admitted with suspected pneumonia and despite the broad-spectrum antibiotic treatment, respiratory failure developed and he passed away.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the corrected calcium for hypoalbuminemia, we use the formula:
+
+**Corrected Ca = Ca + 0.8*(4 - albumin)**
+
+From the patient note, the relevant values are:
+- **Calcium (Ca)**: 17.95 mg/dL  
+- **Albumin**: 3.2 g/dL  
+
+Plugging these into the formula:  
+Corrected Ca = 17.95 + 0.8*(4 - 3.2)  
+Corrected Ca = 17.95 + 0.8*(0.8)  
+Corrected Ca = 17.95 + 0.64  
+Corrected Ca = 18.59  
+
+The corrected calcium is **18.59**.  
+
+Answer: 18.59

@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 215
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T20:50:32.296645
+================================================================================
+
+GROUND TRUTH: 8.0
+PREDICTED: 7.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 33-year-old Turkish man was admitted to our emergency department with complaints of nausea, vomiting, weakness, diarrhea, and fever up to 38.8°C which had lasted for one month. The patient, who had been diagnosed with FMF at 17 years of age, had been started on a regular hemodialysis program at 29 years of age upon the development of chronic renal failure due to amyloidosis. He was not taking any pills regularly except colchicine tablets.
+At his physical examination, his general appearance was apathic and cachectic, his mucous membranes were dry and pale, and his skin was dry and rough with a urochromic color. His blood pressure was 110/70 mmHg, and his heart rate was 81 beats/minute. His heartbeat was rhythmic with auscultation, and there was no additional sound murmur. His abdominal examination showed that his liver extended 5 cm below the costal margin. The hepatic surface was rough and even and was painless on palpation. Traube's space was closed, and the spleen extended 2 cm below the costal margin. His muscles were atrophied at the extremities, and he had shedding hairs and an arteriovenous fistula on the left arm. No other pathological findings were detected during his systemic examinations.
+At the time of his first admission to the hospital, his laboratory tests with abnormal values were hemoglobin 9.2 g/dL, hematocrit 26.9%, mean corpuscular volume 79fL, bilirubin 1.6 mg/dL, creatinine 8.3 mg/dL, urea 60 mg/dL, albumin 2.1 g/dL, sodium 132 mmol/L, International Normalized Ratio 1.30, and prothrombin time 15.6 seconds. Hemoculture, stool microscopy, and stool culture were carried out after we observed recurring high fever attacks during his regular hemodialysis sessions, but he did not have high fever at his follow-up examinations. When no pathogenic microorganisms were detected, intravenous ceftriaxone 1 g twice daily was started empirically. Doppler ultrasonography and echocardiography were performed to identify fistulas, but there was still no obvious explanation for his fever. Abdominal US showed small fluid collections around the liver edge.
+After a fever that persisted for more than five days, the patient was started on 1 g of intravenous vancomycin once every four days. Abdominal ultrasonography was performed, and hepatosplenomegaly was detected. The liver edge was regular with hepatic parenchyma and showed no pathological finding. His ductus choledochus (common bile duct), intra-hepatic bile ducts, and gallbladder were all normal. Minimal ascites was detected in the abdomen. Examination of the ascites puncture sample produced no findings in favor of tuberculosis. The patient was scheduled for gastroscopy and colonoscopy but had hypoglycemic attacks during the preparation phase. His esophagogastroscopic examination results were within normal ranges. Examination of rectal biopsy samples taken during colonoscopy revealed type AA amyloidosis.
+The patient's fever was closely monitored for hypoglycemic episodes and decreased as a result of two weeks of antibiotic therapy. His ocular fundus examination and cranial MRI scans were normal, but he kept on vomiting frequently. During an attack of hypoglycemia, his laboratory results were blood glucose 36 mg/dL, insulin 0.2 μU/mL, C peptide 1.4 ng/mL, sodium 127 mmol/L, and cortisol 7.68 mcg/dL. A Synacthen stimulation test was planned with consultation by an endocrinologist to investigate for adrenal insufficiency. The maximum cortisol value measured was 8.87 μg/dL, and the patient was diagnosed with adrenal insufficiency, so he was started on prednisolone 40 mg per day administered intramuscularly. Subsequently, prednisolone tablets 10 mg/day were started. The patient's diarrhea came to an end, and his hypoglycemia did not recur. The patient's complaints of fatigue and loss of appetite decreased. He was discharged from the hospital with scheduled out-patient clinic monitoring. Three months later he died in the emergency department as a result of cardiac arrest caused by hypokalemia.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+7

@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 86
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-04T03:14:11.898700
+================================================================================
+
+GROUND TRUTH: 22.99262
+PREDICTED: 22.993
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 81-year-old, 77 kg, 183 cm man with a three-year history of muscle biopsy-proven IBM suffered a left intertrochanteric femoral fracture and a small parafalcine subdural hematoma as a result of falling down stairs in his home. The patient originally had progressive left proximal lower extremity and bilateral distal upper extremity weakness (left > right) that began several years before the diagnosis was definitively established with a muscle biopsy. The patient's serum creatine phosphokinase concentration was 748 U/L (normal < 170 U/L) at the time of the diagnosis. The patient had several near falls in the months preceding the accident. His left hand and wrist weakness affected his activities of daily living to some degree (fine motor skills), but physical and occupational therapy helped the patient remain active and he continued to live independently with occasional assistance from his wife. Because of worsening left quadriceps weakness, he had recently begun using a cane to help him rise from a seated position. The patient had a history of oropharyngeal dysphagia (solid food, pills) for which he was receiving care from an otolaryngologist. The patient also had chronic gastroesophageal reflux disease that was well controlled with a proton pump inhibitor. He did not have difficulty swallowing liquids and denied respiratory complaints associated with chronic aspiration. The patient did not lose consciousness after striking his head on the stairs and had no new neurological complaints. His other past medical history was notable for coronary artery disease, hyperlipidemia, chronic low back pain, and vertebral artery stenosis. He underwent coronary artery bypass graft surgery 16 years before the current admission. A previous transthoracic echocardiography revealed normal left ventricular systolic function. He denied chest pain, dyspnea, and exercise intolerance. The physical examination and radiographs of his femur revealed the left intertrochanteric fracture. The Glasgow coma scale was 15 and there were no new focal neurological deficits. A magnetic resonance imaging study demonstrated the small parafalcine subdural hematoma without a cerebral mass effect.
+The patient was transported to the operating room for repair of the left intertrochanteric fracture. Because primary respiratory failure (, ) resulting, at least in part, from diaphragmatic dysfunction () has been previously reported in patients with IBM and prolonged duration of action of neuromuscular blockers may also occur, the authors opted to avoid the use of a neuromuscular blocker for endotracheal intubation and during maintenance of anesthesia in the current patient. After applying cricoid pressure, anesthesia was induced using intravenous lidocaine (0.5 mg.kg-1), propofol (1 mg.kg-1), and remifentanil (infusion of 0.1 mcg.kg-1.min-1). Manual positive-pressure ventilation with sevoflurane (inspired concentrations between 2% and 3%) in oxygen (100%) was used with sustained cricoid pressure to supplement to intravenous anesthetics after loss of consciousness. After uneventful endotracheal intubation, anesthesia was maintained with sevoflurane (end-tidal concentrations between 0.7% and 1.5%) and remifentanil (infusion rates of 0.05 to 0.15 mcg.kg-1.min-1). The orthopedic surgeon repaired the fracture with a trochanteric femoral nail. Intravenous acetaminophen and fentanyl were administered for postoperative analgesia. The patient tolerated the procedure well. He demonstrated vigorous spontaneous respiratory effort as he emerged from anesthesia and was extubated without difficulty in the operating room. The patient made an uncomplicated recovery from surgery and was subsequently transferred to a rehabilitation facility in stable condition.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+22.993
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Body Mass Index (BMI)', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'weight_kg': 77, 'height_cm': 183}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'weight_kg': 77, 'height_cm': 183}}, {'stage': 'compute', 'success': True, 'result': 22.993, 'formula': 'BMI = weight / height^2'}], 'method': 'l4_pipeline'}
+

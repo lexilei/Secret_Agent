@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 96
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:37:21.059950
+================================================================================
+
+GROUND TRUTH: 19.66772
+PREDICTED: 19.668
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 12-yr-old female presented to our outpatient department with a right winged scapula. Her height was 139 cm and her weight was 38 kg. This condition abruptly developed after climbing a mountain for 2 hr with a rucksack/back-pack weighing about 20 kg at 2 months previous to her hospital visit. At a certain moment, she felt the drooping shoulder with a popping sound. She was born via spontaneous full-term vaginal delivery with a normal APGAR score. She had no specific family history of nerve or muscle diseases. Her growth and developmental history was nonspecific before the onset of winged scapula. Upon the physical examination, a winging deformity of the right scapula was noticed with the lateral deviation and upward rotation of the inferior angle, as observed on the erect neutral posture (). This abnormality was not detected when both shoulders were abducted (), but it was aggravated by shoulder flexion (). The motor and sensory functions of the upper extremities were normal and no side to side differences were revealed. The deep tendon reflexes of the biceps and triceps muscles were normoactive and symmetrical. No significant muscle atrophy in the shoulder girdles and the upper extremities was observed. On the laboratory tests, the routine complete blood count with differential counting, erythrocyte sedimentation rate, C-reactive protein, rheumatoid arthritis factor and urinalysis were normal, and the muscle enzyme tests, including serum creatine kinase, lactate dehydrogenase and transaminase, were also normal. Simple radiological studies, including the chest posterior-anterior view, both the shoulder anterior-posterior views and the scapular view, were nonspecific except for the slight scapular asymmetry.
+We examined the nerves by conducting an electrodiagnostic examination that included the long thoracic nerve, the dorsal scapular nerve and the spinal accessory nerves and the muscles including serratus anterior, levator scapula, trapezius and rhomboideus and so on; there were no definitive evidences that indicated any neuropathy or myopathy on electrodiagnosis.
+When the pain and functional impairment persisted, surgical intervention then became appropriate. An explorative operation was done. A posterior longitudinal skin incision was made parallel to the vertebral border of the scapula. The subcutaneous tissue was divided. We can observed that the rhomboidius major was ruptured and trapezius lower thoracic bundle displayed thinning (). The right scapula was unstable to the chest wall. Rhomboideus major and trapezius muscle repair and reefing were performed. After the muscle repair, the scapula was stable to chest wall at the time of the operation.
+Postoperatively, she achieved the anatomical restoration of her right shoulder and she received rehabilitative treatment for 2 weeks including range of motion exercise of the shoulder and strengthening exercise of the rhomboideus muscles. On the follow up examination, at 2 months after the operation, there was no weakness or deformity of the affected shoulder and no pain nor limitation of shoulder motion. She was satisfied with the recovery of her shoulder function ().
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Body Mass Index (BMI)', 'extracted_values': {'weight_kg': 38.0, 'height_cm': 139.0}, 'result': 19.668, 'method': 'python', 'formula': 'BMI = weight / height^2'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Body Mass Index (BMI)', 'extracted_values': {'weight_kg': 38.0, 'height_cm': 139.0}, 'result': 19.668, 'method': 'python', 'formula': 'BMI = weight / height^2'}}
+

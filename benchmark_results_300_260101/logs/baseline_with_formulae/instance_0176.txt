@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 176
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-02T03:23:09.118538
+================================================================================
+
+GROUND TRUTH: 55.0985
+PREDICTED: 54.5
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 57-year-old woman with a known history of EA with moderate TR and systemic hypertension became symptomatic with progressive dyspnoea and angina-like chest pain, occurring primarily on exertion or after meals. The patient denied syncope and dizziness but had occasional palpitations on exertion.
+The patient was taking bendroflumethazide only for hypertension, having found her chest pain worsened on losartan.
+On examination, height was 163 cm, weight 57 kg, blood pressure was 157/74 mmHg, heart rate 75 b.p.m., and oxygen saturations were 98%. Her jugular venous pressure was not elevated, chest was clear and there was no peripheral oedema. There was a grade 2/6 pansystolic murmur at the left sternal edge.
+Electrocardiogram (ECG) showed normal sinus rhythm with a prolonged PR interval (220 ms) and right bundle branch block (QRS duration 160 ms) (). A 24 h Holter monitoring showed sinus rhythm with first degree heart block throughout, 54–104 b.p.m., with occasional runs of ventricular bigeminy and premature ventricular complexes. Full blood count, renal and liver function tests were normal.
+Transthoracic echocardiography performed in 2014 showed a small, non-hypertrophied left ventricle with normal function. The commissure of the posterior and septal leaflets of the tricuspid valve was significantly apically displaced (42 mm), resulting in a large atrialized component of the right ventricle. The anterior leaflet was large and redundant. There was severe TR. Aortic and mitral valve morphology was normal. There was no systolic anterior motion of the mitral valve. The aortic annulus was small and there was turbulent flow through the left ventricular outflow (LVOT) due to the abnormal motion of the atrialized portion of the right ventricle in systole, resulting in a peak velocity through the LVOT of 2.6 m/s at rest, increasing to 3.5 m/s post-Valsalva (peak gradient 27 mmHg at rest and 48 mmHg post-Valsava) (, Video S1).
+Given the patient’s cardiovascular risk profile, computed tomography of the coronary arteries was undertaken, which was normal.
+Symptoms persisted and worsened with an objective deterioration in functional capacity over a 5-month period, based on cardiopulmonary exercise testing done (VO2max: 24.3 mL/kg/min—METS 6.9 in July vs. VO2max: 18.7 mL/kg/min—METS 5.3 in December with a reduced oxygen pulse).
+A year later a cardiac magnetic resonance imaging showed an increase in the right ventricular end-diastolic volume over a 12-month period, from 123 mL/m2 (ejection fraction 64%) to 146 mL/m2 (ejection fraction 57%). The tricuspid regurgitant fraction increased from 32% to 52%.
+Transoesophageal echocardiography (TOE) was performed to explore the LVOT anatomy in 2015. Post-TOE, transthoracic echocardiography demonstrated a resting peak velocity of 1.9 m/s across the LVOT, which increased to 5.2 m/s (incomplete Doppler envelope) with leg raising (). No atrial septal defects were identified. In the same year, an exercise stress echocardiography showed a significant increase in peak gradient to 157 mmHg and a peak flow velocity through the LVOT from 2.1 m/s (mean gradient 12 mmHg) at rest to 6.3 m/s (mean gradient 95 mmHg) at peak stress at very low workload (25 W) ().
+Losartan was switched to verapamil 80 mg three times daily due to the chest pain being worse on losartan. The mechanism for this was felt to be myocardial ischaemia due to exacerbation of the LVOTO secondary to reduction of the systemic vascular resistance and therefore reduction in coronary blood flow. We felt that verapamil might reduce any dynamic LVOTO in a manner similar to that in hypertrophic obstructive cardiomyopathy. She was also prescribed indapamide 2.5 mg once a day instead of bendroflumethazide with good blood pressure control.
+The patient’s case was reviewed at the multidisciplinary meeting and the decision was made to proceed to cardiac surgery for tricuspid valve repair or replacement in the hope that this would reduce the LVOTO and some LVOTO resection if possible.
+Due to the rarity of the condition, the patient has chosen not to have surgery and is currently seeking several opinions worldwide.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+54.5

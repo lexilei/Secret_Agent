@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 155
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T20:50:31.119845
+================================================================================
+
+GROUND TRUTH: 7.48685
+PREDICTED: 6.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 17-year-old female was admitted for living donor (LD) RTx. Her earlier medical history included renal biopsy proven malignant hypertension, and end stage renal disease (ESRD). She was on maximum dosage of three types of antihypertensive drugs [nifedipine, clonidine, metoprolol] to control blood pressure. She was on regular hemodyalisis of 4 hrs duration two to three times per week since three months.
+She developed headaches, altered consciousness, visual disturbances and seizures. A seizure was the presenting manifestation. Seizures were generalized tonic clonic leading to status epilepticus. It was succeeded by visual blurring. The headache was typically constant, nonlocalized, moderate to severe, and unresponsive to analgesia. Altered consciousness ranged from mild somnolence to confusion and agitation, progressing to stupor/coma. The deep tendon reflexes were brisk with Babinski signs present. The patient had weakness and incoordination of the limbs. No other focal neurologic deficits were present. Physical assessment revealed blood pressure of 210/110 mmHg, temperature 38.3°C, respiratory rate of 30 breaths per minute, heart rate of 100 beats per minute.
+Arterial blood gas showed PaO2 137 mm of Hg, PCO2 43 mm of Hg, pH 7.37 and bicarbonate 24.6 mmol/L, potassium 4.3 mmol/L, sodium 143 mmol/L, choride 103 mmol/L, anion gap 19 mmol/l, calcium 1.12 mmol/l, glucose 108 mg/dl, lactic acid 3.4 mmol/l.
+The fundoscopic examination revealed hypertensive retinopathy without papilledema. A non contrast brain computed tomography revealed bilateral symmetrical white matter hypodensity in the parietal, temporal, and occipital regions suggesting PRES []. No other abnormalities were noted. There was no history of cytotoxic immunosuppressive therapy or eclampsia. Laboratory investigations revealed hemoglobin, 9.2 gm/L; total white cell count, 5.65 × 103/μl (differential count: 55% neutrophils, 42% lymphocytes, 2% monocytes, and 1% eosinophils); platelet count, 1.5 × 105/μl; serum creatinine (SCr), 7.2 mg/dl; blood urea, 92 mg/dL; serum calcium, 8.7 mg/dl; serum phosphorus, 5.7 mg/dl; serum magnesium, 2 mg/l; alanine aminotransferase, 34 units/l (normal range: 0-40 units/l); aspartate aminotransferase, 30 units/l (normal range: 5-34 units/l); serum bilirubin, 1 mg/dl; and serum albumin, 3.8 gm/dl. Multiple blood, urine, and sputum cultures were sterile. With control of hypertension, the patient improved dramatically.
+Intravenous lorazepam was given for acute control of seizures and she went on to require phenytoin, valproic acid and levetiracetam. She was started on more frequent HD. She required five different types of antihypertensive drugs to control blood pressure. Initially she was started on intravenous nitroprusside and nytroglycerine to rapidly control blood pressure. Cardiac monitoring, frequent measurement of blood pressure, and pulse oximetry were instituted. She recovered clinically within one week. The resolution of findings on neuroimaging occurred gradually. Subsequently, she underwent successful LD RTx without recurrence of PRES.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+6

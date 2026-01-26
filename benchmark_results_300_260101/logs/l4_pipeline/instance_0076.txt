@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 76
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-04T03:14:11.806671
+================================================================================
+
+GROUND TRUTH: 104.0
+PREDICTED: 104.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 12-year-old girl, the youngest of three siblings, born of a nonconsanguineous marriage, and who had a normal perinatal history, was referred for evaluation of an incidentally detected cardiac murmur. There was failure to thrive but otherwise the patient was asymptomatic. There was no history of chest pain, syncope or palpitations. There was no family history of cardiac disease or genetic syndromes. The child had normal motor and mental development with normal intelligence. She had not attained menarche and her physical examination revealed short stature, craniofacial disproportion, shrunken facies, alopecia, prominent scalp veins, prominent eyes, micrognathia, a “beaked” nose, prominent and stiff joints, dystrophic nails, thin wrinkled skin and absent secondary sexual characteristics suggestive of a premature ageing syndrome [Figures and ]. The above-mentioned abnormal features were noted to appear after infancy.
+The blood pressure was 128/92 mmHg, and all pulses were palpable, but feeble. There was bilateral carotid shudder. There was no brachiofemoral delay and clinical findings suggestive of severe aortic stenosis were present. Electrocardiography revealed left ventricular hypertrophy with a strain pattern. Echocardiography showed calcified aortic cusps with severe aortic stenosis (peak systolic gradient of 72 mmHg, mean gradient of 52 mmHg), mild aortic regurgitation and moderate mitral regurgitation []. There was concentric left ventricular hypertrophy with normal function (ejection fraction 57%). The aortic valve area was estimated to be 0.7 cm2. The patient's lipid profile revealed hypercholesterolemia with elevated low-density lipoprotein cholesterol and normal high-density lipoprotein cholesterol. It was decided to manage the patient conservatively as the outcome of aortic valve balloon dilatation/surgical replacement in this condition is not well documented and also because of the extremely fragile general condition of the patient.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+104.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Body Mass Index (BMI)', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {}, 'missing': ['weight_kg', 'height_cm']}, {'stage': 'validate', 'is_valid': False, 'missing': ['weight_kg', 'height_cm'], 'cleaned': {}}, {'stage': 'repair_1', 'extracted': {'sex': 'female'}, 'is_valid': False, 'missing': ['weight_kg', 'height_cm']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

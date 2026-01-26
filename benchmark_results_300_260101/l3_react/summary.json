@@ -1,0 +1,16 @@
+{
+  "experiment": "l3_react",
+  "level": "L3",
+  "total_instances": 300,
+  "correct_exact": 175,
+  "correct_tolerance": 216,
+  "errors": 0,
+  "accuracy_exact": 0.5833333333333334,
+  "accuracy_tolerance": 0.72,
+  "error_rate": 0.0,
+  "total_cost_usd": 1.0148774999999997,
+  "avg_cost_usd": 0.003382924999999999,
+  "total_tokens": 811902,
+  "avg_latency_ms": 15551.606815656027,
+  "total_time_seconds": 4670.698818683624
+}

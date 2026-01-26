@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 223
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T20:50:32.526620
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 3.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old woman was brought to the emergency department this afternoon for evaluation of progressive discomfort in her right calf that started abruptly 24 hours ago while she was seated at home. She described the pain as a constant dull ache that intensifies with ankle dorsiflexion or when she attempts to bear full weight, and she denied antecedent trauma, falls, or new exercise routines. Her history is notable for stage IIIB invasive ductal carcinoma of the left breast diagnosed 18 months earlier; she completed neoadjuvant paclitaxel six weeks ago and continues to receive maintenance endocrine therapy under oncology follow-up. Two years ago she suffered a left middle cerebral artery ischemic stroke that left her with persistent mild right-sided hemiparesis; as a result, she ambulated with a single-point cane and wore a hinged ankle-foot orthosis but had remained largely independent in activities of daily living. She denied recent abdominal or pelvic operations, and her last hospitalization was more than a year ago for completion mastectomy. Medications include anastrozole, low-dose aspirin for secondary stroke prevention, and sertraline; she does not take hormonal contraceptives or glucocorticoids. She has never smoked, drinks wine socially, and lives with her partner. Review of systems revealed no fevers, chills, night sweats, shortness of breath, palpitations, chest pain, or hematuria. On arrival, blood pressure was 128/74 mm Hg, heart rate 84 beats/min, respiratory rate 16 breaths/min, temperature 37.1 °C, and oxygen saturation 98 % on ambient air. She appeared comfortable at rest but guarded the right lower limb when shifting on the stretcher. Cardiopulmonary examination was unremarkable with regular rhythm, clear lungs, and no jugular venous distention. Abdominal exam showed a well-healed infra-mammary surgical scar without tenderness, masses, or organomegaly. Inspection of the lower extremities revealed subtle fullness of the right calf, with a circumference of 36 cm measured 10 cm distal to the tibial tuberosity compared to 34.5 cm on the contralateral side. The thigh and ankle circumferences were symmetric, and the foot appeared normally perfused. Skin over the posteromedial calf was warm but not erythematous, and compression left no appreciable indentation. A web-like network of bluish subcutaneous channels was visibly engorged along the posteromedial aspect of the leg, distinct from typical varicosities. Palpation elicited a vague soreness deep to the gastrocnemius; there was no discrete cord, fluctuance, or crepitus. Active range of motion at the knee was limited mainly by her baseline weakness; passive motion was intact without joint tenderness. Distal pulses were palpable and equal. There was no inguinal lymphadenopathy, hip pain, or back tenderness. Neurologic exam confirmed chronic right lower-extremity power of 4/5 proximally and 3+/5 distally, unchanged from prior outpatient documentation. Laboratory studies obtained at the bedside included a complete blood count showing hemoglobin 11.8 g/dL, platelet count 282 × 10⁹/L, and white-cell count 6.4 × 10⁹/L. Comprehensive metabolic panel was within normal limits, except for mildly elevated alkaline phosphatase 152 U/L consistent with her oncologic history. Serum D-dimer was not yet resulted at the time of note completion. Plain radiographs of the tibia and fibula ordered to rule out fracture demonstrated only soft-tissue prominence. Point-of-care ultrasound was deferred pending radiology duplex scanning because the department was understaffed. No cutaneous lesions suggested cellulitis, and there was no evidence of ruptured popliteal cyst on initial ultrasound screening performed during residency teaching rounds. Given the acuity of pain onset, visible superficial channels suggestive of collateral flow, the patient’s active malignancy under treatment, and her chronic neurologic weakness necessitating external bracing, there is heightened concern for an occlusive process in the deep venous system of the symptomatic limb. The clinical picture does not currently favor musculoskeletal strain or peripheral neuropathy, and there is no clinical suspicion for arterial insufficiency. The plan includes urgent venous duplex ultrasonography of the right lower extremity, basic coagulation profile, and discussion with oncology regarding perioperative anticoagulation options should thrombosis be confirmed.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3

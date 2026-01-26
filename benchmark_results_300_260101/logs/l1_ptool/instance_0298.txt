@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 298
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-01T21:26:55.956826
+================================================================================
+
+GROUND TRUTH: 2.68233
+PREDICTED: 2.68
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 48-year-old male with a history of ulcerative colitis (UC) and PSC presented with frequent and loose stools ever since total proctocolectomy with IPAA 10 years prior. Other symptoms include postprandial pelvic and abdominal pain, nausea, urgency, incontinence, nocturnal seepage, and weight loss of 15 pounds over the past 2 months. He was an active smoker. The patient washed had been diagnosed with having pouchitis and enteritis on pouchoscopy and histology. His past treatment regimen included metronidazole, ciprofloxacin, oral and topical mesalamines, hydrocortisone enemas, and oral prednisone with minimal relief of symptoms. He was on long-term oral budesonide with recurrent symptoms while tapering off the corticosteroid. He underwent multiple pouchoscopies that showed no improvement in mucosal inflammation in the pouch body and afferent limb.
+At the time of his initial presentation at our Pouch Center, he reported urgency, bowel frequency 12–15 times per day, loose-to-watery stools, occasional bleeding, incontinence, and nocturnal seepage. The Pouchitis Disease Activity Index (PDAI) symptom subscore was 5. Laboratory evaluation showed white blood cell count 7,600/μL, hemoglobulin 11.3 g/dL, platelet count 110,000/μL, creatinine 0.8 mg/dL, albumin 3.4 g/dL, alkaline phosphatase 320 international unit/L, total bilirubin 0.8 mg/dL, aspartate transaminase 23 international unit/L, and alanine transaminase 14 international unit/L.
+Pouchoscopy showed diffuse inflammation of both the pouch body and prepouch afferent limb with granularity, edema, loss of vascularity, and spontaneous bleeding. The PDAI endoscopy subscores of the pouch body and afferent limb were 4 and 2, respectively. The pouch inlet was widely patent. He was started on oral vancomycin 250 mg four times a day for the treatment of pouchitis, enteritis, and PSC. The patient responded with the PDAI symptom subscore reduced to 1. Fatigue also improved. Repeat pouchoscopy after 3 months showed mucosal healing with no active disease in the pouch body and afferent limb with PDAI endoscopy subscores of 0 and 1, respectively. The liver-function test showed that alkaline phosphatase was 120 international unit/L. He has been followed up for 4 years until now and a year later repeat pouchoscopy showed pouchitis and enteritis in remission (). Alkaline phosphatase was 127 international unit/L.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.68
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 2.68}
+

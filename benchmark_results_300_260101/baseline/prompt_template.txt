@@ -1,0 +1,28 @@
+================================================================================
+EXPERIMENT: baseline (L0 - Direct LLM Call)
+================================================================================
+
+DESCRIPTION:
+Direct LLM call without any framework. Simply prompts the LLM with the
+patient note and question, asking for a numeric answer.
+
+================================================================================
+PROMPT TEMPLATE
+================================================================================
+
+You are a medical calculation assistant.
+
+Patient Note:
+{patient_note}
+
+Question: {question}
+
+Instructions:
+1. Read the patient note carefully
+2. Extract the relevant values needed for the calculation
+3. Perform the calculation
+4. Return ONLY the final numeric answer
+
+Important: Return just the number, nothing else. No units, no explanation.
+
+Answer:

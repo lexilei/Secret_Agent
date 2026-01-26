@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 273
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T20:50:33.653091
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 29-year-old man presents to the emergency department due to central chest pain over the past 3 days which is constant and unrelated to exertion. The pain is sharp, severe, increases when lying down, and improves with leaning forward. The pain also radiates to his shoulders and neck. The patient has no past medical history. He has smoked 10 cigarettes per day for the past 7 years and occasionally drinks alcohol. He presents with vital signs: blood pressure 110/70 mm Hg, regular radial pulse of 95/min, and temperature 37.3°C (99.1°F). On physical exam, a scratching sound of to-and-from character is audible over the left sternal border at end-expiration with the patient leaning forward. His chest X-ray is normal and ECG is shown in the picture.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2

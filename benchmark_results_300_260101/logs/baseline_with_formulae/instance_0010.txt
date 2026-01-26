@@ -1,0 +1,79 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 10
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-02T03:22:58.458661
+================================================================================
+
+GROUND TRUTH: 63.90115
+PREDICTED: 63.9
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 47-year-old female (height, 160 cm; weight, 60 kg) with a giant liver due to polycystic liver disease (PLD) was scheduled to undergo ABO-incompatible living donor liver transplantation because of worsening malnutrition, disability in activities of daily living, and abdominal distention, which were converted to 16 points by the model for end-stage liver disease score. In the past 3 years, coil embolization of the hepatic artery and percutaneous drainage of liver cysts had been performed. After the liver cyst drainage, biliary peritonitis occurred and she was treated with antibiotics.
+Preoperative computed tomography revealed remarkable abdominal distension caused by an enlarged polycystic liver (). Results of laboratory tests were as follows: hemoglobin (Hb), 10.1 g/dL; platelet (Plt) count, 27.4 × 104/μL; albumin, 2.2 g/dL; blood urea nitrogen, 31.3 mg/dL; creatinine, 0.90 mg/dL; total bilirubin, 0.31 mg/dL; alanine transaminase, 13 U/L; aspartate transaminase, 15 U/L; prothrombin time-international normalized ratio (PT-INR), 1.18; activated partial thromboplastin time (APTT), 30.0 sec; fibrinogen, 573 mg/dL. An electrocardiogram (ECG) showed normal sinus rhythm, and transthoracic echocardiography showed normal cardiac function. Portal hypertension was not predicted. The surgeons pointed out a risk of bleeding because of surgical difficulties due to PLD and strong adhesion induced by peritonitis. Blood loss anticipated by the surgeon was 15000 ml. The transfusion unit was preoperatively informed about the possibility of massive transfusion. We ordered 5,600 mL of O type red blood cells (RBC), 4,800 mL of AB type fresh frozen plasma (FFP), and 800 mL of AB type platelet concentrate (PC).
+After induction of general anesthesia, three 18-gauge peripheral catheters, a 12-gauge triple-lumen central venous catheter, and a pulmonary arterial catheter were placed. Since total clamping of the inferior vena cava requiring veno-veno bypass might be necessary, two 4-Fr introducer sheaths were placed at the femoral vein and the intrajugular vein. Soon after the start of surgery, massive bleeding of more than 4,000 mL/hr occurred (). We started massive transfusion of FFP at a ratio of about 1 : 1 with RBC. We also transfused 5% albumin and restricted the crystalloid solution. Reinfusion of salvaged blood and use of veno-veno bypass with retrieved blood from the operative field were avoided because many cysts of the PLD ruptured during surgery and the blood in the operative field was contaminated by the cystic content. We constantly ordered blood products and communicated with the transfusion unit.
+The bleeding rate increased as the surgery progressed because bleeding occurred from the area where the tissue was detached from adhesion. Body temperature rapidly decreased despite the use of a rapid infusion and fluid warming system (Level 1 Fast Flow Fluid Warmer, Smiths Medical ASD Inc., Rockland, MA, USA) through 4-Fr introducer sheaths. Although catecholamine administration and massive transfusion from 5 venous lines including the introducer sheath were performed by many anesthesiologists, it was extremely difficult to maintain blood pressure and a critical situation with a risk of cardiac arrest continued due to hypotension. In addition, even though administration of insulin and calcium was performed, electrolyte disturbances of K+ of 6.3 mEq/L and Ca2+ of 2.1 mg/dL (normal range: 4.6–5.3 mg/dL) with peaked T wave and prolongation of QTc interval (557 msec) occurred (Figures and ). At that time, we visually noticed that the QT interval was shortened in response to bolus calcium administration, and we therefore displayed the QTc interval on a bedside monitor (CSM-1000 series Life Scope G, Nihon Kohden, Tokyo, Japan) and used the change of real-time QTc interval as a supportive indicator for calcium correction (maximum rate: 120 mEq/hr) combined with blood gas analysis. The hepatectomy was performed without veno-veno bypass 4.5 hours after the start of surgery and the bleeding rate at that time was 15,000 mL/hr (). The excised polycystic liver weighed 10.0 kg.
+Until portal reperfusion, we continued massive transfusion (approximately 12,000 mL/hr) including 300 mL of PC and sodium bicarbonate with additional fluid warming systems. After portal reperfusion, the bleeding rate gradually decreased and the hemodynamic variables and electrolyte disturbance improved (Figures and ; ). After anastomosis of the hepatic artery, 1 g of tranexamic acid was administered. Except for PC, which was transported from transfusion centers in our region and/or neighboring regions, the supply of blood products was not interrupted and coagulation factors were maintained throughout the surgery by administration of FFP and 3 g of fibrinogen with at least 1.26 of PT-INR, 43.6 sec of APTT, and 116 mg/dL of fibrinogen (). The abdomen was packed with gauzes and closed because complete hemostasis was difficult. The patient was transferred to the intensive care unit (ICU). Soon after arrival at the ICU, she responded to command. On postoperative day (POD) 2, second-look surgery was performed for removal of packed gauzes. She was extubated on POD 3 without pulmonary edema or cardiac overload.
+The duration of surgery was 16 hours and 53 minutes and the duration of general anesthesia was 22 hours and 27 minutes. Throughout the surgery, anesthesia was maintained with 1.5% sevoflurane, 0.16–0.33 μg−1 ・kg−1 ・min−1 of remifentanil, and intermittent fentanyl administration (total of 1.5 mg). Bispectral IndexTM (Aspect Medical Systems, Norwood, MA, USA) values were between 30 and 60. Cardiac index was between 1.2 and 2.8 L−1 ・min−1 ・m−2. A total of 742 mEq of calcium ion, 750 mL of 7% sodium bicarbonate, and 18 units of insulin were administered. Postoperative analysis of the relationship between QTc interval and Ca2+ during surgery showed a strong negative correlation (). Representative laboratory data are shown in . Total infusion volume was 88,560 mL (crystalloid solution: 3,450 mL; 6% hydroxyethyl starch: 3,500 mL; 5% albumin: 10,490 mL; RBC: 34,160 mL; FFP: 34,600 mL; PC: 2,400 mL), and total output volume was 86,350 mL (estimated volume of blood loss including ascites and cystic fluid: 81,600 mL; urine output: 4,750 mL); therefore, intraoperative fluid balance was +2,210 mL. Although she suffered from acute rejection and sepsis, she finally regained independent living by rehabilitation and was discharged on POD 156.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's Creatinine Clearance (CrCl) using the Cockroft-Gault Equation, we follow these steps:
+
+### 1. **Determine the patient's BMI and adjusted body weight (ABW):**
+- **Height:** 160 cm = 1.60 m  
+- **Weight:** 60 kg  
+- **BMI:**  
+  \[
+  BMI = \frac{weight}{height^2} = \frac{60}{1.60^2} = 23.44 \, \text{kg/m}^2
+  \]
+  Since BMI is normal (18.5–24.9), we use the **minimum of ideal body weight (IBW) and actual weight**.
+
+- **Ideal Body Weight (IBW):**  
+  \[
+  IBW = 45.5 + 2.3 \times (height_{in} - 60)
+  \]
+  Convert height to inches:  
+  \[
+  160 \, \text{cm} = 63 \, \text{inches}
+  \]
+  \[
+  IBW = 45.5 + 2.3 \times (63 - 60) = 45.5 + 6.9 = 52.4 \, \text{kg}
+  \]
+  The **adjusted body weight (ABW)** is the minimum of IBW and actual weight:  
+  \[
+  ABW = \min(52.4, 60) = 52.4 \, \text{kg}
+  \]
+
+### 2. **Extract other relevant values:**
+- **Age:** 47 years  
+- **Serum Creatinine (Cr):** 0.90 mg/dL  
+- **Gender coefficient (female):** 0.85  
+
+### 3. **Apply the Cockroft-Gault Equation:**
+\[
+CrCl = \frac{(140 - age) \times ABW \times gender\_coef}{Cr \times 72}
+\]
+\[
+CrCl = \frac{(140 - 47) \times 52.4 \times 0.85}{0.90 \times 72}
+\]
+\[
+CrCl = \frac{93 \times 52.4 \times 0.85}{64.8}
+\]
+\[
+CrCl = \frac{4140.42}{64.8} = 63.9 \, \text{mL/min}
+\]
+
+### Final Answer:
+63.9

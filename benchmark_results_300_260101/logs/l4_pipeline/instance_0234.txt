@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 234
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-04T03:14:13.600418
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 0.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 38-year-old man was transported by ambulance to the hospital after noticing marked enlargement of his right lower leg when he attempted to stand from his couch earlier this evening. Five days ago he developed a febrile viral gastroenteritis that left him profoundly fatigued and he spent the better part of the past four days reclined on a sofa, rising only for brief bathroom visits and minimal meals; he returned to a standing position for the first time this afternoon and immediately perceived a heavy, tight sensation in the posterior calf. He denies any recent falls, direct trauma, twisting injury, insect bites, rashes, or strenuous exercise. His medical history includes mild intermittent asthma controlled with albuterol as needed and no prior thromboembolic episodes, and he has never required orthopedic casting, braces, or limb immobilization. He has not undergone any operative procedures, catheterizations, or endoscopies in the past year, takes no prescription medications other than an as-needed inhaler, and uses no hormonal agents or corticosteroids. He last traveled by air more than six months ago and works remotely as a software engineer. There is no family history of thrombophilia, early myocardial infarction, stroke, or peripheral vascular disease. He does not smoke, drinks beer socially, and denies illicit drug use. Review of systems is negative for chest pain, pleuritic discomfort, palpitations, shortness of breath, hemoptysis, abdominal pain, dysuria, or fevers since the initial viral illness subsided two days ago. On arrival he appeared mildly anxious but in no respiratory distress. Vital signs: temperature 37.0 °C, blood pressure 124/72 mm Hg, heart rate 88 beats per minute and regular, respiratory rate 16 per minute, oxygen saturation 99 % on room air. Cardiac auscultation revealed normal S1 and S2 without murmurs, rubs, or gallops; lung fields were clear to auscultation with good air movement bilaterally. Abdominal examination showed soft, nontender bowel segments with normal active sounds and no hepatosplenomegaly. Inspection of the lower extremities demonstrated visible fullness confined to the right calf: a flexible tape placed 10 cm distal to the tibial tuberosity measured 38.5 cm on the right and 34.8 cm on the left, a disparity of 3.7 cm. The overlying skin was warm and exhibited a lattice of engorged, blue-tinged superficial vessels tracing obliquely from the medial gastrocnemius toward the popliteal crease, distinct from his baseline and without the tortuosity characteristic of varicosities. Skin color was otherwise preserved with no erythema or streaking. Gentle thumb pressure over the anterior tibia produced no persistent indentation, and the dorsum of the foot was similarly non-pitting. Palpation of the femoral triangle, popliteal fossa, posterior calf, and course of the peroneal compartments elicited no focal tenderness; he described a diffuse dull ache that intensified when he attempted to dorsiflex the ankle against resistance. Range of motion at the knee and ankle was full though movement augmented the sense of tightness. Distal pulses (dorsalis pedis and posterior tibial) were palpable and symmetric, capillary refill was brisk under two seconds, and sensory examination to light touch, pinprick, and vibration was intact. Motor strength was 5/5 in all major muscle groups bilaterally. There was no inguinal lymphadenopathy or joint effusion, and the contralateral limb appeared normal. Laboratory studies drawn before any anticoagulation showed hemoglobin 14.1 g/dL, platelet count 268 × 10⁹/L, leukocytes 7.2 × 10⁹/L, sodium 138 mmol/L, potassium 4.0 mmol/L, bicarbonate 24 mmol/L, creatinine 0.8 mg/dL, and normal transaminases; coagulation profile revealed a PT of 12.0 seconds with an INR of 1.0 and an aPTT of 29 seconds. A plain radiograph of the tibia and fibula ordered to exclude occult fracture showed only soft-tissue prominence without bony abnormality. No clinical features pointed toward cellulitis, ruptured Baker cyst, muscle tear, or lymphedema as an equally compelling explanation for the findings. In light of the objective calf asymmetry exceeding three centimeters, the network of newly distended superficial channels suggesting collateral venous flow, the absence of dependent pitting, his prolonged recumbency over the recent days, and lack of prior thrombotic history or recent surgical intervention, an occlusive process within the deep venous system of the right lower limb is considered highly suspicious and warrants immediate duplex ultrasonographic evaluation.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.2}, {'stage': 'extract', 'extracted': {'age': 38, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 38, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

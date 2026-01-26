@@ -1,0 +1,43 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 158
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T21:37:22.308539
+================================================================================
+
+GROUND TRUTH: 15.59972
+PREDICTED: 17.116
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old woman comes to the physician because of a 6-month history of worsening shortness of breath on exertion and fatigue. She has type 1 diabetes mellitus, hypertension, hypercholesterolemia, and chronic kidney disease. Her mother was diagnosed with colon cancer at the age of 65 years. Her blood pressure is 145/92 mm Hg. Examination shows conjunctival pallor. Laboratory studies show:
+Hemoglobin 9.2 g/dL
+Mean corpuscular volume 88 μm3
+Reticulocyte count 0.6 %
+Serum
+Ferritin 145 ng/mL
+Creatinine 3.1 mg/dL
+Calcium 8.8 mg/dL
+A fecal occult blood test is pending.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 55.0, 'creatinine': 3.1, 'sex': 'female'}, 'result': 17.116, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 55.0, 'creatinine': 3.1, 'sex': 'female'}, 'result': 17.116, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}}
+

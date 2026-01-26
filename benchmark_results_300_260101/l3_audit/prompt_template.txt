@@ -1,0 +1,14 @@
+================================================================================
+EXPERIMENT: l3_audit
+================================================================================
+
+L3+ - ReAct + TraceCritic + RepairAgent
+
+Adds error detection and automatic repair to L3 ReAct.
+Uses audits to evaluate traces and repair agent to fix issues.
+
+Audits:
+- NonEmptyTraceAudit: Ensures trace has steps
+- NoFailedStepsAudit: Checks for failed tool calls
+- AllCompletedAudit: Verifies all steps completed
+- MedCalcStructureAudit: Domain-specific structure checks

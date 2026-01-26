@@ -1,0 +1,16 @@
+{
+  "experiment": "l1_ptool",
+  "level": "L1",
+  "total_instances": 300,
+  "correct_exact": 158,
+  "correct_tolerance": 197,
+  "errors": 19,
+  "accuracy_exact": 0.5266666666666666,
+  "accuracy_tolerance": 0.6566666666666666,
+  "error_rate": 0.06333333333333334,
+  "total_cost_usd": 0.36731749999999974,
+  "avg_cost_usd": 0.001224391666666666,
+  "total_tokens": 293854,
+  "avg_latency_ms": 7255.793715711166,
+  "total_time_seconds": 2181.4912419319153
+}

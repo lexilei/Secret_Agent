@@ -1,0 +1,33 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 180
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T20:50:31.632503
+================================================================================
+
+GROUND TRUTH: 56.88197
+PREDICTED: 55.5
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 68-year-old Japanese man (height: 160 cm, weight: 75 kg) was admitted to our hospital with chest pain and acute dyspnea. He worked as a truck driver and had never traveled abroad.
+The chest pain and dyspnea had started a few days previously and had worsened over time. The patient had not received treatment prior to admission.
+The patient’s medical history included type 2 diabetes mellitus and hypertension that were treated with oral metformin hydrochloride (750 mg daily) and valsartan (80 mg daily), respectively. His diabetes was poorly controlled, with a hemoglobin A1c of 7.7%.
+He denied a history of similar diseases in close relatives.
+On auscultation, his heart sounds were normal with no murmur. Coarse crackles were heard in both lungs. No other abnormalities were detected.
+Laboratory data at the time of admission are shown in Table . In summary, his white blood cell count and C-reactive protein levels were high. Myocardial enzymes lactate dehydrogenase and aspartate aminotransferase were elevated, and troponin-T was positive. An anti-human immunodeficiency virus (HIV) antibody test result was negative.
+His chest radiography on admission showed consolidation in the right upper lobe and bilateral congestion (Figure ).
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+55.5

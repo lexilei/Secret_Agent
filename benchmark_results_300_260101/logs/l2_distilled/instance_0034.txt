@@ -1,0 +1,46 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 34
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T21:37:19.616439
+================================================================================
+
+GROUND TRUTH: 22.44331
+PREDICTED: 22.443
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 58-year-old man presents to the emergency department with rapid onset of severe pain and swelling in his right great toe overnight. He reports experiencing a similar episode several years ago but cannot recall the diagnosis or the medication he was given for treatment. His medical history is significant for hyperlipidemia, poorly controlled diabetes, and stage 3 chronic kidney disease. Laboratory studies are ordered as seen below.
+
+Serum:
+Na+: 139 mEq/L
+Cl-: 101 mEq/L
+K+: 5.9 mEq/L
+HCO3-: 22 mEq/L
+BUN: 20 mg/dL
+Glucose: 259 mg/dL
+Creatinine: 3.1 mg/dL
+
+The interphalangeal joint of the right great toe is aspirated, with the synovial fluid aspirate shown under polarized light microscopy in Figure A.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 58.0, 'creatinine': 3.1, 'sex': 'male'}, 'result': 22.443, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 58.0, 'creatinine': 3.1, 'sex': 'male'}, 'result': 22.443, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}}
+

@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 121
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-04T03:14:12.242635
+================================================================================
+
+GROUND TRUTH: 1.5
+PREDICTED: 3.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 68-year-old man presented to the the emergency system with severe dyspnea and hypoxia (SpO2: 87% in ambient air). His past medical history was significant for hypertension, obesity, diabetes, and chronic renal failure. On admission (day 1), he had a temperature of 39°C, high blood pressure (170/100 mmHg), and heart rate (110 bpm in sinus rhythm (SR)). Diffuse breath sounds (rales) were found on both lung fields and the chest HRCT [, Panel E] revealed bilateral GGOs consistent with interstitial inflammatory lung disease. Nasopharyngeal and oropharyngeal swabs were immediately obtained, confirming SARS-CoV-2 positivity. After a CPAP attempt (days 1 and 2), the patient was intubated (day 3) with ventilatory support parameters demonstrating a high (PEEP of 15 cm H2O), FiO2 80%, and driving pressure <15 cmH2O. Serum creatinine increased to 2.3 mg/dL (glomerular filtration rate of 31 mL/min), leukocytes were 8.3 × 109 U/L, lymphocytes were 0.9 × 109 U/L, and hemoglobin was 9.3 g/dL. The high-sensitivity troponin T curve was 59-43–35 ng/L (normal value <14), NT-proBNP reached to 10.650 pg/mL (normal value <153) and C-reactive protein peak was 29 mg/L (normal value <6) with procalcitonin peak of 6.3 ng/mL (normal value range: 0–0.15). Interleuchin-6 values were 91.83 pg/mL and 37.63 pg/mL and he was treated with intravenous tocilizumab. Coagulation markers demonstrated a pro-thrombotic status with a platelet count of 160 × 109 U/L, D-dimer of 17 mcg/mL, fibrinogen of 656 mg/dL, and an aPTT of 33.8 s. ECG [, Panel F] showed atrial fibrillation with high heart rate (111 bpm), mild ST depression, inverted T waves in V4–V6, and a QTc of 437 ms. TTE revealed a moderate left ventricular systolic dysfunction (LVEF 40%) with a mildly dilated left ventricle (end-diastolic diameter of 61 mm), normal right ventricle in size and function, and normal cardiac valves. There was a moderate pericardial effusion, anterior to the right ventricle (maximum 15 mm in diastole). A mobile and elongated (0.3 × 4 cm) clot was noted within the effusion (Panel G). The patient was treated with lopinavir/ritonavir (400 mg BID), hydroxychloroquine (200 mg BID), and enoxaparin (1 mg/kg BID). Metilprednisolone (1 mg/kg OD) was added (day 6) together with beta-blockers, diuretics, and nitrates. Due to persistent atrial fibrillation, enoxaparin was switched to edoxaban (30 mg OD) on day 9. To date (day 15), the clot continues to decrease as seen on the chest HRCT (Panel H).
+The prone position was used for the first four nights in the ICU. He was extubated the 15th day after intubation; noninvasive ventilation and HFNC were used the following days to optimize oxygenation.
+At 6-month follow-up, the patient was in good conditions, lung lesions appeared reduced on chest HRCT, but at TTE pericardial clot appeared unchanged [].
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {'age': 68, 'sex': 'male', 'has_hypertension': True, 'has_diabetes': True}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 68, 'sex': 'male', 'has_hypertension': True, 'has_diabetes': True}}, {'stage': 'compute', 'success': True, 'result': 3.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 89
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:26:51.832322
+================================================================================
+
+GROUND TRUTH: 19.97622
+PREDICTED: 19.98
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 37-year-old female patient was referred to Hacettepe University, Pediatric Genetics Department following complaints of atypical facial features. She was the second child of non-consanguineous healthy parents. She was born at term by spontaneous vaginal delivery with a birthweight of 1,500 g (lower than 3rd centile). Her birth length and head circumference were not recorded. The patient had delayed psychomotor development and began to walk and speak after the age of 3 years. She has been able to read and write after attending a rehabilitation program. She was evaluated for developmental delay, short stature, learning disability, recurrent upper respiratory system infections, and constipation in childhood, but no diagnosis was made. Laboratory work-up, including cranial imaging, echocardiography, and blood biochemistry were all normal except for subclinical hypothyroidism and osteoporosis. The patient had generalized anxiety disorder and hypochondriasis since her adolescence and her symptoms had deteriorated over time. She started to suffer from difficulty falling asleep, especially during the last five years. She was described as over-friendly by her family members. On her admission, a physical examination revealed a weight of 42 kg (lower than 3rd centile), a height of 145 cm (lower than 3rd centile), and a head circumference of 52 cm (−2 standard deviations). Among the facial features, a long face, a long neck accentuated by sloping shoulders, low-set ears, periorbital fullness, a short nose, a wide mouth, a small jaw, and malar flattening were noted (). She was talkative and gregarious. The patient exhibited prolonged phases of staring into our faces and maintained eye contact throughout the physical examination. Based on these findings, the patient was clinically diagnosed with Williams syndrome. Fluorescence in situ hybridization analysis revealed 46,XX.ish del(7)(q11.2 q11.2) (ELN-), which confirmed the clinical diagnosis (). Genetic counseling was provided to the family and a follow-up plan was created. An informed consent was obtained from the patient.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+19.98
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 19.98}
+

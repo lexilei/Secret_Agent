@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 138
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T20:50:30.783058
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 43-year old, asymptomatic woman was admitted to our hospital by her family doctor after receiving a chest-x-ray during routine clinical examination. The x-ray showed a mediastinal mass overlapping the aortic arch region (Fig. ). For verification a computed tomography (CT) was performed and revealed incidentally a type B dissection, which was most likely chronic without information of the index date, originating from an aneurysm of a left cervical arch with a maximum diameter of 6 cm (Fig. ). The left renal artery, the coeliac trunc and the main part of the superior mesenteric artery branched from the false lumen without a sign of malperfusion of the organs. Because of the huge diameter and the potential risk of rupture, an urgent surgical repair was planned. Before intervention the patient got a blood pressure adjustment by ACE inhibitor. Betablocker was not necessary because of a resting pulse of 60 beats per minute. For neurological online monitoring, sensitive and motor evoked potentials were monitored. Spinal drainage was installed 1 day before the procedure. Surgical access was carried out through median sternotomy and an additional left lateral thoracic incision through the fourth intercostal space (Hemi-Clemshell). Simultaneously to the preparation of the aneurysm, partial cardiopulmonary bypass was installed in the left groin by cannulation of the femoral artery and vein under echocardiographic guidance. During selective ventilation of the right side, the left lung was mobilized by transsection of the Ligamentum pulmonale and preparation of the perianeurysmatic tissue and adhesions. After identification and preparation of the recurrent and phrenic nerve and the supraaortal branches, the descending aorta was clamped and a distal anastomosis performed with a straight graft (20 mm). The visceral arteries partially branched from the false and true lumen without a sign of malperfusion. Before the final distal anastomosis, we performed a fenestration of the dissection membrane about a length of 5 cm to keep the perfusion of both lumina. The left carotid artery originated from the aortic arch with a distance of only 1 cm from the aneurysm. The left axillary artery branched directly from the aneurysm and was dissected and reimplanted with a separate 8 mm sidegraft to the 20 mm straight graft between the distal arch and proximal descending aorta. (Fig. ). The procedure was performed with partial cardiopulmonary bypass (CPB) of 87 min, aortic clamp time of 62 min under normothermic condition. The patient was extubated on first postoperative day and recovered well.
+Biopsy of aortic tissue showed a picture consistent with arteriosclerosis and loss of smooth muscle cells, rupture of the elastic fibres and fibrosis of the media. The intima could not be visualized in detail.
+The patient was discharged to cardiac rehabilitation at 13th postoperative day and recovered well. Last follow up with computed tomography was performed 3, 5 years after initial operation with a good and stable result of the dissection membrane and a perfusion of both lumina. The patient is able to resume a normal life without limitations.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0

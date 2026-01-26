@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 62
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T21:26:51.288273
+================================================================================
+
+GROUND TRUTH: 56.66667
+PREDICTED: 56.7
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 40-year-old unrestrained passenger is brought into the emergency room after a motor vehicle collision. The patient is awake and alert, though he complains of chest and back pain. Soon after he is brought in, the patient loses consciousness. His vitals are: Temperature 96 deg F (35.6 deg C), pulse 120/min, blood pressure 80/45 mmHg, and respirations 22/min. His physical exam is significant for bruising on his chest along with crepitus present with sternal palpation. His chest radiograph is shown in Figure A.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+56.7
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 56.7}
+

@@ -1,0 +1,67 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 5
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-02T03:22:58.311864
+================================================================================
+
+GROUND TRUTH: 78.12231
+PREDICTED: 78.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 45-year-old, 58 kg, 156 cm woman presented with increased and prolonged vaginal bleedings. A physical examination and an ultrasound showed a submucosal leiomyoma of the uterus. There were no other symptoms or pathological findings. Preoperative blood tests, which included electrolytes analyses, a full blood exam, and coagulation parameters, showed no anomalies. Most notably, both creatinine and sodium were within normal levels, i.e. 0.7 mg/dL and 137 mEq/L, respectively. The patient had a history of encephalopathy during childhood of an unknown origin without sequelae, an elective caesarean section (1997) due to leiomyoma, laparoscopic myomectomy and removal of an endometrial cyst of the ovary (1999), and a second caesarean section (2000) due to an uterine instability subsequent to the first caesarean section and myomectomy. The patient had no known allergies. She was taking daily doses of ethinyl estradiol (0.02 mg) and levonorgestrel (0.1 mg) continuously over a period of six months. The patient refused a hysterectomy but an endoscopic removal of the leiomyoma and an endometrial ablation was decided on, subsequent to which the patient gave written informed consent. The patient was administered with 7.5 mg midazolam orally 60 min preoperatively. Subsequent to placing the patient in the lithotomy position, the application of a peripheral venous catheter and the attachment of standard monitoring equipment (electrocardiogram, non-invasive blood pressure cuff and a peripheral capillary oxygen saturation analyzer), anaesthesia was induced intravenously with propofol (2 mg/kg) and sufentanil (0.3 μg/kg).
+A laryngeal mask was inserted, and after the correct positioning was verified, the lungs were ventilated with a fraction of inspired oxygen (FiO2) of 0.5 and a minute volume (MV) of 74 mL/min/kg at a ventilation frequency of 10/min in volume controlled mode (IPPV). The positive end-expiratory pressure (PEEP) level was 0 Pa and the peak pressure was 900 Pa. Anaesthesia was maintained with propofol (8 mg/kg/h). After anaesthesiological clearance the endoscopy commenced. Purisole® SM (Fresenius Kabi Inc., Germany) was utilized as the distension medium. This standard hypotonic solution contains 27 g sorbitol and 5.4 g mannitol per liter. A pressure of 16 kPa (120 mmHg) was applied to unfold the uterine cavity. Endometrial ablation and dissection of the submucosal myoma were performed within 70 min by monopolar resection. The duration of the procedure was prolonged due to the reduced visibility caused by excessive bleeding and cervical leakage of distension medium, which impeded proper expansion of the uterine cavity. The ventilation pressure increased slowly and continuously 60 min subsequent to the start of surgery. The compliance of the lungs, as well as the achievable minute volume within the acceptable airway pressure limit of 2 kPa, decreased. It was presumed that the level of anaesthesia was insufficient and was followed by the increased administration of propofol (10 mg/kg/h). The additional inhalation of fenoterol did, however, not improve the situation. As ventilation continued to be difficult, the laryngeal mask was replaced by a 7.0 cm (inside diameter) cuffed tube subsequent to the administration of 100 mg succinylcholine as a muscle relaxant. Approximately 50 mL of a foamy, transparent liquid was aspirated from the trachea. Testing with litmus paper indicated an alkaline pH and, therefore, not the aspiration of gastric content. The amount of the pulmonary oedema increased and, despite high levels of peak airway pressures at this point approximately 3 kPa (= set peak pressure limit), adequate ventilation was not possible. Blood gas and electrolyte analyses indicated acidosis, as well as a severe hyponatremia (pH 7.11; Na 74 mEq/L; partial pressure of CO2 49.9 mmHg; saturation of O2 97 % at FiO2 1.0). Cardiopulmonary changes remained minimal. 40 mg of furosemide and 500 mL of 3 % NaCl solution were immediately administered at an infusion rate of 500 mL/h, with constant monitoring for electrolyte changes. As the patient showed clinical signs of impaired haemostasis, the operation procedure was stopped. The patient was admitted to the intensive care unit with continuous administration of 3 % NaCl at a rate of 50 mL/h and electrolyte control. Plasma sodium levels increased from 74 mEq/L to 103 mEq/L after one hour, and to 130 mEq/L after 7 h (Fig. ). All together 800 mL of 3 % NaCl solution were administered within 7 h totalling at 24 g. Subsequently, sodium replenishment was stopped and the patient was extubated without problems. Immediate neurological assessment revealed no detectable deficits. 20 h after the onset of hyponatremia, the patient’s sodium levels returned to within the normal range. Until then, the cumulative renal excretion was 8.5 L. 9 L of distension medium was used intraoperatively with a calculated uptake of 5 L. The patient was relocated to the gynaecologic ward the following day and was released from the hospital on the third postoperative day without any detectable sequelae.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's Creatinine Clearance (CrCl) using the Cockroft-Gault Equation, we follow these steps:
+
+### 1. **Determine the patient's BMI and adjusted body weight (ABW):**
+- **Weight:** 58 kg  
+- **Height:** 156 cm = 1.56 m  
+- **BMI:**  
+  \[
+  BMI = \frac{weight}{height^2} = \frac{58}{(1.56)^2} = 23.8 \, (\text{Normal range: 18.5–24.9})
+  \]
+- Since the BMI is normal, we use the **minimum of ideal body weight (IBW) and actual weight** for ABW.  
+
+#### **Calculate IBW (Ideal Body Weight):**
+- **Height in inches:** \(156 \, \text{cm} = 61.4 \, \text{in}\)  
+- **IBW (female):**  
+  \[
+  IBW = 45.5 + 2.3 \times (height\_in - 60) = 45.5 + 2.3 \times (61.4 - 60) = 45.5 + 3.22 = 48.72 \, \text{kg}
+  \]
+- **ABW:** Minimum of IBW (48.72 kg) and actual weight (58 kg) = **48.72 kg**  
+
+### 2. **Extract other relevant values:**
+- **Age:** 45 years  
+- **Serum Creatinine (Cr):** 0.7 mg/dL  
+- **Gender coefficient (female):** 0.85  
+
+### 3. **Apply the Cockroft-Gault Equation:**
+\[
+CrCl = \frac{(140 - age) \times ABW \times gender\_coef}{Cr \times 72}
+\]
+\[
+CrCl = \frac{(140 - 45) \times 48.72 \times 0.85}{0.7 \times 72}
+\]
+\[
+CrCl = \frac{95 \times 48.72 \times 0.85}{50.4}
+\]
+\[
+CrCl = \frac{3936.54}{50.4} = 78.1 \, \text{mL/min}
+\]
+
+### **Final Answer:**
+78

@@ -1,0 +1,33 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 72
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-02T03:23:03.730914
+================================================================================
+
+GROUND TRUTH: 88.33333
+PREDICTED: 88.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 34-year-old Surinamese female was referred to the Department of Vascular Medicine of our hospital because of right-sided blurred vision, caused by ischemic retinopathy and neovascularisation (Fig. ). Her medical history was remarkable for heterozygote alpha-thalassemia, but negative for thrombotic and recurrent infectious events. The family history was also negative for thrombotic events or bleeding tendency. The patient was not treated with anticoagulants or platelet inhibitors. Physical examination was normal (BMI 23.0 kg/m2, blood pressure 125/70 mmHg, heart rate 85/min, normal heart sounds, and no vascular murmurs). After the exclusion of hypertension, diabetes mellitus, vasculitis, hyperviscosity, and sickle cell disease, a thrombophilia workup was performed. All hemostatic laboratory parameters were found normal except for an increased protein S activity (179%) with high free protein S level (207%), despite a normal total protein S antigen level (98%) (Table ). This suggested that, in contrast to normal conditions, all protein S was free protein S, instead of 30–40% free and 60–70% bound protein S. High activity and antigen levels of free protein S were confirmed in a separate sample 3 months later. Clinically, a protein S deficiency is considered as a possible cause of hypercoagulation, which in turn could have led to the retinopathy. The incidental finding of elevated protein S levels were not considered explanatory of the condition. We did not initiate anticoagulation or thrombocyte aggregation inhibition. The patient's vision did not improve remarkably, nor did it deteriorate in the subsequent months after her initial visit.
+The high free protein S level in the proband was caused by a reduced level of C4BP (18%), as measured with an ELISA against the α-chain of C4BP. To identify a possible molecular defect underlying the C4BP deficiency, we sequenced the protein-coding regions and exon/intron boundaries of C4BPA (encoding C4BPα, ) and C4BPB (encoding C4BPβ, ).
+We identified two previously reported non-synonymous variants in C4BPA, that is, c.719G>A (p. R240H), rs45574833 ((A=0.0140/1686 (ExAC), A = 0.0030/15 (1000 Genomes), A = 0.0095/124 (GO-ESP), A = 0.0078/227 (TOPMED)), and c.899T>C (p. I300T), rs4844573 (C = 0.4014/47780 [ExAC], C = 0.4898/2453 [1000 Genomes], C = 0.4841/6296 [GO-ESP], T = 0.4689/13653 [TOPMED]).
+In addition, we screened the father and brother for these mutations. Both are also Surinamese. Only p. I300T was present in the father (Fig. ). Both father and brother had normal free protein S levels. Mother, second sister, and second brother were unavailable for testing.
+Discordant data concerning the association between C4BP polymorphisms and atypical hemolytic uremic syndrome have been reported , . Furthermore, these two variants have also been identified in women experiencing recurrent miscarriages, but due to equally high frequencies between patients and controls, the importance of these variants in this particular clinical situation may be questionable . No mutations were found in the C4BPB gene.
+Because we could not find clear molecular defect in the C4BP gene responsible for the reduced expression, and a recent report indicated that binding of protein S to C4BP promotes cellular secretion of C4BP , we also sequenced the sex hormone-binding globulin (SHBG)-like region of protein S (), responsible for binding to C4BP using the previously published primers , . No mutations explaining a reduced binding of protein S to C4BP were found in the SHBG-domain of protein S.
+Although the medical records did not report any use of vitamin K antagonist, we excluded the interference of any form of vitamin K antagonists by the measurement of coagulation factors II, VII, and X which were all normal, except for factor X which was slightly increased (163%) (Table ). Furthermore, there was no indication of reduced capacity of liver synthesis with normal antithrombin and factor V levels. Furthermore, we also did not find a clear effect of decreased C4BP levels on the complement route, with normal complement pathway activities (Table ).
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+88

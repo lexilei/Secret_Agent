@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 227
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T21:37:25.567978
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old woman presented to the urgent care area of the medical ward late this morning with a chief complaint of progressive swelling of her right lower extremity that she first noted two days ago while getting dressed for work. She reports that on awakening that morning her shoe felt tight and the pant leg seemed snug from ankle to hip; by last night the limb had become visibly larger than the left with a heavy, taut sensation and mild aching that worsened during her usual 20-minute walk home but abated somewhat after she elevated the leg on a pillow. She denies fevers, night sweats, chills, trauma, insect bites, rashes, or new medications. She has not experienced chest pain, hemoptysis, pleuritic pain, palpitations, or light-headedness. Her surgical history is notable for a laparoscopic sleeve gastrectomy performed six weeks ago at an outside facility; she recovered well, returned to office work after ten days, and has been able to ambulate freely without any prolonged periods of recumbency, long-distance travel, air flights, or car rides exceeding one hour. Her past medical history includes class II obesity prior to surgery, well-controlled hypothyroidism on levothyroxine 75 µg daily, and seasonal allergic rhinitis for which she takes cetirizine as needed. She has never been treated for thromboembolic disease, nor has she undergone vein ablation, sclerotherapy, or vascular bypass. She does not smoke, drinks wine socially, and denies hormone replacement therapy or oral contraceptive use since menopause three years ago. Family history is negative for thrombophilia, premature myocardial infarction, or stroke; both parents are alive in their eighties. Review of systems is otherwise unremarkable. On arrival, vital signs were temperature 36.8 °C, blood pressure 126/76 mm Hg, heart rate 92 beats/min, respiratory rate 18 breaths/min, and oxygen saturation 97 % on ambient air. She appeared mildly uncomfortable but was able to ambulate to the examination table without assistance. Cardiac examination revealed a regular rhythm without murmurs, gallops, or rubs; lungs were clear to auscultation bilaterally with good air entry. The abdomen was soft and nontender with well-healed trocar scars in the epigastrium and left upper quadrant, no palpable masses, and active bowel sounds. Lower-extremity inspection demonstrated obvious enlargement of the entire right leg from groin to ankle with a subtle glossy sheen of the skin but no erythema, warmth, ulceration, or weeping. A flexible tape measure placed 10 cm below the tibial tuberosity recorded a circumference of 39 cm on the right versus 37 cm on the left, confirming only a 2 cm difference at the calf. Measurement 15 cm above the patella revealed 55 cm on the right compared with 50 cm on the left, highlighting more pronounced proximal fullness. Soft-tissue compression over the anterior tibia produced a 2-mm depression that refilled within 20 seconds, and similar pitting was reproducible over the dorsum of the right foot; no such indentation occurred on the contralateral side. Distal pulses (dorsalis pedis and posterior tibial) were palpable and symmetric, capillary refill was brisk, and skin temperature was comparable in both limbs. Sensation to light touch, proprioception, and vibration was intact, and motor strength was 5/5 throughout. There was no calf cord, no palpable popliteal mass, and no discoloration of the toes. Examination of joints revealed full, pain-free range of motion at the knee, ankle, and hip without effusion or crepitus. No enlargement of inguinal lymph nodes was noted. Laboratory studies obtained before any anticoagulant therapy showed hemoglobin 13.4 g/dL, platelet count 254 × 10⁹/L, leukocytes 6.8 × 10⁹/L, sodium 139 mmol/L, potassium 4.1 mmol/L, creatinine 0.9 mg/dL, and normal transaminases; prothrombin time was 12.4 seconds with an INR of 1.0, and aPTT was 30 seconds. A serum β-hCG test was negative. Given the recent abdominal surgery within the past two months, unilateral swelling involving the full length of the limb, confined pitting edema, absence of prolonged bed rest, lack of prior thrombotic episodes, and no obvious alternative source such as cellulitis, lymphedema, orthopedic injury, or heart failure, an acute obstructive process in the deep venous system of the right lower extremity is considered high on the differential, and a duplex ultrasound encompassing the iliac, femoral, popliteal, and calf veins has been urgently ordered.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 2.0}
+

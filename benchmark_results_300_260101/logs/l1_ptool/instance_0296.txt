@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 296
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-01T21:26:55.904087
+================================================================================
+
+GROUND TRUTH: 2.39709
+PREDICTED: 2.397
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 33-year-old woman with homozygous sickle cell disease complicated by multiple admissions for painful crises and autosplenectomy presented with a two-week history of nausea and vomiting. She also has a history of significant alcohol abuse and recently increased her alcohol intake to approximately 6-8 ounces of vodka daily. She began to have nausea and vomiting along with her more typical sickle cell crisis pain and was found to have profound anemia and hyperbilirubinemia.
+​Physical examination revealed severe jaundice, hepatomegaly and mild encephalopathy. Pertinent laboratory findings included white blood cell count 33.6 K/mm3, hemoglobin 6.2 g/dL, platelets 275 K/mm3, pre-exchange hemoglobin S 72.1%, total bilirubin 52.9 mg/dL, direct bilirubin 33.3 mg/dL, alkaline phosphatase 231 units/L, aspartate transaminase (AST) 113 units/L, alanine transaminase (ALT) 32 units/L, haptoglobin <10 mg/dL. Further tests revealed nonreactive HIV antigen and antibody, negative hepatitis serology, negative autoimmune panel, iron level 188 mcg/dL, total iron-binding capacity (TIBC) 233 μg/dL, ferritin 9,636.6 ng/mL, and zinc 41 μg/dL (normal low 56 μg/dL). Ultrasound of the right-upper quadrant (RUQ) revealed hepatic steatosis (Figure ) and a patent portal vein. CT abdomen (Figure ) and abdominal MRI findings were consistent with hepatomegaly and iron overload with liver involvement but not cardiac. Her pain did not diminish during the first week of her admission, and she was complaining of increasing RUQ pain and tenderness on her physical examination.
+​Treatment included red cell exchange leading to a post-exchange hemoglobin S of 15%, folic acid, hydroxyurea and opioids to manage the acute sickle cell crisis. A liver biopsy was deferred given the patient’s severe coagulopathy (INR 2.6). She was safely discharged from hospital in stable condition and with a reduction of her total bilirubin to 33 mg/dL. Prior to discharge, the patient was referred for alcohol counselling and education. Monthly red cell exchange, iron chelation therapy, and close monitoring of liver disease were planned upon discharge. A year later, in follow-up the patient was found to have tolerated red cell exchanges and iron chelation without any complications or emergent hospitalizations.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.397
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 2.397}
+

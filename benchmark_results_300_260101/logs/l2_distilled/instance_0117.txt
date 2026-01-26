@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 117
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T21:37:21.509907
+================================================================================
+
+GROUND TRUTH: 11.141
+PREDICTED: -19.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 8-year-old Saudi girl developed persistent daily fever, weight loss, and cough for two months. Her grandmother had pulmonary tuberculosis 15 months prior to the onset of symptoms. The family sought medical advice first in a local hospital where investigations revealed bilateral pneumonia, left-sided pleural effusion, and bilateral pulmonary nodules. There was a history of animal contact but no raw milk ingestion. She had normal bowel habits with no jaundice, dysphagia or any other GI symptoms. She had no neurological, rheumatological, ophthalmologic, or dermatological symptoms. Physical examination revealed a pale girl, at 10th percentile for weight and height, and hepatosplenomegaly. The laboratory examination was remarkable for anemia (hemoglobin 7.9 g/dL), erythrocyte sedimentation rate (ESR) of 120 mm/h, and an alanine aminotransferase of 75 U/L (normal, 0-35 U/L), serum calcium 2.6 mmol/L, and low albumin level 31 g/L. Abdominal computed tomography (CT) revealed hepatosplenomegaly and hypodense nonenhancing lesions throughout the liver (variable in size from a few millimeters to 3 centimeters), and multiple enlarged abdominal lymph nodes. Chest CT scan showed basal and peripheral nodular opacities. Tests for mycobacterium tuberculosis (MTB) including tuberculin skin test and serum QuantiFERON showed negative results. Liver biopsy showed noncaseating granulomas []. In light of the strong epidemiological exposure, antituberculous medications were initiated (combination of isoniazid, pyrazinamide, ethambutol, and refampicin). Despite compliance with treatment and proper dosing, the patient persisted to be febrile with further weight loss.
+Three months later, the patient presented with repeated episodes of hematemesis and epigastric pain. Upper endoscopy revealed an erosive, hemorrhagic, nodular gastric mucosa over the entire stomach []. Histopathology of biopsies revealed chronic noncaseating granulomatous inflammation and tests for MTB, and fungal infection on the gastric biopsies were negative. Tests for antibodies associated with inflammatory bowel disease (perinuclear antineutrophil cytoplasmic antibodies, antiouter membrane protein C, and anti-Saccharomyces cerevisiae IgA and IgG) showed negative results. Oxidative burst test for chronic granulomatous disease was negative. Serum angiotensin-converting enzyme (ACE) level was 45 U/L (normal, 29-110 U/L).
+Given the multisystem involvement with significant chest findings, tissue findings of granulomatous disease from the liver and upper GIT, together with exclusion of other causes of granulomatous inflammation, the patient was diagnosed with active disseminated sarcoidosis, and intravenous corticosteroids (methylprednisolone 2 mg/kg/day) and omeprazole were started. Ten days after steroid therapy, a repeat of upper endoscopy showed dramatic improvement in the esophageal and gastric appearance [], and a colonoscopy showed no colonic involvement and normal terminal ileum. Biopsies from the esophagus, stomach, and duodenum showed dramatic reduction in the inflammation and disappearance of the granulomatous changes. The corticosteroids were tapered over 3 months. At 6 months after diagnosis, chest and abdomen CT showed resolution of the hepatosplenomegaly, and clearance of the hypodense lesions. During the four years after the diagnosis, the child has remained in remission with normal growth and development.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Calcium Correction for Hypoalbuminemia', 'extracted_values': {'calcium': 2.6, 'albumin': 31.0}, 'result': -19.0, 'method': 'python', 'formula': 'Corrected Ca = Ca + 0.8*(4 - albumin)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Calcium Correction for Hypoalbuminemia', 'extracted_values': {'calcium': 2.6, 'albumin': 31.0}, 'result': -19.0, 'method': 'python', 'formula': 'Corrected Ca = Ca + 0.8*(4 - albumin)'}}
+

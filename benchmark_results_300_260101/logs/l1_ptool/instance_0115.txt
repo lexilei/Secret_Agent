@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 115
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T21:26:52.340216
+================================================================================
+
+GROUND TRUTH: 7.86
+PREDICTED: 7.86
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 65-year-old female patient presented to our emergency room with abdominal pain, nausea, vomiting, and pain radiating towards the back. The patient history included nothing specific other than diabetes mellitus (DM) for 20 years and cholecystectomy a year ago. She did not have a history of alcohol consumption and she was on subcutaneous insulin treatment twice a day. During the physical examination, the patient was observed to be in a confused state and her general state was poor; her blood pressure was 90/55 mmHg, heart rate was 132/min, body temperature was 38.3°C, and the respiratory rate was 28/min. Her abdomen was slightly distended and epigastric tenderness was detected. No rebound or guarding was observed. The laboratory parameters were as follows: Hb: 17.1 g/dL, Hct: 45.7%, WBC: 8.9 K/uL, PLT: 505 K/uL, sedimentation: 37/hour, CRP: 24 mg/dL, glucose: 255 mg/dL, urea: 28 mg/dL, creatinine: 1.6 mg/dL, AST: 57 U/L, ALT: 34 U/L, LDH: 1995 U/L, amylase: 212 U/L, lipase: 349 U/L, triglycerides: 2148 mg/dL, albumin: 2.3 g/dL, calcium: 6.5 mg/dL, and HbA1c: 9.6%. The blood gas analyses gave the following results: pH: 7.32 mm/Hg, pCO2: 44 mm/Hg, PO2: 72 mm/Hg, HCO3: 19.6 mmol/L, and lactate: 0.9 mmol/L. The other laboratory parameters were normal. The abdominal ultrasonography was interpreted in favour of AP. In the abdominopelvic contrast-enhanced computed tomography (CT), the gall bladder could not be observed (excised) and the pancreas was diffusely enlarged (), while widespread increases of density and fluid retention were observed in the peripancreatic bilateral anterior renal fascia, splenic hilum, mesenteric adipose tissue, and the pelvic region. There was 19 × 18 mm necrosis area in the head of pancreas. Filling defects (thromboses) were observed in the splenic vein at the level of the tail of the pancreas. The patient's CT image shows the AP and splenic vein thrombosis (). A central venous catheter was placed and the patient was prescribed blood glucose tests every six hours and insulin treatment for the regulation of her blood glucose levels. After the consultation with the infectious diseases department, the patient was started on 4 × 500 mg/day of imipenem. She was administered 4 × 5000 units of low molecular weight heparin through the subcutaneous route and infused intravenously 5 units of regular insulin along with each 1000 mL 5% dextrose fluid and lipid apheresis was performed once a day for three days. After the three times lipid apheresis, the triglyceride values declined to 829 mg/dL. In addition to the low molecular weight heparin, the patient was started on warfarin treatment and the dose was adjusted to keep the patient's INR value over 2. When the patient's general condition was observed to improve after the treatment, she was discharged with the recommendation of a low-fat diet and fenofibrate and warfarin treatment.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+7.86
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 7.86}
+

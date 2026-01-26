@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 196
+CALCULATOR: QTc Bazett Calculator
+TIMESTAMP: 2026-01-04T03:14:13.093037
+================================================================================
+
+GROUND TRUTH: 345.5173
+PREDICTED: None
+CORRECT: False
+ERROR: Could not identify calculator
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A patient has a heart rate of 77 bpm and a QT interval of 305 msec.
+
+Question: Using the Bazett Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+(no response)
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': None, 'confidence': 0.0}], 'method': 'l4_pipeline'}
+

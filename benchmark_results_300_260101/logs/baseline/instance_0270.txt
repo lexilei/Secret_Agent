@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 270
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T20:50:33.592701
+================================================================================
+
+GROUND TRUTH: 7.0
+PREDICTED: 5.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 33-year-old man, without known co-morbidities, was brought into the emergency department with sudden onset of headache and severe central chest pain, radiating to the back. The patient arrived 3.5 hours after the onset of symptoms and was still in severe pain.
+The blood pressure was 180/125 mmHg, heart rate 105 beats per minute (bpm), temperature 36.1°C, oxygen-saturation 98% and the respiratory-rate was 28 per minute. An arterial blood gas (ABG) revealed significant lactate acidosis with pH 7.14, pO2 of 15.4 kPa, pCO2 of 4.5 kPa, bicarbonate of 12 mEq/L, base excess of −16 mmol/L and lactate value of 12 mmol/L. A 12 lead electrocardiography showed sinus rhythm with slight ST-depressions in the leads V4–6. 
+Bedside echocardiography revealed regional hypokinesia in the lateral area of the left ventricle, and an estimated left ventricular ejection fraction (LVEF) of 20–30%.
+The patients’ blood samples demonstrated abnormal with a troponin T of 300 ng/L, white blood cell count of 39 × 109/L and normal c-reactive protein.
+An immediate thoracic/abdominal computed tomography (CT) scan was performed, testing negative for aortic dissection or large pulmonary embolism. However, a 6 cm large tumor in the left adrenal gland was found in .
+During the first hours of observation, the patient’s symptoms spontaneously resolved. His vitals normalized and a repeated ABG showed a rising pH (7.33) and decreasing lactate (5.6 mmol/L). 
+Meanwhile, the patient’s previous history was explored in more detail. The evening before his admission, he had consumed multiple energy drinks, but denies the intake of alcohol or any other substances. 
+Nine years earlier, he presented with similar symptoms at another hospital, likewise had spontaneously recovered and was quickly discharged without a firm diagnosis. Similarly, 4 years prior to this admission, the patient was acutely hospitalized with headache, back pain, nausea, elevated lactate, white blood cell count and blood pressure. That admission summary described that all symptoms remitted, his vitals as well as blood values normalized over a few hours and the patient was discharged after a day of observation, without finding a plausible explanation to his symptoms. 
+Due to these findings and the suspicion of pheochromocytoma-induced cardiomyopathy, the patient was admitted. During the 7-day admission, the patient’s vitals remained normal and blood samples including troponin T slowly normalized. 
+A repeated transthoracic echocardiography showed a LVEF of 45% in .
+Plasma cortisol, renin, aldosterone and a 24-hour urine sample for steroid metabolites were within normal range. 3-Metthoxyadrenalin was elevated to 2,5 nmol/L (normal range: < 0,46 nmol/L) as well as 3-Metthoxynoradrenalin at 29,6 nmol/L (normal range < 1,09 nmol/L). 
+During this observation, the patient reported no symptoms and was discharged for planned surgery in an outpatient setting. 
+Due to the size of the tumor (6 cm in diameter) and hence a slightly increased risk of malignancy, open left-sided adrenalectomy was performed []. 
+The patient was discharged on the fifth postoperative day after uncomplicated surgery and observation period. Follow-up showed normalization of 3-metthoxyadrenalin and 3-metthoxynoradrenalin, and the patient had not experienced any symptoms or complications. 
+The left adrenal gland was found with a well-defined pheochromocytoma with a maximum diameter of 25 mm. The tumor morphology was with the growth of large nests and solid areas, high cellularity and areas with spindle cells as well as areas with profound nuclear pleomorphism and nuclear hyperchromasia. Thus, the Pheochromocytoma of Adrenal Gland Scales (PASS) score was 8 in []. It is not possible to predict the malign potential of a pheochromocytoma from the histopathology, but a PASS score > 4 indicates potential for aggressive clinical behavior. Thus, the patient will be followed with annually blood tests (3-metthoxyadrenalin, 3-metthoxynoradrenalin) lifelong. [].
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+5

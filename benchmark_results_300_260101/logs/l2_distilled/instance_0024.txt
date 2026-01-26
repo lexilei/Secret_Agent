@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 24
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T21:37:19.418572
+================================================================================
+
+GROUND TRUTH: 23.42179
+PREDICTED: 25.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 17-year-old male presented with a few days history of severe headache, visual disturbances, and a few episodes of vomiting. There was no history of fever, altered consciousness, seizures, or upper or lower limb weakness. The past medical history was unremarkable. At the time of examination, his BP was 240/130 mm Hg. The fundus examination revealed bilateral papilledema with grade 4 hypertensive changes. The neurological examination revealed normal grade 5 power in all four limbs with normally elicited deep tendon reflexes. The sensory examination was unremarkable with normal flexor plantar response bilaterally. Serum electrolytes were normal; kidney function tests were deranged (blood urea 86 mg/dL, serum creatinine 3.7 mg/dL). A renal biopsy revealed features of IgA nephropathy. MRI of the brain revealed a hyperintense signal of medulla and cervical cord on T2 and FLAIR images (Figures ); small hyperintense foci were also noted in the parieto-occipital regions and deep cerebellar white matter. The lesions were also hyperintense on diffusion-weighted imaging (because of T2 shine-through); there was no evidence of restricted diffusion on apparent diffusion co-efficient maps. As there was no clinical or lab evidence to support the diagnosis of encephalomyelitis or acute disseminating encephalomyelitis (ADEM) as suggested initially by the radiologist, an atypical variant of PRES was considered as the most plausible diagnostic possibility. Further investigations including CSF studies were not considered necessary in view of the strongly suggestive clinical and imaging features. The patient rapidly improved with antihypertensive treatment and a repeat MRI done 1 month afterward showed resolution of the earlier imaging findings.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+25.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 25.0}
+

@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 197
+CALCULATOR: QTc Bazett Calculator
+TIMESTAMP: 2026-01-01T21:26:53.918112
+================================================================================
+
+GROUND TRUTH: 636.38566
+PREDICTED: None
+CORRECT: False
+ERROR: Could not extract float from: **
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A patient has a heart rate of 110 bpm and a QT interval of 470 msec.
+
+Question: Using the Bazett Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+(no response)

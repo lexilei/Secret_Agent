@@ -1,0 +1,45 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 166
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T21:37:22.451025
+================================================================================
+
+GROUND TRUTH: 55.0985
+PREDICTED: 55.098
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A fifteen-year-old female adolescent was admitted to the child and adolescent acute psychiatric unit of our hospital for the first time after remaining isolated in her home for four months. She had initiated treatment in the outpatient clinic of her district in June 2013, attending only one visit and refusing all psychiatric treatment thereafter.
+There was a family history of schizophrenia in second degree relative on her mother's side. The patient's medical history, according to her family, included recurrent acute bronchitis until 10 years of age. No history of alcohol or tobacco consumption or psychoactive substance use was reported. The patient was very selective and restrictive in her meals since her childhood. She only ate biscuits, ham croquettes, bread, and omelettes.
+Regarding school, she described acceptable performance until the previous academic year when she presented some difficulties, and her teachers decided to change her to another classroom with a lower academic level.
+Her premorbid personality was described as quiet and shy, with some difficulty in social relationships, but with a group of friends at the beginning of the episode. She lived with her parents and an 18-year-old sister in a mid-size city (with a population of about 216,000 inhabitants).
+The patient reported that during the previous academic year she had been separated from her friends due to the change of classroom and at the same time she had begun to suffer digestive cramps and headaches, and as a result she stopped going to school. She stayed at home, with no interest in leaving the house, playing computer games and surfing the internet all day from April 2013 until her admission in our department 6 months later. The family explained that she had also become withdrawn from them, showing little interest in conversation, giving only monosyllabic answers, and gesturing in response to her parents' questions. She showed neglect in her personal hygiene and apathy regarding her physical appearance.
+At the time of her admission, the mental status examination showed she was conscious and oriented in time, place, and person, though unkempt and exhibiting psychomotor retardation, poor eye contact, and limited language, answering questions with monosyllables or gestures. She also displayed emotional lability when discussing sensitive issues like friends and school and showed hypothymia, poorly reactive mood, apathy, weakness, and anhedonia and was only interested in computer usage. She did not exhibit impaired sensory perception, self-referentiality, or psychotic behavior, though she was sleeping from 4:00 am to noon. Her food intake was very selective, limited to certain specific foods, but there was no loss of appetite. The patient denied having suicidal ideation.
+In the first interview, apathy and depressive moods were observed when she spoke about life events related to her friends at school and how this situation interfered with her functioning. Physical examination revealed a weight of 83.1 kg, height of 1.63 m, body mass index of 31.3, body mass index standard deviation score of 2.689, and blood pleasure of 120/80 mmHg. She denied muscular pain and no goiter or myxedema.
+Soon after admission, a blood test and electrocardiogram (EKG) were performed. EKG, liver function tests, electrolytes, and whole blood count were within normal limits. Due to her isolation at home and selective food intake, levels of some vitamins were analyzed; vitamin D3 and folic acid levels were insufficient (vitamin D3: 20.9 ng/mL insufficient with levels above 30 ng/mL and folic acid: 2.3 ng/mL insufficient with levels above 3 ng/mL). The thyroid function test showed thyroid-stimulating hormone (TSH) levels of 24.159 mIU/L (reference range: 0.400–4.00), free thyroxine (FT4) 0.93 ng/dL (reference range: 0.80–2.00), and triiodothyronine (T3) 1.08 ng/mL (reference range: 0.70–1.90), with antithyroid peroxidase antibodies >1300 IU/mL (reference range: <35).
+We requested interconsultation with the endocrinology department where hypothyroidism secondary to Hashimoto's thyroiditis was diagnosed, and treatment with levothyroxine 50 micrograms/day was recommended. We began folic acid (5 mg/day) and vitamin D (0.266 mg/alternate days) supplementation too.
+During her hospital stay, the patient adapted well to the rules of the unit, was sociable with peers, and showed no behavioural disturbances at any time.
+After 8 days in our acute unit, the patient showed significant improvement in mood and social interaction and was discharged. Monitoring continued in the outpatient clinic, while the patient maintained the same pharmacological treatment. At six weeks, the patient was asymptomatic; she had returned to school showing acceptable performance and socialization with family and classmates. The new thyroid function test showed TSH 9.096 mIU/L and FT4 1.21 ng/dL. Six-months after discharge, the improvement persisted, and thyroid function was TSH 6.935 mIU/L and FT4 1.35 ng/dL and antithyroid peroxidase antibodies decreased, with 75 micrograms/day of levothyroxine.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Ideal Body Weight', 'extracted_values': {'sex': 'female', 'height_cm': 163.0, 'height_in': 64.1732283464567}, 'result': 55.098, 'method': 'python', 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Ideal Body Weight', 'extracted_values': {'sex': 'female', 'height_cm': 163.0, 'height_in': 64.1732283464567}, 'result': 55.098, 'method': 'python', 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}}
+

@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 162
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T21:37:22.379992
+================================================================================
+
+GROUND TRUTH: 72.27568
+PREDICTED: 72.276
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 26-year-old man who appeared healthy was transferred to our facility for persistent intermittent low abdominal and perineal pain for the previous 2 months. The patient had also experienced urinary symptoms including frequency, urgency, gross hematuria, and dysuria for a month and had no history of any medical or surgical procedures prior to the visit. He was treated with antibiotics for 2 months under a diagnosis of cystitis and Meckel's diverticulum or Crohn's disease at local clinics; however, there were no pathologic findings on colonoscopy and no complaint about bowel symptoms. His family history was not notable for Crohn's disease.
+He was 177 cm in height and 72 kg in weight with no acute distress. On physical examination, there were no abnormal findings. There was pyuria and microscopic hematuria on urine analysis; however, the other laboratory findings were within normal range. Cystoscopy showed diffuse erythematous mucosal thickening on the right side wall of the bladder dome (). However, there was no stool debridement no any fistulous opening in the bladder. A computed tomography (CT) scan showed that there was a tubular structure connected with the right side wall of the bladder, suggesting Meckel's diverticulum with fistula formation to the bladder as well as a mass-like bladder wall thickening ().
+With an impression of Meckel's diverticulum with fistula with the bladder, a laparoscopic operation was performed through 3 abdominal ports (one 10 mm port placed at 10 mm above the umbilicus [camera] (KARL STORZ GmbH & Co. KG, Mittelstr, Tuttlingen, Germany), one 12 mm port for the right pararectal trocar, and one 5 mm port placed between the left anterior iliac spine and the umbilicus). The distal tip of the long appendix, which had a normal shape on its body and base was found to be densely adhered to the right side wall of the bladder (). Laparoscopic appendiceal ligation was performed with 10 mm Hem-O-Lok clips (Teleflex Medical, Research Triangle Park, NC, USA) and 2-0 Vicryl (Ethicon Inc., Somerville, NJ, USA). After removing the proximal appendix, dissection of the bladder around the tip of the appendix was performed. There was a dense fibrotic change around the tip of the appendix. Partial cystectomy was performed and laparoscopic two-layered bladder repair was done with 3-0 Vicryl (Ethicon). The total surgical time was 75 minutes and the estimated intraoperative blood loss was minimal.
+On the 7th postoperative day, cystography was performed and no urinary leakage around the bladder was demonstrated. The urinary symptoms including gross hematuria, dysuria, and frequency improved and abdominal discomfort symptoms also subsided. The other laboratory findings were within normal range. The surgical specimen showed a 9.2×1.2 cm appendix attached to a 4.3×3.2 cm bladder with dense fibrotic change without any malignancy.
+At 1 month postoperatively, he had no symptoms including frequency, urgency, sense of residual urine, or intermittent gross hematuria. Nor were there any abnormal findings by CT which was performed 1 year postoperatively.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Ideal Body Weight', 'extracted_values': {'sex': 'male', 'height_cm': 177.0, 'height_in': 69.68503937007874}, 'result': 72.276, 'method': 'python', 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Ideal Body Weight', 'extracted_values': {'sex': 'male', 'height_cm': 177.0, 'height_in': 69.68503937007874}, 'result': 72.276, 'method': 'python', 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}}
+

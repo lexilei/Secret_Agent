@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 272
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-04T03:14:14.006330
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 3.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old woman presented to the emergency department for evaluation of intermittent central chest discomfort that began earlier this evening. She described a pressure-like sensation in the mid sternum, without sharp or tearing quality, that came on while walking up a flight of stairs at home. The discomfort reached a moderate intensity, was accompanied by mild shortness of breath and a brief sense of clamminess, and eased after several minutes of rest. A second, milder episode occurred while she was waiting in triage, currently rated 2/10 and again characterized as heaviness rather than pain. She denies a pleuritic component, no increase with deep inspiration or coughing, no reproducibility with palpation, and no positional worsening. She notes mild queasiness without vomiting and denies syncope, presyncope, palpitations, hemoptysis, calf swelling, or recent long-distance travel. She has a longstanding history of elevated blood pressure for which she takes lisinopril daily, and she reports continued cigarette use, approximately half a pack per day for decades. She specifically denies a history of diabetes, and her most recent routine bloodwork with her primary care clinician did not indicate abnormal glucose control. Body habitus is average; she reports stable weight and does not endorse weight-related limitations in daily activity. She has known vascular disease, previously evaluated by a vascular specialist for exertional calf discomfort; outpatient noninvasive testing at that time was consistent with lower extremity arterial disease, and she has been advised on exercise therapy and risk factor modification. She does not recall any first-degree relatives with coronary events at a young age; her father’s cardiac issues occurred later in life, and her mother is alive without known heart disease. She has not had recent respiratory infections or fevers, no recent chest trauma, and no gastrointestinal symptoms suggestive of reflux triggering the episodes. She is not on hormonal therapy. Allergies are none known. Home medications include lisinopril; she is not taking medications for blood sugar control. On arrival, she is alert, in no acute respiratory distress, and conversant in full sentences. Vital signs show blood pressure 152/86 mmHg, heart rate 84 beats per minute, respiratory rate 18 per minute, temperature 36.8°C, and oxygen saturation 98% on room air. She appears well perfused. Cardiovascular exam reveals a regular rhythm without murmurs, rubs, or gallops. There is no jugular venous distention. Lungs are clear to auscultation bilaterally without wheezes or crackles. The chest wall is non-tender to palpation. Abdomen is soft and non-tender. Extremities show no edema; distal pulses are palpable though slightly diminished at the dorsalis pedis compared with proximal pulses, consistent with her prior vascular history. Neurologic exam is non-focal. Her body mass index by triage measurement is within the normal range, and she does not appear overweight. A 12-lead electrocardiogram obtained on presentation demonstrates normal sinus rhythm with a rate in the low 80s, with mild, diffuse T-wave flattening and subtle ST-segment changes that do not meet criteria for acute ischemia and without any ST-segment elevation. There are no arrhythmias on the initial rhythm strip. A chest radiograph performed at the bedside is without focal consolidation, pneumothorax, or widened mediastinum. Initial laboratory evaluation shows a high-sensitivity cardiac troponin level marginally above the laboratory upper reference limit and clearly less than threefold that threshold; basic metabolic panel and complete blood count are unremarkable. Given the exertional onset of substernal pressure with brief associated dyspnea and diaphoresis in a patient with long-standing high blood pressure, ongoing tobacco use, and established peripheral vascular disease, acute coronary pathology is considered, although the relatively short duration of symptoms, improvement with rest, and the absence of focal pleuritic features or chest wall tenderness render the overall picture neither classic nor dismissive. She has not taken any medications for the current episode prior to arrival. She remains hemodynamically stable with ongoing mild chest pressure at the time of the initial evaluation.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.3}, {'stage': 'extract', 'extracted': {'age': 62, 'sex': 'female', 'has_hypertension': True, 'has_vascular_disease': True}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 62, 'sex': 'female', 'has_hypertension': True, 'has_vascular_disease': True}}, {'stage': 'compute', 'success': True, 'result': 3.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

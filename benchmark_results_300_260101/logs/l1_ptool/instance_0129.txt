@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 129
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:26:52.626029
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 37-year-old male presented to the emergency department (ED) in police custody for “medical clearance” before being taken to jail. The patient was approached by police officers for suspicion of selling illicit drugs. When approached by police he ran away and was witnessed to swallow several small plastic baggies suspected to contain heroin. He was apprehended and brought to the ED. On arrival, he was asymptomatic with a blood pressure 144/83mmHg, heart rate 67bpm, respiratory rate of 19bpm, oxygen saturation of 99% on room air and afebrile. A Glasgow coma score was 15 and he was alert and oriented to person, place and time. Patient had a negative review of systems. On physical examination pupils were 4mm and reactive to light, lungs clear to auscultation and had normal respiratory rate with normal cardiovascular exam. Abdomen was soft, non-tender and non-distended with present bowel sounds. The patient admitted to ingesting approximately 20 packets of heroin to avoid being charged with possession. The patient declined activated charcoal and whole bowel irrigation (WBI) with polyethylene glycol-electrolyte solution (PEG-ELS). The patient declined a urine toxicology immunoassay screen. A computed tomography (CT) of his abdomen with contrast was obtained and read as normal except for a cluster of foreign bodies within the distal stomach likely contained within a plastic bag ( and ).
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 0.0}
+

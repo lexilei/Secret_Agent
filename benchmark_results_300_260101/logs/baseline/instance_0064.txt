@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 64
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T20:50:29.389332
+================================================================================
+
+GROUND TRUTH: 70.0
+PREDICTED: 70.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 10-year-old male patient was brought to our department with premature pubarche and onset of facial acne at the age of 8 years and increase in penis size at the age of 9 years. Concomitantly, he had a progressive, gradually worsening holocranial headache associated with drowsiness and loss of appetite. The patient denied deterioration of vision. Previously, he was a healthy patient, born by spontaneous vaginal delivery at term weighing 3510 g and measuring 50 cm. He was breastfed for 3 months and had normal neuropsychomotor development. The patient had no family history of endocrine disorders, sexual precocity, or consanguinity. The mother's and father's self-reported height was 155 cm and 175 cm respectively. Physical examination revealed height of 148 cm (90-95th percentile), weight of 39 kg (75-90th percentile), blood pressure of 90/60 mmHg, heart rate of 60 beats per minute, facial acne, abdominal fat deposition in the periumbilical region, bilateral, symmetrical and prepubertal sized (3 mL) testes within the scrotum, 8-cm long penis, and Tanner stage P3-G2. Papilledema was detected on fundoscopy.
+Magnetic resonance imaging (MRI) of the brain showed a large, hyperintense tumor in the suprasellar region, with hypodense areas inside the tumor, which was located in the anterior third ventricle, measuring 3 cm in the largest diameter and causing triventricular dilatation []. Radiographs of the hands and wrists revealed significant acceleration of bone age (BA) in relation to chronological age (CA) (BA: 13 years; CA: 10 years and 8 months; standard deviation: 10 months). MRI of the abdomen yielded normal results. Laboratory tests revealed that the values for serum glucose, albumin, calcium, sodium, potassium, renal function, and liver function were within the normal limits. Hormonal tests showed increased hCG levels in both blood and cerebrospinal fluid (CSF), increased total testosterone levels, and hypopituitarism (unresponsiveness to gonadorelin stimulation test) []. The results of tumor marker tests are also described in .
+The patient was diagnosed with an hCG- and testosterone-producing tumor associated with hypopituitarism and intracranial hypertension. Hormone replacement therapy was initiated with levothyroxine and hydrocortisone, and transcranial surgery was performed. Anatomopathologic examination confirmed the diagnosis of germinoma []]. Radiotherapy was performed after surgical resection of the tumor. The patient showed complete regression of sexual characteristics and acne, with normal laboratory tests post-operatively.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+70

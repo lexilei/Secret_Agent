@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 174
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-02T03:23:09.066103
+================================================================================
+
+GROUND TRUTH: 73.18119
+PREDICTED: 72.3
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A male in his early 60s had been living in his car. He was found dead in the car approximately 1 month after he had last been seen alive. A police officer stated that he frequently consumed potatoes in the car. On external examination, the man was 178 cm in height and 69.2 kg in weight. Toxicological evaluation of postmortem cardiac blood was performed by using the LC/MS/MS rapid toxicology screening system ver. 2 (Shimadzu); drugs that could have directly caused his death were not detected. For the qualitative and quantitative analyses of α-solanine and α-chaconine, the validated method described in the present report was used.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+72.3

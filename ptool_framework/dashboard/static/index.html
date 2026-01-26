@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ptool Observatory</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <style>
+        :root {
+            --bg-primary: #0f0f23;
+            --bg-secondary: #1a1a2e;
+            --bg-tertiary: #16213e;
+            --text-primary: #e6e6e6;
+            --text-secondary: #8888aa;
+            --accent: #00d4ff;
+            --accent-dim: #007799;
+            --success: #00ff88;
+            --error: #ff4444;
+            --warning: #ffaa00;
+            --border: #2a2a4a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 13px;
+            line-height: 1.5;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        /* Header */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header h1 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .header-status {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+        }
+
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--success);
+            animation: pulse 2s infinite;
+        }
+
+        .status-dot.disconnected { background: var(--error); animation: none; }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 12px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: var(--bg-primary);
+        }
+
+        .btn-primary:hover { background: #33ddff; }
+
+        /* Main Layout */
+        .main-container {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            grid-template-rows: 1fr 200px;
+            height: calc(100vh - 50px);
+            gap: 1px;
+            background: var(--border);
+        }
+
+        .panel {
+            background: var(--bg-secondary);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 12px;
+            background: var(--bg-tertiary);
+            border-bottom: 1px solid var(--border);
+            min-height: 36px;
+        }
+
+        .panel-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .panel-content {
+            flex: 1;
+            overflow: auto;
+            padding: 12px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 2px;
+        }
+
+        .tab {
+            padding: 6px 12px;
+            background: transparent;
+            border: none;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 11px;
+            border-radius: 4px 4px 0 0;
+            transition: all 0.2s;
+        }
+
+        .tab:hover { color: var(--text-primary); }
+        .tab.active {
+            background: var(--bg-secondary);
+            color: var(--accent);
+        }
+
+        /* Code Panel */
+        .code-container {
+            background: var(--bg-primary);
+            border-radius: 4px;
+            overflow: auto;
+            height: 100%;
+        }
+
+        .code-container pre {
+            margin: 0;
+            padding: 12px;
+            font-size: 12px;
+            line-height: 1.6;
+        }
+
+        .code-line {
+            display: block;
+            padding: 0 8px;
+            border-left: 3px solid transparent;
+        }
+
+        .code-line.highlighted {
+            background: rgba(0, 212, 255, 0.1);
+            border-left-color: var(--accent);
+        }
+
+        .code-line.added {
+            background: rgba(0, 255, 136, 0.1);
+            border-left-color: var(--success);
+        }
+
+        .line-number {
+            display: inline-block;
+            width: 40px;
+            color: var(--text-secondary);
+            text-align: right;
+            margin-right: 12px;
+            user-select: none;
+        }
+
+        /* Right Panel - State & LLM */
+        .right-panel {
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            background: var(--border);
+        }
+
+        .state-section, .llm-section {
+            background: var(--bg-secondary);
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .state-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .state-label {
+            color: var(--text-secondary);
+        }
+
+        .state-value {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .state-value.running { color: var(--warning); }
+        .state-value.completed { color: var(--success); }
+        .state-value.failed { color: var(--error); }
+
+        /* LLM Section */
+        .llm-box {
+            background: var(--bg-primary);
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 10px;
+            max-height: 150px;
+            overflow: auto;
+        }
+
+        .llm-box-title {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 6px;
+        }
+
+        .llm-content {
+            font-size: 11px;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+
+        /* Timeline */
+        .timeline-panel {
+            grid-column: 1 / -1;
+        }
+
+        .timeline-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .timeline-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 120px;
+        }
+
+        .step-node {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            margin-bottom: 8px;
+            transition: all 0.3s;
+        }
+
+        .step-node.pending { background: var(--bg-tertiary); border: 2px solid var(--border); }
+        .step-node.running { background: var(--warning); color: var(--bg-primary); animation: pulse 1s infinite; }
+        .step-node.completed { background: var(--success); color: var(--bg-primary); }
+        .step-node.failed { background: var(--error); color: white; }
+
+        .step-name {
+            font-size: 11px;
+            color: var(--text-primary);
+            text-align: center;
+            max-width: 120px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .step-duration {
+            font-size: 10px;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .timeline-arrow {
+            color: var(--text-secondary);
+            font-size: 20px;
+        }
+
+        /* Traces Tab */
+        .trace-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .trace-item {
+            background: var(--bg-primary);
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .trace-item:hover {
+            background: var(--bg-tertiary);
+        }
+
+        .trace-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+        }
+
+        .trace-name {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .trace-status {
+            font-size: 11px;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+
+        .trace-status.success { background: rgba(0, 255, 136, 0.2); color: var(--success); }
+        .trace-status.failed { background: rgba(255, 68, 68, 0.2); color: var(--error); }
+
+        .trace-meta {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        /* Logs Tab */
+        .log-entry {
+            padding: 6px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 11px;
+        }
+
+        .log-time {
+            color: var(--text-secondary);
+            margin-right: 10px;
+        }
+
+        .log-type {
+            padding: 1px 4px;
+            border-radius: 2px;
+            margin-right: 8px;
+            font-size: 10px;
+        }
+
+        .log-type.info { background: var(--accent-dim); }
+        .log-type.error { background: var(--error); }
+        .log-type.llm { background: #6633ff; }
+
+        /* Variables */
+        .var-list {
+            font-size: 12px;
+        }
+
+        .var-item {
+            display: flex;
+            padding: 4px 0;
+        }
+
+        .var-name {
+            color: var(--accent);
+            min-width: 100px;
+        }
+
+        .var-value {
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        /* Empty state */
+        .empty-state {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            color: var(--text-secondary);
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            opacity: 0.5;
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-secondary); }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ptool Observatory</h1>
+        <div class="header-status">
+            <div class="status-indicator">
+                <div class="status-dot" id="connection-status"></div>
+                <span id="connection-text">Connecting...</span>
+            </div>
+            <button class="btn btn-primary" onclick="refreshAll()">Refresh</button>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <!-- Left Panel: Code/Traces/Logs -->
+        <div class="panel">
+            <div class="panel-header">
+                <div class="tabs">
+                    <button class="tab active" onclick="showTab('code')">Code</button>
+                    <button class="tab" onclick="showTab('traces')">Traces</button>
+                    <button class="tab" onclick="showTab('logs')">Logs</button>
+                </div>
+                <span class="panel-title" id="code-filename">No file loaded</span>
+            </div>
+            <div class="panel-content">
+                <div id="tab-code" class="tab-content">
+                    <div class="code-container">
+                        <pre><code id="code-display" class="language-python"></code></pre>
+                    </div>
+                </div>
+                <div id="tab-traces" class="tab-content" style="display: none;">
+                    <div class="trace-list" id="trace-list">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📊</div>
+                            <div>No traces yet</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="tab-logs" class="tab-content" style="display: none;">
+                    <div id="log-list">
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📝</div>
+                            <div>No logs yet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel: State & LLM -->
+        <div class="right-panel">
+            <div class="state-section">
+                <div class="panel-header">
+                    <span class="panel-title">Program State</span>
+                </div>
+                <div class="panel-content">
+                    <div class="state-item">
+                        <span class="state-label">Current Step</span>
+                        <span class="state-value" id="current-step">—</span>
+                    </div>
+                    <div class="state-item">
+                        <span class="state-label">Status</span>
+                        <span class="state-value" id="current-status">Idle</span>
+                    </div>
+                    <div class="state-item">
+                        <span class="state-label">Duration</span>
+                        <span class="state-value" id="current-duration">—</span>
+                    </div>
+                    <div style="margin-top: 12px;">
+                        <div class="state-label" style="margin-bottom: 8px;">Variables</div>
+                        <div class="var-list" id="variables-list">
+                            <div style="color: var(--text-secondary);">No variables</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="llm-section">
+                <div class="panel-header">
+                    <span class="panel-title">LLM Request/Response</span>
+                    <span id="llm-model" style="font-size: 11px; color: var(--text-secondary);">—</span>
+                </div>
+                <div class="panel-content">
+                    <div class="llm-box">
+                        <div class="llm-box-title">Prompt</div>
+                        <div class="llm-content" id="llm-prompt">Waiting for LLM call...</div>
+                    </div>
+                    <div class="llm-box">
+                        <div class="llm-box-title">Response</div>
+                        <div class="llm-content" id="llm-response">—</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Panel: Timeline -->
+        <div class="panel timeline-panel">
+            <div class="panel-header">
+                <span class="panel-title">Execution Timeline</span>
+                <span id="timeline-info" style="font-size: 11px; color: var(--text-secondary);"></span>
+            </div>
+            <div class="panel-content">
+                <div class="timeline-container" id="timeline">
+                    <div class="empty-state">
+                        <div>Run a program to see the execution timeline</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+    <script>
+        // State
+        let ws = null;
+        let currentCode = '';
+        let highlightedLines = [];
+        let traces = [];
+        let logs = [];
+        let timeline = [];
+
+        // WebSocket Connection
+        function connectWebSocket() {
+            const protocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+            ws = new WebSocket(`${protocol}//${window.location.host}/ws`);
+
+            ws.onopen = () => {
+                document.getElementById('connection-status').classList.remove('disconnected');
+                document.getElementById('connection-text').textContent = 'Connected';
+                console.log('WebSocket connected');
+            };
+
+            ws.onclose = () => {
+                document.getElementById('connection-status').classList.add('disconnected');
+                document.getElementById('connection-text').textContent = 'Disconnected';
+                console.log('WebSocket disconnected, reconnecting...');
+                setTimeout(connectWebSocket, 3000);
+            };
+
+            ws.onerror = (error) => {
+                console.error('WebSocket error:', error);
+            };
+
+            ws.onmessage = (event) => {
+                try {
+                    const data = JSON.parse(event.data);
+                    handleEvent(data);
+                } catch (e) {
+                    console.error('Failed to parse event:', e);
+                }
+            };
+        }
+
+        // Event Handlers
+        function handleEvent(event) {
+            const type = event.event_type;
+            const data = event.data;
+
+            // Add to logs
+            addLog(event);
+
+            switch (type) {
+                case 'ptool_start':
+                    updateProgramState(data.ptool_name, 'Running', 0);
+                    updateTimeline(data.ptool_name, 'running');
+                    break;
+
+                case 'llm_request':
+                    document.getElementById('llm-model').textContent = data.model;
+                    document.getElementById('llm-prompt').textContent = truncate(data.prompt, 500);
+                    document.getElementById('llm-response').textContent = 'Waiting...';
+                    break;
+
+                case 'llm_response':
+                    document.getElementById('llm-response').textContent = truncate(data.response, 500);
+                    break;
+
+                case 'ptool_complete':
+                    if (data.success) {
+                        updateProgramState(data.ptool_name, 'Completed', data.execution_time_ms);
+                        updateTimeline(data.ptool_name, 'completed', data.execution_time_ms);
+                    } else {
+                        updateProgramState(data.ptool_name, 'Failed', data.execution_time_ms);
+                        updateTimeline(data.ptool_name, 'failed', data.execution_time_ms);
+                    }
+                    addTrace(data);
+                    break;
+
+                case 'error':
+                    updateProgramState(data.ptool_name || '—', 'Failed', 0);
+                    break;
+
+                case 'code_update':
+                    updateCode(data.code, data.highlighted_lines, data.filename);
+                    break;
+
+                case 'program_state':
+                    updateProgramState(data.current_step, data.status, data.duration_ms);
+                    updateVariables(data.variables);
+                    break;
+
+                case 'timeline_update':
+                    renderTimeline(data.steps);
+                    break;
+            }
+        }
+
+        // UI Updates
+        function updateProgramState(step, status, duration) {
+            document.getElementById('current-step').textContent = step || '—';
+            const statusEl = document.getElementById('current-status');
+            statusEl.textContent = status;
+            statusEl.className = 'state-value ' + status.toLowerCase();
+            document.getElementById('current-duration').textContent =
+                duration ? `${duration.toFixed(1)}ms` : '—';
+        }
+
+        function updateVariables(vars) {
+            const container = document.getElementById('variables-list');
+            if (!vars || Object.keys(vars).length === 0) {
+                container.innerHTML = '<div style="color: var(--text-secondary);">No variables</div>';
+                return;
+            }
+
+            container.innerHTML = Object.entries(vars).map(([name, value]) => `
+                <div class="var-item">
+                    <span class="var-name">${name}</span>
+                    <span class="var-value">${truncate(JSON.stringify(value), 100)}</span>
+                </div>
+            `).join('');
+        }
+
+        function updateCode(code, highlighted, filename) {
+            currentCode = code;
+            highlightedLines = highlighted || [];
+            document.getElementById('code-filename').textContent = filename || 'code';
+
+            const lines = code.split('\n');
+            const html = lines.map((line, i) => {
+                const lineNum = i + 1;
+                const isHighlighted = highlightedLines.includes(lineNum);
+                const classes = ['code-line'];
+                if (isHighlighted) classes.push('highlighted');
+
+                return `<span class="${classes.join(' ')}"><span class="line-number">${lineNum}</span>${escapeHtml(line)}</span>`;
+            }).join('\n');
+
+            document.getElementById('code-display').innerHTML = html;
+            Prism.highlightAll();
+        }
+
+        function updateTimeline(ptoolName, status, duration) {
+            // Find or add step
+            let step = timeline.find(s => s.name === ptoolName);
+            if (!step) {
+                step = { name: ptoolName, status: 'pending', duration: 0 };
+                timeline.push(step);
+            }
+            step.status = status;
+            if (duration) step.duration = duration;
+
+            renderTimeline(timeline);
+        }
+
+        function renderTimeline(steps) {
+            timeline = steps;
+            const container = document.getElementById('timeline');
+
+            if (!steps || steps.length === 0) {
+                container.innerHTML = '<div class="empty-state"><div>Run a program to see the execution timeline</div></div>';
+                return;
+            }
+
+            const icons = {
+                pending: '○',
+                running: '⏳',
+                completed: '✓',
+                failed: '✗'
+            };
+
+            container.innerHTML = steps.map((step, i) => `
+                <div class="timeline-step">
+                    <div class="step-node ${step.status}">${icons[step.status]}</div>
+                    <div class="step-name">${step.name}</div>
+                    <div class="step-duration">${step.duration ? step.duration.toFixed(1) + 'ms' : ''}</div>
+                </div>
+                ${i < steps.length - 1 ? '<div class="timeline-arrow">→</div>' : ''}
+            `).join('');
+
+            document.getElementById('timeline-info').textContent =
+                `${steps.filter(s => s.status === 'completed').length}/${steps.length} completed`;
+        }
+
+        function addTrace(data) {
+            traces.unshift({
+                name: data.ptool_name,
+                success: data.success,
+                duration: data.execution_time_ms,
+                timestamp: new Date().toLocaleTimeString(),
+                output: data.output
+            });
+            if (traces.length > 100) traces.pop();
+            renderTraces();
+        }
+
+        function renderTraces() {
+            const container = document.getElementById('trace-list');
+            if (traces.length === 0) {
+                container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">📊</div><div>No traces yet</div></div>';
+                return;
+            }
+
+            container.innerHTML = traces.map(trace => `
+                <div class="trace-item">
+                    <div class="trace-header">
+                        <span class="trace-name">${trace.name}</span>
+                        <span class="trace-status ${trace.success ? 'success' : 'failed'}">${trace.success ? 'Success' : 'Failed'}</span>
+                    </div>
+                    <div class="trace-meta">${trace.timestamp} • ${trace.duration?.toFixed(1) || '?'}ms</div>
+                </div>
+            `).join('');
+        }
+
+        function addLog(event) {
+            logs.unshift({
+                time: new Date().toLocaleTimeString(),
+                type: event.event_type,
+                data: event.data
+            });
+            if (logs.length > 200) logs.pop();
+            renderLogs();
+        }
+
+        function renderLogs() {
+            const container = document.getElementById('log-list');
+            if (logs.length === 0) {
+                container.innerHTML = '<div class="empty-state"><div class="empty-state-icon">📝</div><div>No logs yet</div></div>';
+                return;
+            }
+
+            const typeClasses = {
+                'ptool_start': 'info',
+                'ptool_complete': 'info',
+                'llm_request': 'llm',
+                'llm_response': 'llm',
+                'error': 'error'
+            };
+
+            container.innerHTML = logs.slice(0, 50).map(log => `
+                <div class="log-entry">
+                    <span class="log-time">${log.time}</span>
+                    <span class="log-type ${typeClasses[log.type] || 'info'}">${log.type}</span>
+                    <span>${truncate(JSON.stringify(log.data), 100)}</span>
+                </div>
+            `).join('');
+        }
+
+        // Tab switching
+        function showTab(tabName) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+
+            event.target.classList.add('active');
+            document.getElementById(`tab-${tabName}`).style.display = 'block';
+        }
+
+        // Utilities
+        function truncate(str, len) {
+            if (!str) return '';
+            str = String(str);
+            return str.length > len ? str.substring(0, len) + '...' : str;
+        }
+
+        function escapeHtml(str) {
+            return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        }
+
+        // API calls
+        async function refreshAll() {
+            try {
+                // Get traces
+                const tracesRes = await fetch('/api/traces?limit=50');
+                const tracesData = await tracesRes.json();
+                traces = tracesData.traces.map(t => ({
+                    name: t.ptool_name,
+                    success: t.success,
+                    duration: t.execution_time_ms,
+                    timestamp: new Date(t.timestamp).toLocaleTimeString(),
+                    output: t.output
+                }));
+                renderTraces();
+
+                // Get ptools
+                const ptoolsRes = await fetch('/api/ptools');
+                const ptoolsData = await ptoolsRes.json();
+                console.log('Loaded ptools:', ptoolsData);
+
+            } catch (e) {
+                console.error('Failed to refresh:', e);
+            }
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', () => {
+            connectWebSocket();
+            refreshAll();
+
+            // Demo code
+            updateCode(`#!/usr/bin/env python3
+"""
+Example ptool program - Meal Analyzer
+"""
+
+from ptool_framework import ptool
+
+@ptool()
+def extract_food_items(text: str) -> List[str]:
+    """Extract all food items from text."""
+    ...  # LLM handles this
+
+@ptool()
+def is_healthy(food: str) -> bool:
+    """Determine if food is healthy."""
+    ...  # LLM handles this
+
+def analyze_meal(description: str) -> dict:
+    """Main workflow - Python controls flow."""
+    foods = extract_food_items(description)
+    healthy = [f for f in foods if is_healthy(f)]
+    return {"foods": foods, "healthy": healthy}
+
+if __name__ == "__main__":
+    result = analyze_meal("I had pizza and salad")
+    print(result)
+`, [4, 5, 6, 7], 'meal_analyzer.py');
+        });
+    </script>
+</body>
+</html>

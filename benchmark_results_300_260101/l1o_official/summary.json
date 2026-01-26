@@ -1,0 +1,16 @@
+{
+  "experiment": "l1o_official",
+  "level": "L1O",
+  "total_instances": 300,
+  "correct_exact": 212,
+  "correct_tolerance": 218,
+  "errors": 0,
+  "accuracy_exact": 0.7066666666666667,
+  "accuracy_tolerance": 0.7266666666666667,
+  "error_rate": 0.0,
+  "total_cost_usd": 0.53950625,
+  "avg_cost_usd": 0.0017983541666666666,
+  "total_tokens": 431605,
+  "avg_latency_ms": 2595.9838954607644,
+  "total_time_seconds": 778.8874208927155
+}

@@ -1,0 +1,19 @@
+{
+  "experiment": "l2o_official",
+  "level": "L2O",
+  "total_instances": 300,
+  "correct_exact": 198,
+  "correct_tolerance": 206,
+  "errors": 2,
+  "accuracy_exact": 0.66,
+  "accuracy_tolerance": 0.6866666666666666,
+  "error_rate": 0.006666666666666667,
+  "total_cost_usd": 0.36750000000000005,
+  "avg_cost_usd": 0.0012250000000000002,
+  "total_tokens": 294000,
+  "avg_latency_ms": 6733.931110209267,
+  "official_success_count": 212,
+  "llm_fallback_count": 88,
+  "official_success_rate": 0.7066666666666667,
+  "total_time_seconds": 2015.112990617752
+}

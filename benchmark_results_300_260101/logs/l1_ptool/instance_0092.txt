@@ -1,0 +1,42 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 92
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:26:51.890869
+================================================================================
+
+GROUND TRUTH: 26.5625
+PREDICTED: 26.6
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 30-year-old G4, P2 female, 160 cm tall, and weighing 68 kg, was admitted at 38 weeks of her third gestation for vaginal bleeding and hypogastralgia at her local hospital. Due to the combination of hypoxemia and abnormal electrocardiograph (ECG) findings, she was advised to transfer to our hospital; the patient did not receive prenatal obstetric care in our hospital. The admitting diagnosis was cardiac insufficiency, cyanotic CHD (dubious) and scarred uterus. The physical examination revealed blood pressure of 130/80 mmHg, a pulse of 90/min, a respiratory rate of 25/min, slightly cyanotic lips and the same on her cheeks, coarse breath sounds to auscultation in the lungs, and a regular heartbeat. A loud P2 and grade 3/6 systolic murmur was heard at the third and fourth ribs on the left edge of the sternum. The ECG showed sinus rhythm, complete right bundle branch block (CRBBB), first degree A-V block, inverted T wave, right ventricular hypertrophy, and severe cardiac clockwise rotation.
+The obstetricians felt that the manifestations of cardiac insufficiency in the mother put her at high risk in a vaginal delivery. The fetus presented with abnormal heart rate variability, with no further evidence that the fetus was in a state of emergency. Considering that the mother had been in a condition of hypoxia, which would result in hypoxia in the baby, the obstetricians recommended emergency cesarean section for the benefit of both the mother and the baby.
+The patient was transferred to the operating theater with a temperature of 36.8 °C, a heart rate of 92 beats/min, a respiratory rate of 23breaths/min, a blood pressure of 138/88 mmHg, and an oxygen saturation of 83-90% in air. With the administration of a fractional inspired concentration of oxygen (FiO2) of 0.5 to 0.6 via a Venturi mask, the patient’s oxygen saturation increased from 88 to 92%. Peripheral venous access was sited, and a 400-ml bolus of compound sodium chloride was commenced, after which a radial arterial line was placed under local anesthesia for beat-to-beat blood pressure monitoring.
+Combined spinal-epidural anesthesia (single-shot spinal anesthesia) was administered in this case. The puncture point of spinal anesthesia was selected in the L2-3 interspace, and the procedure was performed using a needle-through-needle technique in the left lateral decubitus position. After cerebrospinal fluid (CSF) could be slowly aspirated through the needle, doses of 1.4 ml of 0.5% hyperbaric bupivacaine made up with 10% glucose for a hyperbaric solution that made it easy to adjust and control the anesthetic plane were injected into the subarachnoid space slowly towards the head, and an epidural catheter was inserted into the epidural space. The patient was then placed in the supine position with a left lateral tilt of at least 30 degrees; [] the patient’s abdomen could be raised softly if necessary to relieve vena caval compression. Within 20 min later of the anesthetic injection, we tested the block height every 1-2 min and adjusted the head-up or head-down tilt position to strictly control the blockade under the level of T6-8. Twenty minutes later, the level of spinal block was static at T8. One minute later, the patient was returned to the supine position, with a slight decrease arterial pressure to 122/82 mmHg and a heart rate of 97 beats/min. As small doses of metaraminol could resist the vasodilatation caused by anesthesia to maintain the afterload, 100 μg of metaraminol was administered, after which the patient’s arterial pressure increased to 130/84 mmHg, with a heart rate of 91 beats/min.
+During the entire procedure, the key for safely administering anesthesia on such a patient was to keep her blood pressure stable and to carefully address the side effects of the changes in the hemodynamics []. Because the spinal anesthesia took action faster and due to the rapid sympathectomy in the intra-vertebral anesthesia, great care should be taken of the changes in arterial pressure and heart rate after puncture and injection.
+A male baby was smoothly delivered 10 min after the surgery began; the baby had Apgar scores of 8 at 1 min and 9 at 5 min. In addition to the caution that must be paid due to the change in the patient’s venous return at the time of the delivery of the baby, some factors need to be given attention to avoid the occurrence of great amounts of intra-cardiac shunt changes and even heart failure. First, because the oppression of the inferior vena cava was relieved after childbirth, the lower limb venous blood flow increased rapidly, and the venous return increased in a short amount of time as a result. Abdominal sandbags were adopted to add pressure to reduce the returned blood volume. Further, the maternal “autologous blood transfusion effect” had to be considered: after the fetus was delivered, the myometrium contracted, and intrauterine blood flowed back to the blood vessels rapidly, thereby increasing the cardiac preload in a short amount of time. If the initial transfusion was too great, it could lead to heart failure. According to the patient’s fluctuations in blood pressure, a bolus of ephedrine 3 mg or metaraminol 100 μg was used to restore the blood pressure to 130 ~ 140/82 ~ 87 mmHg, with a heart rate of 90 ~ 98 beats/min and an SpO2 of 89 ~ 93% during the surgery. The goal was to balance the preload and afterload and to try to maintain the intra-cardiac shunt in the preoperative level of stability.
+Uterine atony was noted by the surgeon after delivery of the placenta. Oxytocin is usually administered to increase the contractions so as to reduce bleeding; however, a rapid infusion of oxytocin could increase the patient’s heart rate, reduce the cardiac output and coronary blood flow, and break the balance of the intra-cardiac shunt, which could lead to cardiac insufficiency. Therefore, the application of oxytocin must begin with small doses, and the dosage should be adjusted over time. Thus, oxytocin (10 mIU/min) was intravenously infused, and the infusion was adjusted in accordance with the patient’s changes in heart rate and blood pressure. Continuous post-cesarean analgesia was provided through an epidural catheter. The patient was transferred to the intensive care unit (ICU) and was then sent to the ward in stable condition the following day.
+We advised the patient to have an echocardiogram examination, which revealed CHD, a single atrium, and defects of the endocardial cushions (Fig. ). Thus, we made a complementary diagnosis of CHD: single atrium. The patient was in good condition at the 6-month follow-up.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+26.6
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 26.6}
+

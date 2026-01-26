@@ -1,0 +1,42 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 286
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-02T03:23:12.518635
+================================================================================
+
+GROUND TRUTH: 3.71829
+PREDICTED: 1.98
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 45-year-old African American man presents with nausea and severe abdominal pain. He denies vomiting. He says that, 2 days ago, his divorce was finalized, so he went to a bar and had multiple shots of tequila and vodka. This morning, upon waking, he noticed his urine was red, which lasted throughout the day. The patient denies any history of similar symptoms. Past medical history is significant for low blood counts diagnosed on routine laboratory work 6 months ago, which was not followed up due to the stress of the divorce. A review of systems is significant for erectile dysfunction and chronic fatigue. His temperature is 37.2°C (99.0°F), the heart rate is 90/min, the blood pressure is 136/88 mm Hg, and the respiratory rate is 20/min. Physical examination shows scleral icterus. Mucous membranes are pale. Cardiac auscultation reveals a systolic flow murmur loudest along the left sternal border. There is moderate right upper quadrant abdominal tenderness with no rebound or guarding. The remainder of the exam is unremarkable. Laboratory findings are significant for the following:
+Hematocrit 27%
+Mean corpuscular volume 81 µm3
+Leukocytes 6,000/mm3
+Platelets 130,000/µL
+Haptoglobin 30 mg/dL (50–150 mg/dL)
+Reticulocyte count 3%
+  Total bilirubin 7.1 mg/dL
+LDH 766 U/L
+AST 150 U/L
+ALT 195 U/L
+HbA1 96%
+HbA2 2%
+HbF 2%
+CD55 50% of expected
+The peripheral smear is unremarkable.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.98

@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 106
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T21:26:52.161614
+================================================================================
+
+GROUND TRUTH: 13.47
+PREDICTED: 13.47
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 83-year-old female patient presented to our clinic with abdominal pain, lack of appetite, nausea, weight loss, and fatigue. The patient had lost nearly 12 kilograms in the past 6 months. Abdominal pain was localized in the right upper quadrant. She had obtuse pain that had no relation to food. It was found that the patient had osteoporosis in her history but did not receive any treatment. In the physical examination of the patient, who did not present any characteristics in her family history, the liver extended to 2 cm below the costal margin. She did not have ascites or splenomegaly. Heart and lung examinations were normal. Laboratory tests presented a normal hemogram. Biochemical tests revealed an aspartate aminotransferase (AST) level of 50 U/L, alanine aminotransferase (ALT) level of 20 U/L, total bilirubin level of 1.3 mg/dL, alkaline phosphatase (ALP) level of 101 U/L, gamma-glutamyltransferase level of 227 U/L, albumin level of 2.6 g/dL, total protein level of 4.9 g/dL, calcium level of 12.35 mg/dL, and a phosphate level of 2.6 mg/dL. The patient was hospitalized in order to investigate the etiology of hypercalcemia. The patient had a parathormone level of 9.5 pg/mL. These results excluded a diagnosis of primary hyperparathyroidism. The patient who was thought to have malignant hypercalcemia was started on intravenous fluid replacement and furosemide treatment. The patient who manifested a creatinine clearance of 55.5 mL/min/1.73 m2 was started on 2 mg zoledronic acid treatment. Tomography scans demonstrated no osteolytic bone lesions. During follow-up, the patient's calcium levels regressed to 9.7 mg/dL with the specified treatment. Abdominal ultrasonography performed due to right upper quadrant pain and hepatomegaly revealed multiple hypoechoic images in the liver, of which the largest was 1.5 cm in size, and a coarsely granular parenchyma. The dynamic CT of the patient demonstrated hypodense lesions with multiple areas of peripheral contrast enhancement that were particularly congregated in the right lobe, the largest of which had a size of 47 × 32 mm, and this was interpreted as metastasis (Figure ).
+Levels of alpha-fetoprotein were determined as 91 ng/mL, cancer antigen (CA-125) as 258.6 U/mL, carcinoembryonic antigen (CEA) as 0.82 ng/mL, and cancer antigen 19-9 (CA19-9) as 2.1 U/mL. A biopsy was performed on the mass in the liver for diagnosis. Pathology result indicated cholangiocellular cancer (Figure ). The patient did not consent to surgical resection; therefore, a monthly zoledronic acid treatment was planned for pain palpation and hypercalcemia.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+13.47
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 13.47}
+

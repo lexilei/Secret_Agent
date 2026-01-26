@@ -1,0 +1,32 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 260
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-02T03:23:11.827415
+================================================================================
+
+GROUND TRUTH: 2.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 61-year-old woman with a history of treated pulmonary tuberculosis in childhood, bronchiectasis, hypertension, hypothyroidism, polymyalgia rheumatica, and hyperlipidemia presented to our clinic with two months of shortness of breath on exertion associated with worsening lower extremity edema, vomiting, subjective fever, and watery diarrhea three days prior to admission.
+Upon admission, she presented hemodynamically stable. On physical examination, she had bibasilar lung crackles and pitting edema bilaterally. Her blood urea nitrogen level was 82 mg/dL, creatinine level was 11.91 mg/dL, sodium was 129 mmol/L, potassium was 8.6 mmol/L, bicarbonate was 19 mmol/L, and hemoglobin was 7.3 g/dL. She was admitted due to acute kidney injury (AKI) secondary to acute tubular necrosis, presumably from volume depletion. An attempt was made to manage the AKI medically, but oliguria and worsening acidosis and hyperkalemia prompted hemodialysis.
+Further studies revealed the presence of serum myeloperoxidase (MPO)-anti-neutrophil cytoplasmic antibodies (ANCA), serum anti-glomerular basement membrane (GBM), and red blood cells in her urine. She received intravenous methylprednisolone 500 mg for three days. A renal biopsy showed MPO-ANCA mediated with concurrent anti-GBM disease crescentic necrotizing and focal sclerosing glomerulonephritis, establishing the diagnosis of Goodpasture syndrome with rapidly progressive glomerulonephritis. She received four cycles of rituximab and continued with prednisone 60 mg daily.
+The hospital course was complicated by a Clostridium difficile infection and hospital-acquired pneumonia (HAP). Also, she acutely presented an episode of respiratory distress: her respiration rate was >24 breaths/minute, oxygen saturation was <90%, heart rate was >120, blood pressure was 180/100 mmHg, and we noted labored breathing via accessory muscles, expiratory wheezing, and expectoration of frothy secretions. The patient was intubated and transferred to the cardiac care unit. A 12-lead electrocardiogram (ECG) showed an ST and T wave abnormality (Figure ) compatible with anterolateral ischemia.
+A transthoracic echocardiogram (TTE) revealed an ejection fraction (EF) of 20% to 25%, grade 2 diastolic dysfunction, systolic right atrial pressure (RAP) of 15 mmHg, and right ventricle systolic pressure (RVSP) of 59 mmHg. The left ventricle was normal in size, but there were regional wall motion abnormalities. Apical and basal segments contracted normally, but the mid-anteroseptal, inferolateral, and anteroapical walls were hypokinetic. The anteroapical wall appeared to be dyskinetic. She was started on carvedilol and lisinopril. A follow-up TTE three weeks later revealed an EF of 50%, grade 1 diastolic dysfunction, systolic RAP of 3 mmHg, and RVSP of 33 mmHg with an improvement in the previously described wall motion abnormalities, suggestive of resolving the mid-ventricular variant of Takotsubo cardiomyopathy (Video ). Pheochromocytoma was not ruled out given the absence of typical signs and symptoms.
+Late in her hospital course, she presented two episodes of respiratory distress considered secondary to Goodpasture syndrome and fluid overload; these episodes were managed with nasal intermittent positive pressure ventilation and furosemide. The patient required resumed intermittent dialysis and was successfully discharged. On an 18-month follow-up office visit, she remained asymptomatic, cardiovascular wise. However, because of the chronic kidney disease, she underwent a kidney transplant.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4

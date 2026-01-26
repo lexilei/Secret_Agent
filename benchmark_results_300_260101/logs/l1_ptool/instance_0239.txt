@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 239
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T21:26:54.696341
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 42-year-old woman with no history of venous thromboembolism, malignancy, chronic heart or kidney disease, or connective-tissue disorders walked into the emergency department this afternoon because her entire right lower extremity had felt “heavy and bloated” since the previous evening. She recalls stepping out of her car after a thirty-minute commute from work yesterday when she noticed her right shoe felt snugger than usual; by the time she prepared for bed the fullness had crept from the ankle to the groin, making her jeans difficult to remove and leaving a faint impression of her sock cuff around the malleolus. She denies fever, chills, sweats, rigors, loss of appetite, unintended weight change, insect bites, trauma, or recent skin abrasions. She also denies chest pain, pleuritic discomfort, shortness of breath, palpitations, hemoptysis, abdominal pain, flank pain, or neurological deficits. Review of systems is otherwise unremarkable for rash, joint swelling, urinary urgency, or menstrual abnormalities. Five weeks earlier she underwent an uncomplicated laparoscopic total hysterectomy with bilateral salpingectomy for symptomatic leiomyomas; the procedure lasted two and a half hours under general anesthesia, required a single overnight stay, and she was ambulating in the ward the same evening. Since discharge she has resumed her job as a receptionist at a recreational vehicle dealership, alternating between standing at the front counter and walking the showroom; she has not required assistive devices or prolonged periods in bed and she completed the prescribed postoperative incentive-spirometry and ambulation goals without issue. She has taken only acetaminophen 650 mg as needed for incisional discomfort and a daily combined calcium–vitamin D supplement; she is on no hormonal therapy, corticosteroids, anticoagulants, or erythropoiesis-stimulating agents. Her last long-distance travel was a two-hour flight three months ago for a family reunion. She never smoked, consumes wine socially once or twice per month, and does not use recreational drugs. Both parents are alive without cardiovascular or thrombotic disease, and no siblings or children have experienced clots or bleeding disorders. On arrival she appeared well and conversed comfortably but was concerned about the asymmetry of her legs. Vital signs at triage: temperature 36.9 °C, blood pressure 118/72 mm Hg, heart rate 86 beats per minute, respiratory rate 16 breaths per minute, and oxygen saturation 98 % on ambient air. Cardiopulmonary examination revealed a regular rhythm without murmurs, rubs, or gallops; lungs were clear to auscultation and percussion. The abdomen was soft with healed 1-cm trocar scars in the infra-umbilical and suprapubic regions, nontender and without palpable masses. Examination of the lower extremities showed a noticeable enlargement of the entire right limb from mid-thigh to dorsum of the foot; the mid-femoral circumference measured 54 cm on the right and 50 cm on the left, while 10 cm below the tibial tuberosity measured 38 cm on the right and 36.5 cm on the left. The overlying skin was warm and taut but retained normal color without streaking, ecchymosis, or ulceration. When steady thumb pressure was applied for five seconds over the anterior tibia, a 3-mm indentation slowly refilled over approximately 15 seconds; no such indentation could be produced on the contralateral limb. There were no distended subcutaneous venous channels, varicosities, or palpable cords along the course of the great saphenous, femoral, popliteal, or posterior tibial veins. Gentle palpation of those tracks elicited only a diffuse sense of tightness rather than focal tenderness, and dorsiflexion of the ankle did not reproduce pain. Hip, knee, and ankle joints moved through full active and passive range without crepitus or guarding. Distal pulses—posterior tibial and dorsalis pedis—were 2+ bilaterally with brisk capillary refill; sensation to light touch, vibration, and pinprick was intact, and motor strength was 5/5 throughout both lower limbs. The inguinal lymph nodes were not enlarged, and there was no groin hernia. There were no signs of cellulitis, lymphedema from prior lymph-node dissection, musculoskeletal strain, or ruptured Baker cyst. Point-of-care laboratory tests obtained before any therapy revealed hemoglobin 13.2 g/dL, white blood cell count 6.4 × 10⁹/L, platelet count 243 × 10⁹/L, serum creatinine 0.84 mg/dL, electrolytes within reference range, international normalized ratio 1.0, activated partial thromboplastin time 28 s, and C-reactive protein 1.2 mg/dL. Electrocardiography displayed normal sinus rhythm without ischemic changes. A plain radiograph of the right femur ordered to exclude occult fracture showed only soft-tissue fullness. Given the acute, unilateral, whole-limb swelling with demonstrable pitting confined to that leg, the recent pelvic surgery performed within the past six weeks, the absence of visible collateral cutaneous veins, and the lack of a more compelling musculoskeletal, infectious, or inflammatory explanation, there is substantial concern for obstruction within the deep venous system of the right lower extremity. Compression duplex ultrasonography of the entire right leg has been requested urgently, and baseline laboratory values were documented before consideration of anticoagulation.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 2.0}
+

@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 51
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-01T21:37:20.024705
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 63-year-old man with history of hypertension and glucose intolerance since age 59 years was emergently admitted to our Institution from a peripheral Hospital for evaluation of a severe, constant posterior chest pain, radiating forward, and dyspnoea with a suspected diagnosis of acute aortic dissection.
+On physical examination the patient was not shocked, his pulse was 87 beats/min, blood pressure 150/105 mmHg. He had truncal obesity, a "moon face" and proximal muscle weakness. An electrocardiogram showed left ventricular hypertrophy. His laboratory work-up revealed anaemia (Hb 10.7 g/dl), hypokaliemia (3.4 mEq/L), metabolic alkalosis (HCO3- 35 mmol/L) and hyperglycaemia (170 mg/dl). A CT scan of thorax and abdomen demonstrated a dissection starting just below left succlavian artery and extending downward to the left renal artery, involving the celiac tripod and superior mesenteric artery (). The dissection was classified as Stanford B, De Bakey III. Moreover CT scan of abdomen revealed incidentally a left adrenal tumour of 25 mm of diameter.
+The patient was pharmacologically treated and was felt at risk for impending aortic rupture. Therefore, an emergent endograft positioning was planned. Our goal was to exclude the damaged segment of the aorta and to obliterate the entry of blood into the false lumen (both at the initial intimal tear and at the secondary tears along the vessel). Through an inguinal incision, the right common, superficial and profunda femoral artery were dissected free. A prosthetic graft (Valiant, Medtronic, Sunnyvale, CA, USA 42 mm x 198 mm) was placed just below the origin of the left succlavian artery up to the diaphragmatic hiatus. A postoperative control CT scan demonstrated the correct graft positioning, not endoleaks and the closure of all secondary tears ().
+This patient was evaluated for hypercortisolism and the plasma cortisol was increased to 33.9 μg/dl (vn, value of normal, 5.6-23 μg/dl) without circadian rhythm and not suppressed by the administration of 1 mg of dexamethasone (overnight text: 9.8 μg/dl; vn <1.8 μg/dl ). The plasma adrenocorticotropic hormone (ACTH) was less than 10 pg/ml (vn 12-60 pg/ml) and 24h urinary free cortisol excretion (UFC) was elevated 465.6 μg/24 h (vn 26-135 μg/24h ).
+A MRI of abdomen was performed to have a more accurate evaluation of the adrenal mass, it was of 2 cm of diameter, well capsulated, hyperintense in T1 sequences with a normal reduction of signal in T2 weighted sequences ().
+A diagnosis of CS was made on basis of the endocrinological tests and for the presence of left adrenocortical lesion. Via laparotomic approach, a left adrenalectomy was performed during intravenous replacement of hydrocortisone, ACE-inhibitor, aspirin and insulin therapy.
+Six months after adrenalectomy, blood pressure was controlled (135/75 mmHg) with anti-hypertensive therapy, laboratory analysis revealed glycaemia 102 mg/dl, glycated haemoglobin (HbA1c) 5.7%, potassium 4.26 mEq/l, sodium 139.7 mEq/L, plasma creatinine 1.05 g/dl, a.m. plasma cortiso l9.7 μg/dl, plasma ACTH 28 pg/ml and UFC 45 μg/24h.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 2.0}
+

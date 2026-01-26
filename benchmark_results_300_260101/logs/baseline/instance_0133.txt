@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 133
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T20:50:30.674246
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+This patient was a 35-year-old Hispanic female with no past medical history who presented to the emergency department primarily for evaluation of heavy vaginal bleeding, bruises on her skin, and fatigue. Vaginal bleeding had started three days prior to presenting to the hospital. The patient had initially thought that she may be pregnant because the onset of her cycle was late by approximately 15 days. The bleeding improved prior to presenting to the hospital but was still much heavier than her usual periods. At the time of heaviest bleeding, the patient reported changing pads every few hours and occasionally passing clots the size of a quarter. Associated symptoms included fatigue, weakness/malaise, abdominal pain, dizziness, and easy bruising. Review of systems was otherwise negative.
+Further evaluation revealed that she did not have any bleeding disorders, abortions, or previously late/missed periods in the past. As for obstetric history, the patient had two prior pregnancies that had both gone to full term with vaginal delivery. Family history was also unremarkable for any hereditary bleeding disorders, cancers, or other pertinent medical diagnoses. The patient was not taking any medications at time of hospitalization. Surgical history was unremarkable. Regarding social history, she reported cigarette smoking in the past but had quit for several years, occasional alcohol use, and no current or past illicit drug use. Lastly, the patient had been isolating at home with her partner and their two children.
+Physical examination at time of presentation revealed the following vital signs: temperature 36.5 Celsius, pulse of 60, respiratory rate 16, pulse oximetry 100% on ambient air, and blood pressure of 110/66. She remained afebrile and never required supplemental oxygen. In general, the patient appeared tired but was not lethargic or somnolent. Examination of the skin revealed multiple non-palpable purpura on her torso and both upper and lower extremities (Figures , ).
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0

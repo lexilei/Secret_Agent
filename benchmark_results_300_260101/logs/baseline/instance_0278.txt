@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 278
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T20:50:33.764064
+================================================================================
+
+GROUND TRUTH: 7.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 67- year old German female with a history of hypertension and Crohn's disease was admitted to our emergency department with chest pain. One year ago the patient was admitted with the same symptoms. A Takotsubo Cardiomyopathy was diagnosed and typical apical ballooning (akinesia of apical left ventricular segments and hyperkinesis of basal segments; Figure ) was seen in the left ventricular angiogram. On admission she did not report about an obvious emotional stress situation (like news of an unexpected death of a relative or news of a catastrophic medical diagnosis) preceding chest pain. She was under chronic therapy with betablockers (Metoprolol 47,5 mg/od), ACE-inhibitors (Ramipril 2,5 mg/od) and aspirin (100 mg/od). Initially she had a pulse rate of 60 beats/min and a blood pressure of 120/80 mmHg. Her physical examination was essentially normal. Laboratory testing revealed elevated levels of Troponin T (0.13 ng/ml, [<0.03 ng/ml]) and creatinine kinase (208 U/l, [<145 U/l]]. Catecholamine plasma levels were not elevated.
+The initial electrocardiogram showed sinus rhythm and T-inversions in the leads I, II, aVL, V1 and V2.
+An acute Non ST-elevation infarction was suspected based on the clinical presentation including chest pain, electrocardiographic changes and elevated myocardial markers. The patient received aspirin, clopidogrel und unfractionated heparin. Recent angiogram showed an isolated midventricular ballooning (akinesia anterolateral and diaphragmal; Figure ) and an ejection fraction of 48 %. In both cases the coronary angiography showed a mild coronary artery disease with a 50 % stenosis in the left anterior descending. Contrast enhanced cardiac magnetic resonance imaging excluded myocardial necrosis as well as ischemia in the anterior wall.
+Within one week wall motion abnormalities and ejection fraction fully recovered.
+Her recovery was uneventful and she was doing well at discharge. She was discharged with a chronic medication including betablockers (Metoprolol 47,5 mg/td), ACE-inhibitors (Ramipril 2,5 mg/td), aspirin (100 mg/od) and statins (Simvastatin 40 mg/od).
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4

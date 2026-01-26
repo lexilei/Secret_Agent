@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 276
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-02T03:23:12.224460
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 74-year-old normotensive, nondiabetic, male smoker (30-pack years) presented with progressively increasing shortness of breath, cough, white, mucoid expectoration, and retrosternal and right sided parasternal, oppressive chest pain for last 2 months. Chest pain and shortness of breath were increased in severity on exertion and were associated with palpitation, but there is no history of sweating, orthopnoea, paroxysmal nocturnal dyspnoea, unconsciousness, and convulsion. There was no radiation of chest pain. Chest pain was suddenly increased for last five days and the patient was admitted in the emergency department with a suspicion of acute myocardial infarction (AMI). There was no history of fever, hemoptysis, leg swelling, and facial puffiness. History of significant weight loss and anorexia were present. There was no history of household contact with the patient of sputum smear positive tuberculosis. The patient received formoterol + tiotropium metered dose inhaler (2 puffs once daily with spacer) and oral doxofylline (400 mg twice daily) for last five years, as he suffered from chronic bronchitis predominant chronic obstructive pulmonary disease (COPD) which resulted in persistent breathlessness, cough, and expectoration.
+General survey revealed anemia and clubbing, but there was no cyanosis, edema, and engorged neck vein. There were multiple cervical and supraclavicular enlarged lymph nodes on left side, which were hard in consistency, discrete, nontender, and fixed to underlying structure, but not fixed to overlying skin, and there was no discharging sinus. His temperature was 37°C, respiratory rate 24 breaths/minute, pulse rate 120 beats/minute, regular blood pressure 94/64 mmHg, oxygen saturation in capillary blood (SpO2) 96% @ room air, and FiO2 0.21.
+Examination of respiratory system revealed no abnormality, except vesicular breath sound with prolonged expiration on both sides, bilateral crackles, mainly over the bases of the lungs, and occasional wheezes. Examination of other system was normal. Complete hemogram showed anemia with hemoglobin concentration of 7.1 g/dL. Blood biochemistry was normal. Electrocardiogram (ECG) showed atypical ST segment elevation and T wave inversion in lateral chest leads (Lead V4, Lead V5, and Lead V6). Initial rapid troponin-t-test was inconclusive, but repeat one after 12 hours of first test was negative. Sputum for acid fast bacilli and Gram stain was negative, and pyogenic culture of sputum showed no growth. Chest X-ray posteroanterior (PA view) showed cardiothoracic ratio was more than 0.5; that is, size of the cardiac silhouette was increased, but lung parenchyma was normal. Contrast enhanced computed tomography (CECT) of thorax showed a large, nonhomogenous mass lesion in right lower lobe which invaded the left atrium and was compressing the adjacent ventricular walls (). There was also mediastinal and hilar lymphadenopathy. CT-guided fine needle aspiration cytology (FNAC) showed discrete clusters of malignant epithelial cells which showed nuclear pleomorphism, hyperchromasia, high nucleocytoplasmic ratio, pale cytoplasm, and ill-defined cell boundary—suggestive of non-small-cell carcinoma, possibly squamous cell variety (). FNAC of left sided supraclavicular lymph nodes showed metastatic squamous cell carcinoma. Sputum for malignant cell was negative and fibre optic bronchoscopy did not show any abnormality. Echocardiogram showed a large echogenic mass of 15 × 12 mm, attached to the roof of the left atrium adjacent to right pulmonary venous openings, encroaching to interatrial septum, an extension of the tumour from adjacent lung parenchyma. Ejection fraction was 66%. Ultrasound of abdomen and CECT scan of brain were normal. Hence the diagnosis was a non-small-cell carcinoma of lower lobe of right lung with invasion of the left atrium and compression of adjacent ventricular wall (T4 disease) with contralateral supraclavicular metastatic lymphadenopathy (N3 disease). First cycle chemotherapy regimen comprising intravenous cisplatin (100 mg on day 1) and etoposide (100 mg on days 1, 2, and 3) was given, but unfortunately he died just after completion of first cycle.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4

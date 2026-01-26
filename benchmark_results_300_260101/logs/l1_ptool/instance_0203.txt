@@ -1,0 +1,40 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 203
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T21:26:54.027846
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 6.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 54-year-old male patient, with previous diagnosis of alcoholic cirrhosis, presented with abdominal pain for 5 years, in the right hypocondrium, associated to jaundice, nausea, vomits and the loss of 12 kg of weight in the last year. The pain had no relation to eating. He reported a previous hospitalization in another hospital to perform a liver biopsy, which showed signs of FNH. He was referred to our service due to the lack of a proper structure to operate this patient. Upon the first consultation, we requested the slides of the biopsy to be brought to our service for a review, which revealed an altered lobular structure due to portal fibrosis, forming large fibrous septa, and no signs of a malignant tumor.
+We performed a magnetic resonance imaging (MRI) exam (), which revealed a normal sized liver, and an expansive lesion originating from segments V and VI, heterogeneous and encapsulated, with well-defined limits, and heterogeneous enhancement by the contrast, similar to normal parenchyma. It also presented areas of central scar and some foci of necrosis.
+Biochemical analyses performed at this time showed that his alpha-fetoprotein value was 6.4. With this finding, the biopsy and the imaging exam, his diagnosis was set as FNH.
+Other biochemical analyses performed were aspartate transaminase: 34, alanine transaminase: 27, albumin: 2.8, total bilirubin: 0.8, international normalized ratio: 1.51. He had no signs of encephalopathy or ascites. Hepatitis B and C serologies were negative.
+Surgical intervention was performed because of the symptoms. The tumor was successfully extirpated (). After his recovery in an intensive care unit, he was discharged with return appointment for 2 weeks later.
+Macroscopically, the dimensions of the tumor were 14 × 10 × 9 cm, and weighed 701 g. Upon being sectioned in half (), a margin of normal parenchyma of 1.4 cm was observed, with nine satellite nodules inside the margin (), with the same characteristics of the main tumor. Microscopic examination revealed an HCC (), with pseudoglandular areas, moderately differentiated (stage two).
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+6.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 6.0}
+

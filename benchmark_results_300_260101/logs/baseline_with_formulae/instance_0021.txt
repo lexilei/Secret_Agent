@@ -1,0 +1,66 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 21
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-02T03:22:58.739058
+================================================================================
+
+GROUND TRUTH: 7.40237
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 61-year-old Caucasian man presented to the emergency department in autumn with one week of dyspnea, productive cough, myalgia, and fever. He denied any chest pain or hemoptysis. His past medical history was significant for hypertension, diabetes mellitus, chronic kidney disease, and non-Hodgkin’s lymphoma with receipt of an allogeneic stem cell transplant 13 years prior. Given prior complications due to graft versus host disease, he was receiving prednisone at a maintenance dose of 15 mg daily for several years. He had multiple documented allergies to penicillin, sulfa drugs, macrolides and fluoroquinolones, with reported reactions including rash, hives, and anaphylaxis. Approximately one week prior to the onset of symptoms, he was traveling in the Midwest United States with his partner and staying in various hotels.
+Upon arrival to the hospital, he was noted to have a heart rate of 130 beats per minute, a blood pressure of 128/76 mmHg, a respiratory rate of 30 breaths per minute with an oxygen saturation of 89% requiring eight liters of supplementary oxygen, and an oral temperature of 39.8°C (103.6°F). He was in acute respiratory distress and had evident decreased breath sounds and crackles bilaterally. He was noted to have normal heart sounds without any murmurs, rubs, or gallops. He did not have any rash on examination.
+Laboratory investigations revealed a normal peripheral leukocyte count of 10.4 x 109 cells/L (10.4 x 103 cells/µL) , decreased hemoglobin of 110 g/L (11.0 g/dL), decreased platelet count of 96 x 109 cells/L (96 x 103 cells/µL), and increased creatinine of 676 µmol/L (7.65 mg/dL). His liver enzymes were normal. His initial chest radiograph revealed diffuse, bilateral air space opacities in the mid and lower lung zones (Figure ).
+Two sets of blood cultures were collected and sputum samples were sent for culture as well as stains and polymerase chain reaction (PCR) testing for Pneumocystis jirovecii (P. jirovecii). A nasopharyngeal sample was collected for respiratory virus PCR testing for influenza A and B, respiratory syncytial virus A and B, coronavirus, parainfluenza virus, rhinovirus, enterovirus, adenovirus, bocavirus, and metapneumovirus. In addition, a serum cytomegalovirus (CMV) PCR and Legionella urine antigen were sent. He was empirically started on meropenem, vancomycin, oseltamivir, and intravenous pentamidine.
+Despite initiation of broad spectrum antimicrobials, he continued to deteriorate with increasing oxygen demands, persistent fever, hemodynamic instability, and worsening radiographic infiltrates (Figure ).
+Sputum and blood cultures were negative for any bacterial growth; sputum stains and PCR were negative for P. jirovecii. His serum CMV PCR was negative. His nasopharyngeal swab for respiratory virus testing was negative for influenza A and B, respiratory syncytial virus A and B, coronavirus, parainfluenza virus, rhinovirus, enterovirus, adenovirus, bocavirus, and metapneumovirus; however, his Legionella urine antigen was positive.
+According to his pharmacy records, he had previously received and tolerated a five-day course of moxifloxacin approximately one year prior to this hospital admission. Given his diagnosis of Legionnaires' disease, intravenous moxifloxacin therapy was initiated. However, shortly following receipt of his first dose of moxifloxacin, he developed an allergic reaction with a generalized, erythematous, maculopapular rash and angioedema, necessitating administration of epinephrine.
+Given his documented allergies to both fluoroquinolones and macrolides, hemodynamic instability, and concern for poor gastrointestinal absorption of oral antimicrobials, he was subsequently treated with intravenous tigecycline with an initial, loading dose of 100 mg, followed by 50 mg twice daily for a total of 14 days of therapy. Intravenous doxycycline is not readily available in our institution. His oxygen requirements decreased and fever resolved following 48 hours of treatment with tigecycline. All other antimicrobials were discontinued once the diagnosis of Legionnaires' disease was made. There was no recurrence of infection after three months of follow-up; his repeat chest radiograph showed resolution of his bilateral air space opacities.
+Later in discussion with the North Dakota Department of Health and Centers for Disease Control and Prevention, it was determined that there was an ongoing outbreak of Legionnaires’ disease associated with five cases over a 13-month period; all cases including our patient had stayed at the same hotel. Subsequent environmental testing of the hotel was negative, but this may have been impacted by a recent deep clean of the hotel’s ventilation system.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's GFR using the 2021 CKD-EPI Creatinine equation, we need the following information from the patient note:  
+
+- **Age**: 61 years  
+- **Sex**: Male (gender coefficient = 1)  
+- **Serum Creatinine (Scr)**: 676 µmol/L (convert to mg/dL: 676 ÷ 88.4 ≈ 7.65 mg/dL)  
+
+The CKD-EPI equation for males is:  
+\[
+GFR = 142 \times \left(\frac{Scr}{A}\right)^B \times 0.9938^{age} \times 1.012 \text{ (if Black)}  
+\]
+Since the patient is Caucasian, we omit the race coefficient.  
+
+For **Scr > 0.9 mg/dL** (male):  
+- \( A = 0.9 \)  
+- \( B = -1.209 \)  
+
+Plugging in the values:  
+\[
+GFR = 142 \times \left(\frac{7.65}{0.9}\right)^{-1.209} \times 0.9938^{61}  
+\]  
+\[
+= 142 \times (8.5)^{-1.209} \times 0.9938^{61}  
+\]  
+\[
+= 142 \times 0.056 \times 0.55  
+\]  
+\[
+= 4.37 \text{ mL/min/1.73 m²}  
+\]  
+
+**Final Answer:**  
+4

@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 67
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-02T03:23:03.588580
+================================================================================
+
+GROUND TRUTH: 90.0
+PREDICTED: 90.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 47-year-old female comes to the emergency department because of increasing back pain for the past 2 weeks. She is unable to perform her daily chores. One month ago, she fell and hurt her back while working outside in the garden. The pain subsided with over-the-counter acetaminophen. She underwent a left mastectomy 1 year ago for breast cancer. She has type 2 diabetes mellitus. Current medications include metformin, sitagliptin, and a multivitamin. She appears uncomfortable. Her temperature is 38.9°C (102.0°F), pulse is 101/min, and blood pressure is 110/80 mm Hg. Examination of the back shows thoracic vertebral tenderness. She has mild stiffness on neck flexion. Muscle strength is decreased in the lower extremities. Deep tendon reflexes are 2+ bilaterally. Sensation to pain, fine touch, temperature, and proprioception is intact. Her hemoglobin concentration is 13.1 g/dL and leukocyte count is 19,300/mm3.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+90

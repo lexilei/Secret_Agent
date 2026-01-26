@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 222
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-04T03:14:13.460814
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 1.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 34-year-old female with no prior history of thromboembolic disease, chronic neurologic deficit, or limb casting presented to the emergency department this morning complaining of progressive swelling and tightness of her right lower extremity that began two days earlier. She reports that the entire leg, from the groin down to the ankle, has felt “heavy” and appears visibly larger than the opposite side; she noticed difficulty fitting into her usual trousers and shoes despite no recent weight gain. Using a cloth measuring tape at home, she recorded a circumference at mid-calf of 42 cm on the right compared with 38 cm on the left, a difference of approximately 4 cm, and she states that the swelling seems uniform rather than localized to the ankle or foot. Six weeks ago she underwent an elective laparoscopic total abdominal hysterectomy with bilateral salpingo-oophorectomy for symptomatic uterine fibroids; the operative note documented an estimated blood loss of 200 mL, and she was discharged on postoperative day two with instructions for early ambulation. She adhered to these instructions and denies having spent prolonged time in bed at home, on a plane, or in a motor vehicle after surgery. She is otherwise healthy, takes only a daily multivitamin, and has no personal or family history of malignancy, clotting disorders, varicose vein procedures, or miscarriage. She denies chest pain, shortness of breath, cough, fever, chills, trauma, or recent infections. There has been no calf tenderness when she presses on the muscle bulk herself, but she describes a diffuse dull ache in the thigh when standing for long periods. She has not noticed bulging surface veins, skin discoloration, ulceration, or rashes. Review of systems is otherwise unremarkable. On examination she is afebrile with a blood pressure of 118/72 mm Hg, pulse 82 bpm, respiratory rate 14 breaths per minute, and oxygen saturation 98 % on room air. She ambulates into the exam room without aid. Inspection of the lower extremities reveals the right leg to be globally enlarged compared with the left; there is fullness of the thigh compartments and the calf with subtle tautness of overlying skin, but no erythema, mottling, or varicosities. Circumferential measurement 10 cm below the tibial tuberosity confirms 41 cm on the right versus 37 cm on the left, consistent with the patient’s report. Popliteal fossa and femoral triangle palpation elicit no focal point tenderness, though the patient notes a generalized sense of pressure when the examiners’ hands encircle the thigh. Distal pulses (dorsalis pedis and posterior tibial) are 2 + and symmetric, capillary refill is less than 2 seconds, and sensation as well as motor strength are intact. There is no pitting edema over the dorsum of the foot. Abdominal examination shows well-healed laparoscopy port scars without hernia or tenderness. Cardiopulmonary exam is normal. Laboratory results obtained at triage demonstrate hemoglobin 12.8 g/dL, platelet count 235 k/µL, international normalized ratio 1.0, and creatinine 0.7 mg/dL. A pregnancy test is negative. She has no drug allergies, uses alcohol socially, does not smoke, and denies illicit drug use. Given the uniform swelling of the entire right leg, the documented 4 cm discrepancy in calf circumference, the recent major pelvic surgery within the past two months, and the absence of an alternative explanation that would better account for her presentation, the clinical concern for an acute proximal venous thrombosis is high. Duplex ultrasonography of the right lower extremity has been ordered along with additional coagulation studies; therapeutic interventions have been deferred pending imaging results.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.2}, {'stage': 'extract', 'extracted': {'age': 34, 'sex': 'female'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 34, 'sex': 'female'}}, {'stage': 'compute', 'success': True, 'result': 1.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 249
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-01T21:26:54.901684
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 1.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old woman presented to the pre-operative medicine clinic three weeks before a scheduled elective laparoscopic cholecystectomy for symptomatic cholelithiasis. She had been referred by her general surgeon for a comprehensive assessment to optimize medical conditions prior to anesthesia. The patient reported that the biliary colic began approximately eight months earlier and had grown progressively more frequent, prompting the decision for surgery; the operation is planned as a minimally invasive abdominal procedure expected to last under two hours and is not considered particularly hazardous from a cardiovascular standpoint. Past medical history is notable for long-standing type 2 diabetes mellitus first diagnosed at age 38. Glycemic control at home relies on a multiple daily injection regimen consisting of basal glargine each night and rapid-acting insulin lispro before meals; she meticulously records glucose values, with most recent self-monitoring logs showing fasting readings in the 110–140 mg/dL range. There is also well-controlled essential hypertension treated with lisinopril 20 mg daily and low-dose hydrochlorothiazide 12.5 mg each morning. She has hyperlipidemia managed with atorvastatin 40 mg nightly, with a last LDL of 82 mg/dL six months ago. She denies ever experiencing angina, exertional chest tightness, radiation of discomfort to the arm or jaw, or rest pain. She has never been hospitalized for heart-related shortness of breath, fluid overload, paroxysmal nocturnal dyspnea, or lower-extremity edema and has never required diuretics beyond those for blood pressure control. There is no personal history of stroke, transient ischemic attack, carotid artery surgery, or focal neurologic deficits. She has never undergone percutaneous coronary intervention, coronary artery bypass, or peripheral vascular revascularization. Her exercise tolerance is reasonably good; she walks her dog briskly for 30 minutes daily, climbs two flights of stairs without pausing, and gardens without symptoms. She has no chronic lung disease, takes no inhalers, and has never smoked. Family history reveals a father with myocardial infarction at 72 and a mother with type 2 diabetes; no premature cardiac or cerebrovascular events are reported. She consumes a glass of wine with dinner on weekends and denies illicit drug use. Allergies include a pruritic rash with sulfa antibiotics. Review of systems is negative for palpitations, syncope, orthopnea, nocturnal cough, claudication, or visual disturbances. On examination, she appears well and in no distress, body mass index 31 kg/m². Blood pressure is 132/78 mm Hg in the right arm, heart rate 78 beats/min and regular, respiratory rate 14 breaths/min, temperature 36.8 °C, and oxygen saturation 98% on room air. Jugular venous pressure is not elevated; carotid upstrokes are brisk without bruits. Cardiac auscultation reveals a normal S1 and S2 with no gallops, murmurs, or rubs. Lungs are clear to auscultation bilaterally. Abdomen is soft with mild right upper quadrant tenderness but no guarding or rebound. Extremities show no peripheral edema, pulses are 2+ and symmetric. Neurologic examination demonstrates full strength, intact sensation, and normal gait. Laboratory studies obtained the same morning include a basic metabolic panel demonstrating serum creatinine 0.9 mg/dL, blood urea nitrogen 14 mg/dL, sodium 139 mmol/L, potassium 4.3 mmol/L, chloride 102 mmol/L, bicarbonate 26 mmol/L, and glucose 172 mg/dL. Complete blood count is unremarkable with hemoglobin 13.1 g/dL, hematocrit 39.4%, platelets 256 × 10⁹/L, and white blood cell count 6.3 × 10⁹/L. Liver function tests show AST 34 U/L, ALT 30 U/L, alkaline phosphatase 122 U/L, and total bilirubin 1.3 mg/dL. High-sensitivity C-reactive protein and thyroid-stimulating hormone are within reference ranges. Electrocardiogram shows normal sinus rhythm at 76 beats/min with no ST-segment or T-wave abnormalities and a corrected QT of 420 ms. A resting two-dimensional transthoracic echocardiogram performed by her primary cardiologist two months earlier for a new-patient evaluation demonstrated a left ventricular ejection fraction of 60%, normal chamber sizes, and no valvular stenosis or regurgitation of more than mild degree. She is currently taking lisinopril, hydrochlorothiazide, atorvastatin, and her insulin injections; no beta-blockers, calcium channel blockers, or antiplatelet agents are prescribed. She fasted overnight before laboratory testing and has not yet begun any peri-operative antibiotics or anticoagulants. The anesthesiology service has reviewed her airway and anticipates no difficulty with intubation. She has been counseled on continuing her usual evening basal insulin with a modest dose reduction the night before surgery and holding rapid-acting insulin on the morning of the procedure while checking point-of-care glucose on arrival to the pre-operative holding area. Updated vaccinations, including influenza and pneumococcal, are current. She understands the plan and agrees to proceed with elective cholecystectomy.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 1.0}
+

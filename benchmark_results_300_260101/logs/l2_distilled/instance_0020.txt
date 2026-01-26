@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 20
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T21:37:19.344689
+================================================================================
+
+GROUND TRUTH: 63.27379
+PREDICTED: 63.274
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 28-year-old woman presented to the emergency department with sudden-onset abdominal pain. She also had experienced multiple episodes of non-bloody vomitus during the previous 24 hours. One year earlier, she was diagnosed with uncontrolled T2DM but refused to start insulin treatment. Two months before presentation, her hemoglobin A1C concentration was 12%, and she was started on treatment with a combination of dapagliflozin and metformin.
+At the time of presentation to the emergency department, the patient was afebrile with a mild increase in blood pressure to 138/86 mmHg. She was also tachypneic and tachycardiac, with a respiratory rate of 25 breaths/minute, a regular pulse with a heart rate of 116 beats/minute, and normal oxygen saturation. Her weight was 99 kg and her height was 179 cm with a body mass index (BMI) of 31 kg/m2. Physical examination revealed an obese dehydrated woman in mild distress and with mild diffuse abdominal tenderness, but no other remarkable findings. Her blood glucose concentration on Accu-check was 252 mg/dl. Laboratory testing showed an initial blood glucose concentration of 268 mg/dl, an anion gap of 18 mmol/l, and a pH of venous blood gases of 7.18. In addition, her bicarbonate concentration was 9 mmol/dl, her blood urea nitrogen was 50 mg/dl with creatinine 1.7 mg/dl, her acetone was elevated, and her hemoglobin A1C was 14.3%. Urinalysis showed moderate ketones with + 3 glucose. Her beta-human chorionic gonadotropin concentration and septic workup were negative, her cardiac enzymes were normal, and electrocardiography showed no signs of ischemia.
+Following confirmation of DKA, the patient was admitted to the intensive care unit (ICU) and administered two liters of normal saline. Accu-check one hour later showed a blood glucose level of 55 mg/dl, a finding confirmed by a serum blood glucose concentration of 68 mg/dl, a significant reduction from the initial concentration of 268 mg/dl. The patient was administered 50 ml of a 50% dextrose solution; once her blood glucose stabilized, she was started on continuous insulin infusion along with the dextrose-containing intravenous solution. She was not treated with the dapagliflozin- metformin combination while in hospital. Her acidosis and anion gap were corrected over the following three days; because her hemoglobin A1C level remained elevated, she was discharged on the insulin regimen.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 28.0, 'actual_weight': 99.0, 'weight_used': 81.351968503937, 'weight_type': 'adjusted (obese)', 'bmi': 30.9, 'ibw': 69.59, 'creatinine': 1.7, 'sex': 'female', 'gender_coef': 0.85}, 'result': 63.274, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 28.0, 'actual_weight': 99.0, 'weight_used': 81.351968503937, 'weight_type': 'adjusted (obese)', 'bmi': 30.9, 'ibw': 69.59, 'creatinine': 1.7, 'sex': 'female', 'gender_coef': 0.85}, 'result': 63.274, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}}
+

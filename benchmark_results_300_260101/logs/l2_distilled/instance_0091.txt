@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 91
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:37:20.947831
+================================================================================
+
+GROUND TRUTH: 22.37732
+PREDICTED: 22.377
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 8-year-old girl arrived at the emergency department with severe respiratory obstruction following interhospital transport. She weighed 42 kg and was 137 cm in height. Treatment for asthma that had been initiated about 1 month before had not improved her respiratory condition. She presented with marked stridor and cough, severe intercostal and subcostal chest retraction, and developed acute respiratory distress. Her parents mentioned that her respiratory condition might have been worsened by an external traumatic event at the neck that had been caused by her younger brother a few months earlier. At that time, while she had been playing with her younger brother, his elbow had bumped into her neck violently.
+On admission, computed tomography (CT) of the neck showed that severe subglottic stenosis has developed with minimal cross-sectional diameters of 3.5 × 1.8 mm at the narrowest point (0.05 cm2) (Fig. ). Laryngoscopy revealed that her airway was almost completely obstructed by severe subglottic stenosis. Findings from other preoperative investigations including laboratory tests, chest X-ray, and electrocardiography were normal. The preoperative vital signs were blood pressure of 120/59 mmHg, temperature of 37.5 °C, respiratory rate of 20/min, and SpO2 of 98% (O2 5 L/min via mask). Because the cause of the severe subglottic stenosis was unclear and her symptoms were worsening day by day, we decided to perform emergency tracheostomy to prevent further worsening of her symptoms and a life-threatening condition.
+The case was discussed in detail among otolaryngologists and anesthesiologists. Because we anticipated intubation to be impossible, emergency tracheostomy was planned. She was transferred to the operation room for emergency tracheostomy. Intraoperatively, the girl was monitored for oxygen saturation, end-tidal carbon dioxide, and non-invasive blood pressure, with electrocardiography performed as well.
+We judged that it would be difficult to obtain the patient’s cooperation with only regional anesthesia. Emergent tracheostomy was therefore planned under general anesthesia. Sevoflurane was administered with sufficient titration to maintain spontaneous breathing. Anesthesia was maintained via the inhalation of air, oxygen, and sevoflurane. We considered that the use of a face mask instead of supraglottic airway devices during anesthesia might minimize the risk of tracheal injury or laryngospasm. The lungs were fully preoxygenated. The sevoflurane concentration was increased to 3%, at which point the patient was unresponsive.
+The patient initially continued breathing spontaneously, but ventilation later became impossible because the otolaryngologists pulled her trachea. Before the oxygenation and hemodynamics became unstable, tracheostomy was successfully performed by the otolaryngologists. The patient was admitted to our pediatric intensive care unit (PICU) for postoperative airway management.
+On postoperative day (POD) 3, because her airway had been stabilized by tracheostomy, she was discharged from the PICU. On POD 4, CT of the neck still showed narrowing of the subglottic portion. On POD 7, a laryngoscope under general anesthesia revealed severe edema at the subglottic stenosis (Fig. ). The otolaryngologists considered that the cause of the subglottic stenosis might be edema due to cricoid fracture, given her medical history.
+At five months after surgery, a laryngoscope was again inserted under general anesthesia, revealing large granulomas surrounding an object in the subglottic wall. Surprisingly, this object turned out to be a circular plastic foreign body (cross-sectional diameter of 1.2 × 1.0 cm) (Fig. ). Surgery was performed to remove the object. On showing the foreign body to the patient and her parents, they did not remember her aspirating the object. She was discharged from our hospital and placed under home care after removal surgery.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Body Mass Index (BMI)', 'extracted_values': {'weight_kg': 42.0, 'height_cm': 137.0}, 'result': 22.377, 'method': 'python', 'formula': 'BMI = weight / height^2'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Body Mass Index (BMI)', 'extracted_values': {'weight_kg': 42.0, 'height_cm': 137.0}, 'result': 22.377, 'method': 'python', 'formula': 'BMI = weight / height^2'}}
+

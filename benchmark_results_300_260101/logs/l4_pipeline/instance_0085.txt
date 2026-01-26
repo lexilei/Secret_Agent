@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 85
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-04T03:14:11.890204
+================================================================================
+
+GROUND TRUTH: 23.95123
+PREDICTED: 23.951
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 48-year-old female patient (weight: 66 kg, height: 166 cm) with multiple millimetric gallstones was due to undergo intraoperative ERCP followed by LC. She had a history of caesarean section and appendectomy and had elevated transaminases plus hyperbilirubinemia. She was accepted as being American Anesthesiology Association (ASA) Class 1. ESP block was planned as part of her multimodal analgesia protocol.
+After premedication (midazolam 1 mg), anesthesia induction was performed using lidocaine 1 mg/kg, fentanyl 100 mcg, propofol 3 mg/kg, and rocuronium bromide 0.6 mg/kg. Following intubation, anesthesia was maintained with 0.6 MAC sevoflurane in air-oxygen mixture and remifentanil infusion of 0.08–0.1μg/kg/min. After hemodynamic stability, the patient was placed in the prone position. Bilateral ESP block was performed. After completing ERCP, the patient was positioned supine and LC was performed. Total surgical time was 74 minutes and time under anesthesia was 93 minutes. Perioperative intravenous paracetamol (1 gr) and tenoxicam (20 mg) were given.
+She was transferred to the postoperative recovery room after extubation. The patients numeric rating scale (NRS) was 1/10 at rest and when coughing. After follow-up of 1 hour the patient was transferred to the general ward. Postoperative analgesia was ordered as 1 gr intravenous paracetamol every 8 hours. Rescue analgesia was planned as being intramuscular diclofenac sodium 75 mg. The patient's NRS was <3/10 during the first 16 hours of follow-up. Planned analgesia was not applied during this time. At 17th hour, NRS scores were 5/10 when coughing and 4/10 at rest. Rescue analgesia was performed. The patient was externalised home at the 24th hour with prescription pain medication.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+23.951
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Body Mass Index (BMI)', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'weight_kg': 66, 'height_cm': 166}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'weight_kg': 66, 'height_cm': 166}}, {'stage': 'compute', 'success': True, 'result': 23.951, 'formula': 'BMI = weight / height^2'}], 'method': 'l4_pipeline'}
+

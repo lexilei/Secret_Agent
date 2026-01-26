@@ -1,0 +1,28 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 261
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T20:50:33.348280
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 4.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The proband was a 33-years-old male (FM 1), who was diagnosed with acute ST-elevated MI 5 months ago. Emergency coronary angiography showed that 60 to 80% obstruction of left anterior descending artery (LAD) and 50% stenosis of left circumflex artery (LCX) (). The patient was presented to our hospital due to chest pain and fatigue during physical exercise recurrently. Electrocardiogram and laboratory cardiac enzyme test were all normal. The myocardial perfusion tomographic imaging (adenosine) revealed transverse, coronal, and sagittal planes showing areas of reduced radioactivity distribution in the basement of the posterior lateral wall of the left ventricle. His hyperlipidemia was first diagnosed at age 28, he had taken atorvastatin (10 mg, q.d.) irregularly since then for 4 years, and the LDL-C level ranged between 2.6 to 3.8 mmol/L. Unexpectedly, his LDL-C level rose to 6.18 mmol/L 1 month before MI owing to drug withdrawal ().
+His mother experienced lethal MI at the age 50. She was also diagnosed with type 2 diabetes mellitus (T2DM) and hypertension. His several maternal aunties had hyperlipidemia and one of them was died of MI at the age 41. His father had T2DM at age 50. His sister was diagnosed of hypertension, T2DM, and hyperlipidemia at age of 29.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4

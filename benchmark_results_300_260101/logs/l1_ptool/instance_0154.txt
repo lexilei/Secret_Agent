@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 154
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T21:26:53.152201
+================================================================================
+
+GROUND TRUTH: 11.46447
+PREDICTED: 19.1
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 68-year-old diabetic and hypertensive female patient was admitted to the hospital with chronic kidney disease and referred for Double J-stent insertion. She was a known case of chronic kidney disease and ischemic heart disease. Her blood parameters were as follows: hemoglobin = 8 g/dl, total leukocyte count = 12,800/ml, urea = 150 mg/dl, creatinine = 3.9 mg/dl, and random glucose = 127 mg/dl.
+During the stay in the hospital, the patient had an indwelling catheter. The catheter was inserted using sterile technique. She was treated with meropenem, ciprofloxacin along with antacids and multivitamins. After 5 days of stay, she developed UTI. She had pyrexia of 102°F.
+Patient's urine collected using universal precautions. Urine wet mount showed plenty of pus cells, 2–4 epithelial cells and budding yeast cells. The urine sample was inoculated with a standard loop on blood agar and Urichrom agar (Himedia Laboratories, India) and incubated at 37°C. On blood agar tiny, white, dry, wrinkled colonies were observed [], and on urichrom agar blue, dry, wrinkled colonies were observed [] with a colony count of >105 cfu/ml. The Gram stain of the colony revealed septate hyphae with arthrospores and few budding yeast cells []. The colony was subcultured on to Potato Dextrose Agar and incubated at 22°C and 37°C. At both, the temperatures colonies of yeast-like fungus were obtained in pure culture. After 5 days of incubation on Corn Meal Agar (CMA), abundant rectangular arthroconidia were seen []. When the patient was on the same urinary catheter, two more samples were collected. Both the samples revealed the same picture. The yeast was identified as T. asahii with Gram stain, morphology on CMA, hydrolysis of urea, carbohydrate fermentation, and assimilation tests. The same was identified by Vitek 2 compact automated system (bioMeriux). For molecular identification, the isolate was sent to the National Culture Collection of Pathogenic Fungi (NCCPF), Department of Medical Microbiology, Postgraduate Institute of Medical Education and Research, Chandigarh, which confirmed our identification.
+Antifungal susceptibility testing was done by using Mueller-Hinton Agar with 2% Glucose and methylene blue (Himedia, India) for fluconazole, Itraconazole, voriconazole, Ketoconazole, and Amphotericin-B. The susceptibility of the strain was evaluated by the disk-diffusion method, in accordance with protocol M44-A of the clinical and laboratory standards institute. It was found that this isolate was sensitive to Itraconazole and voriconazole and resistant to fluconazole, Ketoconazole, and Amphotericin-B. Antifungal therapy with voriconazole and change of indwelling catheter subsequently lead to negative fungal growth in urine cultures.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+19.1
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 19.1}
+

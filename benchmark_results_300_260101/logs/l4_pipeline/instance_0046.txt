@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 46
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-04T03:14:11.521940
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 3.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 56-year-old woman with a significant history of RCA stenosis with prior bare metal stenting, hypertension, diabetes, dyslipidemia, smoking, and paroxysmal atrial fibrillation presented to the emergency department with anginal chest pain. Initial work up showed significant elevation of cardiac troponin T with T-wave inversion in the inferior leads. She subsequently underwent cardiac catheterization. Coronary angiography revealed a 90% stenosis of the midportion of RCA with patent stent at distal portion of RCA (Figure , ) and only mild disease in left anterior descending coronary and left circumflex coronary arteries. An everolimus-eluting stent, 2.5 mm × 23 mm, was placed in the stenosis of midportion of RCA. Immediately after these interventions, thrombus developed and occluded SN artery. It originated from the proximal one third portion of RCA. Electrocardiographic monitoring showed junctional escape rhythm without P waves at a heart rate of 30 beats/min, suggesting sinus arrest (Figure ). To prevent severe bradycardia and hypotension, transvenous temporary pacemaker was placed. The patient remained asymptomatic and without hypotension. The clot in the SN artery was identified and thrombectomy was performed. Within five minutes after intervention, Thrombolysis In Myocardial Infarction (TIMI) flow 3 was observed in the SN artery within 5 minutes and the transvenous temporary pacer was removed. Electrocardiogram revealed persistent junctional escape rhythm for 5 days after revascularization, with restoration of sinus rhythm on the sixth day. Heart rate showed a gradual improvement and the patient maintained a stable heart rate at 60 beats per minute. The patient remained hemodynamically stable without further need for temporary pacing. Pre-discharge exercise stress test had shown 50% predicted heart rate at 100 beats per minute, without ST segment change.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'age': 56, 'sex': 'female', 'has_hypertension': True, 'has_diabetes': True}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 56, 'sex': 'female', 'has_hypertension': True, 'has_diabetes': True}}, {'stage': 'compute', 'success': True, 'result': 3.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

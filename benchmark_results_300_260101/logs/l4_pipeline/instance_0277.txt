@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 277
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-04T03:14:14.073743
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 0.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 45 year-old male developed flushing and urticaria 15 minutes after eating pineapple, then he felt precordial squeezing pain radiating to the left shoulder, lasting for several minutes, accompanied by palpitation and excessive sweating. He is a smoker with no other cardiac risk factors and no history of CVD, he was allergic to pineapple before but only manifested as slight itching and skin rashes which spontaneously disappeared in hours. Before this onset, he had been working day and night for 1 month with doubled tabacco smoking, though he did not smoke after eating pineapple. The patient was sent to the emergency room, on arriving, his symptoms had been relieved by sublingual nitroglycerin, his blood pressure was 120/70mmHg, pulse rate was 80 beat per minute, and ECG revealed no abnormalities while the symptom had relieved. 24h Holter (Figs. , and ) revealed ST segment elevation for 2~3 mm in leads II, III, aVF, V5, V6 at 13:40-13:42 (when he felt malaise, chest pain and palpitation at rest) and 20:20-20:22 (when he was driving, he felt chest pain and left arm numb), as well as ventricular bigeminy and nonsustained ventricular tachycardia at 13:20 and 13:42. He was admitted to cardiology department, blood test showed normal troponin I level and elevated eosinophil of 7.6% on the first day of admission. Coronary angiography showed subocclusion in the proximal segment of LCX with TIMI grade 3 flow, which was relieved by 3 times of 200μg intracoronary nitroglycerin. He was diagnosed as coronary vasospasm on the basis of anaphylaxis to pineapple, and received anti-vasospasm therapy of mononitrate and nifedipine as well as antiallergic agent, the eosinophil rate declined to 6.1% on the 7thday, chest pain didn’t relapse during hospitalization. After 12 months of mononitrate and nifedipine medication, anti-vasospasm therapy was discontinued. During 3 years follow-up, he kept free of cardiac events.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.3}, {'stage': 'extract', 'extracted': {'age': 45, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 45, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

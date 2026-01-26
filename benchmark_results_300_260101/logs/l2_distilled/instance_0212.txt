@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 212
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T21:37:23.330005
+================================================================================
+
+GROUND TRUTH: 8.0
+PREDICTED: 8.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 28-year-old male who was regular at the gym for bodybuilding presented to us with 1-day history of epigastric pain radiating to back, recurrent vomiting and abdominal distension. On admission his heart rate was 160 per min regular, respiratory rate was around 40 per min, blood pressure 100/80 mmHg, abdomen was diffusely distended and mildly tender. Initial lab evaluation showed Hb 18.7 g/dL, total leukocycte count 6200, serum creatinine 0.8 mg/dL, urea 34 mg/dL, sodium 138, potassium 4.3 mmol/L, total protein 6.1 g/dL, albumin 3.7 g/dL, bilirubin 3.6 mg/dL, SGOT 29, SGPT 26, alkaline phosphatase 145, lipase 104, serum amylase 760 U/L, prothrombin time (international normalized ratio) 1.23, activated partial thromboplastin time 38 s, serum calcium 9.4 mg/dL, serum triglyceride 148 mg/dL. Arterial blood gas analysis reveal pH 7.33, pCO235, pO280 mmHg on oxygen through face mask at 8 L/min, lactate 3.7 mmol/L. On Ultrasonography abdomen, pancreas was swollen with mild peritoneal collection, diffuses inflammatory changes with no evidence of gall stones or biliary sludge.
+On detailed history including alcohol intake and examination we could not find obvious reason of acute pancreatitis other than his history of taking androgenic anabolic steroids (AAS) and protein supplements for body building since other less common causes which includes hypercalcemia, hypertriglyceridemia or post-endoscopic retrograde cholangiopancreatography was also not there and corticosteroids are known etiological agent for acute pancreatitis.
+After initial improvement over the period of 5–7 days patient's condition start worsening again, and he was shifted to bigger center where he died after 2–3 days.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+8.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 8.0}
+

@@ -1,0 +1,32 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 210
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T20:50:32.157399
+================================================================================
+
+GROUND TRUTH: 9.0
+PREDICTED: 7.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 43-year-old male presented to the emergency department complaining of melena for three days.
+He had two loose bowel movements with black tarry stool every day for the last three days with lightheadedness.
+He denies any hematemesis, abdominal pain, or similar episodes in the past.
+Past medical history was remarkable for liver cirrhosis due to untreated hepatitis C and alcohol abuse. Family history was unremarkable.
+On presentation, vitals revealed a blood pressure of 100/60 mmHg; pulse rate of 110 per minute, temperature of 98.5 Fahrenheit, and respiratory rate of 18 per minute. Physical exam revealed an ill-looking patient with mild confusion, pale conjunctiva, non-icterus sclera, mildly distended abdomen with no tenderness, and trace pitting edema in both legs. US revealed small fluid collections around the liver edge.
+Laboratory findings displayed hemoglobin of 6.8 g/dL, leukocytes 10000/mm3, and platelet 105000/mm3. Serum biochemistry revealed creatinine 0.6 mg/dL, blood urea nitrogen 16 mg/dL, albumin 2.4 g/dL, total protein 4.8 g/dL, aspartate aminotransferase 34 IU/L, alanine aminotransferase 60 IU/L, alkaline phosphatase 95 IU/L, international normalized ratio 1.1 and total bilirubin 1.5 mg/dL.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+7

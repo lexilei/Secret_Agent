@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 160
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T20:50:31.198079
+================================================================================
+
+GROUND TRUTH: 7.51024
+PREDICTED: 8.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 40-year-old male presented with complaints of anasarca, dyspnea, anuria, and left-sided pleural effusion was admitted with provisional diagnosis of chronic kidney disease. He also had history of headache, loss of appetite, fatigue, orthopnea, and on and off chest pain and occasional vomiting after food intake. He had a history of hypertension since 3 months but was not on any medication. His blood pressure at presentation was 170/100 mm of Hg but all other vitals were stable. His initial investigations showed hemoglobin - 6.6 gm%, white blood cell (WBC) - 7370/uL, platelet count - 60,000, red blood cell - 124 mg/dL, blood urea nitrogen - 142 mg/dL, creatinine - 8.0 mg/dL, serum K+- 5.6 mEq/L, chest X-ray showed mild left-sided pleural effusion, arterial blood gas showed metabolic acidosis with respiratory compensation and electrocardiogram was normal. Ultrasonography kidneys, ureters, and bladder showed poor corticomedullary differentiation and decreased size of bilateral kidneys suggestive of chronic kidney disease. The patient was taken up for hemodialysis. The patient had no history of previous transfusions. After pretransfusion testing one unit of buffy coat-poor, nonleucofiltered, coombs cross-match compatible, fresh (<7-days old) saline-adenine-glucose-mannitol (SAGM) packed red blood cell (PRBC) unit was issued but transfusion was started almost 4 h after the issue of PRBC with no cold chain maintenance during this period. After around 20 ml of transfusion, the patient developed sudden onset of excruciating pain in the lower back and hip joints, tachypnea, and shortness of breath with oxygen saturation dropping to 82%. Patient's vitals did not vary much from the predialysis levels and remained afebrile throughout. Transfusion was stopped immediately and supplemental oxygen and injection tramadol 50 mg and injection diphenhydramine 25 mg were given intravenously. Hemodialysis was completed uneventfully after the reaction subsided. A complete posttransfusion reaction work-up was initiated as per blood bank protocol beginning with bedside confirmation of correct product and patient identification. Clerical errors were ruled out. Hemolysis check in the returned PRBC unit (3 days old) was done. No hemolysis in the returned PRBC unit was obvious as well as in the posttransfusion sample. The postreaction patient grouping was matching with the patient's pretransfusion sample with a negative direct antiglobulin test. Repeat grouping of the PRBC unit matched the unit label. Repeat testing of the full-cross match to both the patient's prereaction sample and postreaction sample confirmed compatibility of the unit. Peripheral blood smear did not show any schistocytes and serum indirect bilirubin was in normal range. Thus, hemolytic transfusion reaction was ruled out. Culture of the PRBC unit causing the reaction and posttransfusion reaction blood sample from the patient was also sterile. Chest X-ray showed no features suggestive of pulmonary edema. Second session of hemodialysis was completed uneventfully after an interval of 48 h without blood transfusion which rules out the pain manifestation and the reaction occurring due to hemodialysis-related factors. Other causes of lower back pain including spinal disorders/nerve compression, blood clots, varicose veins, and poor circulation had been ruled out before admitting the patient in the hospital as well as soon after the reaction by the concerned treating physician.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+8.0

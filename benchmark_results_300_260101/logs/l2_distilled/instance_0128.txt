@@ -1,0 +1,43 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 128
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:37:21.723755
+================================================================================
+
+GROUND TRUTH: 7.5
+PREDICTED: 1.5
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 60-year-old Chinese male presented to the hospital with acute shortness of breath and lower limb swelling. He has a past medical history of stroke disease, chronic kidney disease, and ischaemic cardiomyopathy with a mildly reduced left ventricular ejection fraction of 45%. His cardiovascular risk factors include diabetes mellitus, hypertension, and hyperlipidaemia.
+Clinical examination revealed bibasal crepitations with bilateral pitting oedema. The blood pressure on admission was 150/87 mmHg with sinus tachycardia with a heart rate of 129 beats per minute.
+Initial arterial blood gas (ABG) on admission () revealed Type 2 respiratory failure, while chest X-ray done showed bilateral pulmonary congestion.
+He was initially started on non-invasive ventilation and intravenous frusemide and glyceryl trinitrate infusion. Despite initial clinical improvement, the patient became increasingly restless with worsening hypoxaemia and decision was made for intubation and mechanical ventilation. However, he suffered a pulseless electrical activity cardiac arrest peri-intubation with a low-flow time of 20 min before return of spontaneous circulation (ROSC).
+He was started on our institution’s protocolized post-cardiac arrest care bundle () which included continuous rSO2 monitoring and TTM with mild induced hypothermia at 33°C. An oesophageal probe was inserted for core body temperature monitoring. Initial ABG post-ROSC revealed a Type 2 respiratory failure with pH 7.14, pCO2 54, pO2 110, HCO3 18, and SaO2 97%. Patient was sedated and paralyzed and ventilator settings were optimized to correct the respiratory acidosis. Patient was ventilated with a tidal volume of 7 mL/kg predicted body weight and at a ventilator rate of 28 breaths per minute. Initial cerebral oximetry revealed an rSO2 66% (left) and 67% (right).
+Post-resuscitation SpO2 was maintained above 94% and mean arterial pressure (MAP) was constantly above 80 mmHg without the need for inotropes or vasopressors. However, it was subsequently noted that the cerebral rSO2 had decreased to 33% (left) and 35% (right) and a repeat ABG showed resolution of the respiratory acidosis with pH 7.3, pCO2 33, pO2 138, HCO3 16, and SaO2 99%.
+Ventilator settings were immediately adjusted and the minute ventilation reduced by lowering the ventilator rate to aim for mild therapeutic hypercapnia with a target pCO2 of 50–55 mmHg. PEEP was reduced from 12 cmH2O to avoid an excessively high intrathoracic pressure which may impede cerebral venous drainage. Patient was also started on dobutamine infusion to improve the global and cerebral perfusion as the central venous oxygen saturation (ScvO2) of 62% reflected a systemic oxygen delivery/consumption mismatch, while a Pcv-aCO2 gap of 14 mmHg suggested a low-flow state. The above interventions resulted in an improvement in cerebral rSO2 to 55% (left) and 51% (right) ().
+Patient was cooled for 24 h and then gradually rewarmed. A repeat transthoracic echocardiogram revealed severe global hypokinesia with a left ventricular ejection fraction of 26%.
+He was subsequently extubated after 6 days in the cardiac intensive care unit with improvement in Glasgow coma scale score and underwent rehabilitation in the general ward. On discharge, he had a cerebral performance category of 1 and is now on follow-up in the outpatient clinic.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': "Wells' Criteria for Pulmonary Embolism", 'extracted_values': {'tachycardia': 1.5}, 'result': 1.5, 'method': 'python', 'formula': 'Sum of criteria (>4 = PE likely, ≤4 = PE unlikely)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': "Wells' Criteria for Pulmonary Embolism", 'extracted_values': {'tachycardia': 1.5}, 'result': 1.5, 'method': 'python', 'formula': 'Sum of criteria (>4 = PE likely, ≤4 = PE unlikely)'}}
+

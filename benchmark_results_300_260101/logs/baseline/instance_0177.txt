@@ -1,0 +1,30 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 177
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T20:50:31.574193
+================================================================================
+
+GROUND TRUTH: 56.90954
+PREDICTED: 54.5
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 16-year-old female patient (weight: 56 kg, height: 165 cm) was referred to ophthalmic clinic of our hospital and reported sudden left eye pain and visual acuity reduction over the past 4 days. She was febrile (38 °C) and experienced malaise.
+Ophthalmic examinations revealed that the patient’s left eye visual acuity was 0.8 (LogMAR scale, no improvement was achieved after correction) and the intraocular pressure (IOP) was 18.3 mmHg (non-contact tonometer). Slit-lamp microscope showed erythema and edema of the eyelids and chemosis (Fig. a). Color fundus photograph revealed two ERD lesions temporal and superior-nasal to the optic disk (Fig. b). The presence of ERD was further confirmed by SD-OCT (spectral-domain optical coherence tomography, Heidelberg Engineering, Heidelberg, Germany) (Fig. c).
+Systemic laboratory tests were revealed by full blood count (WBC 10.54 × 109/L, 84% neutrophils) and assessment of erythrocyte sedimentation rate (ESR) (37 mm/h) and C-reactive protein (12 mg/L). Blood cultures were performed which identified Staphylococcus aureus. Orbital computed tomography (CT) scans identified left eye proptosis and swelling of the periorbital and postbulbar soft tissue, which all led to the diagnosis of orbital cellulitis. The presence of ERD was again verified by orbital CT scans (Fig. d). However, the cause for the orbital cellulitis was not idenitfied in this patient, such as trauma, periorbital cellulitis with local spread, paranasal sinusitis, or hematogenous spread of a remote infection.
+Treatments in this patient were initiated soon after final diagnosis was made. Intravenous administration of antibiotics (cefatriaxone, 2.0 g, daily) was received, in addition to topical antibiotics (Lenofloxacin eye drops, Santen, Osaka, Japan) four times a day. The patient was closely followed up daily with routine ocular examinations. Considerable improvement of laboratory tests, including those revealed by the normalized blood test, was achieved after 1 week, when intravenous antibiotics were terminated. Complete recovery of ERD was evident about 1 month later (Fig. ), and the visual acuity improved to 0.6 (best-corrected visual acuity improved to 0.4, LogMAR scale).
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+54.5

@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 205
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T21:37:23.169389
+================================================================================
+
+GROUND TRUTH: 11.0
+PREDICTED: 11.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 25-year old young female, with a known case of celiac disease for the last three years, presented in the out-patient department with primary complaints of progressive abdominal distension, abdominal pain and shortness of breath for one year. The abdominal distension started from the flank region bilaterally and then progressively became generalized. It was associated with abdominal pain which was constant, moderate in intensity, diffuse and dull in character. She also had a history of intermittent productive cough for past one year. It was associated with shortness of breath on exertion which had progressively increased and was now occurring at rest. According to the patient, she had several episodes of altered bowel movements and bloating for the past eight months which has increased in frequency over the time, as she has not been strictly adherent to a gluten-free diet over the last year.
+On admission, the patient was responsive and alert but appeared to be in distress. Her pulse was 95 beats per minute (BPM), blood pressure (BP) was 110/70 mmHg and respiratory rate was 23/minute. The general physical examination revealed pallor, jaundice, and peripheral cyanosis. There was also evidence of clubbing, bilateral peripheral edema, palmar erythema and multiple hemangiomas diffusely present all over the body. On abdominal examination, the abdomen was diffusely distended, tense, and non-tender. The fluid thrill was positive, however, the size of spleen and liver could not be appreciated because of massive ascites. Bowel sounds were normoactive. No hepatic or renal bruits were audible. Pulmonary auscultation revealed harsh vesicular breathing all over the chest with decreased air entry in basal segments bilaterally and occasional crepitations. There was dullness to percussion and decreased resonance in the left basilar chest region. Cardiovascular examination was unremarkable.
+Hematological investigation displayed normocytic anemia (hemoglobin level of 9.9 g/dL), platelet count of 191000/mm3, and WBC count of 7200/µL. Liver function tests revealed albumin level of 2.8 g/dL (normal: 3.5-5.0 g/dL), total bilirubin of 5.9 mg/dL (normal: 0.1-1.2 mg/dL), alkaline phosphatase of 674 U/L (normal: 0-240 U/L), and gamma-glutamyl transpeptidase of 65 U/L (normal: 6-42 U/L). Pro-thrombin (PT) time and international normalized ratio (INR) were elevated at 20 seconds and 1.93 seconds, respectively, while partial thromboplastin time was within normal limit. Serum iron levels were 33 mcg/dL (normal: 60-170 mcg/dL), while ferritin level was normal. Vitamin B12 level was at 163.8 pg/mL (normal: 208-964 pg/mL) and folate level was normal. Vitamin D (25-OH) was decreased at 12.89 ng/mL (normal: >29 ng/mL). Serum calcium levels were within normal limits. A complete serological screen for autoimmune hepatitis (anti-nuclear antibodies and anti-smooth muscle antibodies) produced normal results (antibodies were undetected). Hepatitis C antibodies and HBsAg were both non-reactive. Moreover, serum ceruloplasmin levels were also within the normal range. Fasting lipid profile, kidney, and thyroid function tests were also within normal limits. A full screen for all known thrombophilic factors turned out to be insignificant. Specifically, the homocysteine level was 9.7 µmol/L (normal: 4.9-11.6 µmol/L ) while anticardiolipin antibodies (IgG and IgA), lupus anticoagulant and Factor V Leiden were all negative. Levels of antithrombin III, protein C, protein S were also within reference range. The ascitic fluid analysis revealed total protein 1.3 g/dL, albumin 1g/dL, glucose 95 mg/dL and serum-ascitic albumin gradient of 1.8, features suggestive of portal hypertension. A duodenal biopsy performed via upper gastrointestinal endoscopy gave evidence of villous atrophy, crypt hyperplasia, and markedly increased intraepithelial lymphocyte (Marsh grade III). Furthermore, anti-tissue transglutaminase IgA levels were 154.6 IU/ml.
+Thereafter, an abdominal ultrasound was performed which showed a liver span of 8.5 cm (normal: 10 cm-12 cm), small in size with coarse echotexture and irregular margins, no focal mass, and intrahepatic duct dilatation. The splenic span was 14.5 cm (normal: 10.5 cm-12 cm) and splenic vein measured 1.2 cm. On Doppler ultrasonography, portal vein measured 0.7 cm with the normal hepatoportal monophasic flow. The velocity of the portal vein was 16 cm/sec (normal: 20 cm/sec-40 cm/sec), and all hepatic veins were attenuated. Subsequently, a contrast computed tomography (CT) of the abdomen was pursued (Figures -) which displayed a cirrhotic liver with massive ascites and left-sided pleural effusion. No aneurysm, superior and inferior vena cava thrombosis or liver masses were seen. Caudate lobe hypertrophy and non-visualization of the hepatic vein confirmed the diagnosis of Budd-Chiari Syndrome.
+The patient was managed conservatively with anticoagulants, diuretics, and a gluten-free diet in addition to oral vitamin D supplements and vitamin B12 injections. Within four weeks, there was a marked decrease in ascites with improvement in liver functions (total bilirubin was 1.9 mg/dL and albumin 3.8 g/dL).
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+11.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 11.0}
+

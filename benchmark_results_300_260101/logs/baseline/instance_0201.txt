@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 201
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T20:50:31.990949
+================================================================================
+
+GROUND TRUTH: 9.0
+PREDICTED: 10.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+We report a case of a 74-year-old woman with a history of chronic liver disease of alcoholic etiology with portal hypertension and esophageal varices and a history of upper digestive hemorrhage 5 years ago. Her regular medication included alprazolam and omeprazole. She was brought to the emergency department with a 1-week history of diffuse abdominal pain and increased abdominal perimeter, without any other symptoms. On physical examination, she had a body temperature of 37.8 °C and no remarkable changes in blood pressure, heart rate, respiratory rate and peripheral saturation. She had a significant abdominal distention and a positive fluid wave consistent with ascites. Blood analysis revealed hemoglobin of 12.8 g/dL, platelets of 371,000/µL, elevation of inflammatory markers: leukocytes of 16,090/µL and C-reactive protein (CRP) of 21.74 mg/dL, bilirubin of 2.5 mg/dL, hypoalbuminemia of 2.8 g/dL and international normalized ratio (INR) of 1.52. Abdominal ultrasound revealed large volume ascites and a subsequent diagnostic and therapeutic paracentesis was performed in which the peritoneal fluid cell count showed 3,136 leukocytes/mm3 with 86% neutrophils consistent with the diagnosis of SBP. The patient was hospitalized with the diagnosis of SBP and medicated with ceftriaxone 2 g/day. Despite initial clinical improvement, on the second day of antibiotics, the patient still presented fever and elevated inflammatory markers: leukocytes 14,940/µL and CRP 17.92 mg/dL. An abdominal computed tomography was performed to exclude secondary peritonitis. On the third day of hospitalization, new paracentesis was performed and showed an increase in the number of cells with 6,783 leukocytes/mm3 with 97% of neutrophils and on the next day the cultural peritoneal fluid of the first paracentesis revealed the presence of Listeria monocytogenes. The blood cultures were negative. Antibiotic therapy was changed according to in vitro sensibility test for ampicillin 2 g of 6/6 h and she completed 14 days of therapy. The patient presented clinical and laboratory improvement. After 48 h of targeted therapy, paracentesis showed a decrease in the number of cells with 3,753 leukocytes/mm3 with 98% of neutrophils and on the ninth day of therapy the peritoneal fluid no longer presented criteria of SBP and cultural negative.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+10

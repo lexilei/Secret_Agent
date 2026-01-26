@@ -1,0 +1,28 @@
+=== Refactoring Analysis ===
+
+extract_food_items:
+  Type: ptool
+  Lines: 28-34
+  Parameters: text: str
+  Returns: List[str]
+  Trace count: 3
+
+is_healthy:
+  Type: ptool
+  Lines: 38-44
+  Parameters: food: str
+  Returns: bool
+  Trace count: 9
+
+suggest_alternative:
+  Type: ptool
+  Lines: 48-54
+  Parameters: unhealthy_food: str
+  Returns: str
+  Trace count: 3
+
+analyze_meal:
+  Type: pure Python
+  Lines: 61-105
+  Parameters: description: str
+  Returns: dict

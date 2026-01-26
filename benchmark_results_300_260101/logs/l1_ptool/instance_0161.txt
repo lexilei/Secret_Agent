@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 161
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T21:26:53.280861
+================================================================================
+
+GROUND TRUTH: 55.07095
+PREDICTED: 55.06
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+Our patient was a 47-year-old man who was diagnosed with tetralogy of Fallot 3 months after birth. He had a Waterston operation at 9 months of age and a Blalock–Taussig procedure at 1 year, 10 months of age. At age 10, the patient underwent surgery to ligate the ascending aorta–right pulmonary artery shunt path. He did not undergo intracardiac repair. The main pulmonary artery was completely occluded from the right ventricular outflow tract. The right-to-left shunted blood ejected from the left ventricle through the ventricular septal defect and merged with oxygenated blood via the shunt path from the left subclavian artery to the left pulmonary artery.
+Renal function decreased when the patient was 38 years of age. Home oxygen therapy at night was initiated 1 year before the patient presented at our hospital; a β-blocker (carvedilol, 2.5 mg/day) was started 6 months before presentation. The patient did not experience breathing difficulty in his daily life (New York Heart Association Class II) and was able to work. A PD catheter was inserted in April 2015. Renal function gradually decreased and exacerbation of lower leg edema was observed, so PD was started. The patient’s height was 158 cm, his weight was 54 kg, his body temperature was 36.3 °C, his blood pressure was 136/69 mmHg, his pulse rate was 81 beats/min, and his oxygen saturation was 81% in room air.
+Laboratory testing was performed on admission. Urinalysis dipstick examination indicated 4+ protein (8 g/g Cr) and was negative for blood. Arterial blood gas analysis showed a pH of 7.278, PaCO2 of 43 mmHg, PaO2 of 52 mmHg, bicarbonate of 19.7 mmol/L, and base excess of − 6.9 mmol/L. Chest X-ray showed a cardiothoracic ratio of 63%, indicating cardiac enlargement. Abdominal ultrasonography showed mild atrophy of the bilateral kidneys, increased cortical brightness, and cysts. Left ventricular findings of cardiac ultrasonography included a left ventricular end-diastolic diameter of 44 mm, left ventricular end-systolic diameter of 28 mm, left ventricular ejection fraction of 71%, septal thickness of 26 mm, and rear wall thickness of 11 mm. The valve findings were mild aortic regurgitation, trivial mitral regurgitation, moderate tricuspid regurgitation, and pulmonary artery closure. The main pulmonary artery was not visible from the right ventricular outflow tract. The ventricular septal defect was 19–22 mm in diameter; there was almost right-to-left shunting across the defect, with only a slight left-to-right shunt. After Waterston operation there was good flow through the shunt from the ascending aorta to the right pulmonary artery. After left Blalock–Taussig shunt operation there was decreased flow velocity from the left subclavian artery to the left pulmonary artery.
+In July 2015, PD was started. Serum creatinine (Cr) at the start of PD was 5.5 mg/dl. The fast peritoneal equilibrium test (PET) result was low average. From November 2015 (4 months after the start of PD), B-type natriuretic peptide (BNP) gradually increased, water removal was 200–300 mL/day, and body weight increased. In March 2016 (8 months after starting PD), the PD fluid protocol was changed. In February 2017, the patient developed lower leg edema and his BNP increased to 1300 pg/mL, so treatment was changed to continuous cycling PD. With increased water removal, the edema resolved and BNP rapidly decreased. Changes associated with cyanosis included a hemoglobin level of 18–20 g/dL, indicating polycythemia; the patient also experienced headache. Phlebotomy treatment was performed four times. Because of concerns about iron deficiency resulting from phlebotomy, hemostasis therapy was discontinued, after which the patient’s headache improved (Fig. ).
+The serum bicarbonate level at the start of PD in July 2015 was 20 mmol/L. This value increased to 25–30 mmol/L with the change in PD fluid protocol, and venous blood PCO2 increased with the start of PD (Fig. ).
+The target SpO2 was adjusted to 70–85%; SpO2 was unchanged after PD. SpO2 decreased with the complication of heart failure, but improved with fluid management. Periodic echocardiography showed that PD initiation had little effect on hemodynamics.
+There were no PD-related complications.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+55.06
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 55.06}
+

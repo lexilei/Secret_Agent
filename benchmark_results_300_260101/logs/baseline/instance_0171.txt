@@ -1,0 +1,33 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 171
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T20:50:31.432466
+================================================================================
+
+GROUND TRUTH: 61.40954
+PREDICTED: 56.2
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+We obtained Institutional Review Board (IRB) approval (Dankook University Hospital IRB 2021-02-015) and written informed consent from patient's legal representative for the publication of this report.
+A 42-year-old male (American Society of Anaesthesiologists class II; weight, 59 kg; height, 165 cm) with a malignant melanoma in the left side of the oral cavity, gingiva, and buccal mucosa was scheduled for mass excision and reconstruction with a fibular free flap (). Preoperative magnetic resonance imaging (MRI) showed an ill-defined mass lesion that was 2.6 × 2.4 × 1.8 cm in size in the left lateral part of the oral cavity (Figures and , stage III, T2N1). He was previously healthy and had no history of systemic disease or medication. Preoperative evaluations, including laboratory tests, electrocardiography, and chest radiography, were unremarkable.
+Patient monitors were instituted, including standard monitors and continuous arterial blood pressure monitoring with radial artery catheter insertion. General anaesthesia was induced with intravenous injections of fentanyl (100 μg), lidocaine (60 mg), propofol (120 mg), and rocuronium (50 mg) and maintained with 7–10 vol% desflurane. After the induction of anaesthesia, nasal packing was performed with cotton swabs moistened with a 0.01% epinephrine solution. Nasotracheal intubation was performed using fibreoptic bronchoscopy (FI-10RBS, Pentax, Japan), and a 6.5 mm reinforced tube was inserted. After intubation, a central venous catheter (CVC, Bio Line, 7 F double lumen catheter, Ewha Biomedics, Republic of Korea) was inserted into the right subclavian vein using the anatomical landmark technique.
+Partial mandibulectomy (from # 21 to the mandibular angle), radical neck dissection, and reconstruction with a fibular free flap were performed (). The operation time was approximately 13 hours and 25 minutes. The infused volume was crystalloid 7200 ml, colloid 1700 ml, packed red blood cells (pRBC) 5 units, and fresh frozen plasma 5 units. The urine output was 3800 ml, and the estimated blood loss was approximately 1800 ml. The patient was transferred to the intensive care unit and was kept sedated with endotracheal intubation.
+The patient recovered from anaesthesia 3 hours after the surgery. Ventilator weaning was initiated at 8 AM on the first postoperative day (POD 1), the ventilator was stopped at 1 PM, and oxygen (5 L/min) was administered via a T-piece. The patient did not complain of respiratory difficulties. The patient was evaluated before extubation, and his mental status was alert, muscle tone was intact, surgical wound condition was visually acceptable, and the endotracheal tube cuff leak test was fair. No bleeding was noted from the surgical wound. Blood pressure was maintained between 110/60 mmHg and 140/90 mmHg. Postoperative pain was treated with an intravenous infusion of patient-controlled analgesia with fentanyl and nefopam. There was no dyspnoea, and arterial oxygen saturation was 100%.
+At 8 AM POD 2, the patient was extubated (approximately 36 hours postsurgery), and oxygen (3 L/min) was administered via a nasal prong. Four hours after extubation, his haemoglobin level decreased to 8.9 ml/dl. One unit of pRBC was transfused.
+Seven hours after extubation (POD 2, 3 PM), the patient complained of dyspnoea, and arterial oxygen saturation decreased from 100% to 87%. Bag-mask ventilation was initiated but was ineffective. Oral and nasal airway insertion was not sufficient to open the airway. Conventional direct laryngoscopy, video laryngoscopy, and laryngeal mask insertion were not successful because the structures in the oral cavity were severely distorted due to operation site oedema and haematoma. An otolaryngologist performed an emergency TT while performing bag-mask ventilation. During TT, the heart rate decreased from 90 bpm to 42 bpm. Intravenous atropine (0.5 mg) and epinephrine (200 μg) were administered. Ten minutes after the initiation of bag-mask ventilation, cardiopulmonary resuscitation was initiated to treat cardiac arrest, and epinephrine (1 mg) was administered every 5 minutes. The TT tube was secured 28 minutes after the initiation of bag-mask ventilation. Blood pressure was 80/30 mmHg, and dopamine, dobutamine, and norepinephrine infusion (20 μg/kg/min each) were administered. The patient was connected to a ventilator and was sedated with midazolam. On POD 3, midazolam sedation was stopped; however, patient's mental status was semicomatose, and he showed seizure-like movements. A neurology consult was obtained, and postoperative computed tomography showed severe swelling and increased soft tissue density with airway compression in the left side of the face and neck (). On POD 4, a brain MRI showed a diffusely restricted lesion involving the whole cerebral cortex and basal ganglia. The patient received conservative treatment but his mental status did not recover. On POD 67, a recurring tumour was found. Further chemotherapy or radiotherapy was considered; however, it was decided that it would not be beneficial. On POD 103, the patient was transferred to a hospice.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+56.2

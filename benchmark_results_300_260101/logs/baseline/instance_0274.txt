@@ -1,0 +1,30 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 274
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T20:50:33.672222
+================================================================================
+
+GROUND TRUTH: 5.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 64-year-old man with a history of hypertension, diabetes mellitus, and coronary artery disease with multiple percutaneous coronary interventions (PCI) of the left anterior descending artery and left circumflex arteries, most recently 2 weeks prior, presented to the emergency room with chest pain. On the day of admission, he noted the sudden onset of precordial chest pain associated with dyspnoea while ambulating consistent with his prior angina. This pain was initially relieved by nitroglycerine spray, but due to continued pain he presented to the emergency room. On arrival, his vital signs were notable for heart rate of 75 beats per minute, blood pressure of 167/72 mmHg, respiratory rate of 20 breaths per minute, and oxygen saturation of 98% on ambient air. His body mass index was 35 kg/m2. Physical examination was notable for regular rate and rhythm, clear lung sounds, and a jugular venous pressure of 9 cmH2O. Serial cardiac enzymes were normal (troponin T 0.02 ng/mL, normal 0–0.03 ng/mL), and an electrocardiogram showed sinus rhythm with right bundle branch block and lateral t-wave inversions, unchanged compared to prior. His medication list prior to hospitalization included aspirin 81 mg daily, clopidogrel 75 mg daily, atorvastatin 40 mg daily, metoprolol tartrate 25 mg twice daily, amlodipine 10 mg daily, ranolazine 500 mg twice daily, and furosemide 20 mg daily. A TTE was performed for further evaluation of his chest pain and to assess for regional wall motion abnormalities. The study showed a homogenous echo-dense, intracardiac mass present within or attached to the interatrial septum () measuring 4 cm × 4 cm. The mass was noted within the superior aspect of the interatrial septum and extended superiorly and posterior to the aortic root. Movement of the mass was synchronous with the atrial walls (). The right and left atrial and left ventricular size were normal with normal left ventricular wall thickness and function. Pulmonary artery pressure was unable to be measured due to the absence of tricuspid regurgitation. Although images from a prior TTE were not available, a report of a TTE performed 1 year prior made no mention of an interatrial mass.
+The differential diagnosis for this mass includes an atrial myxoma, iatrogenic haematoma, invasive or metastatic tumour, lipoma, liposarcoma, and LHIAS. While the most common cause of interatrial septal thickening is LHIAS, an extensive differential diagnosis was considered because of the absence of the typical symmetrical ‘dumbbell’ shape. In the setting of a clinical history of severe chest pain after a PCI, we were concerned about a complication of the procedure including vascular trauma and haematoma. To further localize the mass and evaluate for tumour and iatrogenic haematoma, a CT angiogram of the chest was performed. There was no evidence of aortic dissection or haematoma and no extension of the mass outside of the cardiac structures. The homogenous mass seen on echocardiogram was similar in radiodensity to extracardiac and pericardial fat with Hounsfield units (HU) within the fat range (−64 HU). The mass extended from the interatrial septum to the posterior left and right atria and spared the fossa ovalis suggestive of LHIAS (, , ). Contrast imaging using CT demonstrated no enhancement to suggest vascularity to the mass and a normal pericardium.
+Although the attenuation on CT was similar to fat, the mass was not completely visualized. For further evaluation of the mass and chest pain, the patient was referred for CMR imaging without the stress protocol. Cardiac magnetic resonance imaging was performed on a 1.5-T scanner and confirmed LHIAS by homogenous signal that was nulled on fat suppression images (, , Video S1). Although T1 weighted spin echo with and without fat suppression is more widely used in this situation, we used gradient echo technique here due to the benefit of shorter imaging times.
+Cardiac magnetic resonance and TTE demonstrated normal ventricular function. Ultimately, the patient’s chest pain was determined to be of non-cardiac origin and he was discharged from the hospital in stable condition with recommendations for repeat imaging with TTE and/or CMR every 6 months to 1 year to monitor for interval progression.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4

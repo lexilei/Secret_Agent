@@ -1,0 +1,65 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 9
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-02T03:22:58.436321
+================================================================================
+
+GROUND TRUTH: 9.67083
+PREDICTED: 9.68
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The patient was an 82-year-old woman who had a 3-year history of leg cramps and first had chest tightness for two years. She had been treated for ischemic cardiomyopathy with triple vessel disease at another hospital, but had been hospitalized for heart failure 12 times in the last two years. Echocardiography that was performed in the hospital reportedly revealed a left ventricular ejection fraction (LVEF) of 30%. The patient had a history of left thyroidectomy for thyroid cancer at the age of 67 years with no subsequent recurrence. Comorbidities included angina pectoris, chronic heart failure, hypertension, type 2 diabetes mellitus, chronic renal failure, and gastric ulcer (gastrointestinal bleeding with antithrombotic drugs). Her usual medications were tolvaptan 7.5 mg, azosemide 60 mg, furosemide 60 mg, rabeprazole 10 mg, amlodipine 5 mg, bisoprolol 0.625 mg, amiodarone 50 mg, levothyroxine sodium 50 μg, cremedin 6 g, and sodium ferrous citrate 100 mg. Her ability to perform activities of daily living was good, and there was no history of alcohol drinking, smoking, or allergy. She noticed shortness of breath and chest discomfort when she was about to go to the restroom in the morning, and was transported by ambulance to the emergency department of our hospital.
+Physical findings on admission were: height, 153 cm; weight, 53 kg; body mass index, 22.6 kg/m2; body temperature, 36.9℃; blood pressure, 155/94 mmHg; heart rate, 83/min and regular; respiratory rate, 22/min; and SpO2, 98% (O2, 6 L). The palpebral conjunctiva was not pale, and jugular venous distention was observed. There were coarse crackles in both lung fields and no murmurs. There was no peripheral coldness in the limbs and lower leg edema was observed. A 12-lead electrocardiography (ECG) showed sinus rhythm at 71 beats/min, no ST elevation, and a negative T wave in leads V3-6 (Figure ). The corrected QT interval (QTc) was prolonged by 556 ms.
+Chest radiography showed a cardiothoracic ratio of 70%, indicating cardiomegaly, pulmonary congestion, and bilateral pleural effusion (Figure ).
+Echocardiography showed akinesis mainly at the apex and diffuse hypokinesis at the base, showing systolic dysfunction with LVEF of 15%. The blood tests revealed decreased renal function with a blood urea nitrogen (BUN) level of 88 mg/dL, creatinine level of 3.26 mg/dL, and estimated glomerular filtration rate (eGFR) of 11.1 mL/min/BSA. The serum albumin level was 3.3 g/dL and serum potassium level was 4.5 mmol/L. Creatine kinase (CK) was slightly elevated at 191 U/L, but the creatine kinase-myocardial band (2.8 ng/mL) and troponin I (0.02 ng/mL) levels were not elevated. The level of brain natriuretic peptide (BNP) was 802.7 pg/mL. A diagnosis of acute exacerbation of chronic heart failure was made, and treatment with oxygen and diuretics (furosemide 20mg) was started. The patient responded well and urine volumes in the initial three hours were 400 mL; however, 12 hours after admission, she experienced sudden onset chest pain and pain radiating to the neck. Consciousness at the time of the attack was clear, systolic blood pressure was 120 mmHg, heart rate was 80/min with sinus rhythm, and SpO2 was 89% (O2 10 L). The pain extended to the extremities. The 12-lead ECG at the time of the attack was not significantly different from that at the time of admission (Figure ). Chest radiography showed worsening pulmonary congestion (Figure ). Echocardiography and blood sampling showed no marked change from that on admission, no increase in cardiac enzymes, and no findings strongly suggestive of acute coronary syndrome. When respiratory management by noninvasive positive pressure ventilation was continued, symptoms improved after approximately one hour. Although serum calcium and magnesium levels were not measured at the time of admission, additional examinations revealed hypocalcemia with a calcium level of 4.9 mg/dL and hypomagnesemia with a magnesium level of 1.7 mg/dL. The phosphorus level was 6.3 mg/dL. It was considered that the symptoms were due to a tetanic seizure. The cause of hypocalcemia was thought to be chronic kidney disease (CKD) because parathyroid function, as reflected by intact parathyroid hormone (PTH), was preserved (122.7 pg/mL) despite prior operation on the thyroid gland. Since the level of consciousness and symptoms did not deteriorate, calcium correction was started by oral administration while magnesium was corrected by drip infusion. The patient rapidly responded to intravenous infusion of magnesium and oral administration of calcium and vitamin D preparations. Serum calcium normalized on day 6 of hospitalization and the corrected calcium level was 9.1 mg/dL at the time of discharge. The QTc on ECG decreased from 556 to 491 ms (Figure ). The electrolyte abnormality improved without subsequent recurrence of tetany. The LVEF by echocardiography improved from 15% to 27% at the time of discharge. Although coronary angiography was not performed because of renal dysfunction, the LV contraction failure may have been affected by hypocalcemia. Her heart failure was well controlled with tolvaptan 15 mg, azosemide 90 mg, furosemide 20 mg and and bisoprolol 0.625 mg (Figure ), and she left hospital on the 13th day of hospitalization.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's Creatinine Clearance (CrCl) using the Cockroft-Gault Equation, we follow these steps:
+
+### 1. **Determine Adjusted Body Weight (ABW):**
+   - **Height:** 153 cm  
+   - **Weight:** 53 kg  
+   - **BMI:** 22.6 kg/m² (normal range, so ABW = min(IBW, actual weight))  
+
+   **Calculate Ideal Body Weight (IBW):**  
+   - Female IBW = 45.5 + 2.3 × (height in inches - 60)  
+   - Height in inches = 153 cm ÷ 2.54 ≈ 60.24 inches  
+   - IBW = 45.5 + 2.3 × (60.24 - 60) ≈ 45.5 + 0.55 ≈ **46.05 kg**  
+
+   **Adjusted Body Weight (ABW):**  
+   - Since BMI is normal, ABW = min(IBW, actual weight) = min(46.05, 53) = **46.05 kg**  
+
+### 2. **Extract Other Relevant Values:**
+   - **Age:** 82 years  
+   - **Serum Creatinine (Cr):** 3.26 mg/dL  
+   - **Gender Coefficient (female):** 0.85  
+
+### 3. **Apply Cockroft-Gault Equation:**  
+   \[
+   CrCl = \frac{(140 - \text{age}) \times \text{ABW} \times \text{gender\_coef}}{\text{Cr} \times 72}
+   \]
+   \[
+   CrCl = \frac{(140 - 82) \times 46.05 \times 0.85}{3.26 \times 72}
+   \]
+   \[
+   CrCl = \frac{58 \times 46.05 \times 0.85}{234.72}
+   \]
+   \[
+   CrCl = \frac{2271.765}{234.72} \approx 9.68
+   \]
+
+### Final Answer:
+9.68

@@ -1,0 +1,30 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 150
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T20:50:31.018875
+================================================================================
+
+GROUND TRUTH: 2.96306
+PREDICTED: 5.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 66-year-old male was admitted with a 1-week history of fever and treated for urinary tract infection. His creatinine level upon presentation was 16.4 mg/dL. His past medical history included stroke and end-stage renal disease, for which he was on continuous ambulatory peritoneal dialysis (CAPD) for the past 2 years. He was started on intravenous (IV) ceftriaxone 1 g daily for 3 days and subsequently escalated to IV cefepime 1 g bd (non-CAPD dose) as fever remained unsettled. Fever resolved with day 2 of cefepime, and he felt better in general. On day 3 of cefepime, he was found to be less responsive and confused. In total, he had received 5 g of cefepime before he became neurotoxic.
+He did not obey commands and had no verbal output on examination. His vital signs were stable with no fever. He had myoclonic jerks. His pupils were bilaterally equal and reactive. He had no neck stiffness or long-tract signs. Apart from stable anemia, repeated full blood count did not show any leukocytosis. C-reactive protein level was not elevated. There were no electrolyte imbalances. Renal function profile was static. Urgent brain computed tomography showed no new infarcts or hemorrhage. Lumbar puncture was performed with an opening pressure of 15 cm H2O. The cerebrospinal fluid count and biochemistry were within normal limits. His electroencephalography (EEG) [] showed background slow activity with generalized triphasic waves. Cefepime was identified as the culprit of confusion and immediately stopped. He was resumed with his CAPD regime.
+On day 7 of admission, he became drowsier with Glasgow Coma Scale (GCS) of 9/15 with E2, V2, and M5, and was transferred to the intensive care unit (ICU) for closer observation. Urgent magnetic resonance imaging of the brain revealed no significant abnormalities apart from his old infarcts.
+CAPD was converted to hemodialysis on admission to ICU. Postdialysis, he became more alert and responsive. In subsequent days, his GCS returned to full. A repeated EEG [] on day 8 of illness showed theta activity with resolution of triphasic waves. He was subsequently transferred back to the general ward and resumed with CAPD. He remained well upon clinic review.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+5

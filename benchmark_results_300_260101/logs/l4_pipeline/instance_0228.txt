@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 228
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-04T03:14:13.530923
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 0.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 29-year-old man with no history of venous thromboembolism, malignancy, or chronic medical conditions arrived to the urgent care ward late this morning complaining of progressive aching and fullness in his right lower leg that began forty-eight hours earlier. He reports that six weeks ago he underwent an open reduction and internal fixation of a displaced left clavicular fracture sustained during a bicycle accident; the operation lasted roughly three hours under general anesthesia, required inpatient monitoring overnight, and was otherwise uncomplicated. He completed a short course of oral opioids and has since returned to desk work as a software engineer without any prolonged convalescence in bed and without use of limb casts or braces. Since surgery he has been generally active, walking his dog and commuting on public transportation daily, and he denies any extended automobile or air travel. Two days ago he first sensed a cramping discomfort in the posterior aspect of the right calf after a routine ten-minute walk from the train station; the pain intensified when he stood for long periods and lessened somewhat when he elevated the leg. By yesterday evening he noticed that the right pant leg felt tight and, concerned, measured the circumference of both calves with a tape he uses at the gym: at a point 10 cm below the tibial tuberosity the right side was 40 cm compared with 36 cm on the left, a discrepancy of 4 cm that persisted this morning and prompted his visit. He denies swelling of the thigh or groin, denies redness or streaking of the skin, and has not observed any rope-like superficial veins. He further denies fever, chills, night sweats, unintended weight loss, trauma to the leg, recent soft-tissue infection, insect bites, or joint pain. There is no chest pain, shortness of breath, hemoptysis, palpitations, or syncope. His only medication is 600 mg ibuprofen taken occasionally for shoulder soreness; he takes no hormonal therapy, supplements, or anticoagulants. Family history is negative for clotting disorders, premature cardiovascular disease, or cancer; both parents are alive in their fifties. He does not smoke, drinks alcohol socially on weekends, and denies recreational drug use. On presentation he is alert and in mild discomfort but able to ambulate independently. Vital signs: temperature 37.0 °C, blood pressure 124/76 mm Hg, heart rate 92 beats per minute, respiratory rate 14 breaths per minute, oxygen saturation 98 % on room air. Cardiopulmonary examination is unremarkable with clear breath sounds and a regular cardiac rhythm without murmurs or gallops. Abdominal examination reveals a well-healed 5 cm incision in the left upper quadrant without tenderness or masses. Inspection of the lower extremities shows the right calf to be noticeably fuller than the left, while both thighs and ankles remain symmetric; skin coloration is normal without erythema, cyanosis, or ulcers. No varicose or engorged superficial venous channels are visible. Measurement repeated with a flexible tape confirms a 4 cm difference favoring the right side at the previously described point, whereas thigh circumference measured 15 cm above the patella is identical bilaterally. Palpation along the expected course of the posterior tibial and popliteal veins elicits a distinct, focal tenderness that is absent on the contralateral limb; squeezing the gastrocnemius muscle belly itself produces only mild diffuse soreness. There is no Homan sign, though the patient reports a pulling sensation when the ankle is dorsiflexed. Distal pulses—dorsalis pedis and posterior tibial—are 2+ and symmetric, capillary refill is less than two seconds, and sensation and motor strength are intact throughout. There is no palpable cord, no warmth or tenderness over the Achilles tendon, and no crepitus of the knee or ankle joints. Examination of the skin elsewhere shows no rashes or petechiae. Laboratory studies sent prior to any pharmacologic intervention reveal hemoglobin 14.6 g/dL, platelet count 235 k/µL, white blood cell count 6.2 k/µL, serum creatinine 0.9 mg/dL, AST/ALT within reference range, INR 1.0, and aPTT 30 seconds. A urine toxicology screen is negative, and a rapid antigen test for SARS-CoV-2 is negative. Because the patient exhibits a unilateral calf enlargement greater than 3 cm, focal tenderness along the deep venous pathway confined to the calf rather than the entire limb, a recent major operative procedure within the past twelve weeks, and no clinical findings to suggest cellulitis, musculoskeletal injury, ruptured Baker cyst, or other more plausible explanation, the working impression strongly favors an acute thrombus in the proximal calf or popliteal segment of the right lower extremity. Compression duplex ultrasonography of the right femoral-popliteal system has been requested urgently, baseline coagulation parameters have been documented, and the patient has been advised to remain in the department until imaging is completed.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {'age': 29, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 29, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

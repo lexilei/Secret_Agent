@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 226
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T21:26:54.431444
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 56-year-old man with a history of well-controlled hypertension and hyperlipidemia presented to the urgent care unit late this afternoon complaining of progressive fullness and tightness isolated to his left lower leg that began roughly thirty-six hours ago after spending most of the weekend helping his neighbor pour a concrete patio, an activity that required frequent squatting and pushing a wheelbarrow up a short incline. He recalls a sudden cramp-like sensation in the posterior calf while straightening from a crouched position, followed by a dull ache that has persisted; he notes the leg seemed only mildly enlarged at first but by this morning his sock left a deeper impression than usual and his shoe felt snugger around the ankle. He denies any similar problem in the past, states that he has remained mobile and returned to his job as a delivery dispatcher yesterday, and slept in his own bed without difficulty turning or repositioning. He has not been hospitalized, had orthopedic casts, or undergone any surgical procedure in the past year, travels only short regional distances for work, and exercises three evenings a week on a stationary bicycle. Throughout this period he has remained fully ambulatory and explicitly denies having spent even a single 24-hour period confined to bed; certainly he has not been bedridden for three or more consecutive days. He denies fever, chills, sweats, weight loss, night pain, rash, or redness around the leg; likewise no chest discomfort, dyspnea, palpitations, hemoptysis, or syncope. He reports no numbness, weakness, or tingling of the limb, and is able to bear weight, though prolonged standing increases the sense of pressure. Daily medications include amlodipine 5 mg, atorvastatin 20 mg, and an over-the-counter multivitamin; he does not use hormone supplementation, steroids, or anticoagulants. Family history is notable only for paternal coronary artery disease; no relatives have known thromboembolic disorders. He is a never-smoker, drinks one to two beers on weekends, and denies illicit substance use. On examination he appears comfortable, converses easily, and moves about the room without assistance. Vital signs: temperature 37.1 °C, blood pressure 128/76 mm Hg, heart rate 82 beats per minute, respiratory rate 14 per minute, oxygen saturation 97 % on ambient air. Cardiac and pulmonary examinations are unrevealing with regular rhythm, no murmurs, clear breath sounds, and no jugular venous distention. Abdomen is soft and nontender with no organomegaly or masses. Inspection of the lower extremities reveals asymmetry confined to the left calf and ankle region; the skin color is normal without ecchymosis or streaking. A tape measure placed 10 cm below the tibial tuberosity records a circumference of 42 cm on the left versus 38 cm on the right, confirming a disparity exceeding 3 cm. Circumference measured 15 cm above the superior pole of the patella is equal at 52 cm bilaterally, indicating no swelling of the thigh and thus sparing of the entire limb. The left foot and distal calf pit 2 mm with thumb pressure and rebound within 10 seconds, whereas the contralateral side shows no indentation. Palpation along the expected course of the femoral, popliteal, and posterior tibial veins elicits no focal tenderness; instead, the patient reports a diffuse muscular soreness most pronounced over the medial belly of the gastrocnemius, and he experiences a mild pull when asked to perform a heel raise. Homan sign is not provoked. There is no inguinal lymphadenopathy, no visible engorgement of superficial channels, and capillary refill of toes is under two seconds bilaterally. Distal pulses are intact and equal, sensation and power in ankle dorsiflexion and plantarflexion are symmetric, and straight-leg raising is negative for radicular pain. The knee and ankle joints are nontender with full range of motion; no warmth or effusion is detected. Given the unilateral calf enlargement with measurable girth difference and localized pitting edema, an intraluminal venous obstruction remains on the differential; however, the temporal relationship to strenuous physical activity, the absence of pain specifically over deep venous pathways, and the predominance of myofascial discomfort raise the possibility of a partial gastrocnemius tear or rupture of a small Baker cyst as a competing explanation. At present, the musculoskeletal explanation is judged at least as plausible as a primary venous thrombotic event. Baseline laboratories, including complete blood count, serum electrolytes, creatinine, and coagulation profile, have been obtained, and a focused duplex ultrasonography of the left lower limb is being arranged. The patient has been counseled on return precautions such as sudden worsening swelling, new shortness of breath, or chest pain while awaiting imaging.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 0.0}
+

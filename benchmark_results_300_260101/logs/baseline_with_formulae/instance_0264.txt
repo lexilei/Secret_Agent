@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 264
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-02T03:23:11.944103
+================================================================================
+
+GROUND TRUTH: 4.0
+PREDICTED: 5.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 51- year old male, with no prior medical history, no medication, non-smoker and without risk factors for venous thrombo-embolism arrived at the end of April to the emergency department with exercise induced dyspnea during 4–5 weeks and for the last 48 h dyspnea also at rest. Prior to the onset of symptoms, he had lived socially isolated with his wife from mid-March, approximately 40 days, both working from home and with their two children home from school. He described a short period in the beginning of March, 7 weeks before hospitalization, when he felt difficulties taking deep breaths for a couple of days but no other symptoms like cough, fever or feeling of malaise. Following that episode he experienced a gradually increased fatigue on his regular run and in the beginning of April he had to start walking when running uphill. During the last 5 weeks before hospitalization his wife and daughter had noticed signs of heavy breathing when he walked up the stairs.
+Physical examination was normal, examination of the heart and lungs revealed no discrepancies, no swollen legs or other signs of cardiac decompensation. The bodyweight of the patient was 90 kg and his height was 1.88 m, body mass index (BMI) was 25,5 kg/m2. He had normal temperature and a regular heart rate of 80 beats/min. He had a blood pressure of 180/65 mmHg and an oxygen saturation of 93% breathing ambient air. High sensitivity Troponin T was markedly elevated, 1200 (reference < 15 mg/L) and also B-type natriuretic peptide was increased, 737 (reference < 125 ng/L). He had a slightly increased C-reactive protein of 15 (reference < 5 mg/L) and modest leukocytosis 11,7 (normal range 3,5–8,8 × 109/L). ECG showed incomplete right-sided branch block. Computerized Tomography Angiography (CTA) of the chest was performed as pulmonary embolism was suspected. The CTA revealed widespread bilateral segmental pulmonary embolism (Fig. ) and an additional area of consolidation in the right upper lobe consistent with infarction. Additional findings of ground glass opacities that could match Covid-19 were also found (Fig. ). The patient tested negative for SARS -CoV-2 (polymerase chain reaction SARS -CoV-2, GeneXpert, Cepheid, Sunnyvale, CA, United States) at two consecutive nasopharynx tests. No antibody test was performed. The patient was given oxygen and subcutaneous low molecular weight heparin (LWMH), tinzaparin 18,000 units daily during 2 days of hospitalization and was discharged with apixaban 5 mg, twice daily, with a treatment recommendation for 6 months.
+Echocardiography revealed dilated right chamber, midventricular diameter of 5 cm and left septum deviation, light to moderate insufficiency of the tricuspid valve with a velocity max of 4,2 m/s. Vena cava inferior showed normal width and breathing variation. Severe pulmonary hypertension with a systolic pulmonary pressure of approximately 75–80 mmHg (normal upper limit 35 mmHg) was present. No significant amount of pericardial fluid was present.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+5

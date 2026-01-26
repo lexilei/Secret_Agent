@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 172
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-04T03:14:12.769899
+================================================================================
+
+GROUND TRUTH: 58.69299
+PREDICTED: 58.693
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+The case history of our 15-year-old male patient revealed a seven-year history of intermittent paroxysmal episodic involuntary movement and a six-year history of episodes involving the loss of consciousness with convulsions. The involuntary movement, primarily in the right hemibody, presented as dystonia involving: the internal pronation and rotation of the shoulder joint; torsion and flexion of the wrist, knee, metacarpophalangeal, and interphalangeal joints; and tonic lower limb extension. During the episodes, the patient was conscious; however, he stared into the distance and experienced facial spasms, trismus, and aphasia. These conscious episodes lasted approximately 10 seconds and occurred up to 10 times per day before spontaneously resolving. And they could be induced by stretching the arms or legs.
+Six years prior to admission, the patient developed a different seizure type in addition to the involuntary movement episodes. Prior to the onset of these seizures, he experienced warning symptoms (also known as an ‘aura’) including brain swelling or dizziness. These started with the repetitive and rigid act of chewing and swallowing. This was accompanied by a throwing motion of the right arm and a confused mental state. The duration of each episode was approximately 2–3 minutes and they occurred once or twice a month. During some of these episodes, the patient was found to have generalized tonic-clonic seizures resulting in a loss of consciousness. This sometimes (2–3 times per year) led to him falling forwards. Records also showed an eight-year history of tetany.
+The patient was 162 cm in height, weighed 54 kg. Apart from febrile convulsions at 6 months old, there was no history of neurological disease, brain tumor, or trauma. In his family history, there were no similar instances of involuntary movements. A physical examination was completed but revealed no typical positive signs. Serum analysis indicated a calcium concentration of 1.91 mmol/L (reference: 2.13–2.7 mmol/L), a phosphorus concentration of 2.68 mmol/L (reference: 0.74–2.7 mmol/L), an alkaline phosphatase concentration of 114 IU/L (reference: 42–390 IU/L), a parathyroid hormone (PTH) concentration of 109 pg/ml (reference: 7–13 pg/ml), and a urine calcium concentration of 1.6 mmol/24 h (reference: 2.7–7.5 mmol/24 h). Results for electrolyte concentration and markers of liver, kidney, and thyroid function were all within the acceptable ranges. Computerized tomography (CT) and magnetic resonance imaging (MRI) imaging of the brain revealed bilateral calcium deposition in the cortex of the frontal and parietal lobes, and in the thalamus (Figure ). Electroencephalography (EEG) data showed paroxysmal low and medium amplitude slow waves, isolated sharp waves, and sharp slow wave release in the right prefrontal temporal lobe (Figure , supporting Figure ). Neither mutations nor copy number variations were detected in the genes of interest during genetic analysis (eg. GNAS, STX16, GNAS-AS1, etc. [Reference Sequence: NC_000020.11]); however, GNAS methylation abnormalities were present. No abnormalities were found during an abdominal B-mode ultrasound or following an X-ray of the hands.
+Following treatment with carbamazepine (400 mg/day), calcium supplements (1000 mg/day) and vitamin D (10,000 U/day), there was no recurrence of abnormal movements or seizures during a 3-month follow-up period and the blood calcium returned to normal.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+58.693
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Ideal Body Weight', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'sex': 'male', 'height_cm': 162}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'sex': 'male', 'height_cm': 162}}, {'stage': 'compute', 'success': True, 'result': 58.693, 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}], 'method': 'l4_pipeline'}
+

@@ -1,0 +1,40 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 245
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-01T21:26:54.815729
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 1.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 52-year-old woman came to the emergency department (ED) for hemodialysis (HD) due to end-stage renal disease (ESRD). She had spent the preceding several weeks in an outside hospital being treated for pneumonia and bacteremia with daptomycin. She subsequently left against medical advice (AMA) after having her dialysis access catheter removed. She presented to our ED because she needed HD vascular access placement and re-initiation of dialysis treatments. Her medical history included chronic kidney disease secondary to hypertensive nephrosclerosis, anemia, hypertension, deep venous thromboses (DVT), systemic lupus erythematosus, and a seizure disorder of unknown etiology.
+The patient, a Jehovah’s Witness, refused blood transfusions; therefore, her anemia was being treated with intravenous (IV) administration of iron, epoetin alfa, and folate. Other medications included nifedipine, clonidine, metoprolol, sevelamer, and prednisone. She was allergic to amoxicillin, azithromycin, hydralazine, labetolol, linezolid, morphine, and vancomycin. She reported previous IV heroin use many years earlier and previous cigarette smoking. She denied alcohol use or any current drug or tobacco use.
+Upon arrival, she was alert and in no acute distress with a fever of 38.3° Celsius, heart rate of 87 beats per minute (bpm), blood pressure of 110/65 millimeters mercury (mmHg), respiratory rate of 17 breaths per minute, and pulse oximetry of 99% while breathing room air. She weighed 80 kilograms and was 5 feet 6 inches tall. Her head was normocephalic and atraumatic with moist mucous membranes. Pupils were anicteric, equal, round, and reactive to light and accommodation. The neck was supple and without lymphadenopathy or tenderness. Her lungs had coarse breath sounds with mild bibasilar crackles but no wheezes or rhonchi. There were no retractions or increased work of breathing. Her heart was of regular rate and rhythm without murmurs, rubs, or gallops. Her abdomen was soft with normal bowel sounds and without distention, tenderness, rebound, or guarding. There was no costovertebral angle tenderness. The lower extremities had 1+ pitting edema, 2+ dorsalis pedis pulses, and were without tenderness or deformity. The patient had normal strength and muscle tone throughout all extremities with intact sensation. Old fistulas were present in the left and right upper extremities without palpable thrills. She was alert and oriented to person, place, and time.
+The patient’s initial laboratory values are shown in . These were significant for a slight leukocytosis, anemia to 5.3 g/dL, thrombocytopenia, hyperkalemia, and an elevated creatinine of 11.9 mg/dL. Her initial electrocardiogram (ECG) showed a sinus tachycardia with T-wave inversions in leads I and V6 (). This was unchanged from a prior ECG. The patient was admitted to the medicine team and was started on daptomycin. While awaiting bed placement, a non-tunneled left femoral dialysis catheter was inserted by the medical intensive care unit (ICU) fellow for initiation of HD. Placement was confirmed by the easy drawback of blood from all ports. During the consent process for catheter placement, it was documented that the patient stated she “would rather die than receive blood transfusions.” Following catheter placement, an attempt was made to start HD, but she became hypotensive and complained of weakness almost immediately. Her vital signs during the initial HD attempt were a blood pressure of 85/56 mmHg with a heart rate of 105 bpm.
+Because the patient was symptomatic and hypotensive during HD, continuous renal replacement therapy (CRRT) was initiated. Shortly afterward, she became hypotensive, unresponsive, and had a tonic clonic seizure. Vital signs at that time were a heart rate of 113 bpm, blood pressure 75/48 mmHg, respiratory rate of 20 breaths per minute, and oxygen saturation of 78% on room air. A brief, repeat physical exam showed the patient was unresponsive to painful stimuli and her pupils were equal and reactive. She was given 4 mg of lorazepam and intubated for airway protection. A right arterial femoral line and a right femoral triple lumen venous central line were placed. A chest radiograph confirmed endotracheal tube placement (). CRRT was halted but the patient remained in shock despite bolus infusions of crystalloid, so vasopressors were started. She was receiving escalating doses of vasopressors when repeat laboratory values indicated a hemoglobin of 1.6 g/dL ().
+Shortly thereafter she went into cardiac arrest with a rhythm of pulseless electrical activity (PEA). Return of spontaneous circulation was achieved after six minutes of cardiopulmonary resuscitation. Increased abdominal distention was noted during the resuscitation; therefore, a pressure-sensing urinary catheter was introduced. Her peak airway and bladder pressures were measured at greater than 60 cmH2O and 50 mmHg, respectively. Surgery was then consulted. A massive transfusion protocol was initiated after her next of kin agreed to allow the transfusion of blood products. A focused assessment with sonography for trauma (FAST) was performed, showing free fluid in Morrison’s pouch. As resuscitative measures were continued, an additional study was obtained and a diagnosis was made.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 1.0}
+

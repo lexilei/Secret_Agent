@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 130
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-04T03:14:12.313557
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 34-year-old male patient was admitted with complaints of cough and fever for 2 weeks. He had history of similar complaints in the past in the form of frequent episodes of cough with expectoration for which he was hospitalized and treated with intravenous (IV) antibiotics. He had no history of dyspnea, chest pain or pedal edema. General physical examination was unremarkable except for grade I clubbing. Clinical examination revealed blood pressure of 118/84 mm Hg in right upper limb in supine position with pulse rate of 96/min, regular, normal volume with a normal character with no radio-radial or radio-femoral delay and all peripheral pulses equally palpable. The jugular venous pressure was raised 2 cm above the angle of Louis with a prominent c-v pattern. The apical impulse was in the fifth intercostals space medial to the midclavicular line. The S1 was normal, and S2 was narrowly split with loud P2 component. There was pan-systolic murmur along the left lower sternal border radiating all over the precordium. On systemic examination, respiratory system showed barrel-shaped chest with anteroposterior and transverse diameter ratio of 1, widely spaced ribs and increased resonance to percussion, and breath sounds decreased in intensity symmetrically with prolonged expiration. Rest of the examination was normal. On investigations, total leukocytes were 14,200/mm3, polymorphs 72%, lymphocytes 22%, monocytes 4%, eosinophils 2%, hemoglobin 15.1 g%, platelets 211,000/mm3, ESR 14 mm first h and fasting blood sugar was 98 mg%. Blood culture was negative for any growth. Sputum culture showed streptococcus pneumonia sensitive to amoxicillin, and patient was treated accordingly. On chest radiography, there were bronchiectatic changes. Electrocardiogram showed normal sinus rhythm with heart rate of 102 and right axis deviation. In lead II, III and aVF, P-wave was tall and peaked with maximum P-wave amplitude > 7 mm and larger than QRS complex in lead II (). P-wave axis was +82°. This was referred as Himalayan P-waves suggestive of right atrial enlargement. Precordial leads showed slow R-wave progression with right ventricular strain pattern (). The 2D transthoracic echocardiography revealed enlarged right atrium and right ventricle with severe tricuspid regurgitation, pulmonary arterial hypertension and preserved ejection fraction. So these findings were consistent with sequelae of COPD. The findings of bronchiectasis were confirmed on HRCT chest as evident by cystic bronchiectasis with bronchial wall thickening and mucous plugging (). The bronchial dilation was also seen, lack of bronchial tapering and visibility of airways within 1 cm of the pleural surface, i.e., abutting the mediastinal pleural surface ().
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {'age': 34, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 34, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

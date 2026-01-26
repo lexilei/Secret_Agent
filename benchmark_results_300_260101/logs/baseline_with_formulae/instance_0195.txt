@@ -1,0 +1,54 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 195
+CALCULATOR: QTc Bazett Calculator
+TIMESTAMP: 2026-01-02T03:23:09.686054
+================================================================================
+
+GROUND TRUTH: 581.6804
+PREDICTED: 582.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A patient has a heart rate of 125 bpm and a QT interval of 403 msec.
+
+Question: Using the Bazett Formula for corrected QT interval, what is the patient's corrected QT interval in terms of msec?
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the corrected QT interval (QTc) using the Bazett formula, we use the following formula:
+
+**QTc Bazett: QTc = QT / sqrt(RR)**
+
+Where:
+- **QT** is the QT interval in milliseconds (msec)  
+- **RR** is the RR interval in seconds (s), calculated as **60 / HR** (where HR is heart rate in bpm)  
+
+### Given:
+- **HR** = 125 bpm  
+- **QT** = 403 msec  
+
+### Steps:
+1. Calculate the **RR interval**:  
+   \[
+   RR = \frac{60}{HR} = \frac{60}{125} = 0.48 \text{ seconds}
+   \]
+2. Take the square root of the RR interval:  
+   \[
+   \sqrt{RR} = \sqrt{0.48} \approx 0.6928
+   \]
+3. Divide the QT interval by the square root of RR:  
+   \[
+   QTc = \frac{403}{0.6928} \approx 581.7 \text{ msec}
+   \]
+
+### Final Answer:
+582

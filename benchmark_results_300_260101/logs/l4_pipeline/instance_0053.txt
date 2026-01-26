@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 53
+CALCULATOR: CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk
+TIMESTAMP: 2026-01-04T03:14:11.592761
+================================================================================
+
+GROUND TRUTH: 5.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 78-year-old female patient, temporarily admitted to the recovery department after ECT, developed atrial fibrillation and chest pain. Her medical history showed hypertension, severe depression and paroxysmal atrial fibrillation. Her ECG 3 months before ECT was completely normal. Immediately after ECT her blood pressure was 230/140 mmHg, but later decreased to 110/45 mmHg. Examination of heart and lungs revealed no abnormalities. The ECG showed atrial fibrillation with a ventricular rate of 140 beats/min and new negative T waves in leads I, II, aVL and V2-6. The second ECG showed sinus rhythm and persisting negative T-waves (Fig. ). Troponin T level was 0.02 μg/l (normal) and no other laboratory abnormalities were found. A differential diagnosis was made and the following possible causes were taken into account: post ECT, post tachycardia due to atrial fibrillation, severe hypertension or myocardial ischaemia. Since the patient reported to have had previous anginal complaints, coronary angiography was performed. In the left anterior descending artery two significant stenoses were identified in the proximal and the mid section, respectively. Furthermore, a stenosis was found in the right coronary artery. Due to her psychiatric condition, PCI was not performed and she was treated with anti-anginal medication and warfarin.
+
+Question: What is the patient's CHA2DS2-VASc Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'age': 78, 'sex': 'female', 'has_hypertension': True}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 78, 'sex': 'female', 'has_hypertension': True}}, {'stage': 'compute', 'success': True, 'result': 4.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

@@ -1,0 +1,2666 @@
+{
+  "baseline": {
+    "experiment_name": "baseline",
+    "experiment_level": "L0",
+    "total_instances": 300,
+    "correct_exact": 76,
+    "correct_tolerance": 136,
+    "accuracy_exact": 0.25333333333333335,
+    "accuracy_tolerance": 0.4533333333333333,
+    "error_count": 0,
+    "total_cost_usd": 0.3573849999999999,
+    "avg_latency_ms": 1986.3160188992817,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 3,
+        "correct_tolerance": 14,
+        "total_cost_usd": 0.03498,
+        "total_latency_ms": 164239.83502388,
+        "error_count": 0,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 0.15,
+        "accuracy_tolerance": 0.7,
+        "avg_cost_usd": 0.001749,
+        "avg_latency_ms": 8211.991751194
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 4,
+        "total_cost_usd": 0.024041250000000004,
+        "total_latency_ms": 81453.15957069397,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.2,
+        "avg_cost_usd": 0.0012020625000000002,
+        "avg_latency_ms": 4072.6579785346985
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 6,
+        "correct_tolerance": 6,
+        "total_cost_usd": 0.020752499999999997,
+        "total_latency_ms": 18135.698795318604,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.3,
+        "accuracy_tolerance": 0.3,
+        "avg_cost_usd": 0.001037625,
+        "avg_latency_ms": 906.7849397659302
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.017662500000000005,
+        "total_latency_ms": 21605.990171432495,
+        "error_count": 0,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.0008831250000000002,
+        "avg_latency_ms": 1080.2995085716248
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.026739999999999996,
+        "total_latency_ms": 19522.17411994934,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0013369999999999999,
+        "avg_latency_ms": 976.108705997467
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 1,
+        "correct_tolerance": 8,
+        "total_cost_usd": 0.02924375,
+        "total_latency_ms": 20147.452354431152,
+        "error_count": 0,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 0.05,
+        "accuracy_tolerance": 0.4,
+        "avg_cost_usd": 0.0014621875,
+        "avg_latency_ms": 1007.3726177215576
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 7,
+        "correct_tolerance": 7,
+        "total_cost_usd": 0.021902500000000005,
+        "total_latency_ms": 17104.69627380371,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.35,
+        "accuracy_tolerance": 0.35,
+        "avg_cost_usd": 0.0010951250000000002,
+        "avg_latency_ms": 855.2348136901855
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 2,
+        "total_cost_usd": 0.022035000000000003,
+        "total_latency_ms": 30175.885915756226,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.1,
+        "avg_cost_usd": 0.00110175,
+        "avg_latency_ms": 1508.7942957878113
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 1,
+        "correct_tolerance": 15,
+        "total_cost_usd": 0.025138749999999998,
+        "total_latency_ms": 25919.827461242676,
+        "error_count": 0,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 0.05,
+        "accuracy_tolerance": 0.75,
+        "avg_cost_usd": 0.0012569374999999998,
+        "avg_latency_ms": 1295.9913730621338
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 2,
+        "total_cost_usd": 0.0031750000000000003,
+        "total_latency_ms": 23412.909269332886,
+        "error_count": 0,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.1,
+        "avg_cost_usd": 0.00015875,
+        "avg_latency_ms": 1170.6454634666443
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 5,
+        "correct_tolerance": 5,
+        "total_cost_usd": 0.0215275,
+        "total_latency_ms": 41016.86143875122,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.25,
+        "accuracy_tolerance": 0.25,
+        "avg_cost_usd": 0.001076375,
+        "avg_latency_ms": 2050.843071937561
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 14,
+        "correct_tolerance": 14,
+        "total_cost_usd": 0.0321775,
+        "total_latency_ms": 15749.205827713013,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.7,
+        "accuracy_tolerance": 0.7,
+        "avg_cost_usd": 0.0016088749999999998,
+        "avg_latency_ms": 787.4602913856506
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 6,
+        "correct_tolerance": 6,
+        "total_cost_usd": 0.031962500000000005,
+        "total_latency_ms": 28241.13368988037,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.3,
+        "accuracy_tolerance": 0.3,
+        "avg_cost_usd": 0.0015981250000000002,
+        "avg_latency_ms": 1412.0566844940186
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 5,
+        "correct_tolerance": 5,
+        "total_cost_usd": 0.02168375,
+        "total_latency_ms": 22012.983083724976,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.25,
+        "accuracy_tolerance": 0.25,
+        "avg_cost_usd": 0.0010841875,
+        "avg_latency_ms": 1100.6491541862488
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 8,
+        "correct_tolerance": 9,
+        "total_cost_usd": 0.0243625,
+        "total_latency_ms": 67156.9926738739,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 0.4,
+        "accuracy_tolerance": 0.45,
+        "avg_cost_usd": 0.001218125,
+        "avg_latency_ms": 3357.849633693695
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 12,
+        "correct_tolerance": 37,
+        "total_cost_usd": 0.13466250000000002,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.12,
+        "accuracy_tolerance": 0.37
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 38,
+        "correct_tolerance": 38,
+        "total_cost_usd": 0.12847874999999995,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.38,
+        "accuracy_tolerance": 0.38
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 21,
+        "correct_tolerance": 56,
+        "total_cost_usd": 0.07271624999999998,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 0.2625,
+        "accuracy_tolerance": 0.7
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 5,
+        "correct_tolerance": 5,
+        "total_cost_usd": 0.0215275,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.25,
+        "accuracy_tolerance": 0.25
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 33,
+        "correct_tolerance": 93,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.18333333333333332,
+        "accuracy_tolerance": 0.5166666666666667
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 43,
+        "correct_tolerance": 43,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.35833333333333334,
+        "accuracy_tolerance": 0.35833333333333334
+      }
+    }
+  },
+  "baseline_with_formulae": {
+    "experiment_name": "baseline_with_formulae",
+    "experiment_level": "L0+",
+    "total_instances": 300,
+    "correct_exact": 85,
+    "correct_tolerance": 155,
+    "accuracy_exact": 0.2833333333333333,
+    "accuracy_tolerance": 0.5166666666666667,
+    "error_count": 0,
+    "total_cost_usd": 0.634385,
+    "avg_latency_ms": 1737.67875512441,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 6,
+        "correct_tolerance": 14,
+        "total_cost_usd": 0.05408,
+        "total_latency_ms": 103861.42086982727,
+        "error_count": 0,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 0.3,
+        "accuracy_tolerance": 0.7,
+        "avg_cost_usd": 0.0027040000000000002,
+        "avg_latency_ms": 5193.0710434913635
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 4,
+        "total_cost_usd": 0.0437675,
+        "total_latency_ms": 71627.72035598755,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.2,
+        "avg_cost_usd": 0.002188375,
+        "avg_latency_ms": 3581.3860177993774
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 3,
+        "correct_tolerance": 3,
+        "total_cost_usd": 0.038537499999999995,
+        "total_latency_ms": 15587.263584136963,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.15,
+        "accuracy_tolerance": 0.15,
+        "avg_cost_usd": 0.0019268749999999998,
+        "avg_latency_ms": 779.3631792068481
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.0352475,
+        "total_latency_ms": 15453.827619552612,
+        "error_count": 0,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.001762375,
+        "avg_latency_ms": 772.6913809776306
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 12,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.04432375000000001,
+        "total_latency_ms": 13875.980615615845,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 0.6,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0022161875000000003,
+        "avg_latency_ms": 693.7990307807922
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 2,
+        "correct_tolerance": 13,
+        "total_cost_usd": 0.046725000000000017,
+        "total_latency_ms": 16089.855909347534,
+        "error_count": 0,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 0.1,
+        "accuracy_tolerance": 0.65,
+        "avg_cost_usd": 0.0023362500000000007,
+        "avg_latency_ms": 804.4927954673767
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 7,
+        "correct_tolerance": 7,
+        "total_cost_usd": 0.0394875,
+        "total_latency_ms": 15769.985675811768,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.35,
+        "accuracy_tolerance": 0.35,
+        "avg_cost_usd": 0.001974375,
+        "avg_latency_ms": 788.4992837905884
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 2,
+        "total_cost_usd": 0.04332249999999999,
+        "total_latency_ms": 62772.18556404114,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.1,
+        "avg_cost_usd": 0.0021661249999999996,
+        "avg_latency_ms": 3138.609278202057
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 4,
+        "correct_tolerance": 14,
+        "total_cost_usd": 0.043852499999999996,
+        "total_latency_ms": 31000.75936317444,
+        "error_count": 0,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 0.2,
+        "accuracy_tolerance": 0.7,
+        "avg_cost_usd": 0.0021926249999999997,
+        "avg_latency_ms": 1550.037968158722
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 1,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.025006250000000004,
+        "total_latency_ms": 61097.087144851685,
+        "error_count": 0,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 0.05,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.0012503125000000001,
+        "avg_latency_ms": 3054.8543572425842
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 8,
+        "correct_tolerance": 8,
+        "total_cost_usd": 0.03960625000000001,
+        "total_latency_ms": 33029.4144153595,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.4,
+        "accuracy_tolerance": 0.4,
+        "avg_cost_usd": 0.0019803125000000003,
+        "avg_latency_ms": 1651.4707207679749
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 13,
+        "total_cost_usd": 0.04976249999999999,
+        "total_latency_ms": 15589.50161933899,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 0.65,
+        "avg_cost_usd": 0.0024881249999999995,
+        "avg_latency_ms": 779.4750809669495
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 7,
+        "correct_tolerance": 7,
+        "total_cost_usd": 0.050032499999999994,
+        "total_latency_ms": 18600.36039352417,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.35,
+        "accuracy_tolerance": 0.35,
+        "avg_cost_usd": 0.0025016249999999995,
+        "avg_latency_ms": 930.0180196762085
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 4,
+        "correct_tolerance": 4,
+        "total_cost_usd": 0.039265,
+        "total_latency_ms": 15505.469560623169,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.2,
+        "accuracy_tolerance": 0.2,
+        "avg_cost_usd": 0.00196325,
+        "avg_latency_ms": 775.2734780311584
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 5,
+        "correct_tolerance": 7,
+        "total_cost_usd": 0.04136874999999999,
+        "total_latency_ms": 31442.79384613037,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 0.25,
+        "accuracy_tolerance": 0.35,
+        "avg_cost_usd": 0.0020684374999999995,
+        "avg_latency_ms": 1572.1396923065186
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 13,
+        "correct_tolerance": 40,
+        "total_cost_usd": 0.22926375,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.13,
+        "accuracy_tolerance": 0.4
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 34,
+        "correct_tolerance": 34,
+        "total_cost_usd": 0.21708500000000006,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.34,
+        "accuracy_tolerance": 0.34
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 30,
+        "correct_tolerance": 73,
+        "total_cost_usd": 0.14843,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 0.375,
+        "accuracy_tolerance": 0.9125
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 8,
+        "correct_tolerance": 8,
+        "total_cost_usd": 0.03960625000000001,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.4,
+        "accuracy_tolerance": 0.4
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 43,
+        "correct_tolerance": 113,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.2388888888888889,
+        "accuracy_tolerance": 0.6277777777777778
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 42,
+        "correct_tolerance": 42,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.35,
+        "accuracy_tolerance": 0.35
+      }
+    }
+  },
+  "l1o_official": {
+    "experiment_name": "l1o_official",
+    "experiment_level": "L1O",
+    "total_instances": 300,
+    "correct_exact": 212,
+    "correct_tolerance": 218,
+    "accuracy_exact": 0.7066666666666667,
+    "accuracy_tolerance": 0.7266666666666667,
+    "error_count": 0,
+    "total_cost_usd": 0.53950625,
+    "avg_latency_ms": 2595.9838954607644,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 18,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.043054999999999996,
+        "total_latency_ms": 68067.90375709534,
+        "error_count": 0,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 0.9,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.0021527499999999997,
+        "avg_latency_ms": 3403.395187854767
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 17,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.03402375,
+        "total_latency_ms": 44923.28667640686,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.85,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0017011875,
+        "avg_latency_ms": 2246.164333820343
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 17,
+        "correct_tolerance": 17,
+        "total_cost_usd": 0.03412625,
+        "total_latency_ms": 55662.322759628296,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.85,
+        "accuracy_tolerance": 0.85,
+        "avg_cost_usd": 0.0017063125,
+        "avg_latency_ms": 2783.116137981415
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.0298975,
+        "total_latency_ms": 31538.952827453613,
+        "error_count": 0,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0014948750000000001,
+        "avg_latency_ms": 1576.9476413726807
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.03884125000000001,
+        "total_latency_ms": 34754.71782684326,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0019420625000000004,
+        "avg_latency_ms": 1737.735891342163
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 17,
+        "correct_tolerance": 17,
+        "total_cost_usd": 0.04140625,
+        "total_latency_ms": 38436.79428100586,
+        "error_count": 0,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 0.85,
+        "accuracy_tolerance": 0.85,
+        "avg_cost_usd": 0.0020703125,
+        "avg_latency_ms": 1921.839714050293
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 11,
+        "correct_tolerance": 11,
+        "total_cost_usd": 0.035595,
+        "total_latency_ms": 60825.92487335205,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.55,
+        "avg_cost_usd": 0.00177975,
+        "avg_latency_ms": 3041.2962436676025
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 18,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.03412874999999999,
+        "total_latency_ms": 48828.431844711304,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 0.9,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0017064374999999996,
+        "avg_latency_ms": 2441.421592235565
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.0372875,
+        "total_latency_ms": 43504.78148460388,
+        "error_count": 0,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0018643750000000001,
+        "avg_latency_ms": 2175.239074230194
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.015253750000000003,
+        "total_latency_ms": 47300.45294761658,
+        "error_count": 0,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0007626875000000001,
+        "avg_latency_ms": 2365.022647380829
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 3,
+        "correct_tolerance": 3,
+        "total_cost_usd": 0.033297499999999994,
+        "total_latency_ms": 68237.66446113586,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.15,
+        "accuracy_tolerance": 0.15,
+        "avg_cost_usd": 0.0016648749999999997,
+        "avg_latency_ms": 3411.883223056793
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 9,
+        "correct_tolerance": 9,
+        "total_cost_usd": 0.046565,
+        "total_latency_ms": 62873.798847198486,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.45,
+        "accuracy_tolerance": 0.45,
+        "avg_cost_usd": 0.00232825,
+        "avg_latency_ms": 3143.6899423599243
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 11,
+        "correct_tolerance": 11,
+        "total_cost_usd": 0.04615625000000001,
+        "total_latency_ms": 63016.27850532532,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.55,
+        "avg_cost_usd": 0.0023078125000000004,
+        "avg_latency_ms": 3150.813925266266
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 1,
+        "correct_tolerance": 1,
+        "total_cost_usd": 0.03531375,
+        "total_latency_ms": 63928.12633514404,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.05,
+        "accuracy_tolerance": 0.05,
+        "avg_cost_usd": 0.0017656875,
+        "avg_latency_ms": 3196.406316757202
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 10,
+        "total_cost_usd": 0.03455874999999999,
+        "total_latency_ms": 46895.73121070862,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.5,
+        "avg_cost_usd": 0.0017279374999999997,
+        "avg_latency_ms": 2344.786560535431
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 80,
+        "correct_tolerance": 86,
+        "total_cost_usd": 0.18717249999999994,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.8,
+        "accuracy_tolerance": 0.86
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 49,
+        "correct_tolerance": 49,
+        "total_cost_usd": 0.19775625000000002,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.49,
+        "accuracy_tolerance": 0.49
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 80,
+        "correct_tolerance": 80,
+        "total_cost_usd": 0.12128000000000001,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 3,
+        "correct_tolerance": 3,
+        "total_cost_usd": 0.033297499999999994,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.15,
+        "accuracy_tolerance": 0.15
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 160,
+        "correct_tolerance": 166,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.8888888888888888,
+        "accuracy_tolerance": 0.9222222222222223
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 52,
+        "correct_tolerance": 52,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.43333333333333335,
+        "accuracy_tolerance": 0.43333333333333335
+      }
+    }
+  },
+  "l1_ptool": {
+    "experiment_name": "l1_ptool",
+    "experiment_level": "L1",
+    "total_instances": 300,
+    "correct_exact": 158,
+    "correct_tolerance": 197,
+    "accuracy_exact": 0.5266666666666666,
+    "accuracy_tolerance": 0.6566666666666666,
+    "error_count": 19,
+    "total_cost_usd": 0.36731749999999974,
+    "avg_latency_ms": 7255.793715711166,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 11,
+        "correct_tolerance": 15,
+        "total_cost_usd": 0.022322500000000002,
+        "total_latency_ms": 200980.72147369385,
+        "error_count": 5,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.75,
+        "avg_cost_usd": 0.0011161250000000001,
+        "avg_latency_ms": 10049.036073684692
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 4,
+        "total_cost_usd": 0.024638749999999994,
+        "total_latency_ms": 247886.97624206543,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.2,
+        "avg_cost_usd": 0.0012319374999999997,
+        "avg_latency_ms": 12394.348812103271
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 14,
+        "correct_tolerance": 14,
+        "total_cost_usd": 0.023705000000000004,
+        "total_latency_ms": 166660.50839424133,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.7,
+        "accuracy_tolerance": 0.7,
+        "avg_cost_usd": 0.00118525,
+        "avg_latency_ms": 8333.025419712067
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 18,
+        "total_cost_usd": 0.0196825,
+        "total_latency_ms": 87620.39613723755,
+        "error_count": 2,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 0.9,
+        "avg_cost_usd": 0.000984125,
+        "avg_latency_ms": 4381.019806861877
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.0297,
+        "total_latency_ms": 91974.86782073975,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.001485,
+        "avg_latency_ms": 4598.743391036987
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 17,
+        "correct_tolerance": 18,
+        "total_cost_usd": 0.029117499999999998,
+        "total_latency_ms": 84499.1843700409,
+        "error_count": 2,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 0.85,
+        "accuracy_tolerance": 0.9,
+        "avg_cost_usd": 0.001455875,
+        "avg_latency_ms": 4224.959218502045
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 13,
+        "total_cost_usd": 0.024862500000000006,
+        "total_latency_ms": 183679.43835258484,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 0.65,
+        "avg_cost_usd": 0.0012431250000000003,
+        "avg_latency_ms": 9183.971917629242
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 2,
+        "total_cost_usd": 0.024493749999999998,
+        "total_latency_ms": 201105.88359832764,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.1,
+        "avg_cost_usd": 0.0012246874999999999,
+        "avg_latency_ms": 10055.294179916382
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 7,
+        "correct_tolerance": 14,
+        "total_cost_usd": 0.02028625,
+        "total_latency_ms": 103828.78613471985,
+        "error_count": 6,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 0.35,
+        "accuracy_tolerance": 0.7,
+        "avg_cost_usd": 0.0010143125,
+        "avg_latency_ms": 5191.439306735992
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 1,
+        "correct_tolerance": 16,
+        "total_cost_usd": 0.004919999999999999,
+        "total_latency_ms": 114141.7043209076,
+        "error_count": 4,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 0.05,
+        "accuracy_tolerance": 0.8,
+        "avg_cost_usd": 0.00024599999999999996,
+        "avg_latency_ms": 5707.08521604538
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 10,
+        "total_cost_usd": 0.023585,
+        "total_latency_ms": 161317.59357452393,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.5,
+        "avg_cost_usd": 0.00117925,
+        "avg_latency_ms": 8065.879678726196
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 11,
+        "correct_tolerance": 11,
+        "total_cost_usd": 0.0351375,
+        "total_latency_ms": 178850.3303527832,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.55,
+        "avg_cost_usd": 0.0017568750000000002,
+        "avg_latency_ms": 8942.51651763916
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 17,
+        "correct_tolerance": 17,
+        "total_cost_usd": 0.0349225,
+        "total_latency_ms": 127526.4413356781,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.85,
+        "accuracy_tolerance": 0.85,
+        "avg_cost_usd": 0.001746125,
+        "avg_latency_ms": 6376.322066783905
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 6,
+        "correct_tolerance": 6,
+        "total_cost_usd": 0.02464,
+        "total_latency_ms": 128835.24084091187,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.3,
+        "accuracy_tolerance": 0.3,
+        "avg_cost_usd": 0.001232,
+        "avg_latency_ms": 6441.762042045593
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.025303750000000003,
+        "total_latency_ms": 96448.63820075989,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.0012651875000000003,
+        "avg_latency_ms": 4822.431910037994
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 47,
+        "correct_tolerance": 58,
+        "total_cost_usd": 0.12587625,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.47,
+        "accuracy_tolerance": 0.58
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 61,
+        "correct_tolerance": 61,
+        "total_cost_usd": 0.14326749999999994,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.61,
+        "accuracy_tolerance": 0.61
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 40,
+        "correct_tolerance": 68,
+        "total_cost_usd": 0.07458875000000004,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.85
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 10,
+        "total_cost_usd": 0.023585,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.5
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 87,
+        "correct_tolerance": 126,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.48333333333333334,
+        "accuracy_tolerance": 0.7
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 71,
+        "correct_tolerance": 71,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.5916666666666667,
+        "accuracy_tolerance": 0.5916666666666667
+      }
+    }
+  },
+  "l2o_official": {
+    "experiment_name": "l2o_official",
+    "experiment_level": "L2O",
+    "total_instances": 300,
+    "correct_exact": 198,
+    "correct_tolerance": 206,
+    "accuracy_exact": 0.66,
+    "accuracy_tolerance": 0.6866666666666666,
+    "error_count": 2,
+    "total_cost_usd": 0.36750000000000005,
+    "avg_latency_ms": 6733.931110209267,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 46868.42846870422,
+        "error_count": 0,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 2343.421423435211
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 40100.26788711548,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 2005.013394355774
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 5,
+        "correct_tolerance": 5,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 59815.86289405823,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.25,
+        "accuracy_tolerance": 0.25,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 2990.7931447029114
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 18,
+        "total_cost_usd": 0.027000000000000007,
+        "total_latency_ms": 96478.15990447998,
+        "error_count": 2,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 0.9,
+        "avg_cost_usd": 0.0013500000000000003,
+        "avg_latency_ms": 4823.907995223999
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 37326.75290107727,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 1866.3376450538635
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 18,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.02437500000000001,
+        "total_latency_ms": 70225.76642036438,
+        "error_count": 0,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 0.9,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0012187500000000006,
+        "avg_latency_ms": 3511.288321018219
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 14,
+        "correct_tolerance": 14,
+        "total_cost_usd": 0.02962500000000001,
+        "total_latency_ms": 237188.3625984192,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.7,
+        "accuracy_tolerance": 0.7,
+        "avg_cost_usd": 0.0014812500000000004,
+        "avg_latency_ms": 11859.41812992096
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 47870.23591995239,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 2393.5117959976196
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 46322.362184524536,
+        "error_count": 0,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 2316.118109226227
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 43167.31595993042,
+        "error_count": 0,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 2158.365797996521
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 9,
+        "correct_tolerance": 9,
+        "total_cost_usd": 0.03000000000000001,
+        "total_latency_ms": 783519.073009491,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.45,
+        "accuracy_tolerance": 0.45,
+        "avg_cost_usd": 0.0015000000000000005,
+        "avg_latency_ms": 39175.95365047455
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 1,
+        "correct_tolerance": 1,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 101306.03861808777,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.05,
+        "accuracy_tolerance": 0.05,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 5065.301930904388
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 0,
+        "total_cost_usd": 0.022500000000000013,
+        "total_latency_ms": 86388.25750350952,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.0,
+        "avg_cost_usd": 0.0011250000000000006,
+        "avg_latency_ms": 4319.412875175476
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 0,
+        "total_cost_usd": 0.02400000000000001,
+        "total_latency_ms": 127429.48293685913,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.0,
+        "avg_cost_usd": 0.0012000000000000005,
+        "avg_latency_ms": 6371.4741468429565
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.03000000000000001,
+        "total_latency_ms": 191012.24303245544,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.0015000000000000005,
+        "avg_latency_ms": 9550.612151622772
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 96,
+        "correct_tolerance": 99,
+        "total_cost_usd": 0.1218750000000001,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.96,
+        "accuracy_tolerance": 0.99
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.1211250000000001,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.2,
+        "accuracy_tolerance": 0.2
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 73,
+        "correct_tolerance": 78,
+        "total_cost_usd": 0.09450000000000006,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 0.9125,
+        "accuracy_tolerance": 0.975
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 9,
+        "correct_tolerance": 9,
+        "total_cost_usd": 0.03000000000000001,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.45,
+        "accuracy_tolerance": 0.45
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 169,
+        "correct_tolerance": 177,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.9388888888888889,
+        "accuracy_tolerance": 0.9833333333333333
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 29,
+        "correct_tolerance": 29,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.24166666666666667,
+        "accuracy_tolerance": 0.24166666666666667
+      }
+    }
+  },
+  "l2_distilled": {
+    "experiment_name": "l2_distilled",
+    "experiment_level": "L2",
+    "total_instances": 300,
+    "correct_exact": 172,
+    "correct_tolerance": 201,
+    "accuracy_exact": 0.5733333333333334,
+    "accuracy_tolerance": 0.67,
+    "error_count": 4,
+    "total_cost_usd": 0.12458875000000001,
+    "avg_latency_ms": 2052.264882100595,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 17,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.0045537500000000005,
+        "total_latency_ms": 14597.643375396729,
+        "error_count": 0,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 0.85,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.00022768750000000003,
+        "avg_latency_ms": 729.8821687698364
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 12,
+        "correct_tolerance": 17,
+        "total_cost_usd": 0.0027749999999999997,
+        "total_latency_ms": 28450.8957862854,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.6,
+        "accuracy_tolerance": 0.85,
+        "avg_cost_usd": 0.00013874999999999998,
+        "avg_latency_ms": 1422.54478931427
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 13,
+        "total_cost_usd": 0.023705000000000004,
+        "total_latency_ms": 117003.33404541016,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 0.65,
+        "avg_cost_usd": 0.00118525,
+        "avg_latency_ms": 5850.166702270508
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0,
+        "total_latency_ms": 2.856731414794922,
+        "error_count": 0,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0,
+        "avg_latency_ms": 0.1428365707397461
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0,
+        "total_latency_ms": 23.87690544128418,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0,
+        "avg_latency_ms": 1.193845272064209
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 16,
+        "correct_tolerance": 16,
+        "total_cost_usd": 0.0056212499999999995,
+        "total_latency_ms": 10996.649026870728,
+        "error_count": 0,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 0.8,
+        "accuracy_tolerance": 0.8,
+        "avg_cost_usd": 0.00028106249999999995,
+        "avg_latency_ms": 549.8324513435364
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 9,
+        "correct_tolerance": 9,
+        "total_cost_usd": 0,
+        "total_latency_ms": 47.09458351135254,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.45,
+        "accuracy_tolerance": 0.45,
+        "avg_cost_usd": 0.0,
+        "avg_latency_ms": 2.354729175567627
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 6,
+        "total_cost_usd": 0.00554875,
+        "total_latency_ms": 25984.17353630066,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.3,
+        "avg_cost_usd": 0.0002774375,
+        "avg_latency_ms": 1299.208676815033
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0,
+        "total_latency_ms": 4355.7164669036865,
+        "error_count": 1,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.0,
+        "avg_latency_ms": 217.78582334518433
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 1,
+        "correct_tolerance": 17,
+        "total_cost_usd": 0.005227499999999999,
+        "total_latency_ms": 77814.84532356262,
+        "error_count": 3,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 0.05,
+        "accuracy_tolerance": 0.85,
+        "avg_cost_usd": 0.00026137499999999994,
+        "avg_latency_ms": 3890.742266178131
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 11,
+        "correct_tolerance": 11,
+        "total_cost_usd": 0.0167175,
+        "total_latency_ms": 102670.71080207825,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.55,
+        "avg_cost_usd": 0.000835875,
+        "avg_latency_ms": 5133.535540103912
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 8,
+        "correct_tolerance": 8,
+        "total_cost_usd": 0.0351375,
+        "total_latency_ms": 156495.6512451172,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.4,
+        "accuracy_tolerance": 0.4,
+        "avg_cost_usd": 0.0017568750000000002,
+        "avg_latency_ms": 7824.782562255859
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 4,
+        "correct_tolerance": 4,
+        "total_cost_usd": 0,
+        "total_latency_ms": 78.16314697265625,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.2,
+        "accuracy_tolerance": 0.2,
+        "avg_cost_usd": 0.0,
+        "avg_latency_ms": 3.9081573486328125
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 3,
+        "correct_tolerance": 3,
+        "total_cost_usd": 0,
+        "total_latency_ms": 43.10011863708496,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.15,
+        "accuracy_tolerance": 0.15,
+        "avg_cost_usd": 0.0,
+        "avg_latency_ms": 2.155005931854248
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.025302500000000002,
+        "total_latency_ms": 83906.64601325989,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.0012651250000000002,
+        "avg_latency_ms": 4195.332300662994
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 64,
+        "correct_tolerance": 77,
+        "total_cost_usd": 0.04380125,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.64,
+        "accuracy_tolerance": 0.77
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 37,
+        "correct_tolerance": 37,
+        "total_cost_usd": 0.058842500000000006,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.37,
+        "accuracy_tolerance": 0.37
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 60,
+        "correct_tolerance": 76,
+        "total_cost_usd": 0.005227499999999999,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 0.75,
+        "accuracy_tolerance": 0.95
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 11,
+        "correct_tolerance": 11,
+        "total_cost_usd": 0.0167175,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.55
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 124,
+        "correct_tolerance": 153,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.6888888888888889,
+        "accuracy_tolerance": 0.85
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 48,
+        "correct_tolerance": 48,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.4,
+        "accuracy_tolerance": 0.4
+      }
+    }
+  },
+  "l3_audit": {
+    "experiment_name": "l3_audit",
+    "experiment_level": "L3+",
+    "total_instances": 300,
+    "correct_exact": 173,
+    "correct_tolerance": 209,
+    "accuracy_exact": 0.5766666666666667,
+    "accuracy_tolerance": 0.6966666666666667,
+    "error_count": 0,
+    "total_cost_usd": 1.1501024999999994,
+    "avg_latency_ms": 19489.090764522552,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 15,
+        "correct_tolerance": 15,
+        "total_cost_usd": 0.12333124999999999,
+        "total_latency_ms": 592496.8476295471,
+        "error_count": 0,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 0.75,
+        "accuracy_tolerance": 0.75,
+        "avg_cost_usd": 0.006166562499999999,
+        "avg_latency_ms": 29624.842381477356
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 15,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.07064375000000002,
+        "total_latency_ms": 181713.1941318512,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.75,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.003532187500000001,
+        "avg_latency_ms": 9085.65970659256
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 13,
+        "total_cost_usd": 0.07841624999999999,
+        "total_latency_ms": 289062.0756149292,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 0.65,
+        "avg_cost_usd": 0.0039208125,
+        "avg_latency_ms": 14453.10378074646
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.0578675,
+        "total_latency_ms": 124629.65846061707,
+        "error_count": 0,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.002893375,
+        "avg_latency_ms": 6231.482923030853
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.06729375,
+        "total_latency_ms": 121932.23977088928,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0033646875,
+        "avg_latency_ms": 6096.611988544464
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 4,
+        "correct_tolerance": 12,
+        "total_cost_usd": 0.08002125,
+        "total_latency_ms": 207939.73183631897,
+        "error_count": 0,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 0.2,
+        "accuracy_tolerance": 0.6,
+        "avg_cost_usd": 0.0040010625,
+        "avg_latency_ms": 10396.986591815948
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 8,
+        "correct_tolerance": 8,
+        "total_cost_usd": 0.07826375,
+        "total_latency_ms": 721011.4443302155,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.4,
+        "accuracy_tolerance": 0.4,
+        "avg_cost_usd": 0.0039131875,
+        "avg_latency_ms": 36050.57221651077
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 7,
+        "total_cost_usd": 0.09862125000000001,
+        "total_latency_ms": 440539.1836166382,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.35,
+        "avg_cost_usd": 0.0049310625000000005,
+        "avg_latency_ms": 22026.95918083191
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.06423625000000001,
+        "total_latency_ms": 106257.65943527222,
+        "error_count": 0,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0032118125000000003,
+        "avg_latency_ms": 5312.882971763611
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 3,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.04608999999999999,
+        "total_latency_ms": 206775.6621837616,
+        "error_count": 0,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 0.15,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0023044999999999997,
+        "avg_latency_ms": 10338.78310918808
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 10,
+        "total_cost_usd": 0.08476,
+        "total_latency_ms": 990014.3485069275,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.5,
+        "avg_cost_usd": 0.0042380000000000004,
+        "avg_latency_ms": 49500.717425346375
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 11,
+        "correct_tolerance": 11,
+        "total_cost_usd": 0.07978624999999999,
+        "total_latency_ms": 777067.8577423096,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.55,
+        "avg_cost_usd": 0.0039893125,
+        "avg_latency_ms": 38853.39288711548
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 15,
+        "correct_tolerance": 15,
+        "total_cost_usd": 0.07709625,
+        "total_latency_ms": 335576.1966705322,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.75,
+        "accuracy_tolerance": 0.75,
+        "avg_cost_usd": 0.0038548125,
+        "avg_latency_ms": 16778.80983352661
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 8,
+        "correct_tolerance": 8,
+        "total_cost_usd": 0.06634875,
+        "total_latency_ms": 342710.21723747253,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.4,
+        "accuracy_tolerance": 0.4,
+        "avg_cost_usd": 0.0033174375,
+        "avg_latency_ms": 17135.510861873627
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 11,
+        "correct_tolerance": 11,
+        "total_cost_usd": 0.07732625,
+        "total_latency_ms": 409000.91218948364,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.55,
+        "avg_cost_usd": 0.0038663125,
+        "avg_latency_ms": 20450.045609474182
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 45,
+        "correct_tolerance": 64,
+        "total_cost_usd": 0.44994375000000003,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.45,
+        "accuracy_tolerance": 0.64
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 55,
+        "correct_tolerance": 55,
+        "total_cost_usd": 0.37991125,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.55,
+        "accuracy_tolerance": 0.55
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 63,
+        "correct_tolerance": 80,
+        "total_cost_usd": 0.23548750000000004,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 0.7875,
+        "accuracy_tolerance": 1.0
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 10,
+        "total_cost_usd": 0.08476,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.5
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 108,
+        "correct_tolerance": 144,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.6,
+        "accuracy_tolerance": 0.8
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 65,
+        "correct_tolerance": 65,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.5416666666666666,
+        "accuracy_tolerance": 0.5416666666666666
+      }
+    }
+  },
+  "l3_react": {
+    "experiment_name": "l3_react",
+    "experiment_level": "L3",
+    "total_instances": 300,
+    "correct_exact": 175,
+    "correct_tolerance": 216,
+    "accuracy_exact": 0.5833333333333334,
+    "accuracy_tolerance": 0.72,
+    "error_count": 0,
+    "total_cost_usd": 1.0148774999999997,
+    "avg_latency_ms": 15551.606815656027,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 14,
+        "correct_tolerance": 15,
+        "total_cost_usd": 0.10637375000000002,
+        "total_latency_ms": 552010.7128620148,
+        "error_count": 0,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 0.7,
+        "accuracy_tolerance": 0.75,
+        "avg_cost_usd": 0.0053186875000000005,
+        "avg_latency_ms": 27600.53564310074
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 15,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.061549999999999994,
+        "total_latency_ms": 246677.27661132812,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.75,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0030774999999999995,
+        "avg_latency_ms": 12333.863830566406
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 13,
+        "total_cost_usd": 0.07456375,
+        "total_latency_ms": 352401.3068675995,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 0.65,
+        "avg_cost_usd": 0.0037281874999999997,
+        "avg_latency_ms": 17620.065343379974
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.048942499999999986,
+        "total_latency_ms": 122213.45090866089,
+        "error_count": 0,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.002447124999999999,
+        "avg_latency_ms": 6110.672545433044
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.05732625,
+        "total_latency_ms": 111569.86570358276,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0028663125,
+        "avg_latency_ms": 5578.493285179138
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 5,
+        "correct_tolerance": 16,
+        "total_cost_usd": 0.06810625000000001,
+        "total_latency_ms": 198846.6649055481,
+        "error_count": 0,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 0.25,
+        "accuracy_tolerance": 0.8,
+        "avg_cost_usd": 0.0034053125000000004,
+        "avg_latency_ms": 9942.333245277405
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 7,
+        "correct_tolerance": 7,
+        "total_cost_usd": 0.06404,
+        "total_latency_ms": 317917.09184646606,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.35,
+        "accuracy_tolerance": 0.35,
+        "avg_cost_usd": 0.003202,
+        "avg_latency_ms": 15895.854592323303
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 0,
+        "correct_tolerance": 8,
+        "total_cost_usd": 0.0905925,
+        "total_latency_ms": 715821.7282295227,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 0.0,
+        "accuracy_tolerance": 0.4,
+        "avg_cost_usd": 0.004529625000000001,
+        "avg_latency_ms": 35791.086411476135
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.05585250000000001,
+        "total_latency_ms": 165605.43370246887,
+        "error_count": 0,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.002792625000000001,
+        "avg_latency_ms": 8280.271685123444
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 2,
+        "correct_tolerance": 18,
+        "total_cost_usd": 0.0398625,
+        "total_latency_ms": 302718.2059288025,
+        "error_count": 0,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 0.1,
+        "accuracy_tolerance": 0.9,
+        "avg_cost_usd": 0.001993125,
+        "avg_latency_ms": 15135.910296440125
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 9,
+        "correct_tolerance": 9,
+        "total_cost_usd": 0.09219374999999999,
+        "total_latency_ms": 688808.8762760162,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.45,
+        "accuracy_tolerance": 0.45,
+        "avg_cost_usd": 0.004609687499999999,
+        "avg_latency_ms": 34440.44381380081
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 13,
+        "correct_tolerance": 13,
+        "total_cost_usd": 0.06573625,
+        "total_latency_ms": 208723.5028743744,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.65,
+        "accuracy_tolerance": 0.65,
+        "avg_cost_usd": 0.0032868125,
+        "avg_latency_ms": 10436.17514371872
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 15,
+        "correct_tolerance": 15,
+        "total_cost_usd": 0.0604275,
+        "total_latency_ms": 116776.16000175476,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.75,
+        "accuracy_tolerance": 0.75,
+        "avg_cost_usd": 0.003021375,
+        "avg_latency_ms": 5838.808000087738
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 10,
+        "total_cost_usd": 0.05485125,
+        "total_latency_ms": 166811.29813194275,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.5,
+        "avg_cost_usd": 0.0027425624999999998,
+        "avg_latency_ms": 8340.564906597137
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 12,
+        "correct_tolerance": 12,
+        "total_cost_usd": 0.07445875,
+        "total_latency_ms": 398580.46984672546,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 0.6,
+        "accuracy_tolerance": 0.6,
+        "avg_cost_usd": 0.0037229375,
+        "avg_latency_ms": 19929.023492336273
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 46,
+        "correct_tolerance": 71,
+        "total_cost_usd": 0.40108125000000006,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.46,
+        "accuracy_tolerance": 0.71
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 58,
+        "correct_tolerance": 58,
+        "total_cost_usd": 0.31961874999999995,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.58,
+        "accuracy_tolerance": 0.58
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 62,
+        "correct_tolerance": 78,
+        "total_cost_usd": 0.20198375,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 0.775,
+        "accuracy_tolerance": 0.975
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 9,
+        "correct_tolerance": 9,
+        "total_cost_usd": 0.09219374999999999,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.45,
+        "accuracy_tolerance": 0.45
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 108,
+        "correct_tolerance": 149,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.6,
+        "accuracy_tolerance": 0.8277777777777777
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 67,
+        "correct_tolerance": 67,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.5583333333333333,
+        "accuracy_tolerance": 0.5583333333333333
+      }
+    }
+  },
+  "l4_pipeline": {
+    "experiment_name": "l4_pipeline",
+    "experiment_level": "L4",
+    "total_instances": 300,
+    "correct_exact": 257,
+    "correct_tolerance": 260,
+    "accuracy_exact": 0.8566666666666667,
+    "accuracy_tolerance": 0.8666666666666667,
+    "error_count": 0,
+    "total_cost_usd": 1.3062500000000001,
+    "avg_latency_ms": 13964.623308976492,
+    "by_calculator": {
+      "Creatinine Clearance (Cockcroft-Gault Equation)": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.10112500000000002,
+        "total_latency_ms": 132209.19942855835,
+        "error_count": 0,
+        "calculator_name": "Creatinine Clearance (Cockcroft-Gault Equation)",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.005056250000000001,
+        "avg_latency_ms": 6610.4599714279175
+      },
+      "CKD-EPI Equations for Glomerular Filtration Rate": {
+        "total_instances": 20,
+        "correct_exact": 16,
+        "correct_tolerance": 17,
+        "total_cost_usd": 0.10337500000000002,
+        "total_latency_ms": 147118.97373199463,
+        "error_count": 0,
+        "calculator_name": "CKD-EPI Equations for Glomerular Filtration Rate",
+        "accuracy_exact": 0.8,
+        "accuracy_tolerance": 0.85,
+        "avg_cost_usd": 0.0051687500000000015,
+        "avg_latency_ms": 7355.948686599731
+      },
+      "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk": {
+        "total_instances": 20,
+        "correct_exact": 16,
+        "correct_tolerance": 16,
+        "total_cost_usd": 0.06500000000000003,
+        "total_latency_ms": 282850.7330417633,
+        "error_count": 0,
+        "calculator_name": "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+        "accuracy_exact": 0.8,
+        "accuracy_tolerance": 0.8,
+        "avg_cost_usd": 0.0032500000000000016,
+        "avg_latency_ms": 14142.536652088165
+      },
+      "Mean Arterial Pressure (MAP)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.10000000000000002,
+        "total_latency_ms": 100526.49927139282,
+        "error_count": 0,
+        "calculator_name": "Mean Arterial Pressure (MAP)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.005000000000000001,
+        "avg_latency_ms": 5026.324963569641
+      },
+      "Body Mass Index (BMI)": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.10000000000000002,
+        "total_latency_ms": 911431.7679405212,
+        "error_count": 0,
+        "calculator_name": "Body Mass Index (BMI)",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.005000000000000001,
+        "avg_latency_ms": 45571.58839702606
+      },
+      "Calcium Correction for Hypoalbuminemia": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.06675000000000003,
+        "total_latency_ms": 157960.58535575867,
+        "error_count": 0,
+        "calculator_name": "Calcium Correction for Hypoalbuminemia",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.0033375000000000015,
+        "avg_latency_ms": 7898.029267787933
+      },
+      "Wells' Criteria for Pulmonary Embolism": {
+        "total_instances": 20,
+        "correct_exact": 14,
+        "correct_tolerance": 14,
+        "total_cost_usd": 0.06500000000000003,
+        "total_latency_ms": 345667.9632663727,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for Pulmonary Embolism",
+        "accuracy_exact": 0.7,
+        "accuracy_tolerance": 0.7,
+        "avg_cost_usd": 0.0032500000000000016,
+        "avg_latency_ms": 17283.398163318634
+      },
+      "MDRD GFR Equation": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 19,
+        "total_cost_usd": 0.10112500000000002,
+        "total_latency_ms": 144040.65418243408,
+        "error_count": 0,
+        "calculator_name": "MDRD GFR Equation",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 0.95,
+        "avg_cost_usd": 0.005056250000000001,
+        "avg_latency_ms": 7202.032709121704
+      },
+      "Ideal Body Weight": {
+        "total_instances": 20,
+        "correct_exact": 19,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.10000000000000002,
+        "total_latency_ms": 170768.00179481506,
+        "error_count": 0,
+        "calculator_name": "Ideal Body Weight",
+        "accuracy_exact": 0.95,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.005000000000000001,
+        "avg_latency_ms": 8538.400089740753
+      },
+      "QTc Bazett Calculator": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.10000000000000002,
+        "total_latency_ms": 86631.0293674469,
+        "error_count": 0,
+        "calculator_name": "QTc Bazett Calculator",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.005000000000000001,
+        "avg_latency_ms": 4331.551468372345
+      },
+      "Child-Pugh Score for Cirrhosis Mortality": {
+        "total_instances": 20,
+        "correct_exact": 12,
+        "correct_tolerance": 12,
+        "total_cost_usd": 0.0875,
+        "total_latency_ms": 432417.8285598755,
+        "error_count": 0,
+        "calculator_name": "Child-Pugh Score for Cirrhosis Mortality",
+        "accuracy_exact": 0.6,
+        "accuracy_tolerance": 0.6,
+        "avg_cost_usd": 0.0043749999999999995,
+        "avg_latency_ms": 21620.891427993774
+      },
+      "Wells' Criteria for DVT": {
+        "total_instances": 20,
+        "correct_exact": 16,
+        "correct_tolerance": 16,
+        "total_cost_usd": 0.06500000000000003,
+        "total_latency_ms": 347536.86928749084,
+        "error_count": 0,
+        "calculator_name": "Wells' Criteria for DVT",
+        "accuracy_exact": 0.8,
+        "accuracy_tolerance": 0.8,
+        "avg_cost_usd": 0.0032500000000000016,
+        "avg_latency_ms": 17376.843464374542
+      },
+      "Revised Cardiac Risk Index for Pre-Operative Risk": {
+        "total_instances": 20,
+        "correct_exact": 16,
+        "correct_tolerance": 16,
+        "total_cost_usd": 0.06500000000000003,
+        "total_latency_ms": 262386.5759372711,
+        "error_count": 0,
+        "calculator_name": "Revised Cardiac Risk Index for Pre-Operative Risk",
+        "accuracy_exact": 0.8,
+        "accuracy_tolerance": 0.8,
+        "avg_cost_usd": 0.0032500000000000016,
+        "avg_latency_ms": 13119.328796863556
+      },
+      "HEART Score for Major Cardiac Events": {
+        "total_instances": 20,
+        "correct_exact": 10,
+        "correct_tolerance": 10,
+        "total_cost_usd": 0.06500000000000003,
+        "total_latency_ms": 272912.6305580139,
+        "error_count": 0,
+        "calculator_name": "HEART Score for Major Cardiac Events",
+        "accuracy_exact": 0.5,
+        "accuracy_tolerance": 0.5,
+        "avg_cost_usd": 0.0032500000000000016,
+        "avg_latency_ms": 13645.631527900696
+      },
+      "Fibrosis-4 (FIB-4) Index for Liver Fibrosis": {
+        "total_instances": 20,
+        "correct_exact": 20,
+        "correct_tolerance": 20,
+        "total_cost_usd": 0.12137500000000004,
+        "total_latency_ms": 394927.6809692383,
+        "error_count": 0,
+        "calculator_name": "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+        "accuracy_exact": 1.0,
+        "accuracy_tolerance": 1.0,
+        "avg_cost_usd": 0.006068750000000002,
+        "avg_latency_ms": 19746.384048461914
+      }
+    },
+    "by_category": {
+      "lab test": {
+        "total_instances": 100,
+        "correct_exact": 94,
+        "correct_tolerance": 96,
+        "total_cost_usd": 0.49374999999999986,
+        "calculators": [
+          "CKD-EPI Equations for Glomerular Filtration Rate",
+          "Calcium Correction for Hypoalbuminemia",
+          "Creatinine Clearance (Cockcroft-Gault Equation)",
+          "Fibrosis-4 (FIB-4) Index for Liver Fibrosis",
+          "MDRD GFR Equation"
+        ],
+        "category": "lab test",
+        "accuracy_exact": 0.94,
+        "accuracy_tolerance": 0.96
+      },
+      "risk": {
+        "total_instances": 100,
+        "correct_exact": 72,
+        "correct_tolerance": 72,
+        "total_cost_usd": 0.3249999999999996,
+        "calculators": [
+          "CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk",
+          "HEART Score for Major Cardiac Events",
+          "Revised Cardiac Risk Index for Pre-Operative Risk",
+          "Wells' Criteria for DVT",
+          "Wells' Criteria for Pulmonary Embolism"
+        ],
+        "category": "risk",
+        "accuracy_exact": 0.72,
+        "accuracy_tolerance": 0.72
+      },
+      "physical": {
+        "total_instances": 80,
+        "correct_exact": 79,
+        "correct_tolerance": 80,
+        "total_cost_usd": 0.40000000000000024,
+        "calculators": [
+          "Body Mass Index (BMI)",
+          "Ideal Body Weight",
+          "Mean Arterial Pressure (MAP)",
+          "QTc Bazett Calculator"
+        ],
+        "category": "physical",
+        "accuracy_exact": 0.9875,
+        "accuracy_tolerance": 1.0
+      },
+      "severity": {
+        "total_instances": 20,
+        "correct_exact": 12,
+        "correct_tolerance": 12,
+        "total_cost_usd": 0.0875,
+        "calculators": [
+          "Child-Pugh Score for Cirrhosis Mortality"
+        ],
+        "category": "severity",
+        "accuracy_exact": 0.6,
+        "accuracy_tolerance": 0.6
+      }
+    },
+    "by_eval_type": {
+      "Equation-based": {
+        "eval_type": "Equation-based",
+        "total_instances": 180,
+        "correct_exact": 173,
+        "correct_tolerance": 176,
+        "categories": [
+          "lab test",
+          "physical"
+        ],
+        "accuracy_exact": 0.9611111111111111,
+        "accuracy_tolerance": 0.9777777777777777
+      },
+      "Rule-based": {
+        "eval_type": "Rule-based",
+        "total_instances": 120,
+        "correct_exact": 84,
+        "correct_tolerance": 84,
+        "categories": [
+          "risk",
+          "severity"
+        ],
+        "accuracy_exact": 0.7,
+        "accuracy_tolerance": 0.7
+      }
+    }
+  }
+}

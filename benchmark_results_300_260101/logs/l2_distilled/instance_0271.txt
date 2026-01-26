@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 271
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T21:37:26.424757
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 5.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 60-year-old female with past medical history significant for hypertension, DM, coronary artery disease, and hyperlipidemia presented to the emergency room with the chief complaint of chest pain. She also reported generalized weakness, myalgias, subjective fever, and chills progressively worsening over the past 7 days. Her physical examination showed stable vital signs and was otherwise unremarkable except for trace peripheral edema. The University of Florida does not require IRB approval or written informed consent for any case report with 3 or fewer patients as it is not a clinical study. 
+Fearing a coronary event, she was given a dose of sublingual nitroglycerine and aspirin. An electrocardiogram showed sinus tachycardia, but otherwise no apparent abnormality. Laboratory workup was significant for elevated creatinine phosphokinase (CPK) of 13,456 U/L (reference range: 30–170 U/L), normal troponin-T, normal complete blood count, and basic metabolic panel except elevated creatinine of 1.20 mg/dL (reference range: 0.40–0.90 mg/dL). Her chest X-ray revealed no abnormality. CPK levels evaluated in 2012 on this patient while on statins were unremarkable (191 U/L, 165 U/L, and 197 U/L, with reference range of 30–170 U/L). 
+She was admitted to the hospital due to concern for acute coronary event, rhabdomyolysis, acute renal insufficiency, and possible acute viral infection causing her symptoms. Her workup during hospital stay showed three normal serial troponin-T tests, and myocardial perfusion test revealed no abnormality. Her respiratory viral panel and thyroid stimulation hormone level were normal. Her creatinine also normalized with intravenous (IV) fluids. She had persistent elevated CPK levels, which also trended down with IV fluids. 
+Common differential diagnoses for her rhabdomyolysis were explored by detailed history and laboratory workup. There was no history of recent trauma, crush injury, prolonged immobilization, recent surgery, seizures, drug abuse, or alcoholism. Her family history was negative for any kind of myopathy or other hereditary or genetic causes that could explain the elevated CPK value. Her laboratory workup, including thyroid function tests, was unremarkable and failed to explain this episode of rhabdomyolysis. She had been on a stable dose of atorvastatin (40 mg) for several years for hyperlipidemia and reported no myalgias, arthralgias, or abnormal CPK levels. Review of her medication list further revealed that she was started on sitagliptin (Januvia® 100 mg) almost a week before this presentation. She also correlated her symptoms with starting of this new medication. Sitagliptin and atorvastatin were stopped; her subsequent CPK value showed a decreasing trend and was recorded at 1,220 U/L on the day of discharge. The patient’s muscle aches and chest pain had reduced considerably following the discontinuation of these medications.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'HEART Score for Major Cardiac Events', 'extracted_values': {'age': 1, 'risk_factors': 2, 'troponin': 2}, 'result': 5, 'method': 'python', 'formula': 'History + ECG + Age + Risk factors + Troponin (0-10)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'HEART Score for Major Cardiac Events', 'extracted_values': {'age': 1, 'risk_factors': 2, 'troponin': 2}, 'result': 5, 'method': 'python', 'formula': 'History + ECG + Age + Risk factors + Troponin (0-10)'}}
+

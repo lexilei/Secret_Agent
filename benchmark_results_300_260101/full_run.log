@@ -1,0 +1,1655 @@
+============================================================
+Running MedCalc Benchmark - All Experiments (L0-L3+)
+Output: benchmark_results_300_260101
+Instances: 300
+Log file: benchmark_results_300_260101/full_run.log
+Started: Thu Jan  1 20:40:10 EST 2026
+============================================================
+╭───────────────────────────────────────────────────── 🚀 New SDK Available ─────────────────────────────────────────────────────╮
+│ Together Python SDK 2.0 is now available!                                                                                      │
+│                                                                                                                                │
+│ Install the beta:                                                                                                              │
+│ pip install --pre together  or  uv add together --prerelease allow                                                             │
+│                                                                                                                                │
+│ New SDK: https://github.com/togethercomputer/together-py                                                                       │
+│ Migration guide: https://docs.together.ai/docs/pythonv2-migration-guide                                                        │
+│                                                                                                                                │
+│ This package will be maintained until January 2026.                                                                            │
+│ Set TOGETHER_NO_BANNER=1 to hide this message.                                                                                 │
+╰────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+============================================================
+MedCalc-Bench Benchmark
+============================================================
+Mode: Debug
+Experiments: baseline, l1_ptool, l2_distilled, l3_react, l3_audit
+Model: deepseek-v3-0324
+Output: benchmark_results_300_260101
+Log responses: True
+============================================================
+Loading MedCalc-Bench dataset...
+Loading MedCalc-Bench test split from HuggingFace...
+Loaded 1100 instances from test split
+Debug mode: using first 300 instances
+
+============================================================
+Running experiment: baseline
+============================================================
+Setting up baseline...
+  Progress: 1/300 (0.3%) - ETA: 1591s  Progress: 2/300 (0.7%) - ETA: 2342s  Progress: 3/300 (1.0%) - ETA: 2468s  Progress: 4/300 (1.3%) - ETA: 2797s  Progress: 5/300 (1.7%) - ETA: 2951s  Progress: 6/300 (2.0%) - ETA: 3018s  Progress: 7/300 (2.3%) - ETA: 2872s  Progress: 8/300 (2.7%) - ETA: 2549s  Progress: 9/300 (3.0%) - ETA: 2276s  Progress: 10/300 (3.3%) - ETA: 2277s  Progress: 11/300 (3.7%) - ETA: 2100s  Progress: 12/300 (4.0%) - ETA: 2126s  Progress: 13/300 (4.3%) - ETA: 2153s  Progress: 14/300 (4.7%) - ETA: 2204s  Progress: 15/300 (5.0%) - ETA: 2200s  Progress: 16/300 (5.3%) - ETA: 2244s  Progress: 17/300 (5.7%) - ETA: 2282s  Progress: 18/300 (6.0%) - ETA: 2291s  Progress: 19/300 (6.3%) - ETA: 2265s  Progress: 20/300 (6.7%) - ETA: 2300s  Progress: 21/300 (7.0%) - ETA: 2199s  Progress: 22/300 (7.3%) - ETA: 2243s  Progress: 23/300 (7.7%) - ETA: 2227s  Progress: 24/300 (8.0%) - ETA: 2144s  Progress: 25/300 (8.3%) - ETA: 2064s  Progress: 26/300 (8.7%) - ETA: 2038s  Progress: 27/300 (9.0%) - ETA: 1968s  Progress: 28/300 (9.3%) - ETA: 1903s  Progress: 29/300 (9.7%) - ETA: 1841s  Progress: 30/300 (10.0%) - ETA: 1786s  Progress: 31/300 (10.3%) - ETA: 1745s  Progress: 32/300 (10.7%) - ETA: 1695s  Progress: 33/300 (11.0%) - ETA: 1648s  Progress: 34/300 (11.3%) - ETA: 1604s  Progress: 35/300 (11.7%) - ETA: 1561s  Progress: 36/300 (12.0%) - ETA: 1518s  Progress: 37/300 (12.3%) - ETA: 1550s  Progress: 38/300 (12.7%) - ETA: 1558s  Progress: 39/300 (13.0%) - ETA: 1604s  Progress: 40/300 (13.3%) - ETA: 1597s  Progress: 41/300 (13.7%) - ETA: 1559s  Progress: 42/300 (14.0%) - ETA: 1519s  Progress: 43/300 (14.3%) - ETA: 1484s  Progress: 44/300 (14.7%) - ETA: 1452s  Progress: 45/300 (15.0%) - ETA: 1419s  Progress: 46/300 (15.3%) - ETA: 1390s  Progress: 47/300 (15.7%) - ETA: 1360s  Progress: 48/300 (16.0%) - ETA: 1332s  Progress: 49/300 (16.3%) - ETA: 1305s  Progress: 50/300 (16.7%) - ETA: 1280s  Progress: 51/300 (17.0%) - ETA: 1256s  Progress: 52/300 (17.3%) - ETA: 1233s  Progress: 53/300 (17.7%) - ETA: 1207s  Progress: 54/300 (18.0%) - ETA: 1183s  Progress: 55/300 (18.3%) - ETA: 1159s  Progress: 56/300 (18.7%) - ETA: 1138s  Progress: 57/300 (19.0%) - ETA: 1117s  Progress: 58/300 (19.3%) - ETA: 1096s  Progress: 59/300 (19.7%) - ETA: 1076s  Progress: 60/300 (20.0%) - ETA: 1055s  Progress: 61/300 (20.3%) - ETA: 1037s  Progress: 62/300 (20.7%) - ETA: 1019s  Progress: 63/300 (21.0%) - ETA: 1002s  Progress: 64/300 (21.3%) - ETA: 992s  Progress: 65/300 (21.7%) - ETA: 977s  Progress: 66/300 (22.0%) - ETA: 962s  Progress: 67/300 (22.3%) - ETA: 946s  Progress: 68/300 (22.7%) - ETA: 932s  Progress: 69/300 (23.0%) - ETA: 917s  Progress: 70/300 (23.3%) - ETA: 903s  Progress: 71/300 (23.7%) - ETA: 890s  Progress: 72/300 (24.0%) - ETA: 878s  Progress: 73/300 (24.3%) - ETA: 867s  Progress: 74/300 (24.7%) - ETA: 856s  Progress: 75/300 (25.0%) - ETA: 844s  Progress: 76/300 (25.3%) - ETA: 833s  Progress: 77/300 (25.7%) - ETA: 820s  Progress: 78/300 (26.0%) - ETA: 808s  Progress: 79/300 (26.3%) - ETA: 797s  Progress: 80/300 (26.7%) - ETA: 785s  Progress: 81/300 (27.0%) - ETA: 776s  Progress: 82/300 (27.3%) - ETA: 767s  Progress: 83/300 (27.7%) - ETA: 757s  Progress: 84/300 (28.0%) - ETA: 746s  Progress: 85/300 (28.3%) - ETA: 735s  Progress: 86/300 (28.7%) - ETA: 727s  Progress: 87/300 (29.0%) - ETA: 718s  Progress: 88/300 (29.3%) - ETA: 709s  Progress: 89/300 (29.7%) - ETA: 699s  Progress: 90/300 (30.0%) - ETA: 690s  Progress: 91/300 (30.3%) - ETA: 681s  Progress: 92/300 (30.7%) - ETA: 673s  Progress: 93/300 (31.0%) - ETA: 665s  Progress: 94/300 (31.3%) - ETA: 657s  Progress: 95/300 (31.7%) - ETA: 648s  Progress: 96/300 (32.0%) - ETA: 639s  Progress: 97/300 (32.3%) - ETA: 634s  Progress: 98/300 (32.7%) - ETA: 625s  Progress: 99/300 (33.0%) - ETA: 617s  Progress: 100/300 (33.3%) - ETA: 610s  Progress: 101/300 (33.7%) - ETA: 603s  Progress: 102/300 (34.0%) - ETA: 596s  Progress: 103/300 (34.3%) - ETA: 589s  Progress: 104/300 (34.7%) - ETA: 582s  Progress: 105/300 (35.0%) - ETA: 576s  Progress: 106/300 (35.3%) - ETA: 568s  Progress: 107/300 (35.7%) - ETA: 562s  Progress: 108/300 (36.0%) - ETA: 556s  Progress: 109/300 (36.3%) - ETA: 549s  Progress: 110/300 (36.7%) - ETA: 542s  Progress: 111/300 (37.0%) - ETA: 536s  Progress: 112/300 (37.3%) - ETA: 530s  Progress: 113/300 (37.7%) - ETA: 524s  Progress: 114/300 (38.0%) - ETA: 519s  Progress: 115/300 (38.3%) - ETA: 513s  Progress: 116/300 (38.7%) - ETA: 507s  Progress: 117/300 (39.0%) - ETA: 505s  Progress: 118/300 (39.3%) - ETA: 500s  Progress: 119/300 (39.7%) - ETA: 494s  Progress: 120/300 (40.0%) - ETA: 488s  Progress: 121/300 (40.3%) - ETA: 482s  Progress: 122/300 (40.7%) - ETA: 476s  Progress: 123/300 (41.0%) - ETA: 470s  Progress: 124/300 (41.3%) - ETA: 465s  Progress: 125/300 (41.7%) - ETA: 459s  Progress: 126/300 (42.0%) - ETA: 454s  Progress: 127/300 (42.3%) - ETA: 449s  Progress: 128/300 (42.7%) - ETA: 444s  Progress: 129/300 (43.0%) - ETA: 440s  Progress: 130/300 (43.3%) - ETA: 435s  Progress: 131/300 (43.7%) - ETA: 430s  Progress: 132/300 (44.0%) - ETA: 425s  Progress: 133/300 (44.3%) - ETA: 422s  Progress: 134/300 (44.7%) - ETA: 418s  Progress: 135/300 (45.0%) - ETA: 413s  Progress: 136/300 (45.3%) - ETA: 409s  Progress: 137/300 (45.7%) - ETA: 404s  Progress: 138/300 (46.0%) - ETA: 400s  Progress: 139/300 (46.3%) - ETA: 395s  Progress: 140/300 (46.7%) - ETA: 391s  Progress: 141/300 (47.0%) - ETA: 387s  Progress: 142/300 (47.3%) - ETA: 382s  Progress: 143/300 (47.7%) - ETA: 378s  Progress: 144/300 (48.0%) - ETA: 373s  Progress: 145/300 (48.3%) - ETA: 374s  Progress: 146/300 (48.7%) - ETA: 370s  Progress: 147/300 (49.0%) - ETA: 367s  Progress: 148/300 (49.3%) - ETA: 363s  Progress: 149/300 (49.7%) - ETA: 359s  Progress: 150/300 (50.0%) - ETA: 354s  Progress: 151/300 (50.3%) - ETA: 351s  Progress: 152/300 (50.7%) - ETA: 347s  Progress: 153/300 (51.0%) - ETA: 343s  Progress: 154/300 (51.3%) - ETA: 340s  Progress: 155/300 (51.7%) - ETA: 336s  Progress: 156/300 (52.0%) - ETA: 333s  Progress: 157/300 (52.3%) - ETA: 330s  Progress: 158/300 (52.7%) - ETA: 326s  Progress: 159/300 (53.0%) - ETA: 329s  Progress: 160/300 (53.3%) - ETA: 326s  Progress: 161/300 (53.7%) - ETA: 322s  Progress: 162/300 (54.0%) - ETA: 319s  Progress: 163/300 (54.3%) - ETA: 316s  Progress: 164/300 (54.7%) - ETA: 312s  Progress: 165/300 (55.0%) - ETA: 309s  Progress: 166/300 (55.3%) - ETA: 306s  Progress: 167/300 (55.7%) - ETA: 303s  Progress: 168/300 (56.0%) - ETA: 302s  Progress: 169/300 (56.3%) - ETA: 299s  Progress: 170/300 (56.7%) - ETA: 296s  Progress: 171/300 (57.0%) - ETA: 293s  Progress: 172/300 (57.3%) - ETA: 290s  Progress: 173/300 (57.7%) - ETA: 286s  Progress: 174/300 (58.0%) - ETA: 283s  Progress: 175/300 (58.3%) - ETA: 280s  Progress: 176/300 (58.7%) - ETA: 277s  Progress: 177/300 (59.0%) - ETA: 274s  Progress: 178/300 (59.3%) - ETA: 272s  Progress: 179/300 (59.7%) - ETA: 268s  Progress: 180/300 (60.0%) - ETA: 266s  Progress: 181/300 (60.3%) - ETA: 263s  Progress: 182/300 (60.7%) - ETA: 260s  Progress: 183/300 (61.0%) - ETA: 257s  Progress: 184/300 (61.3%) - ETA: 255s  Progress: 185/300 (61.7%) - ETA: 252s  Progress: 186/300 (62.0%) - ETA: 249s  Progress: 187/300 (62.3%) - ETA: 247s  Progress: 188/300 (62.7%) - ETA: 244s  Progress: 189/300 (63.0%) - ETA: 241s  Progress: 190/300 (63.3%) - ETA: 238s  Progress: 191/300 (63.7%) - ETA: 235s  Progress: 192/300 (64.0%) - ETA: 233s  Progress: 193/300 (64.3%) - ETA: 230s  Progress: 194/300 (64.7%) - ETA: 227s  Progress: 195/300 (65.0%) - ETA: 224s  Progress: 196/300 (65.3%) - ETA: 221s  Progress: 197/300 (65.7%) - ETA: 219s  Progress: 198/300 (66.0%) - ETA: 216s  Progress: 199/300 (66.3%) - ETA: 213s  Progress: 200/300 (66.7%) - ETA: 211s  Progress: 201/300 (67.0%) - ETA: 208s  Progress: 202/300 (67.3%) - ETA: 209s  Progress: 203/300 (67.7%) - ETA: 206s  Progress: 204/300 (68.0%) - ETA: 204s  Progress: 205/300 (68.3%) - ETA: 201s  Progress: 206/300 (68.7%) - ETA: 199s  Progress: 207/300 (69.0%) - ETA: 197s  Progress: 208/300 (69.3%) - ETA: 200s  Progress: 209/300 (69.7%) - ETA: 198s  Progress: 210/300 (70.0%) - ETA: 195s  Progress: 211/300 (70.3%) - ETA: 192s  Progress: 212/300 (70.7%) - ETA: 190s  Progress: 213/300 (71.0%) - ETA: 187s  Progress: 214/300 (71.3%) - ETA: 184s  Progress: 215/300 (71.7%) - ETA: 182s  Progress: 216/300 (72.0%) - ETA: 179s  Progress: 217/300 (72.3%) - ETA: 176s  Progress: 218/300 (72.7%) - ETA: 174s  Progress: 219/300 (73.0%) - ETA: 171s  Progress: 220/300 (73.3%) - ETA: 168s  Progress: 221/300 (73.7%) - ETA: 166s  Progress: 222/300 (74.0%) - ETA: 163s  Progress: 223/300 (74.3%) - ETA: 160s  Progress: 224/300 (74.7%) - ETA: 158s  Progress: 225/300 (75.0%) - ETA: 156s  Progress: 226/300 (75.3%) - ETA: 153s  Progress: 227/300 (75.7%) - ETA: 150s  Progress: 228/300 (76.0%) - ETA: 148s  Progress: 229/300 (76.3%) - ETA: 145s  Progress: 230/300 (76.7%) - ETA: 143s  Progress: 231/300 (77.0%) - ETA: 141s  Progress: 232/300 (77.3%) - ETA: 139s  Progress: 233/300 (77.7%) - ETA: 136s  Progress: 234/300 (78.0%) - ETA: 134s  Progress: 235/300 (78.3%) - ETA: 131s  Progress: 236/300 (78.7%) - ETA: 129s  Progress: 237/300 (79.0%) - ETA: 127s  Progress: 238/300 (79.3%) - ETA: 124s  Progress: 239/300 (79.7%) - ETA: 122s  Progress: 240/300 (80.0%) - ETA: 120s  Progress: 241/300 (80.3%) - ETA: 117s  Progress: 242/300 (80.7%) - ETA: 115s  Progress: 243/300 (81.0%) - ETA: 113s  Progress: 244/300 (81.3%) - ETA: 111s  Progress: 245/300 (81.7%) - ETA: 108s  Progress: 246/300 (82.0%) - ETA: 106s  Progress: 247/300 (82.3%) - ETA: 104s  Progress: 248/300 (82.7%) - ETA: 102s  Progress: 249/300 (83.0%) - ETA: 100s  Progress: 250/300 (83.3%) - ETA: 98s  Progress: 251/300 (83.7%) - ETA: 96s  Progress: 252/300 (84.0%) - ETA: 93s  Progress: 253/300 (84.3%) - ETA: 91s  Progress: 254/300 (84.7%) - ETA: 89s  Progress: 255/300 (85.0%) - ETA: 87s  Progress: 256/300 (85.3%) - ETA: 85s  Progress: 257/300 (85.7%) - ETA: 83s  Progress: 258/300 (86.0%) - ETA: 81s  Progress: 259/300 (86.3%) - ETA: 79s  Progress: 260/300 (86.7%) - ETA: 78s  Progress: 261/300 (87.0%) - ETA: 76s  Progress: 262/300 (87.3%) - ETA: 74s  Progress: 263/300 (87.7%) - ETA: 72s  Progress: 264/300 (88.0%) - ETA: 70s  Progress: 265/300 (88.3%) - ETA: 68s  Progress: 266/300 (88.7%) - ETA: 66s  Progress: 267/300 (89.0%) - ETA: 64s  Progress: 268/300 (89.3%) - ETA: 61s  Progress: 269/300 (89.7%) - ETA: 60s  Progress: 270/300 (90.0%) - ETA: 58s  Progress: 271/300 (90.3%) - ETA: 56s  Progress: 272/300 (90.7%) - ETA: 54s  Progress: 273/300 (91.0%) - ETA: 52s  Progress: 274/300 (91.3%) - ETA: 50s  Progress: 275/300 (91.7%) - ETA: 48s  Progress: 276/300 (92.0%) - ETA: 46s  Progress: 277/300 (92.3%) - ETA: 44s  Progress: 278/300 (92.7%) - ETA: 42s  Progress: 279/300 (93.0%) - ETA: 40s  Progress: 280/300 (93.3%) - ETA: 38s  Progress: 281/300 (93.7%) - ETA: 36s  Progress: 282/300 (94.0%) - ETA: 34s  Progress: 283/300 (94.3%) - ETA: 32s  Progress: 284/300 (94.7%) - ETA: 30s  Progress: 285/300 (95.0%) - ETA: 29s  Progress: 286/300 (95.3%) - ETA: 27s  Progress: 287/300 (95.7%) - ETA: 25s  Progress: 288/300 (96.0%) - ETA: 23s  Progress: 289/300 (96.3%) - ETA: 21s  Progress: 290/300 (96.7%) - ETA: 19s  Progress: 291/300 (97.0%) - ETA: 17s  Progress: 292/300 (97.3%) - ETA: 15s  Progress: 293/300 (97.7%) - ETA: 14s  Progress: 294/300 (98.0%) - ETA: 12s  Progress: 295/300 (98.3%) - ETA: 10s  Progress: 296/300 (98.7%) - ETA: 8s  Progress: 297/300 (99.0%) - ETA: 6s  Progress: 298/300 (99.3%) - ETA: 4s  Progress: 299/300 (99.7%) - ETA: 2s  Progress: 300/300 (100.0%) - ETA: 0s
+Completed in 601.9s
+
+Results for baseline:
+  Accuracy (within 5%): 45.3%
+  Accuracy (exact):     25.3%
+  Total cost:           $0.3574
+  Avg latency:          1986 ms
+  Errors:               0 (0.0%)
+
+============================================================
+Running experiment: l1_ptool
+============================================================
+Setting up l1_ptool...
+  Progress: 1/300 (0.3%) - ETA: 2388s  Progress: 2/300 (0.7%) - ETA: 2543s  Progress: 3/300 (1.0%) - ETA: 2601s  Progress: 4/300 (1.3%) - ETA: 2701s  Progress: 5/300 (1.7%) - ETA: 2865s  Progress: 6/300 (2.0%) - ETA: 2960s  Progress: 7/300 (2.3%) - ETA: 2877s  Progress: 8/300 (2.7%) - ETA: 2968s  Progress: 9/300 (3.0%) - ETA: 2887s  Progress: 10/300 (3.3%) - ETA: 2884s  Progress: 11/300 (3.7%) - ETA: 2861s  Progress: 12/300 (4.0%) - ETA: 2792s  Progress: 13/300 (4.3%) - ETA: 2814s  Progress: 14/300 (4.7%) - ETA: 2747s  Progress: 15/300 (5.0%) - ETA: 2799s  Progress: 16/300 (5.3%) - ETA: 2827s  Progress: 17/300 (5.7%) - ETA: 2799s  Progress: 18/300 (6.0%) - ETA: 2795s  Progress: 19/300 (6.3%) - ETA: 2810s  Progress: 20/300 (6.7%) - ETA: 2814s  Progress: 21/300 (7.0%) - ETA: 2840s  Progress: 22/300 (7.3%) - ETA: 2814s  Progress: 23/300 (7.7%) - ETA: 2805s  Progress: 24/300 (8.0%) - ETA: 2812s  Progress: 25/300 (8.3%) - ETA: 2872s  Progress: 26/300 (8.7%) - ETA: 2862s  Progress: 27/300 (9.0%) - ETA: 2885s  Progress: 28/300 (9.3%) - ETA: 2912s  Progress: 29/300 (9.7%) - ETA: 2952s  Progress: 30/300 (10.0%) - ETA: 2935s  Progress: 31/300 (10.3%) - ETA: 2920s  Progress: 32/300 (10.7%) - ETA: 2908s  Progress: 33/300 (11.0%) - ETA: 2902s  Progress: 34/300 (11.3%) - ETA: 2958s  Progress: 35/300 (11.7%) - ETA: 2964s  Progress: 36/300 (12.0%) - ETA: 2948s  Progress: 37/300 (12.3%) - ETA: 2948s  Progress: 38/300 (12.7%) - ETA: 2947s  Progress: 39/300 (13.0%) - ETA: 2932s  Progress: 40/300 (13.3%) - ETA: 2918s  Progress: 41/300 (13.7%) - ETA: 2866s  Progress: 42/300 (14.0%) - ETA: 2826s  Progress: 43/300 (14.3%) - ETA: 2800s  Progress: 44/300 (14.7%) - ETA: 2764s  Progress: 45/300 (15.0%) - ETA: 2743s  Progress: 46/300 (15.3%) - ETA: 2727s  Progress: 47/300 (15.7%) - ETA: 2689s  Progress: 48/300 (16.0%) - ETA: 2687s  Progress: 49/300 (16.3%) - ETA: 2649s  Progress: 50/300 (16.7%) - ETA: 2644s  Progress: 51/300 (17.0%) - ETA: 2611s  Progress: 52/300 (17.3%) - ETA: 2582s  Progress: 53/300 (17.7%) - ETA: 2559s  Progress: 54/300 (18.0%) - ETA: 2558s  Progress: 55/300 (18.3%) - ETA: 2539s  Progress: 56/300 (18.7%) - ETA: 2541s  Progress: 57/300 (19.0%) - ETA: 2532s  Progress: 58/300 (19.3%) - ETA: 2506s  Progress: 59/300 (19.7%) - ETA: 2478s  Progress: 60/300 (20.0%) - ETA: 2462s  Progress: 61/300 (20.3%) - ETA: 2425s  Progress: 62/300 (20.7%) - ETA: 2390s  Progress: 63/300 (21.0%) - ETA: 2356s  Progress: 64/300 (21.3%) - ETA: 2324s  Progress: 65/300 (21.7%) - ETA: 2296s  Progress: 66/300 (22.0%) - ETA: 2267s  Progress: 67/300 (22.3%) - ETA: 2239s  Progress: 68/300 (22.7%) - ETA: 2216s  Progress: 69/300 (23.0%) - ETA: 2191s  Progress: 70/300 (23.3%) - ETA: 2166s  Progress: 71/300 (23.7%) - ETA: 2138s  Progress: 72/300 (24.0%) - ETA: 2110s  Progress: 73/300 (24.3%) - ETA: 2086s  Progress: 74/300 (24.7%) - ETA: 2062s  Progress: 75/300 (25.0%) - ETA: 2043s  Progress: 76/300 (25.3%) - ETA: 2021s  Progress: 77/300 (25.7%) - ETA: 2001s  Progress: 78/300 (26.0%) - ETA: 1978s  Progress: 79/300 (26.3%) - ETA: 1960s  Progress: 80/300 (26.7%) - ETA: 1934s  Progress: 81/300 (27.0%) - ETA: 1911s  Progress: 82/300 (27.3%) - ETA: 1893s  Progress: 83/300 (27.7%) - ETA: 1877s  Progress: 84/300 (28.0%) - ETA: 1857s  Progress: 85/300 (28.3%) - ETA: 1837s  Progress: 86/300 (28.7%) - ETA: 1819s  Progress: 87/300 (29.0%) - ETA: 1801s  Progress: 88/300 (29.3%) - ETA: 1781s  Progress: 89/300 (29.7%) - ETA: 1764s  Progress: 90/300 (30.0%) - ETA: 1749s  Progress: 91/300 (30.3%) - ETA: 1733s  Progress: 92/300 (30.7%) - ETA: 1714s  Progress: 93/300 (31.0%) - ETA: 1697s  Progress: 94/300 (31.3%) - ETA: 1680s  Progress: 95/300 (31.7%) - ETA: 1664s  Progress: 96/300 (32.0%) - ETA: 1649s  Progress: 97/300 (32.3%) - ETA: 1636s  Progress: 98/300 (32.7%) - ETA: 1621s  Progress: 99/300 (33.0%) - ETA: 1604s  Progress: 100/300 (33.3%) - ETA: 1590s  Progress: 101/300 (33.7%) - ETA: 1574s  Progress: 102/300 (34.0%) - ETA: 1560s  Progress: 103/300 (34.3%) - ETA: 1544s  Progress: 104/300 (34.7%) - ETA: 1527s  Progress: 105/300 (35.0%) - ETA: 1516s  Progress: 106/300 (35.3%) - ETA: 1502s  Progress: 107/300 (35.7%) - ETA: 1487s  Progress: 108/300 (36.0%) - ETA: 1471s  Progress: 109/300 (36.3%) - ETA: 1455s  Progress: 110/300 (36.7%) - ETA: 1440s  Progress: 111/300 (37.0%) - ETA: 1427s  Progress: 112/300 (37.3%) - ETA: 1413s  Progress: 113/300 (37.7%) - ETA: 1399s  Progress: 114/300 (38.0%) - ETA: 1391s  Progress: 115/300 (38.3%) - ETA: 1378s  Progress: 116/300 (38.7%) - ETA: 1365s  Progress: 117/300 (39.0%) - ETA: 1357s  Progress: 118/300 (39.3%) - ETA: 1346s  Progress: 119/300 (39.7%) - ETA: 1331s  Progress: 120/300 (40.0%) - ETA: 1319s  Progress: 121/300 (40.3%) - ETA: 1316s  Progress: 122/300 (40.7%) - ETA: 1308s  Progress: 123/300 (41.0%) - ETA: 1305s  Progress: 124/300 (41.3%) - ETA: 1298s  Progress: 125/300 (41.7%) - ETA: 1297s  Progress: 126/300 (42.0%) - ETA: 1290s  Progress: 127/300 (42.3%) - ETA: 1286s  Progress: 128/300 (42.7%) - ETA: 1284s  Progress: 129/300 (43.0%) - ETA: 1275s  Progress: 130/300 (43.3%) - ETA: 1269s  Progress: 131/300 (43.7%) - ETA: 1262s  Progress: 132/300 (44.0%) - ETA: 1259s  Progress: 133/300 (44.3%) - ETA: 1252s  Progress: 134/300 (44.7%) - ETA: 1246s  Progress: 135/300 (45.0%) - ETA: 1241s  Progress: 136/300 (45.3%) - ETA: 1235s  Progress: 137/300 (45.7%) - ETA: 1233s  Progress: 138/300 (46.0%) - ETA: 1226s  Progress: 139/300 (46.3%) - ETA: 1220s  Progress: 140/300 (46.7%) - ETA: 1215s  Progress: 141/300 (47.0%) - ETA: 1212s  Progress: 142/300 (47.3%) - ETA: 1208s  Progress: 143/300 (47.7%) - ETA: 1202s  Progress: 144/300 (48.0%) - ETA: 1198s  Progress: 145/300 (48.3%) - ETA: 1194s  Progress: 146/300 (48.7%) - ETA: 1193s  Progress: 147/300 (49.0%) - ETA: 1187s  Progress: 148/300 (49.3%) - ETA: 1180s  Progress: 149/300 (49.7%) - ETA: 1177s  Progress: 150/300 (50.0%) - ETA: 1171s  Progress: 151/300 (50.3%) - ETA: 1167s  Progress: 152/300 (50.7%) - ETA: 1161s  Progress: 153/300 (51.0%) - ETA: 1152s  Progress: 154/300 (51.3%) - ETA: 1145s  Progress: 155/300 (51.7%) - ETA: 1138s  Progress: 156/300 (52.0%) - ETA: 1132s  Progress: 157/300 (52.3%) - ETA: 1126s  Progress: 158/300 (52.7%) - ETA: 1117s  Progress: 159/300 (53.0%) - ETA: 1113s  Progress: 160/300 (53.3%) - ETA: 1106s  Progress: 161/300 (53.7%) - ETA: 1095s  Progress: 162/300 (54.0%) - ETA: 1093s  Progress: 163/300 (54.3%) - ETA: 1084s  Progress: 164/300 (54.7%) - ETA: 1072s  Progress: 165/300 (55.0%) - ETA: 1066s  Progress: 166/300 (55.3%) - ETA: 1056s  Progress: 167/300 (55.7%) - ETA: 1045s  Progress: 168/300 (56.0%) - ETA: 1034s  Progress: 169/300 (56.3%) - ETA: 1023s  Progress: 170/300 (56.7%) - ETA: 1014s  Progress: 171/300 (57.0%) - ETA: 1003s  Progress: 172/300 (57.3%) - ETA: 992s  Progress: 173/300 (57.7%) - ETA: 981s  Progress: 174/300 (58.0%) - ETA: 970s  Progress: 175/300 (58.3%) - ETA: 960s  Progress: 176/300 (58.7%) - ETA: 951s  Progress: 177/300 (59.0%) - ETA: 941s  Progress: 178/300 (59.3%) - ETA: 932s  Progress: 179/300 (59.7%) - ETA: 922s  Progress: 180/300 (60.0%) - ETA: 912s  Progress: 181/300 (60.3%) - ETA: 904s  Progress: 182/300 (60.7%) - ETA: 895s  Progress: 183/300 (61.0%) - ETA: 885s  Progress: 184/300 (61.3%) - ETA: 875s  Progress: 185/300 (61.7%) - ETA: 866s  Progress: 186/300 (62.0%) - ETA: 858s  Progress: 187/300 (62.3%) - ETA: 848s  Progress: 188/300 (62.7%) - ETA: 839s  Progress: 189/300 (63.0%) - ETA: 830s  Progress: 190/300 (63.3%) - ETA: 821s  Progress: 191/300 (63.7%) - ETA: 813s  Progress: 192/300 (64.0%) - ETA: 805s  Progress: 193/300 (64.3%) - ETA: 796s  Progress: 194/300 (64.7%) - ETA: 795s  Progress: 195/300 (65.0%) - ETA: 787s  Progress: 196/300 (65.3%) - ETA: 778s  Progress: 197/300 (65.7%) - ETA: 768s  Progress: 198/300 (66.0%) - ETA: 759s  Progress: 199/300 (66.3%) - ETA: 750s  Progress: 200/300 (66.7%) - ETA: 741s  Progress: 201/300 (67.0%) - ETA: 737s  Progress: 202/300 (67.3%) - ETA: 730s  Progress: 203/300 (67.7%) - ETA: 724s  Progress: 204/300 (68.0%) - ETA: 718s  Progress: 205/300 (68.3%) - ETA: 710s  Progress: 206/300 (68.7%) - ETA: 703s  Progress: 207/300 (69.0%) - ETA: 696s  Progress: 208/300 (69.3%) - ETA: 689s  Progress: 209/300 (69.7%) - ETA: 682s  Progress: 210/300 (70.0%) - ETA: 674s  Progress: 211/300 (70.3%) - ETA: 666s  Progress: 212/300 (70.7%) - ETA: 658s  Progress: 213/300 (71.0%) - ETA: 651s  Progress: 214/300 (71.3%) - ETA: 644s  Progress: 215/300 (71.7%) - ETA: 636s  Progress: 216/300 (72.0%) - ETA: 628s  Progress: 217/300 (72.3%) - ETA: 620s  Progress: 218/300 (72.7%) - ETA: 614s  Progress: 219/300 (73.0%) - ETA: 605s  Progress: 220/300 (73.3%) - ETA: 598s  Progress: 221/300 (73.7%) - ETA: 591s  Progress: 222/300 (74.0%) - ETA: 584s  Progress: 223/300 (74.3%) - ETA: 577s  Progress: 224/300 (74.7%) - ETA: 569s  Progress: 225/300 (75.0%) - ETA: 563s  Progress: 226/300 (75.3%) - ETA: 556s  Progress: 227/300 (75.7%) - ETA: 549s  Progress: 228/300 (76.0%) - ETA: 541s  Progress: 229/300 (76.3%) - ETA: 534s  Progress: 230/300 (76.7%) - ETA: 527s  Progress: 231/300 (77.0%) - ETA: 521s  Progress: 232/300 (77.3%) - ETA: 513s  Progress: 233/300 (77.7%) - ETA: 506s  Progress: 234/300 (78.0%) - ETA: 499s  Progress: 235/300 (78.3%) - ETA: 492s  Progress: 236/300 (78.7%) - ETA: 485s  Progress: 237/300 (79.0%) - ETA: 478s  Progress: 238/300 (79.3%) - ETA: 471s  Progress: 239/300 (79.7%) - ETA: 463s  Progress: 240/300 (80.0%) - ETA: 456s  Progress: 241/300 (80.3%) - ETA: 448s  Progress: 242/300 (80.7%) - ETA: 441s  Progress: 243/300 (81.0%) - ETA: 432s  Progress: 244/300 (81.3%) - ETA: 424s  Progress: 245/300 (81.7%) - ETA: 416s  Progress: 246/300 (82.0%) - ETA: 409s  Progress: 247/300 (82.3%) - ETA: 401s  Progress: 248/300 (82.7%) - ETA: 393s  Progress: 249/300 (83.0%) - ETA: 386s  Progress: 250/300 (83.3%) - ETA: 378s  Progress: 251/300 (83.7%) - ETA: 370s  Progress: 252/300 (84.0%) - ETA: 362s  Progress: 253/300 (84.3%) - ETA: 355s  Progress: 254/300 (84.7%) - ETA: 347s  Progress: 255/300 (85.0%) - ETA: 339s  Progress: 256/300 (85.3%) - ETA: 331s  Progress: 257/300 (85.7%) - ETA: 323s  Progress: 258/300 (86.0%) - ETA: 315s  Progress: 259/300 (86.3%) - ETA: 308s  Progress: 260/300 (86.7%) - ETA: 300s  Progress: 261/300 (87.0%) - ETA: 292s  Progress: 262/300 (87.3%) - ETA: 285s  Progress: 263/300 (87.7%) - ETA: 277s  Progress: 264/300 (88.0%) - ETA: 270s  Progress: 265/300 (88.3%) - ETA: 261s  Progress: 266/300 (88.7%) - ETA: 254s  Progress: 267/300 (89.0%) - ETA: 246s  Progress: 268/300 (89.3%) - ETA: 238s  Progress: 269/300 (89.7%) - ETA: 231s  Progress: 270/300 (90.0%) - ETA: 223s  Progress: 271/300 (90.3%) - ETA: 216s  Progress: 272/300 (90.7%) - ETA: 208s  Progress: 273/300 (91.0%) - ETA: 201s  Progress: 274/300 (91.3%) - ETA: 193s  Progress: 275/300 (91.7%) - ETA: 186s  Progress: 276/300 (92.0%) - ETA: 178s  Progress: 277/300 (92.3%) - ETA: 171s  Progress: 278/300 (92.7%) - ETA: 163s  Progress: 279/300 (93.0%) - ETA: 156s  Progress: 280/300 (93.3%) - ETA: 148s  Progress: 281/300 (93.7%) - ETA: 141s  Progress: 282/300 (94.0%) - ETA: 133s  Progress: 283/300 (94.3%) - ETA: 126s  Progress: 284/300 (94.7%) - ETA: 118s  Progress: 285/300 (95.0%) - ETA: 111s  Progress: 286/300 (95.3%) - ETA: 103s  Progress: 287/300 (95.7%) - ETA: 96s  Progress: 288/300 (96.0%) - ETA: 88s  Progress: 289/300 (96.3%) - ETA: 81s  Progress: 290/300 (96.7%) - ETA: 73s  Progress: 291/300 (97.0%) - ETA: 66s  Progress: 292/300 (97.3%) - ETA: 59s  Progress: 293/300 (97.7%) - ETA: 51s  Progress: 294/300 (98.0%) - ETA: 44s  Progress: 295/300 (98.3%) - ETA: 36s  Progress: 296/300 (98.7%) - ETA: 29s  Progress: 297/300 (99.0%) - ETA: 22s  Progress: 298/300 (99.3%) - ETA: 15s  Progress: 299/300 (99.7%) - ETA: 7s  Progress: 300/300 (100.0%) - ETA: 0s
+Completed in 2181.5s
+
+Results for l1_ptool:
+  Accuracy (within 5%): 65.7%
+  Accuracy (exact):     52.7%
+  Total cost:           $0.3673
+  Avg latency:          7256 ms
+  Errors:               19 (6.3%)
+
+============================================================
+Running experiment: l2_distilled
+============================================================
+Setting up l2_distilled...
+  Progress: 1/300 (0.3%) - ETA: 1s  Progress: 2/300 (0.7%) - ETA: 1s  Progress: 3/300 (1.0%) - ETA: 1s  Progress: 4/300 (1.3%) - ETA: 1s  Progress: 5/300 (1.7%) - ETA: 1s  Progress: 6/300 (2.0%) - ETA: 1s  Progress: 7/300 (2.3%) - ETA: 1s  Progress: 8/300 (2.7%) - ETA: 1s  Progress: 9/300 (3.0%) - ETA: 264s  Progress: 10/300 (3.3%) - ETA: 423s  Progress: 11/300 (3.7%) - ETA: 383s  Progress: 12/300 (4.0%) - ETA: 350s  Progress: 13/300 (4.3%) - ETA: 322s  Progress: 14/300 (4.7%) - ETA: 298s  Progress: 15/300 (5.0%) - ETA: 277s  Progress: 16/300 (5.3%) - ETA: 259s  Progress: 17/300 (5.7%) - ETA: 243s  Progress: 18/300 (6.0%) - ETA: 229s  Progress: 19/300 (6.3%) - ETA: 216s  Progress: 20/300 (6.7%) - ETA: 204s  Progress: 21/300 (7.0%) - ETA: 194s  Progress: 22/300 (7.3%) - ETA: 185s  Progress: 23/300 (7.7%) - ETA: 176s  Progress: 24/300 (8.0%) - ETA: 264s  Progress: 25/300 (8.3%) - ETA: 380s  Progress: 26/300 (8.7%) - ETA: 364s  Progress: 27/300 (9.0%) - ETA: 350s  Progress: 28/300 (9.3%) - ETA: 336s  Progress: 29/300 (9.7%) - ETA: 323s  Progress: 30/300 (10.0%) - ETA: 311s  Progress: 31/300 (10.3%) - ETA: 300s  Progress: 32/300 (10.7%) - ETA: 290s  Progress: 33/300 (11.0%) - ETA: 280s  Progress: 34/300 (11.3%) - ETA: 271s  Progress: 35/300 (11.7%) - ETA: 262s  Progress: 36/300 (12.0%) - ETA: 254s  Progress: 37/300 (12.3%) - ETA: 246s  Progress: 38/300 (12.7%) - ETA: 239s  Progress: 39/300 (13.0%) - ETA: 288s  Progress: 40/300 (13.3%) - ETA: 280s  Progress: 41/300 (13.7%) - ETA: 303s  Progress: 42/300 (14.0%) - ETA: 332s  Progress: 43/300 (14.3%) - ETA: 366s  Progress: 44/300 (14.7%) - ETA: 384s  Progress: 45/300 (15.0%) - ETA: 410s  Progress: 46/300 (15.3%) - ETA: 437s  Progress: 47/300 (15.7%) - ETA: 457s  Progress: 48/300 (16.0%) - ETA: 490s  Progress: 49/300 (16.3%) - ETA: 497s  Progress: 50/300 (16.7%) - ETA: 507s  Progress: 51/300 (17.0%) - ETA: 512s  Progress: 52/300 (17.3%) - ETA: 519s  Progress: 53/300 (17.7%) - ETA: 529s  Progress: 54/300 (18.0%) - ETA: 578s  Progress: 55/300 (18.3%) - ETA: 592s  Progress: 56/300 (18.7%) - ETA: 605s  Progress: 57/300 (19.0%) - ETA: 616s  Progress: 58/300 (19.3%) - ETA: 618s  Progress: 59/300 (19.7%) - ETA: 623s  Progress: 60/300 (20.0%) - ETA: 640s  Progress: 61/300 (20.3%) - ETA: 627s  Progress: 62/300 (20.7%) - ETA: 614s  Progress: 63/300 (21.0%) - ETA: 602s  Progress: 64/300 (21.3%) - ETA: 590s  Progress: 65/300 (21.7%) - ETA: 579s  Progress: 66/300 (22.0%) - ETA: 567s  Progress: 67/300 (22.3%) - ETA: 557s  Progress: 68/300 (22.7%) - ETA: 546s  Progress: 69/300 (23.0%) - ETA: 536s  Progress: 70/300 (23.3%) - ETA: 526s  Progress: 71/300 (23.7%) - ETA: 516s  Progress: 72/300 (24.0%) - ETA: 507s  Progress: 73/300 (24.3%) - ETA: 498s  Progress: 74/300 (24.7%) - ETA: 489s  Progress: 75/300 (25.0%) - ETA: 480s  Progress: 76/300 (25.3%) - ETA: 472s  Progress: 77/300 (25.7%) - ETA: 464s  Progress: 78/300 (26.0%) - ETA: 456s  Progress: 79/300 (26.3%) - ETA: 448s  Progress: 80/300 (26.7%) - ETA: 440s  Progress: 81/300 (27.0%) - ETA: 433s  Progress: 82/300 (27.3%) - ETA: 426s  Progress: 83/300 (27.7%) - ETA: 418s  Progress: 84/300 (28.0%) - ETA: 412s  Progress: 85/300 (28.3%) - ETA: 405s  Progress: 86/300 (28.7%) - ETA: 398s  Progress: 87/300 (29.0%) - ETA: 392s  Progress: 88/300 (29.3%) - ETA: 386s  Progress: 89/300 (29.7%) - ETA: 380s  Progress: 90/300 (30.0%) - ETA: 374s  Progress: 91/300 (30.3%) - ETA: 368s  Progress: 92/300 (30.7%) - ETA: 362s  Progress: 93/300 (31.0%) - ETA: 356s  Progress: 94/300 (31.3%) - ETA: 351s  Progress: 95/300 (31.7%) - ETA: 345s  Progress: 96/300 (32.0%) - ETA: 340s  Progress: 97/300 (32.3%) - ETA: 335s  Progress: 98/300 (32.7%) - ETA: 330s  Progress: 99/300 (33.0%) - ETA: 325s  Progress: 100/300 (33.3%) - ETA: 320s  Progress: 101/300 (33.7%) - ETA: 315s  Progress: 102/300 (34.0%) - ETA: 315s  Progress: 103/300 (34.3%) - ETA: 310s  Progress: 104/300 (34.7%) - ETA: 305s  Progress: 105/300 (35.0%) - ETA: 306s  Progress: 106/300 (35.3%) - ETA: 307s  Progress: 107/300 (35.7%) - ETA: 302s  Progress: 108/300 (36.0%) - ETA: 298s  Progress: 109/300 (36.3%) - ETA: 294s  Progress: 110/300 (36.7%) - ETA: 289s  Progress: 111/300 (37.0%) - ETA: 285s  Progress: 112/300 (37.3%) - ETA: 281s  Progress: 113/300 (37.7%) - ETA: 277s  Progress: 114/300 (38.0%) - ETA: 273s  Progress: 115/300 (38.3%) - ETA: 270s  Progress: 116/300 (38.7%) - ETA: 271s  Progress: 117/300 (39.0%) - ETA: 268s  Progress: 118/300 (39.3%) - ETA: 264s  Progress: 119/300 (39.7%) - ETA: 260s  Progress: 120/300 (40.0%) - ETA: 257s  Progress: 121/300 (40.3%) - ETA: 253s  Progress: 122/300 (40.7%) - ETA: 250s  Progress: 123/300 (41.0%) - ETA: 246s  Progress: 124/300 (41.3%) - ETA: 243s  Progress: 125/300 (41.7%) - ETA: 240s  Progress: 126/300 (42.0%) - ETA: 236s  Progress: 127/300 (42.3%) - ETA: 233s  Progress: 128/300 (42.7%) - ETA: 230s  Progress: 129/300 (43.0%) - ETA: 227s  Progress: 130/300 (43.3%) - ETA: 224s  Progress: 131/300 (43.7%) - ETA: 221s  Progress: 132/300 (44.0%) - ETA: 218s  Progress: 133/300 (44.3%) - ETA: 215s  Progress: 134/300 (44.7%) - ETA: 212s  Progress: 135/300 (45.0%) - ETA: 209s  Progress: 136/300 (45.3%) - ETA: 206s  Progress: 137/300 (45.7%) - ETA: 204s  Progress: 138/300 (46.0%) - ETA: 201s  Progress: 139/300 (46.3%) - ETA: 198s  Progress: 140/300 (46.7%) - ETA: 196s  Progress: 141/300 (47.0%) - ETA: 193s  Progress: 142/300 (47.3%) - ETA: 190s  Progress: 143/300 (47.7%) - ETA: 188s  Progress: 144/300 (48.0%) - ETA: 185s  Progress: 145/300 (48.3%) - ETA: 183s  Progress: 146/300 (48.7%) - ETA: 181s  Progress: 147/300 (49.0%) - ETA: 178s  Progress: 148/300 (49.3%) - ETA: 176s  Progress: 149/300 (49.7%) - ETA: 179s  Progress: 150/300 (50.0%) - ETA: 177s  Progress: 151/300 (50.3%) - ETA: 174s  Progress: 152/300 (50.7%) - ETA: 172s  Progress: 153/300 (51.0%) - ETA: 170s  Progress: 154/300 (51.3%) - ETA: 174s  Progress: 155/300 (51.7%) - ETA: 179s  Progress: 156/300 (52.0%) - ETA: 177s  Progress: 157/300 (52.3%) - ETA: 174s  Progress: 158/300 (52.7%) - ETA: 172s  Progress: 159/300 (53.0%) - ETA: 170s  Progress: 160/300 (53.3%) - ETA: 172s  Progress: 161/300 (53.7%) - ETA: 170s  Progress: 162/300 (54.0%) - ETA: 168s  Progress: 163/300 (54.3%) - ETA: 166s  Progress: 164/300 (54.7%) - ETA: 163s  Progress: 165/300 (55.0%) - ETA: 161s  Progress: 166/300 (55.3%) - ETA: 159s  Progress: 167/300 (55.7%) - ETA: 157s  Progress: 168/300 (56.0%) - ETA: 155s  Progress: 169/300 (56.3%) - ETA: 153s  Progress: 170/300 (56.7%) - ETA: 151s  Progress: 171/300 (57.0%) - ETA: 149s  Progress: 172/300 (57.3%) - ETA: 147s  Progress: 173/300 (57.7%) - ETA: 145s  Progress: 174/300 (58.0%) - ETA: 143s  Progress: 175/300 (58.3%) - ETA: 141s  Progress: 176/300 (58.7%) - ETA: 139s  Progress: 177/300 (59.0%) - ETA: 137s  Progress: 178/300 (59.3%) - ETA: 135s  Progress: 179/300 (59.7%) - ETA: 136s  Progress: 180/300 (60.0%) - ETA: 134s  Progress: 181/300 (60.3%) - ETA: 134s  Progress: 182/300 (60.7%) - ETA: 135s  Progress: 183/300 (61.0%) - ETA: 135s  Progress: 184/300 (61.3%) - ETA: 135s  Progress: 185/300 (61.7%) - ETA: 136s  Progress: 186/300 (62.0%) - ETA: 137s  Progress: 187/300 (62.3%) - ETA: 138s  Progress: 188/300 (62.7%) - ETA: 138s  Progress: 189/300 (63.0%) - ETA: 138s  Progress: 190/300 (63.3%) - ETA: 138s  Progress: 191/300 (63.7%) - ETA: 138s  Progress: 192/300 (64.0%) - ETA: 138s  Progress: 193/300 (64.3%) - ETA: 139s  Progress: 194/300 (64.7%) - ETA: 140s  Progress: 195/300 (65.0%) - ETA: 140s  Progress: 196/300 (65.3%) - ETA: 140s  Progress: 197/300 (65.7%) - ETA: 140s  Progress: 198/300 (66.0%) - ETA: 140s  Progress: 199/300 (66.3%) - ETA: 140s  Progress: 200/300 (66.7%) - ETA: 140s  Progress: 201/300 (67.0%) - ETA: 143s  Progress: 202/300 (67.3%) - ETA: 145s  Progress: 203/300 (67.7%) - ETA: 143s  Progress: 204/300 (68.0%) - ETA: 145s  Progress: 205/300 (68.3%) - ETA: 144s  Progress: 206/300 (68.7%) - ETA: 144s  Progress: 207/300 (69.0%) - ETA: 142s  Progress: 208/300 (69.3%) - ETA: 145s  Progress: 209/300 (69.7%) - ETA: 145s  Progress: 210/300 (70.0%) - ETA: 142s  Progress: 211/300 (70.3%) - ETA: 143s  Progress: 212/300 (70.7%) - ETA: 144s  Progress: 213/300 (71.0%) - ETA: 145s  Progress: 214/300 (71.3%) - ETA: 147s  Progress: 215/300 (71.7%) - ETA: 144s  Progress: 216/300 (72.0%) - ETA: 144s  Progress: 217/300 (72.3%) - ETA: 144s  Progress: 218/300 (72.7%) - ETA: 144s  Progress: 219/300 (73.0%) - ETA: 141s  Progress: 220/300 (73.3%) - ETA: 139s  Progress: 221/300 (73.7%) - ETA: 141s  Progress: 222/300 (74.0%) - ETA: 141s  Progress: 223/300 (74.3%) - ETA: 142s  Progress: 224/300 (74.7%) - ETA: 143s  Progress: 225/300 (75.0%) - ETA: 144s  Progress: 226/300 (75.3%) - ETA: 143s  Progress: 227/300 (75.7%) - ETA: 143s  Progress: 228/300 (76.0%) - ETA: 142s  Progress: 229/300 (76.3%) - ETA: 143s  Progress: 230/300 (76.7%) - ETA: 142s  Progress: 231/300 (77.0%) - ETA: 141s  Progress: 232/300 (77.3%) - ETA: 141s  Progress: 233/300 (77.7%) - ETA: 141s  Progress: 234/300 (78.0%) - ETA: 140s  Progress: 235/300 (78.3%) - ETA: 139s  Progress: 236/300 (78.7%) - ETA: 138s  Progress: 237/300 (79.0%) - ETA: 137s  Progress: 238/300 (79.3%) - ETA: 136s  Progress: 239/300 (79.7%) - ETA: 136s  Progress: 240/300 (80.0%) - ETA: 135s  Progress: 241/300 (80.3%) - ETA: 132s  Progress: 242/300 (80.7%) - ETA: 129s  Progress: 243/300 (81.0%) - ETA: 126s  Progress: 244/300 (81.3%) - ETA: 124s  Progress: 245/300 (81.7%) - ETA: 121s  Progress: 246/300 (82.0%) - ETA: 118s  Progress: 247/300 (82.3%) - ETA: 116s  Progress: 248/300 (82.7%) - ETA: 113s  Progress: 249/300 (83.0%) - ETA: 110s  Progress: 250/300 (83.3%) - ETA: 108s  Progress: 251/300 (83.7%) - ETA: 105s  Progress: 252/300 (84.0%) - ETA: 103s  Progress: 253/300 (84.3%) - ETA: 100s  Progress: 254/300 (84.7%) - ETA: 98s  Progress: 255/300 (85.0%) - ETA: 95s  Progress: 256/300 (85.3%) - ETA: 93s  Progress: 257/300 (85.7%) - ETA: 90s  Progress: 258/300 (86.0%) - ETA: 88s  Progress: 259/300 (86.3%) - ETA: 85s  Progress: 260/300 (86.7%) - ETA: 83s  Progress: 261/300 (87.0%) - ETA: 80s  Progress: 262/300 (87.3%) - ETA: 78s  Progress: 263/300 (87.7%) - ETA: 76s  Progress: 264/300 (88.0%) - ETA: 73s  Progress: 265/300 (88.3%) - ETA: 71s  Progress: 266/300 (88.7%) - ETA: 69s  Progress: 267/300 (89.0%) - ETA: 67s  Progress: 268/300 (89.3%) - ETA: 64s  Progress: 269/300 (89.7%) - ETA: 62s  Progress: 270/300 (90.0%) - ETA: 60s  Progress: 271/300 (90.3%) - ETA: 58s  Progress: 272/300 (90.7%) - ETA: 55s  Progress: 273/300 (91.0%) - ETA: 53s  Progress: 274/300 (91.3%) - ETA: 51s  Progress: 275/300 (91.7%) - ETA: 49s  Progress: 276/300 (92.0%) - ETA: 47s  Progress: 277/300 (92.3%) - ETA: 45s  Progress: 278/300 (92.7%) - ETA: 43s  Progress: 279/300 (93.0%) - ETA: 41s  Progress: 280/300 (93.3%) - ETA: 38s  Progress: 281/300 (93.7%) - ETA: 37s  Progress: 282/300 (94.0%) - ETA: 35s  Progress: 283/300 (94.3%) - ETA: 33s  Progress: 284/300 (94.7%) - ETA: 32s  Progress: 285/300 (95.0%) - ETA: 30s  Progress: 286/300 (95.3%) - ETA: 28s  Progress: 287/300 (95.7%) - ETA: 26s  Progress: 288/300 (96.0%) - ETA: 24s  Progress: 289/300 (96.3%) - ETA: 22s  Progress: 290/300 (96.7%) - ETA: 20s  Progress: 291/300 (97.0%) - ETA: 18s  Progress: 292/300 (97.3%) - ETA: 16s  Progress: 293/300 (97.7%) - ETA: 14s  Progress: 294/300 (98.0%) - ETA: 12s  Progress: 295/300 (98.3%) - ETA: 10s  Progress: 296/300 (98.7%) - ETA: 8s  Progress: 297/300 (99.0%) - ETA: 6s  Progress: 298/300 (99.3%) - ETA: 4s  Progress: 299/300 (99.7%) - ETA: 2s  Progress: 300/300 (100.0%) - ETA: 0s
+Completed in 630.5s
+
+Results for l2_distilled:
+  Accuracy (within 5%): 67.0%
+  Accuracy (exact):     57.3%
+  Total cost:           $0.1246
+  Avg latency:          2052 ms
+  Errors:               4 (1.3%)
+
+============================================================
+Running experiment: l3_react
+============================================================
+Setting up l3_react...
+  Progress: 1/300 (0.3%) - ETA: 5035s  Progress: 2/300 (0.7%) - ETA: 8694s  Progress: 3/300 (1.0%) - ETA: 7813s  Progress: 4/300 (1.3%) - ETA: 7014s  Progress: 5/300 (1.7%) - ETA: 7473s  Progress: 6/300 (2.0%) - ETA: 7789s  Progress: 7/300 (2.3%) - ETA: 7868s  Progress: 8/300 (2.7%) - ETA: 7718s  Progress: 9/300 (3.0%) - ETA: 7390s  Progress: 10/300 (3.3%) - ETA: 7688s  Progress: 11/300 (3.7%) - ETA: 7571s  Progress: 12/300 (4.0%) - ETA: 7551s  Progress: 13/300 (4.3%) - ETA: 7878s  Progress: 14/300 (4.7%) - ETA: 7852s  Progress: 15/300 (5.0%) - ETA: 7909s  Progress: 16/300 (5.3%) - ETA: 8085s  Progress: 17/300 (5.7%) - ETA: 7867s  Progress: 18/300 (6.0%) - ETA: 7920s  Progress: 19/300 (6.3%) - ETA: 7892s  Progress: 20/300 (6.7%) - ETA: 7728s  Progress: 21/300 (7.0%) - ETA: 7575s  Progress: 22/300 (7.3%) - ETA: 7453s  Progress: 23/300 (7.7%) - ETA: 7161s  Progress: 24/300 (8.0%) - ETA: 7398s  Progress: 25/300 (8.3%) - ETA: 7362s  Progress: 26/300 (8.7%) - ETA: 7119s  Progress: 27/300 (9.0%) - ETA: 6958s  Progress: 28/300 (9.3%) - ETA: 6734s  Progress: 29/300 (9.7%) - ETA: 6524s  Progress: 30/300 (10.0%) - ETA: 6319s  Progress: 31/300 (10.3%) - ETA: 6150s  Progress: 32/300 (10.7%) - ETA: 5968s  Progress: 33/300 (11.0%) - ETA: 5865s  Progress: 34/300 (11.3%) - ETA: 5737s  Progress: 35/300 (11.7%) - ETA: 5587s  Progress: 36/300 (12.0%) - ETA: 5609s  Progress: 37/300 (12.3%) - ETA: 5483s  Progress: 38/300 (12.7%) - ETA: 5441s  Progress: 39/300 (13.0%) - ETA: 5316s  Progress: 40/300 (13.3%) - ETA: 5192s  Progress: 41/300 (13.7%) - ETA: 5149s  Progress: 42/300 (14.0%) - ETA: 5088s  Progress: 43/300 (14.3%) - ETA: 5058s  Progress: 44/300 (14.7%) - ETA: 5048s  Progress: 45/300 (15.0%) - ETA: 4985s  Progress: 46/300 (15.3%) - ETA: 4922s  Progress: 47/300 (15.7%) - ETA: 4884s  Progress: 48/300 (16.0%) - ETA: 4843s  Progress: 49/300 (16.3%) - ETA: 4762s  Progress: 50/300 (16.7%) - ETA: 4688s  Progress: 51/300 (17.0%) - ETA: 4667s  Progress: 52/300 (17.3%) - ETA: 4680s  Progress: 53/300 (17.7%) - ETA: 4637s  Progress: 54/300 (18.0%) - ETA: 4596s  Progress: 55/300 (18.3%) - ETA: 4689s  Progress: 56/300 (18.7%) - ETA: 4666s  Progress: 57/300 (19.0%) - ETA: 4666s  Progress: 58/300 (19.3%) - ETA: 4684s  Progress: 59/300 (19.7%) - ETA: 4635s  Progress: 60/300 (20.0%) - ETA: 4604s  Progress: 61/300 (20.3%) - ETA: 4528s  Progress: 62/300 (20.7%) - ETA: 4453s  Progress: 63/300 (21.0%) - ETA: 4383s  Progress: 64/300 (21.3%) - ETA: 4315s  Progress: 65/300 (21.7%) - ETA: 4255s  Progress: 66/300 (22.0%) - ETA: 4217s  Progress: 67/300 (22.3%) - ETA: 4152s  Progress: 68/300 (22.7%) - ETA: 4085s  Progress: 69/300 (23.0%) - ETA: 4025s  Progress: 70/300 (23.3%) - ETA: 3962s  Progress: 71/300 (23.7%) - ETA: 3920s  Progress: 72/300 (24.0%) - ETA: 3865s  Progress: 73/300 (24.3%) - ETA: 3811s  Progress: 74/300 (24.7%) - ETA: 3774s  Progress: 75/300 (25.0%) - ETA: 3734s  Progress: 76/300 (25.3%) - ETA: 3701s  Progress: 77/300 (25.7%) - ETA: 3649s  Progress: 78/300 (26.0%) - ETA: 3594s  Progress: 79/300 (26.3%) - ETA: 3542s  Progress: 80/300 (26.7%) - ETA: 3502s  Progress: 81/300 (27.0%) - ETA: 3452s  Progress: 82/300 (27.3%) - ETA: 3402s  Progress: 83/300 (27.7%) - ETA: 3354s  Progress: 84/300 (28.0%) - ETA: 3313s  Progress: 85/300 (28.3%) - ETA: 3281s  Progress: 86/300 (28.7%) - ETA: 3259s  Progress: 87/300 (29.0%) - ETA: 3216s  Progress: 88/300 (29.3%) - ETA: 3181s  Progress: 89/300 (29.7%) - ETA: 3140s  Progress: 90/300 (30.0%) - ETA: 3099s  Progress: 91/300 (30.3%) - ETA: 3066s  Progress: 92/300 (30.7%) - ETA: 3026s  Progress: 93/300 (31.0%) - ETA: 2995s  Progress: 94/300 (31.3%) - ETA: 2973s  Progress: 95/300 (31.7%) - ETA: 2934s  Progress: 96/300 (32.0%) - ETA: 2903s  Progress: 97/300 (32.3%) - ETA: 2879s  Progress: 98/300 (32.7%) - ETA: 2841s  Progress: 99/300 (33.0%) - ETA: 2805s  Progress: 100/300 (33.3%) - ETA: 2770s  Progress: 101/300 (33.7%) - ETA: 2753s  Progress: 102/300 (34.0%) - ETA: 2746s  Progress: 103/300 (34.3%) - ETA: 2721s  Progress: 104/300 (34.7%) - ETA: 2691s  Progress: 105/300 (35.0%) - ETA: 2661s  Progress: 106/300 (35.3%) - ETA: 2632s  Progress: 107/300 (35.7%) - ETA: 2613s  Progress: 108/300 (36.0%) - ETA: 2589s  Progress: 109/300 (36.3%) - ETA: 2558s  Progress: 110/300 (36.7%) - ETA: 2529s  Progress: 111/300 (37.0%) - ETA: 2503s  Progress: 112/300 (37.3%) - ETA: 2486s  Progress: 113/300 (37.7%) - ETA: 2459s  Progress: 114/300 (38.0%) - ETA: 2460s  Progress: 115/300 (38.3%) - ETA: 2439s  Progress: 116/300 (38.7%) - ETA: 2432s  Progress: 117/300 (39.0%) - ETA: 2439s  Progress: 118/300 (39.3%) - ETA: 2427s  Progress: 119/300 (39.7%) - ETA: 2402s  Progress: 120/300 (40.0%) - ETA: 2376s  Progress: 121/300 (40.3%) - ETA: 2372s  Progress: 122/300 (40.7%) - ETA: 2371s  Progress: 123/300 (41.0%) - ETA: 2371s  Progress: 124/300 (41.3%) - ETA: 2362s  Progress: 125/300 (41.7%) - ETA: 2340s  Progress: 126/300 (42.0%) - ETA: 2332s  Progress: 127/300 (42.3%) - ETA: 2336s  Progress: 128/300 (42.7%) - ETA: 2331s  Progress: 129/300 (43.0%) - ETA: 2321s  Progress: 130/300 (43.3%) - ETA: 2320s  Progress: 131/300 (43.7%) - ETA: 2298s  Progress: 132/300 (44.0%) - ETA: 2291s  Progress: 133/300 (44.3%) - ETA: 2266s  Progress: 134/300 (44.7%) - ETA: 2242s  Progress: 135/300 (45.0%) - ETA: 2243s  Progress: 136/300 (45.3%) - ETA: 2241s  Progress: 137/300 (45.7%) - ETA: 2223s  Progress: 138/300 (46.0%) - ETA: 2199s  Progress: 139/300 (46.3%) - ETA: 2176s  Progress: 140/300 (46.7%) - ETA: 2173s  Progress: 141/300 (47.0%) - ETA: 2172s  Progress: 142/300 (47.3%) - ETA: 2176s  Progress: 143/300 (47.7%) - ETA: 2236s  Progress: 144/300 (48.0%) - ETA: 2234s  Progress: 145/300 (48.3%) - ETA: 2238s  Progress: 146/300 (48.7%) - ETA: 2254s  Progress: 147/300 (49.0%) - ETA: 2248s  Progress: 148/300 (49.3%) - ETA: 2235s  Progress: 149/300 (49.7%) - ETA: 2231s  Progress: 150/300 (50.0%) - ETA: 2246s  Progress: 151/300 (50.3%) - ETA: 2274s  Progress: 152/300 (50.7%) - ETA: 2278s  Progress: 153/300 (51.0%) - ETA: 2260s  Progress: 154/300 (51.3%) - ETA: 2241s  Progress: 155/300 (51.7%) - ETA: 2271s  Progress: 156/300 (52.0%) - ETA: 2265s  Progress: 157/300 (52.3%) - ETA: 2298s  Progress: 158/300 (52.7%) - ETA: 2288s  Progress: 159/300 (53.0%) - ETA: 2291s  Progress: 160/300 (53.3%) - ETA: 2290s  Progress: 161/300 (53.7%) - ETA: 2265s  Progress: 162/300 (54.0%) - ETA: 2255s  Progress: 163/300 (54.3%) - ETA: 2230s  Progress: 164/300 (54.7%) - ETA: 2204s  Progress: 165/300 (55.0%) - ETA: 2182s  Progress: 166/300 (55.3%) - ETA: 2157s  Progress: 167/300 (55.7%) - ETA: 2134s  Progress: 168/300 (56.0%) - ETA: 2111s  Progress: 169/300 (56.3%) - ETA: 2088s  Progress: 170/300 (56.7%) - ETA: 2064s  Progress: 171/300 (57.0%) - ETA: 2041s  Progress: 172/300 (57.3%) - ETA: 2019s  Progress: 173/300 (57.7%) - ETA: 1996s  Progress: 174/300 (58.0%) - ETA: 1979s  Progress: 175/300 (58.3%) - ETA: 1965s  Progress: 176/300 (58.7%) - ETA: 1942s  Progress: 177/300 (59.0%) - ETA: 1920s  Progress: 178/300 (59.3%) - ETA: 1898s  Progress: 179/300 (59.7%) - ETA: 1877s  Progress: 180/300 (60.0%) - ETA: 1855s  Progress: 181/300 (60.3%) - ETA: 1838s  Progress: 182/300 (60.7%) - ETA: 1821s  Progress: 183/300 (61.0%) - ETA: 1807s  Progress: 184/300 (61.3%) - ETA: 1791s  Progress: 185/300 (61.7%) - ETA: 1776s  Progress: 186/300 (62.0%) - ETA: 1769s  Progress: 187/300 (62.3%) - ETA: 1758s  Progress: 188/300 (62.7%) - ETA: 1740s  Progress: 189/300 (63.0%) - ETA: 1721s  Progress: 190/300 (63.3%) - ETA: 1706s  Progress: 191/300 (63.7%) - ETA: 1689s  Progress: 192/300 (64.0%) - ETA: 1672s  Progress: 193/300 (64.3%) - ETA: 1658s  Progress: 194/300 (64.7%) - ETA: 1641s  Progress: 195/300 (65.0%) - ETA: 1623s  Progress: 196/300 (65.3%) - ETA: 1606s  Progress: 197/300 (65.7%) - ETA: 1591s  Progress: 198/300 (66.0%) - ETA: 1575s  Progress: 199/300 (66.3%) - ETA: 1558s  Progress: 200/300 (66.7%) - ETA: 1543s  Progress: 201/300 (67.0%) - ETA: 1540s  Progress: 202/300 (67.3%) - ETA: 1542s  Progress: 203/300 (67.7%) - ETA: 1528s  Progress: 204/300 (68.0%) - ETA: 1531s  Progress: 205/300 (68.3%) - ETA: 1536s  Progress: 206/300 (68.7%) - ETA: 1525s  Progress: 207/300 (69.0%) - ETA: 1514s  Progress: 208/300 (69.3%) - ETA: 1510s  Progress: 209/300 (69.7%) - ETA: 1514s  Progress: 210/300 (70.0%) - ETA: 1495s  Progress: 211/300 (70.3%) - ETA: 1481s  Progress: 212/300 (70.7%) - ETA: 1465s  Progress: 213/300 (71.0%) - ETA: 1445s  Progress: 214/300 (71.3%) - ETA: 1434s  Progress: 215/300 (71.7%) - ETA: 1439s  Progress: 216/300 (72.0%) - ETA: 1427s  Progress: 217/300 (72.3%) - ETA: 1409s  Progress: 218/300 (72.7%) - ETA: 1393s  Progress: 219/300 (73.0%) - ETA: 1380s  Progress: 220/300 (73.3%) - ETA: 1373s  Progress: 221/300 (73.7%) - ETA: 1353s  Progress: 222/300 (74.0%) - ETA: 1334s  Progress: 223/300 (74.3%) - ETA: 1315s  Progress: 224/300 (74.7%) - ETA: 1297s  Progress: 225/300 (75.0%) - ETA: 1278s  Progress: 226/300 (75.3%) - ETA: 1259s  Progress: 227/300 (75.7%) - ETA: 1239s  Progress: 228/300 (76.0%) - ETA: 1220s  Progress: 229/300 (76.3%) - ETA: 1201s  Progress: 230/300 (76.7%) - ETA: 1182s  Progress: 231/300 (77.0%) - ETA: 1162s  Progress: 232/300 (77.3%) - ETA: 1144s  Progress: 233/300 (77.7%) - ETA: 1126s  Progress: 234/300 (78.0%) - ETA: 1107s  Progress: 235/300 (78.3%) - ETA: 1089s  Progress: 236/300 (78.7%) - ETA: 1070s  Progress: 237/300 (79.0%) - ETA: 1051s  Progress: 238/300 (79.3%) - ETA: 1033s  Progress: 239/300 (79.7%) - ETA: 1015s  Progress: 240/300 (80.0%) - ETA: 996s  Progress: 241/300 (80.3%) - ETA: 976s  Progress: 242/300 (80.7%) - ETA: 958s  Progress: 243/300 (81.0%) - ETA: 939s  Progress: 244/300 (81.3%) - ETA: 920s  Progress: 245/300 (81.7%) - ETA: 901s  Progress: 246/300 (82.0%) - ETA: 882s  Progress: 247/300 (82.3%) - ETA: 864s  Progress: 248/300 (82.7%) - ETA: 846s  Progress: 249/300 (83.0%) - ETA: 827s  Progress: 250/300 (83.3%) - ETA: 808s  Progress: 251/300 (83.7%) - ETA: 790s  Progress: 252/300 (84.0%) - ETA: 772s  Progress: 253/300 (84.3%) - ETA: 755s  Progress: 254/300 (84.7%) - ETA: 737s  Progress: 255/300 (85.0%) - ETA: 719s  Progress: 256/300 (85.3%) - ETA: 701s  Progress: 257/300 (85.7%) - ETA: 683s  Progress: 258/300 (86.0%) - ETA: 665s  Progress: 259/300 (86.3%) - ETA: 648s  Progress: 260/300 (86.7%) - ETA: 631s  Progress: 261/300 (87.0%) - ETA: 613s  Progress: 262/300 (87.3%) - ETA: 596s  Progress: 263/300 (87.7%) - ETA: 579s  Progress: 264/300 (88.0%) - ETA: 562s  Progress: 265/300 (88.3%) - ETA: 545s  Progress: 266/300 (88.7%) - ETA: 528s  Progress: 267/300 (89.0%) - ETA: 512s  Progress: 268/300 (89.3%) - ETA: 495s  Progress: 269/300 (89.7%) - ETA: 478s  Progress: 270/300 (90.0%) - ETA: 462s  Progress: 271/300 (90.3%) - ETA: 445s  Progress: 272/300 (90.7%) - ETA: 431s  Progress: 273/300 (91.0%) - ETA: 415s  Progress: 274/300 (91.3%) - ETA: 398s  Progress: 275/300 (91.7%) - ETA: 382s  Progress: 276/300 (92.0%) - ETA: 366s  Progress: 277/300 (92.3%) - ETA: 351s  Progress: 278/300 (92.7%) - ETA: 335s  Progress: 279/300 (93.0%) - ETA: 319s  Progress: 280/300 (93.3%) - ETA: 305s  Progress: 281/300 (93.7%) - ETA: 290s  Progress: 282/300 (94.0%) - ETA: 276s  Progress: 283/300 (94.3%) - ETA: 261s  Progress: 284/300 (94.7%) - ETA: 245s  Progress: 285/300 (95.0%) - ETA: 229s  Progress: 286/300 (95.3%) - ETA: 213s  Progress: 287/300 (95.7%) - ETA: 198s  Progress: 288/300 (96.0%) - ETA: 183s  Progress: 289/300 (96.3%) - ETA: 168s  Progress: 290/300 (96.7%) - ETA: 153s  Progress: 291/300 (97.0%) - ETA: 138s  Progress: 292/300 (97.3%) - ETA: 123s  Progress: 293/300 (97.7%) - ETA: 108s  Progress: 294/300 (98.0%) - ETA: 93s  Progress: 295/300 (98.3%) - ETA: 77s  Progress: 296/300 (98.7%) - ETA: 62s  Progress: 297/300 (99.0%) - ETA: 46s  Progress: 298/300 (99.3%) - ETA: 31s  Progress: 299/300 (99.7%) - ETA: 16s  Progress: 300/300 (100.0%) - ETA: 0s
+Completed in 4670.7s
+
+Results for l3_react:
+  Accuracy (within 5%): 72.0%
+  Accuracy (exact):     58.3%
+  Total cost:           $1.0149
+  Avg latency:          15552 ms
+  Errors:               0 (0.0%)
+
+============================================================
+Running experiment: l3_audit
+============================================================
+Setting up l3_audit...
+  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 1/300 (0.3%) - ETA: 8220s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 2/300 (0.7%) - ETA: 10499s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 3/300 (1.0%) - ETA: 11236s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 4/300 (1.3%) - ETA: 9817s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 5/300 (1.7%) - ETA: 10625s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 6/300 (2.0%) - ETA: 11631s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 7/300 (2.3%) - ETA: 11035s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 8/300 (2.7%) - ETA: 10031s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 9/300 (3.0%) - ETA: 9443s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 10/300 (3.3%) - ETA: 9227s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 11/300 (3.7%) - ETA: 8816s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 12/300 (4.0%) - ETA: 8587s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 13/300 (4.3%) - ETA: 9107s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 14/300 (4.7%) - ETA: 8713s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 15/300 (5.0%) - ETA: 8762s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 16/300 (5.3%) - ETA: 8882s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 17/300 (5.7%) - ETA: 8617s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 18/300 (6.0%) - ETA: 8584s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 19/300 (6.3%) - ETA: 8470s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 20/300 (6.7%) - ETA: 8295s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 21/300 (7.0%) - ETA: 8016s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 22/300 (7.3%) - ETA: 7796s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 23/300 (7.7%) - ETA: 7461s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 24/300 (8.0%) - ETA: 7417s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 25/300 (8.3%) - ETA: 7385s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 26/300 (8.7%) - ETA: 7098s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 27/300 (9.0%) - ETA: 6928s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 28/300 (9.3%) - ETA: 6679s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 29/300 (9.7%) - ETA: 6522s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 30/300 (10.0%) - ETA: 6318s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 31/300 (10.3%) - ETA: 6132s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 32/300 (10.7%) - ETA: 6016s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 33/300 (11.0%) - ETA: 5904s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 34/300 (11.3%) - ETA: 5735s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 35/300 (11.7%) - ETA: 5597s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 36/300 (12.0%) - ETA: 5491s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 37/300 (12.3%) - ETA: 5390s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 38/300 (12.7%) - ETA: 5294s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 39/300 (13.0%) - ETA: 5160s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 40/300 (13.3%) - ETA: 5033s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 41/300 (13.7%) - ETA: 4944s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 42/300 (14.0%) - ETA: 4907s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 43/300 (14.3%) - ETA: 4831s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 44/300 (14.7%) - ETA: 4740s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 45/300 (15.0%) - ETA: 4651s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 46/300 (15.3%) - ETA: 4633s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 47/300 (15.7%) - ETA: 4560s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #1)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 48/300 (16.0%) - ETA: 4459s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 49/300 (16.3%) - ETA: 4447s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 50/300 (16.7%) - ETA: 4385s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #2)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  [Repair] Extracted answer: 2.0
+  Progress: 51/300 (17.0%) - ETA: 4524s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 52/300 (17.3%) - ETA: 4519s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 53/300 (17.7%) - ETA: 4479s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 54/300 (18.0%) - ETA: 4427s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #3)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  [Repair] Extracted answer: 0.0
+  Progress: 55/300 (18.3%) - ETA: 4489s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 56/300 (18.7%) - ETA: 4438s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 57/300 (19.0%) - ETA: 4420s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 58/300 (19.3%) - ETA: 4369s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 59/300 (19.7%) - ETA: 4309s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 60/300 (20.0%) - ETA: 4253s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 61/300 (20.3%) - ETA: 4220s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 62/300 (20.7%) - ETA: 4149s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 63/300 (21.0%) - ETA: 4080s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 64/300 (21.3%) - ETA: 4025s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 65/300 (21.7%) - ETA: 3962s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 66/300 (22.0%) - ETA: 3899s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 67/300 (22.3%) - ETA: 3839s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 68/300 (22.7%) - ETA: 3811s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 69/300 (23.0%) - ETA: 3776s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 70/300 (23.3%) - ETA: 3733s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 71/300 (23.7%) - ETA: 3688s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #4)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 72/300 (24.0%) - ETA: 3645s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 73/300 (24.3%) - ETA: 3610s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 74/300 (24.7%) - ETA: 3557s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 75/300 (25.0%) - ETA: 3506s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 76/300 (25.3%) - ETA: 3455s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 77/300 (25.7%) - ETA: 3403s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 78/300 (26.0%) - ETA: 3357s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 79/300 (26.3%) - ETA: 3310s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 80/300 (26.7%) - ETA: 3267s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 81/300 (27.0%) - ETA: 3231s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 82/300 (27.3%) - ETA: 3185s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 83/300 (27.7%) - ETA: 3159s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 84/300 (28.0%) - ETA: 3114s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 85/300 (28.3%) - ETA: 3084s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 86/300 (28.7%) - ETA: 3065s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 87/300 (29.0%) - ETA: 3023s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 88/300 (29.3%) - ETA: 2984s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 89/300 (29.7%) - ETA: 2958s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 90/300 (30.0%) - ETA: 2919s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 91/300 (30.3%) - ETA: 2912s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 92/300 (30.7%) - ETA: 2873s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 93/300 (31.0%) - ETA: 2837s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 94/300 (31.3%) - ETA: 2801s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 95/300 (31.7%) - ETA: 2780s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 96/300 (32.0%) - ETA: 2758s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 97/300 (32.3%) - ETA: 2722s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 98/300 (32.7%) - ETA: 2687s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 99/300 (33.0%) - ETA: 2653s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 100/300 (33.3%) - ETA: 2620s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 101/300 (33.7%) - ETA: 2602s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 102/300 (34.0%) - ETA: 2596s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 103/300 (34.3%) - ETA: 2584s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 104/300 (34.7%) - ETA: 2554s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 105/300 (35.0%) - ETA: 2525s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 106/300 (35.3%) - ETA: 2500s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 107/300 (35.7%) - ETA: 2478s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 108/300 (36.0%) - ETA: 2450s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 109/300 (36.3%) - ETA: 2422s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 110/300 (36.7%) - ETA: 2393s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 111/300 (37.0%) - ETA: 2371s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 112/300 (37.3%) - ETA: 2352s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 113/300 (37.7%) - ETA: 2326s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 114/300 (38.0%) - ETA: 2317s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 115/300 (38.3%) - ETA: 2294s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 116/300 (38.7%) - ETA: 2272s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 117/300 (39.0%) - ETA: 2268s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 118/300 (39.3%) - ETA: 2315s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 119/300 (39.7%) - ETA: 2291s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 120/300 (40.0%) - ETA: 2277s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #5)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 121/300 (40.3%) - ETA: 2309s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #6)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=False, actions=1
+  Progress: 122/300 (40.7%) - ETA: 2312s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #7)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 123/300 (41.0%) - ETA: 2464s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #8)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=False, actions=1
+  Progress: 124/300 (41.3%) - ETA: 2469s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #9)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 125/300 (41.7%) - ETA: 2540s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #10)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 126/300 (42.0%) - ETA: 2560s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #11)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 127/300 (42.3%) - ETA: 2566s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #12)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 128/300 (42.7%) - ETA: 2558s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #13)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 129/300 (43.0%) - ETA: 2534s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #14)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 130/300 (43.3%) - ETA: 2548s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #15)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 131/300 (43.7%) - ETA: 2538s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #16)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 132/300 (44.0%) - ETA: 2543s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #17)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 133/300 (44.3%) - ETA: 2516s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #18)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=False, actions=1
+  Progress: 134/300 (44.7%) - ETA: 2539s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #19)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 135/300 (45.0%) - ETA: 2620s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #20)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 136/300 (45.3%) - ETA: 2623s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #21)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 137/300 (45.7%) - ETA: 2612s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #22)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 138/300 (46.0%) - ETA: 2582s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #23)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 139/300 (46.3%) - ETA: 2554s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #24)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 140/300 (46.7%) - ETA: 2559s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 141/300 (47.0%) - ETA: 2539s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 142/300 (47.3%) - ETA: 2520s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 143/300 (47.7%) - ETA: 2536s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 144/300 (48.0%) - ETA: 2554s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 145/300 (48.3%) - ETA: 2536s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 146/300 (48.7%) - ETA: 2520s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 147/300 (49.0%) - ETA: 2500s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 148/300 (49.3%) - ETA: 2505s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 149/300 (49.7%) - ETA: 2494s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 150/300 (50.0%) - ETA: 2473s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 151/300 (50.3%) - ETA: 2459s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 152/300 (50.7%) - ETA: 2448s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 153/300 (51.0%) - ETA: 2429s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 154/300 (51.3%) - ETA: 2410s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 155/300 (51.7%) - ETA: 2405s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 156/300 (52.0%) - ETA: 2384s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 157/300 (52.3%) - ETA: 2391s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 158/300 (52.7%) - ETA: 2370s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 159/300 (53.0%) - ETA: 2359s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 160/300 (53.3%) - ETA: 2344s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 161/300 (53.7%) - ETA: 2316s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 162/300 (54.0%) - ETA: 2294s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 163/300 (54.3%) - ETA: 2267s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 164/300 (54.7%) - ETA: 2239s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 165/300 (55.0%) - ETA: 2212s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 166/300 (55.3%) - ETA: 2186s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 167/300 (55.7%) - ETA: 2160s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 168/300 (56.0%) - ETA: 2135s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 169/300 (56.3%) - ETA: 2111s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 170/300 (56.7%) - ETA: 2086s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 171/300 (57.0%) - ETA: 2061s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 172/300 (57.3%) - ETA: 2036s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 173/300 (57.7%) - ETA: 2012s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 174/300 (58.0%) - ETA: 1990s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 175/300 (58.3%) - ETA: 1965s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 176/300 (58.7%) - ETA: 1941s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 177/300 (59.0%) - ETA: 1918s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 178/300 (59.3%) - ETA: 1903s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 179/300 (59.7%) - ETA: 1880s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 180/300 (60.0%) - ETA: 1857s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 181/300 (60.3%) - ETA: 1839s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 182/300 (60.7%) - ETA: 1822s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 183/300 (61.0%) - ETA: 1801s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 184/300 (61.3%) - ETA: 1782s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 185/300 (61.7%) - ETA: 1762s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 186/300 (62.0%) - ETA: 1743s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 187/300 (62.3%) - ETA: 1722s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 188/300 (62.7%) - ETA: 1705s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 189/300 (63.0%) - ETA: 1685s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 190/300 (63.3%) - ETA: 1666s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 191/300 (63.7%) - ETA: 1648s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 192/300 (64.0%) - ETA: 1631s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 193/300 (64.3%) - ETA: 1614s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 194/300 (64.7%) - ETA: 1595s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 195/300 (65.0%) - ETA: 1578s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 196/300 (65.3%) - ETA: 1561s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 197/300 (65.7%) - ETA: 1544s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 198/300 (66.0%) - ETA: 1529s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 199/300 (66.3%) - ETA: 1511s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 200/300 (66.7%) - ETA: 1496s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #25)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 201/300 (67.0%) - ETA: 1492s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #26)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 202/300 (67.3%) - ETA: 1491s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 203/300 (67.7%) - ETA: 1478s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 204/300 (68.0%) - ETA: 1468s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 205/300 (68.3%) - ETA: 1460s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 206/300 (68.7%) - ETA: 1445s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #27)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 207/300 (69.0%) - ETA: 1446s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #28)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 208/300 (69.3%) - ETA: 1456s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 209/300 (69.7%) - ETA: 1460s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #29)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=False, actions=1
+  Progress: 210/300 (70.0%) - ETA: 1450s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 211/300 (70.3%) - ETA: 1440s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #30)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 212/300 (70.7%) - ETA: 1441s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #31)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 213/300 (71.0%) - ETA: 1460s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #32)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 214/300 (71.3%) - ETA: 1488s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 215/300 (71.7%) - ETA: 1487s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 216/300 (72.0%) - ETA: 1480s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 217/300 (72.3%) - ETA: 1468s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 218/300 (72.7%) - ETA: 1465s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #33)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=False, actions=1
+  Progress: 219/300 (73.0%) - ETA: 1462s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 220/300 (73.3%) - ETA: 1448s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #34)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 221/300 (73.7%) - ETA: 1445s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #35)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 222/300 (74.0%) - ETA: 1429s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #36)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 223/300 (74.3%) - ETA: 1416s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #37)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 224/300 (74.7%) - ETA: 1400s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #38)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 225/300 (75.0%) - ETA: 1390s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #39)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 226/300 (75.3%) - ETA: 1373s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #40)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 227/300 (75.7%) - ETA: 1365s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #41)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 228/300 (76.0%) - ETA: 1348s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #42)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 229/300 (76.3%) - ETA: 1340s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #43)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 230/300 (76.7%) - ETA: 1337s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #44)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 231/300 (77.0%) - ETA: 1317s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #45)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 232/300 (77.3%) - ETA: 1301s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #46)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 233/300 (77.7%) - ETA: 1284s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #47)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 234/300 (78.0%) - ETA: 1266s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #48)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 235/300 (78.3%) - ETA: 1265s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #49)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 236/300 (78.7%) - ETA: 1247s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #50)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 237/300 (79.0%) - ETA: 1237s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #51)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 238/300 (79.3%) - ETA: 1217s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #52)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 239/300 (79.7%) - ETA: 1208s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #53)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 240/300 (80.0%) - ETA: 1190s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #54)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 241/300 (80.3%) - ETA: 1168s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #55)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 242/300 (80.7%) - ETA: 1147s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #56)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=True, actions=1
+  Progress: 243/300 (81.0%) - ETA: 1137s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #57)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 244/300 (81.3%) - ETA: 1115s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #58)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 245/300 (81.7%) - ETA: 1093s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #59)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 246/300 (82.0%) - ETA: 1072s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #60)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 247/300 (82.3%) - ETA: 1050s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #61)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 248/300 (82.7%) - ETA: 1029s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #62)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 249/300 (83.0%) - ETA: 1007s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #63)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 250/300 (83.3%) - ETA: 986s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #64)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 251/300 (83.7%) - ETA: 971s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #65)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 252/300 (84.0%) - ETA: 951s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #66)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 253/300 (84.3%) - ETA: 931s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #67)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 254/300 (84.7%) - ETA: 909s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #68)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 255/300 (85.0%) - ETA: 887s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #69)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 256/300 (85.3%) - ETA: 866s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #70)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 257/300 (85.7%) - ETA: 845s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #71)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 258/300 (86.0%) - ETA: 823s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #72)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 259/300 (86.3%) - ETA: 805s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #73)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 260/300 (86.7%) - ETA: 784s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #74)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 261/300 (87.0%) - ETA: 765s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 2, Failed steps: []
+  [Critic] Repair suggestions: 1
+  [Repair] Starting repair (attempt #75)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_ca...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: LLM must attempt to call compute_calculation; LLM must attempt to use compute_calculation...
+  [Repair] Result: success=True, actions=1
+  Progress: 262/300 (87.3%) - ETA: 749s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #76)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 263/300 (87.7%) - ETA: 729s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #77)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 264/300 (88.0%) - ETA: 708s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #78)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 265/300 (88.3%) - ETA: 687s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #79)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 266/300 (88.7%) - ETA: 667s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #80)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 267/300 (89.0%) - ETA: 647s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #81)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 268/300 (89.3%) - ETA: 626s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #82)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 269/300 (89.7%) - ETA: 606s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #83)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 270/300 (90.0%) - ETA: 587s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #84)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 271/300 (90.3%) - ETA: 568s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #85)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 272/300 (90.7%) - ETA: 548s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #86)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 273/300 (91.0%) - ETA: 527s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #87)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 274/300 (91.3%) - ETA: 507s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #88)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 275/300 (91.7%) - ETA: 488s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #89)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 276/300 (92.0%) - ETA: 468s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #90)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 277/300 (92.3%) - ETA: 448s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #91)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 278/300 (92.7%) - ETA: 428s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #92)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 279/300 (93.0%) - ETA: 408s  [Critic] Verdict: repair_needed
+  [Critic] Violations: 3, Failed steps: []
+  [Critic] Repair suggestions: 2
+  [Repair] Starting repair (attempt #93)...
+
+[Repair] Using rewind-and-regenerate
+  Failing step: 0
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation;...
+
+[Repair] Rewind to step 0, regenerate with feedback
+  Feedback: Trace must have at least one step; LLM must attempt to call compute_calculation; LLM must attempt to...
+  [Repair] Result: success=False, actions=1
+  Progress: 280/300 (93.3%) - ETA: 388s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 281/300 (93.7%) - ETA: 369s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 282/300 (94.0%) - ETA: 350s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 283/300 (94.3%) - ETA: 330s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 284/300 (94.7%) - ETA: 310s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 285/300 (95.0%) - ETA: 290s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 286/300 (95.3%) - ETA: 271s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 287/300 (95.7%) - ETA: 251s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 288/300 (96.0%) - ETA: 232s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 289/300 (96.3%) - ETA: 212s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 290/300 (96.7%) - ETA: 192s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 291/300 (97.0%) - ETA: 173s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 292/300 (97.3%) - ETA: 154s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 293/300 (97.7%) - ETA: 134s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 294/300 (98.0%) - ETA: 116s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 295/300 (98.3%) - ETA: 96s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 296/300 (98.7%) - ETA: 77s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 297/300 (99.0%) - ETA: 58s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 298/300 (99.3%) - ETA: 39s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 299/300 (99.7%) - ETA: 19s  [Critic] Verdict: accept
+  [Critic] Violations: 0, Failed steps: []
+  Progress: 300/300 (100.0%) - ETA: 0s
+Completed in 5851.8s
+
+Results for l3_audit:
+  Accuracy (within 5%): 69.7%
+  Accuracy (exact):     57.7%
+  Total cost:           $1.1501
+  Avg latency:          19489 ms
+  Errors:               0 (0.0%)
+
+Generating report...
+Report saved to: benchmark_results_300_260101/report.html
+
+============================================================
+FINAL RESULTS
+============================================================
+  l3_react            :  72.0% accuracy, $1.0149 cost
+  l3_audit            :  69.7% accuracy, $1.1501 cost
+  l2_distilled        :  67.0% accuracy, $0.1246 cost
+  l1_ptool            :  65.7% accuracy, $0.3673 cost
+  baseline            :  45.3% accuracy, $0.3574 cost
+
+Best: l3_react (72.0%)
+Report: benchmark_results_300_260101/report.html
+============================================================
+Benchmark complete!
+Finished: Fri Jan  2 00:32:54 EST 2026
+Results: benchmark_results_300_260101/report.html
+Full log: benchmark_results_300_260101/full_run.log
+============================================================

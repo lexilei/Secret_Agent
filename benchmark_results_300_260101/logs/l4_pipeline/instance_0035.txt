@@ -1,0 +1,46 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 35
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-04T03:14:11.399722
+================================================================================
+
+GROUND TRUTH: 68.04278
+PREDICTED: 68.043
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 33-year-old woman presents to the emergency department after she found out she had a blood pressure of 165/100 mmHg at a local pharmacy. The patient is not followed by a primary care physician and is not currently taking any medications. She has no other complaints at this time. A bedside ultrasound with Doppler of the abdomen is within normal limits. Laboratory values are ordered as seen below.
+
+Serum:
+Na+: 139 mEq/L
+Cl-: 100 mEq/L
+HCO3-: 33 mEq/L
+BUN: 20 mg/dL
+Glucose: 99 mg/dL
+Creatinine: 1.1 mg/dL
+Ca2+: 10.2 mg/dL
+
+The patient is given hydrochlorothiazide and sent home. An ECG performed at a subsequent follow up appointment is seen in Figure A.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+68.043
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CKD-EPI Equations for Glomerular Filtration Rate', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'age': 33, 'sex': 'female', 'creatinine_mg_dl': 1.1}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 33, 'sex': 'female', 'creatinine_mg_dl': 1.1}}, {'stage': 'compute', 'success': True, 'result': 68.043, 'formula': '142 * min(Cr/κ,1)^α * max(Cr/κ,1)^-1.200 * 0.9938^age * sex_coef'}], 'method': 'l4_pipeline'}
+

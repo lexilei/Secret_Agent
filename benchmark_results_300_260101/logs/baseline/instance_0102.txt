@@ -1,0 +1,30 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 102
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T20:50:30.098060
+================================================================================
+
+GROUND TRUTH: 8.56
+PREDICTED: 9.6
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 73-year-old male veteran presented with recurrent syncope and falls. He had decreased appetite, thirst, and urine output in the setting of progressive abdominal distention, pruritus, and painless jaundice in the prior month. His past medical history was significant for obesity (BMI=40.1), hypertension, and benign prostatic hyperplasia (BPH) with pertinent medications of ibuprofen (200 mg QID), furosemide (40 mg BID), losartan, doxazosin, and finasteride. A detailed dietary history prior to admission was lacking. Physical exam was notable for diffuse jaundice, abdominal distention, and severe mid-thoracic back pain later confirmed to be T6/T7 vertebral fractures.
+Initial laboratory results showed stage 3 AKI with serum creatinine (SCr) elevated to 8.98 mg/dL from a baseline of 1.04 mg/dL. Supporting laboratory findings included elevations in phosphorus (7.6 mg/dL), parathyroid hormone (319.7 pg/mL), and low calcium (7.6 mg/dL), ionized calcium (0.93 mmol/L), albumin (2.8 g/dL), and 25-hydroxy vitamin D (16.4 ng/mL). There was an anion gap (21 mEq/L) with pH= 7.145 confirmed with arterial blood gas. Jaundice workup revealed an obstructive pattern with elevated total bilirubin (5.4 mg/dL), direct bilirubin (3.7 mg/dL), AST (79 U/L), ALT (140 U/L), alkaline phosphatase (392 U/L), GGT (214 U/L), and lipase (690 U/L). Soon after admission, he developed hypotension necessitating vasopressors and broad-spectrum antibiotics for presumed septic shock. AKI workup revealed deteriorating kidney function and development of anuria, requiring intermittent hemodialysis.
+The etiology of renal failure remained unclear. Urine testing showed nephrotic range proteinuria, many bacteria, no red blood cells, no crystals, few hyaline casts, and no granular casts. A renal biopsy was performed and showed diffuse calcium oxalate crystal deposition with severe acute tubular injury (ATN) and mild interstitial fibrosis (). An evident cause of oxalate nephropathy was unclear, although it was suspected that pancreatic insufficiency leading to fat malabsorption and increased intestinal absorption of oxalate were responsible. Fecal elastase returned low at 54 μg Elastase/g stool to support pancreatic insufficiency while abdominal computed tomography (CT) without contrast showed exocrine atrophy of the pancreas. Serum oxalate was 3.6 mmol/L (normal range 1.0-3.0 mmol/L). A low-fat, low-oxalate diet with calcium citrate and pancrelipase supplementation was started.
+Concurrently, a jaundice workup began with abdominal ultrasound which showed hepatomegaly, splenomegaly, numerous gallstones, and no inferior vena cava or portal circulation thrombosis. Of note, the common bile duct was not visibly dilated, raising concern for an upstream malignant stricture. MRCP showed marked dilation of the left intrahepatic biliary tree with abrupt termination and mild dilation of the right intrahepatic biliary tree, further raising suspicion of malignancy. ERCP with stenting to the right intrahepatic biliary tree duct was performed. Cytology, a markedly elevated CA 19-9, and imaging confirmed the diagnosis of cholangiocarcinoma (Klatskin tumor). Medical oncology discussed chemotherapy and radiation as alternative treatments, but the patient elected to enter hospice. His kidney function ultimately improved with return of nonoliguric urine output, cessation of dialysis, and improved creatinine to 2.45mg/dL and eGFR of 26 ml/min/1.73m3 at discharge.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+9.6

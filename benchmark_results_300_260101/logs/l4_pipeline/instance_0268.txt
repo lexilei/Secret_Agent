@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 268
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-04T03:14:13.946718
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old woman presented with exertional chest pain. She visited our hospital because her symptoms were gradually intensifying for several years. Her only risk factor for heart disease was hypertension; she had no history of smoking, and she did not have dyslipidemia. Electrocardiography did not show any ischemic changes. On echocardiography, left ventricular function was preserved and neither hypokinesia nor valvular heart disease was observed. Further evaluation of coronary artery disease was considered necessary; therefore, she underwent a detailed examination using coronary computed tomography (CT) (Fig. ), which revealed an LMT occlusion. Coronary angiography also revealed that the LMT was occluded at the origin. The entire left coronary artery was visualized through collateral circulation in right coronary angiography (Fig. ). Based on blood test findings and aortic CT results, arteritis and autoimmune disease were ruled out.
+We performed off-pump CABG to treat this patient. We anastomosed the left internal thoracic artery to the left anterior descending coronary artery and the right internal thoracic artery to the left marginal artery. The patient’s hemodynamics were stable during and after the operation. The patient’s postoperative progress was smooth; her ventilator was removed the day after the operation, she began walking independently on Day 3 post-operation, and she was discharged on Day 8 post-operation. Graft patency was confirmed with coronary CT on Day 7 post-operation (Fig. ). She goes well without any symptoms during 3-years follow up.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.3}, {'stage': 'extract', 'extracted': {'age': 62, 'sex': 'female', 'has_hypertension': True}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 62, 'sex': 'female', 'has_hypertension': True}}, {'stage': 'compute', 'success': True, 'result': 2.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

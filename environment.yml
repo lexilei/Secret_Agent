@@ -1,0 +1,40 @@
+name: ptool_framework
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    # LLM providers (matching existing llm_util.py)
+    - anthropic>=0.40.0
+    - openai>=1.50.0
+    - groq>=0.11.0
+    - google-generativeai>=0.8.0
+    - together>=1.3.0
+    - mistralai>=1.0.0
+
+    # Core framework
+    - pydantic>=2.9.0
+    - typing-extensions>=4.12.0
+
+    # Output parsing
+    - instructor>=1.4.0
+
+    # Development & debugging
+    - pytest>=8.0.0
+    - rich>=13.9.0
+    - loguru>=0.7.0
+
+    # Dashboard & Web UI
+    - fastapi>=0.109.0
+    - uvicorn>=0.27.0
+    - websockets>=12.0
+
+    # CLI
+    - click>=8.1.0
+    - typer>=0.9.0
+
+    # Data handling
+    - pandas>=2.0.0
+    - orjson>=3.10.0

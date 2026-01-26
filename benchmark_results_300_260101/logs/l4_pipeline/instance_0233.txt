@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 233
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-04T03:14:13.590751
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 28-year-old man with no history of thromboembolic disease, limb casting, neurologic deficit, or recent hospitalization arrived to the urgent assessment unit complaining that his entire left lower extremity had become “puffy and sore” over the preceding forty-eight hours. He reports playing in an amateur weekend rugby match three days earlier during which he sustained multiple tackles, including a direct blow to the lateral thigh that produced an immediate bruise but did not keep him from finishing the game. The following morning he noticed diffuse erythema beginning just above the knee and extending toward the ankle, accompanied by a low-grade subjective fever, and by last night he could feel tightness all the way from the groin to the dorsal aspect of the foot; his jeans were difficult to pull on over the limb, whereas his right trouser leg remained loose. He denies recent long-haul travel, prolonged automobile rides, or remaining in bed for more than his usual seven hours of nightly sleep, and he continues to work at a hardware store where he spends most of the shift standing or climbing ladders. He has never undergone an operative procedure beyond childhood tonsillectomy, takes no prescription medications, does not smoke, and limits alcohol to occasional weekend beers; family history is unremarkable for clotting disorders. He has not experienced chest pain, dyspnea, palpitations, or cough, and he specifically denies trauma to the calf, insect stings, or animal bites. On arrival he was afebrile at 37.3 °C, blood pressure 124/70 mm Hg, pulse 78 beats/min, respiratory rate 14/min, and oxygen saturation 99 % on room air. Physical examination revealed a well-built male in no acute distress who ambulated into the room without a limp but favored the left leg when pivoting. Inspection showed uniform swelling of the entire limb; circumference taken 10 cm below the tibial tuberosity measured 45 cm on the affected side compared with 40.5 cm on the right, a difference of 4.5 cm. The skin from mid-thigh to mid-calf was dusky red and warm, with scattered ecchymoses corresponding to his reported tackle injuries, but there were no engorged superficial channels or varicosities appreciated. Palpation of the groin, femoral triangle, popliteal fossa, posterior calf, and along the course of the peroneal compartment did not provoke focal cord-like tenderness; instead, the patient described a generalized aching sensation reminiscent of a deep bruise. There was full active range of motion at the hip, knee, and ankle, though he winced when the quadriceps contusion was compressed. Distal dorsalis pedis and posterior tibial pulses were 2+ and symmetric, capillary refill less than two seconds, and sensation in the foot was intact to light touch and pinprick. No discrete fluctuance, bullae, or crepitus were present, and the inguinal nodes were not enlarged. Cardiac and pulmonary examinations were normal, abdomen was soft and nontender, and there was no peripheral edema on the contralateral limb, upper extremities, or face. Bedside laboratory studies revealed a white-cell count of 12.6 × 10⁹/L with 80 % neutrophils, hemoglobin 14.2 g/dL, platelet count 248 × 10⁹/L, serum creatinine 0.8 mg/dL, and an international normalized ratio of 1.0; C-reactive protein was elevated at 6.4 mg/dL. Plain radiographs of the femur and tibia showed soft-tissue swelling without fracture. The combination of widespread erythema, elevated inflammatory markers, and a clear history of blunt trauma suggests an infectious or inflammatory process, such as cellulitis or post-contusional hematoma, that could plausibly account for the patient’s presentation; nonetheless, because of the measurable calf asymmetry exceeding 3 cm and the diffuse swelling that involves the whole extremity in an otherwise healthy, ambulatory adult with no prior clot, an occlusive event within the deep venous system remains under consideration. Duplex ultrasound of the left lower limb has been ordered, and definitive therapy will be deferred pending imaging results and discussion with the patient regarding the risks and benefits of empiric interventions.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.2}, {'stage': 'extract', 'extracted': {'age': 28, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 28, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

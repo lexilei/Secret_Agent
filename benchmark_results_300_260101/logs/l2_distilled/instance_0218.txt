@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 218
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T21:37:23.458708
+================================================================================
+
+GROUND TRUTH: 10.0
+PREDICTED: 9.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 59-year-old male presented with black tarry stools for two weeks and progressive abdominal distension over the past four years. He also reported fatigue, poor appetite, and mild swelling of the feet. He denied alcohol use, viral hepatitis, or any other risk factors for liver disease. On physical examination, he appeared pale and mildly jaundiced. His abdomen was distended with shifting dullness. There was mild hepatomegaly, splenomegaly, and spider angiomata on the chest, but no asterixis was observed. Laboratory studies revealed a hemoglobin level of 6.9 g/dL, serum albumin of 2.8 g/dL, total bilirubin of 3.2 mg/dL (direct bilirubin 1.6 mg/dL), AST 45 U/L, ALT 35 U/L, alkaline phosphatase 135 U/L, and an INR of 1.6. Serum creatinine was 0.9 mg/dL. Abdominal ultrasound demonstrated a coarse, nodular liver with moderate ascites, splenomegaly, and a dilated portal vein with sluggish flow, consistent with decompensated cirrhosis and portal hypertension. Upper endoscopy revealed grade III esophageal varices with red color signs and mild portal hypertensive gastropathy. The patient was stabilized with octreotide, a proton pump inhibitor infusion, and blood transfusions. He was subsequently started on a non-selective beta-blocker to reduce portal pressure.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+9.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 9.0}
+

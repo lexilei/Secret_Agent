@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 94
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T20:50:29.932001
+================================================================================
+
+GROUND TRUTH: 24.45107
+PREDICTED: 24.43
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 17-year-old female diagnosed with Down syndrome applied to pediatric cardiology outpatient clinic with swelling around the eyes and hands and dyspnea during sleep. Her height was 143 cm (25th–50th percentile according to growth chart for girls with Down syndrome), and her weight was 50 kg (25th–50th percentile according to growth chart for girls with Down syndrome). Bone age was 16 years. She had normal heart rate (76/min), respiratory rate (20/min), blood pressure (100/65 mmHg), and body temperature (36.8℃). Down syndrome stigmata (nasal eccentricity, simian line) were available on physical examination. Echocardiography revealed a PE exceeding 1 cm (). On laboratory evaluation, TSH was elevated (>100 µU/mL; normal range, 0.35–5 µU/mL), and fT4 was decreased (<0.25 ng/dL; normal range, 0.8–2 ng/dL). Thyroid autoantibodies were positive. After L-thyroxine therapy, facial edema and PE regressed within 15 days. fT4 and TSH levels before and after treatment were shown in . She grew in accordance with growth curves for children with Down syndrome.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+24.43

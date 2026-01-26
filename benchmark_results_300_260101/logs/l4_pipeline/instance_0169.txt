@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 169
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-04T03:14:12.742728
+================================================================================
+
+GROUND TRUTH: 79.51979
+PREDICTED: 79.52
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 35-year-old African American man with a history of hypertension, carpal tunnel syndrome, osteoarthritis of the knee, and glucose-6-phosphate deficiency (G6PD) was scheduled for removal of keloids found in the occipital region of his head. His medications include amlodipine, hydrochlorothiazide, lisinopril, and cholecalciferol. He was 1.85 m (73 inches) tall, weighed 134 kg with a body mass index of 39. An airway examination on the day of surgery showed a prominent mandible, limited mouth opening, macroglossia, positive prognathism, Mallampati IV classification, and thyromental distance (thyroid notch to the tip of the jaw with the head extended) >6 cm; a thyromental distance <6 cm serves as a predictor for difficult intubation. He also had other distinct skeletal features that included prominent supraciliary arches and nose bridge, as well as large hands and feet.
+Following induction of general anesthesia with lidocaine, fentanyl, and propofol and muscle relaxation with succinylcholine, an elective Airtraq device was used for intubation with moderate difficulty. Following a second attempt, a 7.0 endotracheal tube was passed blindly into his trachea because of large immobile epiglottis that resulted in a grade IV indirect view. His surgical procedure was uneventful and he was extubated without difficulty. After full recovery in the post-anesthesia recovery unit, he was informed that he had a difficult airway and advised to inform all future anesthesia providers. In addition, because of the high index of suspicion for acromegaly he was educated about the possibility of having this disorder and was advised to follow up with his primary care provider for further evaluation.
+Endocrine tests performed subsequently included serum cortisol, adrenocorticotropic hormone, thyroid-stimulating hormone, prolactin, hemoglobin A1C, insulin-like growth factor 1 (IGF-1), GH, and parathyroid hormone levels. All of his biochemical markers were normal except for his serum IGF-1 and GH (Table ) that were 700 ng/ml and 22.5 ng/ml, respectively: twofold greater than the reference normal upper limit. A transthoracic echocardiogram showed moderate left ventricular hypertrophy with preserved systolic left ventricular function. Magnetic resonance imaging of his brain showed a large mass arising from the sella and extending into the suprasellar cistern (19 × 12 × 20 mm), consistent with pituitary macroadenoma (Fig. ).
+A neurosurgical evaluation was performed and he underwent a transsphenoidal resection of his pituitary tumor 3 months later. Given his known difficult airway, he was intubated using an awake oral fiberoptic technique. His perioperative period was uneventful. Pathological evaluation showed the resected pituitary adenoma to be focally reactive for prolactin and GH, and was negative for adrenocorticotropic hormone, thyroid-stimulating hormone, follicle-stimulating hormone, and luteinizing hormone. Serum laboratory tests performed 3 weeks postoperatively showed normalization of his prolactin, IGF-1, and GH levels (Table ).
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+79.52
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Ideal Body Weight', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'sex': 'male', 'height_cm': 185.0}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'sex': 'male', 'height_cm': 185.0}}, {'stage': 'compute', 'success': True, 'result': 79.52, 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}], 'method': 'l4_pipeline'}
+

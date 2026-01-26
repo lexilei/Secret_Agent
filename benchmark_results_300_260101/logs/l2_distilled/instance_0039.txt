@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 39
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T21:37:19.727441
+================================================================================
+
+GROUND TRUTH: 29.93751
+PREDICTED: 2021.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A healthy 18-year-old male was admitted due to kidney failure (serum creatinine: 3 mg/dL), proteinuria (1.89 g/day), and recent past episodes of intermittent macrohematuria. Urine smear disclosed 30–50 red blood cells per high power field (). Four months before admission, a routine blood exam had been within normal limits, except for a urinalysis that had shown 10 red blood cells per high power field. Past medical history was negative for prior upper respiratory tract infections or any infections of clinical relevance. At the time of admission, physical examination was normal; blood pressure was 110/70 mmHg. A renal ultrasound showed kidneys with normal shape and measurements with echogenic alterations, while all complementary serologic studies were noncontributory: blood, urine, and throat cultures, HIV, hepatitis B and C serologies, complement levels, p- and c-ANCA antibodies, antiglomerular basement membrane antibodies, and electrophoretic proteinogram. Podocyturia was performed as described previously []. Briefly, the podocyte count was assessed by counting in urinary smears the number of cells in 10 microscopy fields of ×20. The podocyte count was 2.1 cells per ×20 field and the number of podocytes per gram of urinary creatinine was 166 (). Podocytes were identified by tagging synaptopodin (ab109560 Alexa Fluor®, Abcam, Cambridge, UK), an specific marker of podocytes, to establish their identity by immunofluorescence techniques using a secondary antibody (Alexa Fluor 488, Abcam, Cambridge, Uk). The smears were analyzed employing an epifluorescence microscopy, Nikon Eclipse E200. This result was compared with 10 controls (6 males and 4 females; mean age: 20 ± 2.1 years, with no past history of morbidities: serum creatinine, 0.7 ± 0.1 mg/dL; mean 24-hour urinary albumin excretion, 66 ± 12 mg/day. The mean podocyte count was 0.11 ± 0.3 cells per ×20 field, while the mean number of podocytes per gram of urinary creatinine was 8.3. One day after admission, a kidney biopsy was performed and was consistent with IgA nephropathy, with the following Oxford score over 14 glomeruli: M1E0S0T0. The immunofluorescence was positive for IgA and mesangial C3 deposits +++/4 y C3. Due to the rapidly progressive course of the altered kidney function, oral methyl prednisone 1 mg/kg/day was started. Two weeks later when creatinine was 1.2 mg/dL, amiloride was started at 5 mg/day. Four weeks after initiation of therapy, proteinuria and hematuria were negative and serum creatinine dropped to 0.7 mg/dL (). Two consecutive podocyturia tests were similar to controls after one year of follow-up. Current therapy consists of amiloride 5 mg/day and valsartan 80 mg/day.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2021.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 2021.0}
+

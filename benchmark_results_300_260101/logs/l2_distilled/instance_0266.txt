@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 266
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T21:37:26.317627
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 66-year-old male with a past medical history significant for hypertension, hyperlipidemia, ischemic stroke, coronary artery disease, and asthma was admitted for cardiac catheterization for worsening angina. He had symptoms of crescendo angina with New York Heart Association (NYHA) class IV symptoms and was referred by his primary cardiologist for coronary angiography with the intent to pursue revascularization as warranted. He had established coronary artery disease in 2012, with pharmacological myocardial perfusion imaging demonstrating inferior infarct and peri-infarct ischemia with an overall preserved systolic function for which medical treatment was pursued. In 2014, he reportedly underwent coronary angiography, which demonstrated a chronic total occlusion of the right coronary artery with grade III collaterals to the right coronary system and moderate non-obstructive disease of the left circumflex artery. In the interim, he ceased tobacco smoking and received guideline-directed medical therapy. He was doing well with optimal medical therapy, which included aspirin and clopidogrel, until three weeks prior to this presentation when he noted the onset of recurrent angina. Angina initially occurred with mild exertion, subsequently progressed to angina at rest, and he was admitted to hospital with unstable crescendo angina.
+On admission, his vital signs were stable. His physical exam was unremarkable. A 12-lead electrocardiogram (EKG) demonstrated inferior Q waves and left ventricular hypertrophy without acute ST-T abnormalities (Figure ). Cardiac biomarkers were normal (peak creatinine phosphokinase-MB (CK MB) fraction and troponin T were 9.9 ng/mL (normal range 0.0-10.4) and less than 0.03 ng/mL (<0.03 negative), respectively. Coronary angiography revealed multi-vessel coronary artery disease with a likely culprit lesion involving the proximal left circumflex artery (Videos -). He underwent successful drug-eluting stent (DES) deployment to the proximal left circumflex artery (Video ). PCI was uneventful and guideline-directed medical therapy was continued. Despite long-term adherence to clopidogrel, platelet reaction unit (PRU) was 235. Due to a high on treatment PRU, with levels greater than 208 associated with an increased risk of stent thrombosis [-], a decision was made to transition to ticagrelor. He received a single 180 mg loading dose of ticagrelor. Four hours after receiving ticagrelor, he complained of shortness of breath, throat pain, neck discomfort, and swelling of the tongue. His vital signs remained stable, and he did not exhibit any skin eruption. He demonstrated mild swelling of the tongue and significant swelling of his throat and uvula. No wheezing was noted on exam. He received supplemental oxygen and otolaryngology (ENT) consultation was sought. He was treated with dexamethasone, as well as H1 and H2 histamine blockers. After the first dose of treatment, his symptoms improved. He was closely monitored. The following morning, ENT performed flexible fiberoptic laryngoscopy, which revealed a mild edematous pharyngeal area. Based on the clinical scenario, a provisional diagnosis of ticagrelor-induced angioedema was entertained. He did not have any history of allergy to any medications, contrast medium, or heparin. The decision was made to discontinue ticagrelor. His symptoms improved over the next few days with a tapering dose of steroids and antihistamines. The final decision was made to double the dose of clopidogrel and the patient was discharged with 150 mg of clopidogrel and 81 mg of aspirin daily. He has not had any ischemic symptoms or coronary events over a six-month period of follow-up.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'HEART Score for Major Cardiac Events', 'extracted_values': {'age': 2, 'risk_factors': 2}, 'result': 4, 'method': 'python', 'formula': 'History + ECG + Age + Risk factors + Troponin (0-10)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'HEART Score for Major Cardiac Events', 'extracted_values': {'age': 2, 'risk_factors': 2}, 'result': 4, 'method': 'python', 'formula': 'History + ECG + Age + Risk factors + Troponin (0-10)'}}
+

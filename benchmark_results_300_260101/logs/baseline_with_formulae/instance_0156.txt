@@ -1,0 +1,57 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 156
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-02T03:23:08.593427
+================================================================================
+
+GROUND TRUTH: 21.54697
+PREDICTED: 35.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 48-year-old woman with chronic tension headaches comes to the physician because of several episodes of bilateral flank pain and reddish urine within the past month. Current medications include aspirin, which she takes almost daily for headaches. Her temperature is 37.4°C (99.3°F) and her blood pressure is 150/90 mm Hg. Physical examination shows costovertebral tenderness to percussion bilaterally. Laboratory studies show a hemoglobin concentration of 10.2 g/dL and serum creatinine concentration of 2.4 mg/dL. Urine studies show:
+Urine
+Protein
+3+
+RBC > 16/hpf
+WBC 2/hpf
+There are no casts or dysmorphic RBCs visualized on microscopic analysis of the urine.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the MDRD GFR, we need the following values from the patient note:  
+- **Serum creatinine (Scr):** 2.4 mg/dL  
+- **Age:** 48 years  
+- **Gender:** Female (gender coefficient = 0.742)  
+- **Race:** Not specified (assume non-Black; if Black, multiply result by 1.212)  
+
+The **MDRD GFR equation** is:  
+\[ \text{GFR} = 175 \times \text{Scr}^{-1.154} \times \text{age}^{-0.203} \times \text{gender coefficient} \]  
+
+Plugging in the values:  
+\[ \text{GFR} = 175 \times (2.4)^{-1.154} \times (48)^{-0.203} \times 0.742 \]  
+
+Calculating step-by-step:  
+1. \( 2.4^{-1.154} ≈ 0.383 \)  
+2. \( 48^{-0.203} ≈ 0.715 \)  
+3. Multiply all terms:  
+   \( 175 \times 0.383 \times 0.715 \times 0.742 ≈ 35.3 \)  
+
+If the patient is **Black**, multiply by 1.212:  
+\[ 35.3 \times 1.212 ≈ 42.8 \]  
+
+Since race is **not specified**, we assume non-Black.  
+
+**Final answer:**  
+35

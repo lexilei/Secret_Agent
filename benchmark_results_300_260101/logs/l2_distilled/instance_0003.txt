@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 3
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T21:37:19.016187
+================================================================================
+
+GROUND TRUTH: 57.65181
+PREDICTED: 57.679
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62 year old Caucasian female patient (height - 1.60 m, weight 72 kg, BMI 28.1) was admitted to hospital with AKI (patient’s baseline serum creatinine was 85 μmol/L and eGFR was 63 ml/min/1.73 m2 by MDRD equation) whilst on treatment for mastoiditis. Her background medical history included hypertension, and type 2 diabetes for which she was on regular sitagliptin-metformin 50/1000 mg half tablet twice a day, metoprolol 25 mg twice daily, lisinopril 10 mg daily and simvastatin 40 mg daily. She had a long medical history of recurrent otitis media for which she required grommet insertion. She was managed as outpatient with topical and oral ciprofloxacin by her otolaryngologist. Trial of oral trimethoprim-sulphamethaxazole (Bactrim DS) was prescribed without much clinical improvement. Eight weeks prior to this admission, she had symptoms of earache, localised post auricular swelling and fever. A CT scan showed mastoiditis and a contiguous subperiosteal abscess. A brain Magnetic Resonance Imaging (MRI) scan and Technetium 99 m labelled bone scan which revealed osteomyelitis (OM) of the petrous temporal bone (Figure ). She underwent an emergency cortical mastoidectomy with drainage of the abscess and insertion of a new right ear grommet. Empirical therapy with ticarcillin-clavulanate (12.4 grams/day) was commenced.
+A surface swab from the ear isolated Escherichia coli (which was sensitive to ticarcillin-clavulanate, piperacillin-tazobactam, cefepime and gentamicin, but resistant to ceftriaxone and ciprofloxacin). Susceptibilities were done using Vitek2 (Biomerieux, Marcy l’Etolie, France) using standard Gram negative card. Based on the antibiogram the isolate most likely had underlying extended spectrum beta lactamase, although confirmatory testing was not done as per current testing policy (non-sterile site isolate). The operative specimens of pus and tissue taken at the time of surgery remained sterile. Her antibiotic was changed to cefepime (6 grams/day).
+She made good progress and was discharged with a plan of continuing cefepime for 6 weeks as treatment of OM on ambulatory care basis. After 2 weeks of therapy, she developed malaise and dysgeusia.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 62.0, 'actual_weight': 72.0, 'weight_used': 60.22913385826772, 'weight_type': 'adjusted (overweight)', 'bmi': 28.12, 'ibw': 52.38, 'creatinine': 0.9615384615384615, 'sex': 'female', 'gender_coef': 0.85}, 'result': 57.679, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 62.0, 'actual_weight': 72.0, 'weight_used': 60.22913385826772, 'weight_type': 'adjusted (overweight)', 'bmi': 28.12, 'ibw': 52.38, 'creatinine': 0.9615384615384615, 'sex': 'female', 'gender_coef': 0.85}, 'result': 57.679, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}}
+

@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 113
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T20:50:30.298080
+================================================================================
+
+GROUND TRUTH: 24.26
+PREDICTED: 25.1
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 58-year-old Asian female with a five-year history of depression presented to the emergency room with progressive generalized weakness, nausea, vomiting, and weight loss over the past three months. She stated her symptoms recently started worsening over the past two weeks. She complained of increased thirst, generalized bone pain, and weight loss of greater than 20 pounds in the past one month. Despite being on antidepressants, the patient presented with symptoms of depression. She denied any history of hypercalcemia, hyperparathyroidism, or cancer. She denied any history of smoking, alcohol, or use of illicit drugs. Family history was unremarkable.
+On physical examination, she was afebrile, blood pressure 110/73, and pulse 82 beats per minute. Tongue was dry on examination. Neck revealed a 4 × 4 cm fluctuant smooth contour nodule that was nontender on palpation and moved with deglutition. The patient was subsequently worked up and found to have hypercalcemia, (serum calcium level, 23.3 mg/dL) (normal range 8.6–10.6 mg/dL), (phosphorous, 3.1 mg/dL) (normal range 2.4–4.4 mg/dL), albumin 2.8 g/dL (normal range 3.5–5.0 g/dL), BUN 52 mg/dL (normal range 7–21 mg/dL), creatinine 3.8 mg/dL (normal range 0.7–1.5), blood glucose 91 mg/dL (normal range 65–105 mg/dL) Blood work for ANA, Rheumatoid factor, ACTH, cortisol, liver functions were unremarkable.
+Intravenous hydration and loop diuretics were administered to promote kalciuresis. After the patient was resuscitated, further evaluation revealed plasma level of intact parathyroid hormone (PTH) to be 1364 pg/mL (normal 10–65 pg/mL). Thyroid ultrasonography showed 3.5 × 4.5 × 3.2 cm complex cystic and solid lesion in the right thyroid gland. A parathyroid scan with Technitium-99-sestamibi scintigraphy revealed an “avid lesion with retained activity in the periphery” (). Fine needle aspiration of the cold mass revealed hemorrhagic fluid without evidence of malignant cells in the tissue. The tissue stained for PTH was negative for thyroid transcription factor-1 (TTF1). A CT scan of head and abdomen was unremarkable. Preoperatively, dual energy X-ray absorptiometry bone mineral density study (DEXA) showed osteopenia of the lumbar spine, left hip, and left femoral neck.
+The patient underwent surgical exploration for the cyst twice by two different surgeons on two separate occasions. The first surgery was stopped half way with the postoperative diagnosis of parathyroid carcinoma that was not operable due to 2-3 cm mass underneath the strap muscles that was adherent to the right side of the trachea and dense fibrotic tissue (initially suspected to be a tumor) along the right side of the neck. The patient's condition was further complicated by paralysis of the right vocal cord from the first surgical exploration.
+In the second surgical exploration, the following steps were taken.
+The previous incision was reopened and the flap was raised in the superior direction with use of cautery. Sternohyoid muscles were ligated. There was dense inflammatory tissue involving the sternothyroid muscle, carotid, and jugular veins. The sternothyroid muscle was firmly adherent to the thyroid. Dissection began with incision of the median raphe and the isthmus muscle and proceeded in the medial to lateral direction. The thyroid was then elevated at the level of trachea medially and the right recurrent laryngeal nerve was identified inferiorly.
+The patient was preoperatively documented to have paralysis of the right vocal cord. However, the right recurrent laryngeal nerve was later found to be intact after stimulation with a threshold of 1.7 mA. Following stimulation, the intact recurrent laryngeal nerve was dissected into the superior mediastinum and superiorly in its entry at the cricothyroid membrane. There was dense inflammatory tissue adhering to both the strap muscles and the right lobe of thyroid. Suspecting a tumor, an incision was made along the borders of the mass. In the attempt to resect the tumorlike mass, the right lobe of thyroid adhering to the dense mass was resected as well. The frozen section of the dense mass revealed only collagen and fibrous tissue. The sternothyroid muscle, the carotid artery, and the jugular vein were then freed from the dense inflammatory tissue in an en bloc dissection. Further into the dissection, a cystic mass with a glistening capsule was then found in the superior mediastinum near adjacent parathyroid tissue. The cyst was removed from the superior mediastinum and the specimen was sent for frozen section. Microcopic analysis of the cystic mass confirmed the diagnosis of an enlarged hypercellular parathyroid (330 mg). In addition to the hypercellular parathyroid tissue, the specimen contained hyalinized fibrous connective tissue scar, right thyroid lobe, and the cystic wall. Within the fibrous tissue there was hemorrhage and residual hypercellular parathyroid tissue with osteoid focus ().
+After surgery, the patient had variable parathyroid hormone levels between 110 and 292 pg/mL (normal range 10–65 pg/mL) along with hypocalcaemia. The patient underwent MIB1 scintigraphy for detection of aberrant parathyroid tissue causing elevated parathyroid hormone levels. Postoperative MIBI scintigraphy study was negative for parathyroid tissue.
+The patient was prescribed calcium 1 gram per day. Her symptoms of polyuria, polydipsia, and depression subsequently subsided after surgery. The patient restored her original voice with resolution of voice hoarseness. Renal functions improved (creatinine 1.1 mg/dL) (normal range 0.7–1.5 mg/dL). Repeat neck ultrasonography and 99 mTc methoxyisobutylisonitrile (MIBI) scintigraphy after six months did not reveal remaining active parathyroid tissue. However, she developed low T4 (0.5 ng/dL) and elevated TSH (14.2 uIU/mL) because of hemithyroidectomy. She was then maintained on Synthroid 50 mcg orally every day. After a 3-year follow-up, the patient remained asymptomatic.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+25.1

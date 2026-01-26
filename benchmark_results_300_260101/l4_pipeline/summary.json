@@ -1,0 +1,30 @@
+{
+  "experiment": "l4_pipeline",
+  "level": "L4",
+  "total_instances": 300,
+  "correct_exact": 257,
+  "correct_tolerance": 260,
+  "errors": 0,
+  "accuracy_exact": 0.8566666666666667,
+  "accuracy_tolerance": 0.8666666666666667,
+  "error_rate": 0.0,
+  "total_cost_usd": 1.3062500000000001,
+  "avg_cost_usd": 0.004354166666666667,
+  "total_tokens": 1045000,
+  "avg_latency_ms": 13964.623308976492,
+  "stage_stats": {
+    "identify_success": 300,
+    "identify_fail": 0,
+    "extract_success": 300,
+    "extract_fail": 0,
+    "validate_success": 300,
+    "validate_fail": 0,
+    "compute_success": 300,
+    "compute_fail": 0
+  },
+  "identify_success_rate": 1.0,
+  "extract_success_rate": 1.0,
+  "validate_success_rate": 1.0,
+  "compute_success_rate": 1.0,
+  "total_time_seconds": 4189.487594366074
+}

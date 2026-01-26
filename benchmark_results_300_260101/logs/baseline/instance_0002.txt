@@ -1,0 +1,67 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 2
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T20:50:28.281689
+================================================================================
+
+GROUND TRUTH: 38.0
+PREDICTED: 38.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 83-year-old man with a past medical history of two myocardial infarctions, chronic obstructive pulmonary disease, and hyperlipidemia presented to the emergency room shortly before midnight with sharp chest pain, nausea, and dyspnea. The patient states he has had chest discomfort and food intolerance for the past week, but that his symptoms were far worse tonight. He notes no inciting event, recent trauma, or aggravating factors. On exam he appears uncomfortable, anxious, and is in a semi-tripod position. Vitals are pertinent for a heart rate of 144, systolic blood pressure in the 180 s, and oxygen saturation of 89% on 1L O2 via nasal cannula. Of note, the patient weighed 67.2 kg, and was 173 cm tall. Chart review showed that he had lost approximately 4 kg (last recorded weight in chart was 71.2 kg), since his last medical visit.
+Primary survey was overall unremarkable. Airway was secure, patient’s breathing improved with 3 L oxygen, breath sounds were present and equal bilaterally, vascular access was obtained, and GCS was 15. Intravenous pain medication was given which improved the patient’s blood pressure to systolic 140 s. Given this patient’s overall clinical picture, the most pressing disease processes included myocardial infarction (given history of coronary artery disease and prior infarcts), aortic dissection (given symptoms, hypertension, and medical history), pneumothorax, pulmonary embolism (the previous two diagnoses given his chest pain and decreased O2 even on 1 L of oxygen), and cardiac wall rupture (given multiple prior MIs). Other considerations include congestive heart failure, hypertensive crisis, and an underlying infection.
+Labs were drawn to include a CBC, renal panel, cardiac panel, lactate, and a type and cross. EKG was unremarkable. A chest X-ray was obtained which revealed a widened mediastinum (Fig. ).
+The patient was stabilized, but the underlying cause of his symptoms had not yet been identified. His widened mediastinum is troubling, and further drives the differential. Aortic (dissection, aneurysm), cardiac (tamponade, wall rupture), and esophageal pathology (rupture versus other masses) now move to the top of the list of diagnoses. Labs continued to be pending. Given his now overall hemodynamically stable status and clinical improvement, the decision was made to obtain a CT chest/abdomen/pelvis which revealed the following (Fig. ).
+Along with the CT scan; the initial set of labs resulted and were pertinent for leukocytosis (white blood cell count/WBC) of 19,000/mcL, creatinine of 1.4 mg/dL, lactate of 3.94 mmol/L, and troponin of 0.101 ng/mL. Although no official read of the images were immediately available, a preliminary read by the team was concerning for mega-esophagus versus a strangulated hiatal hernia. Treatment of the pathology to limit the degree of heart strain (increased troponin), ischemia (as evidenced by the WBC and lactate), and possibility for future perforation were now the primary goals. Night Hawk radiology was contacted for an emergent read, who stated that the images were consistent with a severely dilated esophagus. No pulmonary emboli were visualized, and no other acute abnormalities were reported.
+The findings, treatment modalities, risks, and benefits were discussed in depth with the patient. Given his dilated esophagus which was severe enough to cause him chest pain, dyspnea, alter his vitals, elevate his WBC, elevate lactate levels, and cause heart strain. Esophagogastroduodenoscopy (EGD) with possible video-assisted thoracoscopic surgery (VATS), possible thoracotomy, possible laparoscopy, and possible laparotomy were recommended to the patient. The goal was for direct visualization of area, decompression, and repair of any defects. The patient was in full agreement with the plan, and was taken to the operating room shortly thereafter. In the mean time, given the location of the pathology and concern for developing septic picture, the patient was started on broad spectrum antibiotics and an antifungal.
+On EGD, the patient’s esophageal distention was found to be from a large bezoar which spanned from the broncho-aortic region of the esophagus to his lower esophageal sphincter. The bezoar was a phytobezoar, with evidence of medication and food particles (meat, vegetables) incorporated into it. The esophageal tissue appeared tenuous and appeared to be the cause of the patient’s lab derangements (Fig. ).
+The decompression was done carefully and meticulously by fragmenting the bezoar endoscopically using a snare device. About 2 h into the procedure, a repeat set of labs were drawn which showed significant improvement in his labs showing a WBC of now 7600/mcL (from 19,000/mcL), creatinine of 0.9 mg/dL (from 1.4 mg/dL), lactate of 0.86 mmol/L (from 3.94 mmol/L), and a troponin of 0.046 ng/mL (from 0.101 ng/mL). A discussion between the surgical team, anesthesia, and gastroenterology (via telephone) was done in the operating room for planning. Given his hemodynamic stability, improving lab values, and previous CT scan which showed no gross evidence of a leak, the decision was made to end the procedure for further resuscitation with plans to return to the OR for interval endoscopy to re-assess the esophagus. In the meantime, the patient was continued on broad spectrum antibiotics (to include antifungal coverage). He was kept Nil per os (NPO) and was admitted to the intensive care unit.
+The patient remained hemodynamically normal and clinically stable throughout the night. The multi-disciplinary team determined the best course of action to be complete bezoar debridement, placement of NG tube, nutrition and medical optimization, workup for possible underlying esophageal pathology (to include completion EGD, manometry, and pH probe), and eventual endoscopic versus surgical management of determined condition. The above was again relayed to the patient and his family who fully supported the plan. The bezoar debridement was completed, and the esophagus was inspected for luminal integrity. An NG tube was able to be carefully placed under direct visualization.
+The patient did well and was eventually able to be downgraded to the regular surgical floor. During his stay, a gastrostomy tube was obtained for feeding access and nutritional optimization. He would undergo several follow-up EGDs during his hospitalization to completely clear the bezoar and assess the esophageal lumen (Figs. and ). After discharge, the patient was further worked up and was found to have achalasia and esophagitis. Thorough workup includes a barium swallow study (patient’s barium swallow shown in Fig. ), EGD, manometry, pH study, and a chest CT (for, among other things, surgical planning). He was followed up in the outpatient setting for further management.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the patient's creatinine clearance (CrCl) using the Cockcroft-Gault equation, we follow these steps:
+
+### **1. Determine the patient’s adjusted body weight:**
+- **Height:** 173 cm  
+- **Actual weight (on admission):** 67.2 kg  
+- **Ideal body weight (IBW) for males:**  
+  \[
+  \text{IBW} = 50 + 2.3 \times (\text{height in inches} - 60)
+  \]
+  - Convert height to inches: \(173 \, \text{cm} = 68.11 \, \text{in}\)  
+  - \(\text{IBW} = 50 + 2.3 \times (68.11 - 60) = 68.65 \, \text{kg}\)  
+
+- **BMI calculation:**  
+  \[
+  \text{BMI} = \frac{\text{Weight (kg)}}{\text{Height (m)}^2} = \frac{67.2}{(1.73)^2} = 22.45 \, \text{(normal)}
+  \]
+  - Since BMI is normal, **adjusted body weight = minimum of IBW and actual weight** = **67.2 kg** (actual weight is less than IBW).  
+
+### **2. Extract relevant lab values:**
+- **Serum creatinine (on admission):** 1.4 mg/dL  
+- **Age:** 83 years  
+
+### **3. Apply the Cockcroft-Gault equation (for males):**
+\[
+\text{CrCl} = \frac{(140 - \text{age}) \times \text{adjusted weight (kg)}}{72 \times \text{creatinine (mg/dL)}}
+\]
+\[
+\text{CrCl} = \frac{(140 - 83) \times 67.2}{72 \times 1.4} = \frac{57 \times 67.2}{100.8} = \frac{3830.4}{100.8} = 38.0
+\]
+
+### **Final answer:**
+38

@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 131
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T20:50:30.631065
+================================================================================
+
+GROUND TRUTH: 5.5
+PREDICTED: 1.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 58-year-old Caucasian woman with a past medical history of stage IV colon cancer being treated actively with FOLFOX and bevacizumab presented to the emergency department (ED) with complaint of left-sided chest pain and left shoulder pain which started over a year ago but acutely increased in intensity and frequency over the past three weeks. The pain was inconsistently worse with position, associated with dyspnea, left-sided neck pain, and belching, without fever, chills, cough, abdominal pain, nausea, vomiting, diarrhea, dysphagia, melena, or hematochezia. Her last chemotherapy treatment was five days prior. She was initially diagnosed with the cancer 2.5 years ago with metastasis to the liver and was treated initially with diverting colostomy and chemotherapy with bevacizumab, later modified to include FOLFOX. The patient denied nonsteroidal anti-inflammatory drug (NSAID) use or alcohol or illicit drug abuse.
+In the ED, initial vital signs showed blood pressure 174/83 mmHg, heart rate 101/minute, respiratory rate 24/minute, SpO2 97% on room air, temperature 96.9°F. Physical examination was unremarkable except for decreased breath sounds and regular tachycardia. Labs showed hemoglobin (16 g/dL), alkaline phosphatase (299 U/L), and negative urine drug screen. Serial troponins six hours apart were negative, and initial ECG showed sinus rhythm without ischemic changes. Thoracic CT angiogram ruled out pulmonary embolism and showed pneumopericardium, gastropericardial fistula, and three liver lesions suspicious for metastatic disease, as shown in .
+A transthoracic echocardiogram showed a left ventricular (LV) ejection fraction of 55-60%, no valvular disease, and a normal pulmonary pressure and suggested the presence of pericardial air due to significant acoustic attenuation in otherwise previously normal windows. A barium swallow was performed with no visible esophageal stricture or ulceration, but the field of view did not include the stomach.
+An EGD was done and showed a normal esophagus and 3 cm penetrating gastric cardia ulcer with surrounding edema and nonbleeding vessel in the center; biopsy was negative for dysplasia, metaplasia, malignancy, or H. pylori.
+Surgical intervention was performed by cardiothoracic and general surgery teams, including median sternotomy, laparotomy, intraoperative transesophageal echocardiogram (TEE) to delineate the area of ulceration, posterior pericardial debridement of tissue adhesions, gastric ulcer resection and primary repair with omental patch, gastrojejunostomy feeding tube insertion, diaphragmatic patch with mesh, pericardial washout, and pericardial/pleural chest tube placement. She was transferred to the intensive care unit (ICU) and placed on total parenteral nutrition. After a few days, she was discharged home without any postoperative complications.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+1

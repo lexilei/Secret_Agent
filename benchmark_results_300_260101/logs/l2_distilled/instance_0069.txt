@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 69
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T21:37:20.443917
+================================================================================
+
+GROUND TRUTH: 96.0
+PREDICTED: 96.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 59-year-old man was admitted to the emergency department with a carrot in the rectum and mild lower abdominal discomfort. He had no specific history and denied homosexual identity. The patient's blood pressure was 132/78 mm Hg; pulse rate, 88/min; respiration rate, 18/min; and body temperature, 36.5℃. Abdominal examination revealed a soft and flat abdomen with normal bowel sounds. Digital rectal examination revealed the hard bottom of the carrot near the rectal angle and normal anal sphincter tone. His laboratory data were as follows: hemoglobin level, 14.7 g/dL; white blood cell count, 17,270/mm3; and CRP level, 6.55 mg/L. The results of evaluations for hepatitis B surface antigen, hepatitis C antibody, and HIV antibody were all negative. The foreign body was not observed on abdominal radiography, and no evidence of peritoneal or perirectal free air was observed ().
+The carrot observed during endoscopy was deemed to be too large and heavy for removal using endoscopic devices. Hence, we decided to use tenaculum forceps from the start. By using the same techniques described previously, we were able to remove the carrot successfully (). The patient's abdominal discomfort subsided immediately, and he was discharged from the hospital.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Mean Arterial Pressure (MAP)', 'extracted_values': {'systolic': 132.0, 'diastolic': 78.0}, 'result': 96.0, 'method': 'python', 'formula': 'MAP = (2*DBP + SBP) / 3'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Mean Arterial Pressure (MAP)', 'extracted_values': {'systolic': 132.0, 'diastolic': 78.0}, 'result': 96.0, 'method': 'python', 'formula': 'MAP = (2*DBP + SBP) / 3'}}
+

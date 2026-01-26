@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 156
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T21:26:53.188159
+================================================================================
+
+GROUND TRUTH: 21.54697
+PREDICTED: 36.2
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 48-year-old woman with chronic tension headaches comes to the physician because of several episodes of bilateral flank pain and reddish urine within the past month. Current medications include aspirin, which she takes almost daily for headaches. Her temperature is 37.4°C (99.3°F) and her blood pressure is 150/90 mm Hg. Physical examination shows costovertebral tenderness to percussion bilaterally. Laboratory studies show a hemoglobin concentration of 10.2 g/dL and serum creatinine concentration of 2.4 mg/dL. Urine studies show:
+Urine
+Protein
+3+
+RBC > 16/hpf
+WBC 2/hpf
+There are no casts or dysmorphic RBCs visualized on microscopic analysis of the urine.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+36.2
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 36.2}
+

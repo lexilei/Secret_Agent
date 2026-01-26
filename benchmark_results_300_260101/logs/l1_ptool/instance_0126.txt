@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 126
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:26:52.559646
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 45-year-old man presents to the doctor’s office with shortness of breath, cough, and fatigue for 3 days. This has been progressively worsening. He has a medical history significant for chronic obstructive pulmonary disease and osteoarthritis. He takes albuterol, ipratropium and aspirin. He smoked 2 and a half packs per day, and had done so for the past 26 years. After ceasing tobacco use for 1 year, he has recently begun smoking again. The blood pressure is 138/88 mm Hg, the respiratory rate is 12/min, the heart rate is 76/min, and the pulse oximetry is 87% on room air. On physical examination, the patient appears disoriented and is only somewhat comprehensible. The pupils are equal, round, and reactive to light with extraocular movements intact. Cranial nerves VII-XII also intact. The auscultation of the heart is absent of murmur, rubs, or gallops. The auscultation of the lungs demonstrate audible rales in the bases bilaterally.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 0.0}
+

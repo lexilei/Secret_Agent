@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 268
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T21:37:26.359826
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old woman presented with exertional chest pain. She visited our hospital because her symptoms were gradually intensifying for several years. Her only risk factor for heart disease was hypertension; she had no history of smoking, and she did not have dyslipidemia. Electrocardiography did not show any ischemic changes. On echocardiography, left ventricular function was preserved and neither hypokinesia nor valvular heart disease was observed. Further evaluation of coronary artery disease was considered necessary; therefore, she underwent a detailed examination using coronary computed tomography (CT) (Fig. ), which revealed an LMT occlusion. Coronary angiography also revealed that the LMT was occluded at the origin. The entire left coronary artery was visualized through collateral circulation in right coronary angiography (Fig. ). Based on blood test findings and aortic CT results, arteritis and autoimmune disease were ruled out.
+We performed off-pump CABG to treat this patient. We anastomosed the left internal thoracic artery to the left anterior descending coronary artery and the right internal thoracic artery to the left marginal artery. The patient’s hemodynamics were stable during and after the operation. The patient’s postoperative progress was smooth; her ventilator was removed the day after the operation, she began walking independently on Day 3 post-operation, and she was discharged on Day 8 post-operation. Graft patency was confirmed with coronary CT on Day 7 post-operation (Fig. ). She goes well without any symptoms during 3-years follow up.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'HEART Score for Major Cardiac Events', 'extracted_values': {'age': 1, 'risk_factors': 1}, 'result': 2, 'method': 'python', 'formula': 'History + ECG + Age + Risk factors + Troponin (0-10)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'HEART Score for Major Cardiac Events', 'extracted_values': {'age': 1, 'risk_factors': 1}, 'result': 2, 'method': 'python', 'formula': 'History + ECG + Age + Risk factors + Troponin (0-10)'}}
+

@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.vscode
+.idea
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.development
+.env.test
+.env.production
+.claude
+benchmark_results/
+benchmark_results_v25/
+.benchmark_icl_patterns/
+.benchmark_icl_results/
+.benchmark_patterns/
+papers/
+Lex/

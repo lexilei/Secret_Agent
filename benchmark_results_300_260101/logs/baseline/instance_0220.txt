@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 220
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-01T20:50:32.419838
+================================================================================
+
+GROUND TRUTH: 9.0
+PREDICTED: 10.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 42-year-old woman presented with jaundice and right upper quadrant abdominal pain. She reported progressive fatigue and dark urine over the preceding two weeks. On physical examination, she appeared jaundiced with icteric sclera. The liver edge was palpable 4 cm below the right costal margin and mildly tender. There was no abdominal distension and no evidence of altered mental status. Laboratory studies revealed markedly elevated liver enzymes, with AST 1,106 IU/L and ALT 1,888 IU/L. Total bilirubin was 25.7 mg/dL with a direct fraction of 18.2 mg/dL. Total protein was 6.9 g/dL, albumin 4.2 g/dL, alkaline phosphatase 1,160 IU/L, and INR 2.4. Viral hepatitis panels (HAV, HBV, HCV) were negative. ANA was positive (1:320 speckled pattern), and a liver biopsy demonstrated interface hepatitis with moderate fibrosis, confirming a diagnosis of autoimmune hepatitis. She was started on corticosteroids and ursodeoxycholic acid with gradual clinical and biochemical improvement.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+10

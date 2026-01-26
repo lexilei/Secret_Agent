@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 213
+CALCULATOR: Child-Pugh Score for Cirrhosis Mortality
+TIMESTAMP: 2026-01-04T03:14:13.334721
+================================================================================
+
+GROUND TRUTH: 10.0
+PREDICTED: None
+CORRECT: False
+ERROR: Could not identify calculator
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 58-year-old male presented with melena, abdominal pain and fever. He was diagnosed to have EHPVO and had undergone splenectomy at the age of 19 years when he presented with massive variceal bleeding in 1973. Physical examination revealed pallor and moderate ascites. Laboratory investigations were as follows; hemoglobin 9.1 gm/dL, total leukocyte count 11700 cells/mm3, platelet count 4.04 lakhs/mm3, albumin 1.4 g/dL, bilirubin 2.2 mg/dL, and INR of 1.1. Ascitic fluid analysis showed a total leukocyte count of 1600 cells/mm3, polymorphonuclear cell count of 1472 cells/mm3, total protein 2.5 g/dL, and SAAG 1.9. Ascitic fluid culture yielded growth of E. coli. Ultrasound abdomen with Doppler study showed a cirrhotic  liver, cavernous transformation of the portal vein and moderate ascites. Upper gastrointestinal endoscopy revealed severe portal hypertensive gastropathy and gastric fundal varix. Computerized tomography of the abdomen was consistent with the diagnosis of EHPVO; there was no evidence of any features of perforation.
+The liver and renal function tests, serum amylase and lipase levels, serum electrolytes and blood glucose levels were normal. Serum bilirubin was  2.2 mg/dL. Ascitic fluid glucose, lactate dehy-drogenase, triglycerides and adenosine deaminase were also within normal limits.
+
+Question: What is the patient's Child-Pugh Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+(no response)
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': None, 'confidence': 0.0}], 'method': 'l4_pipeline'}
+

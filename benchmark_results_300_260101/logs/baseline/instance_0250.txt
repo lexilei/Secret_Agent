@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 250
+CALCULATOR: Revised Cardiac Risk Index for Pre-Operative Risk
+TIMESTAMP: 2026-01-01T20:50:33.130110
+================================================================================
+
+GROUND TRUTH: 1.0
+PREDICTED: 3.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 52-year-old male patient presented to the urology outpatient department with a history of decreased urine passage along with burning, hematuria and pain lower back and abdomen. History of loss of appetite, vomiting was also elicited, he also gave a history of smoking and alcohol consumption. Patient was advised an ultrasonogram (USG) along with biochemical and hematological investigation. Routine examination of urine was done which revealed few red blood cells. No atypical or malignant cells are seen in three consecutive specimen of urine for cytology His renal function tests were markedly deranged, with blood urea 346 mg/dl, serum creatinine 25 mg/dl and deranged electrolytes. His blood pressure was raised 230/100 mmHg and fundoscopy showed hypertensive retinopathy. USG showed features of cystitis with hypoechoic areas extending into the thickened bladder wall with features of pyelonephritis. An infective pathology was offered as diagnosis on imaging. A clinical diagnosis of bilateral obstructive uropathy due to tumor with chronic kidney disease was made, and the patient was put on hemodialysis and cystoscopy planned at a later date. Cystoscopy findings were of a growth with small fronds/papillae, prominent at the bladder neck with a very rigid thickened bladder wall. Trans urethral resection of the bladder tumor was done and sent for histopathological evaluation. The microscopic evaluation showed a high-grade tumor arranged in discohesive cords and sheet with plasmacytoid features and prominent retraction artifact [] penetrating through the entire bladder wall into the serosa. Histopathological features of the malignant epithelial cells were uncommon and lead to a differential diagnosis of undifferentiated transitional carcinoma, metastatic or primary lymphoma plasmacytoma, lymphoepithelioma-like bladder carcinoma and a plasmacytoid variant of bladder tumor. Immunohistochemistry was done for CD138, cytokeratin (CK) CK7, leukocyte common antigen (LCA), κ and λ light chain, with positivity for CK7, CD138 [Figures and ] and negative for other markers. Based on these findings, a final histopathological diagnosis of PUC was made. The patient was advised to undergo palliative cystectomy, however he is lost to follow-up.
+
+Question: What is the patient's score of the Revised Cardiac Risk Index for Pre-Operative Risk? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3

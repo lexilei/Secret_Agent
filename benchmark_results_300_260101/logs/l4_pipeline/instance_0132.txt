@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 132
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-04T03:14:12.329482
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 0.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 50-year-old man presents to the emergency department with pain and swelling of his right leg for the past 2 days. Three days ago he collapsed on his leg after tripping on a rug. It was a hard fall and left him with bruising of his leg. Since then the pain and swelling of his leg have been gradually increasing. Past medical history is noncontributory. He lives a rather sedentary life and smokes two packs of cigarettes per day. The vital signs include heart rate 98/min, respiratory rate 15/min, temperature 37.8°C (100.1°F), and blood pressure 100/60 mm Hg. On physical examination, his right leg is visibly swollen up to the mid-calf with pitting edema and moderate erythema. Peripheral pulses in the right leg are weak and the leg is tender. Manipulation of the right leg is negative for Homan’s sign.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {'age': 50, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 50, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

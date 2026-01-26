@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 37
+CALCULATOR: CKD-EPI Equations for Glomerular Filtration Rate
+TIMESTAMP: 2026-01-01T21:37:19.677598
+================================================================================
+
+GROUND TRUTH: 74.27715
+PREDICTED: 74.284
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old man with PL was found a right-side ureteral calculi by ultrasound in the routine health examination. Thirteen years ago, when he was diagnosed with PL, CT scan found a heavy hydronephrosis in the left side. So he had accepted an open surgery of uretero-vesical reimplantation in the left side, without necessary follow-up after the surgery. Three years ago, a severe hydronephrosis was observed in the left side and kidney stone in the right side in health examination, but he did not take any further treatment. This time, CT scan demonstrated a proliferation of adipose tissue predominantly in the pelvic space (Fig. ), a severe hydronephrosis in the left side and mild hydronephrosis along with a calculi in lower ureter in the right side (Fig. ). The intravenous urography showed that the upper urinary tract in left side was barely showed up, bladder was elevated and the upper urinary tract in right side was dilated slightly (Fig. ). Serum creatinine was 99 μmol/L, the count of white blood cell was 47 per microliter in urinalysis and the urine culture was negative.
+During the surgery, patient in lithotomy position under general anesthesia, rigid ureteroscope was not able to reach into the bladder cavity due to the elongated bladder neck and elevated bladder base. So the cystoscopy was accomplished with flexible ureteroscope directly. However, the flexible ureteroscope failed to get into the right ureter with or without guidewire due to the stricture of uretero-vesical orifice. Finally, after several failed attempts of inserting a guidewire into kidney because of the tortuous lower ureter with calculi in right side and the difficulty to hold the position of flexible ureteroscope in bladder cavity, the guidewire passed the contortion of ureter and ureteral calculi. Then ureteral access sheath (UAS), in a size of 12/14Fr, was placed into the lower ureter in right side and the unbroken stone was basketed through UAS. The ureteral stent was placed routinely, and in consideration of the inconvenience to remove the stent, the wire on the stent was passed through the urethra and fixed on the catheter. Two weeks after the surgery, the catheter and the stent were removed together. A follow-up of 1 year showed that there was no progression of the hydronephrosis in right side and serum creatinine was stable.
+
+Question: Using the 2021 CKD-EPI Creatinine equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 62.0, 'creatinine': 1.1199095022624435, 'sex': 'male'}, 'result': 74.284, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 62.0, 'creatinine': 1.1199095022624435, 'sex': 'male'}, 'result': 74.284, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}}
+

@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 134
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:26:52.727253
+================================================================================
+
+GROUND TRUTH: 0.0
+PREDICTED: 0.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+We report a case of 49-years-old male who received a kidney from a live unrelated donor since 7 years ago. During these seven years multiple low grade fevers was being appeared every year that healed without a diagnosis. On 29 May 2013, he presented with 39 °C fever associated with dysuria, oliguria, right lower quadrant abdominal pain, anorexia, cough and dyspnea. The patient had also history of diabetes mellitus, hypertension and gout. Blood pressure measured 130/90 mmHg, pulse rate 96 per minute, and respiratory rate 18 per minute. Laboratory tests were as follow: BUN= 19 mg/dl, Cr= 2 mg/dl, Na= 133 mEq/l, K=4.5 mEq/l, FBS=130 mg/dl, ESR= 50 mm/hour, CRP= 44.1 mg/dl, WBC= 5.8 ×106/µL, RBC= 4.02 × 106/µL, Hg= 11.3 g/dl, hematocrit= 33.6%, MCV 83.58 fl, and platelet= 171 × 106/µL. In sonography investigation, his kidney graft was 123×55 mm with normal parenchymal echo. The test for cytomegalovirus (CMV Ag-pp65) was negative and enterobacter growth was seen in the blood culture. In high resolution computed tomography (HRCT), an increase in heart size, mediastinum vascular swelling, reticular densities, septal thickness, bronchial wall thickness, mild bronchiectasis, patchy and nodular alveolar densities on the inferior lobe of both lungs were seen. Spiral CT scan showed micro-consolidation patchy lesions on the inferior lobe of both lungs (). Bronchoscopy showed hyper-vascularity in the trachea, and in broncho-alveolar lavage (BAL) growth of non-A, non-D streptococci were detected with no growth of acid fast bacilli or mycobacterium tuberculosis. After 17 days of antibiotic and antifungal therapy, his fever did not corrupt. Spirometry results, showed a decreased FEV1 to 75%. On June 23th, inferior lobe wedge resection of the left lung was performed. In macroscopic pathologic examinations, fragments of lung tissue measuring 5×2×2 cm and gray brown and soft tissue in serial cross sections were observed. Moreover, microscopic evaluations conducted on issue removed during a procedure (). Finally, the diagnosis of BOOP was reported with no evidence of malignancy. Sirolimus was withdrawn and cyclosporine was started and dosage of prednisolone was increased. His fever was discontinued and general condition as well as pulmonary symptoms were gradually improved.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 0.0}
+

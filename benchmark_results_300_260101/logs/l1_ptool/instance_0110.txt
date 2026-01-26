@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 110
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T21:26:52.233245
+================================================================================
+
+GROUND TRUTH: 9.16
+PREDICTED: 9.16
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 43-year-old man with a medical history of hypertension and diabetes mellitus presented to the emergency department with complaints of shortness of breath and acute right leg pain. One week previously he had started to develop fever and exertional dyspnoea. On the day of presentation, he woke up with acute pain in his right leg. Vital signs on presentation were: heart rate 130/min, blood pressure 140/100 mmHg, oxygen saturation 80% on room air, and temperature 37.1°C. The patient had bilateral crackles on lung auscultation and an absent right dorsalis pedis pulse. His right foot was cold to the touch and mottled in appearance. Electrocardiography showed sinus tachycardia 130/min, left axis deviation, left ventricular hypertrophy with peaked T waves, and QTc 381 msec.
+On initial laboratory evaluation, the following values were noted: haemoglobin 17.7 g/dl (reference: 12–16 g/dl), haematocrit 59% (reference: 36–46%), white blood cells 16 K/mm3 (reference: 4.5–11 K/mm3), platelets 484 K/mm3 (reference: 140–440 K/mm3), potassium 5.8 mEq/l (reference: 3.5–5 mEq/l), blood glucose 948 mg/dl (reference: 70–105 mg/dl), anion gap 27 mEq/l (reference: 8–16 mEq/l), small acetone, creatinine 2.74 mg/dl (reference: 0.6–1.30 mg/dl), blood urea nitrogen 88 mg/dl (reference: 7–23 mg/dl), lactic acid 8.7 mmol/l (reference: 0.5–2.2 mmol/l), troponin 0.497 ng/ml (reference: <0.03 ng/ml), D-dimer >20 (reference: <0.5), prothrombin time 16.2 sec (reference: 12.2–14.9 sec), INR 1.3 (reference: <1), partial thromboplastin time 51 sec (reference: 21.3–35.1 sec), fibrinogen 853 mg/dl (reference: 183–503 mg/dl), LDH 718 U/l (reference: 140–271 U/l), CRP 289.7 mg/l (reference: <10 mg/l), ferritin 1739 ng/ml (reference: 12–300 ng/ml), procalcitonin 67 ng/ml (reference: <2 ng/ml), interleukin-6 224 pg/ml (reference: 0–15.5 pg/ml), aspartate transaminase 39 U/l (reference: 13–39 U/l), calcium 8.6 mg/dl (reference: 8.6–10.3 mg/dl), and albumin 3.3 g/dl (reference: 3.5–5.0 g/dl).
+The patient was intubated in the emergency department. Arterial blood gas analysis after intubation showed metabolic and respiratory acidosis with pH 6.96. A chest x-ray showed bilateral hazy infiltrates. Computed tomography angiography of the chest, abdomen and aorta with iliofemoral run-off showed thrombus within the proximal right superficial femoral artery and absent opacification of the right popliteal artery, posterior tibial artery, peroneal artery and anterior tibial arteries compatible with occlusion (). It also showed extensive peripheral ground-glass infiltration of both lungs. COVID-19 was diagnosed on the basis of RT-PCR testing. The patient was placed on airborne precautions and was started on ceftriaxone, azithromycin, hydroxychloroquine and therapeutic anticoagulation with heparin. The plan was to perform percutaneous thrombectomy after correction of metabolic derangements. Diabetic ketoacidosis was managed with intravenous fluids and an insulin drip. The patient was also started on haemodialysis. Unfortunately, 2 days after admission the patient had a cardiac arrest secondary to persistent hypoxia and died.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+9.16
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 9.16}
+

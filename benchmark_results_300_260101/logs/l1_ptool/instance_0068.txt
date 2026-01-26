@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 68
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T21:26:51.422850
+================================================================================
+
+GROUND TRUTH: 100.0
+PREDICTED: 100.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 50-year-old female patient with a known case of diabetes mellitus and end-stage renal disease due to hypertension was started on hemodialysis in March 2014. Permanent tunneled catheters were placed into the right internal jugular vein as the patient was not fit for AVF creation due to vascular occlusions.
+On 7 April 2019, at the end of a dialysis session, the patient developed fever (39°C) and chills. Fever was documented at 39°C, was associated with chills and rigors, and was not responding to antipyretics. In the emergency department, the patient reported no change in weight, loss of appetite, or night sweats. She denied any history of respiratory, gastrointestinal, neurological symptoms. On examination, the temperature was 39°C, the blood pressure 150/75 mm Hg, the heart rate 110 beats per minute, and the respiratory rate 18 breaths per minute. The patient was fully conscious and oriented. The remainder of the general medical examination was normal.
+She was admitted to our nephrology unit with possible source catheter-related blood stream infection. She was started on ceftazidime 2 gm IV once daily and vancomycin 1 gm IV Q HD as per the protocol. The white blood cell count was 13.3 × 103 cells, C-reactive protein was 278 mg/dl, and procalcitonin was 52.27. The electrocardiogram revealed sinus tachycardia, and chest radiography was negative.
+Blood culture from venous and central catheters was sampled separately, and the causative microorganism was identified as a Gram-negative, motile, lactose-fermenting bacillus, which was identified by the Vitek MS automatic identification system using a GN card as Leclercia adecarboxylata. Antibiotic sensitivity testing using Vitek 2 showed that it is an extended-spectrum beta-lactamase producer. The results are summarized in (). The L. adecarboxylata strain was resistant to most beta-lactams, including narrow, expanded, and broad-spectrum cephalosporins. But it was susceptible to all quinolones and carbapenems tested.
+The treatment regimen was changed to meropenem 500 mg IV once daily and gentamicin based on antibiotic susceptibility tests (ASTs) from blood cultures. This targeted therapy was successful, and the patient became afebrile. The patient received meropenem and gentamicin for two weeks, and then she was discharged in good condition.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+100.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 100.0}
+

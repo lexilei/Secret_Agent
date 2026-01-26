@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 269
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-04T03:14:13.961011
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 2.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 61-year-old woman presented to a local hospital with typical chest pain lasting for approximately 1 h. The patient history was significant for coronary angiography performed three years prior to this presentation due to typical angina pectoris induced by exercise, revealing normal coronary arteries. On this presentation, serum troponin level was high and her electrocardiogram revealed 0,5-1 mm ST segment depression in precordial derivations (Figure ). The patient was referred to our hospital for invasive management of myocardial infarction.
+Except for hypertension treated with irbesartan/hydrochlorothiazide and metoprolol, the patient had no other risk factors for coronary artery disease (CAD). She denied substance abuse, including cocaine abuse. No structural heart disease was detected by transthoracic echocardiography. Early invasive management was planned, therefore coronary angiography was performed. Left coronary angiography, performed with a 6 French Judkins diagnostic catheter, revealed a severe tubular stenosis in circumflex (Cx) artery, evident on various left and right anterior oblique projections. No other lesions (including atherosclerotic plaques) were observed in the left coronary system. On right coronary angiography, performed with a 6F right Judkins diagnostic catheter, diffuse spasm of RCA was observed, most prominent in the distal vessel. A second right coronary angiography, performed 30 s following a 200 peg nitroglycerin intracoronary bolus, revealed complete resolution of spasm (Figure ). Having suspected spasm as etiology of the severe lesion in Cx, angiography was repeated, revealing complete resolution (Figure ). The patient did not report any symptoms throughout the procedure. Resolution of the RCA and Cx stenosis with nitroglycerin suggested CIV in both territories. Furthermore, concentric lesions with otherwise angiographically normal vessels along with morphology of both stenoses were more compatible with arterial vasospasm rather than an atherosclerotic plaque. Beta blocker therapy was discontinued and the patient was discharged on oral diltiazem. On follow-up, she remained symptom-free with medical treatment.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.7}, {'stage': 'extract', 'extracted': {'age': 61, 'sex': 'female', 'has_hypertension': True}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 61, 'sex': 'female', 'has_hypertension': True}}, {'stage': 'compute', 'success': True, 'result': 2.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

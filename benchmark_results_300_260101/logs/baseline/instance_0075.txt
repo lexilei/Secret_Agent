@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 75
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-01T20:50:29.570246
+================================================================================
+
+GROUND TRUTH: 53.33333
+PREDICTED: 53.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 72-year-old woman presented to the emergency room with dyspnea and myalgia that developed 2 weeks after undergoing acupuncture therapy on both knees due to arthralgia. Vital signs on admission showed hypotension (80/40 mm Hg), tachycardia (118 beats per minute), tachypnea (20 per minute), and hypothermia (35℃). On physical examination, the patient had multiple needle scars on both knees with dappled rashes on her entire body (). Her laboratory results showed elevated white blood cell counts (10100/mm3), with neutrophil 88%, elevated high sensitive C-reactive protein level of 36 mg/dL (reference range, 0-0.5 mg/dL), blood urea nitrogen/creatinine 71/4.5 mg/dL, myoglobin 5169 ng/mL (reference range, 16.3-96.5 ng/dL), creatine kinase myocardial band 9.7 U/L (reference range, 0-3.6 U/L), Troponin I 0.28 ng/mL (re-ference range, 0-0.1 ng/mL). A chest radiograph showed cardiomegaly and an electrocardiography showed atrial fibrillation with rapid ventricular response. A transthoracic echocardiogram demonstrated concentric left ventricular hypertrophy with fluid collection in the posterolateral wall of the pericardium with no evidence of valvular vegetation or tamponade physiology (). Pericardial aspiration of the fluid revealed a bloody material () and cultures grew Staphylococcus aureus. Blood cultures showed staphylococcal bacteremia (). Lab analysis of aspiration fluid showed elevated white blood cell counts >50000/mm3), with polymorph-onuclear neutrophil 90%, pH 7.3, glucose 5 mg/dL, lactate dehydrogenase 12397 U/L, albumin 2.4 g/dL and total protein 6.2 g/dL. Percutaneous drainage and empiric antibiotic treatment were started immediately. However, the patient expired due to refractory sepsis and organ failure.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+53

@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 101
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-04T03:14:12.044309
+================================================================================
+
+GROUND TRUTH: 9.32
+PREDICTED: 9.32
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 86-year-old male previously treated for hypertension presented to the emergency department with two days of sudden abdominal pain and nausea which resolved temporarily after self-induced emesis. Patient was examined and investigated thoroughly. Temperature was 36.3 C, blood pressure was 138/81, and pulse was 78. Physical examination revealed a tender, firm and distended abdomen with hyperactive sounds. Laboratory analysis revealed hemoglobin at 10.3 g/dL, leukocytes 3.1 K/cmm, urea nitrogen 19 mg/dl, creatinine 0.6 mg/dl, sodium 137 mmol/l, potassium 3.6 mmol/l, chloride 104 mmol/l, bicarbonate 24 mmol/l, calcium 8.6 mg/dl, total protein 6.3 g/dl, albumin 3.1 g/dl, total bilirubin 0.7 mg/dl, alkaline phosphatase 98 U/l, SGOT 20 U/l, SGPT 27 U/l. Laboratory values were consistent with patient’s previous clinic visits. Computed tomography (CT) of the abdomen revealed a fluid-filled, significantly dilated stomach as well as multiple dilated loops of small bowel with air-fluid levels consistent with mechanical small bowel obstruction caused by intussusception of small bowel (Fig. ). After initial fluid resuscitation and antibiotic administration, consent was obtained for emergent exploratory laparotomy. The exploratory laparotomy revealed a 3.0 × 2.5 cm intraluminal calculus in the ileum responsible for the small bowel obstruction, without evidence of intussusception (Fig. ). The obstructing enterolith was ‘milked’ proximally until it reached, and subsequently ‘fell into,’ an isolated 6.0 × 3.0 cm jejunal diverticulum which had not been previously noted on CT imaging. The enterolith was removed along with the segment of the jejunum containing the isolated diverticulum, which was the source of the enterolith (Fig. ). On histologic examination, the mucosa of the extracted diverticulum was found to be granular and erythematous; the remaining small bowel had marked mucosal ulceration and near-transmural inflammation with granulation tissue. Hospital course was complicated by decreased urine output that resolved after fluid resuscitation. On the fourth postoperative day, nasogastric tube was discontinued, diet was advanced and tolerated, and the patient was discharged. Review of the patient’s CT scan of the abdomen revealed the isolated jejunal diverticulum that was consistent with the excised diverticulum (Fig. ).
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+9.32
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'confidence': 0.0}, {'stage': 'extract', 'extracted': {'age': 86, 'sex': 'male', 'creatinine_mg_dl': 0.6}, 'missing': ['weight_kg']}, {'stage': 'validate', 'is_valid': False, 'missing': ['weight_kg'], 'cleaned': {'age': 86, 'sex': 'male', 'creatinine_mg_dl': 0.6}}, {'stage': 'repair_1', 'extracted': {'age': 86, 'sex': 'male', 'creatinine_mg_dl': 0.6}, 'is_valid': False, 'missing': ['weight_kg']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

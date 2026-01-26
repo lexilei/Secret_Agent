@@ -1,0 +1,41 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 122
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:26:52.473604
+================================================================================
+
+GROUND TRUTH: 4.5
+PREDICTED: 4.5
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 14-year-old female presented to our pediatric tertiary hospital emergency department (ED) with acute dyspnea and pleuritic chest pain following a presyncopal episode while walking up a flight of stairs. She was persistently tachycardic with a heart rate of 120 beats per minute at rest and higher with minimal exertion, tachypneic (20 breaths per minute), normotensive (mean arterial pressure 80-88 mmHg) and had mild hypoxia with baseline saturations of approximately 90% at rest, decreasing to the mid-80s with mobilisation. She was commenced on supplemental low flow nasal oxygen at a flow rate of three litres per minute which improved her oxygen saturations.
+The patient was otherwise well with no history of recent viral illness, surgery, trauma, or periods of immobilisation. She had however commenced a COCP consisting of ethinyloestradiol (20 micrograms) and levonorgestrel (100 micrograms) ten weeks prior. The COCP was prescribed by her local doctor for a sharp pelvic pain which started with menstruation and persisted for three weeks, with complete resolution while taking the COCP. The patient reached menarche at twelve years old and experienced dysmenorrhea for the first three days of menstruation with menorrhagia. Apart from her maternal grandmother having endometriosis, there was no significant family history including thrombophilia or thromboembolic events. The patient denied smoking or recreational drug use. She was a competitive sports player who, within a month of commencing the COCP, experienced dyspnea and intermittent chest pain on exertion. Although these symptoms initially resolved with rest, her time to recovery gradually increased.
+In the ED, a chest X-ray (CXR) revealed mild prominence of the pulmonary arteries bilaterally. Blood tests revealed elevated levels of D-dimer, 5.01 mg/L (normal range 0.02–0.49) and cardiac troponin I (cTnI) of 194 Hng/L (normal < 10). Given the history and clinical findings, a computer tomography pulmonary angiogram (CTPA) was performed and confirmed the presence of a saddle PE () with thrombus occluding the right main pulmonary artery, left upper lobe segmental artery, and left interlobar artery. There was also evidence of right heart strain on the CTPA. An urgent echocardiogram revealed systolic dysfunction of the right ventricle (RV) and basal segment dyskinesia, and blood flow through the right pulmonary artery appeared absent. Given the presence of right heart strain, elevated troponin levels, and persistent tachycardia and hypoxia, urgent opinions were sought from multiple pediatric specialists including a respiratory physician, interventional cardiologist, haematologist, and cardiothoracic surgeon.
+The patient was administered a 10 milligram (mg) bolus of intravenous alteplase, a recombinant tissue plasminogen activator (tPA), and admitted to the pediatric intensive care unit (PICU) where she then received an infusion of tPA (0.3 mg/kg/h) for 3 hours. The total dose of tPA administered was 80 mg. Following this, the patient was commenced on an unfractionated heparin (UHF) infusion, targeting an anti-Xa level of 0.3–0.7 U/mL. COCP administration was ceased.
+Following thrombolysis, the patient's tachycardia resolved, although she remained tachypneic. A repeat echocardiogram within twelve hours showed improvement in the RV systolic dysfunction and definite blood movement through the right pulmonary artery, with ongoing presence of a significant filling defect occupying the vessel. UHF infusion was continued for 48 hours, after which time anticoagulation was changed to 80 mg subcutaneous enoxaparin, a low molecular weight heparin (LMWH), administered twice a day. Given the significant embolic material seen on the initial CTPA, further discussions ensued regarding the potential benefits and risks of catheter-directed intervention with the aim of decreasing clot burden and potentially reducing the risk of chronic thromboembolic pulmonary hypertension (CTEPH).
+A repeat CTPA was performed on the fourth day of admission which revealed a substantial decrease in clot burden, no visible saddle embolus, and reduced right heart strain (). The patient no longer required supplemental oxygen and made a steady recovery. Eight days post admission, she was transitioned to a direct oral anticoagulant (DOAC), rivaroxaban, at standard adult dosing (15 mg twice a day for three weeks followed by 20 mg daily), prior to discharge home.
+A thrombophilia screen performed was unremarkable (). She was referred to an adolescent gynaecologist to explore suitable alternatives to taking the COCP. Outpatient spirometry, body plethysmography, and diffusing capacity tests performed a month post discharge were unremarkable. She returned to her baseline function with resolution of the shortness of breath on exertion. A CTPA and echocardiogram performed six months post presentation revealed complete resolution of all pathological changes, and rivaroxaban therapy was stopped (). Written consent was obtained from the patient's parent for this case report.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4.5
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 4.5}
+

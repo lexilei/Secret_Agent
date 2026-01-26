@@ -1,0 +1,40 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 7
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T21:26:50.094619
+================================================================================
+
+GROUND TRUTH: 55.625
+PREDICTED: 55.6
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 68-year-old Indian male patient presented with the complaints of generalized malaise, poor appetite, weight loss, headache and polyuria for last 2 months. He had a chronic ill-looking appearance, a dehydrated tongue and dry skin. Urine output was 5000-5500 mL/day with a history of nocturia and craving for cold fluids. No history of head injury, tubercular meningitis, central nervous system infections or chronic drug intake.
+His physical findings on admission were height 156 cm; body weight, 44.5 kg and body mass index, 18.3. Blood pressure was 100/64 mmHg without postural change and pulse rate, 68/min with a regular rhythm. No edema was noted in his legs or feet. He had scant axillary and pubichair. Neurologic examination including visual field was found to be normal.
+Laboratory findings were as follows: White blood cell count 6400/mm3 (neutrophils 51%, lymphocyte 42%, monocyte 5%, eosinophils 2%, basophils 0%); hemoglobin, 13.4 g/dL; hematocrit, 35.5%; red blood cell count, 3.4 × 106/mm3; and platelets, 3.3 × 105/mm3 Serum sodium was 137 mmol/L; potassium, 3.9 mmol/L; and chloride, 103 mmol/L. Blood urea nitrogen was 12 mg/dL; serum creatinine, 0.8 mg/dL; and uric acid, 6.1 mg/dL. Fasting plasma glucose was74 mg/dL; hemoglobin A1c, 4.9% and serum calcium of 9.4 mg/dL.
+Anterior pituitary function tests revealed panhypopituitarism (serum cortisol 1.8 μg/dL, Adrenocorticotrophic hormone 15.6 pg/mL, total T3 56 ng/mL, total T4 4.2 μg/dL, thyroid stimulating hormone 1.86 mIU/mL, luteinizing hormone 0.8 mIU/mL, follicle stimulating hormone 1.67 mIU/mL, serum testosterone of 122 ng/dL and serum prolactin of 12 ng/mL. Water deprivation test revealed central diabetes insipidus [].
+Magnetic resonance imaging (MRI) revealed [Figures and ] a well-defined sellar-suprasellar lesion, which was heterogenous and mildly hyperintense on T1-weighted images and brightly hyperintense on T2-weighted (T2W) images. Internal well-defined hypointense nodule was also seen on T2W images. No obvious post contrast enhancement was seen. Pituitary tissue was compressed and stalk was central. The mass was abutting chiasma, but no obvious mass effect/compression seen. Findings were highly suggestive of RCC.
+Transsphenoidal surgery with complete excision of the mass was carried out and histopathological examination revealed cyst wall with columnar lining suggestive of RCC. Patient was started on replacement doses of levothyroxine, hydrocortisone tablets and testosterone injections. His symptoms improved and he was doing well in follow-up. Surprisingly his polyuria improved in postsurgical period without vasopressin replacement.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+55.6
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 55.6}
+

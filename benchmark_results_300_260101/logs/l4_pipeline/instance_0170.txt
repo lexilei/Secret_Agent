@@ -1,0 +1,44 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 170
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-04T03:14:12.750638
+================================================================================
+
+GROUND TRUTH: 54.19299
+PREDICTED: 54.193
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 47-year-old woman presented with lower extremity weakness and paresthesia, gait disorder, and bladder and rectal disorder. Four months after the onset of numbness and motor weakness of the lower extremities, she presented to our hospital without any trauma. One week before presentation, the gait disorder and bladder and rectal disorder became apparent. The patient’s history included hypertension. There was no family history of acromegaly or OPLL.
+She weighed 72 kg, her height was 162.0 cm, and her BMI was 27.4 kg/m2. Blood pressure at admission was 160/90 mmHg. Her facial appearance was acromegaly-like, with a frontal protrusion, nose and lip enlargement, and mandibular protrusion (Fig. a). We also observed thickening of the soft tissue of the palm and fingers and thickening of the Achilles tendon. There was no history of headache, sweating, or fatigue, and we did not observe Raynaud’s phenomenon or carpal tunnel syndrome.
+In the upper extremities, no abnormal neurological findings were observed. However, weakness in both lower extremities (iliopsoas muscle MMT4, quadriceps femoris MMT4) was observed. Both lower extremity tendon reflexes were enhanced, and clonus was observed. Hypo-sensation (5/10) was observed below the umbilicus. These neurological findings suggested spinal cord lesions below the T10 level. She was barely able to walk on flat ground using two canes, and the Japanese Orthopedic Association score was 9 points (4–1–2-0-0-2).
+The complete blood count was normal. An evaluation of glycemic status revealed a fasting plasma glucose level of 115 mg/dL. The glycosylated hemoglobin level was 5.9%, and the plasma glucose level during the OGTT (75 g glucose) at 2 h was 153 mg/dL. These results ruled out type 2 diabetes. Hepatic function tests and renal function tests revealed no abnormalities except for high alkaline phosphatase (ALP) (432 IU/L). Estimations of serum electrolytes, including sodium, potassium, calcium, and phosphorous were within normal limits. Hormonal evaluation showed raised serum IGF-1 (1914 ng/mL, reference range by age for IGF-I levels is 83 ~ 221 ng/mL) and GH (80.3 ng/mL) levels. GH was not suppressed with 75 g glucose loading, (after 60 min: 131 ng/mL; after 120 min: 46.9 ng/mL).
+X-ray images showed characteristic findings of acromegaly. Scalloping in some vertebrae was observed, as indicated by arrowheads on a lateral view of the lumbar X-ray in Fig. a []. On thoracic spine X-ray there were no findings of diffuse idiopathic skeletal hyperostosis (DISH) such as more than three successive bone bridges, and there were no anterior or posterior osteophytes with a biconcave appearance such as Erdheim spondylosis in the thoracic spine (Fig. b, c).
+On computed tomography (CT) images of the whole spine, isolated OPLL was observed from the lower cervical vertebra to the middle thoracic vertebra. At T6/7, a beak-shaped protrusion into the spinal canal was observed (Figs. a, c).
+Magnetic resonance imaging (MRI) of the whole spine revealed stenosis with an intensity change in spinal cord at C6/7 and extensive spinal cord compression in the thoracic spine (Figs. b, d). Contrast-enhanced MRI of the brain showed a mass without contrast enhancement on the right side of the anterior pituitary gland (size, 10 mm × 12 mm × 10 mm) with suprasellar and parasailer extension; the image revealed a pituitary macroadenoma (Fig. ).
+The patient’s most remarkable symptom was paraplegia, and we diagnosed myelopathy due to thoracic OPLL. Furthermore, we suspected acromegaly because of the characteristic facial features and blood test findings (ALP 432 IU/L, GH 80.3 ng/ml, IGF-1914 ng/ml). Contrast-enhanced MRI of the brain performed by the endocrinology department showed a pituitary adenoma (Fig. ). The patient’s symptoms satisfied the diagnostic criteria for acromegaly. Neurosurgery was scheduled for the pituitary adenoma, but spinal surgery was prioritized due to fear of exacerbation of neurological symptoms.
+The neurological findings suggested spinal cord lesions below the T10 level, and T6/7 was judged to be the location of the primary lesion. T1–3 and T6–11 laminectomy and T1–11 posterior fixation were performed. Additionally, there was severe spinal cord compression in C6/7, and open-door laminoplasty with a lamina plate was performed for C5–7 (Fig. ).
+On the third day after the operation, rehabilitation was started with a cervical collar and hard thoracolumbar corset. The postoperative course was good, the paralysis gradually improved, and the patient was able to walk alone indoors. She was discharged 3 weeks after the operation. There have been no adverse or unanticipated events. Two months after the spinal surgery, resection of the pituitary adenoma was performed in the neurosurgery department, and the patient is still under observation. A pathological image (H&E, × 400) is provided and showed a sheet of monotonous cells with round nuclei and loss of normal lobular patterns of the pituitary adenoma (Fig. ). Staining for TSH and ACTH was negative. Staining for PRL was positive in 10% of the resected pituitary tissue. Staining for CAM5.2 was diffusely positive in many cells and several cells had fibrous bodies. These findings are consistent with growth hormone-secreting pituitary adenomas. We did not have other antibodies, so it was difficult to classify the pituitary adenoma in detail.
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+54.193
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Ideal Body Weight', 'confidence': 1.0}, {'stage': 'extract', 'extracted': {'sex': 'female', 'height_cm': 162.0}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'sex': 'female', 'height_cm': 162.0}}, {'stage': 'compute', 'success': True, 'result': 54.193, 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}], 'method': 'l4_pipeline'}
+

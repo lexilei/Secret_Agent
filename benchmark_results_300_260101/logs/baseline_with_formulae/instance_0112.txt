@@ -1,0 +1,31 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 112
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-02T03:23:06.590211
+================================================================================
+
+GROUND TRUTH: 8.36
+PREDICTED: 8.56
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 74-year-old, avid female gardener and active smoker with a past medical history notable for chronic obstructive pulmonary disease (COPD) and hypertension presented to the hospital with one week of progressively worsening New York Heart Association (NYHA) class III dyspnea and fatigue. She endorsed associated cough productive of yellowish mucoid sputum. She denied chest pain/discomfort, palpitations, pre-syncope, syncope, orthopnea, or paroxysmal nocturnal dyspnea (PND). There was no history of fever, arthralgia, myalgia, or rashes.
+In the emergency department, the patient was afebrile, blood pressure was 85/49 mm Hg, heart rate was 150 per minute, and respiratory rate was 22 per minute, with oxygen saturation of 94% on six liters of oxygen via a nasal cannula. The patient appeared lethargic and was using accessory muscles for respiration. General examination showed pallor. The oral mucosa was dry, with a thickly coated tongue. The neck veins were flat. Heart examination revealed a fast, irregular heart rate, variable first heart sound, and normal second heart sound without any murmurs or gallops. Lung examination revealed bilateral mid to late inspiratory crackles. The abdomen was soft, distended, non-tender, with normal bowel sounds. Extremities were noted to be cold, with 1+ pitting edema and normal capillary refill time.
+Routine laboratory investigations revealed a white blood cell (WBC) count of 7.5 (4.0-10.5 k/uL), hemoglobin of 9.9 (12.5-16 g/dL), and hematocrit of 32.3 (37-47%). Her baseline hemoglobin concentration was around 15 g/dL. Mean corpuscular volume (MCV) was 101.9 (78-100 fL) with elevated mean cell hemoglobin (MCH) of 34 (25-33 pg) and normal mean cell hemoglobin concentration (MCHC) of 33.4 (32-36 g/dL). Platelet count was 34 (150-450 K/uL), with elevated mean platelet volume (MPV) of 12.4 (7.4-11.4 fL). Peripheral blood smear showed intracytoplasmic parasites suspicious for Babesia along with reduced platelets (Figure ). The parasitic level was found to be at 9.04%. Lactate dehydrogenase (LDH) was 1544 U/L (125-220 U/L), haptoglobin was <6 mg/dL (27-139 mg/dL), total bilirubin was 5.4 mg/dL (0.3-1.0 mg/dL), with a direct fraction of 3.5 mg/dL (0.0-0.2 mg/dL). Aspartate aminotransferase (AST) was 202 U/L (5-40 U/L), alanine aminotransferase (ALT) was 90 U/L (7-52 U/L), with albumin of 2.3 g/dL (3.5-5.0 g/dL). Blood urea nitrogen (BUN) was 51 mg/dL (7-17 mg/dL) with a normal creatinine of 0.8 mg/dL, sodium 129 (135-145 mmol/L), potassium 4 (3.5-5.1 mmol/L), chloride 103 (98-107 mmol/L), serum bicarbonate 19 (24-32 mmol/L), and calcium 7 (8.4-102 mg/dL).
+The chest X-ray was remarkable for cardiomegaly with a small right pleural effusion and small airspace opacity within the right lower lobe concerning for consolidation or segmental atelectasis. Given her presentation, she was started on intravenous fluids along with empiric antibiotic coverage for community-acquired pneumonia with ceftriaxone and azithromycin. As the peripheral smear was remarkable for Babesia, she was started on atovaquone and doxycycline for a possible co-infection with Lyme. Blood titers for Anaplasma and Lyme were sent. Positive pressure ventilation was started to help with respiratory distress. She received intravenous fluids; however, she continued to remain hypotensive and required norepinephrine for hemodynamic support. Given the severity of her disease and parasitic load, a decision was made to do erythrocytapheresis.
+Following erythrocytapheresis, the parasitic load decreased to 5.54%. The patient remained in shock and clindamycin was added to the regimen. Her renal function worsened, which was believed to be secondary to pigment-induced nephropathy from hemolysis. Due to the inadequate response and development of acute kidney injury, repeat erythrocytapheresis was performed, resulting in a reduction in parasite load to 1.75%. At this point, Lyme immunoglobulin M (IgM) immunoblot was found to be positive, with negative immunoglobulin G (IgG). Anaplasma titers also showed recent/current infection, with IgG >1:1024 (reference <1:64) and IgM 1:80 (reference <1:20). Atovaquone and azithromycin were discontinued and quinine was added. Her hemodynamic status improved and she was titrated off of vasopressor support along with an improvement in respiratory status. Her complete blood count and renal and hepatic function normalized after 14 days of antimicrobial therapy.
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+8.56

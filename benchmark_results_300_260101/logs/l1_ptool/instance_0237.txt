@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 237
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T21:26:54.648811
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 3.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 41-year-old man was evaluated in the acute care treatment room late this morning after noticing progressive heaviness and tightness in his left lower calf that began the previous evening while he was watching television with his family. He reports that six weeks earlier he sustained a nondisplaced distal tibial fracture while playing recreational soccer; a fiberglass long-leg cast extending from just below the groin to the metatarsal heads was applied in the emergency department that same night and remained in place until five days ago, when orthopedics removed it and fitted him with a walking boot. Since cast removal he has been fully weight-bearing as tolerated, climbing the stairs in his two-story home several times daily, and he denies having spent any prolonged period confined to bed or a chair. He works as a graphic designer and returned to on-site duties two weeks ago, spending most of the day seated but able to get up to stretch and visit colleagues. Yesterday afternoon, while switching from the boot to a supportive sneaker, he spotted subtle fullness of the posterior calf just above the Achilles insertion; by bedtime the leg felt “stuffed into a sock one size too small,” though he could still ambulate without limping. This morning he woke to find the circumference of the left calf larger than the right at a glance; using a flexible dressmaker’s tape he keeps in his desk, he measured 43 cm on the symptomatic side versus 38 cm on the contralateral limb at a point 10 cm below the tibial tuberosity, a difference of 5 cm that prompted him to seek evaluation. He characterizes the discomfort as dull pressure rather than sharp pain, rated 3/10 at rest and 5/10 when standing for more than a minute, and notes that it partially improves on elevation. He denies focal tenderness when he presses the groin or the crease behind the knee, and states that squeezing the calf muscle itself feels more like post-workout soreness than true pain. He has not observed redness, streaking, or skin breakdown; finger pressure over the anterior tibia leaves a shallow indentation that slowly reforms over approximately 15 seconds, whereas the right leg shows no such depression. He has no fever, chills, night sweats, or weight loss; no shortness of breath, chest discomfort, palpitations, syncope, or cough; and no recent insect bites, rash, or penetrating injury. Past medical history is remarkable only for the aforementioned fracture and well-controlled mild asthma for which he uses an albuterol inhaler infrequently during spring pollen season. He has never been told he had a blood clot, and there is no family history of thromboembolic disease, early myocardial infarction, or stroke. He takes no prescription medications other than a daily 10 mg montelukast tablet and occasional ibuprofen 400 mg for ankle soreness; he is not on hormonal therapy, steroids, or anticoagulation. He denies cigarette smoking, drinks two to three beers on weekends, and has never used illicit drugs. He completed a two-hour automobile trip to visit relatives last weekend but has not flown or traveled long distances recently, and he has not undergone any operation in the last year. Review of systems is otherwise negative. On examination he is alert, oriented, and in no acute distress, able to stand and walk across the room unaided. Vital signs: temperature 37.2 °C, blood pressure 122/78 mm Hg, heart rate 86 beats/min, respiratory rate 16 breaths/min, oxygen saturation 98 % on ambient air. Cardiopulmonary examination reveals a regular rhythm without murmurs and clear breath sounds bilaterally. Abdomen is soft, nontender, without organomegaly. Inspection of lower extremities shows the left calf visibly fuller with a slight shiny appearance of the skin; color is pink and comparable to the right. No cord-like superficial vessels or varicosities are apparent, and there is no ecchymosis. A repeat measurement by staff at the same 10 cm landmark confirms 43 cm on the left and 38 cm on the right. Thigh circumference measured 15 cm above the superior patellar border is symmetric at 52 cm bilaterally. Gentle palpation along the course of the femoral triangle, adductor canal, popliteal fossa, and posterior tibial groove produces no focal tenderness; compression over the gastrocnemius belly elicits only diffuse mild soreness. Skin temperature is minimally warmer on the affected side, and 2 mm of pitting is reproducible over the anterior tibia; the right leg remains non-pitting. Dorsalis pedis and posterior tibial pulses are 2+ and equal, capillary refill is less than two seconds, and neurologic testing shows intact sensation with 5/5 motor strength. Passive ankle dorsiflexion does not provoke abrupt pain, and there is full, pain-free range of motion of the knee and hip. No inguinal lymphadenopathy, groin masses, or popliteal cysts are detected. Portable ankle radiographs from cast removal showed interval fracture healing without hardware, and he has undergone no imaging today prior to assessment. Laboratory specimens drawn before any therapy reveal hemoglobin 15.0 g/dL, platelet count 230 × 10⁹/L, leukocytes 7.0 × 10⁹/L, creatinine 0.93 mg/dL, and an INR of 1.0; hepatic transaminases are within reference limits. Given the recent immobilization in a plaster device, the measurable unilateral calf enlargement exceeding 3 cm, pitting confined to that limb, absence of superficial venous collaterals, lack of tenderness over named deep venous channels, and no convincing alternative explanation such as cellulitis or muscle tear, vascular imaging of the left lower extremity has been arranged on an urgent basis while laboratory results are finalized and baseline coagulation parameters recorded.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 3.0}
+

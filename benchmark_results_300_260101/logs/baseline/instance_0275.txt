@@ -1,0 +1,29 @@
+================================================================================
+EXPERIMENT: baseline
+INSTANCE: 275
+CALCULATOR: HEART Score for Major Cardiac Events
+TIMESTAMP: 2026-01-01T20:50:33.696177
+================================================================================
+
+GROUND TRUTH: 5.0
+PREDICTED: 3.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+Patient 1: was an otherwise healthy 24 years old man presented with chief complaint of retrosternal chest pain in the past 5 days prior to the presentation. He did not have conventional risk factors for premature coronary artery disease. He described the pain radiates to his left arm and occurred in an intermittent fashion not related to exertion; each episode lasts about 2 hours. The pattern of chest pain was atypical. He mentioned sore throat and cold sweating without coughing. In the emergency room, his blood pressure was 120/60 mmHg and heart rate was 115 bpm. Oxygen saturation by pulse oximetry was 94% while breathing ambient air and tympanic temperature was 36.7°C.
+Electrocardiography showed sinus tachycardia, mild ST segment elevation less than 1 mm in lead I and aVL and ST segment depression of about 1 mm in leads III and aVF (, panel A&B). First cardiac hs-TroponinT result was 911 ng/L (cut off <24ng/L). He was admitted with diagnosis of non ST elevation MI (NSTEMI) or myocarditis. Results of 1 hour cardiac Troponin T was 1155 ng/L. Other Baseline laboratory tests were presented in .
+Because of symptoms of sore throat, sweating and also elevated CRP, nasopharyngeal sample was taken and sent for SARS-COV-2 RT-PCR. Lung computed tomography scan revealed bilateral ground glass peripheral densities in lower lobes which was compatible with CT findings of COVID-19 (, panel A). Echocardiography showed normal LV size and systolic function with ejection fraction of about 55%. There was neither regional wall motion abnormality nor pericardial effusion. Results of RT-PCR test became positive which was in concert with lung CT scan findings. Lopinavir/ritonavir was initiated. Coronary multi-detector CT scan was performed and revealed normal coronary arteries (, panel A). Based on findings mentioned, final diagnosis of myocarditis due to COVID19 was made. On the second day, ECG showed resolution of ST deviations and appearance of T wave inversion in lead I and aVL. Hospital course was uneventful. He was discharged after 6 days of admission and improvement of symptoms, with recommendation of self-isolation for at least 14 days. Metoral 25 mg bid was prescribed. In 1 week telephone follow up, he was in good clinical condition and his symptoms had been improved substantially.
+
+Question: What is the patient's score of the HEART Score? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3

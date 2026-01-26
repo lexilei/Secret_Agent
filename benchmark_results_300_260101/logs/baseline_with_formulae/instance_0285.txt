@@ -1,0 +1,27 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 285
+CALCULATOR: Fibrosis-4 (FIB-4) Index for Liver Fibrosis
+TIMESTAMP: 2026-01-02T03:23:12.486708
+================================================================================
+
+GROUND TRUTH: 1.71194
+PREDICTED: 2.48
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 32-year-old female that has been a HCV carrier for the past 10 years came to our clinic for hepatitis C treatment. She had not received any treatment for hepatitis C in the past. She also had a history of thalassemia minor and SCD, requiring frequent hospitalizations for sickle cell crisis and multiple blood transfusions. She had undergone splenectomy in childhood and denied illicit drug use, smoking, or alcohol abuse. At the time of her visit, she was taking folic acid only. Her baseline blood workup showed hemoglobin 8.4 g/dL, platelets 297 K/μL, creatinine 0.33 mg/dL, albumin 3.9 g/dL, INR 1.1, AST 94 IU/l, ALT 35 IU/l, ALP 96 IU/l, and total bilirubin 2.6 mg/dL. Hepatitis C viral load was 38,907 IU/mL with genotype 1a. Recent abdominal CT revealed a mildly nodular hepatic contour with hypertrophied left hepatic lobe, indicative of cirrhosis, with no evidence of ascites. The FibroTest revealed severe fibrosis with a score of F4. Hepatitis B surface antigen and HIV antibodies were checked, and both were negative. As the patient had not been previously treated for hepatitis C and had Child-Pugh class A liver cirrhosis with no serologic evidence of HBV and HIV coinfection, once-daily ledipasvir 90 mg/sofosbuvir 400 mg was initiated for 12 weeks. At the 4-week follow-up, the patient complained of mild headache and fatigue. Repeat blood workup showed hemoglobin 7.8 g/dL, AST 93 IU/l, ALT 49 IU/l, and total bilirubin 2.9 mg/dL, with an undetectable HCV load. Her treatment continued for the remaining 8 weeks, during which headache and fatigue resolved completely. At the end of the 12-week ledipasvir/sofosbuvir course, hemoglobin stabilized at 8.4 g/dL, and no increase in LDH, total bilirubin or retic count was noted. HCV viral load remained undetectable 3 months after treatment completion.
+
+Question: What is the patient's score of the Fibrosis 4 Index? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+2.48

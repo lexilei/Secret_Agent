@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 229
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T21:37:25.608070
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 4.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old man arrived to the urgent care unit late this morning after noticing progressive fullness of his left lower limb over the previous forty-eight hours. He explained that, while showering two days ago, he became aware that the lower half of his left pant leg clung more tightly around the calf than usual; by the following evening the same region felt tense enough to prompt him to measure it with a sewing tape he keeps for tailoring work. The tape read 44 cm at a point 10 cm distal to the tibial tuberosity on the left compared with 39 cm on the right, a discrepancy of 5 cm that has remained stable since. He denies similar enlargement of the thigh, knee, or ankle and states that his left shoe still fits comfortably, though stepping down first thing in the morning produces a dull ache localized to the posterior calf. There has been no antecedent fall, athletic overexertion, insect bite, or rash, and he has not developed fever, rigors, sweats, or chills. Review of systems is negative for pleuritic chest discomfort, new dyspnea, hemoptysis, palpitations, visual changes, or neurologic deficits. His past history is remarkable for stage III pancreatic adenocarcinoma diagnosed nine months earlier; he is midway through a FOLFIRINOX chemotherapy schedule, having received his most recent infusion nine days ago, and continues to attend oncologic follow-up every two weeks. He takes ondansetron as needed for nausea, a proton-pump inhibitor for reflux, and daily low-dose aspirin for primary cardiovascular prevention but no hormonal agents, glucocorticoids, or erythropoiesis-stimulating drugs. He has never experienced thromboembolic disease, bleeding disorders, or vascular procedures, and screening colonoscopy four years ago was unremarkable. He works part-time from home as a graphic designer, walks his dog around the block twice daily, and drove himself to clinic without assistance. There has been no recent long-haul travel, flight, or automobile journey beyond his usual errand route. He does not smoke, drinks a glass of wine with dinner once or twice weekly, and denies recreational drug use. Family history is negative for premature myocardial infarction, stroke, or hypercoagulable states. On arrival his vital signs were as follows: temperature 36.7 °C, blood pressure 130/76 mm Hg, heart rate 92 beats per minute, respiratory rate 15 breaths per minute, oxygen saturation 97 % breathing ambient air. He appeared well hydrated and conversed comfortably. Cardiopulmonary examination revealed a regular rhythm without murmurs, rubs, or gallops; lungs were clear to auscultation bilaterally. Abdominal examination showed a well-healed midline laparotomy scar and mild epigastric tenderness consistent with his known malignancy but no organomegaly or ascites. Inspection of the lower extremities demonstrated asymmetry isolated to the calf segment: the left gastrocnemius compartment was visibly fuller with subtle sheen of the overlying skin, whereas the thigh circumference measured equivalently on both sides. Gentle finger pressure over the anterior tibia of the left leg produced a 2-mm indentation that rebounded over approximately 20 seconds; no indentation was elicited on the right. Skin temperature was modestly warmer on the affected side yet remained pink without erythema, ecchymosis, or discoloration. The superficial venous pattern on both lower limbs was flat, with no engorged, tortuous subcutaneous channels. Homan sign was not assessed to avoid unnecessary provoking maneuvers. Dorsalis pedis and posterior tibial pulses were 2 + bilaterally, capillary refill was under two seconds, and light-touch sensation as well as motor strength were symmetric. Knee, ankle, and hip joints moved through full passive and active ranges without crepitus or focal tenderness. No popliteal cystic mass, inguinal lymphadenopathy, or groin hernias were appreciated. Laboratory samples were drawn before any anticoagulant therapy: complete blood count showed hemoglobin 11.9 g/dL, white-cell count 5.8 × 10⁹/L, platelet count 268 × 10⁹/L; basic metabolic panel and hepatic function tests were within his recent baseline, and international normalized ratio measured 1.0. Electrocardiography demonstrated normal sinus rhythm. Given the abrupt unilateral calf enlargement exceeding 3 cm, the presence of ipsilateral pitting edema confined to that segment, the patient’s ongoing treatment for an active malignancy, the preserved superficial venous contour, and the absence of an alternative musculoskeletal, dermatologic, or vascular explanation, the working impression favors an acute occlusive process within the deep veins of the symptomatic limb. Duplex ultrasonography of the entire left lower extremity has been requested on an expedited basis; further management will hinge on those imaging results and collaboration with his oncology team regarding systemic anticoagulation versus catheter-directed therapies, taking into account his chemotherapy schedule and bleeding risk profile.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+4.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 4.0}
+

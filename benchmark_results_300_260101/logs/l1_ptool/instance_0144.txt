@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 144
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T21:26:52.953329
+================================================================================
+
+GROUND TRUTH: 3.61309
+PREDICTED: 3.33
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 24-year-old man was admitted to our hospital with the signs of advanced chronic renal failure (CRF) in 2006. In his past history, he had developed kidney and bladder stones since he was 5-year-old. In his family history, his sister exhibited an elevated urine Ox concentration and his brother presented with kidney stones and renal failure. Unfortunately, they refused to cooperate with physicians to perform required tests until transplantation. Immediately in 1st day of admission, blood urea nitrogen (BUN) and serum creatinine (Cr) were determined 165 and 16.5 mg/dl, respectively, and also protein and glucose were detected in urine. The diagnostic findings indicate shrunken hyper-echogenic kidneys with hydronephrosis. Multiple stones with different sizes were observed in calyces of both kidneys. The bladder wall was thickened (4.7 mm), and urinalysis did not reveal any crystals. The patient underwent hemodialysis (HD) three times per week for 4 months. Four months after admission, the patient underwent bilateral nephrectomy. Based on the findings obtained in bilateral radical nephrectomy, chronic pyelonephritis with nephrolithiasis was confirmed. Microscopic examination revealed glomerulosclerosis and tubulointerstitial fibrosis. About 2 years later (September 2008), the patient underwent living kidney transplantation with a diagnosis of ESRD. The primary graft function was acceptable? but 3 days after transplantation, the urine output suddenly dropped to 30-50 cc a day. Therefore, a renal biopsy was taken. Tissue sections containing glomeruli and tubules were obtained. The following histopathological data were gathered: The glomeruli showed no conspicuous changes, mild to moderate atrophy with mononuclear inflammatory cells and occasional eosinophilic infiltration of interstitium, some tubules contained marked Ox crystals, and some contained granular and white blood cells casts. Following the acute rejection, anti-thymocyte globulin (ATG) was administered for the patient. After few days of ATG administration, the drug was discontinued because of fever. The possibility of PH1 was considered when a lot of Ox crystals were observed in the renal allograft biopsy and also by ruling out the other causes of hyperoxaluria. Therefore, pyridoxine therapy was commenced (dose, interval, and route of admin).
+In January 2009, the patient's serum Cr and BUN levels were 4.8 and 38 mg/dl, respectively. The patient's computed tomography (CT) scan and radiography demonstrated cardiomegaly, bilateral pleural effusion with congestion, and calcification at the right pulmonary hilum and parenchyma. The molecular diagnostic polymerase chain reaction test revealed the persistence of cytomegalovirus. After few months, the patient refused to continue the treatment and finally he died 1-year later.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3.33
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 3.33}
+

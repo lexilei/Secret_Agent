@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 231
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-02T03:23:11.052031
+================================================================================
+
+GROUND TRUTH: -2.0
+PREDICTED: 0.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 39-year-old male with a five-year history of moderate ulcerative colitis (UC), as per Montreal classification, was admitted to the emergency department with worsening abdominal and rectal pain secondary to a C. diff infection of one week. Patient had a multi-week history of diarrhea that was waking him up at night leading up to the C. diff diagnosis. One week prior to ED admission, his GI had ordered precautionary leukocytes and C. diff due to history of UC, and both returned positive. Per GI note, "Vancomycin prescribed as this patient has IBD and patients with IBD can develop spontaneous C. diff infections and need to be treated regardless of toxin presence." He had no prior history of antibiotic use over the past three months or triggering factor for C. diff infection.
+Over the course of the week, his symptoms progressed, and he claimed to have nausea, vomiting, and hematochezia.
+The patient presented with a past medical history of depression, post-traumatic stress disorder, and obstructive sleep apnea. His allergies included trazodone and amoxicillin/clavulanate. His family history was unrevealing. His surgical history included cholecystectomy and thyroglossal duct cyst removal in 2019.
+This patient was a nonsmoker. He denied alcohol or drug use. He tried to maintain a healthy diet of lean proteins, fruits, and vegetables.
+Initial vitals on presentation included: temperature: 98.6 F, pulse: 90 beats per minute, respiratory rate: 15 breaths per minute, pulse oximetry: 95%, blood pressure: 119/87 mmHg, weight: 217.16 lbs, and body mass index: 32.14.
+General surgery was consulted upon CT scan with IV contrast revealing new extraluminal gas in the perineum surrounding the anus and distal rectum (Figures , , , ). He was examined and subsequently diagnosed with rectal perforation.
+Preoperatively, the patient’s physical exam revealed an uncomfortable looking young man in mild distress due to abdominal pain. An abdominal exam revealed no distention, masses, rebound, or guarding. The absence of McBurney’s sign, Murphy’s sign, and peritoneal inflammation was noted. There was no active rectal bleeding at the time of physical examination. Laboratory data revealed an elevated c-reactive protein of 66.4. Complete blood count and complete metabolic panel were otherwise within normal limits. Despite infection and imaging reflecting perforation, white blood count was found to be 5.9 k/cmm.
+After review of the available data, assessment of clinical condition, and deliberation with the emergency department physicians and the patient’s primary gastroenterology physician, the surgery team decided the patient would require an urgent exploratory laparotomy with total abdominal colectomy and end ileostomy due to the diagnosis of rectal perforation secondary to C. diff colitis on chronic UC.
+The patient was immediately brought to the operating room. The primary incision was made from the subxiphoid to the pubic symphysis within two hours of initial presentation to the hospital. The colon was visualized and resected; thus, a total colectomy was undergone. The pre-rectal space was opened to identify signs of purulence or injury, which found crepitus and severe UC causing circumferential ulcerations and a deep ulcer in the midline anteriorly. These ulcers traversed all layers of the rectal wall. A drain was placed to drain potential abscess or infection from the pre-rectal space.
+The patient left the OR in stable condition after enduring no complications intraoperatively. He remained in the inpatient surgical unit for five days, during which he continued to advance his diet and ambulate successfully. He was discharged after an education session on ostomy bag maintenance and told to follow up with the general surgery team and gastroenterology team in one week. At his one-week follow-up post-op visit, the patient was doing well, ostomy output was draining appropriately, and he denied fever, nausea, or vomiting. No secondary follow-up surgery was required.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0

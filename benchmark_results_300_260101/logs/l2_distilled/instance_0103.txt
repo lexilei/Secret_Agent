@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 103
+CALCULATOR: Calcium Correction for Hypoalbuminemia
+TIMESTAMP: 2026-01-01T21:37:21.219715
+================================================================================
+
+GROUND TRUTH: 8.66
+PREDICTED: 8.66
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 78-year-old man presented with dyspnea on exertion. He had undergone resection of a left atrial myxoma 4 years prior to admission. He had a history of diabetes mellitus with onset at the age of 60; at the age of 71, he started undergoing dialysis for chronic renal failure due to diabetic nephropathy. He also had hypertension, hyperlipidemia, hypothyroidism, and secondary hyperparathyroidism, and was undergoing radiation therapy for prostate cancer. He had never smoked and his family history was unremarkable. He became aware of dyspnea on exertion in the previous 2 months, and was admitted to our hospital because his condition worsened. UCG revealed that the LVEF had decreased sharply from 73 to 44% (New York Heart Association class III). In this case, the inflammatory response remained low and stable at C-reactive protein levels of 0.3 to 0.5 mg/dL until the second operation.
+His height and weight were 170.0 cm and 64.4 kg, respectively. His blood pressure was 86/48 mmHg and heart rate was 70 bpm (normal sinus rhythm). His laboratory data were as follows: hemoglobin, 10.2 g/dL; platelet count, 132 × 109/L; total protein, 5.7 mg/dL; albumin, 3.3 g/dL; triglycerides, 54 mg/dL; LDL-cholesterol, 44 mg/dL; HDL-cholesterol, 44 mg/dL; Ca, 8.1 mg/dL; P, 3.1 mg/dL; HbA1c, 7.0%; and BNP, 3461 pg/mL. His oral medications included aspirin (100 mg/day), furosemide (20 mg/day), carvedilol (2.5 mg/day), lansoprazole (15 mg/day), precipitated calcium carbonate (3000 mg/day), rosuvastatin calcium (5 mg/day), and nicorandil (15 mg/day).
+ECG revealed normal sinus rhythm with Q waves in leads II, III, and aVF, and ST segment depression in V5-V6 (Fig. ). Chest radiography and CT revealed a CTR of 72% and severe calcified coronary arteries (Fig. ). UCG revealed poor left ventricular function (LVDd/Ds, 56/43 mm; LVEF, 44%; inferoposterior wall hypokinesis; and mild MR with RVP of 29 mmHg). Cineangiography 4 years ago had shown only 25% stenosis in the proximal LAD; at admission, it revealed 90% stenosis in the same proximal LAD, 99% stenosis in the proximal LCX, and 95% stenosis in the posterolateral branch (PL) of LCX (Fig. a, b). He had low blood pressure during dialysis and underwent emergency surgery (Euro II risk score 40.7%; STS risk score, 33.2%).
+We performed a sternotomy similar to the one performed previously, and then performed CABG (LITA-LAD, and LITA-right internal thoracic artery [right internal thoracic artery, RITA-Diagonal branch-PL1-PL-2-PL3]). The duration of surgery and CPB was 514 and 172 min, respectively. The postoperative ventilator management was completed in 9 h. He stayed in the postoperative ICU for 4 days and was discharged on postoperative day 10. The LVEF had improved from 44 to 50%, and all grafts were well patent (Fig. ).
+
+Question: Using the Calcium Correction for Hypoalbuminemia formula, what is the patient's corrected calcium in mg/dL? Your may set your normal albumin concentration to be 4 g/dL. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Calcium Correction for Hypoalbuminemia', 'extracted_values': {'calcium': 8.1, 'albumin': 3.3}, 'result': 8.66, 'method': 'python', 'formula': 'Corrected Ca = Ca + 0.8*(4 - albumin)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Calcium Correction for Hypoalbuminemia', 'extracted_values': {'calcium': 8.1, 'albumin': 3.3}, 'result': 8.66, 'method': 'python', 'formula': 'Corrected Ca = Ca + 0.8*(4 - albumin)'}}
+

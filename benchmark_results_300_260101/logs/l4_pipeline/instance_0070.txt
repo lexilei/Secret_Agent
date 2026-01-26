@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 70
+CALCULATOR: Mean Arterial Pressure (MAP)
+TIMESTAMP: 2026-01-04T03:14:11.750906
+================================================================================
+
+GROUND TRUTH: 68.33333
+PREDICTED: 68.33333333333333
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 35-year-old man is brought to the emergency department 30 minutes after being involved in a motor vehicle collision. The patient was on his way to work before he lost control of his car and crashed into a tree. On arrival, the patient appears weak and lethargic. He has pain in his abdomen. His temperature is 37°C (98.6°F), pulse is 121/min, respirations are 22/min, and blood pressure is 85/60 mm Hg. He is oriented to person but not to place or time. The lungs are clear to auscultation. Cardiac examination shows tachycardia but no murmurs, rubs, or gallops. Abdominal examination shows several bruises above the umbilicus; there is diffuse abdominal tenderness. Focused assessment with sonography in trauma (FAST) is performed but the results are inconclusive.
+
+Question: What is patient's mean arterial pressure in mm Hg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+68.33333333333333
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Body Mass Index (BMI)', 'confidence': 0.1}, {'stage': 'extract', 'extracted': {}, 'missing': ['weight_kg', 'height_cm']}, {'stage': 'validate', 'is_valid': False, 'missing': ['weight_kg', 'height_cm'], 'cleaned': {}}, {'stage': 'repair_1', 'extracted': {}, 'is_valid': False, 'missing': ['weight_kg', 'height_cm']}, {'stage': 'compute_python', 'success': False, 'error': 'Python calculation failed, trying L1 fallback'}], 'method': 'l4_pipeline'}
+

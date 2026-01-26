@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 236
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-04T03:14:13.619289
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 0.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 47-year-old man with a history limited to well-controlled mild asthma and seasonal rhinitis presented to the ambulatory triage area mid-morning complaining of an aching sensation and progressive enlargement of his right calf that began roughly thirty-hours prior while he was at work installing cabinetry in a two-story townhome. He recalls kneeling frequently and carrying heavy toolboxes up a flight of stairs but denies any single twisting injury, audible pop, or sharp pain; instead, he noticed a vague tightness behind the knee late that evening which intensified overnight, prompting him to inspect both lower limbs side-by-side in the bathroom mirror. The following morning his work sock left a noticeable indentation at the upper ankle and the posterior calf looked fuller than its counterpart, so he measured the circumference with a flexible sewing tape he keeps for home projects: at a point exactly 10 cm distal to the tibial tuberosity the right leg measured 41 cm whereas the left measured 37 cm, a disparity of 4 cm that persisted when rechecked two hours later before clinic arrival. He reports no comparable swelling of the thigh, knee, or foot, no discoloration, and no warmth appreciable through his trouser leg. He has not been bedridden—he walks his dog twice daily, drove himself to the clinic, and continues normal activities except for avoiding squats because they provoke discomfort. He has not undergone surgery, endoscopy, or invasive dental work in the past year, and the most recent hospitalization was an overnight observation for an asthma exacerbation four years ago. He has never received chemotherapy, has no known malignancy, and has not required a cast, splint, or immobilizing boot. He flew to Denver on a two-hour flight last week but sat in an aisle seat and walked the terminal without prolonged stasis. He denies fever, chills, sweats, rash, trauma, insect bite, recent soft-tissue infection, chest pain, dyspnea, palpitations, hemoptysis, or syncope. Medications include inhaled budesonide-formoterol twice daily and an albuterol rescue inhaler used perhaps once a month; he takes no hormonal preparations, anticoagulants, or herbal supplements. He never smokes, drinks two beers on weekends, and does not use illicit drugs. There is no family history of thromboembolic disease or hypercoagulable states. On examination he appears fit, ambulating with a slight antalgic gait favoring the right side but otherwise in no distress. Vital signs: temperature 98.4 °F (36.9 °C), pulse 88 beats/min regular, blood pressure 128/74 mm Hg, respiratory rate 14/min, and oxygen saturation 98 % on ambient air. Cardiac auscultation reveals a normal S1/S2 without murmurs; lungs are clear with no wheezes; jugular venous pressure is not elevated. Abdomen is soft and nontender. Inspection of the lower extremities shows asymmetric fullness confined to the mid-calf region of the right leg with a subtle glossy sheen of overlying skin; the right ankle and foot appear normal in size, and thigh girth measured 15 cm proximal to the patella is symmetric at 50 cm bilaterally. Gentle finger pressure over the anterior tibia of the right calf produces a 2-mm pit that rebounds within 15 seconds, whereas no indentation forms on the left. The right calf feels slightly warmer but not erythematous. Palpation along the course of the popliteal and posterior tibial venous channels elicits focal tenderness deep to the medial gastrocnemius; squeezing the muscle belly itself produces only diffuse soreness. There is no palpable cord, no varicosities, and no cyanosis of the toes. Dorsalis pedis and posterior tibial pulses are 2+ and equal; capillary refill is less than two seconds. Range of motion at the knee and ankle is full; dorsiflexion of the ankle with knee extended reproduces a pulling discomfort but no lancinating pain. Neurologic examination shows intact sensation and 5/5 motor strength. No inguinal lymphadenopathy is present. Bedside urine dip is unremarkable. Baseline laboratory tests obtained before any anticoagulant therapy demonstrate hemoglobin 15.0 g/dL, platelet count 242 × 10⁹/L, white blood cell count 7.1 × 10⁹/L, serum creatinine 0.92 mg/dL, sodium 139 mmol/L, potassium 4.0 mmol/L, AST/ALT within normal limits, prothrombin time 12.1 seconds with an INR of 1.0, and aPTT 29 seconds. An electrocardiogram shows normal sinus rhythm. Clinically, the unilateral calf enlargement greater than 3 cm, discrete pitting edema confined to the symptomatic limb, and pinpoint tenderness tracking the deep venous pathway raise strong concern for an obstructive process within the deep veins of the right calf; musculoskeletal strain or ruptured popliteal cyst remain possibilities but appear less compelling given the objective girth discrepancy and focal venous tenderness. Duplex ultrasonography of the entire right lower extremity has been ordered on an urgent basis, and the patient has been instructed to limit strenuous activity and to alert staff immediately should he notice sudden chest discomfort or worsening shortness of breath while awaiting imaging.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+0.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'CHA2DS2-VASc Score for Atrial Fibrillation Stroke Risk', 'confidence': 0.3}, {'stage': 'extract', 'extracted': {'age': 47, 'sex': 'male'}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 47, 'sex': 'male'}}, {'stage': 'compute', 'success': True, 'result': 0.0, 'formula': 'Sum: CHF(+1), HTN(+1), Age≥75(+2)/65-74(+1), DM(+1), Stroke(+2), Vascular(+1), Female(+1)'}], 'method': 'l4_pipeline'}
+

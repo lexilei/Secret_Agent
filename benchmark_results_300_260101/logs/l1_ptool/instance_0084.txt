@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 84
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:26:51.738420
+================================================================================
+
+GROUND TRUTH: 22.32143
+PREDICTED: 22.32
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 50-year-old male patient visited the hospital to undergo synovectomy for left knee ostarthritis and tenosynovitis. The patient had suffered difficulties in walking from weakening of both lower limb muscles since 25 years ago, and recently the symptom of weakness of lower limb muscles became more serious and dyspnea at the level of ATS (American Thoracic Society) Dyspnea Grade I had occurred due to the weakening of the respiratory root. A molecular genetics examination conducted at another hospital discovered a deficit of the SMN1 gene, and considering the time of onset and clinical conditions, the patient was diagnosed with type IV spinal muscular atrophy. The patient stood 168 cm and weighed 63 kg, and there were no special opinions from ECG and simple radioactive examination before operation. Arterial blood gas analysis (ABGA) showed pH 7.435, PaO2 74.6 mmHg, PaCO2 36.9 mmHg, and HCO3- 24.2 mmHg. The patient was under drug treatment for hypertension. Administration before anesthesia was not conducted and vital signs examined after going into the operating room were blood pressure: 160/100 mmHg; respiration rate per minute: 20 times; ECG: normal sinus rhythm; and pulse oxymetry: 98%. From a manual muscle test before operation, both legs were at the 4th stage. At the genupectoral position, the epidural space was identified by loss of resistance technique using an 18 G Tuohy insertion needle in between the L2-L3 lumbar, and after a test dose injection of 1.5% lidocaine 3 ml containing 1 : 200,000 epinephrine, no increase of heart rate or spinal anesthesia symptom was detected. After injecting 0.75% ropivacaine 12 ml, a catheter was placed and maintained. To measure the level of motor block by time after anesthesia, a modified Bromage scale (0: One can stretch and raise his/her leg; 1: One cannot raise his/her leg and cannot bend his/her knee; 2: One cannot his/her knee but can bend his/her ankle; 3: One cannot bend his/her ankle) was applied.
+The level of modified Bromage scale before anesthesia was 1, and 20 minutes after injecting ropivacaine, the level of modified Bromage scale was 3. The sensory nerves were blocked by T8 segment on pinprick examination. Vital signs during operation were blood pressure: 120-140/60-80 mmHg and pulse rate per minute: stable at 70-80 times. A Venti® mask with 35% of oxygen fraction in inspired air was used, and an ETCO2 capnometer was placed under the nose of the patient to monitor the end-tidal CO2. ETCO2 was stable at 35 mmHg and the pulse oxymetry was 100%. Due to the risk of aspiration of saliva or bronchial secretion during operation, sedation was not operated. The surgery was operated for an hour, and the epidural catheter was removed after operation. After finishing the operation, the level of modified Bromage scale was 3 and the sensory nerve block was decreased up to the T9 segment. Three hours after the operation, the level of modified Bromage scale was dropped to 2 and the sensory nerve block to the T11 segment; 5 hours after the operation, the stage of modified Bromage scale was 1, and the sensory nerve was declined to the L1 segment. Since the patient did not show adverse effects including vomiting, nausea, and dizziness in the recovery room, he was moved to a patient room. Twelve hours after finishing the operation, both the level of the modified Bromage scale and sensory nerve were recovered to the condition before operation, and also for the manual muscle test, both legs were maintained at the 4th stage. A physical exam conducted 24 hours after finishing surgery did not show special opinions. The patient recovered smoothly without complications and left the hospital 2 days after the operation.
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+22.32
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 22.32}
+

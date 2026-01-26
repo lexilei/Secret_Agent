@@ -1,0 +1,38 @@
+================================================================================
+EXPERIMENT: l1_ptool
+INSTANCE: 127
+CALCULATOR: Wells' Criteria for Pulmonary Embolism
+TIMESTAMP: 2026-01-01T21:26:52.578217
+================================================================================
+
+GROUND TRUTH: 6.0
+PREDICTED: 7.5
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 56-year-old man presented to the emergency room with progressively worsening shortness of breath and chest discomfort of one week duration. He had associated nonproductive cough for one week but denied any calf pain, leg swelling, hemoptysis, recent travel, recent surgeries, fever, or chills. His past medical history was notable for hypertension that was well controlled on lisinopril. He was also prescribed with 50 mg of clomiphene citrate 2 years ago due to low testosterone. He did not take any other medications and denied any smoking history. He denied any family history of blood clots or bleeding disorders.
+On physical examination, his temperature was 97.8 F, respiratory rate was 26 breaths/min, blood pressure was 109/58 mm Hg, heart rate was 134 beats/min, and SpO2 was 96% on 6 liters nasal cannula. He had normal heart sounds without any murmurs and rubs and had clear lungs. He had trace pedal edema bilaterally without any calf tenderness. Laboratory results include leukocytes of 15.4 × 109/L, hemoglobin of 15.8 g/dL, platelets of 207 × 109/L, creatinine of 2.2 mg/dL, and troponin I <0.05 ng/ml initially, but later plateaued at 0.10 ng/ml.
+Electrocardiogram on admission showed sinus tachycardia and incomplete right bundle branch block with S1Q3T3 pattern. Computed tomography angiography (CTA) of chest revealed acute large volume pulmonary embolism in bilateral main pulmonary arteries, lobar, and segmental branches of all lobes with mild right heart strain (as shown in ). Venous Doppler showed acute deep vein thrombosis in the right lower extremity involving the popliteal and posterior tibial veins. Echocardiogram was done which revealed a systolic ejection fraction of 55–65% with mildly decreased right ventricular systolic function.
+The patient was started on a high flow nasal cannula initially for respiratory distress and then eventually was weaned to room air. He was started on heparin drip for anticoagulation that was later switched to rivaroxaban. Since clomiphene citrate (CC) was thought to be a contributing factor for pulmonary embolism, it was stopped, and he was referred to follow-up with a hematologist to evaluate for prothrombotic risk. His further workup for hypercoagulable disorders including anticardiolipin antibodies, factor V Leiden mutation and prothrombin gene mutation has been negative. He was also recommended to have age-appropriate screening for malignancy.
+
+Question: What is the patient's score of Wells' criteria for Pulmonary Embolism? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+7.5
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'ptool_result': 7.5}
+

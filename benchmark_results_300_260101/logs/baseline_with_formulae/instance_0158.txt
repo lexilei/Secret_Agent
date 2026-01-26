@@ -1,0 +1,58 @@
+================================================================================
+EXPERIMENT: baseline_with_formulae
+INSTANCE: 158
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-02T03:23:08.643294
+================================================================================
+
+GROUND TRUTH: 15.59972
+PREDICTED: 19.0
+CORRECT: False
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 55-year-old woman comes to the physician because of a 6-month history of worsening shortness of breath on exertion and fatigue. She has type 1 diabetes mellitus, hypertension, hypercholesterolemia, and chronic kidney disease. Her mother was diagnosed with colon cancer at the age of 65 years. Her blood pressure is 145/92 mm Hg. Examination shows conjunctival pallor. Laboratory studies show:
+Hemoglobin 9.2 g/dL
+Mean corpuscular volume 88 μm3
+Reticulocyte count 0.6 %
+Serum
+Ferritin 145 ng/mL
+Creatinine 3.1 mg/dL
+Calcium 8.8 mg/dL
+A fecal occult blood test is pending.
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+To calculate the MDRD GFR, we need the following values from the patient note:  
+- **Age**: 55 years  
+- **Serum Creatinine (Scr)**: 3.1 mg/dL  
+- **Gender**: Female (gender coefficient = 0.742)  
+- **Race**: Not specified (assuming non-Black; if Black, multiply by 1.212)  
+
+The **MDRD GFR equation** is:  
+\[ \text{GFR} = 175 \times \text{Scr}^{-1.154} \times \text{age}^{-0.203} \times \text{gender coefficient} \]  
+
+Plugging in the values:  
+\[ \text{GFR} = 175 \times (3.1)^{-1.154} \times (55)^{-0.203} \times 0.742 \]  
+
+Calculating step-by-step:  
+1. \( 3.1^{-1.154} ≈ 0.280 \)  
+2. \( 55^{-0.203} ≈ 0.742 \)  
+3. Multiply all terms: \( 175 \times 0.280 \times 0.742 \times 0.742 ≈ 19.6 \)  
+
+If the patient is **Black**, multiply by 1.212:  
+\[ 19.6 \times 1.212 ≈ 23.7 \]  
+
+Since race is **not specified**, we assume non-Black.  
+
+**Final answer:**  
+19

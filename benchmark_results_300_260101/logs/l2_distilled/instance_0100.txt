@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 100
+CALCULATOR: Body Mass Index (BMI)
+TIMESTAMP: 2026-01-01T21:37:21.160643
+================================================================================
+
+GROUND TRUTH: 15.61849
+PREDICTED: 15.618
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 3-year-old girl visited the Emergency Department because she had not been able to eat well and had a fever since one day ago. She had no abdominal pain, vomiting, or diarrhea. She had taken only the prescribed acetaminophen one day before. According to her past medical history, she went to kindergarten, had not traveled recently, had no history of pancreatitis, autoimmune disease, choledochal cyst, or pancreatic ductal abnormalities, and her family history was negative for pancreatic disease. She has one older sister, and her sister did not have symptoms such as fever. Her vital signs at admission were as follows: blood pressure, 97/60 mmHg; heart rate, 104 beats/min; respiration rate, 24 breaths/min; and body temperature, 37.4℃. Her height was 98 cm (50th–75th percentile), and her weight was 15 kg (50th–75th percentile). On physical examination, multiple vesicles on the soft palate and maculopapular rashes were observed on both the hands and feet. She had a clear breathing sound, regular heartbeat without murmur, and soft abdomen with a normoactive bowel sound without an abdominal mass or abdominal tenderness. In initial laboratory studies, the serum glucose was decreased (41 mg/dL), erythrocyte sedimentation rate was slightly increased (17 mm/hr; reference range, 0–10 mm/hr), and C-reactive protein was slightly elevated (12.9 mg/L; reference range, 0.0–5.0 mg/L), and other laboratory studies were within the normal ranges. The white blood cell count was 7.8×103/µL, hemoglobin was 12.6 g/dL, platelet count was 252×103/µL, blood urea nitrogen was 15.0 mg/dL, creatinine was 0.42 mg/dL, cholesterol was 187 mg/dL, albumin was 4.3 g/dL, total bilirubin was 0.39 mg/dL, direct bilirubin was 0.11 mg/dL, aspartate aminotransferase was 34 IU/L, alanine aminotransaminase was 10 IU/L, sodium was 135 mmol/L, potassium was 4.4 mmol/L. Amylase and lipase tests were not performed at the time of admission. Urine ketone body was 3 positive in urinalysis. A chest X-ray showed no active lung lesions, cardiopulmonary angle blunting, or cardiomegaly. Abdomen X-rays showed a nonspecific bowel gas pattern without ileus or pancreatic calcification.
+We treated the child conservatively with intravenous fluid. On the first hospital day (HD), her fever subsided. On the third HD, she complained of ear pain caused by acute otitis media and intravenous amoxicillin/clavulanate was administered at a dose of 90 mg/kg/day. On the fourth HD, she experienced severe epigastric pain and vomiting. Her vital signs were as follows: blood pressure, 107/80 mmHg; heart rate, 109 beats/min.; respiration rate, 24 breaths/min; and body temperature, 37.2℃. On physical examination, she complained of epigastric tenderness. The serum levels of amylase and lipase were remarkably elevated (amylase, 1,902 IU/L; reference range, 28–100 IU/L; lipase, >1,500 IU/L; reference range, 13–60 IU/L). Ultrasonography of the abdomen showed mild diffuse swelling of the pancreas from head to tail with a small amount of ascites (), which suggested acute pancreatitis.
+Considering the patient's history of HFMD, we thought that enterovirus, which is a common cause of HFMD, could be a pathogen. We asked the Korea Centers for Disease Control and Prevention for enterovirus typing of her stool sample. In the first step, real-time reverse transcription polymerase chain reaction (RT-PCR) was performed on the specimens targeting the 5' noncoding region capable of detecting all 68 serotypes, and the result was enterovirus-positive. In the second step, 2-step RT-PCR was performed targeting viral protein 1, which has a different structural enterovirus protein for each subtype, and CA16 was detected in the sample.
+After acute pancreatitis was diagnosed, the patient was fasted and given sufficient intravenous fluid. Acetaminophen and ibuprofen were given for pain control. Serum amylase and lipase were serially followed (). The fever, epigastric pain, and vomiting were recovered on the sixth HD. She was discharged on the 11th HD without pancreatitis-related complications. On the day of discharge, the serum levels of amylase and lipase were remarkably reduced (amylase, 289 IU/L; lipase, 893 IU/L).
+She was followed up after discharge without any symptoms, and pancreatitis has not recurred yet. Laboratory tests performed 6 months after discharge showed normal levels of serum amylase and lipase ().
+
+Question: What is the patient's body mass mass index (BMI)? Your answer should be in terms of kg/m². You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Body Mass Index (BMI)', 'extracted_values': {'weight_kg': 15.0, 'height_cm': 98.0}, 'result': 15.618, 'method': 'python', 'formula': 'BMI = weight / height^2'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Body Mass Index (BMI)', 'extracted_values': {'weight_kg': 15.0, 'height_cm': 98.0}, 'result': 15.618, 'method': 'python', 'formula': 'BMI = weight / height^2'}}
+

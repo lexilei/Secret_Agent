@@ -1,0 +1,35 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 221
+CALCULATOR: Wells' Criteria for DVT
+TIMESTAMP: 2026-01-01T21:37:25.435313
+================================================================================
+
+GROUND TRUTH: 3.0
+PREDICTED: 3.0
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 62-year-old man with hypertension and diet-controlled type 2 diabetes presented to the emergency department late this afternoon complaining of progressive pain and swelling of his left calf that began five days ago while he was at home recuperating from an episode of community-acquired pneumonia. He reported that because of profound fatigue and shortness of breath related to that respiratory illness he had remained predominantly in bed for roughly the past week, getting up only to use the bathroom; he estimated that he had been supine or seated with legs dependent for well over three consecutive days. He denied any recent long-distance travel, trauma to the limb, or intravenous drug use. Four years earlier he experienced a thrombosis in the right popliteal vein that was documented on duplex ultrasonography at that time, for which he completed a six-month course of warfarin with appropriate follow-up and no known recurrence until now. He has not required any casts, splints, or braces to either lower extremity, and he demonstrates full active range of motion and strength in the hips, knees, and ankles without focal motor deficits or sensory loss. On arrival he was afebrile with a temperature of 98.4 °F, blood pressure 138/82 mm Hg, pulse 88 beats per minute, respiratory rate 18 breaths per minute, and oxygen saturation 97 % on room air. He appeared mildly uncomfortable but in no acute distress. Cardiopulmonary examination revealed a regular rate and rhythm without murmurs, gallops, or rubs, and clear breath sounds bilaterally. Abdominal examination was benign. Inspection of the lower limbs showed the left calf to be visibly fuller than the right without involvement of the thigh or ankle; when measured 10 cm inferior to the tibial tuberosity, the left circumference was 43 cm compared with 38 cm on the contralateral side, yielding a difference of 5 cm. The skin over the swollen area was warm and mildly erythematous but intact, and there were no engorged, tortuous superficial veins coursing across the shin or posterior calf. Palpation elicited diffuse discomfort throughout the gastrocnemius muscle belly; however, tracing along the expected path of the femoral, popliteal, and posterior tibial veins did not reproduce focal tenderness. The entire limb distal to the knee was well-perfused with brisk capillary refill, dorsalis pedis and posterior tibial pulses palpable and symmetric, and no mottling or cyanosis was appreciated. There was no calf cord, no stasis skin changes, and no ulceration. Neurologic testing revealed intact light-touch sensation and normal deep tendon reflexes. He denied pleuritic chest pain, hemoptysis, or sudden dyspnea suggestive of pulmonary embolism, and review of systems was otherwise unremarkable for fever, chills, night sweats, or recent weight loss. He takes lisinopril 20 mg daily and metformin 500 mg twice daily, does not smoke, and drinks alcohol socially; family history is noncontributory for clotting disorders. Laboratory studies drawn prior to any anticoagulation showed a complete blood count within normal limits, basic metabolic panel notable only for glucose 132 mg/dL, and hepatic function panel unremarkable; coagulation profile revealed an INR of 1.1 and aPTT of 29 seconds. Given the unilateral calf enlargement exceeding 3 cm, his prior documented thrombotic event, prolonged inactivity in bed over the past several days, absence of an equally plausible alternate explanation such as cellulitis or ruptured Baker cyst, lack of diffuse tenderness along the deep venous tract, and preservation of superficial venous patterns, the clinical suspicion for a recurrent lower-extremity thrombus remains significant. Duplex ultrasonography of the entire left lower limb has been ordered, and treatment decisions will await imaging confirmation.
+
+Question: What is the patient's score of Wells' criteria for Deep Vein Thrombosis? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+3.0
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'llm', 'result': 3.0}
+

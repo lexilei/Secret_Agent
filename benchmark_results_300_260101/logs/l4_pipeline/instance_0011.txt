@@ -1,0 +1,42 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 11
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-04T03:14:11.090540
+================================================================================
+
+GROUND TRUTH: 10.01786
+PREDICTED: 10.018
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+In 2008, a 59-year-old Japanese woman was admitted for evaluation of renal disease. RA had been diagnosed at another hospital in 1972 when she presented with bilateral arthropathy of the hands, knees, ankles, and feet. Treatment was started with a combination of a gold preparation and nonsteroidal anti-inflammatory drugs (NSAIDs), but was not been effective. Prednisolone (PSL; 15 mg daily) and bucillamine (BUC; 200 mg daily) were started in 1987, but her disease remained active. Methotrexate (MTX; 5 mg daily) was started in 1995 but was discontinued because of nausea. In 2002, urinary protein was found to be positive by a dipstick urine test, and BUC was stopped. Then treatment was continued with PSL (5 mg/day) and loxoprofen (50 mg/day). However, urinary protein excretion increased in 2007, and serum creatinine (Cre) was elevated to 1.96 mg/dL.
+On admission, the patient was 154.2 cm tall and weighed 44.0 kg, with a blood pressure of 128/60 mmHg and temperature of 36.4 °C. Physical examination did not reveal any abnormalities of the heart and lungs. The joints of her hands, knees, ankles, and feet showed bilateral swelling and deformity. In addition, the lower extremities were edematous. Her cervical spine was unstable, with flexion causing numbness in the upper limbs.
+Laboratory findings were as follows: serum Cre was 4.2 mg/dL, the estimated glomerular filtration rate (eGFR) was 9.3 mL/min/1.73m3, C-reactive protein (CRP) was 0.9 mg/dL, and SAA was 43.2. In addition, rheumatoid factor (RF) was positive at 59 U/mL (normal: < 10), and cyclic citrullinated peptide (CCP) antibodies were positive at 218.5 (normal < 4.5). 24-hour urinary protein excretion was 6.5 g, and the urine sediment contained 1 – 5 red cells per high-power field (HPF). The disease activity score (DAS)-CRP was 7.1. Radiographs showed deformation of the finger and foot joints as well as atlantoaxial joint subluxation. Renal biopsy was performed for evaluation of her kidney disease.
+Renal biopsy
+Light microscopic examination of a biopsy specimen containing 4 glomeruli revealed global sclerosis in all 4. There was severe tubular atrophy, and tubulointerstitial fibrosis occupied ~ 95% of the entire renal cortex. All 4 glomeruli contained multinodular structures of amorphous material with a PAM-positive border. This material was positive for Congo-red and amyloid A, but was negative for κ and λ chains, β-2 microglobulin, and transthyretin (). Electron microscopy showed randomly arranged fibrils measuring 8 – 12 nm in diameter corresponding to the amyloid deposits (f). AA amyloidosis was diagnosed from these findings. In addition to the glomeruli, amyloid deposits were mainly observed in the interlobular artery walls and tubulointerstitium (e). Endoscopic biopsy of the stomach, duodenum, and colon revealed AA-positive deposits in the small arteries and tissues of the submucosal layer (a).
+Clinical course
+PSL was discontinued, and administration of a soluble tumor necrosis factor (TNF) receptor inhibitor (etanercept; 25 mg every 2 weeks) was started in May 2008, but it was not effective. By September 2008, Cre was increased to 6.0 mg/dL. She underwent surgery to prepare an arteriovenous fistula for hemodialysis. Etanercept was discontinued, and a humanized anti-interleukin-6 receptor antibody (tocilizumab; 8 mg/kg = 360 mg/month) was started in February 2009. After 3 months, her CRP decreased to 0.0 mg/dL, and the DAS28-CRP sore was 2.12. After 2 years of tocilizumab therapy, urinary protein excretion was decreased to 1.1 g/day, and Cre was 4.0 mg/dL. Subsequently, Cre remained in the range of 4.5 – 5.0 mg/dL until December 2017. While Cre increased to 7.1 mg/dL after initiation of treatment with denosumab (a human monoclonal antibody that binds to receptor activator of NFκB ligand) for osteoporosis in October 2018, it remained at 7.0 mg/dL in June 2019 ().
+Gastroduodenal biopsy was performed in May 2013 and May 2017. On both occasions, no amyloid deposits were detected in the submucosal blood vessels (b).
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+10.018
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'confidence': 0.95}, {'stage': 'extract', 'extracted': {'age': 59, 'sex': 'female', 'weight_kg': 44.0, 'creatinine_mg_dl': 4.2, 'height_cm': 154.2}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 59, 'sex': 'female', 'weight_kg': 44.0, 'creatinine_mg_dl': 4.2, 'height_cm': 154.2}}, {'stage': 'compute', 'success': True, 'result': 10.018, 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}], 'method': 'l4_pipeline'}
+

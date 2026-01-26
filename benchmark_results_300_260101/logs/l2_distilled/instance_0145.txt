@@ -1,0 +1,37 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 145
+CALCULATOR: MDRD GFR Equation
+TIMESTAMP: 2026-01-01T21:37:22.047720
+================================================================================
+
+GROUND TRUTH: 44.38424
+PREDICTED: 44.607
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 94-year old woman presented with high fever associated with decreased oral intake and appetite loss and was admitted to our institute. She had been diagnosed as having diabetes mellitus, mild chronic kidney disease, chronic heart failure and stayed at a nursing home. She was a wheelchair-user. At the initial presentation, the patient had a body temperature of 40.2 °C, blood pressure of 183/81 mmHg, and pulse of 74 beats per min. Hypoxemia was not confirmed. The physical examination was unremarkable. Chest X-ray and urine test were normal. Laboratory tests revealed an elevation of blood urea nitrogen 23.8 mg/dl, creatinine 1.14 mg/dl and C-reactive protein 1.93 mg/dl. Platelet count was low at 105,000/μl. White cell count, hemoglobin and liver function tests were within normal range as shown in supplementary file. Two sets of blood cultures for aerobic and anaerobic bacteria, mycobacteria and fungi were drawn. Then, the patient was started empirically on meropenem and teicoplanin for broad-spectrum antibiotic coverage. In addition to blood cultures, a urinalysis with culture and a chest X-ray and CT were performed and found to be normal. The patient had no clinically evident sites of infection by history or physical examination. On day 2, a coryneform organism was recovered for 32 h by BACTEC (BD, Tokyo, Japan) from both the aerobic and anaerobic tubes of all blood cultures. Brevibacterium species were identified by Matrix-assisted laser desorption/ionization time-of-flight mass spectrometry (MALDI-TOF MS). The score value was 2.36. On gram-stained smears from the culture plates, the organisms appeared as Gram-positive, club-shaped, slightly curved rods, and some coccal forms were present (Fig. a). The bacteria were subcultured on Trypticase Soy Agar II with 5% Sheep Blood (BD, Tokyo, Japan) at 35 °C in 5% CO2, which resulted in a gray-white, smooth, non-hemolytic colonies after a 48-incubation (Fig. b). Subsequently, genetic investigation by 16S ribosomal RNA analysis was performed in order to identify the organism. Finally, the result identified this pathogen as Brevibacterium paucivorans with 99.5% homology on the Ez taxon database ().
+For comparison of a hydrolysis of casein in the organism, we obtained a type strain of B. casei, JCM 2594T and of B. paucivorans, JCM 11567T, from the Japan Collection of Microorganisms (JCM). Pyrazinamidase test was performed using PZA broth (Kyokuto Pharmaceutical Inc., Tokyo, Japan). Casein hydrolysis test was performed as follows. 1) inoculate the organism on a skim milk agar, 2) incubate the plate at 37 °C, 3) examine the plate for zone of hydrolysis following incubation. Both the organism and JCM 11567T showed a lack of hydrolysis of casein, while a hydrolysis of casein was confirmed in JCM 2594T as shown in Fig. . The organism had an absence of pyrazinamidase, while JCM 2594T showed a presence of pyrazinamidase. Additional microbiological tests by API 50CH showed that utilization of D-arabinose and gluconate was negative. These results were consistent with the organism as B. paucivorans. Antimicrobial susceptibility testing revealed that the organism was susceptible to MEPM. Although the peripheral venous catheter site showed no erythema or tenderness, the catheter was removed without culture, and a follow-up blood culture remained negative after therapy lasting for 7 days. The patient’s fever finally abated and labs were also improved. On day 14, the antibiotic therapy was discontinued. On day 28 from admission, fever recurred and blood cultures were performed. Candida parapsilosis was isolated by 2 sets of blood cultures, and she was diagnosed as having candidemia. While L-AMB was started for Candida parapsilosis bacteremia, she died by candidemia on day 35.
+Antimicrobial susceptibility testing was performed for the strain using the broth microdilution method (Dry Plate®, Eiken Chemical co., Ltd., Tokyo, Japan) according to the Clinical and Laboratory Standards Institute guidelines []. The isolate was susceptible to gentamicin [minimum inhibitory concentration (MIC) = 1 μg/ml], ciplofloxacin (MIC = 0.25 μg/ml), vancomycin (MIC≦0.5 μg/ml), meropenem (MIC≦0.5 μg/ml) and rifampicin (MIC≦0.12 μg/ml), and was resistant to clindamycin (MIC> 4 μg/ml), and was intermediately resistant to ceftriaxone (MIC = 2 μg/ml),and cefepim (MIC = 2 μg/ml) as shown in Table .
+
+Question: Using the MDRD GFR Equation, what is the patient's Glomerular Filtration Rate (GFR) in terms of mL/min/1.73 m²? If the patient is black, please use the MDRD GFR Equation for Blacks. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 94.0, 'creatinine': 1.14, 'sex': 'female'}, 'result': 44.607, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'CKD-EPI Equations for Glomerular Filtration Rate', 'extracted_values': {'age': 94.0, 'creatinine': 1.14, 'sex': 'female'}, 'result': 44.607, 'method': 'python', 'formula': 'GFR = 142 × (Scr/A)^B × 0.9938^age × gender_coef'}}
+

@@ -1,0 +1,36 @@
+================================================================================
+EXPERIMENT: l4_pipeline
+INSTANCE: 1
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-04T03:14:10.901563
+================================================================================
+
+GROUND TRUTH: 25.2381
+PREDICTED: 25.238
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+An 87-year-old man was admitted to our hospital for anorexia for several days, high-grade fever from the previous day, and liver dysfunction. Of note, he had a history of hypertension, diabetes mellitus (DM), and angina. Physical examination findings included: clear consciousness; height, 163 cm; weight, 48 kg; blood pressure, 66/40 mmHg; heart rate, 75/min; respiratory rate, 22/min; oxygen saturation of peripheral artery, 96%; and body temperature, 38.1 °C. He had no surface lymphadenopathy. Laboratory findings included: white blood cell (WBC) count, 4.2 × 109/L; hemoglobin, 9.6 g/dL; platelet count, 106 × 109/L; lactate dehydrogenase (LDH), 1662 IU/L; aspartate aminotransferase (AST), 6562 IU/L; alanine aminotransferase (ALT), 1407 IU/L; alkaline phosphatase (ALP), 509 IU/L; γ-glutamyl transpeptidase (γ-GTP), 130 IU/L; total bilirubin, 2.7 mg/dL; prothrombin time (PT), 20.3 s; international normalized ratio (INR), 1.73; blood urea nitrogen (BUN), 34.4 mg/dL; and creatinine, 1.4 mg/dL. Serologic tests were all negative for hepatitis A, B, C, and E. Computed tomography (CT) performed at admission revealed no distinct nodules or masses in the liver, but mild splenomegaly, multiple hypodense splenic lesions, and para-aortic lymph node swelling (Fig. a–c). Antibiotics were administered intravenously for suspected acute cholangitis and sepsis, but the fever persisted. Abdominal ultrasonography (US) and magnetic resonance imaging (MRI) performed 2 days later newly depicted gallbladder wall thickening and ascites (Figs. , ). On the same night, the patient presented with grade II hepatic encephalopathy, with blood tests showing a decrease in platelet count and worsening liver function suggestive of “acute type” ALF with hepatic coma and disseminated intravascular coagulation (DIC). While consideration was being given to treating acute liver failure, the patient suddenly developed ventricular fibrillation and died despite immediate resuscitation measures on day 3 of hospitalization.
+Given the rapid clinical course, an autopsy was performed in this patient with suspected ALF likely due to drug-induced liver injury, autoimmune hepatitis, hepatitis of indeterminate etiology, circulatory disturbance, metabolic disease, or malignant cells including malignant lymphoma. This led to the patient being diagnosed with malignant, diffuse large B-cell lymphoma, characterized by multiple lymph-node, as well as multi-organ (i.e., spleen, liver, lung, and prostate) involvement: (1) general swelling of lymph nodes in the para-abdominal aorta (Fig. a), peripancreatic, peribronchial, pulmonary hilar, subclavicular regions, as well as in the pelvis, especially around the iliac arteries, measuring up to 60 mm in diameter; (2) presence of multiple whitish splenic nodules (Fig. b) with the entire spleen shown to be microscopically infiltrated by tumor cells (Fig. a); (3) irregular geographical morphology of the liver (Fig. c) with the lymphoma cells mainly infiltrating the portal areas (Fig. b); (4) involvement of the right lobe of the lung; (5) involvement of both lobes of the prostate consequent to outer connective tissue involvement (Fig. c). Microscopically, the tumor cells in the lymph nodes were shown to have medium-sized irregular nuclei and small nucleoli with a high nuclear cytoplasmic ratio, thus showing diffuse proliferation characterized by the presence of large numbers of small T-cells (Fig. ). Immunohistochemistry revealed the tumor cells to be positive for CD20 (Fig. a), CD79a (Fig. b), bcl-2 (Fig. c), and MUM1 (Fig. d), but negative for CD3 (Fig. e), CD10, bcl-6, and cyclin D1, with a Ki-67 labeling index (Ki-67 LI) of 16% (Fig. f). The causes of death were thus determined as (1) DIC and (2) ALF associated with diffuse large B-cell lymphoma.
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+25.238
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'stages': [{'stage': 'identify', 'calculator': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'confidence': 0.95}, {'stage': 'extract', 'extracted': {'age': 87, 'sex': 'male', 'weight_kg': 48, 'creatinine_mg_dl': 1.4, 'height_cm': 163}, 'missing': []}, {'stage': 'validate', 'is_valid': True, 'missing': [], 'cleaned': {'age': 87, 'sex': 'male', 'weight_kg': 48, 'creatinine_mg_dl': 1.4, 'height_cm': 163}}, {'stage': 'compute', 'success': True, 'result': 25.238, 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}], 'method': 'l4_pipeline'}
+

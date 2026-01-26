@@ -1,0 +1,19 @@
+{
+  "experiment": "l3_audit",
+  "level": "L3+",
+  "total_instances": 300,
+  "correct_exact": 173,
+  "correct_tolerance": 209,
+  "errors": 0,
+  "accuracy_exact": 0.5766666666666667,
+  "accuracy_tolerance": 0.6966666666666667,
+  "error_rate": 0.0,
+  "total_cost_usd": 1.1501024999999994,
+  "avg_cost_usd": 0.0038336749999999978,
+  "total_tokens": 920082,
+  "avg_latency_ms": 19489.090764522552,
+  "total_repair_attempts": 93,
+  "repair_successes": 28,
+  "repair_success_rate": 0.3010752688172043,
+  "total_time_seconds": 5851.830429315567
+}

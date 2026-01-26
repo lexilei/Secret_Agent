@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 175
+CALCULATOR: Ideal Body Weight
+TIMESTAMP: 2026-01-01T21:37:22.609572
+================================================================================
+
+GROUND TRUTH: 55.97646
+PREDICTED: 55.976
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+A 73-year-old man was referred to our hospital by his primary care doctor because of a bulge in his right inguinal region. The patient reported this bulge had been present since his adolescence. The hernia had been reducible until age 55, and had become irreducible, thereafter. Medical history included hypertension, diabetes mellitus, asthma and cerebral infarction. He was currently taking one aspirin daily. The patient was 159 cm tall and weighed 84 kg, with a body mass index of 32.2 kg/m2. On physical examination, the bulge in his right inguinal region was roughly the size of an infant's head and the bottom of scrotum descended to his knees in the upright position (Fig. ). Laboratory tests indicated a hemoglobin A1C (HbA1C) concentration of 7.0% and a urine glucose concentration of 4+. Lung function tests identified restrictive lung function and pre-operative cardiac ultrasound revealed no local asynergy. Abdominal computed tomography (CT) imaging identified the sigmoid colon with a large amount of feces and the great omentum as part of the contents of the hernia (Fig. ). Although the hernia was irreducible, the patient was planned to undergo an elective surgery for hernia repair due to absence of symptoms of incarceration. Informed consent was obtained from the patient. The patient achieved a weight reduction of 3 kg within 3 months prior to surgery.
+CT on the day of admission showed a hernia sac of 2263 ml, with an intra-abdominal volume of 12 021 ml. Pre-operative bowel preparation with Magcorol P reduced the volume of the hernia contents to 1604 ml, representing a 71% reduction. The intra-abdominal volume was decreased to 10 485 ml.
+The TAPP procedure was performed under general anesthesia with the patient placed in a slight Trendelenburg position. In the aeroperitoneum, no adhesion between the orifice of the hernia and the abdominal content was identified. With four laparoscopic ports in place (Fig. ), the prolapsed intestine was slowly reduced by applying external pressure to the hernia from outside of the body. Following this procedure, complete reduction of the hernia contents was achieved, with an operative time of 2 h 50 min and a blood loss of approximately 700 ml. The loss of 700 ml of blood was mainly due to the injury caused by forceps when we sought to reduce the incarcerated omentum. We did not dissect the hernia sac, leaving it with the cord distally.
+CT imaging before hernia reduction indicated the diameter of the hernia orifice to be approximately 50 mm, with the posterior wall of the hernia orifice strengthened. A mesh of sufficient area was placed to cover the orifice of the hernia, completely detaching the dorsal aspect of the hernia from the peritoneal membrane up to the dorsal ileocecal region. Given the possibility of tearing of the peritoneal membrane, a VentralightTM ST mesh (Bard Davol Inc., RI, USA), 15 cm in diameter, was used.
+The patient followed a satisfactory post-operative course. The scrotum on post-operative Day 2 is shown in Fig. . On post-operative Day 2, the patient complained of mild abdominal fullness, which disappeared by post-operative Day 4 (Fig. ). Ultrasonography of the lower limbs indicated absence of deep vein thrombophlebitis. The patient was discharged from the hospital on post-operative Day 12, with no recurrence of herniation, 12 months post-surgery (Fig. ).
+
+Question: Using the Ideal Body Weight Formula, what is the patient's ideal body weight in terms of kg? You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Ideal Body Weight', 'extracted_values': {'sex': 'male', 'height_cm': 159.0, 'height_in': 62.59842519685039}, 'result': 55.976, 'method': 'python', 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Ideal Body Weight', 'extracted_values': {'sex': 'male', 'height_cm': 159.0, 'height_in': 62.59842519685039}, 'result': 55.976, 'method': 'python', 'formula': 'IBW = 50/45.5 + 2.3*(height_in - 60)'}}
+

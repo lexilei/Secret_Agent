@@ -1,0 +1,39 @@
+================================================================================
+EXPERIMENT: l2_distilled
+INSTANCE: 14
+CALCULATOR: Creatinine Clearance (Cockcroft-Gault Equation)
+TIMESTAMP: 2026-01-01T21:37:19.230972
+================================================================================
+
+GROUND TRUTH: 21.93788
+PREDICTED: 21.938
+CORRECT: True
+
+
+================================================================================
+PROMPT
+================================================================================
+
+Patient Note:
+In April 2011, an 81-year-old woman with a history of photosensitivity and hypertension was admitted to our hospital due to bilateral edema of the legs and nephrotic proteinuria (7.0 g/day). Her proteinuria was not detected before March 2011 by screening test by the family doctor. At admission, her height was 153 cm, weight was 40 kg, and blood pressure was 138/70 mmHg with treatment of candesartan 8 mg/day. Physical examination showed bilateral pitting edema of her legs and palpable superficial inguinal lymphadenopathies.
+Laboratory results were as follows: serum creatinine 1.27 mg/dL; sodium 138.8 mEq/L; potassium 4.5 mEq/L; hemoglobin 14.6 g/dL; white blood cells 12,300/μL; platelet count 42,000/μL; serum total proteins 7.4 g/dL; and albumin 2.1 g/dL; total cholesterol 224 mg/dl, low-density lipoprotein cholesterol 119 mg/dL, high-density lipoprotein cholesterol 60 mg/dL, triglyceride 96 mg/dL. She had an antinuclear antibody (ANA) titer of 1:40, with a speckled pattern that was associated with the presence of anti-dsDNA antibody (28 IU/mL). Tests were negative for anti-Sm, anti-RNP, anti-SS-B, anti-SS-A, and anti-cardiolipin IgG antibodies. Her CH50 level was low (14.3 U/mL). Microscopic urinalysis showed 51–100 red blood cells and 3–5 white blood cells per hyper field. Proteinuria was 9.3 g/day and selectivity index was 0.01. Chest and abdominal CT revealed no abnormalities. She was diagnosed with SLE based on thrombocytopenia, proteinuria, positive ANA with anti-dsDNA antibody, and history of photosensitivity.
+Before renal biopsy, we decided to treat her by prednisolone (PSL) 40 mg/day to normalize platelet count. Five days after the treatment, platelet count increased to 127,000/μL. Renal biopsy was performed 7 days after the treatment. The specimen for light microscopy contained 26 glomeruli; 8 exhibited global sclerosis, 2 revealed focal endocapillary hypercellularity superimposed on several foam cells (Fig. ).
+Immunofluorescence (IF) showed low-intensity diffuse global granular capillary staining of IgG, IgA, IgM, C3, and C1q. Analysis by electron microscopy (EM) revealed electron-dense glomerular basement membrane deposits and foot process effacement (Fig. ).
+This patient would have been diagnosed as LN class III (A) + V or III (A) because of scanty subepithelial immune deposition; however, we observed focal segmental foam cells closely resembling the cellular variant of FSGS. Based on experience with FSGS from July 2011, we added cyclosporine 100 mg/day on the initiated treatment with PSL. Within 3 months, the patient’s proteinuria rapidly improved from 9.3 to 1.8 g/day, and her leg edema completely disappeared. Her CH50 level gradually increased, and her anti-dsDNA antibody titer decreased below the normal limit (Fig. ). In March 2012, we performed a kidney re-biopsy. We observed focal segmental sclerotic lesions and endocapillary foam cells. IF with IgG, C3, and C1q showed bright granular staining, and EM showed electron-dense deposits at the same site. Diffuse foot process effacement was still present (Fig. ).
+
+Question: What is the patient's Creatinine Clearance using the Cockroft-Gault Equation in terms of mL/min? You should use the patient's adjusted body weight in kg instead of the patient's actual body weight if the patient is overweight or obese based on their BMI. If the patient's BMI's normal, set their adjusted body weight to the minimum of the ideal body and actual weight. If the patient is underweight, please set their adjusted body weight to their actual body weight. You should use the patient's medical values and health status when they were first admitted to the hospital prior to any treatment.
+
+
+================================================================================
+RESPONSE
+================================================================================
+
+{'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 81.0, 'actual_weight': 40.0, 'weight_used': 40.0, 'weight_type': 'actual (underweight)', 'bmi': 17.09, 'ibw': 46.04, 'creatinine': 1.27, 'sex': 'female', 'gender_coef': 0.85}, 'result': 21.938, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}
+
+================================================================================
+EXTRA INFO
+================================================================================
+
+trace:
+{'method': 'python', 'result': {'calculator_type': 'Creatinine Clearance (Cockcroft-Gault Equation)', 'extracted_values': {'age': 81.0, 'actual_weight': 40.0, 'weight_used': 40.0, 'weight_type': 'actual (underweight)', 'bmi': 17.09, 'ibw': 46.04, 'creatinine': 1.27, 'sex': 'female', 'gender_coef': 0.85}, 'result': 21.938, 'method': 'python', 'formula': 'CrCl = ((140-age) * adjusted_weight * gender_coef) / (Cr * 72)'}}
+
