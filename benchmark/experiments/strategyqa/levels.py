@@ -309,142 +309,17 @@ class L1_PTP(StrategyQAExperiment):
 
 
 # ============================================================================
-# L2: 2-Step Decomposition with ReAct Control Flow
+# L2: Trace Builder (from William Cohen's research plan)
 # ============================================================================
 
-class L2_Decompose(StrategyQAExperiment):
-    """
-    L2: 2-step decomposition.
+# Import the full TraceBuilder implementation
+from .trace_builder import L2_TraceBuilder, WorkflowTrace, TraceStep
 
-    Step 1: Ask LLM to decompose question into sub-questions
-    Step 2: Answer each sub-question
-    Step 3: Combine answers to get final yes/no
+# Import L3 ReAct
+from .l3_react import L3_ReAct, L3_ReActSimple
 
-    Uses ReAct-style control flow: Thought -> Action -> Observation
-    """
-
-    DECOMPOSE_PROMPT = """Break down this yes/no question into 2-3 simpler sub-questions.
-
-Question: {question}
-
-Sub-questions (one per line):
-1."""
-
-    ANSWER_SUB_PROMPT = """Answer this factual question briefly.
-
-Question: {question}
-
-Answer:"""
-
-    COMBINE_PROMPT = """Based on these facts, answer the original question.
-
-Original Question: {question}
-
-Facts:
-{facts}
-
-Based on these facts, is the answer Yes or No?
-
-Answer:"""
-
-    def __init__(self, model: str = "deepseek-v3-0324"):
-        super().__init__(model)
-
-    def run_instance(self, instance: StrategyQAInstance) -> StrategyQAResult:
-        start_time = time.time()
-        total_input = 0
-        total_output = 0
-        trace = {"steps": []}
-
-        try:
-            # Step 1: Decompose
-            decompose_prompt = self.DECOMPOSE_PROMPT.format(question=instance.question)
-            decompose_response = call_llm(prompt=decompose_prompt, model=self.model)
-            total_input += len(decompose_prompt) // 4
-            total_output += len(decompose_response) // 4 if decompose_response else 0
-
-            trace["steps"].append({
-                "action": "decompose",
-                "thought": "Breaking down the question into sub-questions",
-                "observation": decompose_response
-            })
-
-            # Parse sub-questions
-            sub_questions = self._parse_sub_questions(decompose_response)
-            if not sub_questions:
-                sub_questions = [instance.question]  # Fallback
-
-            # Step 2: Answer each sub-question
-            facts = []
-            for i, sub_q in enumerate(sub_questions):
-                sub_prompt = self.ANSWER_SUB_PROMPT.format(question=sub_q)
-                sub_answer = call_llm(prompt=sub_prompt, model=self.model)
-                total_input += len(sub_prompt) // 4
-                total_output += len(sub_answer) // 4 if sub_answer else 0
-
-                facts.append(f"{sub_q} -> {sub_answer.strip()}")
-                trace["steps"].append({
-                    "action": "answer_sub",
-                    "thought": f"Answering sub-question {i+1}",
-                    "question": sub_q,
-                    "observation": sub_answer
-                })
-
-            # Step 3: Combine
-            facts_str = "\n".join(f"- {fact}" for fact in facts)
-            combine_prompt = self.COMBINE_PROMPT.format(
-                question=instance.question,
-                facts=facts_str
-            )
-            final_response = call_llm(prompt=combine_prompt, model=self.model)
-            total_input += len(combine_prompt) // 4
-            total_output += len(final_response) // 4 if final_response else 0
-
-            trace["steps"].append({
-                "action": "combine",
-                "thought": "Combining facts to determine final answer",
-                "observation": final_response
-            })
-
-            latency_ms = (time.time() - start_time) * 1000
-            predicted = self.extract_boolean(final_response)
-            cost = calculate_cost(total_input, total_output, self.model)
-
-            return StrategyQAResult(
-                qid=instance.qid,
-                question=instance.question,
-                predicted_answer=predicted,
-                ground_truth=instance.answer,
-                is_correct=predicted == instance.answer if predicted is not None else False,
-                latency_ms=latency_ms,
-                input_tokens=total_input,
-                output_tokens=total_output,
-                total_tokens=total_input + total_output,
-                cost_usd=cost.cost_usd,
-                num_steps=len(trace["steps"]),
-                decomposition_used=True,
-                raw_response=final_response,
-                trace=trace,
-            )
-        except Exception as e:
-            return self._error_result(instance, str(e), type(e).__name__, time.time() - start_time)
-
-    def _parse_sub_questions(self, response: str) -> List[str]:
-        """Parse sub-questions from decomposition response."""
-        if not response:
-            return []
-
-        questions = []
-        for line in response.split('\n'):
-            line = line.strip()
-            # Match "1. question" or "- question" patterns
-            match = re.match(r'^(?:\d+[\.\)]\s*|-\s*|•\s*)(.+)', line)
-            if match:
-                q = match.group(1).strip()
-                if q and '?' in q or len(q) > 10:
-                    questions.append(q)
-
-        return questions[:4]  # Max 4 sub-questions
+# Alias for backward compatibility
+L2_Decompose = L2_TraceBuilder
 
 
 # ============================================================================
@@ -476,16 +351,22 @@ StrategyQAExperiment._error_result = _error_result
 # ============================================================================
 
 EXPERIMENTS = {
-    # L0
+    # L0 - Baseline
     "L0": L0_Baseline,
     "L0-baseline": L0_Baseline,
 
-    # L1 variants
+    # L1 - Structured Prompts
     "L1-cot": L1_CoT,
     "L1-coc": L1_CoC,
     "L1-ptp": L1_PTP,
 
-    # L2
-    "L2": L2_Decompose,
-    "L2-decompose": L2_Decompose,
+    # L2 - Trace Builder (Python controls flow)
+    "L2": L2_TraceBuilder,
+    "L2-trace": L2_TraceBuilder,
+    "L2-decompose": L2_Decompose,  # Alias
+
+    # L3 - ReAct Agent (LLM controls flow)
+    "L3": L3_ReAct,
+    "L3-react": L3_ReAct,
+    "L3-simple": L3_ReActSimple,
 }

@@ -33,6 +33,7 @@ from benchmark.experiments.strategyqa.baseline import StrategyQABaseline, Strate
 from benchmark.experiments.strategyqa.decompose import StrategyQADecomposeOracle, StrategyQADecomposeLLM
 from benchmark.experiments.strategyqa.react_exp import StrategyQAReAct, StrategyQAReActSimple
 from benchmark.experiments.strategyqa.levels import EXPERIMENTS as LEVEL_EXPERIMENTS
+from benchmark.experiments.strategyqa.trace_builder import L2_TraceBuilder
 
 
 def run_experiment(
