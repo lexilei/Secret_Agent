@@ -8,6 +8,20 @@ Usage:
     python -m benchmark.experiments.strategyqa.run_experiments --experiment decompose --n 10
 """
 
+import os
+from pathlib import Path
+
+# Load .env file if it exists
+env_file = Path(__file__).parent.parent.parent.parent / ".env"
+if env_file.exists():
+    with open(env_file) as f:
+        for line in f:
+            line = line.strip()
+            if line and not line.startswith('#') and '=' in line:
+                key, _, value = line.partition('=')
+                value = value.strip().strip('"').strip("'")
+                os.environ.setdefault(key.strip(), value)
+
 import argparse
 import json
 import time
@@ -18,6 +32,7 @@ from benchmark.dataset.strategyqa_loader import StrategyQADataset
 from benchmark.experiments.strategyqa.baseline import StrategyQABaseline, StrategyQABaselineCoT
 from benchmark.experiments.strategyqa.decompose import StrategyQADecomposeOracle, StrategyQADecomposeLLM
 from benchmark.experiments.strategyqa.react_exp import StrategyQAReAct, StrategyQAReActSimple
+from benchmark.experiments.strategyqa.levels import EXPERIMENTS as LEVEL_EXPERIMENTS
 
 
 def run_experiment(
@@ -31,12 +46,15 @@ def run_experiment(
 
     # Map experiment names to classes
     experiments = {
+        # Legacy names
         "baseline": StrategyQABaseline,
         "baseline_cot": StrategyQABaselineCoT,
         "decompose_oracle": StrategyQADecomposeOracle,
         "decompose_llm": StrategyQADecomposeLLM,
         "react": StrategyQAReAct,
         "react_simple": StrategyQAReActSimple,
+        # Level-based experiments (all use deepseek by default)
+        **LEVEL_EXPERIMENTS,
     }
 
     if experiment_name not in experiments:
