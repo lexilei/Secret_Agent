@@ -313,10 +313,16 @@ class L1_PTP(StrategyQAExperiment):
 # ============================================================================
 
 # Import the full TraceBuilder implementation
-from .trace_builder import L2_TraceBuilder, WorkflowTrace, TraceStep
+from .trace_builder import L2_TraceBuilder, L2_TraceBuilderRAG, WorkflowTrace, TraceStep
 
 # Import L3 ReAct
 from .l3_react import L3_ReAct, L3_ReActSimple
+
+# Import L4 Adaptive/Pipeline
+from .l4_adaptive import L4_Adaptive, L4_Pipeline, ComplexityRouter
+
+# Import L5 Learning
+from .l5_learning import L5_Improving, L5_ICL, PatternMemory
 
 # Alias for backward compatibility
 L2_Decompose = L2_TraceBuilder
@@ -364,9 +370,20 @@ EXPERIMENTS = {
     "L2": L2_TraceBuilder,
     "L2-trace": L2_TraceBuilder,
     "L2-decompose": L2_Decompose,  # Alias
+    "L2-rag": L2_TraceBuilderRAG,  # With retrieval augmentation
 
     # L3 - ReAct Agent (LLM controls flow)
     "L3": L3_ReAct,
     "L3-react": L3_ReAct,
     "L3-simple": L3_ReActSimple,
+
+    # L4 - Adaptive Routing / Pipeline
+    "L4": L4_Adaptive,
+    "L4-adaptive": L4_Adaptive,
+    "L4-pipeline": L4_Pipeline,
+
+    # L5 - Learning Agents
+    "L5": L5_Improving,
+    "L5-improving": L5_Improving,
+    "L5-icl": L5_ICL,
 }

@@ -420,8 +420,9 @@ class StrategyQATraceBuilder:
 
     Generates instance-specific workflow traces by:
     1. Decomposing the question into sub-questions
-    2. Answering each sub-question (resolving #N references)
-    3. Combining facts to get final answer
+    2. (Optional) Retrieving relevant paragraphs for each sub-question
+    3. Answering each sub-question (resolving #N references)
+    4. Combining facts to get final answer
 
     The trace is:
     - Executable (can re-run each step)
@@ -429,9 +430,10 @@ class StrategyQATraceBuilder:
     - ICL-ready (can format as demonstration)
     """
 
-    def __init__(self, model: str = "deepseek-v3-0324"):
+    def __init__(self, model: str = "deepseek-v3-0324", use_rag: bool = False):
         self.model = model
-        self.executor = PToolExecutor(model)
+        self.use_rag = use_rag
+        self.executor = PToolExecutor(model, use_rag=use_rag)
 
     def build_trace(self, question: str) -> WorkflowTrace:
         """Build a workflow trace for answering the question."""
@@ -471,10 +473,28 @@ class StrategyQATraceBuilder:
                     answers[i] = "True" if step.output else "False"
             else:
                 # Use answer_factual for facts
+                context = None
+
+                # Optional RAG: retrieve relevant paragraphs first
+                if self.use_rag:
+                    retrieve_step = self.executor.execute(
+                        ptool_name="retrieve",
+                        goal=f"Retrieve relevant facts for: {resolved_text}",
+                        inputs={"query": resolved_text, "top_k": 3},
+                    )
+                    trace.steps.append(retrieve_step)
+
+                    if retrieve_step.success and retrieve_step.output:
+                        # Format retrieved paragraphs as context
+                        context_parts = []
+                        for para in retrieve_step.output:
+                            context_parts.append(f"[{para['title']}]: {para['content']}")
+                        context = "\n".join(context_parts)
+
                 step = self.executor.execute(
                     ptool_name="answer_factual",
                     goal=f"Find fact: {resolved_text}",
-                    inputs={"question": resolved_text},
+                    inputs={"question": resolved_text, "context": context},
                 )
                 if step.success:
                     answers[i] = step.output
@@ -632,3 +652,31 @@ class L2_TraceBuilder(StrategyQAExperiment):
     def export_traces_for_audit(self) -> List[Dict[str, Any]]:
         """Export trace audit info for analysis."""
         return [t.get_audit_info() for t in self.traces]
+
+
+# ============================================================================
+# L2-RAG: Trace Builder with Retrieval Augmentation
+# ============================================================================
+
+class L2_TraceBuilderRAG(L2_TraceBuilder):
+    """
+    L2-RAG: Trace Builder with Retrieval Augmented Generation.
+
+    Same as L2_TraceBuilder but uses the `retrieve` ptool to fetch
+    relevant paragraphs from strategyqa_train_paragraphs.json before
+    answering factual questions.
+
+    Workflow:
+    1. decompose(question) → sub-questions
+    2. For each factual sub-question:
+       a. retrieve(sub_question) → relevant paragraphs
+       b. answer_factual(sub_question, context=paragraphs) → answer
+    3. combine_facts(question, answers) → final yes/no
+
+    The retrieval uses TF-IDF similarity over 9,251 Wikipedia paragraphs.
+    """
+
+    def __init__(self, model: str = "deepseek-v3-0324"):
+        super().__init__(model)
+        # Override trace builder with RAG enabled
+        self.trace_builder = StrategyQATraceBuilder(model, use_rag=True)

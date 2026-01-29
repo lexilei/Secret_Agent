@@ -389,11 +389,264 @@ EXPERIMENTS = {
 
 ---
 
+---
+
+## L4: Adaptive / Pipeline (`l4_adaptive.py`)
+
+**Two variants with different approaches to orchestration.**
+
+### L4-Adaptive: Complexity-Based Routing
+
+**Concept**: Route questions to different levels based on estimated complexity.
+
+```
+Question → [Estimate Complexity] → Route to L1/L2/L3
+```
+
+**Complexity levels**:
+- **SIMPLE**: Single fact lookup → Route to L1-CoT (cheap)
+- **MEDIUM**: 2-3 facts, some reasoning → Route to L2 (balanced)
+- **HARD**: Multi-hop, complex logic → Route to L3 (thorough)
+
+**Implementation** (`l4_adaptive.py:178-331`):
+```python
+class ComplexityRouter:
+    def _estimate_complexity_rules(self, question: str) -> Complexity:
+        # Heuristics: word count, complexity indicators, question marks
+        score = 0
+        if word_count > 20: score += 2
+        score += complex_indicator_count
+        score += multi_hop_indicator_count * 2
+
+        if score >= 4: return Complexity.HARD
+        elif score >= 2: return Complexity.MEDIUM
+        else: return Complexity.SIMPLE
+
+class L4_Adaptive(StrategyQAExperiment):
+    def run_instance(self, instance):
+        decision = self.router.route(instance.question)
+        experiment = self._get_experiment(decision.target_level)
+        return experiment.run_instance(instance)
+```
+
+**Research question**: Can automatic level selection achieve L3 accuracy at L1/L2 cost?
+
+### L4-Pipeline: Python-Controlled Stages
+
+**Concept**: Python orchestrates workflow, LLM handles understanding.
+
+```
+Stage 1: [LLM] Analyze question structure
+Stage 2: [LLM] Decompose into sub-questions
+Stage 3: [LLM/RAG] Answer each sub-question
+Stage 4: [Python] Combine answers logically
+```
+
+**Implementation** (`l4_adaptive.py:340-480`):
+```python
+class L4_Pipeline(StrategyQAExperiment):
+    def run_instance(self, instance):
+        # Stage 1: Analyze
+        analysis = self._stage1_analyze(instance.question)
+
+        # Stage 2: Decompose
+        sub_questions = self._stage2_decompose(instance.question, analysis)
+
+        # Stage 3: Answer sub-questions (with optional RAG)
+        sub_answers = [self._stage3_answer_sub(sq) for sq in sub_questions]
+
+        # Stage 4: Combine (final LLM call for yes/no)
+        predicted = self._stage4_combine(instance.question, sub_answers)
+```
+
+**Run**:
+```bash
+python -m benchmark.experiments.strategyqa.run_experiments -e L4 -n 10
+python -m benchmark.experiments.strategyqa.run_experiments -e L4-adaptive -n 10
+python -m benchmark.experiments.strategyqa.run_experiments -e L4-pipeline -n 10
+```
+
+---
+
+## L5: Learning Agents (`l5_learning.py`)
+
+**Concept**: Learn from execution experience to improve over time.
+
+### L5-Improving: Online Learning
+
+**How it works**:
+```
+Run N:
+    1. Retrieve relevant patterns from memory
+    2. Augment prompt with patterns
+    3. Execute
+    4. If correct: Extract positive pattern → Store
+       If wrong: Extract negative pattern → Store
+Run N+1:
+    - Uses learned patterns from Run N
+    - Performance improves over time
+```
+
+**Components** (`l5_learning.py:30-150`):
+```python
+@dataclass
+class LearnedPattern:
+    pattern_id: str
+    pattern_type: str      # "positive" or "negative"
+    question_type: str     # "comparison", "temporal", "causal", etc.
+    content: str           # The pattern/example
+    confidence: float
+    use_count: int
+    success_count: int
+
+class PatternMemory:
+    def store_pattern(self, pattern: LearnedPattern)
+    def get_relevant_patterns(self, question, pattern_type, max_patterns) -> List[LearnedPattern]
+    def update_pattern_stats(self, pattern_id, success: bool)
+```
+
+**Question type classification**:
+- **comparison**: "more than", "less than", "greater"
+- **temporal**: "before", "after", "when", "during"
+- **causal**: "because", "cause", "result", "lead to"
+- **possibility**: "can", "could", "able", "possible"
+- **similarity**: "same", "similar", "different"
+- **factual**: default
+
+**Implementation** (`l5_learning.py:210-350`):
+```python
+class L5_Improving(StrategyQAExperiment):
+    def run_instance(self, instance):
+        # Build prompt with relevant patterns
+        prompt = self._build_prompt_with_patterns(instance.question)
+
+        # Execute
+        response = call_llm(prompt=prompt, model=self.model)
+        predicted = self.extract_boolean(response)
+
+        # Learn from this execution
+        if is_correct and self.learn_from_success:
+            pattern = extract_pattern_from_trace(...)
+            self.pattern_memory.store_pattern(pattern)
+        elif not is_correct and self.learn_from_failure:
+            pattern = extract_pattern_from_trace(...)
+            self.pattern_memory.store_pattern(pattern)
+
+        # Update pattern statistics
+        for pid in self.patterns_used:
+            self.pattern_memory.update_pattern_stats(pid, is_correct)
+```
+
+### L5-ICL: In-Context Learning from Training
+
+**Concept**: Pre-populate pattern memory with examples from training data.
+
+**How it works**:
+```
+Setup:
+    1. Load training data
+    2. Group by question type
+    3. Create ICL patterns from good examples
+    4. Store in pattern memory
+
+Run:
+    - Start with knowledge (vs L5-Improving which starts from scratch)
+    - Continue learning from execution
+```
+
+**Implementation** (`l5_learning.py:380-450`):
+```python
+class L5_ICL(L5_Improving):
+    def _load_icl_examples(self):
+        # Group training by question type
+        by_type = group_by_question_type(self.train_data)
+
+        for qtype, instances in by_type.items():
+            # Select instances with decomposition (better examples)
+            good = [i for i in instances if i.decomposition][:self.icl_per_type]
+
+            for inst in good:
+                content = f"""Question type: {qtype}
+Question: {inst.question}
+Sub-questions: {inst.decomposition}
+Key facts: {inst.facts}
+Answer: {"Yes" if inst.answer else "No"}"""
+
+                pattern = LearnedPattern(
+                    pattern_type="positive",
+                    question_type=qtype,
+                    content=content,
+                    confidence=1.0,  # High confidence for training examples
+                )
+                self.pattern_memory.store_pattern(pattern)
+```
+
+**Run**:
+```bash
+python -m benchmark.experiments.strategyqa.run_experiments -e L5 -n 10
+python -m benchmark.experiments.strategyqa.run_experiments -e L5-improving -n 10
+python -m benchmark.experiments.strategyqa.run_experiments -e L5-icl -n 10
+```
+
+---
+
+## Experiment Registry (`levels.py`)
+
+```python
+EXPERIMENTS = {
+    # L0 - Baseline
+    "L0": L0_Baseline,
+
+    # L1 - Structured Prompts
+    "L1-cot": L1_CoT,
+    "L1-coc": L1_CoC,
+    "L1-ptp": L1_PTP,
+
+    # L2 - Trace Builder (Python controls flow)
+    "L2": L2_TraceBuilder,
+    "L2-rag": L2_TraceBuilderRAG,
+
+    # L3 - ReAct Agent (LLM controls flow)
+    "L3": L3_ReAct,
+    "L3-simple": L3_ReActSimple,
+
+    # L4 - Adaptive Routing / Pipeline
+    "L4": L4_Adaptive,
+    "L4-adaptive": L4_Adaptive,
+    "L4-pipeline": L4_Pipeline,
+
+    # L5 - Learning Agents
+    "L5": L5_Improving,
+    "L5-improving": L5_Improving,
+    "L5-icl": L5_ICL,
+}
+```
+
+---
+
+## Summary Table
+
+| Level | Name | Control | Key Feature | Cost |
+|-------|------|---------|-------------|------|
+| L0 | Baseline | Fixed | Direct prompt | Lowest |
+| L1 | Structured | Fixed | CoT/CoC/PTP prompts | Low |
+| L2 | Trace Builder | Python | Decompose→Answer→Combine | Medium |
+| L2-RAG | + Retrieval | Python | + TF-IDF paragraph retrieval | Medium |
+| L3 | ReAct | LLM | Think→Act→Observe loop | High |
+| L4-Adaptive | Routing | Router | Route by complexity | Variable |
+| L4-Pipeline | Stages | Python | 4-stage pipeline | Medium |
+| L5-Improving | Learning | LLM | Online pattern learning | High |
+| L5-ICL | + Training | LLM | Pre-loaded ICL examples | High |
+
+---
+
 ## Distillation Path
 
 The key insight from William Cohen's plan: Start with flexible agents, progressively optimize to deterministic code.
 
 ```
+L5 (Learning Agents)
+    ↓ Extract successful patterns
 L3 (ReAct Agent)
     ↓ Collect traces, find common patterns
 L2 (Trace Builder)
