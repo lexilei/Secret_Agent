@@ -118,6 +118,63 @@
       "max_output": 8192,
       "enabled": false,
       "tags": ["testing", "production"]
+    },
+
+    "qwen-2.5-72b": {
+      "provider": "together",
+      "model_id": "Qwen/Qwen2.5-72B-Instruct",
+      "api_key_env": "TOGETHER_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "coding", "math", "general", "long-context"],
+      "description": "Qwen 2.5 72B Instruct - Strong general-purpose model from Alibaba",
+      "cost": {
+        "input": 0.0012,
+        "output": 0.0012,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 131072,
+      "max_output": 8192,
+      "enabled": true,
+      "tags": ["testing", "production"]
+    },
+
+    "qwen-coder-32b": {
+      "provider": "together",
+      "model_id": "Qwen/Qwen2.5-Coder-32B-Instruct",
+      "api_key_env": "TOGETHER_API_KEY",
+      "endpoint": null,
+      "capabilities": ["coding", "reasoning", "math"],
+      "description": "Qwen 2.5 Coder 32B - Specialized for code generation and understanding",
+      "cost": {
+        "input": 0.0008,
+        "output": 0.0008,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 131072,
+      "max_output": 8192,
+      "enabled": true,
+      "tags": ["testing", "production"]
+    },
+
+    "qwq-32b": {
+      "provider": "together",
+      "model_id": "Qwen/QwQ-32B-Preview",
+      "api_key_env": "TOGETHER_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "math", "chain-of-thought"],
+      "description": "QwQ 32B Preview - Reasoning model with explicit chain-of-thought",
+      "cost": {
+        "input": 0.0012,
+        "output": 0.0012,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 32768,
+      "max_output": 8192,
+      "enabled": true,
+      "tags": ["testing", "production"]
     }
   },
 
