@@ -1,0 +1,858 @@
+{
+  "icl_factual_97f5ddce": {
+    "pattern_id": "icl_factual_97f5ddce",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Do movies always show nerds as the losers?\n\nSub-questions:\n- How did the quests of the nerds in Superbad turn out at the end?\n- How did the project of the nerd in Social Network turn out at the end?\n- Was #1 or #2 a negative outcome for the nerds?\n\nKey facts:\n- Superbad features two main characters that are nerds on a quest for love, and ends with them being victorious.\n- The Social Network is a film about a University Nerd who took his website global and became one of the most powerful people in the world.\nAnswer: No",
+    "confidence": 0.9333333333333333,
+    "use_count": 30,
+    "success_count": 26,
+    "metadata": {
+      "from_training": true,
+      "qid": "c1466851e3381d6fd882"
+    }
+  },
+  "icl_factual_031832d9": {
+    "pattern_id": "icl_factual_031832d9",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Would a modern central processing unit circuit chip fit on a housekey?\n\nSub-questions:\n- What is the size of a CPU Circuit chip across?\n- How long is an average house key?\n- Is #1 less than #2?\n\nKey facts:\n- A CPU circuit chip is about an inch across.\n- A housekey is generally less than a half-inch across.\nAnswer: No",
+    "confidence": 0.75,
+    "use_count": 6,
+    "success_count": 3,
+    "metadata": {
+      "from_training": true,
+      "qid": "d61aede0997947263d39"
+    }
+  },
+  "icl_possibility_5da101e4": {
+    "pattern_id": "icl_possibility_5da101e4",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Can Family of Barack Obama ride comfortably in 2020 Jaguar F Type?\n\nSub-questions:\n- How many people are in Barack Obama's immediate family?\n- How many people can sit in a 2020 Jaguar F Type?\n- Is #2 greater than #1?\n\nKey facts:\n- Barack Obama has a wife and two children.\n- The 2020 Jaguar F Type is a car that seats two people.\nAnswer: No",
+    "confidence": 0.75,
+    "use_count": 2,
+    "success_count": 1,
+    "metadata": {
+      "from_training": true,
+      "qid": "ee4cefbfb263f2d65744"
+    }
+  },
+  "icl_possibility_e6b7eef8": {
+    "pattern_id": "icl_possibility_e6b7eef8",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Would Garfield like canid food?\n\nSub-questions:\n- What is Garfield's favorite food?\n- Is the answer to #1 a type of canned food?\n\nKey facts:\n- Garfield is a fictional comic strip character that is a cat. \n- Garfield loves to eat spaghetti.\n- Canid refers to the species that dogs belong to.\n- Dogs like to eat meat and dog food.\nAnswer: No",
+    "confidence": 0.75,
+    "use_count": 6,
+    "success_count": 3,
+    "metadata": {
+      "from_training": true,
+      "qid": "bf86d02dee2fddaa7f75"
+    }
+  },
+  "icl_similarity_e99980e7": {
+    "pattern_id": "icl_similarity_e99980e7",
+    "pattern_type": "positive",
+    "question_type": "similarity",
+    "content": "Question type: similarity\nQuestion: Are slime lilies in a different scientific family than asparagus?\n\nSub-questions:\n- Which family does the asparagus belong to?\n- Which plants are commonly referred to as slime lilies?\n- Which family does #2 belong to?\n- Is #1 different from #3?\n\nKey facts:\n- Asparagus is a species of plants of the Asparagaceae family.\n- Slime lilies are the common name for the flowering albuca plant.\n- The albuca plant belongs to the scientific family of Asparagaceae.\nAnswer: No",
+    "confidence": 0.875,
+    "use_count": 20,
+    "success_count": 15,
+    "metadata": {
+      "from_training": true,
+      "qid": "4a417cac6aae535b9ab6"
+    }
+  },
+  "icl_similarity_0d968451": {
+    "pattern_id": "icl_similarity_0d968451",
+    "pattern_type": "positive",
+    "question_type": "similarity",
+    "content": "Question type: similarity\nQuestion: In geometry terms, is the Royal Observatory in Greenwich similar to a yield sign?\n\nSub-questions:\n- What is the shape of the Royal Observatory in Greenwich?\n- What is the shape of a yield sign?\n- Is #1 geometrically similar to #2?\n\nKey facts:\n- The main building of the Royal Observatory is the Octagon Room.\n- A yield sign is shaped like a rounded triangle.\n- Two figures are similar if they have the same shape but not necessarily the same size.\nAnswer: No",
+    "confidence": 0.5,
+    "use_count": 2,
+    "success_count": 0,
+    "metadata": {
+      "from_training": true,
+      "qid": "87e2a3e37113fbfc4efc"
+    }
+  },
+  "icl_causal_3f5284cc": {
+    "pattern_id": "icl_causal_3f5284cc",
+    "pattern_type": "positive",
+    "question_type": "causal",
+    "content": "Question type: causal\nQuestion: Would Modafinil be effective in completing a suicide?\n\nSub-questions:\n- What is Modafinil?\n- What are the effects of taking too much #1?\n- Would someone who wanted to commit suicide want to #2?\n\nKey facts:\n- Modafinil is a powerful wakefulness drug, typically prescribed at 100mg or 200mg per day doses.\n- Suicide attempts with up to 5,000mg of Modafinil have been unsuccessful. \nAnswer: No",
+    "confidence": 0.8461538461538461,
+    "use_count": 13,
+    "success_count": 9,
+    "metadata": {
+      "from_training": true,
+      "qid": "50ff44a79275484ba2f0"
+    }
+  },
+  "icl_causal_9844f5e2": {
+    "pattern_id": "icl_causal_9844f5e2",
+    "pattern_type": "positive",
+    "question_type": "causal",
+    "content": "Question type: causal\nQuestion: Is Shakespeare famous because of the infinitive form?\n\nSub-questions:\n- The use of the infinitive form in \"To be or not to be\" appears in which popular soliloquy?\n- Which book contained #1\n- Did Williams Shakespeare write #2?\n\nKey facts:\n- Shakespeare wrote the play Hamlet\n- Hamlet contains one of Shakespeare's most famous passages, Hamlet's soliloquy\n- Hamlet's soliloquy begins with the line 'To be or not to be', which uses the infinitive form\nAnswer: Yes",
+    "confidence": 0.9473684210526316,
+    "use_count": 19,
+    "success_count": 17,
+    "metadata": {
+      "from_training": true,
+      "qid": "9a2571faa1554261fa1f"
+    }
+  },
+  "icl_temporal_fb6d8855": {
+    "pattern_id": "icl_temporal_fb6d8855",
+    "pattern_type": "positive",
+    "question_type": "temporal",
+    "content": "Question type: temporal\nQuestion: Is grief always obvious when it is being experienced?\n\nSub-questions:\n- What are the ways a person may express their grief?\n- Based on #1, can one always tell when someone is grieving?\n\nKey facts:\n- Grief has no set external representation. \n- People who are grieving may laugh, cry, or even seem angry.\nAnswer: No",
+    "confidence": 0.9,
+    "use_count": 5,
+    "success_count": 4,
+    "metadata": {
+      "from_training": true,
+      "qid": "b49f91ec03c6a8ccc0b7"
+    }
+  },
+  "icl_temporal_73d7a0fb": {
+    "pattern_id": "icl_temporal_73d7a0fb",
+    "pattern_type": "positive",
+    "question_type": "temporal",
+    "content": "Question type: temporal\nQuestion: Was Harry Potter and the Philosopher's Stone popular during the great depression?\n\nSub-questions:\n- When did the Great Depression end?\n- When was Harry Potter and the Philosopher's Stone first published?\n- Is #2 before #1?\n\nKey facts:\n- The Great Depression started in 1929 and ended in 1933.\n- Harry Potter and the Philosopher's Stone was first published in 1997.\nAnswer: No",
+    "confidence": 0.9285714285714286,
+    "use_count": 7,
+    "success_count": 6,
+    "metadata": {
+      "from_training": true,
+      "qid": "9dff48bfef4c397be63c"
+    }
+  },
+  "icl_comparison_16755d0b": {
+    "pattern_id": "icl_comparison_16755d0b",
+    "pattern_type": "positive",
+    "question_type": "comparison",
+    "content": "Question type: comparison\nQuestion: Would Elon Musk be more likely to know about astrology than physics?\n\nSub-questions:\n- Which field(s) of study did Elon Musk specialize in?\n- Is Astrology closely related to (any of) #1?\n\nKey facts:\n- Elon Musk is a businessman and engineer with a bachelor's degree and unfinished Ph.D. in physics\n- Engineering is based on principles of applied physics\n- Astrology is not a form of science or applied science\nAnswer: No",
+    "confidence": 0.9230769230769231,
+    "use_count": 13,
+    "success_count": 11,
+    "metadata": {
+      "from_training": true,
+      "qid": "166a70897d5b57f363d6"
+    }
+  },
+  "icl_comparison_2f9c17e1": {
+    "pattern_id": "icl_comparison_2f9c17e1",
+    "pattern_type": "positive",
+    "question_type": "comparison",
+    "content": "Question type: comparison\nQuestion: Is Hamlet more common on IMDB than Comedy of Errors?\n\nSub-questions:\n- How many listings of Hamlet are there on IMDB?\n- How many listing of Comedy of Errors is there on IMDB?\n- Is #1 greater than #2?\n\nKey facts:\n- IMDB, The Internet Movie Database, catalogs movies.\n- IMDB lists 6 Hamlet movie adaptations.\n- IMDB lists 5 Comedy of Errors movie adaptations.\nAnswer: Yes",
+    "confidence": 1.0,
+    "use_count": 9,
+    "success_count": 9,
+    "metadata": {
+      "from_training": true,
+      "qid": "6fb8dabcfc346a40c461"
+    }
+  },
+  "positive_ab162829": {
+    "pattern_id": "positive_ab162829",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Are months based on the solar cycle?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Are months based on the solar cycle?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_e302fec0": {
+    "pattern_id": "positive_e302fec0",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Is it impossible for pigs to use pig latin?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Is it impossible for pigs to use pig latin?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_0a28e43a": {
+    "pattern_id": "positive_0a28e43a",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Would a Dodo hypothetically tower over Ma Petite?\nAnswer: Yes",
+    "confidence": 0.5,
+    "use_count": 1,
+    "success_count": 0,
+    "metadata": {
+      "question": "Would a Dodo hypothetically tower over Ma Petite?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "negative_5f184d9f": {
+    "pattern_id": "negative_5f184d9f",
+    "pattern_type": "negative",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nFailed approach for: Could ancient Tony Bennett have a baby in 2020?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for possibility questions.",
+    "confidence": 0.85,
+    "use_count": 10,
+    "success_count": 7,
+    "metadata": {
+      "question": "Could ancient Tony Bennett have a baby in 2020?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "negative_2beb4d46": {
+    "pattern_id": "negative_2beb4d46",
+    "pattern_type": "negative",
+    "question_type": "factual",
+    "content": "Question type: factual\nFailed approach for: Are eagles and young bears both used as labels for skills-training youth groups?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for factual questions.",
+    "confidence": 0.9,
+    "use_count": 5,
+    "success_count": 4,
+    "metadata": {
+      "question": "Are eagles and young bears both used as labels for skills-training youth groups?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "negative_7f39ee87": {
+    "pattern_id": "negative_7f39ee87",
+    "pattern_type": "negative",
+    "question_type": "similarity",
+    "content": "Question type: similarity\nFailed approach for: Does Pikachu like Charles Darwin?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for similarity questions.",
+    "confidence": 0.75,
+    "use_count": 2,
+    "success_count": 1,
+    "metadata": {
+      "question": "Does Pikachu like Charles Darwin?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "positive_282b3f48": {
+    "pattern_id": "positive_282b3f48",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Is unanimously elected president's birthday a break for mail carriers?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Is unanimously elected president's birthday a break for mail carriers?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_3c4099e7": {
+    "pattern_id": "positive_3c4099e7",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Is capsaicin associated with cooking?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Is capsaicin associated with cooking?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "negative_9bd4345f": {
+    "pattern_id": "negative_9bd4345f",
+    "pattern_type": "negative",
+    "question_type": "factual",
+    "content": "Question type: factual\nFailed approach for: Would you take a photo of a Saltwater crocodile in Memphis?\nPredicted: Yes (incorrect)\nLesson: Double-check reasoning for factual questions.",
+    "confidence": 0.9230769230769231,
+    "use_count": 13,
+    "success_count": 11,
+    "metadata": {
+      "question": "Would you take a photo of a Saltwater crocodile in Memphis?",
+      "answer": true,
+      "is_correct": false
+    }
+  },
+  "positive_6a3efa8c": {
+    "pattern_id": "positive_6a3efa8c",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Will a Euro sink in water?\nAnswer: Yes",
+    "confidence": 1.0,
+    "use_count": 4,
+    "success_count": 4,
+    "metadata": {
+      "question": "Will a Euro sink in water?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_e0141a67": {
+    "pattern_id": "positive_e0141a67",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Is the Federal Reserve a quick walk from Space Needle?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Is the Federal Reserve a quick walk from Space Needle?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_dc7e4d4f": {
+    "pattern_id": "positive_dc7e4d4f",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Are there options for students who struggle to understand the writing style of Othello?\nAnswer: Yes",
+    "confidence": 1.0,
+    "use_count": 3,
+    "success_count": 3,
+    "metadata": {
+      "question": "Are there options for students who struggle to understand the writing style of Othello?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_9239ed4f": {
+    "pattern_id": "positive_9239ed4f",
+    "pattern_type": "positive",
+    "question_type": "comparison",
+    "content": "Question type: comparison\nQuestion: Does 2015 have more unlucky Friday's than usual?\nAnswer: Yes",
+    "confidence": 0.8333333333333333,
+    "use_count": 3,
+    "success_count": 2,
+    "metadata": {
+      "question": "Does 2015 have more unlucky Friday's than usual?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_d3892587": {
+    "pattern_id": "positive_d3892587",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Could the surface of Europa fry an egg?\nAnswer: No",
+    "confidence": 0.5,
+    "use_count": 1,
+    "success_count": 0,
+    "metadata": {
+      "question": "Could the surface of Europa fry an egg?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_d11e6fd4": {
+    "pattern_id": "positive_d11e6fd4",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Did Kim Il-sung network on LinkedIn?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Did Kim Il-sung network on LinkedIn?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_650d47dc": {
+    "pattern_id": "positive_650d47dc",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Is Supreme Court of the United States analogous to High Courts of Justice of Spain?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Is Supreme Court of the United States analogous to High Courts of Justice of Spain?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_6938f2cc": {
+    "pattern_id": "positive_6938f2cc",
+    "pattern_type": "positive",
+    "question_type": "temporal",
+    "content": "Question type: temporal\nQuestion: Did breakdancing grow in popularity during WW2?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Did breakdancing grow in popularity during WW2?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_287db7da": {
+    "pattern_id": "positive_287db7da",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Will Ronda Rousey hypothetically defeat X-Men's Colossus in a fight?\nAnswer: No",
+    "confidence": 0.5,
+    "use_count": 1,
+    "success_count": 0,
+    "metadata": {
+      "question": "Will Ronda Rousey hypothetically defeat X-Men's Colossus in a fight?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_014cabcc": {
+    "pattern_id": "positive_014cabcc",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Has cannabis been a big influence in rap music genre?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Has cannabis been a big influence in rap music genre?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_db700097": {
+    "pattern_id": "positive_db700097",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Was Jean Valjean imprisoned due to hunger?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Was Jean Valjean imprisoned due to hunger?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_e0103b67": {
+    "pattern_id": "positive_e0103b67",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Can telescopes hear noise?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Can telescopes hear noise?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_bc02a522": {
+    "pattern_id": "positive_bc02a522",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Did Donatello use a smartphone?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Did Donatello use a smartphone?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_f13f2b5e": {
+    "pattern_id": "positive_f13f2b5e",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Did Jane Austen suffer from middle child syndrome?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Did Jane Austen suffer from middle child syndrome?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "negative_d7a1ec4f": {
+    "pattern_id": "negative_d7a1ec4f",
+    "pattern_type": "negative",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nFailed approach for: Could a Bengal cat hypothetically best Javier Sotomayor's record?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for possibility questions.",
+    "confidence": 0.5,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Could a Bengal cat hypothetically best Javier Sotomayor's record?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "positive_5f0174ab": {
+    "pattern_id": "positive_5f0174ab",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Is it hard for Rahul Dravid to order food at a restaurant in Aurangabad?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Is it hard for Rahul Dravid to order food at a restaurant in Aurangabad?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_a04df1f2": {
+    "pattern_id": "positive_a04df1f2",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Does a lapidary work with items that are studied by geologists?\nAnswer: Yes",
+    "confidence": 0.75,
+    "use_count": 2,
+    "success_count": 1,
+    "metadata": {
+      "question": "Does a lapidary work with items that are studied by geologists?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_f730ef1e": {
+    "pattern_id": "positive_f730ef1e",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Were there fifty English kings throughout the Middle Ages?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Were there fifty English kings throughout the Middle Ages?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "negative_df963317": {
+    "pattern_id": "negative_df963317",
+    "pattern_type": "negative",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nFailed approach for: Could the Pope be on an episode of Pimp My Ride?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for possibility questions.",
+    "confidence": 0.8333333333333333,
+    "use_count": 3,
+    "success_count": 2,
+    "metadata": {
+      "question": "Could the Pope be on an episode of Pimp My Ride?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "negative_8f3bdf87": {
+    "pattern_id": "negative_8f3bdf87",
+    "pattern_type": "negative",
+    "question_type": "factual",
+    "content": "Question type: factual\nFailed approach for: Would the chef at Carmine's restaurant panic if there was no basil?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for factual questions.",
+    "confidence": 0.875,
+    "use_count": 4,
+    "success_count": 3,
+    "metadata": {
+      "question": "Would the chef at Carmine's restaurant panic if there was no basil?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "positive_4a8ba789": {
+    "pattern_id": "positive_4a8ba789",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Will Conan the Barbarian hypothetically last a short time inside of Call of Duty?\nAnswer: Yes",
+    "confidence": 1.0,
+    "use_count": 1,
+    "success_count": 1,
+    "metadata": {
+      "question": "Will Conan the Barbarian hypothetically last a short time inside of Call of Duty?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_05b54205": {
+    "pattern_id": "positive_05b54205",
+    "pattern_type": "positive",
+    "question_type": "similarity",
+    "content": "Question type: similarity\nQuestion: Did the Eastern Orthodox Church and the Byzantine Empire ever use the same calendar?\nAnswer: Yes",
+    "confidence": 1.0,
+    "use_count": 1,
+    "success_count": 1,
+    "metadata": {
+      "question": "Did the Eastern Orthodox Church and the Byzantine Empire ever use the same calendar?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "negative_504aff9e": {
+    "pattern_id": "negative_504aff9e",
+    "pattern_type": "negative",
+    "question_type": "factual",
+    "content": "Question type: factual\nFailed approach for: Would Taylor Swift refer to Snoopy as oppa?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for factual questions.",
+    "confidence": 1.0,
+    "use_count": 2,
+    "success_count": 2,
+    "metadata": {
+      "question": "Would Taylor Swift refer to Snoopy as oppa?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "positive_a1a5b922": {
+    "pattern_id": "positive_a1a5b922",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Do Chinese Americans face discrimination at a Federal level in the US?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Do Chinese Americans face discrimination at a Federal level in the US?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_91ba6bbf": {
+    "pattern_id": "positive_91ba6bbf",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Would most children be up past their bedtime if they were watching Conan O'Brien?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Would most children be up past their bedtime if they were watching Conan O'Brien?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_a0738bea": {
+    "pattern_id": "positive_a0738bea",
+    "pattern_type": "positive",
+    "question_type": "temporal",
+    "content": "Question type: temporal\nQuestion: Did the Pearl Harbor attack occur during autumn?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Did the Pearl Harbor attack occur during autumn?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_50e8d6e2": {
+    "pattern_id": "positive_50e8d6e2",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Are some chiropractic manipulations dangerous?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Are some chiropractic manipulations dangerous?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_82ee3e6b": {
+    "pattern_id": "positive_82ee3e6b",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Could R. Kelly write a college thesis?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Could R. Kelly write a college thesis?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_49d19f7a": {
+    "pattern_id": "positive_49d19f7a",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Does chlorine inhibit photosynthesis?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Does chlorine inhibit photosynthesis?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_9c4a1a7d": {
+    "pattern_id": "positive_9c4a1a7d",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Would alligator best saltwater crocodile in hypothetical Lake Urmia battle?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Would alligator best saltwater crocodile in hypothetical Lake Urmia battle?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_2de189c0": {
+    "pattern_id": "positive_2de189c0",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Would vegans consider chickpeas for a tuna substitute?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Would vegans consider chickpeas for a tuna substitute?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_83e8a1da": {
+    "pattern_id": "positive_83e8a1da",
+    "pattern_type": "positive",
+    "question_type": "temporal",
+    "content": "Question type: temporal\nQuestion: Will speed reader devour The Great Gatsby before the Raven?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Will speed reader devour The Great Gatsby before the Raven?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_be5894af": {
+    "pattern_id": "positive_be5894af",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Did Hanuman ever experience an orgasm?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Did Hanuman ever experience an orgasm?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "negative_fcb599c4": {
+    "pattern_id": "negative_fcb599c4",
+    "pattern_type": "negative",
+    "question_type": "factual",
+    "content": "Question type: factual\nFailed approach for: Does the letter B's place in alphabet exceed number of 2008 total lunar eclipses?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for factual questions.",
+    "confidence": 0.5,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Does the letter B's place in alphabet exceed number of 2008 total lunar eclipses?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "positive_a18e50ef": {
+    "pattern_id": "positive_a18e50ef",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Do flying fish have good eyesight?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Do flying fish have good eyesight?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "negative_ad404711": {
+    "pattern_id": "negative_ad404711",
+    "pattern_type": "negative",
+    "question_type": "similarity",
+    "content": "Question type: similarity\nFailed approach for: Would Doctor Strange like the Pittsburgh Steelers logo?\nPredicted: No (incorrect)\nLesson: Double-check reasoning for similarity questions.",
+    "confidence": 0.5,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Would Doctor Strange like the Pittsburgh Steelers logo?",
+      "answer": false,
+      "is_correct": false
+    }
+  },
+  "positive_5bbe650e": {
+    "pattern_id": "positive_5bbe650e",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Are those incapable of reproduction incapable of parenthood?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Are those incapable of reproduction incapable of parenthood?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_5b9e758a": {
+    "pattern_id": "positive_5b9e758a",
+    "pattern_type": "positive",
+    "question_type": "factual",
+    "content": "Question type: factual\nQuestion: Did the Gunpowder plot eliminate Mary, Queen of Scots bloodline?\nAnswer: No",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Did the Gunpowder plot eliminate Mary, Queen of Scots bloodline?",
+      "answer": false,
+      "is_correct": true
+    }
+  },
+  "positive_e36ceba7": {
+    "pattern_id": "positive_e36ceba7",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Is Samsung accountable to shareholders?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Is Samsung accountable to shareholders?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "positive_089e46a1": {
+    "pattern_id": "positive_089e46a1",
+    "pattern_type": "positive",
+    "question_type": "possibility",
+    "content": "Question type: possibility\nQuestion: Is Mark Cuban able to visit Northern Mariana Islands without a passport?\nAnswer: Yes",
+    "confidence": 0.8,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Is Mark Cuban able to visit Northern Mariana Islands without a passport?",
+      "answer": true,
+      "is_correct": true
+    }
+  },
+  "negative_f5282232": {
+    "pattern_id": "negative_f5282232",
+    "pattern_type": "negative",
+    "question_type": "factual",
+    "content": "Question type: factual\nFailed approach for: Does water have viscosity?\nPredicted: Yes (incorrect)\nLesson: Double-check reasoning for factual questions.",
+    "confidence": 0.5,
+    "use_count": 0,
+    "success_count": 0,
+    "metadata": {
+      "question": "Does water have viscosity?",
+      "answer": true,
+      "is_correct": false
+    }
+  }
+}
