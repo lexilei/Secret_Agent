@@ -434,7 +434,7 @@ class L1_PTP(StrategyQAExperiment):
 from .trace_builder import L2_TraceBuilder, L2_TraceBuilderRAG, WorkflowTrace, TraceStep
 
 # Import L3 ReAct
-from .l3_react import L3_ReAct, L3_ReActSimple
+from .l3_react import L3_ReAct, L3_ReActSimple, L3_ReActRAG
 
 # Import L4 Adaptive/Pipeline
 from .l4_adaptive import L4_Adaptive, L4_Pipeline, ComplexityRouter
@@ -494,6 +494,7 @@ EXPERIMENTS = {
     "L3": L3_ReAct,
     "L3-react": L3_ReAct,
     "L3-simple": L3_ReActSimple,
+    "L3-rag": L3_ReActRAG,
 
     # L4 - Adaptive Routing / Pipeline
     "L4": L4_Adaptive,

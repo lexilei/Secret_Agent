@@ -19,7 +19,7 @@ from .levels import (
     L0_Baseline,
     L1_CoT, L1_CoC, L1_PTP,
     L2_Decompose,  # Alias for L2_TraceBuilder
-    L3_ReAct, L3_ReActSimple,
+    L3_ReAct, L3_ReActSimple, L3_ReActRAG,
     L4_Adaptive, L4_Pipeline,
     L5_Improving, L5_ICL,
     EXPERIMENTS,
@@ -41,7 +41,7 @@ __all__ = [
     "L1_CoT", "L1_CoC", "L1_PTP",
     "L2_TraceBuilder", "L2_TraceBuilderRAG", "L2_Decompose",
     "WorkflowTrace", "TraceStep",
-    "L3_ReAct", "L3_ReActSimple",
+    "L3_ReAct", "L3_ReActSimple", "L3_ReActRAG",
     "L4_Adaptive", "L4_Pipeline",
     "L5_Improving", "L5_ICL",
     "EXPERIMENTS",

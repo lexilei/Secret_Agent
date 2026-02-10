@@ -21,6 +21,7 @@ from ...dataset.strategyqa_loader import StrategyQAInstance
 from ...metrics.cost import calculate_cost
 
 from ptool_framework.llm_backend import call_llm
+from .trace_builder import get_paragraph_retriever
 
 
 # ============================================================================
@@ -405,3 +406,119 @@ Thought 1:"""
 
         # Fallback
         return self.extract_boolean(response)
+
+
+# ============================================================================
+# ReAct + RAG (agent chooses when to retrieve)
+# ============================================================================
+
+class L3_ReActRAG(L3_ReAct):
+    """
+    L3-RAG: ReAct Agent with Retrieval-Augmented Generation.
+
+    Same think-act-observe loop as L3_ReAct, but adds a 5th action:
+    - retrieve(query) → search the knowledge base for relevant paragraphs
+
+    Key difference from L2-RAG:
+    - L2-RAG: Python always retrieves for every sub-question
+    - L3-RAG: The LLM decides when/whether to retrieve
+
+    Retrieved paragraphs are stored in context and automatically
+    included when the agent calls lookup().
+    """
+
+    SYSTEM_PROMPT = """You are a reasoning agent that answers yes/no questions by breaking them down, searching for facts, and looking up information.
+
+Available actions:
+1. decompose(question) - Break a complex question into simpler sub-questions
+2. retrieve(query) - Search the knowledge base for relevant Wikipedia paragraphs
+3. lookup(question) - Look up a factual piece of information (uses retrieved context if available)
+4. evaluate(condition) - Evaluate if a condition is True or False based on what you know
+5. finish(Yes/No) - Give your final answer when you're confident
+
+Format your response as:
+Thought: <your reasoning about what to do next>
+Action: <action_name>(<argument>)
+
+Examples:
+Thought: I need to break down this question into simpler parts.
+Action: decompose(Are more people related to Genghis Khan than Julius Caesar?)
+
+Thought: Let me search for information about Genghis Khan's descendants.
+Action: retrieve(Genghis Khan descendants)
+
+Thought: Based on the retrieved context, let me find the specific number.
+Action: lookup(How many descendants does Genghis Khan have?)
+
+Thought: Based on the facts, Genghis Khan has more descendants.
+Action: finish(Yes)
+
+IMPORTANT:
+- Always start with a Thought
+- Call exactly ONE action per turn
+- Use retrieve() to search for facts before lookup() when you need external knowledge
+- When you have enough information, use finish(Yes) or finish(No)
+- Maximum {max_steps} steps allowed
+"""
+
+    def __init__(self, model: str = "deepseek-v3-0324", max_steps: int = 10):
+        super().__init__(model, max_steps)
+        self._retriever = None
+
+    @property
+    def retriever(self):
+        """Lazy-load the paragraph retriever."""
+        if self._retriever is None:
+            self._retriever = get_paragraph_retriever()
+            self._retriever.load()
+        return self._retriever
+
+    def _execute_action(self, action_name: str, action_arg: str, context: Dict) -> Dict:
+        """Execute an action, with added retrieve support."""
+        if action_name == "retrieve":
+            results = self.retriever.retrieve(action_arg, top_k=3)
+
+            if not results:
+                return {"result": "No relevant paragraphs found.", "input_tokens": 0, "output_tokens": 0}
+
+            # Format results as readable text
+            formatted = []
+            for r in results:
+                formatted.append(f"[{r['title']}]: {r['content']}")
+
+            result_text = "\n\n".join(formatted)
+
+            # Store retrieved context for use by subsequent lookup calls
+            context["_retrieved"] = result_text
+
+            return {"result": result_text, "input_tokens": 0, "output_tokens": 0}
+
+        if action_name == "lookup":
+            # If we have retrieved context, include it in the lookup prompt
+            retrieved = context.get("_retrieved")
+            if retrieved:
+                prompt = f"""Answer this factual question briefly (1-2 sentences) using the provided context.
+
+Context:
+{retrieved}
+
+Question: {action_arg}
+
+Answer:"""
+            else:
+                prompt = f"""Answer this factual question briefly (1-2 sentences):
+
+Question: {action_arg}
+
+Answer:"""
+
+            result = call_llm(prompt=prompt, model=self.model)
+            input_tokens = len(prompt) // 4
+            output_tokens = len(result) // 4 if result else 0
+
+            # Store in context
+            context[action_arg] = result
+            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens}
+
+        # All other actions (decompose, evaluate, unknown) handled by parent
+        return super()._execute_action(action_name, action_arg, context)
