@@ -485,6 +485,15 @@ class StrategyQATraceBuilder:
                     trace.steps.append(retrieve_step)
 
                     if retrieve_step.success and retrieve_step.output:
+                        # Print retrieved paragraphs
+                        print(f"\n{'='*60}")
+                        print(f"RAG Query: {resolved_text}")
+                        print(f"{'='*60}")
+                        for j, para in enumerate(retrieve_step.output):
+                            print(f"\n[{j+1}] {para['title']} (score: {para['score']})")
+                            print(f"    {para['content'][:200]}...")
+                        print()
+
                         # Format retrieved paragraphs as context
                         context_parts = []
                         for para in retrieve_step.output:
