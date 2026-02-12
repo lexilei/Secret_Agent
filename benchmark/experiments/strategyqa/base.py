@@ -70,6 +70,7 @@ class StrategyQAResult:
             "error": self.error,
             "error_type": self.error_type,
             "raw_response": self.raw_response,
+            "trace": self.trace,
             "timestamp": self.timestamp,
         }
 

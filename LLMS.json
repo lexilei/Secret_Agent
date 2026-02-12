@@ -139,6 +139,44 @@
       "tags": ["testing", "production"]
     },
 
+    "qwen-2.5-7b-turbo": {
+      "provider": "together",
+      "model_id": "Qwen/Qwen2.5-7B-Instruct-Turbo",
+      "api_key_env": "TOGETHER_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "general"],
+      "description": "Qwen 2.5 7B Instruct Turbo - Small fast model for testing",
+      "cost": {
+        "input": 0.0003,
+        "output": 0.0003,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 32768,
+      "max_output": 8192,
+      "enabled": true,
+      "tags": ["testing"]
+    },
+
+    "qwen-2.5-14b": {
+      "provider": "together",
+      "model_id": "Qwen/Qwen2.5-14B-Instruct",
+      "api_key_env": "TOGETHER_API_KEY",
+      "endpoint": null,
+      "capabilities": ["reasoning", "general"],
+      "description": "Qwen 2.5 14B Instruct - Mid-size model",
+      "cost": {
+        "input": 0.0008,
+        "output": 0.0008,
+        "currency": "USD",
+        "unit": "1K tokens"
+      },
+      "context_window": 131072,
+      "max_output": 8192,
+      "enabled": true,
+      "tags": ["testing"]
+    },
+
     "qwen-coder-32b": {
       "provider": "together",
       "model_id": "Qwen/Qwen2.5-Coder-32B-Instruct",

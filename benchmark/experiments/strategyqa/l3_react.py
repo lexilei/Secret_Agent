@@ -13,8 +13,7 @@ Key difference from L2:
 
 import time
 import re
-import json
-from typing import Optional, Dict, Any, List
+from typing import Optional, Dict, List
 
 from .base import StrategyQAExperiment, StrategyQAResult
 from ...dataset.strategyqa_loader import StrategyQAInstance
@@ -42,6 +41,7 @@ class L3_ReAct(StrategyQAExperiment):
     - lookup(question) → answer a factual question
     - evaluate(condition) → evaluate True/False
     - finish(answer) → give final Yes/No answer
+
     """
 
     SYSTEM_PROMPT = """You are a reasoning agent that answers yes/no questions by breaking them down and looking up facts.
@@ -116,6 +116,8 @@ Thought:"""
 
                 trace["steps"].append({
                     "step": step_num + 1,
+                    "prompt": prompt,
+                    "raw_llm_response": response,
                     "thought": thought,
                     "action": action_name,
                     "action_arg": action_arg,
@@ -150,6 +152,10 @@ Thought:"""
                 total_output_tokens += observation.get("output_tokens", 0)
 
                 trace["steps"][-1]["observation"] = observation.get("result")
+                # Record sub-LLM call details for the action execution
+                if observation.get("action_prompt"):
+                    trace["steps"][-1]["action_prompt"] = observation["action_prompt"]
+                    trace["steps"][-1]["action_raw_response"] = observation.get("action_raw_response")
 
                 # Add to history
                 history.append({
@@ -234,7 +240,10 @@ Thought:"""
         return thought, action_name, action_arg
 
     def _execute_action(self, action_name: str, action_arg: str, context: Dict) -> Dict:
-        """Execute an action and return observation."""
+        """Execute an action and return observation.
+
+        Returns dict with: result, input_tokens, output_tokens, action_prompt, action_raw_response
+        """
         input_tokens = 0
         output_tokens = 0
 
@@ -251,7 +260,8 @@ Return as a numbered list:
 
             # Store in context
             context["sub_questions"] = result
-            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens}
+            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens,
+                    "action_prompt": prompt, "action_raw_response": result}
 
         elif action_name == "lookup":
             prompt = f"""Answer this factual question briefly (1-2 sentences):
@@ -265,7 +275,8 @@ Answer:"""
 
             # Store in context
             context[action_arg] = result
-            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens}
+            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens,
+                    "action_prompt": prompt, "action_raw_response": result}
 
         elif action_name == "evaluate":
             # Use context to evaluate
@@ -282,7 +293,8 @@ Is this True or False? Answer with only True or False:"""
             input_tokens = len(prompt) // 4
             output_tokens = len(result) // 4 if result else 0
 
-            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens}
+            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens,
+                    "action_prompt": prompt, "action_raw_response": result}
 
         else:
             return {"result": f"Unknown action: {action_name}", "input_tokens": 0, "output_tokens": 0}
@@ -479,7 +491,8 @@ IMPORTANT:
             results = self.retriever.retrieve(action_arg, top_k=3)
 
             if not results:
-                return {"result": "No relevant paragraphs found.", "input_tokens": 0, "output_tokens": 0}
+                return {"result": "No relevant paragraphs found.", "input_tokens": 0, "output_tokens": 0,
+                        "action_prompt": f"retrieve({action_arg})", "action_raw_response": "No relevant paragraphs found."}
 
             # Format results as readable text
             formatted = []
@@ -491,7 +504,8 @@ IMPORTANT:
             # Store retrieved context for use by subsequent lookup calls
             context["_retrieved"] = result_text
 
-            return {"result": result_text, "input_tokens": 0, "output_tokens": 0}
+            return {"result": result_text, "input_tokens": 0, "output_tokens": 0,
+                    "action_prompt": f"retrieve({action_arg})", "action_raw_response": result_text}
 
         if action_name == "lookup":
             # If we have retrieved context, include it in the lookup prompt
@@ -518,7 +532,198 @@ Answer:"""
 
             # Store in context
             context[action_arg] = result
-            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens}
+            return {"result": result, "input_tokens": input_tokens, "output_tokens": output_tokens,
+                    "action_prompt": prompt, "action_raw_response": result}
 
         # All other actions (decompose, evaluate, unknown) handled by parent
         return super()._execute_action(action_name, action_arg, context)
+
+
+# ============================================================================
+# ReAct + RAG with Mandatory Tool Use
+# ============================================================================
+
+class L3_ReActMandatoryTools(L3_ReActRAG):
+    """
+    L3 ReAct with mandatory tool use.
+
+    Same as L3_ReActRAG but enforces that the agent MUST call at least one
+    real tool (retrieve or lookup with retrieved context) before finishing.
+    If the agent tries to finish(Yes/No) without having called retrieve at
+    least once, we reject the finish and tell it to use a tool first.
+    """
+
+    SYSTEM_PROMPT = """You are a research agent that answers yes/no questions by searching for facts and reasoning about them.
+
+You MUST search for information using tools before answering. NEVER answer from memory alone.
+
+Available actions:
+1. decompose(question) - Break a complex question into simpler sub-questions
+2. retrieve(query) - Search the knowledge base for relevant Wikipedia paragraphs
+3. lookup(question) - Look up a factual piece of information (uses retrieved context if available)
+4. evaluate(condition) - Evaluate if a condition is True or False based on what you know
+5. finish(Yes/No) - Give your final answer ONLY after using retrieve() at least once
+
+Format your response as:
+Thought: <your reasoning about what to do next>
+Action: <action_name>(<argument>)
+
+MANDATORY WORKFLOW:
+1. First, decompose the question or identify what facts you need
+2. Use retrieve() to search for relevant facts (REQUIRED before finishing)
+3. Use lookup() to clarify facts from retrieved context
+4. Only after retrieving and analyzing evidence, use finish(Yes/No)
+
+If you try to finish without calling retrieve first, your answer will be REJECTED.
+
+Examples:
+Thought: I need to find facts about this topic before I can answer.
+Action: retrieve(topic keywords)
+
+Thought: Based on the retrieved information, let me look up a specific detail.
+Action: lookup(specific question about retrieved facts)
+
+Thought: I have gathered enough evidence from my searches to answer.
+Action: finish(Yes)
+
+IMPORTANT:
+- Always start with a Thought
+- Call exactly ONE action per turn
+- You MUST call retrieve() at least once before finish()
+- Maximum {max_steps} steps allowed
+"""
+
+    def run_instance(self, instance: StrategyQAInstance) -> StrategyQAResult:
+        """Run ReAct agent with mandatory tool use enforcement."""
+        start_time = time.time()
+        total_input_tokens = 0
+        total_output_tokens = 0
+
+        history = []
+        trace = {"steps": [], "question": instance.question, "tools_used": [], "tool_use_enforced": False}
+        context = {}
+
+        try:
+            for step_num in range(self.max_steps):
+                # Build prompt
+                history_text = self._format_history(history)
+                prompt = self.SYSTEM_PROMPT.format(max_steps=self.max_steps) + "\n\n"
+                prompt += self.STEP_PROMPT.format(
+                    question=instance.question,
+                    history=history_text if history_text else "(none yet)"
+                )
+
+                # Get LLM response
+                response = call_llm(prompt=prompt, model=self.model)
+                total_input_tokens += len(prompt) // 4
+                total_output_tokens += len(response) // 4 if response else 0
+
+                # Parse thought and action
+                thought, action_name, action_arg = self._parse_response(response)
+
+                trace["steps"].append({
+                    "step": step_num + 1,
+                    "prompt": prompt,
+                    "raw_llm_response": response,
+                    "thought": thought,
+                    "action": action_name,
+                    "action_arg": action_arg,
+                })
+
+                # Track tool usage
+                if action_name in ("retrieve", "lookup", "decompose", "evaluate"):
+                    trace["tools_used"].append(action_name)
+
+                # Enforce mandatory tool use: reject finish if no retrieve was called
+                if action_name == "finish" and "retrieve" not in trace["tools_used"]:
+                    trace["tool_use_enforced"] = True
+                    observation_text = (
+                        "REJECTED: You must call retrieve() at least once to search "
+                        "for facts before finishing. Use retrieve(relevant search query) now."
+                    )
+                    trace["steps"][-1]["observation"] = observation_text
+                    trace["steps"][-1]["enforced"] = True
+
+                    history.append({
+                        "thought": thought,
+                        "action": f"finish({action_arg})",
+                        "observation": observation_text,
+                    })
+                    continue
+
+                # Normal finish
+                if action_name == "finish":
+                    final_answer = action_arg.lower().strip() in ["yes", "true"]
+                    latency_ms = (time.time() - start_time) * 1000
+                    cost = calculate_cost(total_input_tokens, total_output_tokens, self.model)
+
+                    return StrategyQAResult(
+                        qid=instance.qid,
+                        question=instance.question,
+                        predicted_answer=final_answer,
+                        ground_truth=instance.answer,
+                        is_correct=final_answer == instance.answer,
+                        latency_ms=latency_ms,
+                        input_tokens=total_input_tokens,
+                        output_tokens=total_output_tokens,
+                        total_tokens=total_input_tokens + total_output_tokens,
+                        cost_usd=cost.cost_usd,
+                        num_steps=step_num + 1,
+                        raw_response=response,
+                        trace=trace,
+                    )
+
+                # Execute action and get observation
+                observation = self._execute_action(action_name, action_arg, context)
+                total_input_tokens += observation.get("input_tokens", 0)
+                total_output_tokens += observation.get("output_tokens", 0)
+
+                trace["steps"][-1]["observation"] = observation.get("result")
+                if observation.get("action_prompt"):
+                    trace["steps"][-1]["action_prompt"] = observation["action_prompt"]
+                    trace["steps"][-1]["action_raw_response"] = observation.get("action_raw_response")
+
+                history.append({
+                    "thought": thought,
+                    "action": f"{action_name}({action_arg})",
+                    "observation": observation.get("result"),
+                })
+
+            # Max steps reached
+            latency_ms = (time.time() - start_time) * 1000
+            predicted = self._guess_answer_from_context(context, instance.question)
+            cost = calculate_cost(total_input_tokens, total_output_tokens, self.model)
+
+            return StrategyQAResult(
+                qid=instance.qid,
+                question=instance.question,
+                predicted_answer=predicted,
+                ground_truth=instance.answer,
+                is_correct=predicted == instance.answer if predicted is not None else False,
+                latency_ms=latency_ms,
+                input_tokens=total_input_tokens,
+                output_tokens=total_output_tokens,
+                total_tokens=total_input_tokens + total_output_tokens,
+                cost_usd=cost.cost_usd,
+                num_steps=self.max_steps,
+                raw_response="Max steps reached",
+                trace=trace,
+            )
+
+        except Exception as e:
+            latency_ms = (time.time() - start_time) * 1000
+            return StrategyQAResult(
+                qid=instance.qid,
+                question=instance.question,
+                predicted_answer=None,
+                ground_truth=instance.answer,
+                is_correct=False,
+                latency_ms=latency_ms,
+                input_tokens=total_input_tokens,
+                output_tokens=total_output_tokens,
+                total_tokens=total_input_tokens + total_output_tokens,
+                cost_usd=0.0,
+                error=str(e),
+                error_type=type(e).__name__,
+                trace=trace,
+            )
