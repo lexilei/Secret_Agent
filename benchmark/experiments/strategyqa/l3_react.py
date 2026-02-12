@@ -69,7 +69,9 @@ Action: finish(Yes)
 IMPORTANT:
 - Always start with a Thought
 - Call exactly ONE action per turn
+- Call an action multiple times with the same input will not yield different results, so don't repeat actions unnecessarily.
 - When you have enough information, use finish(Yes) or finish(No)
+- When you run out of actions to take, you must use finish() to provide an answer.
 - Maximum {max_steps} steps allowed
 """
 
@@ -84,7 +86,7 @@ Thought:"""
 
     def __init__(self, model: str = "deepseek-v3-0324", max_steps: int = 8):
         super().__init__(model)
-        self.max_steps = max_steps
+        self.max_steps = 100 #disable max steps for now since we want to see how long it takes to finish without hitting the limit
 
     def run_instance(self, instance: StrategyQAInstance) -> StrategyQAResult:
         """Run ReAct agent on a single instance."""
