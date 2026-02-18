@@ -197,6 +197,20 @@ from .stategraph import (
     run_stategraph,
 )
 
+# New: Python Sandbox
+from .sandbox import (
+    PythonSandbox,
+    SandboxConfig,
+    SandboxError,
+    SandboxImportError,
+    SandboxTimeoutError,
+    sandbox,
+    safe_exec,
+    safe_eval,
+    get_sandbox,
+    configure_sandbox,
+)
+
 # New: Self-Improving Agents (L5)
 from .self_improving import (
     # Data structures
@@ -371,6 +385,17 @@ __all__ = [
     "get_pattern_memory",
     "SelfImprovingAgent",
     "self_improving_react",
+    # Python Sandbox
+    "PythonSandbox",
+    "SandboxConfig",
+    "SandboxError",
+    "SandboxImportError",
+    "SandboxTimeoutError",
+    "sandbox",
+    "safe_exec",
+    "safe_eval",
+    "get_sandbox",
+    "configure_sandbox",
 ]
 
 __version__ = "0.5.0"  # L4 + L5 features

@@ -579,7 +579,6 @@ class CoCHybridExecutor:
         prompt = f"""Execute this function and return only the result.
 
 Function call: {formatted_call}
-Context: Answering the question "{question}"{rag_context}
 
 {type_instruction}
 
