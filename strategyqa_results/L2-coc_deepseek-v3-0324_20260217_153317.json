@@ -1,0 +1,274 @@
+{
+  "experiment": "L2-coc",
+  "model": "deepseek-v3-0324",
+  "n_instances": 3,
+  "split": "val",
+  "summary": {
+    "experiment": "L2_CoC",
+    "model": "deepseek-v3-0324",
+    "total_instances": 3,
+    "correct": 2,
+    "errors": 0,
+    "accuracy": 0.6666666666666666,
+    "error_rate": 0.0,
+    "predictions": {
+      "true": 1,
+      "false": 2,
+      "none": 0
+    },
+    "total_cost_usd": 0.0029625,
+    "avg_cost_usd": 0.0009874999999999999,
+    "total_tokens": 2370,
+    "avg_latency_ms": 9848.036527633667,
+    "coc_stats": {
+      "total_traces": 3,
+      "successful_traces": 3,
+      "avg_steps_per_trace": 4.0,
+      "total_python_steps": 7,
+      "total_ptool_steps": 5,
+      "python_ratio": 0.5833333333333334
+    }
+  },
+  "results": [
+    {
+      "qid": "50e89d5c8cb95848e909",
+      "question": "Are months based on the solar cycle?",
+      "predicted_answer": false,
+      "ground_truth": false,
+      "is_correct": true,
+      "latency_ms": 12842.453956604004,
+      "input_tokens": 732,
+      "output_tokens": 91,
+      "total_tokens": 823,
+      "cost_usd": 0.00102875,
+      "num_steps": 4,
+      "decomposition_used": false,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "# Question: Are months based on the solar cycle?\n\n# Generated Code:\nquestion = \"Are months based on the solar cycle?\"\nmonth_origin = get_time_origin(\"month\", ret_type=str)\nsolar_cycle_origin = check_fact(\"Are months based on the solar cycle?\", ret_type=bool)\nanswer = \"Yes\" if solar_cycle_origin else \"No\"\n\n# Execution Trace:\nstate: {'question': 'Are months based on the solar cycle?'}\nline: question = \"Are months based on the solar cycle?\"\nexplanation: Python execution.\ndelta state: {'question': 'Are months based on the solar cycle?'}\n\nstate: {'month_origin': 'Yes, months are loosely based on the lunar cycle, not the solar cycle. The solar cycle is the basis for the year.'}\nline: month_origin = get_time_origin(\"month\", ret_type=str)\nexplanation: LLM executed get_time_origin() -> 'Yes, months are loosely based on the lunar cycle, not the solar cycle. The solar cycle is the basis for the year.'\ndelta state: {'month_origin': 'Yes, months are loosely based on the lunar cycle, not the solar cycle. The solar cycle is the basis for the year.'}\n\nstate: {'solar_cycle_origin': False}\nline: solar_cycle_origin = check_fact(\"Are months based on the solar cycle?\", ret_type=bool)\nexplanation: LLM executed check_fact() -> False\ndelta state: {'solar_cycle_origin': False}\n\nstate: {'answer': 'No'}\nline: answer = \"Yes\" if solar_cycle_origin else \"No\"\nexplanation: Python execution.\ndelta state: {'answer': 'No'}\n\n# Answer: No",
+      "trace": {
+        "question": "Are months based on the solar cycle?",
+        "generated_code": "question = \"Are months based on the solar cycle?\"\nmonth_origin = get_time_origin(\"month\", ret_type=str)\nsolar_cycle_origin = check_fact(\"Are months based on the solar cycle?\", ret_type=bool)\nanswer = \"Yes\" if solar_cycle_origin else \"No\"",
+        "steps": [
+          {
+            "line": "question = \"Are months based on the solar cycle?\"",
+            "method": "python",
+            "explanation": "Python execution.",
+            "state_delta": {
+              "question": "Are months based on the solar cycle?"
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "month_origin = get_time_origin(\"month\", ret_type=str)",
+            "method": "ptool",
+            "explanation": "LLM executed get_time_origin() -> 'Yes, months are loosely based on the lunar cycle, not the solar cycle. The solar cycle is the basis for the year.'",
+            "state_delta": {
+              "month_origin": "Yes, months are loosely based on the lunar cycle, not the solar cycle. The solar cycle is the basis for the year."
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "solar_cycle_origin = check_fact(\"Are months based on the solar cycle?\", ret_type=bool)",
+            "method": "ptool",
+            "explanation": "LLM executed check_fact() -> False",
+            "state_delta": {
+              "solar_cycle_origin": false
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "answer = \"Yes\" if solar_cycle_origin else \"No\"",
+            "method": "python",
+            "explanation": "Python execution.",
+            "state_delta": {
+              "answer": "No"
+            },
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_state": {
+          "question": "'Are months based on the solar cycle?'",
+          "month_origin": "'Yes, months are loosely based on the lunar cycle, not the solar cycle. The solar cycle is the basis for the year.'",
+          "solar_cycle_origin": "False",
+          "answer": "'No'"
+        },
+        "answer": "No",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "num_python_steps": 2,
+          "num_ptool_steps": 2,
+          "input_tokens": 107,
+          "output_tokens": 29
+        }
+      },
+      "timestamp": "2026-02-17T15:33:01.243687"
+    },
+    {
+      "qid": "38d2c97da9f6e1d70c41",
+      "question": "Is it impossible for pigs to use pig latin?",
+      "predicted_answer": true,
+      "ground_truth": true,
+      "is_correct": true,
+      "latency_ms": 6445.528745651245,
+      "input_tokens": 682,
+      "output_tokens": 50,
+      "total_tokens": 732,
+      "cost_usd": 0.000915,
+      "num_steps": 3,
+      "decomposition_used": false,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "# Question: Is it impossible for pigs to use pig latin?\n\n# Generated Code:\nquestion = \"Is it impossible for pigs to use pig latin?\"\npigs_can_speak = check_ability(\"pigs\", \"speak human languages\", ret_type=bool)\nanswer = \"Yes\" if not pigs_can_speak else \"No\"\n\n# Execution Trace:\nstate: {'question': 'Is it impossible for pigs to use pig latin?'}\nline: question = \"Is it impossible for pigs to use pig latin?\"\nexplanation: Python execution.\ndelta state: {'question': 'Is it impossible for pigs to use pig latin?'}\n\nstate: {'pigs_can_speak': False}\nline: pigs_can_speak = check_ability(\"pigs\", \"speak human languages\", ret_type=bool)\nexplanation: LLM executed check_ability() -> False\ndelta state: {'pigs_can_speak': False}\n\nstate: {'answer': 'Yes'}\nline: answer = \"Yes\" if not pigs_can_speak else \"No\"\nexplanation: Python execution.\ndelta state: {'answer': 'Yes'}\n\n# Answer: Yes",
+      "trace": {
+        "question": "Is it impossible for pigs to use pig latin?",
+        "generated_code": "question = \"Is it impossible for pigs to use pig latin?\"\npigs_can_speak = check_ability(\"pigs\", \"speak human languages\", ret_type=bool)\nanswer = \"Yes\" if not pigs_can_speak else \"No\"",
+        "steps": [
+          {
+            "line": "question = \"Is it impossible for pigs to use pig latin?\"",
+            "method": "python",
+            "explanation": "Python execution.",
+            "state_delta": {
+              "question": "Is it impossible for pigs to use pig latin?"
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "pigs_can_speak = check_ability(\"pigs\", \"speak human languages\", ret_type=bool)",
+            "method": "ptool",
+            "explanation": "LLM executed check_ability() -> False",
+            "state_delta": {
+              "pigs_can_speak": false
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "answer = \"Yes\" if not pigs_can_speak else \"No\"",
+            "method": "python",
+            "explanation": "Python execution.",
+            "state_delta": {
+              "answer": "Yes"
+            },
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_state": {
+          "question": "'Is it impossible for pigs to use pig latin?'",
+          "pigs_can_speak": "False",
+          "answer": "'Yes'"
+        },
+        "answer": "Yes",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "num_python_steps": 2,
+          "num_ptool_steps": 1,
+          "input_tokens": 56,
+          "output_tokens": 1
+        }
+      },
+      "timestamp": "2026-02-17T15:33:07.691208"
+    },
+    {
+      "qid": "9063dbb03f315cfe5b26",
+      "question": "Would a Dodo hypothetically tower over Ma Petite?",
+      "predicted_answer": false,
+      "ground_truth": true,
+      "is_correct": false,
+      "latency_ms": 10256.126880645752,
+      "input_tokens": 740,
+      "output_tokens": 75,
+      "total_tokens": 815,
+      "cost_usd": 0.0010187500000000001,
+      "num_steps": 5,
+      "decomposition_used": false,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "# Question: Would a Dodo hypothetically tower over Ma Petite?\n\n# Generated Code:\nquestion = \"Would a Dodo hypothetically tower over Ma Petite?\"\ndodo_height = get_average_height(\"dodo\", unit=\"cm\", ret_type=float)\nma_petite_height = get_height(\"Ma Petite\", unit=\"cm\", ret_type=float)\ntowers_over = dodo_height > ma_petite_height\nanswer = \"Yes\" if towers_over else \"No\"\n\n# Execution Trace:\nstate: {'question': 'Would a Dodo hypothetically tower over Ma Petite?'}\nline: question = \"Would a Dodo hypothetically tower over Ma Petite?\"\nexplanation: Python execution.\ndelta state: {'question': 'Would a Dodo hypothetically tower over Ma Petite?'}\n\nstate: {'dodo_height': 1.2}\nline: dodo_height = get_average_height(\"dodo\", unit=\"cm\", ret_type=float)\nexplanation: LLM executed get_average_height() -> 1.2\ndelta state: {'dodo_height': 1.2}\n\nstate: {'ma_petite_height': 97.536}\nline: ma_petite_height = get_height(\"Ma Petite\", unit=\"cm\", ret_type=float)\nexplanation: LLM executed get_height() -> 97.536\ndelta state: {'ma_petite_height': 97.536}\n\nstate: {'towers_over': False}\nline: towers_over = dodo_height > ma_petite_height\nexplanation: Python execution.\ndelta state: {'towers_over': False}\n\nstate: {'answer': 'No'}\nline: answer = \"Yes\" if towers_over else \"No\"\nexplanation: Python execution.\ndelta state: {'answer': 'No'}\n\n# Answer: No",
+      "trace": {
+        "question": "Would a Dodo hypothetically tower over Ma Petite?",
+        "generated_code": "question = \"Would a Dodo hypothetically tower over Ma Petite?\"\ndodo_height = get_average_height(\"dodo\", unit=\"cm\", ret_type=float)\nma_petite_height = get_height(\"Ma Petite\", unit=\"cm\", ret_type=float)\ntowers_over = dodo_height > ma_petite_height\nanswer = \"Yes\" if towers_over else \"No\"",
+        "steps": [
+          {
+            "line": "question = \"Would a Dodo hypothetically tower over Ma Petite?\"",
+            "method": "python",
+            "explanation": "Python execution.",
+            "state_delta": {
+              "question": "Would a Dodo hypothetically tower over Ma Petite?"
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "dodo_height = get_average_height(\"dodo\", unit=\"cm\", ret_type=float)",
+            "method": "ptool",
+            "explanation": "LLM executed get_average_height() -> 1.2",
+            "state_delta": {
+              "dodo_height": 1.2
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "ma_petite_height = get_height(\"Ma Petite\", unit=\"cm\", ret_type=float)",
+            "method": "ptool",
+            "explanation": "LLM executed get_height() -> 97.536",
+            "state_delta": {
+              "ma_petite_height": 97.536
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "towers_over = dodo_height > ma_petite_height",
+            "method": "python",
+            "explanation": "Python execution.",
+            "state_delta": {
+              "towers_over": false
+            },
+            "success": true,
+            "error": null
+          },
+          {
+            "line": "answer = \"Yes\" if towers_over else \"No\"",
+            "method": "python",
+            "explanation": "Python execution.",
+            "state_delta": {
+              "answer": "No"
+            },
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_state": {
+          "question": "'Would a Dodo hypothetically tower over Ma Petite?'",
+          "dodo_height": "1.2",
+          "ma_petite_height": "97.536",
+          "towers_over": "False",
+          "answer": "'No'"
+        },
+        "answer": "No",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "num_python_steps": 3,
+          "num_ptool_steps": 2,
+          "input_tokens": 112,
+          "output_tokens": 1
+        }
+      },
+      "timestamp": "2026-02-17T15:33:17.947840"
+    }
+  ]
+}

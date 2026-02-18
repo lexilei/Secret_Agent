@@ -433,6 +433,9 @@ class L1_PTP(StrategyQAExperiment):
 # Import the full TraceBuilder implementation
 from .trace_builder import L2_TraceBuilder, L2_TraceBuilderRAG, WorkflowTrace, TraceStep
 
+# Import L2 Chain-of-Code
+from .l2_coc import L2_CoC, L2_CoCRAG
+
 # Import L3 ReAct
 from .l3_react import L3_ReAct, L3_ReActSimple, L3_ReActRAG, L3_ReActMandatoryTools
 
@@ -492,6 +495,8 @@ EXPERIMENTS = {
     "L2-trace": L2_TraceBuilder,
     "L2-decompose": L2_Decompose,  # Alias
     "L2-rag": L2_TraceBuilderRAG,  # With retrieval augmentation
+    "L2-coc": L2_CoC,              # Chain-of-Code with hybrid execution
+    "L2-coc-rag": L2_CoCRAG,      # Chain-of-Code with RAG
 
     # L3 - ReAct Agent (LLM controls flow)
     "L3": L3_ReAct,
