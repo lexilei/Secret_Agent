@@ -1,5 +1,5 @@
 """
-L3 ReAct Agent for StrategyQA.
+ReAct Agent for StrategyQA.
 
 Based on William Cohen's research plan:
 - L3 = ReAct agentic pipeline

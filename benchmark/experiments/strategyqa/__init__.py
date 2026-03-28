@@ -15,6 +15,7 @@ from .baseline import StrategyQABaseline, StrategyQABaselineCoT
 from .decompose import StrategyQADecomposeOracle, StrategyQADecomposeLLM
 from .react_exp import StrategyQAReAct, StrategyQAReActSimple
 from .trace_builder import L2_TraceBuilder, L2_TraceBuilderRAG, WorkflowTrace, TraceStep
+from .l2_program_gen import L2_ProgramGen
 from .levels import (
     L0_Baseline,
     L1_CoT, L1_CoC, L1_PTP,
@@ -41,6 +42,7 @@ __all__ = [
     "L0_Baseline",
     "L1_CoT", "L1_CoC", "L1_PTP",
     "L2_TraceBuilder", "L2_TraceBuilderRAG", "L2_Decompose",
+    "L2_ProgramGen",
     "WorkflowTrace", "TraceStep",
     "L3_ReAct", "L3_ReActSimple", "L3_ReActRAG", "L3_ReActMandatoryTools",
     "L3_LangChain", "L3_LangChainMandatory",

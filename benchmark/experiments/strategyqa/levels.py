@@ -435,6 +435,7 @@ from .trace_builder import L2_TraceBuilder, L2_TraceBuilderRAG, WorkflowTrace, T
 
 # Import L2 Chain-of-Code
 from .l2_coc import L2_CoC, L2_CoCRAG
+from .l2_program_gen import L2_ProgramGen
 
 # Import L3 ReAct
 from .l3_react import L3_ReAct, L3_ReActSimple, L3_ReActRAG, L3_ReActMandatoryTools
@@ -497,6 +498,7 @@ EXPERIMENTS = {
     "L2-rag": L2_TraceBuilderRAG,  # With retrieval augmentation
     "L2-coc": L2_CoC,              # Chain-of-Code with hybrid execution
     "L2-coc-rag": L2_CoCRAG,      # Chain-of-Code with RAG
+    "L2-program-gen": L2_ProgramGen,  # ProgramGenerator-based workflow
 
     # L3 - ReAct Agent (LLM controls flow)
     "L3": L3_ReAct,

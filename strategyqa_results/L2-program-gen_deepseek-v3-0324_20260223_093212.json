@@ -1,0 +1,652 @@
+{
+  "experiment": "L2-program-gen",
+  "model": "deepseek-v3-0324",
+  "n_instances": 10,
+  "split": "val",
+  "summary": {
+    "experiment": "L2_ProgramGen",
+    "model": "deepseek-v3-0324",
+    "total_instances": 10,
+    "correct": 5,
+    "errors": 0,
+    "accuracy": 0.5,
+    "error_rate": 0.0,
+    "predictions": {
+      "true": 5,
+      "false": 5,
+      "none": 0
+    },
+    "total_cost_usd": 0.01620125,
+    "avg_cost_usd": 0.001620125,
+    "total_tokens": 12961,
+    "avg_latency_ms": 35802.51061916351,
+    "program_gen_stats": {
+      "total_traces": 10,
+      "successful_traces": 10,
+      "avg_ptools_per_question": 0.0,
+      "avg_steps_per_trace": 2.0
+    }
+  },
+  "results": [
+    {
+      "qid": "50e89d5c8cb95848e909",
+      "question": "Are months based on the solar cycle?",
+      "predicted_answer": false,
+      "ground_truth": false,
+      "is_correct": true,
+      "latency_ms": 31067.397117614746,
+      "input_tokens": 289,
+      "output_tokens": 1098,
+      "total_tokens": 1387,
+      "cost_usd": 0.0017337500000000003,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Since there are no ptools provided in the generated workflow, I cannot execute any external reasoning tools. However, I can reason about the question using common knowledge.\n\nThe question is: \"Are months based on the solar cycle?\"\n\nCommon knowledge:\n- The solar cycle typically refers to the approximately 11-year cycle of the Sun's activity, but in the context of calendars, it might refer to the Earth's orbit around the Sun (solar year).\n- Months in the Gregorian calendar (the most widely used calendar) are not strictly based on the solar cycle. They are roughly aligned with the lunar cycle (about 29.5 days) but have been adjusted to fit into the solar year (about 365.24 days). \n- The Gregorian calendar has 12 months that add up to 365 or 366 days, which is based on the solar year, but individual months are not defined by solar events.\n- Some calendars, like the lunar calendar, are based entirely on the Moon's cycles, and others, like the Islamic calendar, are purely lunar.\n- The solar calendar (like the Gregorian) is based on the Earth's revolution around the Sun, but the months themselves are arbitrary divisions.\n\nTherefore, months are not directly based on the solar cycle; they are human-made divisions that are approximately aligned with lunar cycles and adjusted to fit the solar year.\n\nFinal Answer: No",
+      "trace": {
+        "qid": "50e89d5c8cb95848e909",
+        "question": "Are months based on the solar cycle?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Are months based on the solar cycle?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:26:37.417388\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Are months based on the solar cycle?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\ndef main_workflow(input_data: str) -> dict:\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "def main_workflow(input_data: str) -> dict:",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Are months based on the solar cycle?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes o",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 43
+            },
+            "latency_ms": 22536.997079849243,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Are months based on the solar cycle?\n\nThe workflow has designed these reasoning tools (ptools):\n  (none)\n\nGenerated workf",
+            "output_summary": "Since there are no ptools provided in the generated workflow, I cannot execute any external reasoning tools. However, I can reason about the question using common knowledge.\n\nThe question is: \"Are mon",
+            "raw_output": null,
+            "latency_ms": 8528.835773468018,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": false,
+        "execution_response": "Since there are no ptools provided in the generated workflow, I cannot execute any external reasoning tools. However, I can reason about the question using common knowledge.\n\nThe question is: \"Are months based on the solar cycle?\"\n\nCommon knowledge:\n- The solar cycle typically refers to the approximately 11-year cycle of the Sun's activity, but in the context of calendars, it might refer to the Earth's orbit around the Sun (solar year).\n- Months in the Gregorian calendar (the most widely used calendar) are not strictly based on the solar cycle. They are roughly aligned with the lunar cycle (about 29.5 days) but have been adjusted to fit into the solar year (about 365.24 days). \n- The Gregorian calendar has 12 months that add up to 365 or 366 days, which is based on the solar year, but individual months are not defined by solar events.\n- Some calendars, like the lunar calendar, are based entirely on the Moon's cycles, and others, like the Islamic calendar, are purely lunar.\n- The solar calendar (like the Gregorian) is based on the Earth's revolution around the Sun, but the months themselves are arbitrary divisions.\n\nTherefore, months are not directly based on the solar cycle; they are human-made divisions that are approximately aligned with lunar cycles and adjusted to fit the solar year.\n\nFinal Answer: No",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 289,
+          "output_tokens": 1098,
+          "generation_latency_ms": 22536.997079849243,
+          "execution_latency_ms": 8528.835773468018
+        }
+      },
+      "timestamp": "2026-02-23T09:26:45.949750"
+    },
+    {
+      "qid": "38d2c97da9f6e1d70c41",
+      "question": "Is it impossible for pigs to use pig latin?",
+      "predicted_answer": true,
+      "ground_truth": true,
+      "is_correct": true,
+      "latency_ms": 16379.357814788818,
+      "input_tokens": 293,
+      "output_tokens": 971,
+      "total_tokens": 1264,
+      "cost_usd": 0.00158,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Since there are no ptools provided in the generated workflow, I cannot use any external tools to reason about the question. Therefore, I must rely on my own knowledge to answer the question.\n\nThe question is: \"Is it impossible for pigs to use pig latin?\"\n\nFirst, I know that \"pig latin\" is a language game where words are altered by moving the initial consonant cluster to the end and adding \"ay\" (e.g., \"pig\" becomes \"igpay\"). It is a human-created game and requires understanding and manipulation of language.\n\nPigs are animals and do not have the cognitive ability to understand or produce human language games like pig latin. They lack the necessary linguistic capabilities and intelligence to engage in such activities.\n\nTherefore, it is indeed impossible for pigs to use pig latin.\n\nFinal Answer: Yes",
+      "trace": {
+        "qid": "38d2c97da9f6e1d70c41",
+        "question": "Is it impossible for pigs to use pig latin?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Is it impossible for pigs to use pig latin?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:27:00.405045\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Is it impossible for pigs to use pig latin?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\ndef main_workflow(input_data: str) -> dict:\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "def main_workflow(input_data: str) -> dict:",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Is it impossible for pigs to use pig latin?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a fina",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 43
+            },
+            "latency_ms": 14455.315351486206,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Is it impossible for pigs to use pig latin?\n\nThe workflow has designed these reasoning tools (ptools):\n  (none)\n\nGenerate",
+            "output_summary": "Since there are no ptools provided in the generated workflow, I cannot use any external tools to reason about the question. Therefore, I must rely on my own knowledge to answer the question.\n\nThe ques",
+            "raw_output": null,
+            "latency_ms": 1923.7420558929443,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": true,
+        "execution_response": "Since there are no ptools provided in the generated workflow, I cannot use any external tools to reason about the question. Therefore, I must rely on my own knowledge to answer the question.\n\nThe question is: \"Is it impossible for pigs to use pig latin?\"\n\nFirst, I know that \"pig latin\" is a language game where words are altered by moving the initial consonant cluster to the end and adding \"ay\" (e.g., \"pig\" becomes \"igpay\"). It is a human-created game and requires understanding and manipulation of language.\n\nPigs are animals and do not have the cognitive ability to understand or produce human language games like pig latin. They lack the necessary linguistic capabilities and intelligence to engage in such activities.\n\nTherefore, it is indeed impossible for pigs to use pig latin.\n\nFinal Answer: Yes",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 293,
+          "output_tokens": 971,
+          "generation_latency_ms": 14455.315351486206,
+          "execution_latency_ms": 1923.7420558929443
+        }
+      },
+      "timestamp": "2026-02-23T09:27:02.329646"
+    },
+    {
+      "qid": "9063dbb03f315cfe5b26",
+      "question": "Would a Dodo hypothetically tower over Ma Petite?",
+      "predicted_answer": true,
+      "ground_truth": true,
+      "is_correct": true,
+      "latency_ms": 27646.11315727234,
+      "input_tokens": 301,
+      "output_tokens": 931,
+      "total_tokens": 1232,
+      "cost_usd": 0.0015400000000000001,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Since there are no ptools (reasoning tools) provided in the generated workflow, I cannot execute any external functions to retrieve information about the heights of a Dodo and Ma Petite. However, I can rely on general knowledge to reason about the question.\n\nReasoning:\n- A Dodo is an extinct flightless bird that stood about 1 meter (3 feet) tall.\n- Ma Petite was a performer in the circus who had dwarfism and was very short, approximately 2 feet 1 inch (0.64 meters) tall.\n\nGiven that a Dodo is about 3 feet tall and Ma Petite was about 2 feet tall, the Dodo would indeed be taller.\n\nTherefore, the answer is yes.\n\nFinal Answer: Yes",
+      "trace": {
+        "qid": "9063dbb03f315cfe5b26",
+        "question": "Would a Dodo hypothetically tower over Ma Petite?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Would a Dodo hypothetically tower over Ma Petite?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:27:27.012845\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Would a Dodo hypothetically tower over Ma Petite?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\ndef main_workflow(input_data: str) -> dict:\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "def main_workflow(input_data: str) -> dict:",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Would a Dodo hypothetically tower over Ma Petite?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce ",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 43
+            },
+            "latency_ms": 24683.234930038452,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Would a Dodo hypothetically tower over Ma Petite?\n\nThe workflow has designed these reasoning tools (ptools):\n  (none)\n\nGe",
+            "output_summary": "Since there are no ptools (reasoning tools) provided in the generated workflow, I cannot execute any external functions to retrieve information about the heights of a Dodo and Ma Petite. However, I ca",
+            "raw_output": null,
+            "latency_ms": 2962.6152515411377,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": true,
+        "execution_response": "Since there are no ptools (reasoning tools) provided in the generated workflow, I cannot execute any external functions to retrieve information about the heights of a Dodo and Ma Petite. However, I can rely on general knowledge to reason about the question.\n\nReasoning:\n- A Dodo is an extinct flightless bird that stood about 1 meter (3 feet) tall.\n- Ma Petite was a performer in the circus who had dwarfism and was very short, approximately 2 feet 1 inch (0.64 meters) tall.\n\nGiven that a Dodo is about 3 feet tall and Ma Petite was about 2 feet tall, the Dodo would indeed be taller.\n\nTherefore, the answer is yes.\n\nFinal Answer: Yes",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 301,
+          "output_tokens": 931,
+          "generation_latency_ms": 24683.234930038452,
+          "execution_latency_ms": 2962.6152515411377
+        }
+      },
+      "timestamp": "2026-02-23T09:27:29.976247"
+    },
+    {
+      "qid": "9738e1d805b31d334721",
+      "question": "Could ancient Tony Bennett have a baby in 2020?",
+      "predicted_answer": false,
+      "ground_truth": true,
+      "is_correct": false,
+      "latency_ms": 28381.4640045166,
+      "input_tokens": 297,
+      "output_tokens": 1050,
+      "total_tokens": 1347,
+      "cost_usd": 0.0016837500000000001,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Let's break down the question: \"Could ancient Tony Bennett have a baby in 2020?\"\n\nFirst, we need to understand what \"ancient Tony Bennett\" means. Tony Bennett is a famous singer who was born in 1926. The term \"ancient\" is likely a humorous or exaggerated way to refer to his old age. In 2020, Tony Bennett would have been 94 years old (since 2020 - 1926 = 94).\n\nNow, the question is whether he could have a baby in 2020. This involves biological feasibility. Typically, men can remain fertile into old age, but there are practical and biological limitations. However, the key point is that Tony Bennett is male, and men do not bear babies; women do. Having a baby implies giving birth, which is biologically impossible for a man.\n\nTherefore, regardless of age, Tony Bennett (being male) cannot have a baby in the sense of giving birth. The question might be interpreted as \"fathering a baby,\" but the phrasing \"have a baby\" usually means to give birth.\n\nGiven that:\n1. Tony Bennett is male.\n2. Males cannot give birth.\n\nThus, it is impossible for him to \"have a baby\" in 2020 or any other year.\n\nFinal Answer: No",
+      "trace": {
+        "qid": "9738e1d805b31d334721",
+        "question": "Could ancient Tony Bennett have a baby in 2020?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Could ancient Tony Bennett have a baby in 2020?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:27:53.427571\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Could ancient Tony Bennett have a baby in 2020?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\ndef main_workflow(input_data: str) -> dict:\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "def main_workflow(input_data: str) -> dict:",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Could ancient Tony Bennett have a baby in 2020?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a ",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 43
+            },
+            "latency_ms": 23451.42674446106,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Could ancient Tony Bennett have a baby in 2020?\n\nThe workflow has designed these reasoning tools (ptools):\n  (none)\n\nGene",
+            "output_summary": "Let's break down the question: \"Could ancient Tony Bennett have a baby in 2020?\"\n\nFirst, we need to understand what \"ancient Tony Bennett\" means. Tony Bennett is a famous singer who was born in 1926. ",
+            "raw_output": null,
+            "latency_ms": 4929.4257164001465,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": false,
+        "execution_response": "Let's break down the question: \"Could ancient Tony Bennett have a baby in 2020?\"\n\nFirst, we need to understand what \"ancient Tony Bennett\" means. Tony Bennett is a famous singer who was born in 1926. The term \"ancient\" is likely a humorous or exaggerated way to refer to his old age. In 2020, Tony Bennett would have been 94 years old (since 2020 - 1926 = 94).\n\nNow, the question is whether he could have a baby in 2020. This involves biological feasibility. Typically, men can remain fertile into old age, but there are practical and biological limitations. However, the key point is that Tony Bennett is male, and men do not bear babies; women do. Having a baby implies giving birth, which is biologically impossible for a man.\n\nTherefore, regardless of age, Tony Bennett (being male) cannot have a baby in the sense of giving birth. The question might be interpreted as \"fathering a baby,\" but the phrasing \"have a baby\" usually means to give birth.\n\nGiven that:\n1. Tony Bennett is male.\n2. Males cannot give birth.\n\nThus, it is impossible for him to \"have a baby\" in 2020 or any other year.\n\nFinal Answer: No",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 297,
+          "output_tokens": 1050,
+          "generation_latency_ms": 23451.42674446106,
+          "execution_latency_ms": 4929.4257164001465
+        }
+      },
+      "timestamp": "2026-02-23T09:27:58.358555"
+    },
+    {
+      "qid": "4e7877a14de6b741529d",
+      "question": "Are eagles and young bears both used as labels for skills-training youth groups?",
+      "predicted_answer": false,
+      "ground_truth": true,
+      "is_correct": false,
+      "latency_ms": 30300.98819732666,
+      "input_tokens": 333,
+      "output_tokens": 1114,
+      "total_tokens": 1447,
+      "cost_usd": 0.00180875,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Since there are no ptools provided for this workflow, I will rely on my internal knowledge to answer the question.\n\nThe question is: \"Are eagles and young bears both used as labels for skills-training youth groups?\"\n\nI know that:\n- Eagles are not commonly used as labels for skills-training youth groups. However, \"Eagles\" might refer to a specific group or organization, but it is not standard.\n- \"Young Bears\" is not a standard term for a youth group. However, \"Bears\" might be associated with sports teams or other organizations, but not specifically for skills-training youth groups.\n- Common skills-training youth groups include organizations like Boy Scouts, Girl Scouts, 4-H, etc. These do not typically use \"eagles\" or \"young bears\" as labels.\n- In scouting, there might be ranks or levels named after animals, but \"eagle\" is a high rank in Boy Scouts (e.g., Eagle Scout), not a label for the group itself. Similarly, \"bears\" might be a rank in Cub Scouts (e.g., Bear rank for 8-year-olds), but not \"young bears\".\n\nTherefore, while \"eagles\" and \"bears\" are used as ranks within scouting organizations, they are not used as labels for the youth groups themselves. The groups are called \"Boy Scouts\" or \"Cub Scouts\", not \"eagles\" or \"bears\". So, the statement is not accurate.\n\nFinal Answer: No",
+      "trace": {
+        "qid": "4e7877a14de6b741529d",
+        "question": "Are eagles and young bears both used as labels for skills-training youth groups?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Are eagles and young bears both used as labels for skills-training youth groups?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:28:20.951859\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Are eagles and young bears both used as labels for skills-training youth groups?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\ndef main_workflow(input_data: str) -> dict:\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "def main_workflow(input_data: str) -> dict:",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Are eagles and young bears both used as labels for skills-training youth groups?\n\nThe program should decompose the question, gather relevant fact",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 43
+            },
+            "latency_ms": 22593.289136886597,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Are eagles and young bears both used as labels for skills-training youth groups?\n\nThe workflow has designed these reasoni",
+            "output_summary": "Since there are no ptools provided for this workflow, I will rely on my internal knowledge to answer the question.\n\nThe question is: \"Are eagles and young bears both used as labels for skills-training",
+            "raw_output": null,
+            "latency_ms": 7707.276821136475,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": false,
+        "execution_response": "Since there are no ptools provided for this workflow, I will rely on my internal knowledge to answer the question.\n\nThe question is: \"Are eagles and young bears both used as labels for skills-training youth groups?\"\n\nI know that:\n- Eagles are not commonly used as labels for skills-training youth groups. However, \"Eagles\" might refer to a specific group or organization, but it is not standard.\n- \"Young Bears\" is not a standard term for a youth group. However, \"Bears\" might be associated with sports teams or other organizations, but not specifically for skills-training youth groups.\n- Common skills-training youth groups include organizations like Boy Scouts, Girl Scouts, 4-H, etc. These do not typically use \"eagles\" or \"young bears\" as labels.\n- In scouting, there might be ranks or levels named after animals, but \"eagle\" is a high rank in Boy Scouts (e.g., Eagle Scout), not a label for the group itself. Similarly, \"bears\" might be a rank in Cub Scouts (e.g., Bear rank for 8-year-olds), but not \"young bears\".\n\nTherefore, while \"eagles\" and \"bears\" are used as ranks within scouting organizations, they are not used as labels for the youth groups themselves. The groups are called \"Boy Scouts\" or \"Cub Scouts\", not \"eagles\" or \"bears\". So, the statement is not accurate.\n\nFinal Answer: No",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 333,
+          "output_tokens": 1114,
+          "generation_latency_ms": 22593.289136886597,
+          "execution_latency_ms": 7707.276821136475
+        }
+      },
+      "timestamp": "2026-02-23T09:28:28.660111"
+    },
+    {
+      "qid": "168544deb30fa10d9746",
+      "question": "Does Pikachu like Charles Darwin?",
+      "predicted_answer": false,
+      "ground_truth": true,
+      "is_correct": false,
+      "latency_ms": 21302.896738052368,
+      "input_tokens": 285,
+      "output_tokens": 973,
+      "total_tokens": 1258,
+      "cost_usd": 0.0015725000000000001,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Since there are no reasoning tools (ptools) provided in the generated workflow, I cannot execute any external functions or retrieve additional information. The workflow function `main_workflow` is defined but does not contain any steps or logic to process the input question.\n\nGiven the question \"Does Pikachu like Charles Darwin?\", I must rely on general knowledge:\n- Pikachu is a fictional Pok\u00e9mon character from a media franchise, and Charles Darwin was a real historical figure known for his contributions to evolutionary biology.\n- There is no known connection or canonical interaction between Pikachu and Charles Darwin in any official source.\n- Therefore, it is not accurate to say that Pikachu \"likes\" Charles Darwin, as they exist in entirely different contexts and there is no basis for such a sentiment.\n\nFinal Answer: No",
+      "trace": {
+        "qid": "168544deb30fa10d9746",
+        "question": "Does Pikachu like Charles Darwin?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Does Pikachu like Charles Darwin?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:28:44.757292\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Does Pikachu like Charles Darwin?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\ndef main_workflow(input_data: str) -> dict:\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "def main_workflow(input_data: str) -> dict:",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Does Pikachu like Charles Darwin?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or n",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 43
+            },
+            "latency_ms": 16097.218990325928,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Does Pikachu like Charles Darwin?\n\nThe workflow has designed these reasoning tools (ptools):\n  (none)\n\nGenerated workflow",
+            "output_summary": "Since there are no reasoning tools (ptools) provided in the generated workflow, I cannot execute any external functions or retrieve additional information. The workflow function `main_workflow` is def",
+            "raw_output": null,
+            "latency_ms": 5205.322742462158,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": false,
+        "execution_response": "Since there are no reasoning tools (ptools) provided in the generated workflow, I cannot execute any external functions or retrieve additional information. The workflow function `main_workflow` is defined but does not contain any steps or logic to process the input question.\n\nGiven the question \"Does Pikachu like Charles Darwin?\", I must rely on general knowledge:\n- Pikachu is a fictional Pok\u00e9mon character from a media franchise, and Charles Darwin was a real historical figure known for his contributions to evolutionary biology.\n- There is no known connection or canonical interaction between Pikachu and Charles Darwin in any official source.\n- Therefore, it is not accurate to say that Pikachu \"likes\" Charles Darwin, as they exist in entirely different contexts and there is no basis for such a sentiment.\n\nFinal Answer: No",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 285,
+          "output_tokens": 973,
+          "generation_latency_ms": 16097.218990325928,
+          "execution_latency_ms": 5205.322742462158
+        }
+      },
+      "timestamp": "2026-02-23T09:28:49.963395"
+    },
+    {
+      "qid": "2652b7652c84a06693fc",
+      "question": "Is unanimously elected president's birthday a break for mail carriers?",
+      "predicted_answer": false,
+      "ground_truth": true,
+      "is_correct": false,
+      "latency_ms": 63220.01528739929,
+      "input_tokens": 315,
+      "output_tokens": 1014,
+      "total_tokens": 1329,
+      "cost_usd": 0.00166125,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Since there are no ptools provided in the generated workflow, I cannot execute any external reasoning tools. However, I can reason based on general knowledge.\n\nThe question is: \"Is unanimously elected president's birthday a break for mail carriers?\"\n\nIn the United States, federal holidays (which are breaks for mail carriers) are established by law. The unanimously elected president is not a standard term, but if we assume it refers to a president who was elected unanimously (like George Washington), his birthday is not a federal holiday. Washington's Birthday is a federal holiday (now commonly known as Presidents' Day), but it is not on his actual birthday (February 22) but rather on the third Monday of February.\n\nMoreover, no other unanimously elected president (if any) has a birthday that is a federal holiday. Therefore, mail carriers do not get a break specifically for the birthday of a unanimously elected president.\n\nFinal Answer: No",
+      "trace": {
+        "qid": "2652b7652c84a06693fc",
+        "question": "Is unanimously elected president's birthday a break for mail carriers?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Is unanimously elected president's birthday a break for mail carriers?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:29:27.438666\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Is unanimously elected president's birthday a break for mail carriers?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\nANSWER: ```python\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "ANSWER: ```python",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Is unanimously elected president's birthday a break for mail carriers?\n\nThe program should decompose the question, gather relevant facts, and com",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 17
+            },
+            "latency_ms": 37475.215911865234,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Is unanimously elected president's birthday a break for mail carriers?\n\nThe workflow has designed these reasoning tools (",
+            "output_summary": "Since there are no ptools provided in the generated workflow, I cannot execute any external reasoning tools. However, I can reason based on general knowledge.\n\nThe question is: \"Is unanimously elected",
+            "raw_output": null,
+            "latency_ms": 25744.406938552856,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": false,
+        "execution_response": "Since there are no ptools provided in the generated workflow, I cannot execute any external reasoning tools. However, I can reason based on general knowledge.\n\nThe question is: \"Is unanimously elected president's birthday a break for mail carriers?\"\n\nIn the United States, federal holidays (which are breaks for mail carriers) are established by law. The unanimously elected president is not a standard term, but if we assume it refers to a president who was elected unanimously (like George Washington), his birthday is not a federal holiday. Washington's Birthday is a federal holiday (now commonly known as Presidents' Day), but it is not on his actual birthday (February 22) but rather on the third Monday of February.\n\nMoreover, no other unanimously elected president (if any) has a birthday that is a federal holiday. Therefore, mail carriers do not get a break specifically for the birthday of a unanimously elected president.\n\nFinal Answer: No",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 315,
+          "output_tokens": 1014,
+          "generation_latency_ms": 37475.215911865234,
+          "execution_latency_ms": 25744.406938552856
+        }
+      },
+      "timestamp": "2026-02-23T09:29:53.184039"
+    },
+    {
+      "qid": "4c75383949dd3c442888",
+      "question": "Is capsaicin associated with cooking?",
+      "predicted_answer": true,
+      "ground_truth": true,
+      "is_correct": true,
+      "latency_ms": 34484.487771987915,
+      "input_tokens": 281,
+      "output_tokens": 854,
+      "total_tokens": 1135,
+      "cost_usd": 0.00141875,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Since there are no ptools provided in the generated workflow, I cannot execute any external tools or searches. However, I can reason based on general knowledge.\n\nCapsaicin is the active component in chili peppers that gives them their spicy heat. It is commonly used in cooking to add flavor and spice to dishes worldwide. Therefore, it is associated with cooking.\n\nFinal Answer: Yes",
+      "trace": {
+        "qid": "4c75383949dd3c442888",
+        "question": "Is capsaicin associated with cooking?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Is capsaicin associated with cooking?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:30:22.957827\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Is capsaicin associated with cooking?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\n{answer}\")\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "{answer}\")",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Is capsaicin associated with cooking?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes ",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 10
+            },
+            "latency_ms": 29773.767948150635,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Is capsaicin associated with cooking?\n\nThe workflow has designed these reasoning tools (ptools):\n  (none)\n\nGenerated work",
+            "output_summary": "Since there are no ptools provided in the generated workflow, I cannot execute any external tools or searches. However, I can reason based on general knowledge.\n\nCapsaicin is the active component in c",
+            "raw_output": null,
+            "latency_ms": 4710.471868515015,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": true,
+        "execution_response": "Since there are no ptools provided in the generated workflow, I cannot execute any external tools or searches. However, I can reason based on general knowledge.\n\nCapsaicin is the active component in chili peppers that gives them their spicy heat. It is commonly used in cooking to add flavor and spice to dishes worldwide. Therefore, it is associated with cooking.\n\nFinal Answer: Yes",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 281,
+          "output_tokens": 854,
+          "generation_latency_ms": 29773.767948150635,
+          "execution_latency_ms": 4710.471868515015
+        }
+      },
+      "timestamp": "2026-02-23T09:30:27.669135"
+    },
+    {
+      "qid": "dff078089049f3956096",
+      "question": "Would you take a photo of a Saltwater crocodile in Memphis?",
+      "predicted_answer": true,
+      "ground_truth": false,
+      "is_correct": false,
+      "latency_ms": 41876.1990070343,
+      "input_tokens": 301,
+      "output_tokens": 1111,
+      "total_tokens": 1412,
+      "cost_usd": 0.001765,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Let's break down the question: \"Would you take a photo of a Saltwater crocodile in Memphis?\"\n\nFirst, I need to determine if it is possible to take a photo of a Saltwater crocodile in Memphis. Saltwater crocodiles are native to saltwater habitats and brackish wetlands in regions like Southeast Asia, Australia, and the eastern coast of India. They are not naturally found in Memphis, Tennessee, which is located in the United States, far from their natural habitat.\n\nHowever, the question doesn't specify whether the crocodile is in the wild or in captivity. Memphis has a zoo (the Memphis Zoo) and possibly other wildlife facilities that might house Saltwater crocodiles. If the crocodile is in a zoo or an aquarium, it would be possible to take a photo of it.\n\nBut the question is phrased as \"would you take a photo,\" which might imply a personal action or a hypothetical scenario. Given that Saltwater crocodiles are dangerous animals, it would not be safe to take a photo of one in the wild without proper precautions. However, in a controlled environment like a zoo, it would be safe and feasible.\n\nSince Memphis is not in the natural range of Saltwater crocodiles, the only way to see one there would be in captivity. Therefore, it is possible to take a photo of a Saltwater crocodile in Memphis if it is housed in a zoo or similar facility.\n\nFinal Answer: Yes",
+      "trace": {
+        "qid": "dff078089049f3956096",
+        "question": "Would you take a photo of a Saltwater crocodile in Memphis?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Would you take a photo of a Saltwater crocodile in Memphis?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:31:01.488278\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Would you take a photo of a Saltwater crocodile in Memphis?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\n```python\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "```python",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Would you take a photo of a Saltwater crocodile in Memphis?\n\nThe program should decompose the question, gather relevant facts, and combine them t",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 9
+            },
+            "latency_ms": 33819.18406486511,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Would you take a photo of a Saltwater crocodile in Memphis?\n\nThe workflow has designed these reasoning tools (ptools):\n  ",
+            "output_summary": "Let's break down the question: \"Would you take a photo of a Saltwater crocodile in Memphis?\"\n\nFirst, I need to determine if it is possible to take a photo of a Saltwater crocodile in Memphis. Saltwate",
+            "raw_output": null,
+            "latency_ms": 8056.735992431641,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": true,
+        "execution_response": "Let's break down the question: \"Would you take a photo of a Saltwater crocodile in Memphis?\"\n\nFirst, I need to determine if it is possible to take a photo of a Saltwater crocodile in Memphis. Saltwater crocodiles are native to saltwater habitats and brackish wetlands in regions like Southeast Asia, Australia, and the eastern coast of India. They are not naturally found in Memphis, Tennessee, which is located in the United States, far from their natural habitat.\n\nHowever, the question doesn't specify whether the crocodile is in the wild or in captivity. Memphis has a zoo (the Memphis Zoo) and possibly other wildlife facilities that might house Saltwater crocodiles. If the crocodile is in a zoo or an aquarium, it would be possible to take a photo of it.\n\nBut the question is phrased as \"would you take a photo,\" which might imply a personal action or a hypothetical scenario. Given that Saltwater crocodiles are dangerous animals, it would not be safe to take a photo of one in the wild without proper precautions. However, in a controlled environment like a zoo, it would be safe and feasible.\n\nSince Memphis is not in the natural range of Saltwater crocodiles, the only way to see one there would be in captivity. Therefore, it is possible to take a photo of a Saltwater crocodile in Memphis if it is housed in a zoo or similar facility.\n\nFinal Answer: Yes",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 301,
+          "output_tokens": 1111,
+          "generation_latency_ms": 33819.18406486511,
+          "execution_latency_ms": 8056.735992431641
+        }
+      },
+      "timestamp": "2026-02-23T09:31:09.545852"
+    },
+    {
+      "qid": "45030e86cc4e732184ef",
+      "question": "Will a Euro sink in water?",
+      "predicted_answer": true,
+      "ground_truth": true,
+      "is_correct": true,
+      "latency_ms": 63366.18709564209,
+      "input_tokens": 277,
+      "output_tokens": 873,
+      "total_tokens": 1150,
+      "cost_usd": 0.0014375,
+      "num_steps": 2,
+      "decomposition_used": true,
+      "facts_used": false,
+      "error": null,
+      "error_type": null,
+      "raw_response": "Since there are no ptools provided in the generated workflow, I must rely solely on my own knowledge to answer the question.\n\nReasoning: The question is \"Will a Euro sink in water?\" A Euro coin is made of metal, specifically a combination of copper, nickel, and other metals. The density of a Euro coin is approximately 8.5 g/cm\u00b3, which is greater than the density of water (1 g/cm\u00b3). Therefore, a Euro coin will sink in water.\n\nFinal Answer: Yes",
+      "trace": {
+        "qid": "45030e86cc4e732184ef",
+        "question": "Will a Euro sink in water?",
+        "generated_program": "#!/usr/bin/env python3\n\"\"\"\nGenerated Agent Program\n========================\nTask: Answer this yes/no question by reasoning step-by-step: Will a Euro sink in water?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer.\n\nGenerated at: 2026-02-23T09:32:07.599218\nGenerator: ptool_framework v0.2.0\n\nThis program follows the \"Python calling LLMs\" paradigm:\n- Python handles control flow, data manipulation, and validation\n- @ptool functions delegate reasoning to LLMs\n- @distilled functions try pure Python first, fall back to LLM\n\nUsage:\n    python no question by reasoning step-by-step: Will a Euro sink in water?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answer..py <input>\n\"\"\"\n\nimport os\nimport sys\nfrom pathlib import Path\nfrom typing import Any, Dict, List, Literal, Optional, Tuple\n\n# Add ptool_framework to path\nsys.path.insert(0, str(Path(__file__).parent))\n\n# Set up environment\nos.environ.setdefault(\"TOGETHER_API_KEY\", \"\")  # Set your API key\n\nfrom ptool_framework import ptool, distilled, DistillationFallback, enable_tracing\n\n# Enable trace collection for observability\nenable_tracing(True)\n\n# ============================================================================\n# CONFIGURATION\n# ============================================================================\n\nDEFAULT_MODEL = \"deepseek-v3-0324\"\nTRACE_LOGGING = True\n\n\n# ============================================================================\n# PTOOLS (LLM-executed functions)\n# ============================================================================\n\n\n# ============================================================================\n# WORKFLOW\n# ============================================================================\n\ndef main_workflow(input_data: str) -> dict:\n\n# ============================================================================\n# CLI ENTRY POINT\n# ============================================================================\n\nif __name__ == \"__main__\":\n    import argparse\n\n    parser = argparse.ArgumentParser(description=__doc__.split(\"\\n\")[2])\n    parser.add_argument(\"input\", nargs=\"?\", help=\"Input data or file path\")\n    parser.add_argument(\"--file\", \"-f\", help=\"Read input from file\")\n    parser.add_argument(\"--trace\", action=\"store_true\", help=\"Enable detailed tracing\")\n\n    args = parser.parse_args()\n\n    # Get input\n    if args.file:\n        with open(args.file) as f:\n            input_data = f.read()\n    elif args.input:\n        input_data = args.input\n    else:\n        print(\"Reading from stdin...\")\n        input_data = sys.stdin.read()\n\n    # Run workflow\n    try:\n        result = main_workflow(input_data)\n        print(\"\\n=== Result ===\")\n        if isinstance(result, dict):\n            import json\n            print(json.dumps(result, indent=2, default=str))\n        else:\n            print(result)\n    except Exception as e:\n        print(f\"Error: {e}\", file=sys.stderr)\n        sys.exit(1)\n",
+        "ptools_designed": [],
+        "workflow_code": "def main_workflow(input_data: str) -> dict:",
+        "steps": [
+          {
+            "phase": "generate",
+            "description": "Generated task-specific program with ProgramGenerator",
+            "input_summary": "Answer this yes/no question by reasoning step-by-step: Will a Euro sink in water?\n\nThe program should decompose the question, gather relevant facts, and combine them to produce a final yes or no answe",
+            "output_summary": "0 ptools designed, workflow generated",
+            "raw_output": {
+              "num_ptools": 0,
+              "ptool_names": [],
+              "workflow_length": 43
+            },
+            "latency_ms": 58053.449869155884,
+            "success": true,
+            "error": null
+          },
+          {
+            "phase": "execute",
+            "description": "Executed generated workflow via LLM",
+            "input_summary": "You are executing a generated workflow to answer a yes/no question.\n\nQuestion: Will a Euro sink in water?\n\nThe workflow has designed these reasoning tools (ptools):\n  (none)\n\nGenerated workflow:\ndef m",
+            "output_summary": "Since there are no ptools provided in the generated workflow, I must rely solely on my own knowledge to answer the question.\n\nReasoning: The question is \"Will a Euro sink in water?\" A Euro coin is mad",
+            "raw_output": null,
+            "latency_ms": 5312.4680519104,
+            "success": true,
+            "error": null
+          }
+        ],
+        "final_answer": true,
+        "execution_response": "Since there are no ptools provided in the generated workflow, I must rely solely on my own knowledge to answer the question.\n\nReasoning: The question is \"Will a Euro sink in water?\" A Euro coin is made of metal, specifically a combination of copper, nickel, and other metals. The density of a Euro coin is approximately 8.5 g/cm\u00b3, which is greater than the density of water (1 g/cm\u00b3). Therefore, a Euro coin will sink in water.\n\nFinal Answer: Yes",
+        "success": true,
+        "metadata": {
+          "model": "deepseek-v3-0324",
+          "input_tokens": 277,
+          "output_tokens": 873,
+          "generation_latency_ms": 58053.449869155884,
+          "execution_latency_ms": 5312.4680519104
+        }
+      },
+      "timestamp": "2026-02-23T09:32:12.912521"
+    }
+  ]
+}

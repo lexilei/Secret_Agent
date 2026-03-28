@@ -134,6 +134,12 @@ def run_experiment(
 
     print(f"\nResults saved to: {results_file}")
 
+    # Save dedicated traces file for experiments that support it
+    if hasattr(experiment, 'save_traces') and callable(experiment.save_traces):
+        traces_file = output_path / f"{experiment_name}_{model}_{timestamp}_traces.json"
+        experiment.save_traces(str(traces_file))
+        print(f"Traces saved to: {traces_file}")
+
     # Cleanup
     experiment.teardown()
 

@@ -118,15 +118,6 @@ SYSTEM_PROMPT_OPTIONAL = (
     "Once you have enough information, respond with ONLY 'Yes' or 'No'."
 )
 
-SYSTEM_PROMPT_MANDATORY = (
-    "You are a research agent that answers yes/no questions. "
-    "You MUST call at least one tool before answering. "
-    "NEVER answer directly from your own knowledge. "
-    "Your process: 1) Identify what facts you need. "
-    "2) Use tools (search, wikipedia, knowledge base, calculator) to find those facts. "
-    "3) Only after receiving tool results, give your final 'Yes' or 'No' answer. "
-    "If you answer without calling a tool first, your answer will be marked INVALID."
-)
 
 
 class L3_LangChain(StrategyQAExperiment):
@@ -145,7 +136,7 @@ class L3_LangChain(StrategyQAExperiment):
     def __init__(
         self,
         model: str = "deepseek-v3-0324",
-        max_iterations: int = 10,
+        max_iterations: int = 100,
         tools: Optional[List] = None,
         require_tool_use: bool = False,
     ):
